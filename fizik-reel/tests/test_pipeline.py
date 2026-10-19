@@ -75,6 +75,10 @@ class TestBuild(unittest.TestCase):
         self.assertEqual([x[2] for x in w], ["anak-anak", "Cemerlang"])
         self.assertEqual(w[0][1], .9)
 
+    def test_fixes_apply_to_joined_words(self):
+        tr = [{"w": [[0, .3, " main", 1], [.3, .6, "-main", 1]]}]
+        self.assertEqual([w[2] for w in self.build.load_words(tr, {"main-main": "M&M's"})], ["M&M's"])
+
     def test_chunk_words_limits(self):
         words = [[i, i + .5, x] for i, x in enumerate("satu dua tiga empat lima.".split())]
         ch = self.build.chunk_words(words, 3, 17)
@@ -101,6 +105,34 @@ class TestBuild(unittest.TestCase):
         finally:
             b.OUT, b.WORK = old
             shutil.rmtree(tmp)
+
+
+class TestZoom(unittest.TestCase):
+    PATS = ["buku|produk", "tengok (ni|ini)"]
+
+    @staticmethod
+    def _track(t, score):
+        # a wide book low in the frame (analysis pixels)
+        return np.stack([t, score, *(np.full_like(t, v) for v in (135, 380, 260, 150))], 1)
+
+    def test_every_mention_triggers(self):
+        import zoom
+        tr = [{"w": [[0.8, 1.2, " buku", 1], [1.2, 1.6, " melukis", 1], [1.6, 1.8, " ni", 1],
+                     [5.0, 5.3, " Tengok", 1], [5.3, 5.5, " ni.", 1], [9.0, 9.2, " Buku,", 1]]}]
+        self.assertEqual(zoom.trigger_times(tr, self.PATS), [(0.8, 0), (5.0, 1), (9.0, 0)])
+
+    def test_mentions_during_a_zoom_extend_it(self):
+        import zoom
+        t = np.arange(0, 30, 0.1)
+        z = zoom.plan(self._track(t, np.full_like(t, 0.3)), [(0.8, 0), (5.0, 1), (20.0, 0)], 1080, 1920, 30.0)
+        self.assertEqual([(round(x["start"], 1), round(x["end"], 1)) for x in z], [(0.5, 9.7), (19.7, 24.7)])
+        for x in z:
+            self.assertTrue(1.18 <= x["z"] <= 1.3)  # noticeable but never an extreme close-up
+
+    def test_no_zoom_when_product_not_visible(self):
+        import zoom
+        t = np.arange(0, 10, 0.1)
+        self.assertEqual(zoom.plan(self._track(t, np.where(t < 4, 0.3, 0.0)), [(6.0, 0)], 1080, 1920, 10.0), [])
 
 
 class TestSfx(unittest.TestCase):
@@ -162,6 +194,18 @@ class TestVoice(unittest.TestCase):
 
 
 class TestLook(unittest.TestCase):
+    def test_exposure_lifts_mids_without_haze_or_clipping(self):
+        import cv2, look
+        ramp = np.repeat(np.linspace(0, 255, 256, dtype=np.uint8)[None, :, None], 3, 2).repeat(4, 0)
+        L0 = cv2.cvtColor(ramp, cv2.COLOR_BGR2LAB)[..., 0].astype(float).mean(0)
+        L1 = cv2.cvtColor(look.exposure(ramp, 0.38), cv2.COLOR_BGR2LAB)[..., 0].astype(float).mean(0)
+        self.assertLessEqual(L1[0] - L0[0], 1)          # black stays black (no fog)
+        self.assertGreater(L1[128] - L0[128], 15)       # mids clearly brighter
+        self.assertLessEqual(L1[-1], 255)
+        self.assertLess(L1[-1] - L0[-1], 2)             # white does not blow out further
+        self.assertTrue((np.diff(L1) >= -1).all())      # monotonic: no tone reversal
+        self.assertTrue((look.exposure(ramp, 0) == ramp).all())
+
     def test_grade_keeps_shape(self):
         import look
         img = np.full((64, 36, 3), 128, np.uint8)

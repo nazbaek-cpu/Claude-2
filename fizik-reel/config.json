@@ -22,7 +22,7 @@
       "buku|produk",
       "tengok (ni|ini)"
     ],
-    "face_min_y": 760
+    "face_min_y": 560
   },
   "voice": {
     "preset": "studio",

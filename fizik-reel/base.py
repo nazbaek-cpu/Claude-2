@@ -4,14 +4,11 @@ usage: base.py <worker> <nworkers>   -> work/segs/sNN.mp4
 import json, subprocess, sys, os
 import numpy as np, cv2
 sys.path.insert(0, os.path.dirname(__file__))
-import look
 from look import grade, Retoucher
 from media import SRC, WORK, config, probe
 
 CFG = config()
 W, H, FPS, _ = probe()
-if "BRIGHT" not in os.environ:
-    look.BRIGHT = CFG["brighten"]
 keep = json.load(open(f"{WORK}/keep.json"))
 segs = [(round(a * FPS), round(b * FPS)) for a, b in keep]
 wi, nw = int(sys.argv[1]), int(sys.argv[2])

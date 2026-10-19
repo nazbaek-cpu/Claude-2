@@ -170,16 +170,18 @@ class TestLook(unittest.TestCase):
         self.assertEqual(g.dtype, np.uint8)
 
     @unittest.skipUnless(HAS_YUNET, "models/yunet.onnx missing (run setup.sh)")
-    def test_retoucher_lifts_skin_without_face(self):
-        import cv2, look
+    def test_retoucher_leaves_skin_coloured_areas_alone_without_face(self):
+        # no brightening: hands, kraft-paper covers and other skin-toned areas keep their light
+        import look
         img = np.zeros((1920, 1080, 3), np.uint8)
-        img[1200:1500, 300:600] = (90, 120, 170)  # a skin-tone 'hand', no face in frame
-        r = look.Retoucher()
-        out = r(img)
-        L0 = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)[1300:1400, 400:500, 0].mean()
-        L1 = cv2.cvtColor(out, cv2.COLOR_BGR2LAB)[1300:1400, 400:500, 0].mean()
-        self.assertGreater(L1, L0 * (1 + look.BRIGHT * 0.8))
-        self.assertTrue((out[:1000] == 0).all())  # background untouched
+        img[1200:1500, 300:600] = (90, 120, 170)
+        out = look.Retoucher()(img)
+        self.assertTrue((out == img).all())
+
+    def test_no_brightening_setting_left(self):
+        import look
+        self.assertFalse(hasattr(look, "BRIGHT"))
+        self.assertNotIn("brighten", media.config())
 
 
 if __name__ == "__main__":

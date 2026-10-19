@@ -34,7 +34,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
    - language and prompt
    - `flip` (un-mirror selfie footage)
    - `makeup.lips` / `makeup.brows` (0 = off, 1 = default strength)
-   - `product_zoom`: `enabled`, `zoom`/`min_zoom`, `hold_s`, `min_gap_s`, `triggers` (regexes, strongest first)
+   - `product_zoom`: `enabled`, `zoom`/`min_zoom`, `hold_s`, `merge_gap_s`, `triggers` (regexes; add the product's name, e.g. `"buku|produk|modul"`)
    - `voice.preset`: `studio` (default), `clear` or `basic`
    - transcript `fixes` (Whisper mishearings)
    - caption keywords
@@ -56,7 +56,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 | transcribe | `transcribe.py` (faster-whisper, decoded via ffmpeg) | `work/tr_large.json` |
 | cuts | `cuts.py`: 120–7800 Hz energy ≤ floor + 6 dB is silence; keeps a 0.13 s tail and 0.10 s head | `work/keep.json` |
 | voice | `voice.py`: frame-matched cuts with 12–15 ms fades, then the `voice.preset` chain (studio: DeepFilterNet −40 dB, +3 dB @120 Hz, −4.5 dB @450 Hz, +2.5 dB @2.8 kHz, −1.5 dB @5.5 kHz, de-esser, 2 compressors, parallel tanh saturation, loudnorm −15 LUFS, limiter) | `work/voice.wav`, `work/edl.json` |
-| zoom | `zoom.py`: when a pointing cue ("tengok ni", "buku ni", "macam ni"…) is said and the product is visible, plan a gentle 1.18–1.3× push-in on it for 5 s (strongest cue first, ≥ 8 s apart) | `work/zooms.json` |
+| zoom | `zoom.py`: every time the product is named ("buku", "produk", …) or "tengok ni" is said while it is visible, a gentle 1.18–1.3× push-in on it, held 5 s after the last mention; mentions during a zoom extend it | `work/zooms.json` |
 | aroll | `base.py` × `WORKERS`: flip, "Grade Cerah Tajam", retouch (`look.py`), zoom 1.0/1.08 per cut, eased product zooms; then concat with 1 s keyframes | `reel/assets/base.mp4` |
 | build | `build.py` + `template.html`: composition, captions, copies fonts/GSAP/icons | `reel/index.html`, `work/sfx_cues.json` |
 | audio | `sfx.py`, then mix under the voice (`mix.sfx_gain`) | `reel/assets/mix.wav` |

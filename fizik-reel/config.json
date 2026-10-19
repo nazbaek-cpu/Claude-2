@@ -17,11 +17,10 @@
     "zoom": 1.3,
     "min_zoom": 1.18,
     "hold_s": 5.0,
-    "min_gap_s": 8.0,
+    "merge_gap_s": 2.0,
     "triggers": [
-      "tengok (ni|ini)",
-      "(buku|produk)( \\w+)? (ni|ini)|(ni|ini) (buku|produk)",
-      "(macam|yang) (ni|ini)"
+      "buku|produk",
+      "tengok (ni|ini)"
     ]
   },
   "voice": {

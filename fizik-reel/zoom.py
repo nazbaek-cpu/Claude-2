@@ -1,13 +1,14 @@
-"""Plan product zooms: when the speaker points at the product ("buku ni", "tengok ni", ...) and it is
-visible in her hands, zoom gently onto it for a few seconds. Writes work/zooms.json (source seconds,
+"""Plan product zooms: every time the speaker names the product ("buku", or the product words in
+config.json) or says "tengok ni" while it is visible in her hands, zoom gently onto it and hold
+for a few seconds after the last mention. Writes work/zooms.json (source seconds,
 full-res pixels): [{"start", "end", "cx", "cy", "z"}].
 
 The product is found as the area dense in printed lines/text (Canny edges) outside the face/hijab,
 the dark background and the top of the frame. Its centre and size are taken as the median over the
 zoom window so the framing does not jitter.
 
-config.json "product_zoom": {"enabled", "zoom", "min_zoom", "hold_s", "min_gap_s", "triggers"}
-"triggers" is a list of regexes, strongest first, matched against 2- and 3-word windows of the transcript.
+config.json "product_zoom": {"enabled", "zoom", "min_zoom", "hold_s", "merge_gap_s", "triggers"}
+"triggers" is a list of regexes matched against 1-, 2- and 3-word windows of the transcript.
 """
 import json, re, subprocess
 import numpy as np, cv2
@@ -55,25 +56,31 @@ def trigger_times(tr, patterns):
     hits = {}
     for prio, pat in enumerate(patterns):
         rx = re.compile(pat)
-        for i in range(len(words) - 1):
-            for n in (2, 3):
+        for i in range(len(words)):
+            for n in (1, 2, 3):
                 if i + n <= len(words) and rx.fullmatch(" ".join(w for _, w in words[i:i + n])):
                     t = words[i][0]
                     hits[t] = min(prio, hits.get(t, prio))
     return sorted(hits.items())
 
 
-def plan(track, triggers, W, H, dur, zoom=1.3, hold=5.0, min_gap=8.0, min_zoom=1.18):
+def plan(track, triggers, W, H, dur, zoom=1.3, hold=5.0, merge_gap=1.0, min_zoom=1.18):
+    """one zoom per mention while the product is visible; mentions that come while a zoom is still on
+    (or within merge_gap of its end) extend it instead of zooming out and back in"""
     good = track[:, 1] > 0.5 * np.percentile(track[:, 1], 90)
-    zooms = []
-    for t, _ in sorted(triggers, key=lambda tp: (tp[1], tp[0])):  # strongest cue first
-        if any(abs(t - z["start"]) < min_gap for z in zooms):
-            continue
+    spans = []
+    for t, _ in sorted(triggers):
         near = np.nonzero(good & (track[:, 0] >= t - 0.3) & (track[:, 0] <= t + 1.5))[0]
         if not len(near):
             continue
         start = track[near[0], 0]
         end = min(start + hold, dur - 0.1)
+        if spans and start <= spans[-1][1] + merge_gap:
+            spans[-1][1] = max(spans[-1][1], end)
+        else:
+            spans.append([start, end])
+    zooms = []
+    for start, end in spans:
         win = good & (track[:, 0] >= start) & (track[:, 0] <= end)
         if win.sum() < 0.5 * (end - start) * AFPS:   # product not held up long enough
             continue
@@ -83,7 +90,7 @@ def plan(track, triggers, W, H, dur, zoom=1.3, hold=5.0, min_gap=8.0, min_zoom=1
         z = float(np.clip(fit, min_zoom, zoom))  # always a noticeable but gentle push-in
         zooms.append({"start": round(float(start), 2), "end": round(float(end), 2),
                       "cx": round(float(cx * sx), 1), "cy": round(float(cy * sy), 1), "z": round(z, 3)})
-    return sorted(zooms, key=lambda z: z["start"])
+    return zooms
 
 
 def main():
@@ -94,7 +101,7 @@ def main():
         W, H, _, dur = probe()
         track = analyse(SRC, cfg["flip"])
         trig = trigger_times(json.load(open(f"{WORK}/tr_large.json")), pz["triggers"])
-        zooms = plan(track, trig, W, H, dur, pz.get("zoom", 1.3), pz.get("hold_s", 5.0), pz.get("min_gap_s", 8.0),
+        zooms = plan(track, trig, W, H, dur, pz.get("zoom", 1.3), pz.get("hold_s", 5.0), pz.get("merge_gap_s", 1.0),
                      pz.get("min_zoom", 1.18))
     json.dump(zooms, open(f"{WORK}/zooms.json", "w"), indent=1)
     print(len(zooms), "product zooms:", ", ".join(f"{z['start']}-{z['end']}s x{z['z']}" for z in zooms))

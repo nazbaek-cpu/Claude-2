@@ -104,30 +104,31 @@ class TestBuild(unittest.TestCase):
 
 
 class TestZoom(unittest.TestCase):
-    PATS = ["tengok (ni|ini)", "(buku|produk)( \\w+)? (ni|ini)|(ni|ini) (buku|produk)", "(macam|yang) (ni|ini)"]
+    PATS = ["buku|produk", "tengok (ni|ini)"]
 
-    def test_triggers_and_priority(self):
+    @staticmethod
+    def _track(t, score):
+        # a wide book low in the frame (analysis pixels)
+        return np.stack([t, score, *(np.full_like(t, v) for v in (135, 380, 260, 150))], 1)
+
+    def test_every_mention_triggers(self):
         import zoom
         tr = [{"w": [[0.8, 1.2, " buku", 1], [1.2, 1.6, " melukis", 1], [1.6, 1.8, " ni", 1],
-                     [5.0, 5.3, " Tengok", 1], [5.3, 5.5, " ni.", 1], [9.0, 9.2, " macam", 1], [9.2, 9.4, " ni", 1]]}]
-        self.assertEqual(zoom.trigger_times(tr, self.PATS), [(0.8, 1), (5.0, 0), (9.0, 2)])
+                     [5.0, 5.3, " Tengok", 1], [5.3, 5.5, " ni.", 1], [9.0, 9.2, " Buku,", 1]]}]
+        self.assertEqual(zoom.trigger_times(tr, self.PATS), [(0.8, 0), (5.0, 1), (9.0, 0)])
 
-    def test_plan_spacing_hold_and_gentle_zoom(self):
+    def test_mentions_during_a_zoom_extend_it(self):
         import zoom
         t = np.arange(0, 30, 0.1)
-        track = np.stack([t, np.full_like(t, 0.3), np.full_like(t, 135), np.full_like(t, 380),
-                          np.full_like(t, 260), np.full_like(t, 150)], 1)  # wide book low in frame
-        z = zoom.plan(track, [(0.8, 1), (5.0, 0), (20.0, 2)], 1080, 1920, 30.0)
-        self.assertEqual([round(x["start"], 1) for x in z], [4.7, 19.7])  # strongest first, 8 s apart; starts 0.3 s early
+        z = zoom.plan(self._track(t, np.full_like(t, 0.3)), [(0.8, 0), (5.0, 1), (20.0, 0)], 1080, 1920, 30.0)
+        self.assertEqual([(round(x["start"], 1), round(x["end"], 1)) for x in z], [(0.5, 9.7), (19.7, 24.7)])
         for x in z:
-            self.assertAlmostEqual(x["end"] - x["start"], 5.0, places=1)
-            self.assertTrue(1.18 <= x["z"] <= 1.3)
+            self.assertTrue(1.18 <= x["z"] <= 1.3)  # noticeable but never an extreme close-up
 
     def test_no_zoom_when_product_not_visible(self):
         import zoom
         t = np.arange(0, 10, 0.1)
-        track = np.stack([t, np.where(t < 4, 0.3, 0.0), *(np.full_like(t, v) for v in (135, 380, 100, 100))], 1)
-        self.assertEqual(zoom.plan(track, [(6.0, 0)], 1080, 1920, 10.0), [])
+        self.assertEqual(zoom.plan(self._track(t, np.where(t < 4, 0.3, 0.0)), [(6.0, 0)], 1080, 1920, 10.0), [])
 
 
 class TestSfx(unittest.TestCase):

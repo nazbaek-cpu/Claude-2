@@ -1,4 +1,16 @@
 *.mp4
 *.wav
+__pycache__/
+fizik-reel/.venv/
+fizik-reel/node_modules/
 fizik-reel/models/
 fizik-reel/reel/assets/
+fizik-reel/out/
+fizik-reel/work/segs/
+fizik-reel/work/*.log
+fizik-reel/work/*.part
+fizik-reel/work/segs.txt
+fizik-reel/work/words_out.json
+fizik-reel/tools/
+fizik-reel/work/dfn/
+fizik-reel/reel/.hyperframes/

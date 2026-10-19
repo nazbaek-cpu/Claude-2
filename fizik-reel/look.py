@@ -37,8 +37,8 @@ class Retoucher:
 
     def __call__(self, img):
         b = self.face(img)
-        if b is None:
-            return img
+        if b is None:  # no face yet: still lift visible skin so hands keep the same tone
+            return self.body(img.copy(), None, None)
         H, W = img.shape[:2]
         x, y, w, h = b
         # region: face box expanded (covers forehead under hijab edge, chin, neck top)
@@ -116,9 +116,10 @@ class Retoucher:
         sk = cv2.morphologyEx(sk.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8)).astype(np.float32)
         sk = cv2.GaussianBlur(sk, (0, 0), 2.5)
         full = np.zeros((H // 4, W // 4), np.float32)
-        x0, y0, x1, y1 = rect
-        fm = cv2.resize(Mface, ((x1 - x0) // 4 or 1, (y1 - y0) // 4 or 1))
-        full[y0 // 4:y0 // 4 + fm.shape[0], x0 // 4:x0 // 4 + fm.shape[1]] = fm[:H // 4 - y0 // 4, :W // 4 - x0 // 4]
+        if rect is not None:
+            x0, y0, x1, y1 = rect
+            fm = cv2.resize(Mface, ((x1 - x0) // 4 or 1, (y1 - y0) // 4 or 1))
+            full[y0 // 4:y0 // 4 + fm.shape[0], x0 // 4:x0 // 4 + fm.shape[1]] = fm[:H // 4 - y0 // 4, :W // 4 - x0 // 4]
         m = np.clip(sk - full * 1.5, 0, 1)  # face already lifted
         if m.max() < 0.05:
             return img

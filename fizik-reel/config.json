@@ -4,19 +4,32 @@
   "language": "ms",
   "initial_prompt": "Modul Konstruk Fizik Tingkatan 5, SPM, soalan, jawapan, nota.",
   "flip": true,
-  "brighten": 0.30,
-  "zooms": [1.0, 1.08],
+  "brighten": 0.3,
+  "zooms": [
+    1.0,
+    1.08
+  ],
+  "voice": {
+    "preset": "studio",
+    "denoise_atten_db": 40
+  },
   "cuts": {
     "silence_db_above_floor": 6,
     "tail_s": 0.13,
-    "head_s": 0.10,
+    "head_s": 0.1,
     "min_cut_s": 0.12,
     "end_s": 63.6,
     "no_cuts_after_s": 62.95
   },
   "transcript": {
-    "fixes": {"Cemelang": "Cemerlang", "numenik": "mnemonik", "Buayah,": "Ibu ayah,", "konstruk,": "Konstruk,",
-              "konstruk": "Konstruk", "modul": "Modul"},
+    "fixes": {
+      "Cemelang": "Cemerlang",
+      "numenik": "mnemonik",
+      "Buayah,": "Ibu ayah,",
+      "konstruk,": "Konstruk,",
+      "konstruk": "Konstruk",
+      "modul": "Modul"
+    },
     "drop_words_from_s": 63.0
   },
   "captions": {
@@ -25,5 +38,7 @@
     "max_chars": 17,
     "hide_from_last_cue": true
   },
-  "mix": {"sfx_gain": 0.55}
+  "mix": {
+    "sfx_gain": 0.55
+  }
 }

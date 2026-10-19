@@ -11,3 +11,5 @@ fizik-reel/work/*.log
 fizik-reel/work/*.part
 fizik-reel/work/segs.txt
 fizik-reel/work/words_out.json
+fizik-reel/tools/
+fizik-reel/work/dfn/

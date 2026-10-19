@@ -128,6 +128,39 @@ class TestMedia(unittest.TestCase):
             shutil.rmtree(tmp)
 
 
+HAS_DEEP_FILTER = os.access(os.path.join(HERE, "tools", "deep-filter"), os.X_OK)
+
+
+class TestVoice(unittest.TestCase):
+    def _run(self, preset):
+        import voice
+        tmp = tempfile.mkdtemp()
+        try:
+            raw = f"{tmp}/raw.wav"
+            subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", "sine=frequency=220:duration=2:sample_rate=48000",
+                            "-af", "volume=-12dB", "-ac", "1", "-c:a", "pcm_s16le", raw], check=True)
+            voice.process(raw, f"{tmp}/out.wav", preset, 2.0)
+            out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=channels,sample_rate:format=duration",
+                                  "-of", "json", f"{tmp}/out.wav"], capture_output=True, text=True, check=True).stdout
+            d = json.loads(out)
+            self.assertEqual(d["streams"][0]["channels"], 2)
+            self.assertEqual(d["streams"][0]["sample_rate"], "48000")
+            self.assertAlmostEqual(float(d["format"]["duration"]), 2.0, delta=0.002)  # stays in sync with video
+        finally:
+            shutil.rmtree(tmp)
+
+    def test_basic_chain(self):
+        self._run("basic")
+
+    @unittest.skipUnless(HAS_DEEP_FILTER, "tools/deep-filter missing (run setup.sh)")
+    def test_studio_chain(self):
+        self._run("studio")
+
+    @unittest.skipUnless(HAS_DEEP_FILTER, "tools/deep-filter missing (run setup.sh)")
+    def test_clear_chain(self):
+        self._run("clear")
+
+
 class TestLook(unittest.TestCase):
     def test_grade_keeps_shape(self):
         import look

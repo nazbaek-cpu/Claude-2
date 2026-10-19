@@ -2,6 +2,7 @@
 
 Turns a talking-head selfie video into a 9:16 reel. The pipeline does the following:
 - Whisper transcript with word timestamps
+- "studio mic" voice: AI denoise (DeepFilterNet), warm close-mic EQ, de-esser, gentle compression
 - cuts only true silence, so word endings stay intact
 - natural skin retouch with a 30% lift on face and hands
 - liquid-glass keyword animations synced to the speech
@@ -14,7 +15,7 @@ Built for *Modul Konstruk Fizik Tingkatan 5* (64 s source → 61.4 s reel). The 
 ## Quick start
 
 ```bash
-./setup.sh                                   # venv + pip, npm, YuNet model, headless Chrome (idempotent)
+./setup.sh                                   # venv + pip, npm, YuNet, DeepFilterNet, headless Chrome (idempotent)
 ./run_all.sh --drive "<google drive link>"   # or --src video.mp4, or reuse work/src.mp4
 ./run_all.sh --from cuts --draft             # 720p preview → out/preview_720p.mp4
 ./run_all.sh --from cuts                     # final → out/final_1080p.mp4 (~29 MB for 60 s)
@@ -32,6 +33,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
    - language and prompt
    - `flip` (un-mirror selfie footage)
    - `brighten`
+   - `voice.preset`: `studio` (default), `clear` or `basic`
    - transcript `fixes` (Whisper mishearings)
    - caption keywords
    - `cuts.end_s` / `no_cuts_after_s` (set them to `null` to use the whole video)
@@ -49,7 +51,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 | fetch | curl / cp | `work/src.mp4` |
 | transcribe | `transcribe.py` (faster-whisper, decoded via ffmpeg) | `work/tr_large.json` |
 | cuts | `cuts.py`: 120–7800 Hz energy ≤ floor + 6 dB is silence; keeps a 0.13 s tail and 0.10 s head | `work/keep.json` |
-| voice | `voice.py`: frame-matched cuts, 12–15 ms fades, denoise, compression, loudnorm −15 LUFS | `work/voice.wav`, `work/edl.json` |
+| voice | `voice.py`: frame-matched cuts with 12–15 ms fades, then the `voice.preset` chain (studio: DeepFilterNet −40 dB, +3 dB @120 Hz, −4.5 dB @450 Hz, +2.5 dB @2.8 kHz, −1.5 dB @5.5 kHz, de-esser, 2 compressors, parallel tanh saturation, loudnorm −15 LUFS, limiter) | `work/voice.wav`, `work/edl.json` |
 | aroll | `base.py` × `WORKERS`: flip, "Grade Cerah Tajam", retouch (`look.py`), zoom 1.0/1.08 per cut; then concat with 1 s keyframes | `reel/assets/base.mp4` |
 | build | `build.py` + `template.html`: composition, captions, copies fonts/GSAP/icons | `reel/index.html`, `work/sfx_cues.json` |
 | audio | `sfx.py`, then mix under the voice (`mix.sfx_gain`) | `reel/assets/mix.wav` |
@@ -72,6 +74,7 @@ The tests cover:
 - transcript fixes and caption chunking
 - a regression check that `build.py` regenerates the committed `reel/index.html` and `work/sfx_cues.json` exactly
 - SFX synthesis, ffprobe/ffmpeg helpers
+- every voice preset produces stereo 48 kHz audio of exactly the video length
 - skin lift when no face is detected
 
 ## Notes
@@ -79,7 +82,7 @@ The tests cover:
 - Not committed (see `.gitignore`):
   - video and audio files
   - `node_modules/`, `.venv/`
-  - `models/`
+  - `models/`, `tools/`
   - `reel/assets/`
   - `out/`
 - `hyperframes lint` warns about many "heavy overlay" elements (backdrop-filter glass). Inactive cues are `display:none`, and the 61 s render had no black frames, but check the output if you add many more cues.

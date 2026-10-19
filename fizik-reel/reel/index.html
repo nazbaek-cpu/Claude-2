@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Jakarta"; font-weight: 600; src: url("assets/fonts/pjs-600.woff2") format("woff2"); }
+  @font-face { font-family: "Jakarta"; font-weight: 800; src: url("assets/fonts/pjs-800.woff2") format("woff2"); }
+  :root { --yellow: #FFE45C; --pink: #FF6B81; --mint: #7DF7D2; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; background: #000; overflow: hidden; }
+  #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Jakarta", sans-serif; color: #fff; }
+  #aroll { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* ---------- liquid glass ---------- */
+  .glass {
+    position: relative; overflow: hidden; border-radius: 44px;
+    background:
+      radial-gradient(120% 90% at 15% 0%, rgba(255,255,255,.34) 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(160deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.06) 50%, rgba(255,255,255,.14) 100%),
+      rgba(16, 20, 26, .26);
+    -webkit-backdrop-filter: blur(22px) saturate(1.8) brightness(1.06);
+    backdrop-filter: blur(22px) saturate(1.8) brightness(1.06);
+    border: 1.5px solid rgba(255,255,255,.55);
+    box-shadow:
+      inset 0 2px 1px rgba(255,255,255,.85),
+      inset 0 -3px 2px rgba(255,255,255,.22),
+      inset 0 0 30px rgba(255,255,255,.10),
+      0 26px 60px rgba(0,0,0,.38);
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  }
+  .glass::after { /* rim refraction */
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 18%, rgba(255,255,255,0) 82%, rgba(255,255,255,.18));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; padding: 3px;
+  }
+  .sheen { position: absolute; inset: -20% -10%; pointer-events: none;
+    background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.42) 50%, transparent 62%);
+    transform: translateX(-130%); }
+
+  .cue { position: absolute; display: none; }
+  .cue.top { top: 96px; left: 60px; right: 60px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .cue.free { inset: 0; }
+  .cue.free .hero { position: absolute; top: 96px; left: 50%; }
+  .cue.ctaz { left: 60px; right: 60px; top: 1330px; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+
+  .hero { display: flex; align-items: center; gap: 26px; padding: 26px 50px; border-radius: 56px; }
+  .hero.col { flex-direction: column; gap: 4px; padding: 30px 60px 34px; }
+  .card { display: flex; align-items: center; gap: 28px; padding: 30px 44px; max-width: 960px; }
+  .pill { display: inline-flex; align-items: center; gap: 18px; padding: 16px 40px 16px 26px; border-radius: 999px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 16px 34px; border-radius: 999px; font-weight: 800; font-size: 48px; white-space: nowrap; }
+  .cue.free .chip { position: absolute; }
+  .row { display: flex; gap: 20px; }
+  .list { padding: 30px 48px 34px; min-width: 700px; display: flex; flex-direction: column; gap: 14px; }
+  .li { display: flex; align-items: center; gap: 20px; font-weight: 800; font-size: 54px; }
+
+  .kicker { font-weight: 800; font-size: 30px; letter-spacing: .32em; opacity: .85; }
+  .huge { font-weight: 800; font-size: 140px; line-height: .95; letter-spacing: -.02em; }
+  .sm { font-weight: 600; font-size: 44px; opacity: .95; }
+  .lg { font-weight: 800; font-size: 64px; line-height: 1.08; letter-spacing: -.01em; }
+  .txt { display: flex; flex-direction: column; gap: 2px; }
+  .ico { flex: none; filter: drop-shadow(0 6px 14px rgba(0,0,0,.35)); }
+  .glow { text-shadow: 0 0 22px currentColor, 0 2px 12px rgba(0,0,0,.4); }
+
+  .cta { padding: 34px 70px; border-radius: 999px; font-weight: 800; font-size: 62px; letter-spacing: .02em; color: var(--yellow);
+    background:
+      radial-gradient(120% 90% at 15% 0%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 55%),
+      rgba(12, 14, 18, .55); }
+  .pill2 { display: inline-flex; align-items: center; gap: 14px; font-weight: 800; font-size: 46px; text-shadow: 0 3px 14px rgba(0,0,0,.6); }
+  .cursor { position: absolute; left: 640px; top: 90px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.45)); }
+  .ring { position: absolute; left: 650px; top: 95px; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%;
+    border: 5px solid rgba(255,255,255,.9); opacity: 0; }
+
+  /* ---------- captions ---------- */
+  .caps { position: absolute; left: 60px; right: 60px; top: 1440px; height: 140px; display: flex; justify-content: center; }
+  .cap { position: absolute; display: none; padding: 18px 40px 22px; border-radius: 34px; font-weight: 800; font-size: 56px; white-space: nowrap;
+    background: linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.05)), rgba(10,12,16,.34);
+    -webkit-backdrop-filter: blur(18px) saturate(1.6); backdrop-filter: blur(18px) saturate(1.6);
+    border: 1.5px solid rgba(255,255,255,.42);
+    box-shadow: inset 0 2px 1px rgba(255,255,255,.7), 0 18px 40px rgba(0,0,0,.3);
+    text-shadow: 0 2px 10px rgba(0,0,0,.4); }
+  .cap .w { opacity: .5; }
+  .cap .w.k { color: var(--yellow); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1080" data-height="1920" data-start="0" data-duration="56.567">
+  <video id="aroll" class="clip" src="assets/base.mp4" muted playsinline data-start="0" data-duration="56.567"></video>
+  <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="56.567"></audio>
+<div class="cue free" id="c0" data-t0="0.000" data-t1="4.327" style="">
+  <div class="glass hero pop" data-at="0.000"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/269b.svg" style="width:96px;height:96px"><div><div class="kicker">SUBJEK</div><div class="huge" >FIZIK</div></div></div>
+  <div class="glass chip float pop" data-at="1.087" style="left:60px;top:330px">F = ma</div><div class="glass chip float pop" data-at="1.417" style="left:760px;top:330px">V = IR</div><div class="glass chip float pop" data-at="1.717" style="left:60px;top:460px">P = F/A</div><div class="glass chip float pop" data-at="2.117" style="left:770px;top:460px">E = mc²</div><div class="glass chip float pop" data-at="2.567" style="left:60px;top:590px">p = mv</div><div class="glass chip float pop" data-at="2.987" style="left:800px;top:590px">W = Fs</div></div>
+<div class="cue top" id="c1" data-t0="4.337" data-t1="7.517" style="">
+  <div class="glass card pop" data-at="4.667"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f4c9.svg" style="width:92px;height:92px"><div class="txt"><div class="sm pop" data-at="4.647">Anak-anak selalu</div>
+    <div class="lg"><span class="pop shake" data-at="6.027" style="color:var(--pink)">lemah</span> <span class="pop" data-at="6.787">dalam Fizik</span></div></div></div></div>
+<div class="cue top" id="c2" data-t0="7.567" data-t1="10.400" style="">
+  <div class="glass pill pop" data-at="8.567"><span class="sheen"></span><img class="ico" src="assets/icons/1f393.svg" style="width:80px;height:80px">
+    <span class="lg">SPM</span><span class="sm" style="margin-left:14px">tahun ni</span></div></div>
+<div class="cue top" id="c3" data-t0="10.433" data-t1="14.533" style="">
+  <div class="glass card pop" data-at="10.433"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f4a1.svg" style="width:96px;height:96px"><div class="txt"><div class="sm pop" data-at="10.820">Dapatkan formula</div>
+    <div class="lg pop glow" data-at="13.380" style="color:var(--yellow)">senang nak ingat</div></div></div></div>
+<div class="cue top" id="c4" data-t0="14.550" data-t1="21.330" style="">
+  <div class="glass card pop" data-at="15.000"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f4d8.svg" style="width:96px;height:96px"><div class="txt"><div class="sm">Modul</div><div class="lg">Konstruk <span style="color:var(--pink)">Fizik</span></div></div></div>
+  <div class="row">
+    <div class="glass chip pop" data-at="18.020">Tingkatan <b>5</b></div>
+    <div class="glass chip pop" data-at="20.040" style="color:var(--yellow)">+ Tingkatan <b>4</b></div></div></div>
+<div class="cue top" id="c5" data-t0="21.343" data-t1="26.033" style="">
+  <div class="glass card pop" data-at="21.383"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f9e0.svg" style="width:96px;height:96px"><div class="txt"><div class="sm pop" data-at="22.993">Cara ingat formula</div>
+    <div class="lg pop glow" data-at="24.813" style="color:var(--mint)">dengan mudah ✓</div></div></div></div>
+<div class="cue top" id="c6" data-t0="26.033" data-t1="30.000" style="">
+  <div class="glass card pop" data-at="27.627"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f3c5.svg" style="width:96px;height:96px"><div class="txt"><div class="sm">Dibuat oleh</div>
+    <div class="lg pop glow" data-at="28.407" style="color:var(--yellow)">Cikgu Cemerlang Fizik</div></div></div></div>
+<div class="cue top" id="c7" data-t0="30.003" data-t1="35.000" style="">
+  <div class="glass pill pop" data-at="30.093"><img class="ico" src="assets/icons/2b50.svg" style="width:64px;height:64px"><span class="sm">Paling best</span></div>
+  <div class="glass hero pop" data-at="31.853"><span class="sheen"></span><div class="huge" style="font-size:118px">MNEMONIK</div></div>
+  <div class="glass chip pop" data-at="33.253"><img class="ico" src="assets/icons/270f.svg" style="width:56px;height:56px"> Soalan <span style="color:var(--yellow)">&nbsp;kreatif</span></div></div>
+<div class="cue top" id="c8" data-t0="35.000" data-t1="42.650" style="">
+  <div class="glass list pop" data-at="35.067"><span class="sheen"></span>
+    <div class="kicker">DALAM BUKU NI</div>
+    <div class="li pop" data-at="35.117"><img class="ico" src="assets/icons/2705.svg" style="width:58px;height:58px"><span>Soalan</span></div>
+    <div class="li pop" data-at="35.927"><img class="ico" src="assets/icons/2705.svg" style="width:58px;height:58px"><span>Siap <b style="color:var(--yellow)">jawapan</b></span></div>
+    <div class="li pop" data-at="37.613"><img class="ico" src="assets/icons/2705.svg" style="width:58px;height:58px"><span>Cara guna formula</span></div>
+    <div class="li pop" data-at="41.420"><img class="ico" src="assets/icons/2705.svg" style="width:58px;height:58px"><span>Senang nak ingat</span></div></div></div>
+<div class="cue top" id="c9" data-t0="42.840" data-t1="46.390" style="">
+  <div class="glass hero col pop" data-at="42.840"><span class="sheen"></span>
+    <div class="kicker">TEKNIK</div><div class="lg pop" data-at="43.680">Senang ingat</div>
+    <div class="huge pop" data-at="45.400" style="font-size:104px;color:var(--yellow)">FORMULA</div></div></div>
+<div class="cue top" id="c10" data-t0="46.400" data-t1="51.933" style="">
+  <div class="glass pill pop" data-at="46.400"><img class="ico" src="assets/icons/1f468-200d-1f469-200d-1f467.svg" style="width:72px;height:72px"><span class="sm">Ibu ayah,</span></div>
+  <div class="glass card pop" data-at="47.507"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f3af.svg" style="width:92px;height:92px"><div class="txt"><div class="sm">Sesuai untuk</div>
+    <div class="lg">anak-anak <span class="pop" data-at="50.767" style="color:var(--mint)">ingat formula</span></div></div></div></div>
+<div class="cue top" id="c11" data-t0="51.943" data-t1="54.827" style="">
+  <div class="glass card pop" data-at="51.943"><span class="sheen"></span>
+    <img class="ico" src="assets/icons/1f4dd.svg" style="width:92px;height:92px"><div class="txt"><div class="sm">Bantu jawab soalan</div>
+    <div class="lg pop glow" data-at="54.287" style="color:var(--mint)">dengan mudah ✓</div></div></div></div>
+<div class="cue ctaz" id="c12" data-t0="54.833" data-t1="56.567" style="">
+  <div class="glass cta pop" data-at="54.867"><span class="sheen"></span><span>DAPATKAN SEKARANG</span></div>
+  <div class="pill2 pop" data-at="55.347"><img class="ico bob" src="assets/icons/1f447.svg" style="width:64px;height:64px"><span>Link di bawah</span></div>
+  <svg class="cursor" data-at="54.967" viewBox="0 0 40 52" width="70"><path d="M3 3 L3 42 L13 33 L20 49 L27 46 L20 30 L34 30 Z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/></svg>
+  <div class="ring" data-at="55.467"></div></div>
+  <div class="caps">
+<div class="cap" data-t0="0.000" data-t1="1.087"><span class="w" data-at="0.000">Subjek</span> <span class="w k" data-at="0.387">fizik</span> <span class="w" data-at="0.927">dia</span></div>
+<div class="cap" data-t0="1.087" data-t1="2.787"><span class="w" data-at="1.087">banyak</span> <span class="w" data-at="1.667">sangat</span> <span class="w" data-at="2.467">dia</span></div>
+<div class="cap" data-t0="2.787" data-t1="3.687"><span class="w" data-at="2.787">punya</span> <span class="w k" data-at="2.987">formula</span> <span class="w" data-at="3.347">nak</span></div>
+<div class="cap" data-t0="3.687" data-t1="4.333"><span class="w" data-at="3.687">kena</span> <span class="w" data-at="3.867">ingat.</span></div>
+<div class="cap" data-t0="4.333" data-t1="5.267"><span class="w" data-at="4.333">Sebab</span> <span class="w" data-at="4.447">tu</span> <span class="w" data-at="4.647">anak-anak</span></div>
+<div class="cap" data-t0="5.267" data-t1="6.927"><span class="w" data-at="5.267">selalu</span> <span class="w k" data-at="6.027">lemah</span> <span class="w" data-at="6.787">dalam</span></div>
+<div class="cap" data-t0="6.927" data-t1="7.547"><span class="w k" data-at="6.927">fizik.</span></div>
+<div class="cap" data-t0="7.547" data-t1="8.567"><span class="w" data-at="7.547">Anak-anak</span> <span class="w" data-at="8.107">yang</span> <span class="w" data-at="8.287">ambil</span></div>
+<div class="cap" data-t0="8.567" data-t1="10.380"><span class="w k" data-at="8.567">SPM</span> <span class="w" data-at="9.640">tahun</span> <span class="w" data-at="9.980">ni,</span></div>
+<div class="cap" data-t0="10.380" data-t1="12.760"><span class="w" data-at="10.380">better</span> <span class="w" data-at="10.820">dapatkan</span> <span class="w k" data-at="12.000">formula</span></div>
+<div class="cap" data-t0="12.760" data-t1="14.080"><span class="w" data-at="12.760">yang</span> <span class="w k" data-at="13.380">senang</span> <span class="w" data-at="13.940">nak</span></div>
+<div class="cap" data-t0="14.080" data-t1="14.533"><span class="w" data-at="14.080">ingat.</span></div>
+<div class="cap" data-t0="14.533" data-t1="16.300"><span class="w" data-at="14.533">Tapi</span> <span class="w" data-at="14.940">daripada</span> <span class="w" data-at="15.540">buku</span></div>
+<div class="cap" data-t0="16.300" data-t1="17.200"><span class="w k" data-at="16.300">Konstruk,</span></div>
+<div class="cap" data-t0="17.200" data-t1="18.480"><span class="w" data-at="17.200">Modul</span> <span class="w k" data-at="17.580">Konstruk</span> <span class="w k" data-at="18.020">tingkatan</span></div>
+<div class="cap" data-t0="18.480" data-t1="18.980"><span class="w" data-at="18.480">5,</span></div>
+<div class="cap" data-t0="18.980" data-t1="20.040"><span class="w" data-at="18.980">dia</span> <span class="w" data-at="19.440">siap</span> <span class="w" data-at="19.840">ada</span></div>
+<div class="cap" data-t0="20.040" data-t1="21.333"><span class="w k" data-at="20.040">tingkatan</span> <span class="w" data-at="20.540">4</span> <span class="w" data-at="20.800">juga.</span></div>
+<div class="cap" data-t0="21.333" data-t1="21.873"><span class="w" data-at="21.333">Buku</span> <span class="w" data-at="21.353">ni</span> <span class="w" data-at="21.573">dia</span></div>
+<div class="cap" data-t0="21.873" data-t1="22.993"><span class="w" data-at="21.873">bagi</span> <span class="w" data-at="22.293">siap</span> <span class="w" data-at="22.713">untuk</span></div>
+<div class="cap" data-t0="22.993" data-t1="23.973"><span class="w" data-at="22.993">cara</span> <span class="w" data-at="23.313">nak</span> <span class="w" data-at="23.573">ingat</span></div>
+<div class="cap" data-t0="23.973" data-t1="25.613"><span class="w k" data-at="23.973">formula</span> <span class="w" data-at="24.313">dengan</span> <span class="w k" data-at="24.813">mudah</span></div>
+<div class="cap" data-t0="25.613" data-t1="25.833"><span class="w" data-at="25.613">sekali.</span></div>
+<div class="cap" data-t0="25.833" data-t1="27.207"><span class="w" data-at="25.833">Buku</span> <span class="w" data-at="26.267">ni</span> <span class="w" data-at="26.487">sebenarnya</span></div>
+<div class="cap" data-t0="27.207" data-t1="28.407"><span class="w" data-at="27.207">dia</span> <span class="w" data-at="27.627">dibuat</span> <span class="w" data-at="28.107">oleh</span></div>
+<div class="cap" data-t0="28.407" data-t1="29.967"><span class="w" data-at="28.407">Cikgu</span> <span class="w k" data-at="29.107">Cemerlang</span> <span class="w k" data-at="29.547">Fizik.</span></div>
+<div class="cap" data-t0="29.967" data-t1="30.873"><span class="w" data-at="29.967">Yang</span> <span class="w" data-at="30.093">paling</span> <span class="w k" data-at="30.453">bestnya</span></div>
+<div class="cap" data-t0="30.873" data-t1="32.453"><span class="w" data-at="30.873">dia</span> <span class="w" data-at="31.133">menggunakan</span> <span class="w k" data-at="31.853">mnemonik</span></div>
+<div class="cap" data-t0="32.453" data-t1="33.913"><span class="w" data-at="32.453">dan</span> <span class="w" data-at="32.633">secara</span> <span class="w k" data-at="33.253">kreatif</span></div>
+<div class="cap" data-t0="33.913" data-t1="34.833"><span class="w" data-at="33.913">dia</span> <span class="w" data-at="34.013">bagi</span> <span class="w k" data-at="34.293">soalan.</span></div>
+<div class="cap" data-t0="34.833" data-t1="35.627"><span class="w" data-at="34.833">Lepas</span> <span class="w" data-at="35.247">tu</span> <span class="w" data-at="35.387">dia</span></div>
+<div class="cap" data-t0="35.627" data-t1="37.133"><span class="w" data-at="35.627">siap</span> <span class="w k" data-at="35.927">jawapan</span> <span class="w" data-at="36.753">cara</span></div>
+<div class="cap" data-t0="37.133" data-t1="38.713"><span class="w" data-at="37.133">nak</span> <span class="w" data-at="37.613">guna</span> <span class="w k" data-at="38.233">formula</span></div>
+<div class="cap" data-t0="38.713" data-t1="40.960"><span class="w" data-at="38.713">yang</span> <span class="w" data-at="39.413">kita</span> <span class="w" data-at="39.893">ingat</span></div>
+<div class="cap" data-t0="40.960" data-t1="41.980"><span class="w" data-at="40.960">bagi</span> <span class="w k" data-at="41.420">senang</span> <span class="w" data-at="41.880">nak</span></div>
+<div class="cap" data-t0="41.980" data-t1="42.840"><span class="w" data-at="41.980">ingat</span> <span class="w" data-at="42.280">tu</span> <span class="w" data-at="42.380">ni.</span></div>
+<div class="cap" data-t0="42.840" data-t1="44.900"><span class="w k" data-at="42.840">Teknik</span> <span class="w k" data-at="43.680">senang</span> <span class="w" data-at="44.700">nak</span></div>
+<div class="cap" data-t0="44.900" data-t1="46.380"><span class="w" data-at="44.900">ingat</span> <span class="w k" data-at="45.400">formula</span> <span class="w k" data-at="45.740">fizik.</span></div>
+<div class="cap" data-t0="46.380" data-t1="46.727"><span class="w" data-at="46.380">Ibu ayah,</span></div>
+<div class="cap" data-t0="46.727" data-t1="47.507"><span class="w" data-at="46.727">ni</span> <span class="w" data-at="47.107">buku</span> <span class="w" data-at="47.367">ni</span></div>
+<div class="cap" data-t0="47.507" data-t1="49.167"><span class="w" data-at="47.507">sesuai</span> <span class="w" data-at="48.047">untuk</span> <span class="w" data-at="48.307">anak-anak</span></div>
+<div class="cap" data-t0="49.167" data-t1="50.007"><span class="w" data-at="49.167">yang</span> <span class="w" data-at="49.427">nak</span> <span class="w" data-at="49.647">ingat</span></div>
+<div class="cap" data-t0="50.007" data-t1="51.447"><span class="w k" data-at="50.007">formula</span> <span class="w" data-at="50.247">dengan</span> <span class="w k" data-at="50.767">mudah</span></div>
+<div class="cap" data-t0="51.447" data-t1="51.647"><span class="w" data-at="51.447">sekali.</span></div>
+<div class="cap" data-t0="51.647" data-t1="52.953"><span class="w" data-at="51.647">Dan</span> <span class="w" data-at="51.933">bantu</span> <span class="w" data-at="52.753">dia</span></div>
+<div class="cap" data-t0="52.953" data-t1="53.727"><span class="w" data-at="52.953">orang</span> <span class="w" data-at="53.133">untuk</span> <span class="w" data-at="53.333">menjawab</span></div>
+<div class="cap" data-t0="53.727" data-t1="54.767"><span class="w k" data-at="53.727">soalan</span> <span class="w" data-at="54.067">dengan</span> <span class="w k" data-at="54.287">mudah.</span></div>
+<div class="cap" data-t0="54.767" data-t1="54.833"><span class="w" data-at="54.767">Boleh</span> <span class="w" data-at="54.867">dapatkan</span> <span class="w" data-at="55.147">dekat</span></div>
+  </div>
+</div>
+<script src="assets/gsap.min.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  const num = (el, k) => parseFloat(el.dataset[k]);
+  tl.set({}, {}, 56.567);
+
+  document.querySelectorAll(".cue").forEach((c) => {
+    const t0 = num(c, "t0"), t1 = num(c, "t1");
+    const disp = c.classList.contains("free") ? "block" : "flex";
+    tl.set(c, { display: disp }, t0);
+    tl.set(c, { display: "none" }, t1 + 0.02);
+    tl.to(c, { autoAlpha: 0, y: -26, scale: 0.97, duration: 0.26, ease: "power2.in" }, Math.max(t0 + 0.3, t1 - 0.26));
+    c.querySelectorAll(".pop").forEach((el) => {
+      const t = Math.max(t0, num(el, "at"));
+      const isGlass = el.classList.contains("glass");
+      const from = { autoAlpha: 0, y: 46, scale: isGlass ? 0.82 : 0.9 };
+      const to = { autoAlpha: 1, y: 0, scale: 1, duration: isGlass ? 0.5 : 0.36, ease: isGlass ? "back.out(1.7)" : "back.out(2.2)" };
+      if (!isGlass) { from.filter = "blur(10px)"; to.filter = "blur(0px)"; }
+      if (el.classList.contains("hero") && el.closest(".free")) { from.xPercent = -50; to.xPercent = -50; }
+      tl.fromTo(el, from, to, t);
+      const sh = el.querySelector(":scope > .sheen");
+      if (sh) tl.fromTo(sh, { xPercent: -130 }, { xPercent: 130, duration: 1.0, ease: "power2.inOut" }, t + 0.15);
+      if (el.classList.contains("shake")) tl.to(el, { x: 9, duration: 0.05, repeat: 7, yoyo: true, ease: "none" }, t + 0.36);
+      if (el.classList.contains("float")) tl.to(el, { y: -14, duration: 1.1, repeat: 3, yoyo: true, ease: "sine.inOut" }, t + 0.5);
+    });
+    c.querySelectorAll(".bob").forEach((el) => tl.to(el, { y: 14, duration: 0.35, repeat: 5, yoyo: true, ease: "sine.inOut" }, t0 + 0.6));
+    const cur = c.querySelector(".cursor");
+    if (cur) {
+      const t = num(cur, "at");
+      tl.fromTo(cur, { autoAlpha: 0, x: 300, y: 260 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.45, ease: "power3.out" }, t);
+      tl.to(cur, { scale: 0.82, duration: 0.08, yoyo: true, repeat: 1, transformOrigin: "10% 10%" }, t + 0.5);
+      const ring = c.querySelector(".ring");
+      tl.fromTo(ring, { autoAlpha: 1, scale: 0.2 }, { autoAlpha: 0, scale: 2.4, duration: 0.5, ease: "power2.out" }, t + 0.5);
+      tl.to(c.querySelector(".cta"), { scale: 0.94, duration: 0.08, yoyo: true, repeat: 1 }, t + 0.5);
+    }
+  });
+
+  document.querySelectorAll(".cap").forEach((c) => {
+    const t0 = num(c, "t0"), t1 = num(c, "t1");
+    tl.set(c, { display: "block" }, t0);
+    tl.fromTo(c, { autoAlpha: 0, y: 14, scale: 0.94 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.14, ease: "power2.out" }, t0);
+    tl.set(c, { display: "none" }, t1);
+    c.querySelectorAll(".w").forEach((w) => tl.to(w, { opacity: 1, duration: 0.08 }, Math.max(t0, num(w, "at"))));
+  });
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["root"] = tl;
+</script>
+</body>
+</html>

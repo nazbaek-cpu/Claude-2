@@ -1,7 +1,9 @@
-"""Cut the voice track with the same frame-quantized keep list as the video, then clean it up."""
-import json, subprocess, os
-FPS = 30
-WORK = os.path.join(os.path.dirname(__file__), "work")
+"""Cut the voice track with the same frame-quantized keep list as the video, then clean it up.
+Writes work/voice.wav and the source->output time map work/edl.json."""
+import json, subprocess
+from media import SRC, WORK, probe
+
+FPS = probe()[2]
 keep = json.load(open(f"{WORK}/keep.json"))
 segs = [(round(a * FPS) / FPS, round(b * FPS) / FPS) for a, b in keep]
 parts, labels = [], []
@@ -12,7 +14,7 @@ for i, (a, b) in enumerate(segs):
 fc = ";".join(parts) + ";" + "".join(labels) + f"concat=n={len(segs)}:v=0:a=1[c];" \
      "[c]highpass=f=70,afftdn=nf=-30,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120," \
      "loudnorm=I=-15:TP=-1.5:LRA=9,aresample=48000[v]"
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{WORK}/src.mp4", "-filter_complex", fc, "-map", "[v]",
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", SRC, "-filter_complex", fc, "-map", "[v]",
                 "-ac", "2", f"{WORK}/voice.wav"], check=True)
 # source-time -> output-time map
 out, t = [], 0.0

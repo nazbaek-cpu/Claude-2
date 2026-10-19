@@ -1,0 +1,359 @@
+[
+ {
+  "note": "1  Subjek fizik ... banyak sangat formula nak kena ingat",
+  "start": 0.42,
+  "end": 4.76,
+  "class": "free",
+  "html": "\n  <div class=\"glass hero pop\" {at:0.42}><span class=\"sheen\"></span>\n    {icon:269b:96}<div><div class=\"kicker\">SUBJEK</div><div class=\"huge\" >FIZIK</div></div></div>\n  <div class=\"glass chip float pop\" {at:1.52} style=\"left:60px;top:330px\">F = ma</div><div class=\"glass chip float pop\" {at:1.85} style=\"left:760px;top:330px\">V = IR</div><div class=\"glass chip float pop\" {at:2.15} style=\"left:60px;top:460px\">P = F/A</div><div class=\"glass chip float pop\" {at:2.55} style=\"left:770px;top:460px\">E = mc²</div><div class=\"glass chip float pop\" {at:3} style=\"left:60px;top:590px\">p = mv</div><div class=\"glass chip float pop\" {at:3.42} style=\"left:800px;top:590px\">W = Fs</div>",
+  "sfx": [
+   [
+    0.38,
+    "whoosh",
+    0.9
+   ],
+   [
+    0.82,
+    "pop",
+    0.8
+   ],
+   [
+    1.52,
+    "pop",
+    0.55
+   ],
+   [
+    1.85,
+    "pop",
+    0.55
+   ],
+   [
+    2.15,
+    "pop",
+    0.55
+   ],
+   [
+    2.55,
+    "pop",
+    0.55
+   ],
+   [
+    3.0,
+    "pop",
+    0.55
+   ],
+   [
+    3.42,
+    "pop",
+    0.55
+   ],
+   [
+    4.12,
+    "boom",
+    0.5
+   ]
+  ]
+ },
+ {
+  "note": "2  Sebab tu anak-anak selalu lemah dalam fizik",
+  "start": 5.27,
+  "end": 8.45,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:5.6}><span class=\"sheen\"></span>\n    {icon:1f4c9:92}<div class=\"txt\"><div class=\"sm pop\" {at:5.58}>Anak-anak selalu</div>\n    <div class=\"lg\"><span class=\"pop shake\" {at:6.96} style=\"color:var(--pink)\">lemah</span> <span class=\"pop\" {at:7.72}>dalam Fizik</span></div></div></div>",
+  "sfx": [
+   [
+    5.5,
+    "whoosh",
+    0.7
+   ],
+   [
+    6.96,
+    "boom",
+    0.8
+   ]
+  ]
+ },
+ {
+  "note": "3  Anak-anak yang ambil SPM tahun ni",
+  "start": 8.8,
+  "end": 11.9,
+  "class": "top",
+  "html": "\n  <div class=\"glass pill pop\" {at:9.8}><span class=\"sheen\"></span>{icon:1f393:80}\n    <span class=\"lg\">SPM</span><span class=\"sm\" style=\"margin-left:14px\">tahun ni</span></div>",
+  "sfx": [
+   [
+    9.8,
+    "pop",
+    0.9
+   ]
+  ]
+ },
+ {
+  "note": "4  better dapatkan formula yang senang nak ingat",
+  "start": 11.94,
+  "end": 16.84,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:12}><span class=\"sheen\"></span>\n    {icon:1f4a1:96}<div class=\"txt\"><div class=\"sm pop\" {at:12.72}>Dapatkan formula</div>\n    <div class=\"lg pop glow\" {at:15.68} style=\"color:var(--yellow)\">senang nak ingat</div></div></div>",
+  "sfx": [
+   [
+    12.0,
+    "whoosh",
+    0.6
+   ],
+   [
+    15.68,
+    "ding",
+    0.8
+   ]
+  ]
+ },
+ {
+  "note": "5  modul konstruk tingkatan 5, siap ada tingkatan 4 juga",
+  "start": 17.15,
+  "end": 24.13,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:17.6}><span class=\"sheen\"></span>\n    {icon:1f4d8:96}<div class=\"txt\"><div class=\"sm\">Modul</div><div class=\"lg\">Konstruk <span style=\"color:var(--pink)\">Fizik</span></div></div></div>\n  <div class=\"row\">\n    <div class=\"glass chip pop\" {at:20.82}>Tingkatan <b>5</b></div>\n    <div class=\"glass chip pop\" {at:22.84} style=\"color:var(--yellow)\">+ Tingkatan <b>4</b></div></div>",
+  "sfx": [
+   [
+    17.55,
+    "whoosh",
+    0.8
+   ],
+   [
+    20.82,
+    "pop",
+    0.8
+   ],
+   [
+    22.84,
+    "pop",
+    0.8
+   ],
+   [
+    22.9,
+    "sparkle",
+    0.6
+   ]
+  ]
+ },
+ {
+  "note": "6  Buku ni dia bagi siap untuk cara nak ingat formula dengan mudah sekali",
+  "start": 24.61,
+  "end": 29.3,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:24.65}><span class=\"sheen\"></span>\n    {icon:1f9e0:96}<div class=\"txt\"><div class=\"sm pop\" {at:26.26}>Cara ingat formula</div>\n    <div class=\"lg pop glow\" {at:28.08} style=\"color:var(--mint)\">dengan mudah ✓</div></div></div>",
+  "sfx": [
+   [
+    24.65,
+    "whoosh",
+    0.6
+   ],
+   [
+    26.26,
+    "pop",
+    0.6
+   ],
+   [
+    28.08,
+    "ding",
+    0.8
+   ]
+  ]
+ },
+ {
+  "note": "7  dibuat oleh Cikgu Cemerlang Fizik",
+  "start": 29.76,
+  "end": 34.05,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:31.36}><span class=\"sheen\"></span>\n    {icon:1f3c5:96}<div class=\"txt\"><div class=\"sm\">Dibuat oleh</div>\n    <div class=\"lg pop glow\" {at:32.44} style=\"color:var(--yellow)\">Cikgu Cemerlang Fizik</div></div></div>",
+  "sfx": [
+   [
+    31.36,
+    "whoosh",
+    0.6
+   ],
+   [
+    32.44,
+    "sparkle",
+    0.9
+   ]
+  ]
+ },
+ {
+  "note": "8  paling best dia menggunakan mnemonik dan secara kreatif dia bagi soalan",
+  "start": 34.37,
+  "end": 40.08,
+  "class": "top",
+  "html": "\n  <div class=\"glass pill pop\" {at:34.46}>{icon:2b50:64}<span class=\"sm\">Paling best</span></div>\n  <div class=\"glass hero pop\" {at:36.22}><span class=\"sheen\"></span><div class=\"huge\" style=\"font-size:118px\">MNEMONIK</div></div>\n  <div class=\"glass chip pop\" {at:37.92}>{icon:270f:56} Soalan <span style=\"color:var(--yellow)\">&nbsp;kreatif</span></div>",
+  "sfx": [
+   [
+    34.46,
+    "pop",
+    0.7
+   ],
+   [
+    36.22,
+    "whoosh",
+    0.9
+   ],
+   [
+    36.3,
+    "boom",
+    0.35
+   ],
+   [
+    37.92,
+    "pop",
+    0.8
+   ]
+  ]
+ },
+ {
+  "note": "9  Lepas tu dia siap jawapan cara nak guna formula ...",
+  "start": 40.32,
+  "end": 48.45,
+  "class": "top",
+  "html": "\n  <div class=\"glass list pop\" {at:40.4}><span class=\"sheen\"></span>\n    <div class=\"kicker\">DALAM BUKU NI</div>\n    <div class=\"li pop\" {at:40.45}>{icon:2705:58}<span>Soalan</span></div>\n    <div class=\"li pop\" {at:41.26}>{icon:2705:58}<span>Siap <b style=\"color:var(--yellow)\">jawapan</b></span></div>\n    <div class=\"li pop\" {at:43.18}>{icon:2705:58}<span>Cara guna formula</span></div>\n    <div class=\"li pop\" {at:47.22}>{icon:2705:58}<span>Senang nak ingat</span></div></div>",
+  "sfx": [
+   [
+    40.38,
+    "whoosh",
+    0.7
+   ],
+   [
+    40.45,
+    "tick",
+    0.9
+   ],
+   [
+    40.480000000000004,
+    "pop",
+    0.45
+   ],
+   [
+    41.26,
+    "tick",
+    0.9
+   ],
+   [
+    41.29,
+    "pop",
+    0.45
+   ],
+   [
+    43.18,
+    "tick",
+    0.9
+   ],
+   [
+    43.21,
+    "pop",
+    0.45
+   ],
+   [
+    47.22,
+    "tick",
+    0.9
+   ],
+   [
+    47.25,
+    "pop",
+    0.45
+   ]
+  ]
+ },
+ {
+  "note": "10 Teknik senang nak ingat formula fizik",
+  "start": 48.64,
+  "end": 52.19,
+  "class": "top",
+  "html": "\n  <div class=\"glass hero col pop\" {at:48.64}><span class=\"sheen\"></span>\n    <div class=\"kicker\">TEKNIK</div><div class=\"lg pop\" {at:49.48}>Senang ingat</div>\n    <div class=\"huge pop\" {at:51.2} style=\"font-size:104px;color:var(--yellow)\">FORMULA</div></div>",
+  "sfx": [
+   [
+    48.6,
+    "whoosh",
+    0.8
+   ],
+   [
+    49.48,
+    "pop",
+    0.6
+   ],
+   [
+    51.2,
+    "boom",
+    0.45
+   ]
+  ]
+ },
+ {
+  "note": "11 Ibu ayah, buku ni sesuai untuk anak-anak yang nak ingat formula dengan mudah",
+  "start": 52.52,
+  "end": 58.07,
+  "class": "top",
+  "html": "\n  <div class=\"glass pill pop\" {at:52.52}>{icon:1f468-200d-1f469-200d-1f467:72}<span class=\"sm\">Ibu ayah,</span></div>\n  <div class=\"glass card pop\" {at:53.64}><span class=\"sheen\"></span>\n    {icon:1f3af:92}<div class=\"txt\"><div class=\"sm\">Sesuai untuk</div>\n    <div class=\"lg\">anak-anak <span class=\"pop\" {at:56.9} style=\"color:var(--mint)\">ingat formula</span></div></div></div>",
+  "sfx": [
+   [
+    52.5,
+    "pop",
+    0.7
+   ],
+   [
+    53.64,
+    "whoosh",
+    0.6
+   ],
+   [
+    56.9,
+    "ding",
+    0.6
+   ]
+  ]
+ },
+ {
+  "note": "12 Dan bantu dia orang untuk menjawab soalan dengan mudah",
+  "start": 58.41,
+  "end": 61.56,
+  "class": "top",
+  "html": "\n  <div class=\"glass card pop\" {at:58.41}><span class=\"sheen\"></span>\n    {icon:1f4dd:92}<div class=\"txt\"><div class=\"sm\">Bantu jawab soalan</div>\n    <div class=\"lg pop glow\" {at:61.02} style=\"color:var(--mint)\">dengan mudah ✓</div></div></div>",
+  "sfx": [
+   [
+    58.4,
+    "whoosh",
+    0.6
+   ],
+   [
+    61.02,
+    "ding",
+    0.7
+   ]
+  ]
+ },
+ {
+  "note": "13 CTA: Boleh dapatkan dekat link di bawah",
+  "start": 61.85,
+  "end": 63.6,
+  "class": "ctaz",
+  "html": "\n  <div class=\"glass cta pop\" {at:61.9}><span class=\"sheen\"></span><span>DAPATKAN SEKARANG</span></div>\n  <div class=\"pill2 pop\" {at:62.38}>{icon:1f447:64:ico bob}<span>Link di bawah</span></div>\n  <svg class=\"cursor\" {at:62} viewBox=\"0 0 40 52\" width=\"70\"><path d=\"M3 3 L3 42 L13 33 L20 49 L27 46 L20 30 L34 30 Z\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>\n  <div class=\"ring\" {at:62.5}></div>",
+  "sfx": [
+   [
+    61.85,
+    "riser",
+    0.5
+   ],
+   [
+    61.9,
+    "whoosh",
+    0.7
+   ],
+   [
+    62.5,
+    "click",
+    1.0
+   ],
+   [
+    62.52,
+    "ding",
+    0.7
+   ]
+  ]
+ }
+]

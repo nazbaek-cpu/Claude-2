@@ -4,15 +4,20 @@ usage: base.py <worker> <nworkers>   -> work/segs/sNN.mp4
 import json, subprocess, sys, os
 import numpy as np, cv2
 sys.path.insert(0, os.path.dirname(__file__))
+import look
 from look import grade, Retoucher
+from media import SRC, WORK, config, probe
 
-W, H, FPS = 1080, 1920, 30
-WORK = os.path.join(os.path.dirname(__file__), "work")
+CFG = config()
+W, H, FPS, _ = probe()
+if "BRIGHT" not in os.environ:
+    look.BRIGHT = CFG["brighten"]
 keep = json.load(open(f"{WORK}/keep.json"))
 segs = [(round(a * FPS), round(b * FPS)) for a, b in keep]
 wi, nw = int(sys.argv[1]), int(sys.argv[2])
 os.makedirs(f"{WORK}/segs", exist_ok=True)
-ZOOMS = [1.0, 1.08]
+ZOOMS = CFG["zooms"]
+VF = "hflip" if CFG["flip"] else "null"
 
 
 def zoom(img, z, cx, cy):
@@ -27,14 +32,14 @@ for k, (f0, f1) in enumerate(segs):
         continue
     out = f"{WORK}/segs/s{k:02d}.mp4"
     n = f1 - f0
-    dec = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", f"{f0 / FPS:.4f}", "-i", f"{WORK}/src.mp4",
-                            "-frames:v", str(n), "-vf", "hflip", "-f", "rawvideo", "-pix_fmt", "bgr24", "-"],
+    dec = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", f"{f0 / FPS:.4f}", "-i", SRC,
+                            "-frames:v", str(n), "-vf", VF, "-f", "rawvideo", "-pix_fmt", "bgr24", "-"],
                            stdout=subprocess.PIPE)
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
                             "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "14",
                             "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
-    r = Retoucher()
-    z = ZOOMS[k % 2]
+    r = Retoucher(W, H)
+    z = ZOOMS[k % len(ZOOMS)]
     anchor = None
     got = 0
     while got < n:
@@ -48,6 +53,8 @@ for k, (f0, f1) in enumerate(segs):
             anchor = (b[0] + b[2] / 2, b[1] + b[3] / 2) if b is not None else (W / 2, H * 0.42)
         enc.stdin.write(zoom(img, z, *anchor).tobytes())
         got += 1
+    if got == 0:
+        raise SystemExit(f"segment {k}: decoder returned no frames at {f0 / FPS:.3f}s")
     # pad if decoder came up short (keeps audio/video in sync)
     while got < n:
         enc.stdin.write(zoom(img, z, *anchor).tobytes()); got += 1

@@ -1,6 +1,7 @@
 """Grade Cerah Tajam + natural skin retouch (no shape change, no whitening)."""
 import cv2, numpy as np, os
 
+BRIGHT = float(os.environ.get("BRIGHT", "0.30"))
 MODEL = os.path.join(os.path.dirname(__file__), "models", "yunet.onnx")
 
 x = np.arange(256) / 255.0
@@ -78,14 +79,58 @@ class Retoucher:
         As = A + 0.45 * (cv2.GaussianBlur(A, (0, 0), 8 * s) - A)
         As = As - 0.3 * np.clip(As - cv2.GaussianBlur(A, (0, 0), 25 * s), 0, None)
         Bs = B + 0.4 * (cv2.GaussianBlur(B, (0, 0), 8 * s) - B)
-        # gentle brighten (multiplicative, ~5%, never toward white)
+        # brighten: multiplicative lift over the filled face hull (keeps eye/brow contrast, no
+        # blotches from mask holes), feathered into the hijab edge, soft roll-off on highlights
+        hm = np.zeros((ch, cw), np.uint8)
+        n, lab, st, _ = cv2.connectedComponentsWithStats((skin * (prior > 0.3)).astype(np.uint8))
+        if n > 1:
+            big = 1 + np.argmax(st[1:, cv2.CC_STAT_AREA])
+            pts = cv2.findNonZero((lab == big).astype(np.uint8))
+            cv2.fillConvexPoly(hm, cv2.convexHull(pts), 1)
+        hm = cv2.erode(hm, np.ones((7, 7), np.uint8))
+        M = cv2.GaussianBlur(hm.astype(np.float32), (0, 0), max(4, 0.05 * w))
         k = 0.85
-        L2 = (L + k * ms * (Ls - L)) * (1 + 0.05 * m)
+        L1 = L + k * ms * (Ls - L)
+        lift = L1 * (1 + BRIGHT * M)
+        knee = 225.0
+        lift = np.where(lift > knee, knee + (255 - knee) * np.tanh((lift - knee) / (255 - knee)), lift)
+        L2 = lift
         A2 = A + k * ms * (As - A)
         B2 = B + k * ms * (Bs - B)
         out = cv2.merge([np.clip(L2, 0, 255), np.clip(A2, 0, 255), np.clip(B2, 0, 255)]).astype(np.uint8)
         img = img.copy()
         img[y0:y1, x0:x1] = cv2.cvtColor(out, cv2.COLOR_LAB2BGR)
+        return self.body(img, (x0, y0, x1, y1), M)
+
+    def body(self, img, rect, Mface):
+        """Same lift on hands/arms so they match the face (skin colour only; excludes the red
+        cover, the beige hijab and the gold curtain)."""
+        if BRIGHT <= 0:
+            return img
+        H, W = img.shape[:2]
+        q = cv2.resize(img, (W // 4, H // 4), interpolation=cv2.INTER_AREA)
+        ycc = cv2.cvtColor(q, cv2.COLOR_BGR2YCrCb).astype(np.float32)
+        hsv = cv2.cvtColor(q, cv2.COLOR_BGR2HSV).astype(np.float32)
+        Y, Cr, Cb, S = ycc[..., 0], ycc[..., 1], ycc[..., 2], hsv[..., 1]
+        sk = ((Cr > 140) & (Cr < 172) & (Cb > 88) & (Cb < 122) & (Y > 50) & (Y < 225) & (S > 60) & (S < 165))
+        sk = cv2.morphologyEx(sk.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8)).astype(np.float32)
+        sk = cv2.GaussianBlur(sk, (0, 0), 2.5)
+        full = np.zeros((H // 4, W // 4), np.float32)
+        x0, y0, x1, y1 = rect
+        fm = cv2.resize(Mface, ((x1 - x0) // 4 or 1, (y1 - y0) // 4 or 1))
+        full[y0 // 4:y0 // 4 + fm.shape[0], x0 // 4:x0 // 4 + fm.shape[1]] = fm[:H // 4 - y0 // 4, :W // 4 - x0 // 4]
+        m = np.clip(sk - full * 1.5, 0, 1)  # face already lifted
+        if m.max() < 0.05:
+            return img
+        m = cv2.resize(m, (W, H), interpolation=cv2.INTER_LINEAR)
+        ys, xs = np.nonzero(m > 0.01)
+        a0, a1, b0, b1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+        c = img[a0:a1, b0:b1]
+        Lab = cv2.cvtColor(c, cv2.COLOR_BGR2LAB).astype(np.float32)
+        L = Lab[..., 0] * (1 + BRIGHT * m[a0:a1, b0:b1])
+        knee = 225.0
+        Lab[..., 0] = np.where(L > knee, knee + (255 - knee) * np.tanh((L - knee) / (255 - knee)), L)
+        img[a0:a1, b0:b1] = cv2.cvtColor(np.clip(Lab, 0, 255).astype(np.uint8), cv2.COLOR_LAB2BGR)
         return img
 
 

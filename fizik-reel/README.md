@@ -33,6 +33,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 2. Edit `config.json`:
    - language and prompt
    - `flip` (un-mirror selfie footage)
+   - `exposure`: whole-frame midtone lift that keeps blacks and highlights (0 = off, 0.22 a little, 0.38 moderate)
    - `makeup.lips` / `makeup.brows` (0 = off, 1 = default strength)
    - `product_zoom`: `enabled`, `zoom`/`min_zoom` (default 1.3 / 1.18), `hold_s`, `merge_gap_s`, `triggers` (regexes; add the product's name, e.g. `"buku|produk|modul"`), `face_min_y` (keeps the face below the cards on strong zooms; `null` = off)
    - `voice.preset`: `studio` (default), `clear` or `basic`

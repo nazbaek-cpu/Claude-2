@@ -16,6 +16,7 @@ wi, nw = int(sys.argv[1]), int(sys.argv[2])
 os.makedirs(f"{WORK}/segs", exist_ok=True)
 ZOOMS = CFG["zooms"]
 VF = "hflip" if CFG["flip"] else "null"
+EXPO = CFG.get("exposure", 0.0)  # whole-frame midtone lift, see look.exposure
 PZ = json.load(open(f"{WORK}/zooms.json")) if os.path.exists(f"{WORK}/zooms.json") else []
 RAMP = 0.6  # s, product zoom in/out
 # during a product zoom keep the face centre at least this low in the output, so the glass cards
@@ -79,7 +80,7 @@ for k, (f0, f1) in enumerate(segs):
         if len(buf) < W * H * 3:
             break
         img = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
-        img = r(grade(img))
+        img = r(grade(img, EXPO))
         if anchor is None:
             b = r.box
             anchor = (b[0] + b[2] / 2, b[1] + b[3] / 2) if b is not None else (W / 2, H * 0.42)

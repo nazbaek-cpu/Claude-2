@@ -7,7 +7,18 @@ x = np.arange(256) / 255.0
 LUT = (np.clip(x + 0.04 * np.sin(2 * np.pi * (x - 0.5)), 0, 1) * 255).astype(np.uint8)
 
 
-def grade(img):
+def exposure(img, k):
+    """brighten midtones on L only: y = x + k*x*(1-x)^1.2 keeps the black point (no haze) and
+    rolls off towards white (no blown highlights). k 0.22 = a little, 0.38 = moderate."""
+    if k <= 0:
+        return img
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(np.float32)
+    x = lab[..., 0] / 255
+    lab[..., 0] = np.clip(x + k * x * (1 - x) ** 1.2, 0, 1) * 255
+    return cv2.cvtColor(lab.astype(np.uint8), cv2.COLOR_LAB2BGR)
+
+
+def grade(img, expo=0.0):
     img = cv2.LUT(img, LUT)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype(np.float32)
     S = hsv[..., 1]
@@ -16,7 +27,7 @@ def grade(img):
     img[..., 2] *= 1.02
     img[..., 0] *= 0.985
     img = img + 0.6 * (img - cv2.GaussianBlur(img, (0, 0), 1.3))
-    return np.clip(img, 0, 255).astype(np.uint8)
+    return exposure(np.clip(img, 0, 255).astype(np.uint8), expo)
 
 
 # ---------------------------------------------------------------- makeup (positioned by YuNet landmarks)

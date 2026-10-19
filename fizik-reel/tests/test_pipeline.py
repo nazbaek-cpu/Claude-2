@@ -194,6 +194,18 @@ class TestVoice(unittest.TestCase):
 
 
 class TestLook(unittest.TestCase):
+    def test_exposure_lifts_mids_without_haze_or_clipping(self):
+        import cv2, look
+        ramp = np.repeat(np.linspace(0, 255, 256, dtype=np.uint8)[None, :, None], 3, 2).repeat(4, 0)
+        L0 = cv2.cvtColor(ramp, cv2.COLOR_BGR2LAB)[..., 0].astype(float).mean(0)
+        L1 = cv2.cvtColor(look.exposure(ramp, 0.38), cv2.COLOR_BGR2LAB)[..., 0].astype(float).mean(0)
+        self.assertLessEqual(L1[0] - L0[0], 1)          # black stays black (no fog)
+        self.assertGreater(L1[128] - L0[128], 15)       # mids clearly brighter
+        self.assertLessEqual(L1[-1], 255)
+        self.assertLess(L1[-1] - L0[-1], 2)             # white does not blow out further
+        self.assertTrue((np.diff(L1) >= -1).all())      # monotonic: no tone reversal
+        self.assertTrue((look.exposure(ramp, 0) == ramp).all())
+
     def test_grade_keeps_shape(self):
         import look
         img = np.full((64, 36, 3), 128, np.uint8)

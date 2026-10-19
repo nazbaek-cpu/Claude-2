@@ -109,13 +109,15 @@ if step deliver; then
   if [ "$DRAFT" = 1 ]; then
     ffmpeg -v error -y -i "$RAW" -vf scale=720:-2 -c:v libx264 -preset slow -b:v 2800k -maxrate 3500k -bufsize 6000k \
       -c:a aac -b:a 160k -movflags +faststart out/preview_720p.mp4
-    echo "preview: out/preview_720p.mp4"
+    OUT=out/preview_720p.mp4
+    echo "preview: $OUT"
   else
     # two-pass to stay under ~30 MB for a ~60 s reel
     ffmpeg -v error -y -i "$RAW" -c:v libx264 -preset slow -b:v 3500k -pass 1 -passlogfile out/p2 -an -f mp4 /dev/null
     ffmpeg -v error -y -i "$RAW" -c:v libx264 -preset slow -b:v 3500k -maxrate 5000k -bufsize 7000k -pass 2 \
       -passlogfile out/p2 -c:a aac -b:a 192k -movflags +faststart out/final_1080p.mp4
-    echo "final: out/final_1080p.mp4"
+    OUT=out/final_1080p.mp4
+    echo "final: $OUT"
   fi
-  ffprobe -v error -show_entries stream=codec_type,width,height:format=duration,size -of compact out/*_[0-9]*p.mp4
+  ffprobe -v error -show_entries stream=codec_type,width,height:format=duration,size -of compact "$OUT"
 fi

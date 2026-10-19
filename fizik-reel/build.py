@@ -41,6 +41,8 @@ def load_words(tr, fixes, drop_from=None):
             if w.startswith("-") and words:  # "anak -anak" -> "anak-anak"
                 words[-1][2] += w; words[-1][1] = b; continue
             words.append([a, b, fixes.get(w, w)])
+    for w in words:  # also fix joined words ("main -main" -> "main-main" -> "M&M's")
+        w[2] = fixes.get(w[2], w[2])
     return words
 
 
@@ -77,6 +79,8 @@ def copy_assets():
     for wt in (600, 800):
         shutil.copy(f"{FONTS}/plus-jakarta-sans-latin-{wt}-normal.woff2", f"{OUT}/assets/fonts/pjs-{wt}.woff2")
     shutil.copy(f"{NM}/gsap/dist/gsap.min.js", f"{OUT}/assets/gsap.min.js")
+    if os.path.isdir(f"{HERE}/img"):  # per-video product images used by cues.json as assets/img/<name>
+        shutil.copytree(f"{HERE}/img", f"{OUT}/assets/img", dirs_exist_ok=True)
 
 
 def main():

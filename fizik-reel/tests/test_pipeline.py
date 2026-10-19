@@ -75,6 +75,10 @@ class TestBuild(unittest.TestCase):
         self.assertEqual([x[2] for x in w], ["anak-anak", "Cemerlang"])
         self.assertEqual(w[0][1], .9)
 
+    def test_fixes_apply_to_joined_words(self):
+        tr = [{"w": [[0, .3, " main", 1], [.3, .6, "-main", 1]]}]
+        self.assertEqual([w[2] for w in self.build.load_words(tr, {"main-main": "M&M's"})], ["M&M's"])
+
     def test_chunk_words_limits(self):
         words = [[i, i + .5, x] for i, x in enumerate("satu dua tiga empat lima.".split())]
         ch = self.build.chunk_words(words, 3, 17)

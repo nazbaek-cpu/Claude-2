@@ -4,6 +4,10 @@
   "language": "ms",
   "initial_prompt": "Modul Konstruk Fizik Tingkatan 5, SPM, soalan, jawapan, nota.",
   "flip": true,
+  "makeup": {
+    "lips": 1.0,
+    "brows": 1.0
+  },
   "zooms": [
     1.0,
     1.08

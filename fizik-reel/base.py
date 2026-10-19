@@ -35,7 +35,8 @@ for k, (f0, f1) in enumerate(segs):
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
                             "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "14",
                             "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
-    r = Retoucher(W, H)
+    mk = CFG.get("makeup", {})
+    r = Retoucher(W, H, mk.get("lips", 0.0), mk.get("brows", 0.0))
     z = ZOOMS[k % len(ZOOMS)]
     anchor = None
     got = 0

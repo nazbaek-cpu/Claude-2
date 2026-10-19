@@ -5,6 +5,7 @@ Turns a talking-head selfie video into a 9:16 reel. The pipeline does the follow
 - "studio mic" voice: AI denoise (DeepFilterNet), warm close-mic EQ, de-esser, gentle compression
 - cuts only true silence, so word endings stay intact
 - natural skin retouch (smoothing and even tone only; no brightening)
+- optional natural makeup: nude-rose lip tint and soft brow fill, placed by face landmarks
 - liquid-glass keyword animations synced to the speech
 - karaoke captions
 - synthesized sound effects
@@ -32,6 +33,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 2. Edit `config.json`:
    - language and prompt
    - `flip` (un-mirror selfie footage)
+   - `makeup.lips` / `makeup.brows` (0 = off, 1 = default strength)
    - `voice.preset`: `studio` (default), `clear` or `basic`
    - transcript `fixes` (Whisper mishearings)
    - caption keywords
@@ -73,6 +75,7 @@ The tests cover:
 - SFX synthesis, ffprobe/ffmpeg helpers
 - every voice preset produces stereo 48 kHz audio of exactly the video length
 - the retouch never brightens skin-toned areas
+- lip tint stays natural (never saturated red) and brow fill stays moderate, both touching only their own area
 
 ## Notes
 

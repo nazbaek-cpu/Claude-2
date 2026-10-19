@@ -178,6 +178,39 @@ class TestLook(unittest.TestCase):
         out = look.Retoucher()(img)
         self.assertTrue((out == img).all())
 
+    @staticmethod
+    def _face():
+        """flat skin with redder lips and two dark brow bands; landmarks like YuNet's (re, le, nose, rm, lm)"""
+        img = np.full((900, 700, 3), (120, 150, 200), np.uint8)
+        cv2_ = __import__("cv2")
+        cv2_.ellipse(img, (350, 620), (80, 28), 0, 0, 360, (120, 120, 200), -1)
+        for x in (260, 440):
+            cv2_.ellipse(img, (x, 330), (60, 9), 0, 0, 360, (80, 100, 130), -1)
+        lm = np.array([[260, 400], [440, 400], [350, 500], [280, 620], [420, 620]], np.float32)
+        return img, lm
+
+    def test_lip_tint_is_natural_and_local(self):
+        import cv2, look
+        img, lm = self._face()
+        out = look.lip_tint(img, lm)
+        a0 = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(float)[..., 1]
+        a1 = cv2.cvtColor(out, cv2.COLOR_BGR2LAB).astype(float)[..., 1]
+        da = (a1 - a0)[612:628, 300:400].mean()
+        self.assertGreater(da, 2)    # visibly a little pinker
+        self.assertLess(da, 9)       # never a saturated red
+        self.assertTrue((out[:450] == img[:450]).all())  # nothing above the mouth touched
+
+    def test_brow_fill_is_moderate_and_local(self):
+        import cv2, look
+        img, lm = self._face()
+        out = look.brow_fill(img, lm)
+        L0 = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(float)[..., 0]
+        L1 = cv2.cvtColor(out, cv2.COLOR_BGR2LAB).astype(float)[..., 0]
+        brow = (L1 / L0)[326:334, 230:290].mean()
+        self.assertLess(brow, 0.97)  # defined
+        self.assertGreater(brow, 0.8)  # not drawn on thick/black
+        self.assertTrue((out[420:] == img[420:]).all())  # eyes and below untouched
+
     def test_no_brightening_setting_left(self):
         import look
         self.assertFalse(hasattr(look, "BRIGHT"))

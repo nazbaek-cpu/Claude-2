@@ -12,6 +12,18 @@
     1.0,
     1.08
   ],
+  "product_zoom": {
+    "enabled": true,
+    "zoom": 1.3,
+    "min_zoom": 1.18,
+    "hold_s": 5.0,
+    "min_gap_s": 8.0,
+    "triggers": [
+      "tengok (ni|ini)",
+      "(buku|produk)( \\w+)? (ni|ini)|(ni|ini) (buku|produk)",
+      "(macam|yang) (ni|ini)"
+    ]
+  },
   "voice": {
     "preset": "studio",
     "denoise_atten_db": 40

@@ -11,12 +11,12 @@
 #   --from STEP        skip the steps before STEP (reuse earlier outputs)
 #   --retranscribe     run Whisper even if work/tr_large.json exists
 #
-# Steps: fetch transcribe cuts voice aroll build audio render deliver
+# Steps: fetch transcribe cuts voice zoom aroll build audio render deliver
 # For a new video, edit config.json and cues.json (source seconds) after the transcribe step.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-STEPS=(fetch transcribe cuts voice aroll build audio render deliver)
+STEPS=(fetch transcribe cuts voice zoom aroll build audio render deliver)
 SRC_ARG="" DRIVE="" DRAFT=0 UNTIL="" FROM="" RETRANSCRIBE=0
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -69,6 +69,7 @@ fi; done_step transcribe
 
 if step cuts; then $PY cuts.py work/src.mp4 work/keep.json; fi; done_step cuts
 if step voice; then $PY voice.py; fi; done_step voice
+if step zoom; then $PY zoom.py; fi; done_step zoom
 
 if step aroll; then
   rm -rf work/segs

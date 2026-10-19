@@ -103,6 +103,33 @@ class TestBuild(unittest.TestCase):
             shutil.rmtree(tmp)
 
 
+class TestZoom(unittest.TestCase):
+    PATS = ["tengok (ni|ini)", "(buku|produk)( \\w+)? (ni|ini)|(ni|ini) (buku|produk)", "(macam|yang) (ni|ini)"]
+
+    def test_triggers_and_priority(self):
+        import zoom
+        tr = [{"w": [[0.8, 1.2, " buku", 1], [1.2, 1.6, " melukis", 1], [1.6, 1.8, " ni", 1],
+                     [5.0, 5.3, " Tengok", 1], [5.3, 5.5, " ni.", 1], [9.0, 9.2, " macam", 1], [9.2, 9.4, " ni", 1]]}]
+        self.assertEqual(zoom.trigger_times(tr, self.PATS), [(0.8, 1), (5.0, 0), (9.0, 2)])
+
+    def test_plan_spacing_hold_and_gentle_zoom(self):
+        import zoom
+        t = np.arange(0, 30, 0.1)
+        track = np.stack([t, np.full_like(t, 0.3), np.full_like(t, 135), np.full_like(t, 380),
+                          np.full_like(t, 260), np.full_like(t, 150)], 1)  # wide book low in frame
+        z = zoom.plan(track, [(0.8, 1), (5.0, 0), (20.0, 2)], 1080, 1920, 30.0)
+        self.assertEqual([round(x["start"], 1) for x in z], [4.7, 19.7])  # strongest first, 8 s apart; starts 0.3 s early
+        for x in z:
+            self.assertAlmostEqual(x["end"] - x["start"], 5.0, places=1)
+            self.assertTrue(1.18 <= x["z"] <= 1.3)
+
+    def test_no_zoom_when_product_not_visible(self):
+        import zoom
+        t = np.arange(0, 10, 0.1)
+        track = np.stack([t, np.where(t < 4, 0.3, 0.0), *(np.full_like(t, v) for v in (135, 380, 100, 100))], 1)
+        self.assertEqual(zoom.plan(track, [(6.0, 0)], 1080, 1920, 10.0), [])
+
+
 class TestSfx(unittest.TestCase):
     def test_every_kind_is_finite_and_audible(self):
         for name, fn in sfx.KINDS.items():

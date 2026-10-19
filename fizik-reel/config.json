@@ -21,7 +21,8 @@
     "triggers": [
       "buku|produk",
       "tengok (ni|ini)"
-    ]
+    ],
+    "face_min_y": 760
   },
   "voice": {
     "preset": "studio",

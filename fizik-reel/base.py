@@ -18,6 +18,9 @@ ZOOMS = CFG["zooms"]
 VF = "hflip" if CFG["flip"] else "null"
 PZ = json.load(open(f"{WORK}/zooms.json")) if os.path.exists(f"{WORK}/zooms.json") else []
 RAMP = 0.6  # s, product zoom in/out
+# during a product zoom keep the face centre at least this low in the output, so the glass cards
+# at the top of the frame never cover the face
+FACE_MIN_Y = CFG.get("product_zoom", {}).get("face_min_y", 760)
 
 
 def zoom(img, z, cx, cy):
@@ -48,6 +51,7 @@ def frame_zoom(img, z0, anchor, t):
     z = z0 + (pz["z"] - z0) * w
     u = u0 + (u1 - u0) * w
     hw, hh = W / (2 * z), H / (2 * z)
+    u[1] = min(u[1], anchor[1] + (H / 2 - FACE_MIN_Y) / z)  # face stays below the cards
     ux, uy = np.clip(u[0], hw, W - hw), np.clip(u[1], hh, H - hh)  # never show past the frame edge
     M = np.float32([[z, 0, W / 2 - z * ux], [0, z, H / 2 - z * uy]])
     return cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT)

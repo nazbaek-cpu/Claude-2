@@ -4,7 +4,8 @@ Turns a talking-head selfie video into a 9:16 reel. The pipeline does the follow
 - Whisper transcript with word timestamps
 - "studio mic" voice: AI denoise (DeepFilterNet), warm close-mic EQ, de-esser, gentle compression
 - cuts only true silence, so word endings stay intact
-- natural skin retouch with a 30% lift on face and hands
+- natural skin retouch (smoothing and even tone only; no brightening)
+- optional natural makeup: nude-rose lip tint and soft brow fill, placed by face landmarks
 - liquid-glass keyword animations synced to the speech
 - karaoke captions
 - synthesized sound effects
@@ -32,7 +33,7 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 2. Edit `config.json`:
    - language and prompt
    - `flip` (un-mirror selfie footage)
-   - `brighten`
+   - `makeup.lips` / `makeup.brows` (0 = off, 1 = default strength)
    - `voice.preset`: `studio` (default), `clear` or `basic`
    - transcript `fixes` (Whisper mishearings)
    - caption keywords
@@ -58,8 +59,6 @@ Requirements: ffmpeg/ffprobe, Node ≥ 18, Python ≥ 3.10, and about 4 GB of di
 | render | `hyperframes lint` + `hyperframes render` (draft / high) | `out/*_raw.mp4` |
 | deliver | 720p preview, or 2-pass 1080p at 3.5 Mb/s | `out/preview_720p.mp4` / `out/final_1080p.mp4` |
 
-`BRIGHT=0.2 ./run_all.sh --from aroll` overrides the skin lift for one run.
-
 ## Tests and lint
 
 ```bash
@@ -75,7 +74,8 @@ The tests cover:
 - a regression check that `build.py` regenerates the committed `reel/index.html` and `work/sfx_cues.json` exactly
 - SFX synthesis, ffprobe/ffmpeg helpers
 - every voice preset produces stereo 48 kHz audio of exactly the video length
-- skin lift when no face is detected
+- the retouch never brightens skin-toned areas
+- lip tint stays natural (never saturated red) and brow fill stays moderate, both touching only their own area
 
 ## Notes
 

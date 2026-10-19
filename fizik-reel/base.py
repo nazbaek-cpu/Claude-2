@@ -4,14 +4,11 @@ usage: base.py <worker> <nworkers>   -> work/segs/sNN.mp4
 import json, subprocess, sys, os
 import numpy as np, cv2
 sys.path.insert(0, os.path.dirname(__file__))
-import look
 from look import grade, Retoucher
 from media import SRC, WORK, config, probe
 
 CFG = config()
 W, H, FPS, _ = probe()
-if "BRIGHT" not in os.environ:
-    look.BRIGHT = CFG["brighten"]
 keep = json.load(open(f"{WORK}/keep.json"))
 segs = [(round(a * FPS), round(b * FPS)) for a, b in keep]
 wi, nw = int(sys.argv[1]), int(sys.argv[2])
@@ -38,7 +35,8 @@ for k, (f0, f1) in enumerate(segs):
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
                             "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "14",
                             "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
-    r = Retoucher(W, H)
+    mk = CFG.get("makeup", {})
+    r = Retoucher(W, H, mk.get("lips", 0.0), mk.get("brows", 0.0))
     z = ZOOMS[k % len(ZOOMS)]
     anchor = None
     got = 0

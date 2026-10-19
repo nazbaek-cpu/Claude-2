@@ -14,3 +14,12 @@ fizik-reel/work/words_out.json
 fizik-reel/tools/
 fizik-reel/work/dfn/
 fizik-reel/reel/.hyperframes/
+sticker-reel/.venv/
+sticker-reel/node_modules/
+sticker-reel/models/
+# per-project media (faces, voice, product photos) and generated files never go to the repo
+sticker-reel/projects/*/input/
+sticker-reel/projects/*/build/
+sticker-reel/projects/*/out/
+*.mp3
+*.m4a

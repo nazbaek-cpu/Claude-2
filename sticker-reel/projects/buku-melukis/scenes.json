@@ -1,0 +1,132 @@
+{
+  "scenes": [
+    {"at": "anak korang suka",
+     "poses": [{"pose": "tunjuk_korang", "x": -60}, {"at": "jangan abaikan", "pose": "terkejut", "x": 40}],
+     "items": [
+       {"type": "kick", "text": "ANAK KORANG", "at": "anak korang", "top": 200},
+       {"type": "text", "text": "SUKA", "size": "xl", "color": "white", "at": "suka", "top": 310},
+       {"type": "text", "text": "MELUKIS?", "size": "xl", "color": "accent", "at": "sangat", "top": 470},
+       {"type": "icon", "icon": "✏️", "at": "melukis", "left": 820, "top": 230, "size": 170},
+       {"type": "stamp", "text": "JANGAN ABAIKAN!", "at": "jangan abaikan", "rot": -5, "top": 740}
+     ]},
+    {"at": "aku tahu",
+     "poses": [{"pose": "manja_hmm", "x": -40}, {"at": "fikir", "pose": "berfikir", "x": 60}],
+     "items": [
+       {"type": "text", "text": "Aku tahu…", "size": "m", "at": "aku tahu", "anim": "up", "top": 200},
+       {"type": "kick", "text": "RAMAI MAK AYAH FIKIR", "at": "ramai", "top": 310},
+       {"type": "bubble", "lines": ["“Melukis ni", "main-main je…”"], "at": "fikir", "underline_at": "main-main+0.1", "top": 460},
+       {"type": "icon", "icon": "🙄", "at": "melukis ni", "left": 820, "top": 380, "size": 170}
+     ]},
+    {"at": "conteng-conteng",
+     "poses": [{"pose": "isyarat_tangan", "x": -30}],
+     "items": [
+       {"type": "scribble", "at": "conteng-conteng"},
+       {"type": "text", "text": "Conteng-conteng,", "color": "white", "anim": "slam", "rot": -4, "at": "conteng-conteng", "top": 300},
+       {"type": "chip", "text": "buang masa?", "icon": "⏳", "bg": "ink", "size": 76, "at": "buang masa", "top": 560}
+     ]},
+    {"at": "tapi sebenarnya", "flash": true,
+     "poses": [{"pose": "tenang_yakin", "x": 50}, {"at": "otak", "pose": "berfikir", "x": -40}],
+     "items": [
+       {"type": "text", "text": "TAPI", "size": 230, "color": "accent2", "anim": "slam", "at": "tapi", "out": "masa anak-0.1", "top": 250},
+       {"type": "text", "text": "sebenarnya…", "serif": true, "size": 120, "anim": "up", "at": "sebenarnya", "out": "masa anak-0.1", "top": 520},
+       {"type": "text", "text": "masa anak", "anim": "up", "at": "masa anak", "out": "otak-0.1", "top": 260},
+       {"type": "text", "text": "melukis,", "color": "accent", "highlight": true, "stroke": false, "at": "melukis dia tengah", "out": "otak-0.1", "top": 390},
+       {"type": "chip", "text": "dia tengah latih otak", "icon": "💪", "at": "dia tengah", "out": "otak-0.1", "top": 620},
+       {"type": "rays_icon", "icon": "🧠", "at": "otak-0.06", "top": 150},
+       {"type": "text", "text": "berfikir secara", "size": "m", "anim": "up", "at": "berfikir", "top": 680},
+       {"type": "text", "text": "KREATIF!", "size": 170, "color": "accent", "anim": "slam", "rot": -3, "at": "kreatif", "top": 790, "sfx": "sparkle"},
+       {"type": "icon", "icon": "✨", "anim": "pop", "at": "kreatif+0.1", "left": 70, "top": 740, "size": 120},
+       {"type": "icon", "icon": "✨", "anim": "pop", "at": "kreatif+0.2", "left": 900, "top": 960, "size": 100}
+     ]},
+    {"at": "kalau kita biar",
+     "poses": [{"pose": "tenang_depan", "x": 40}, {"at": "hilang", "pose": "terkejut", "x": -30}, {"at": "sayang kan", "pose": "senyum_tangan_pipi", "x": 40}],
+     "items": [
+       {"type": "kick", "text": "KALAU KITA BIAR JE…", "at": "kalau kita", "top": 190},
+       {"type": "blowtext", "text": "BAKAT", "icon": "⭐", "at": "bakat", "blow_at": "hilang+0.2", "top": 320},
+       {"type": "bar", "label": "bakat", "at": "bakat+0.25", "drain_at": "hilang", "top": 590},
+       {"type": "chip", "text": "boleh hilang…", "bg": "ink", "at": "hilang", "top": 730},
+       {"type": "text", "text": "Sayang kan?", "serif": true, "size": 120, "icon": "💔", "at": "sayang kan", "top": 880}
+     ]},
+    {"at": "sebab tu aku", "flash": true, "riser": true,
+     "poses": [{"pose": "senyum_lebar", "x": -20}],
+     "items": [
+       {"type": "chip", "text": "BESTNYA!", "bg": "navy", "size": 64, "anim": "drop", "rot": -4, "at": "sebab tu", "top": 150},
+       {"type": "text", "text": "BUKU LUKIS", "size": 160, "color": "accent2", "anim": "slam", "at": "aku nak", "top": 250},
+       {"type": "image", "src": "koleksi_pink.jpg", "width": 700, "rot": -3, "at": "{{product}}-0.18", "top": 450}
+     ]},
+    {"at": "semua modul",
+     "poses": [{"pose": "manja_hmm", "x": 40}, {"at": "dah jalankan-0.2", "pose": "thumbs_up", "x": -40}],
+     "items": [
+       {"type": "kick", "text": "SEMUA MODUL DALAM BUKU NI", "at": "semua modul", "top": 170},
+       {"type": "text", "text": "{{author}} kumpul daripada", "serif": true, "size": 84, "anim": "up", "at": "kumpul", "top": 260},
+       {"type": "counter", "to": "{{workshops}}", "label": "BENGKEL", "at": "daripada", "count_at": "{{workshops}} bengkel", "top": 400},
+       {"type": "chip", "text": "MELUKIS KOMIK", "icon": "🎨", "bg": "accent", "size": 66, "at": "melukis komik", "top": 1000},
+       {"type": "chip", "text": "✔ DIJALANKAN {{author|upper}}", "size": 40, "anim": "slam", "rot": 8, "at": "dah jalankan-0.2", "left": 500, "top": 360}
+     ]},
+    {"at": "tengok ni",
+     "poses": [{"pose": "tunjuk_korang", "x": 40}],
+     "items": [
+       {"type": "text", "text": "TENGOK NI!", "color": "white", "icon": "👀", "at": "tengok ni", "top": 150},
+       {"type": "image", "src": "page_mata.jpg", "width": 470, "anim": "left", "rot": -7, "at": "tengok ni+0.24", "left": 50, "top": 330},
+       {"type": "image", "src": "cover_karakter.jpg", "width": 540, "anim": "right", "rot": 6, "at": "anak belajar", "left": 470, "top": 400},
+       {"type": "steps", "top": 870, "items": [{"text": "STEP 1", "at": "step by"}, {"text": "STEP 2", "at": "by"}, {"text": "STEP 3", "at": "step macam"}]},
+       {"type": "text", "text": "cipta karakter sendiri", "size": "m", "highlight": true, "stroke": false, "anim": "up", "at": "cipta karakter", "top": 1010}
+     ]},
+    {"at": "hero ke",
+     "poses": [{"pose": "kenyit_peace", "x": -40}, {"at": "dia boleh lukis", "pose": "senyum_lebar", "x": 40}],
+     "items": [
+       {"type": "tiles", "top": 230, "items": [
+         {"icon": "🦸", "label": "HERO", "at": "hero", "rot": -4},
+         {"icon": "🐱", "label": "HAIWAN", "at": "haiwan", "rot": 3},
+         {"icon": "👭", "label": "KAWAN BAIK", "at": "kawan baik", "rot": -2}]},
+       {"type": "text", "text": "apa yang dia nak,", "serif": true, "anim": "up", "at": "apa yang", "top": 700},
+       {"type": "stamp", "text": "DIA BOLEH LUKIS!", "rot": -3, "at": "dia boleh lukis", "top": 840}
+     ]},
+    {"at": "bila dia cipta",
+     "poses": [{"pose": "tenang_yakin", "x": -30}, {"at": "dia fikir", "pose": "berfikir", "x": 40}, {"at": "itulah", "pose": "kenyit_peace", "x": -30}],
+     "items": [
+       {"type": "text", "text": "Bila dia cipta karakter,", "size": "m", "anim": "up", "at": "bila dia", "out": "dia fikir-0.1", "top": 240},
+       {"type": "text", "text": "bukan sekadar", "serif": true, "size": 110, "anim": "up", "at": "bukan sekadar", "out": "dia fikir-0.1", "top": 400},
+       {"type": "text", "text": "MELUKIS", "size": "xl", "color": "white", "anim": "slam", "at": "sekadar", "out": "dia fikir-0.1", "top": 540},
+       {"type": "image", "src": "cover_ekspresi.jpg", "width": 400, "anim": "pop", "rot": 3, "at": "dia fikir", "out": "itulah-0.12", "left": 320, "top": 230},
+       {"type": "chip", "text": "Siapa dia?", "doodle": "doodle/keliru.png", "size": 52, "anim": "left", "at": "siapa", "out": "itulah-0.12", "left": 40, "top": 250},
+       {"type": "chip", "text": "Perangai?", "doodle": "doodle/sinis.png", "size": 52, "anim": "right", "at": "perangai", "out": "itulah-0.12", "left": 560, "top": 600},
+       {"type": "chip", "text": "Cerita apa?", "doodle": "doodle/seronok.png", "size": 52, "anim": "left", "at": "cerita", "out": "itulah-0.12", "left": 60, "top": 900},
+       {"type": "text", "text": "ITULAH", "anim": "up", "at": "itulah", "top": 300},
+       {"type": "text", "text": "KREATIVITI!", "size": 166, "rainbow": true, "anim": "slam", "at": "kreativiti-0.14", "top": 440, "sfx": "sparkle"},
+       {"type": "doodle", "src": "doodle/gembira.png", "at": "kreativiti-0.04", "left": 90, "top": 640},
+       {"type": "doodle", "src": "doodle/sayang.png", "at": "kreativiti+0.04", "left": 440, "top": 680},
+       {"type": "doodle", "src": "doodle/yakin.png", "at": "kreativiti+0.12", "left": 790, "top": 640},
+       {"type": "icon", "icon": "✨", "anim": "pop", "at": "kreativiti+0.06", "left": 60, "top": 300, "size": 120},
+       {"type": "icon", "icon": "✨", "anim": "pop", "at": "kreativiti+0.16", "left": 900, "top": 330, "size": 110}
+     ]},
+    {"at": "ni bukan buku",
+     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "pencipta", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "chip", "text": "buku mewarna biasa", "icon": "🖍️", "bg": "grey", "size": 72, "at": "ni bukan", "strike_at": "biasa", "top": 190},
+       {"type": "chip", "text": "BUKAN", "bg": "accent", "size": 54, "anim": "slam", "rot": -10, "at": "bukan buku", "left": 60, "top": 120},
+       {"type": "kick", "text": "BUKU NI AJAR ANAK JADI", "at": "buku ni ajar", "top": 440},
+       {"type": "stamp", "text": "PENCIPTA", "icon": "✅", "size": 130, "rot": -3, "at": "pencipta", "top": 560, "sfx": "sparkle"},
+       {"type": "chip", "text": "bukan peniru", "icon": "❌", "size": 72, "bg": "grey", "at": "bukan peniru", "strike_at": "peniru-0.1", "top": 850}
+     ]},
+    {"at": "daripada anak habiskan",
+     "poses": [{"pose": "tenang_depan", "x": -40}, {"at": "cipta dunia", "pose": "senyum_tangan_pipi", "x": 40}],
+     "items": [
+       {"type": "nosign", "icon": "📱", "label": "masa depan skrin", "at": "anak habiskan", "strike_at": "skrin", "left": 90, "top": 200},
+       {"type": "arrow", "at": "biar dia", "left": 450, "top": 300},
+       {"type": "nosign", "icon": "🎨", "label": "cipta!", "serif": false, "rot": 4, "at": "cipta dunia", "left": 650, "top": 200},
+       {"type": "text", "text": "dunia dia sendiri", "serif": true, "color": "accent", "highlight": true, "icon": "🌈", "anim": "slam", "rot": -2, "at": "dunia", "top": 800}
+     ]},
+    {"at": "jadi kalau", "flash": true,
+     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "dapatkan", "pose": "thumbs_up", "x": 40}, {"at": "dapatkan+1.9", "pose": "melambai_hai", "x": 0}],
+     "items": [
+       {"type": "kick", "text": "{{brand}}", "at": "jadi", "top": 120},
+       {"type": "image", "src": "kraft_grid.jpg", "width": 540, "rot": -3, "at": "jadi+0.33", "left": 120, "top": 215},
+       {"type": "chip", "text": "TERLARIS!", "bg": "accent", "size": 56, "anim": "slam", "rot": -8, "at": "anak korang", "left": 60, "top": 190},
+       {"type": "count_chip", "to": "{{sold_thousands}}", "suffix": ",000+", "label": "naskhah terjual", "at": "memang suka", "left": 130, "top": 830},
+       {"type": "text", "text": "{{cta_big}}", "size": 86, "color": "white", "anim": "slam", "rot": -2, "at": "kembangkan", "top": 950},
+       {"type": "cta", "text": "{{cta_short}}", "icon": "👆", "at": "dapatkan", "cursor_at": "dapatkan+1.9", "top": 1070},
+       {"type": "price", "lines": ["Serendah", "{{price}}", "/naskhah"], "rot": 10, "at": "dapatkan+1.2", "left": 690, "top": 520}
+     ]}
+  ]
+}

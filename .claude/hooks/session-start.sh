@@ -1,5 +1,5 @@
 #!/bin/bash
-# Claude Code cloud sessions: install the fizik-reel pipeline deps (venv, npm, YuNet, headless Chrome).
+# Claude Code cloud sessions: install the pipeline deps (venvs, npm, models, headless Chrome).
 set -euo pipefail
 
 if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
@@ -7,3 +7,4 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
 fi
 
 "$CLAUDE_PROJECT_DIR/fizik-reel/setup.sh"
+"$CLAUDE_PROJECT_DIR/sticker-reel/setup.sh"

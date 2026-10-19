@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Fredoka"; font-weight: 600; src: url("assets/fonts/fredoka-600.woff2") format("woff2"); }
+  @font-face { font-family: "Fredoka"; font-weight: 700; src: url("assets/fonts/fredoka-700.woff2") format("woff2"); }
+  @font-face { font-family: "Serif"; font-style: italic; font-weight: 400; src: url("assets/fonts/serif-italic.woff2") format("woff2"); }
+  :root { {{THEME_CSS}} }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; background: var(--bg2); overflow: hidden; }
+  #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Fredoka", sans-serif; color: var(--ink);
+    background: radial-gradient(circle at 50% 40%, var(--bg1) 0%, var(--bg2) 48%, var(--bg3) 100%); }
+  .rays { position: absolute; left: 540px; top: 760px; width: 2800px; height: 2800px; margin: -1400px 0 0 -1400px; border-radius: 50%;
+    background: repeating-conic-gradient(rgba(255,255,255,.20) 0deg 9deg, rgba(255,255,255,0) 9deg 18deg);
+    -webkit-mask: radial-gradient(circle, #000 0%, rgba(0,0,0,.6) 35%, transparent 62%); mask: radial-gradient(circle, #000 0%, rgba(0,0,0,.6) 35%, transparent 62%); }
+  .bgd { position: absolute; width: 150px; opacity: .17; }
+  #stage { position: absolute; inset: 0; }
+  .scene { position: absolute; left: 0; top: 0; width: 1080px; height: 1250px; display: none; }
+  .row { position: absolute; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 24px; }
+  .abs { position: absolute; }
+  .rel { position: relative; display: inline-block; }
+
+  .kick { font-weight: 700; font-size: 44px; letter-spacing: .14em; background: var(--ink); color: #fff; padding: 12px 34px 14px; border-radius: 999px; white-space: nowrap; }
+  .txt { font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; }
+  .serif { font-family: "Serif", serif; font-style: italic; font-weight: 400; }
+  .stroke { -webkit-text-stroke: 10px var(--ink); paint-order: stroke fill; }
+  .hl { background: #fff; padding: 0 22px 6px; border-radius: 22px; border: 6px solid var(--ink); box-shadow: 10px 10px 0 var(--ink); }
+  .card { background: #fff; border: 6px solid var(--ink); border-radius: 36px; box-shadow: 14px 14px 0 var(--ink); }
+  .img { display: block; border-radius: 26px; }
+  .pic { padding: 14px; }
+  .chip { display: inline-flex; align-items: center; gap: 16px; font-weight: 700; font-size: 58px; padding: 14px 36px 16px; border-radius: 999px;
+    background: #fff; border: 6px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); white-space: nowrap; position: relative; }
+  .chip.grey { background: #eee; color: #888; }
+  .chip img { display: block; }
+  .stamp { font-weight: 700; font-size: 104px; color: #fff; background: var(--accent); padding: 10px 44px 18px; border-radius: 28px;
+    border: 8px solid var(--ink); box-shadow: 14px 14px 0 var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: 20px; }
+  .ico { display: block; filter: drop-shadow(6px 8px 0 rgba(30,27,22,.85)); }
+  .bubble { position: relative; padding: 40px 60px 50px; }
+  .bubble::after { content: ""; position: absolute; left: 140px; bottom: -58px; width: 70px; height: 70px; background: #fff;
+    border-right: 6px solid var(--ink); border-bottom: 6px solid var(--ink); transform: skewX(30deg) rotate(45deg); }
+  .strike { position: absolute; left: -4%; top: 52%; width: 108%; height: 14px; background: var(--red); border-radius: 8px; transform-origin: left center; }
+  .badge { width: 540px; height: 540px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+  .ring { position: absolute; inset: -34px; border-radius: 50%; border: 8px dashed var(--ink); }
+  .count { counter-reset: n calc(var(--n)); }
+  .count::after { content: counter(n); }
+  .tile { width: 300px; height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; position: relative; }
+  .tile .lbl { font-weight: 700; font-size: 50px; text-align: center; line-height: 1; }
+  .check { position: absolute; right: -26px; top: -26px; width: 92px; height: 92px; }
+  .barwrap { width: 860px; padding: 26px 34px; display: flex; align-items: center; gap: 24px; }
+  .track { flex: 1; height: 58px; border-radius: 999px; border: 6px solid var(--ink); background: #f3eadb; overflow: hidden; }
+  .fill { height: 100%; width: 100%; background: var(--green); transform-origin: left center; }
+  .burst { width: 330px; height: 330px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-weight: 700; position: relative; }
+  .burst .star { position: absolute; inset: 0; background: var(--accent);
+    clip-path: polygon(50% 0%, 59% 12%, 73% 4%, 77% 19%, 92% 17%, 89% 32%, 100% 40%, 91% 52%, 100% 63%, 87% 70%, 91% 85%, 76% 84%, 71% 98%, 58% 89%, 50% 100%, 41% 89%, 29% 98%, 24% 84%, 9% 85%, 13% 70%, 0% 63%, 9% 52%, 0% 40%, 11% 32%, 8% 17%, 23% 19%, 27% 4%, 41% 12%); }
+  .burst span { position: relative; line-height: .95; }
+  .scrib { position: absolute; left: 60px; top: 160px; width: 960px; height: 700px; }
+  .cursor { position: absolute; width: 120px; }
+  .tap { position: absolute; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; border: 8px solid var(--ink); opacity: 0; }
+
+  .stk { position: absolute; bottom: -18px; left: 540px; width: auto; display: none; transform-origin: 50% 100%;
+    filter: drop-shadow(0 20px 26px rgba(120,70,0,.35)); }
+  .caps { position: absolute; left: 30px; right: 30px; top: 1712px; height: 150px; display: flex; justify-content: center; }
+  .cap { position: absolute; display: none; padding: 16px 40px 22px; border-radius: 34px; font-weight: 700; font-size: 66px; white-space: nowrap;
+    background: var(--ink); color: #fff; border: 5px solid #fff; box-shadow: 0 14px 30px rgba(0,0,0,.28); }
+  .cap .w { opacity: .42; display: inline-block; }
+  .flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+  .prog { position: absolute; left: 0; top: 0; height: 14px; width: 1080px; background: var(--accent); transform-origin: left center; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-width="1080" data-height="1920" data-start="0" data-duration="{{DUR}}">
+  <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{{DUR}}"></audio>
+{{BG}}
+  <div id="stage">
+{{SCENES}}
+{{STK}}
+  </div>
+  <div class="caps">
+{{CAPS}}
+  </div>
+  <div class="tap" id="tap"></div>
+  <div class="flash" id="flash"></div>
+  <div class="prog" id="prog"></div>
+</div>
+<script src="assets/gsap.min.js"></script>
+<script>
+  const DUR = {{DUR}}, FLASH = {{FLASH}};
+  const tl = gsap.timeline({ paused: true });
+  const num = (el, k) => parseFloat(el.dataset[k]);
+  tl.set({}, {}, DUR);
+  let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);   // seek-safe randomness
+
+  if (document.querySelector("#rays")) tl.fromTo("#rays", { rotation: 0 }, { rotation: 140, duration: DUR, ease: "none" }, 0);
+  document.querySelectorAll(".bgd").forEach((d, i) => {
+    tl.fromTo(d, { y: 0, rotation: -8 + 16 * rnd() }, { y: -40 - 40 * rnd(), rotation: "+=" + (30 - 60 * rnd()), duration: DUR, ease: "sine.inOut" }, 0);
+    tl.from(d, { scale: 0, autoAlpha: 0, duration: 0.5, ease: "back.out(2)" }, 0.05 * i);
+  });
+  tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: DUR, ease: "none" }, 0);
+  FLASH.forEach((t) => tl.fromTo("#flash", { opacity: 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, t));
+  const shake = (t) => tl.fromTo("#stage", { x: 0 }, { x: 14, duration: 0.045, repeat: 7, yoyo: true, ease: "none", immediateRender: false }, t)
+                          .set("#stage", { x: 0 }, t + 0.4);
+
+  const ENTER = {
+    up:    (r) => [{ autoAlpha: 0, y: 90, filter: "blur(12px)", rotation: r }, { autoAlpha: 1, y: 0, filter: "blur(0px)", rotation: r, duration: 0.42, ease: "power3.out" }],
+    pop:   (r) => [{ autoAlpha: 0, scale: 0.3, rotation: r - 8 }, { autoAlpha: 1, scale: 1, rotation: r, duration: 0.5, ease: "back.out(2.4)" }],
+    slam:  (r) => [{ autoAlpha: 0, scale: 2.6, rotation: r - 10 }, { autoAlpha: 1, scale: 1, rotation: r, duration: 0.3, ease: "back.out(1.3)" }],
+    drop:  (r) => [{ autoAlpha: 0, y: -700, rotation: r - 25 }, { autoAlpha: 1, y: 0, rotation: r, duration: 0.6, ease: "bounce.out" }],
+    rise:  (r) => [{ autoAlpha: 0, y: 900, rotation: r + 12 }, { autoAlpha: 1, y: 0, rotation: r, duration: 0.6, ease: "back.out(1.2)" }],
+    left:  (r) => [{ autoAlpha: 0, x: -800, rotation: r - 15 }, { autoAlpha: 1, x: 0, rotation: r, duration: 0.5, ease: "back.out(1.4)" }],
+    right: (r) => [{ autoAlpha: 0, x: 800, rotation: r + 15 }, { autoAlpha: 1, x: 0, rotation: r, duration: 0.5, ease: "back.out(1.4)" }],
+    burst: (r) => [{ autoAlpha: 0, scale: 0, rotation: r - 90 }, { autoAlpha: 1, scale: 1, rotation: r, duration: 0.55, ease: "back.out(2.6)" }],
+  };
+
+  function enter(el, t, end) {
+    const a = el.dataset.a, rot = parseFloat(el.dataset.rot || 0);
+    if (a === "draw") {
+      if (el.getTotalLength) {
+        const L = el.getTotalLength();
+        tl.fromTo(el, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: parseFloat(el.dataset.dur || 0.3), ease: "power2.inOut" }, t);
+      } else tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.25, ease: "power2.out" }, t);
+      return;
+    }
+    if (a === "cursor") {
+      tl.fromTo(el, { autoAlpha: 0, x: 260, y: 260 }, { autoAlpha: 1, x: 0, y: 0, duration: 0.4, ease: "power3.out" }, t);
+      tl.to(el, { scale: 0.8, duration: 0.08, yoyo: true, repeat: 1 }, t + 0.45);
+      tl.set("#tap", { left: el.dataset.tx + "px", top: el.dataset.ty + "px" }, t);
+      tl.fromTo("#tap", { opacity: 1, scale: 0.2 }, { opacity: 0, scale: 2.4, duration: 0.5, ease: "power2.out", immediateRender: false }, t + 0.45);
+      return;
+    }
+    const [from, to] = ENTER[a](rot);
+    tl.fromTo(el, from, to, t);
+    if (a === "slam") shake(t + 0.22);
+    if (el.dataset.float) tl.to(el, { y: -18, duration: 0.7, repeat: Math.max(1, Math.floor((end - t - 1) / 0.7)), yoyo: true, ease: "sine.inOut" }, t + 0.6);
+    if (el.dataset.pulse) tl.to(el, { scale: 1.08, duration: 0.3, repeat: Math.max(1, Math.floor((end - t - 0.6) / 0.3)), yoyo: true, ease: "sine.inOut" }, t + 0.5);
+    if (el.dataset.out) tl.to(el, { autoAlpha: 0, y: -50, scale: 0.9, filter: "blur(10px)", duration: 0.22, ease: "power2.in" }, parseFloat(el.dataset.out));
+  }
+
+  document.querySelectorAll(".scene").forEach((sc) => {
+    const t0 = num(sc, "t0"), t1 = num(sc, "t1");
+    tl.set(sc, { display: "block" }, t0);
+    if (t1 < DUR - 0.01) {
+      tl.to(sc, { autoAlpha: 0, scale: 0.94, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, t1 - 0.2);
+      tl.set(sc, { display: "none" }, t1);
+    }
+    sc.querySelectorAll(".a").forEach((el) => enter(el, Math.max(t0, num(el, "at")), t1));
+    sc.querySelectorAll(".spin").forEach((el) => tl.fromTo(el, { rotation: 0 }, { rotation: 200, duration: t1 - t0, ease: "none" }, t0));
+    sc.querySelectorAll(".count").forEach((el) => {
+      tl.set(el, { "--n": 0 }, 0);
+      tl.to(el, { "--n": parseFloat(el.dataset.to), duration: 1.3, ease: "power2.out", snap: { "--n": 1 } }, num(el, "at"));
+    });
+    sc.querySelectorAll(".fill[data-drain]").forEach((el) =>
+      tl.fromTo(el, { scaleX: 1, backgroundColor: "#1DB954" }, { scaleX: 0.07, backgroundColor: "#FF3B30", duration: 1.3, ease: "power1.in" }, num(el, "drain")));
+    sc.querySelectorAll("[data-blow]").forEach((box) => box.querySelectorAll(".ch").forEach((c, i) => {
+      tl.set(c, { display: "inline-block" }, 0);
+      tl.to(c, { x: 120 + 260 * rnd(), y: -160 - 200 * rnd(), rotation: 90 - 180 * rnd(), autoAlpha: 0, filter: "blur(10px)", duration: 0.7, ease: "power2.in" },
+            num(box, "blow") + 0.08 * i);
+    }));
+  });
+
+  // presenter stickers: the first pose of a scene rises in, later poses swap with a quick bounce
+  document.querySelectorAll(".stk").forEach((s) => {
+    const t0 = num(s, "t0"), t1 = num(s, "t1"), x = num(s, "x");
+    tl.set(s, { display: "block", xPercent: -50, x: x }, t0);
+    if (s.dataset.big === "1") tl.fromTo(s, { y: 420, rotation: -10, scale: 0.75, autoAlpha: 1 }, { y: 0, rotation: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, t0);
+    else tl.fromTo(s, { y: 90, rotation: -5, scale: 0.86, autoAlpha: 0 }, { y: 0, rotation: 0, scale: 1, autoAlpha: 1, duration: 0.32, ease: "back.out(2.2)" }, t0);
+    const n = Math.floor((t1 - t0 - 0.9) / 0.9);
+    if (n >= 1) tl.to(s, { rotation: 2.2, y: -8, duration: 0.9, repeat: n, yoyo: true, ease: "sine.inOut" }, t0 + 0.4);
+    if (t1 < DUR - 0.01) {
+      tl.to(s, { y: 120, scale: 0.9, autoAlpha: 0, duration: 0.14, ease: "power2.in" }, t1 - 0.1);
+      tl.set(s, { display: "none" }, t1 + 0.05);
+    }
+  });
+
+  // karaoke captions
+  const KEY = getComputedStyle(document.documentElement).getPropertyValue("--key").trim();
+  document.querySelectorAll(".cap").forEach((c) => {
+    const t0 = num(c, "t0"), t1 = num(c, "t1");
+    tl.set(c, { display: "block" }, t0);
+    tl.fromTo(c, { autoAlpha: 0, y: 18, scale: 0.9 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.14, ease: "back.out(2)" }, t0);
+    tl.set(c, { display: "none" }, t1);
+    c.querySelectorAll(".w").forEach((w) => {
+      const t = Math.max(t0, num(w, "at"));
+      tl.to(w, { opacity: 1, color: w.dataset.k ? KEY : "#fff", duration: 0.06 }, t);
+      tl.fromTo(w, { y: 0 }, { y: -8, duration: 0.08, yoyo: true, repeat: 1, ease: "power1.out", immediateRender: false }, t);
+    });
+  });
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["root"] = tl;
+</script>
+</body>
+</html>

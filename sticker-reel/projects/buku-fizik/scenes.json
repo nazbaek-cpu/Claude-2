@@ -1,0 +1,79 @@
+{
+  "scenes": [
+    {"at": "anak korang dah",
+     "poses": [{"pose": "tunjuk_korang", "x": -60}, {"at": "tapi kan", "pose": "terkejut", "x": 40}],
+     "items": [
+       {"type": "kick", "text": "ANAK KORANG", "at": "anak korang", "top": 180},
+       {"type": "text", "text": "DAH HAFAL", "size": "xl", "color": "white", "at": "dah hafal", "out": "tapi kan-0.1", "top": 290},
+       {"type": "text", "text": "FORMULA FIZIK?", "size": 130, "color": "accent2", "at": "formula", "out": "tapi kan-0.1", "top": 450},
+       {"type": "chip", "text": "F = ma", "size": 56, "anim": "burst", "rot": -8, "at": "formula+0.2", "out": "tapi kan-0.1", "left": 70, "top": 640},
+       {"type": "chip", "text": "V = IR", "size": 56, "anim": "burst", "rot": 6, "at": "formula+0.35", "out": "tapi kan-0.1", "left": 400, "top": 700},
+       {"type": "chip", "text": "P = ρgh", "size": 56, "anim": "burst", "rot": -4, "at": "formula+0.5", "out": "tapi kan-0.1", "left": 720, "top": 630},
+       {"type": "text", "text": "Tapi masa exam…", "serif": true, "size": 110, "anim": "up", "at": "tapi kan", "top": 330},
+       {"type": "stamp", "text": "TAK TAHU NAK GUNA!", "icon": "😵", "size": 88, "rot": -4, "at": "tak tahu", "top": 520}
+     ]},
+    {"at": "sebenarnya fizik",
+     "poses": [{"pose": "tenang_yakin", "x": 50}, {"at": "formula mana", "pose": "berfikir", "x": -40}],
+     "items": [
+       {"type": "text", "text": "Sebenarnya…", "serif": true, "size": 110, "anim": "up", "at": "sebenarnya", "top": 170},
+       {"type": "chip", "text": "Fizik = hafal", "icon": "📝", "bg": "grey", "size": 76, "at": "fizik bukan", "strike_at": "soal hafal+0.2", "top": 330},
+       {"type": "kick", "text": "YANG PENTING", "at": "yang penting", "top": 560},
+       {"type": "text", "text": "tahu formula", "size": "l", "color": "white", "anim": "slam", "at": "tahu formula", "top": 660},
+       {"type": "text", "text": "MANA NAK GUNA!", "size": 112, "color": "accent", "anim": "slam", "rot": -3, "at": "nak guna", "top": 800},
+       {"type": "icon", "icon": "🎯", "anim": "pop", "at": "nak guna+0.1", "left": 860, "top": 560, "size": 150}
+     ]},
+    {"at": "sebab tu saya", "flash": true, "riser": true,
+     "poses": [{"pose": "senyum_lebar", "x": -20}, {"at": "ditulis oleh", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "chip", "text": "{{series}}", "bg": "navy", "size": 58, "anim": "drop", "rot": -3, "at": "sebab tu", "top": 140},
+       {"type": "image", "src": "cover_both.jpg", "width": 640, "rot": -2, "at": "saya nak tunjuk", "top": 260},
+       {"type": "stamp", "text": "✍️ {{author|upper}}", "size": 62, "rot": -4, "at": "ditulis oleh", "top": 1000},
+       {"type": "chip", "text": "{{author_name}}", "bg": "ink", "size": 46, "anim": "pop", "rot": 5, "at": "cemerlang", "left": 620, "top": 880}
+     ]},
+    {"at": "tengok ni setiap",
+     "poses": [{"pose": "tunjuk_korang", "x": 40}, {"at": "senang nak ingat", "pose": "kenyit_peace", "x": -40}],
+     "items": [
+       {"type": "text", "text": "TENGOK NI!", "color": "white", "icon": "👀", "at": "tengok ni", "top": 140},
+       {"type": "image", "src": "pick_push.jpg", "width": 760, "anim": "left", "rot": -3, "at": "setiap formula", "top": 290},
+       {"type": "chip", "text": "MNEMONIK", "icon": "🧠", "bg": "accent2", "size": 60, "anim": "slam", "rot": -6, "at": "mnemonik", "left": 60, "top": 620},
+       {"type": "image", "src": "pick_archimedes.jpg", "width": 560, "anim": "right", "rot": 4, "at": "ilustrasi", "left": 400, "top": 600},
+       {"type": "chip", "text": "ILUSTRASI KREATIF", "icon": "🎨", "bg": "accent", "size": 54, "anim": "slam", "rot": -5, "at": "ilustrasi kreatif+0.3", "left": 300, "top": 900},
+       {"type": "stamp", "text": "SENANG INGAT!", "icon": "💯", "size": 86, "rot": -4, "at": "senang nak ingat", "top": 1030}
+     ]},
+    {"at": "lepas tu step",
+     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "tepat ikut", "pose": "tenang_yakin", "x": 40}],
+     "items": [
+       {"type": "steps", "top": 150, "items": [{"text": "BACA", "at": "step by"}, {"text": "PILIH FORMULA", "at": "by step"}, {"text": "KIRA", "at": "cara guna"}]},
+       {"type": "image", "src": "soalan_litar.jpg", "width": 880, "anim": "rise", "rot": -2, "at": "cara guna formula", "out": "tepat ikut-0.1", "top": 330},
+       {"type": "text", "text": "guna formula dalam soalan", "size": 66, "highlight": true, "stroke": false, "anim": "up", "at": "dalam soalan", "out": "tepat ikut-0.1", "top": 720},
+       {"type": "image", "src": "konstruk_tp4.jpg", "width": 600, "anim": "rise", "rot": 3, "at": "tepat ikut", "left": 240, "top": 300},
+       {"type": "stamp", "text": "TEPAT KONSTRUK SPM", "icon": "✅", "size": 76, "rot": -3, "at": "konstruk spm", "top": 960}
+     ]},
+    {"at": "lengkap tingkatan",
+     "poses": [{"pose": "kenyit_peace", "x": 0}],
+     "items": [
+       {"type": "text", "text": "LENGKAP!", "size": "xl", "color": "white", "anim": "slam", "at": "lengkap", "top": 150},
+       {"type": "image", "src": "cover_t4.jpg", "width": 400, "anim": "left", "rot": -7, "at": "tingkatan 4", "left": 70, "top": 340},
+       {"type": "image", "src": "cover_t5.jpg", "width": 400, "anim": "right", "rot": 7, "at": "tingkatan 5", "left": 590, "top": 340},
+       {"type": "chip", "text": "TINGKATAN 4", "bg": "accent2", "size": 52, "anim": "pop", "rot": -7, "at": "tingkatan 4+0.2", "left": 90, "top": 960},
+       {"type": "chip", "text": "TINGKATAN 5", "bg": "accent", "size": 52, "anim": "pop", "rot": 7, "at": "tingkatan 5+0.2", "left": 610, "top": 960}
+     ]},
+    {"at": "ni bukan buku",
+     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "penyelesai", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "chip", "text": "buku nota biasa", "icon": "📘", "bg": "grey", "size": 72, "at": "ni bukan", "strike_at": "biasa", "top": 190},
+       {"type": "chip", "text": "BUKAN", "bg": "accent", "size": 54, "anim": "slam", "rot": -10, "at": "bukan buku", "left": 60, "top": 120},
+       {"type": "kick", "text": "BUKU NI AJAR ANAK JADI", "at": "buku ni dia", "top": 440},
+       {"type": "stamp", "text": "PENYELESAI MASALAH", "icon": "🧠", "size": 74, "rot": -3, "at": "penyelesai", "top": 560, "sfx": "sparkle"},
+       {"type": "chip", "text": "penghafal semata", "icon": "❌", "size": 70, "bg": "grey", "at": "bukan penghafal", "strike_at": "semata", "top": 850}
+     ]},
+    {"at": "bantu anak skor", "flash": true,
+     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "dapatkan", "pose": "melambai_hai", "x": 20}],
+     "items": [
+       {"type": "kick", "text": "{{series}}", "at": "bantu", "top": 120},
+       {"type": "image", "src": "cover_both.jpg", "width": 560, "rot": -3, "at": "bantu+0.3", "left": 250, "top": 220},
+       {"type": "text", "text": "BANTU ANAK SKOR FIZIK!", "size": 82, "color": "white", "anim": "slam", "rot": -2, "at": "skor fizik", "top": 860},
+       {"type": "cta", "text": "{{cta_short}}", "icon": "👇", "size": 64, "at": "dapatkan", "cursor_at": "dapatkan+1.0", "top": 1010}
+     ]}
+  ]
+}

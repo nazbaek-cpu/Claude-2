@@ -142,7 +142,7 @@ def main():
         return whisper_words(transcribe(audio[int(t0 * SR):int(t1 * SR)], lang, model), t0)
 
     words = align(script_words(prj.script()), whisper_words(json.load(open(cache))),
-                  silences(vo, prj.cfg["vo"].get("silence_db", -38), 0.2), retry)
+                  silences(vo, prj.cfg["vo"].get("silence_db", "auto"), 0.2), retry)
     json.dump(words, open(prj.p("build", "words_src.json"), "w"), ensure_ascii=False)
     print(f"{len(words)} script words timed; speech ends at {words[-1][1]:.2f} s")
 

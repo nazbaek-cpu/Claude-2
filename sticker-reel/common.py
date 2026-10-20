@@ -47,8 +47,18 @@ def load_audio16(path):
     return np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
 
 
-def silences(path, db=-38, min_s=0.3):
-    """-> [(start, end)] of silent stretches (ffmpeg silencedetect)"""
+def silence_threshold_db(path):
+    """halfway (in dB) between the room tone (quietest 5 % of 50 ms windows) and the typical speech level;
+    works for clean TTS (floor near -90 dB) and for phone recordings with background noise alike"""
+    a = load_audio16(path); n = 800
+    db = 20 * np.log10(np.sqrt(np.mean(a[:len(a) // n * n].reshape(-1, n) ** 2, 1) + 1e-12))
+    return round(float(np.percentile(db, 5) + np.percentile(db, 50)) / 2, 1)
+
+
+def silences(path, db="auto", min_s=0.3):
+    """-> [(start, end)] of silent stretches (ffmpeg silencedetect); db="auto" picks the level from the recording"""
+    if db == "auto":
+        db = silence_threshold_db(path)
     log = subprocess.run(["ffmpeg", "-hide_banner", "-i", path, "-af", f"silencedetect=n={db}dB:d={min_s}", "-f", "null", "-"],
                          capture_output=True, text=True).stderr
     st = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", log)]

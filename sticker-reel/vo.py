@@ -1,7 +1,7 @@
 """Tighten the voiceover: cut everything after the last script word, shrink pauses, speed up, level it.
 
 usage: vo.py <project>
-project.json "vo": {"file", "tempo": 1.12, "pause_s": 0.2, "silence_db": -38, "tail_s": 1.0}
+project.json "vo": {"file", "tempo": 1.12, "pause_s": 0.2, "silence_db": "auto" or dB, "tail_s": 1.0}
 Writes build/vo.wav (48 kHz stereo, -15 LUFS), build/edl.json and build/words.json (words in video seconds).
 """
 import json, subprocess, sys
@@ -43,7 +43,7 @@ def main():
     tempo, pause = v.get("tempo", 1.12), v.get("pause_s", 0.2)
     words = json.load(open(prj.p("build", "words_src.json")))
     end = words[-1][1] + 0.25
-    edl, dur = plan(silences(src, v.get("silence_db", -38), 0.3), end, pause, tempo)
+    edl, dur = plan(silences(src, v.get("silence_db", "auto"), 0.3), end, pause, tempo)
     f = ";".join(f"[0:a]atrim={s['src'][0]:.4f}:{s['src'][1]:.4f},asetpts=PTS-STARTPTS,afade=t=in:d=0.01,"
                  f"afade=t=out:st={s['src'][1] - s['src'][0] - 0.012:.4f}:d=0.012[s{i}]" for i, s in enumerate(edl))
     f += ";" + "".join(f"[s{i}]" for i in range(len(edl))) + f"concat=n={len(edl)}:v=0:a=1,atempo={tempo},highpass=f=70," \

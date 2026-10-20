@@ -125,7 +125,7 @@ def text_span(it, ctx, size="l", color="ink"):
 
 def chip_html(it, ctx, t=None):
     bg = {"white": "", "ink": "background:var(--ink);color:#fff", "accent": "background:var(--accent);color:#fff",
-          "navy": "background:var(--navy);color:#fff", "grey": ""}[it.get("bg", "white")]
+          "navy": "background:var(--navy);color:#fff", "accent2": "background:var(--accent2);color:#fff", "grey": ""}[it.get("bg", "white")]
     cls = "chip grey" if it.get("bg") == "grey" else "chip"
     size = SIZES.get(it.get("size", 58), it.get("size", 58))
     doodle = f'<img src="assets/img/{it["doodle"]}" style="width:{int(size * 1.6)}px">' if it.get("doodle") else ""

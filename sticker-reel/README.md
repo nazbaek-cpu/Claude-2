@@ -51,7 +51,7 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 ```jsonc
 {
   "vars": {"product": "Buku Melukis", "author": "penulis", "workshops": 40, "price": "RM6", ...},
-  "vo": {"file": "input/vo.mp3", "tempo": 1.12, "pause_s": 0.2, "silence_db": -38, "tail_s": 1.0},
+  "vo": {"file": "input/vo.mp3", "tempo": 1.12, "pause_s": 0.2, "silence_db": "auto", "tail_s": 1.0},   // auto: halfway between room tone and speech; or a number like -38
   "stickers": {
     "grid": {"file": "input/poses/grid.png", "cols": 3, "rows": 2},   // a collage of poses (white separator lines are found)
     "names": ["tenang_depan", "senyum_tangan_pipi", ...],            // one name per grid cell, row by row
@@ -108,7 +108,7 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 | `kick` | `text`: small black pill label |
 | `text` | `text`, `size` (`xxl` `xl` `l` `m` `s` or px), `color` (`ink` `white` `accent` `accent2` `navy` or CSS), `serif`, `stroke`, `highlight`, `rainbow`, `icon`, `strike_at` |
 | `stamp` | `text`, `icon`, `size`: big pink stamp |
-| `chip` | `text`, `bg` (`white` `ink` `accent` `navy` `grey`), `icon`, `doodle` (image in `input/img`), `size`, `strike_at` |
+| `chip` | `text`, `bg` (`white` `ink` `accent` `accent2` `navy` `grey`), `icon`, `doodle` (image in `input/img`), `size`, `strike_at` |
 | `image` | `src` (in `input/img`), `width`, `card` (white frame, default on) |
 | `bubble` | `lines` (last one in accent colour), `underline_at` |
 | `scribble` | a scribble drawn live (`dur`) |

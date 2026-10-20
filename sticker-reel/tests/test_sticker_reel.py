@@ -165,11 +165,16 @@ class TestCompose(unittest.TestCase):
         with self.assertRaises(SystemExit):
             compose.build(prj, self.words, 3.0)
 
-    def test_example_project_anchors_resolve(self):
-        """every phrase in the example scenes.json exists in its script, in order"""
+    def test_projects_anchors_resolve(self):
+        """every phrase in each project's scenes.json exists in its script, in order"""
+        for name in sorted(os.listdir(os.path.join(HERE, "projects"))):
+            with self.subTest(project=name):
+                self.check_project(os.path.join(HERE, "projects", name))
+
+    def check_project(self, src):
         d = tempfile.mkdtemp()
         for f in ("project.json", "script.txt", "scenes.json"):
-            shutil.copy(os.path.join(EXAMPLE, f), d)
+            shutil.copy(os.path.join(src, f), d)
         prj = Project(d)
         poses = list(prj.cfg["stickers"]["names"]) + list(prj.cfg["stickers"]["ready"])
         os.makedirs(prj.p("build", "stickers"), exist_ok=True)

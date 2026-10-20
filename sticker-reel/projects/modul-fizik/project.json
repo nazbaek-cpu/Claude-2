@@ -1,0 +1,35 @@
+{
+  "title": "Modul Konstruk Fizik - sticker reel",
+  "language": "ms",
+  "whisper_model": "large-v3",
+  "vars": {
+    "product": "Modul Konstruk Fizik",
+    "brand": "MODUL KONSTRUK FIZIK",
+    "level": "Tingkatan 5",
+    "level_extra": "Tingkatan 4",
+    "author": "Cikgu Cemerlang Fizik",
+    "cta_line": "dapatkan dekat link di bawah.",
+    "cta_short": "Dapatkan di link",
+    "cta_big": "Formula senang ingat!"
+  },
+  "vo": {"file": "input/vo.mp3", "tempo": 1.12, "pause_s": 0.2, "silence_db": -38, "tail_s": 1.0},
+  "stickers": {
+    "grid": {"file": "input/poses/grid.png", "cols": 3, "rows": 2},
+    "names": ["tenang_depan", "senyum_tangan_pipi", "kenyit_peace", "terkejut", "berfikir", "thumbs_up"],
+    "ready": {
+      "tunjuk_korang": "input/poses/tunjuk_korang.png",
+      "manja_hmm": "input/poses/manja_hmm.png",
+      "isyarat_tangan": "input/poses/isyarat_tangan.png",
+      "tenang_yakin": "input/poses/tenang_yakin.png",
+      "senyum_lebar": "input/poses/senyum_lebar.png",
+      "melambai_hai": "input/poses/melambai_hai.png"
+    },
+    "face_px": 300, "max_h": 720, "outline_px": 30
+  },
+  "theme": {"bg1": "#8FDDFF", "bg2": "#5CC8F5", "bg3": "#33B1EA", "accent": "#FF2E7E", "accent2": "#FFC41E", "navy": "#1C2B5A", "key": "#FFE14D"},
+  "background": {"rays": true, "doodles": []},
+  "captions": {"max_words": 3, "max_chars": 18,
+               "keywords": ["spm", "fizik", "formula", "lemah", "lupa", "blank", "modul", "konstruk", "tingkatan", "cikgu",
+                            "mnemonik", "senang", "soalan", "jawapan", "kreatif", "faham", "mudah", "yakin", "link"]},
+  "sfx_gain": 0.5
+}

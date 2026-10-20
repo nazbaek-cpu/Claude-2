@@ -10,10 +10,10 @@
        {"type": "text", "text": "LEMAH", "size": "xl", "color": "accent", "anim": "slam", "rot": -3, "at": "lemah", "top": 650},
        {"type": "chip", "text": "jawab soalan fizik", "icon": "⚛️", "bg": "navy", "size": 64, "at": "jawab soalan", "top": 840}
      ]},
-    {"at": "aku faham",
-     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "pening", "pose": "terkejut", "x": 40}],
+    {"at": "saya faham",
+     "poses": [{"pose": "tenang_depan", "x": -40}, {"at": "pening", "pose": "terkejut", "x": 40}],
      "items": [
-       {"type": "text", "text": "Aku faham…", "size": "m", "anim": "up", "at": "aku faham", "out": "daya-0.1", "top": 200},
+       {"type": "text", "text": "Saya faham…", "size": "m", "anim": "up", "at": "saya faham", "out": "daya-0.1", "top": 200},
        {"type": "kick", "text": "SUBJEK FIZIK NI", "at": "subjek fizik", "out": "daya-0.1", "top": 330},
        {"type": "text", "text": "BANYAK SANGAT", "color": "white", "anim": "up", "at": "banyak sangat", "out": "daya-0.1", "top": 430},
        {"type": "text", "text": "FORMULA!", "size": "xl", "color": "accent", "anim": "slam", "rot": -3, "at": "formula", "out": "daya-0.1", "top": 570},
@@ -25,7 +25,7 @@
        {"type": "stamp", "text": "PENING!", "icon": "😵", "rot": -4, "at": "pening", "top": 820}
      ]},
     {"at": "sebab tu ramai",
-     "poses": [{"pose": "manja_hmm", "x": -40}, {"at": "tapi sebab", "pose": "tenang_yakin", "x": 40}],
+     "poses": [{"pose": "berfikir", "x": -40}, {"at": "tapi sebab", "pose": "tenang_depan", "x": 40}],
      "items": [
        {"type": "kick", "text": "SEBAB TU RAMAI ANAK", "at": "sebab tu ramai", "top": 180},
        {"type": "text", "text": "LEMAH", "size": "xxl", "color": "accent", "anim": "slam", "at": "lemah", "top": 270},
@@ -42,56 +42,57 @@
        {"type": "kick", "text": "MASUK DEWAN EXAM", "at": "masuk dewan", "top": 700},
        {"type": "text", "text": "BLANK!", "size": "xl", "color": "white", "icon": "😶", "anim": "slam", "rot": -3, "at": "blank", "top": 800}
      ]},
-    {"at": "jadi aku nak", "flash": true, "riser": true,
-     "poses": [{"pose": "senyum_lebar", "x": -20}],
+    {"at": "jadi saya nak", "flash": true, "riser": true,
+     "poses": [{"pose": "senyum_tangan_pipi", "x": -20}, {"at": "{{level_extra}}", "pose": "kenyit_peace", "x": 30}],
      "items": [
-       {"type": "chip", "text": "MODUL", "bg": "navy", "size": 64, "anim": "drop", "rot": -4, "at": "jadi aku", "top": 150},
+       {"type": "chip", "text": "MODUL", "bg": "navy", "size": 64, "anim": "drop", "rot": -4, "at": "jadi saya", "top": 150},
        {"type": "text", "text": "KONSTRUK FIZIK", "size": 120, "color": "accent2", "anim": "slam", "at": "{{product}}", "top": 250},
-       {"type": "image", "src": "cover_t5.jpg", "width": 560, "rot": -4, "anim": "left", "at": "{{product}}+0.2", "left": 60, "top": 420},
-       {"type": "chip", "text": "{{level|upper}}", "bg": "accent", "size": 56, "anim": "slam", "rot": -8, "at": "{{level}}", "left": 70, "top": 380},
-       {"type": "image", "src": "cover_t4.jpg", "width": 460, "rot": 6, "anim": "right", "at": "siap ada", "left": 560, "top": 520},
-       {"type": "chip", "text": "+ {{level_extra|upper}}", "bg": "navy", "size": 52, "anim": "pop", "rot": 6, "at": "{{level_extra}}", "left": 600, "top": 1000}
+       {"type": "image", "src": "cover_t5.jpg", "width": 470, "rot": -4, "anim": "left", "at": "{{product}}+0.3", "left": 70, "top": 430},
+       {"type": "chip", "text": "{{level|upper}}", "bg": "accent", "size": 52, "anim": "slam", "rot": -8, "at": "{{level}}", "left": 50, "top": 400},
+       {"type": "image", "src": "cover_t4.jpg", "width": 430, "rot": 6, "anim": "right", "at": "dia ada", "left": 580, "top": 500},
+       {"type": "chip", "text": "+ {{level_extra|upper}}", "bg": "navy", "size": 52, "anim": "pop", "rot": 6, "at": "{{level_extra}}", "left": 610, "top": 460}
      ]},
-    {"at": "modul ni dibuat",
+    {"at": "modul ni dia",
      "poses": [{"pose": "thumbs_up", "x": -40}, {"at": "mnemonik", "pose": "kenyit_peace", "x": 40}],
      "items": [
-       {"type": "text", "text": "dibuat oleh", "serif": true, "size": 96, "anim": "up", "at": "dibuat oleh", "out": "paling best-0.1", "top": 220},
-       {"type": "chip", "text": "{{author}}", "icon": "🎓", "bg": "navy", "size": 66, "anim": "slam", "at": "{{author}}", "out": "paling best-0.1", "top": 380},
-       {"type": "kick", "text": "PALING BEST", "at": "paling best", "top": 180},
-       {"type": "text", "text": "teknik", "serif": true, "size": 100, "anim": "up", "at": "teknik", "top": 260},
-       {"type": "text", "text": "MNEMONIK!", "size": 160, "rainbow": true, "anim": "slam", "at": "mnemonik-0.1", "top": 380, "sfx": "sparkle"},
-       {"type": "image", "src": "page_mnemonik.jpg", "width": 520, "rot": -3, "anim": "pop", "at": "formula yang", "left": 60, "top": 590},
-       {"type": "chip", "text": "senang nak ingat", "icon": "🧠", "bg": "accent", "size": 56, "rot": 5, "at": "senang nak ingat", "left": 520, "top": 960},
+       {"type": "text", "text": "dibuat oleh", "serif": true, "size": 96, "anim": "up", "at": "dibuat oleh", "out": "paling best-0.1", "top": 200},
+       {"type": "chip", "text": "{{author_name}}", "icon": "🎓", "bg": "navy", "size": 72, "anim": "slam", "at": "oleh", "out": "paling best-0.1", "top": 340},
+       {"type": "kick", "text": "{{author|upper}}", "at": "{{author}}", "out": "paling best-0.1", "top": 500},
+       {"type": "kick", "text": "PALING BEST", "at": "paling best", "top": 170},
+       {"type": "text", "text": "teknik", "serif": true, "size": 100, "anim": "up", "at": "teknik", "top": 250},
+       {"type": "text", "text": "MNEMONIK!", "size": 150, "rainbow": true, "anim": "slam", "at": "mnemonik-0.1", "top": 370, "sfx": "sparkle"},
+       {"type": "image", "src": "page_mnemonik.jpg", "width": 760, "rot": -3, "anim": "pop", "at": "formula yang", "left": 150, "top": 570},
+       {"type": "chip", "text": "senang nak ingat", "icon": "🧠", "bg": "accent", "size": 56, "rot": 4, "at": "senang nak ingat", "left": 380, "top": 1000},
        {"type": "icon", "icon": "✨", "anim": "pop", "at": "mnemonik+0.1", "left": 60, "top": 330, "size": 120},
        {"type": "icon", "icon": "✨", "anim": "pop", "at": "mnemonik+0.2", "left": 900, "top": 360, "size": 100}
      ]},
     {"at": "lepas tu dia bagi",
-     "poses": [{"pose": "tunjuk_korang", "x": 40}, {"at": "step by", "pose": "senyum_lebar", "x": -30}],
+     "poses": [{"pose": "senyum_tangan_pipi", "x": 40}, {"at": "skema jawapan", "pose": "thumbs_up", "x": -30}],
      "items": [
-       {"type": "tiles", "top": 180, "items": [
-         {"icon": "🧩", "label": "SOALAN KREATIF", "at": "soalan secara", "rot": -4},
+       {"type": "tiles", "top": 160, "out": "skema jawapan-0.1", "items": [
+         {"icon": "🧩", "label": "SOALAN KREATIF", "at": "soalan yang", "rot": -4},
          {"icon": "📝", "label": "SIAP JAWAPAN", "at": "siap dengan", "rot": 3}]},
-       {"type": "image", "src": "page_soalan.jpg", "width": 500, "rot": -3, "anim": "rise", "at": "step by", "left": 290, "top": 520},
-       {"type": "steps", "top": 470, "items": [{"text": "STEP 1", "at": "step by"}, {"text": "STEP 2", "at": "by"}, {"text": "STEP 3", "at": "step cara"}]},
-       {"type": "text", "text": "cara guna formula", "size": "m", "highlight": true, "stroke": false, "anim": "up", "at": "cara nak guna", "top": 1010}
+       {"type": "image", "src": "page_barometer.jpg", "width": 760, "rot": 3, "anim": "rise", "at": "kreatif", "out": "skema jawapan-0.1", "left": 160, "top": 560},
+       {"type": "stamp", "text": "SKEMA JAWAPAN", "icon": "✅", "size": 96, "rot": -3, "at": "skema jawapan", "top": 160},
+       {"type": "image", "src": "page_soalan.jpg", "width": 780, "rot": -2, "anim": "pop", "at": "step by", "left": 150, "top": 360},
+       {"type": "steps", "top": 870, "items": [{"text": "STEP 1", "at": "step by"}, {"text": "STEP 2", "at": "by"}, {"text": "STEP 3", "at": "step cara"}]},
+       {"type": "text", "text": "cara guna formula", "size": "m", "highlight": true, "stroke": false, "anim": "up", "at": "cara nak guna", "top": 1000}
      ]},
     {"at": "jadi anak bukan",
-     "poses": [{"pose": "tenang_yakin", "x": -30}, {"at": "dia faham", "pose": "thumbs_up", "x": 40}],
+     "poses": [{"pose": "tenang_depan", "x": -30}, {"at": "dia faham", "pose": "thumbs_up", "x": 40}],
      "items": [
        {"type": "chip", "text": "sekadar hafal", "icon": "📖", "bg": "grey", "size": 72, "at": "bukan sekadar", "strike_at": "hafal+0.2", "top": 200},
        {"type": "stamp", "text": "DIA FAHAM", "icon": "💡", "size": 130, "rot": -3, "at": "dia faham", "top": 420, "sfx": "sparkle"},
        {"type": "text", "text": "& tahu nak jawab!", "serif": true, "color": "white", "anim": "up", "at": "tahu macam", "top": 720}
      ]},
     {"at": "ibu ayah", "flash": true,
-     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "dapatkan", "pose": "thumbs_up", "x": 40}, {"at": "dapatkan+1.9", "pose": "melambai_hai", "x": 0}],
+     "poses": [{"pose": "senyum_tangan_pipi", "x": -40}, {"at": "dapatkan", "pose": "thumbs_up", "x": 40}, {"at": "link", "pose": "kenyit_peace", "x": 0}],
      "items": [
-       {"type": "kick", "text": "{{brand}}", "at": "ibu ayah", "top": 120},
-       {"type": "image", "src": "cover_t5.jpg", "width": 480, "rot": -4, "at": "ibu ayah+0.3", "left": 80, "top": 220},
-       {"type": "image", "src": "cover_t4.jpg", "width": 400, "rot": 5, "anim": "right", "at": "ingat formula", "left": 560, "top": 300},
-       {"type": "chip", "text": "ingat formula ✔", "bg": "white", "size": 52, "anim": "left", "at": "ingat formula", "left": 60, "top": 760},
-       {"type": "chip", "text": "jawab dengan yakin ✔", "bg": "white", "size": 52, "anim": "right", "at": "jawab soalan", "left": 400, "top": 860},
-       {"type": "text", "text": "{{cta_big}}", "size": 82, "color": "white", "anim": "slam", "rot": -2, "at": "dapatkan", "top": 960},
-       {"type": "cta", "text": "{{cta_short}}", "icon": "👆", "at": "dapatkan", "cursor_at": "dapatkan+1.9", "top": 1070}
+       {"type": "image", "src": "covers_both.jpg", "width": 760, "rot": -2, "at": "ibu ayah+0.2", "left": 160, "top": 130},
+       {"type": "chip", "text": "senang ingat formula ✔", "bg": "white", "size": 50, "anim": "left", "at": "senang nak ingat", "left": 60, "top": 770},
+       {"type": "chip", "text": "masa exam pun ingat ✔", "bg": "white", "size": 50, "anim": "right", "at": "hari peperiksaan", "left": 380, "top": 860},
+       {"type": "text", "text": "{{cta_big}}", "size": 76, "color": "accent2", "anim": "slam", "rot": -2, "at": "boleh dapatkan", "top": 960},
+       {"type": "cta", "text": "{{cta_short}}", "icon": "👆", "at": "dapatkan", "cursor_at": "link", "top": 1070}
      ]}
   ]
 }

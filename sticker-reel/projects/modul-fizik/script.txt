@@ -1,17 +1,17 @@
 Dah nak SPM! Tapi anak masih lemah nak jawab soalan fizik.
 
-Aku faham. Subjek fizik ni banyak sangat formula. Daya, tenaga, momentum, elektrik, semua ada formula. Pening kepala nak ingat.
+Saya faham. Subjek fizik ni, dia banyak sangat formula. Daya, tenaga, momentum, elektrik, semua ada formula. Pening kepala nak ingat.
 
 Sebab tu ramai anak lemah dalam fizik. Bukan sebab dia tak pandai, tapi sebab dia tak tahu cara nak ingat.
 
 Hafal malam ni, esok dah lupa. Masuk dewan exam, terus blank.
 
-Jadi aku nak tunjuk {{product}} ni. {{level}}, siap ada {{level_extra}} sekali.
+Jadi saya nak tunjuk ni, {{product}} ni. {{level}}, dan dia ada {{level_extra}} juga.
 
-Modul ni dibuat oleh {{author}}. Paling best, dia guna teknik mnemonik. Formula yang panjang-panjang jadi senang nak ingat.
+Modul ni, dia dibuat oleh {{author}}. Paling best, dia guna teknik mnemonik. Formula yang panjang-panjang jadi senang nak ingat.
 
-Lepas tu dia bagi soalan secara kreatif, siap dengan jawapan. Step by step, cara nak guna formula tu betul-betul.
+Lepas tu dia bagi soalan yang secara kreatif, siap dengan jawapan dekat bahagian tengah. Skema jawapan lah. Step by step, cara nak guna formula tu betul-betul.
 
-Jadi anak bukan sekadar hafal. Dia faham, dan dia tahu macam mana nak jawab.
+Jadi anak bukan sekadar hafal. Dia faham, dan dia tahu macam mana nak jawab dengan buku ni.
 
-Ibu ayah, kalau nak anak ingat formula dengan mudah dan jawab soalan dengan yakin, {{cta_line}}
+Ibu ayah, kalau nak anak-anak senang nak ingat formula pada hari peperiksaan, {{cta_line}}

@@ -4,7 +4,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, HERE)
-import align, compose, ink, stickers, vo  # noqa: E402
+import align, compose, ink, music, stickers, vo  # noqa: E402
 from common import Project, fill  # noqa: E402
 
 EXAMPLE = os.path.join(HERE, "projects", "buku-melukis")
@@ -103,6 +103,16 @@ class TestVo(unittest.TestCase):
         self.assertAlmostEqual(vo.to_out(5.0, edl, dur, 1.25), 4.0, places=3)
 
 
+class TestMusic(unittest.TestCase):
+    def test_length_stereo_and_fades(self):
+        st = music.render(6.0)
+        self.assertEqual(st.shape, (6 * music.SR, 2))
+        self.assertLessEqual(np.abs(st).max(), 0.91)
+        self.assertLess(np.abs(st[:480]).max(), 0.05)       # fades in
+        self.assertLess(np.abs(st[-480:]).max(), 0.05)      # and out
+        self.assertGreater(np.abs(st[music.SR * 2:music.SR * 4]).mean(), 0.02)
+
+
 class TestCompose(unittest.TestCase):
     def setUp(self):
         self.words = fake_words("Anak korang suka melukis? Jangan abaikan. Dapatkan di link.")
@@ -176,7 +186,8 @@ class TestCompose(unittest.TestCase):
         for f in ("project.json", "script.txt", "scenes.json"):
             shutil.copy(os.path.join(src, f), d)
         prj = Project(d)
-        poses = list(prj.cfg["stickers"]["names"]) + list(prj.cfg["stickers"]["ready"])
+        st = prj.cfg["stickers"]
+        poses = list(st.get("names", [])) + list(st.get("ready", {})) + list(st.get("photos", {}))
         os.makedirs(prj.p("build", "stickers"), exist_ok=True)
         json.dump({p: 700 for p in poses}, open(prj.p("build", "stickers", "heights.json"), "w"))
         words = fake_words(prj.script())

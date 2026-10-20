@@ -65,6 +65,8 @@ Projects: `projects/buku-melukis` (drawing books) and `projects/modul-fizik` (Mo
   "background": {"rays": true, "doodles": ["doodle/gembira.png", ...]},   // up to 8 images from input/img, drifting faintly
   "captions": {"max_words": 3, "max_chars": 18, "keywords": ["melukis", "kreatif", ...]},
   "sfx_gain": 0.5,
+  "music": {"gain": 0.16, "bpm": 100},           // optional background music, ducked under the voice;
+                                                 // {"file": "input/music.mp3"} uses your own track, otherwise music.py makes one
   "whisper_model": "large-v3", "language": "ms"
 }
 ```
@@ -132,6 +134,8 @@ Projects: `projects/buku-melukis` (drawing books) and `projects/modul-fizik` (Mo
 Icons are emoji (`"✏️"`) or Twemoji codes (`"270f"`).
 
 ## Helpers
+
+- `music.py dur out.wav [--bpm 100]`: a royalty-free cheerful loop (kalimba arpeggios, pad, bass, soft drums); `compose.py` generates it when `music` has no `file`
 
 - `ink.py out_dir page.jpg --crop x0,y0,x1,y1`: line art on white → transparent ink PNG (for doodles)
 - `build/timeline.txt`: every scene and pose with its resolved time; check it when something appears at the wrong moment

@@ -117,6 +117,8 @@
     if (a === "draw") {
       if (el.getTotalLength) {
         const L = el.getTotalLength();
+        tl.set(el, { opacity: 0 }, 0);   // round line caps would show as dots before the line is drawn
+        tl.set(el, { opacity: 1 }, t);
         tl.fromTo(el, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: parseFloat(el.dataset.dur || 0.3), ease: "power2.inOut" }, t);
       } else tl.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 0.25, ease: "power2.out" }, t);
       return;

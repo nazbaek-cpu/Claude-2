@@ -7,11 +7,11 @@
 #   ./run.sh projects/<name> --from compose  reuse earlier steps (e.g. after editing scenes.json)
 #   --retranscribe                           run Whisper again even if build/whisper.json exists
 #
-# Steps: script stickers align vo compose render deliver
+# Steps: script stickers align vo music compose render deliver
 set -euo pipefail
 cd "$(dirname "$0")"
 
-STEPS=(script stickers align vo compose render deliver)
+STEPS=(script stickers align vo music compose render deliver)
 [ $# -ge 1 ] || { sed -n '2,10p' "$0"; exit 2; }
 PRJ="${1%/}"; shift
 DRAFT=0 UNTIL="" FROM="" RETR=""
@@ -43,6 +43,7 @@ fi; done_step script
 if step stickers; then $PY stickers.py "$PRJ" --previews; fi; done_step stickers
 if step align; then $PY align.py "$PRJ" $RETR; fi; done_step align
 if step vo; then $PY vo.py "$PRJ"; fi; done_step vo
+if step music; then $PY music.py "$PRJ"; fi; done_step music
 if step compose; then $PY compose.py "$PRJ"; fi; done_step compose
 
 RAW="$PRJ/out/final_raw.mp4"; Q=high

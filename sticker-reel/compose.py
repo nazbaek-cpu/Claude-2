@@ -6,7 +6,8 @@ Every time in scenes.json is a phrase from the script ("jangan abaikan"), option
 keeps working when the voiceover is re-recorded. Texts may use {{variables}} from project.json.
 Writes build/reel/ (index.html + assets), build/sfx_cues.json and build/timeline.txt (resolved times).
 """
-import html, json, os, re, shutil, subprocess, sys
+import html, json, os, re, shutil, subprocess, sys, wave
+import numpy as np
 from common import HERE, Project
 
 NM = os.path.join(HERE, "node_modules")
@@ -328,6 +329,48 @@ def build(prj, words, vodur):
     return page, thin, icons, dur, log
 
 
+def read_stereo(path):
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-ac", "2", "-ar", "48000", "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(pcm, np.float32).reshape(-1, 2)
+
+
+def duck_curve(vo, depth_db, sr=48000):
+    """1.0 where the voice is quiet, 10^(-depth/20) while it speaks; 80 ms in, 350 ms out"""
+    hop = sr // 100
+    n = len(vo) // hop
+    rms = np.sqrt((vo[:n * hop] ** 2).mean(1).reshape(n, hop).mean(1) + 1e-12)
+    act = (20 * np.log10(rms) > -40).astype(np.float32)
+    held = np.array([act[max(0, i - 35):i + 8].max() for i in range(n)])   # open slightly early, close after the phrase
+    k = np.exp(-np.arange(-15, 16) ** 2 / 50); held = np.convolve(held, k / k.sum(), "same")
+    g = 1 - (1 - 10 ** (-depth_db / 20)) * np.clip(held, 0, 1)
+    return np.repeat(g, hop)
+
+
+def mix(prj, dur, out):
+    """voice + synthesized SFX + optional background music (levelled to the voice, ducked under it)"""
+    def b(*x):
+        return prj.p("build", *x)
+    subprocess.run([sys.executable, os.path.join(HERE, "sfx.py"), b("sfx_cues.json"), str(dur), b("sfx.wav")], check=True)
+    ins, chain, n = ["-i", b("vo.wav"), "-i", b("sfx.wav")], f"[0:a]apad=whole_dur={dur}[v];[1:a]volume={prj.cfg.get('sfx_gain', 0.5)}[s];", 2
+    m = prj.cfg.get("music")
+    if m:
+        src = prj.p(m["file"]) if "file" in m else b("music.wav")
+        # same loudness as the voice (-15 LUFS) + gain_db (-6 dB = half volume), looped/trimmed to the video, faded out
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-stream_loop", "-1", "-i", src, "-t", str(dur), "-af",
+                        f"loudnorm=I={-15 + m.get('gain_db', -6)}:TP=-2:LRA=11,afade=t=out:st={max(0, dur - 1.5)}:d=1.5",
+                        "-ar", "48000", "-ac", "2", b("music_level.wav")], check=True)
+        mus = read_stereo(b("music_level.wav"))
+        g = duck_curve(read_stereo(b("vo.wav")), m.get("duck_db", 4))
+        g = np.concatenate([g, np.ones(max(0, len(mus) - len(g)))])[:len(mus)]
+        st = (np.clip(mus * g[:, None], -1, 1) * 32767).astype(np.int16)
+        w = wave.open(b("music_duck.wav"), "wb"); w.setnchannels(2); w.setsampwidth(2); w.setframerate(48000)
+        w.writeframes(st.tobytes()); w.close()
+        ins += ["-i", b("music_duck.wav")]; chain += "[2:a]apad=whole_dur=" + str(dur) + "[m];"; n = 3
+    chain += "[v][s]" + ("[m]" if n == 3 else "") + f"amix=inputs={n}:normalize=0:duration=longest,atrim=0:{dur},alimiter=limit=0.95[a]"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", chain, "-map", "[a]", "-ar", "48000", out], check=True)
+
+
 def main():
     prj = Project(sys.argv[1])
     words = json.load(open(prj.p("build", "words.json")))
@@ -351,12 +394,7 @@ def main():
     open(f"{out}/index.html", "w").write(page)
     json.dump(sfx, open(prj.p("build", "sfx_cues.json"), "w"))
     open(prj.p("build", "timeline.txt"), "w").write("\n".join(log) + "\n")
-    # audio: voice + synthesized SFX under it
-    gain = prj.cfg.get("sfx_gain", 0.5)
-    subprocess.run([sys.executable, os.path.join(HERE, "sfx.py"), prj.p("build", "sfx_cues.json"), str(dur), prj.p("build", "sfx.wav")], check=True)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", prj.p("build", "vo.wav"), "-i", prj.p("build", "sfx.wav"), "-filter_complex",
-                    f"[0:a]apad=whole_dur={dur}[v];[1:a]volume={gain}[s];[v][s]amix=inputs=2:normalize=0:duration=longest,"
-                    f"atrim=0:{dur},alimiter=limit=0.95[a]", "-map", "[a]", "-ar", "48000", f"{a}/mix.wav"], check=True)
+    mix(prj, dur, f"{a}/mix.wav")
     print(f"{len(log)} timeline entries, {len(sfx)} sfx, {dur:.2f} s -> {out}/index.html")
 
 

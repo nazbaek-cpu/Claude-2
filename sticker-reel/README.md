@@ -37,7 +37,8 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 | stickers | `stickers.py` | `build/stickers/<pose>.png`, `heights.json` (each face shown about 300 px wide), `_sheet.jpg`, `yellow/*` previews |
 | align | `align.py` | `build/words_src.json`: Whisper word times aligned to the script |
 | vo | `vo.py` | `build/vo.wav`: cut after the last script word, pauses shrunk to `pause_s`, sped up by `tempo`, −15 LUFS |
-| compose | `compose.py` | `build/reel/` (HyperFrames project + `mix.wav`), `build/timeline.txt` (resolved times) |
+| music | `music.py` | `build/music.wav`: original background music synthesized from scratch (copyright-free), only with `music.generate` |
+| compose | `compose.py` | `build/reel/` (HyperFrames project + `mix.wav`: voice, SFX, music levelled to the voice and ducked while it speaks), `build/timeline.txt` |
 | render / deliver | HyperFrames + ffmpeg | `out/preview_720p.mp4` or `out/final_1080p.mp4` |
 
 **Align step details:**
@@ -62,6 +63,8 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
   "theme": {"bg1": "#FFE46E", "bg2": "#FFD23C", "bg3": "#FFC41E", "accent": "#FF2E7E", "accent2": "#1FA2E8", "navy": "#1C2B5A", "key": "#FFD23C"},
   "background": {"rays": true, "doodles": ["doodle/gembira.png", ...]},   // up to 8 images from input/img, drifting faintly
   "captions": {"max_words": 3, "max_chars": 18, "keywords": ["melukis", "kreatif", ...]},
+  "music": {"generate": {"bpm": 104, "key": "C", "mood": "bright", "seed": 3},   // or {"file": "input/track.mp3"} (a track you have the rights to)
+            "gain_db": -6, "duck_db": 4},   // music level vs the voice (-6 dB = half volume), extra dip while the voice speaks
   "sfx_gain": 0.5,
   "whisper_model": "large-v3", "language": "ms"
 }
@@ -128,6 +131,13 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 | `html` | raw HTML; `{at:phrase}` becomes `data-at="…"` |
 
 Icons are emoji (`"✏️"`) or Twemoji codes (`"270f"`).
+
+## Background music
+
+`music.py` writes an original track for every video: plucked keys on a I–V–vi–IV progression, round bass, soft kick/clap/shaker and a sparse marimba tune.
+- **Copyright:** it is synthesized note by note, with no samples and no third-party recordings, so it is free of copyright claims.
+- **Space for the voice:** the 1–4 kHz band is dipped so the voice stays clear.
+- **Options:** `mood` is `bright` (I–V–vi–IV) or `calm` (I–vi–IV–V); `bpm` and `key` are free; a different `seed` gives a different tune.
 
 ## Helpers
 

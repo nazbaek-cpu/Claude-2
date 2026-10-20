@@ -27,5 +27,6 @@
   "captions": {"max_words": 3, "max_chars": 18,
                "keywords": ["fizik", "formula", "hafal", "mnemonik", "ilustrasi", "kreatif", "konstruk", "spm", "tingkatan", "penyelesai",
                             "skor", "link", "exam", "ingat"]},
+  "music": {"generate": {"bpm": 104, "key": "C", "mood": "bright", "seed": 3}, "gain_db": -6, "duck_db": 4},
   "sfx_gain": 0.5
 }

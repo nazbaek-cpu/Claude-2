@@ -4,7 +4,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, HERE)
-import align, compose, ink, stickers, vo  # noqa: E402
+import align, compose, ink, music, stickers, vo  # noqa: E402
 from common import Project, fill  # noqa: E402
 
 EXAMPLE = os.path.join(HERE, "projects", "buku-melukis")
@@ -207,6 +207,23 @@ class TestStickers(unittest.TestCase):
         out = ink.ink(img)
         self.assertEqual(int(out[0, 0, 3]), 0)
         self.assertEqual(int(out[10, 10, 3]), 255)
+
+
+class TestMusic(unittest.TestCase):
+    def test_length_level_and_fades(self):
+        x = music.compose_music(6.0, bpm=110, key="F", mood="calm", seed=1)
+        self.assertEqual(x.shape, (6 * music.SR, 2))
+        self.assertLessEqual(np.abs(x).max(), 0.9)
+        self.assertLess(np.abs(x[:100]).max(), 0.05)            # fades in
+        self.assertLess(np.abs(x[-100:]).max(), 0.01)           # fades out
+        self.assertGreater(np.sqrt((x ** 2).mean()), 0.02)       # not silent
+
+    def test_duck_curve(self):
+        sr = 48000
+        vo = np.zeros((4 * sr, 2), np.float32); vo[sr:2 * sr] = 0.3   # voice from 1 s to 2 s
+        g = compose.duck_curve(vo, 6)
+        self.assertAlmostEqual(g[int(1.5 * sr)], 10 ** (-6 / 20), places=2)
+        self.assertAlmostEqual(g[int(3.6 * sr)], 1.0, places=2)
 
 
 if __name__ == "__main__":

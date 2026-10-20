@@ -31,9 +31,6 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 
 Projects: `projects/buku-melukis` (drawing books) and `projects/modul-fizik` (Modul Konstruk Fizik).
 
-```bash
-```
-
 ## Steps (`run.sh`)
 
 | Step | Script | Output |

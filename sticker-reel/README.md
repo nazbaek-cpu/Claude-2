@@ -29,6 +29,11 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
 ./run.sh projects/buku-melukis --from compose --draft   # after editing scenes.json only
 ```
 
+Projects: `projects/buku-melukis` (drawing books) and `projects/modul-fizik` (Modul Konstruk Fizik).
+
+```bash
+```
+
 ## Steps (`run.sh`)
 
 | Step | Script | Output |
@@ -149,7 +154,7 @@ The tests cover:
 - every scene component
 - the page build
 - grid splitting, outlines and ink
-- the example project: every phrase in `projects/buku-melukis/scenes.json` must exist in its script, in order
+- every project in `projects/`: each phrase in its `scenes.json` must exist in its script, in order
 
 ## Privacy
 

@@ -1,14 +1,14 @@
 {
   "scenes": [
-    {"at": "anak korang ambil",
-     "poses": [{"pose": "tunjuk_korang", "x": -60}, {"at": "fizik dia", "pose": "berfikir", "x": 40}],
+    {"at": "dah nak spm",
+     "poses": [{"pose": "terkejut", "x": -40}, {"at": "tapi anak", "pose": "berfikir", "x": 40}],
      "items": [
-       {"type": "kick", "text": "ANAK KORANG AMBIL", "at": "anak korang", "top": 190},
-       {"type": "text", "text": "SPM", "size": "xxl", "color": "accent2", "anim": "slam", "rot": -4, "at": "spm", "top": 280},
-       {"type": "chip", "text": "tahun ni?", "icon": "📅", "bg": "navy", "size": 64, "at": "tahun ni", "top": 520},
-       {"type": "text", "text": "FIZIK DIA", "color": "white", "anim": "up", "at": "fizik dia", "top": 660},
-       {"type": "text", "text": "MACAM MANA?", "size": 120, "color": "accent", "at": "macam mana", "top": 790},
-       {"type": "icon", "icon": "⚛️", "at": "fizik dia+0.1", "left": 830, "top": 560, "size": 160}
+       {"type": "kick", "text": "DAH NAK", "at": "dah nak", "top": 190},
+       {"type": "text", "text": "SPM!", "size": "xxl", "color": "accent2", "anim": "slam", "rot": -4, "at": "spm", "top": 280},
+       {"type": "icon", "icon": "⏰", "at": "spm+0.15", "left": 820, "top": 240, "size": 160},
+       {"type": "text", "text": "TAPI ANAK MASIH", "size": 84, "color": "white", "anim": "up", "at": "tapi anak", "top": 540},
+       {"type": "text", "text": "LEMAH", "size": "xl", "color": "accent", "anim": "slam", "rot": -3, "at": "lemah", "top": 650},
+       {"type": "chip", "text": "jawab soalan fizik", "icon": "⚛️", "bg": "navy", "size": 64, "at": "jawab soalan", "top": 840}
      ]},
     {"at": "aku faham",
      "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "pening", "pose": "terkejut", "x": 40}],

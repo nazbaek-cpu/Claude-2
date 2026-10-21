@@ -1,0 +1,58 @@
+{
+  "_comment": "Per-video settings. Copy and edit this file (and cues.json) for a new video.",
+  "whisper_model": "large-v3",
+  "language": "ms",
+  "initial_prompt": "Vlog pasar pagi di Pekan Ahad Pokok Getah.",
+  "flip": false,
+  "exposure": 0.38,
+  "makeup": {
+    "lips": 1.0,
+    "brows": 1.0
+  },
+  "zooms": [
+    1.0,
+    1.08
+  ],
+  "product_zoom": {
+    "enabled": false,
+    "zoom": 1.3,
+    "min_zoom": 1.18,
+    "hold_s": 5.0,
+    "merge_gap_s": 2.0,
+    "triggers": [
+      "buku|produk",
+      "tengok (ni|ini)"
+    ],
+    "face_min_y": 560
+  },
+  "voice": {
+    "preset": "studio",
+    "denoise_atten_db": 40
+  },
+  "cuts": {
+    "silence_db_above_floor": 6,
+    "tail_s": 0.13,
+    "head_s": 0.1,
+    "min_cut_s": 0.12,
+    "end_s": null,
+    "no_cuts_after_s": null
+  },
+  "transcript": {
+    "fixes": {
+      "Mentara.": "Mentarang.",
+      "Mentara": "Mentarang",
+      "Soya": "Sotong",
+      "soya?": "sotong?"
+    },
+    "drop_words_from_s": null
+  },
+  "captions": {
+    "keywords": "(?i)^(mentarang|sedap|sotong|pekan|ahad|pokok|getah|awal|pagi|sekilo|makan)",
+    "max_words": 3,
+    "max_chars": 17,
+    "hide_from_last_cue": false
+  },
+  "mix": {
+    "sfx_gain": 0.55
+  }
+}

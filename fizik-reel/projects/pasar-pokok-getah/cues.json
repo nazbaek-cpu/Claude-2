@@ -1,0 +1,126 @@
+[
+ {
+  "note": "1  Kita ada dekat Pekan Ahad Pokok Getah",
+  "start": 0.0,
+  "end": 2.96,
+  "class": "top",
+  "html": "<div class=\"glass card pop\" {at:0.1}><span class=\"sheen\"></span>{icon:1f4cd:96}<div class=\"txt\"><div class=\"sm\">Pasar pagi</div><div class=\"lg pop\" {at:0.74}>Pekan Ahad <span class=\"pop\" {at:1.66} style=\"color:var(--yellow)\">Pokok Getah</span></div></div></div>",
+  "sfx": [
+   [
+    0.05,
+    "whoosh",
+    0.9
+   ],
+   [
+    0.74,
+    "pop",
+    0.7
+   ],
+   [
+    1.66,
+    "pop",
+    0.7
+   ]
+  ]
+ },
+ {
+  "note": "2  Mentarang ... sedap tu",
+  "start": 3.26,
+  "end": 6.8,
+  "class": "top",
+  "html": "<div class=\"glass hero pop\" {at:3.26}><span class=\"sheen\"></span>{icon:1f41a:96}<div class=\"huge\" style=\"font-size:118px\">MENTARANG</div></div><div class=\"glass chip pop\" {at:5.98}>{icon:1f60b:56} Sedap!</div>",
+  "sfx": [
+   [
+    3.2,
+    "whoosh",
+    0.8
+   ],
+   [
+    3.3,
+    "pop",
+    0.8
+   ],
+   [
+    5.98,
+    "sparkle",
+    0.6
+   ]
+  ]
+ },
+ {
+  "note": "3  Sotong je (grilled in banana leaf)",
+  "start": 8.9,
+  "end": 13.0,
+  "class": "top",
+  "html": "<div class=\"glass pill pop\" {at:8.9}><span class=\"sheen\"></span>{icon:1f991:80}<span class=\"lg\">Sotong</span><span class=\"sm\" style=\"margin-left:14px\">bakar</span></div><div class=\"glass chip pop\" {at:10.6}>{icon:1f525:56} Panas-panas</div>",
+  "sfx": [
+   [
+    8.85,
+    "pop",
+    0.8
+   ],
+   [
+    10.6,
+    "pop",
+    0.6
+   ]
+  ]
+ },
+ {
+  "note": "4  Dangai stall + sangat sedap kat sini",
+  "start": 13.94,
+  "end": 16.3,
+  "class": "top",
+  "html": "<div class=\"glass card pop\" {at:13.94}><span class=\"sheen\"></span>{icon:1f44d:96}<div class=\"txt\"><div class=\"sm\">Sangat</div><div class=\"lg pop glow\" {at:15.2} style=\"color:var(--yellow)\">sedap kat sini</div></div></div>",
+  "sfx": [
+   [
+    13.9,
+    "whoosh",
+    0.8
+   ],
+   [
+    15.2,
+    "ding",
+    0.6
+   ]
+  ]
+ },
+ {
+  "note": "5  Buka awal pagi",
+  "start": 16.42,
+  "end": 20.6,
+  "class": "top",
+  "html": "<div class=\"glass pill pop\" {at:17.08}><span class=\"sheen\"></span>{icon:23f0:80}<span class=\"lg\">Buka awal</span><span class=\"sm\" style=\"margin-left:14px\">pagi</span></div>",
+  "sfx": [
+   [
+    17.05,
+    "tick",
+    0.8
+   ],
+   [
+    19.86,
+    "pop",
+    0.5
+   ]
+  ]
+ },
+ {
+  "note": "6  Okey, ambil sekilo yang tu (udang)",
+  "start": 22.04,
+  "end": 25.0,
+  "class": "top",
+  "html": "<div class=\"glass card pop\" {at:22.04}><span class=\"sheen\"></span>{icon:1f990:96}<div class=\"txt\"><div class=\"sm\">Okey, ambil</div><div class=\"lg pop glow\" {at:22.82} style=\"color:var(--mint)\">sekilo!</div></div></div>",
+  "sfx": [
+   [
+    22.0,
+    "whoosh",
+    0.8
+   ],
+   [
+    22.82,
+    "boom",
+    0.5
+   ]
+  ]
+ }
+]

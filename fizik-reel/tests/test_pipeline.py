@@ -184,6 +184,9 @@ class TestVoice(unittest.TestCase):
     def test_basic_chain(self):
         self._run("basic")
 
+    def test_original_chain(self):
+        self._run("original")
+
     @unittest.skipUnless(HAS_DEEP_FILTER, "tools/deep-filter missing (run setup.sh)")
     def test_studio_chain(self):
         self._run("studio")

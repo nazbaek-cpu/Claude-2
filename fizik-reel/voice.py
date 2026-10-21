@@ -1,10 +1,11 @@
 """Cut the voice track with the same frame-quantized keep list as the video, then clean it up.
 Writes work/voice.wav and the source->output time map work/edl.json.
 
-config.json "voice": {"preset": "studio" | "clear" | "basic", "denoise_atten_db": 40}
+config.json "voice": {"preset": "studio" | "clear" | "basic" | "original", "denoise_atten_db": 40}
   studio  DeepFilterNet denoise + warm close-mic EQ, de-esser, two gentle compressors, light saturation
   clear   DeepFilterNet denoise + bright presence EQ
   basic   ffmpeg afftdn + compressor (the original chain; no extra tool needed)
+  original  the recorded voice as is: no denoise, EQ, compression or loudness change
 """
 import json, os, subprocess
 from media import HERE, SRC, WORK, config, probe
@@ -32,6 +33,7 @@ PRESETS = {
     "basic": dict(denoise=False, chain=(
         "highpass=f=70,afftdn=nf=-30,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120,"
         "loudnorm=I=-15:TP=-1.5:LRA=9,aresample=48000")),
+    "original": dict(denoise=False, chain="aresample=48000"),
 }
 
 

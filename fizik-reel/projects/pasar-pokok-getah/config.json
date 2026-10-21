@@ -26,7 +26,7 @@
     "face_min_y": 560
   },
   "voice": {
-    "preset": "studio",
+    "preset": "original",
     "denoise_atten_db": 40
   },
   "cuts": {

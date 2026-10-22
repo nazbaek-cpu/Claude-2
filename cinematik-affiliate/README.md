@@ -44,6 +44,9 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
              "lip_rgb": [164, 114, 102], "lip_amount": 0.65, "brows": 0.0},   // natural nude-rose lips; brows 0.2 = soft fill
   "behind": true,                     // false puts every headline/number in front (with a soft shadow) when the head fills the top
+  "theme": "skrip",                   // optional simple food look: yellow handwritten line (Pacifico, thin white outline)
+                                      // over bold white Plus Jakarta Sans; kickers become the handwritten line,
+                                      // the title is "lines": ["bold line", "handwritten line"]
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
   "hflip": false,                     // true un-mirrors selfie footage (text on the product reads the right way)
@@ -81,6 +84,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/sate-ikan-jumbo/` | example: food review in the "skrip" theme (Malay) |
 | `projects/latihan-matematik/` | example: maths workbooks, head high in frame (front headlines, per-segment offset), two count-ups (Malay) |
 | `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |

@@ -62,6 +62,16 @@ def test_project_wide_front_and_segment_offset(cfg):
     assert not back and front[1][2] == render.HEAD_Y - 60
 
 
+def test_skrip_theme_uses_script_kicker_and_title(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "Jumbo", "head": "Besar sangat."}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], theme="skrip", behind=False), 2.0)
+    assert front[0][0].getpixel((front[0][0].width // 2, front[0][0].height // 2)) is not None
+    assert len(front) == 2 and front[0][2] < front[1][2]          # handwritten line sits above the bold line
+    title = {"start": 0.0, "end": 3.0, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}}
+    _, front = render.layers(dict(cfg, segments=[title], subs=[], theme="skrip", title_pos="top"), 2.0)
+    assert len(front) == 3                                           # scrim + two lines, no kicker or underline
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]

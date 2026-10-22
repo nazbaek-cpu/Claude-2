@@ -33,6 +33,23 @@ TITLE_X, TITLE_LINE_H = 70, 132
 # "bottom": lower-left like a product cover (subtitles drop below it); "top": above the head when the face is centred
 TITLE_POS = {"bottom": dict(kick=1000, line=1100, sub=1480), "top": dict(kick=250, line=350, sub=SUB_Y)}
 
+# "theme": "skrip" -- simple food look: yellow handwritten line (thin white outline) over bold white sans
+SKRIP_YELLOW = (255, 204, 41)
+SK_HEAD, SK_NUM, SK_SUB, SK_LABEL = jakarta("ExtraBold", 96), jakarta("ExtraBold", 220), jakarta("SemiBold", 50), jakarta("Bold", 44)
+
+def script_img(txt, size=110):
+    key = ("script", txt, size)
+    if key in cache: return cache[key]
+    fnt = ImageFont.truetype(os.path.join(HERE, "fonts", "Pacifico-Regular.ttf"), size)
+    asc, desc = fnt.getmetrics(); pad = 30
+    img = Image.new("RGBA", (int(fnt.getlength(txt)) + pad * 2, asc + desc + pad * 2), (255, 255, 255, 0))
+    sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).text((pad, pad), txt, font=fnt, fill=(0, 0, 0, 140), stroke_width=3, stroke_fill=(0, 0, 0, 140))
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(8)), (0, 4))
+    ImageDraw.Draw(img).text((pad, pad), txt, font=fnt, fill=SKRIP_YELLOW + (255,), stroke_width=3, stroke_fill=(255, 255, 255, 255))
+    cache[key] = img
+    return img
+
 GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "eq=saturation=0.86:contrast=1.06:gamma=0.98,"
          "curves=master='0/0.035 0.25/0.22 0.75/0.75 1/0.94',"
@@ -198,6 +215,11 @@ def title_layers(cfg, s, t, front):
     if a <= 0: return
     pos = TITLE_POS[cfg.get("title_pos", "bottom")]
     front.append((scrim(a * 0.72, cfg.get("title_pos", "bottom")), W / 2, H / 2))
+    if cfg.get("theme") == "skrip":   # centred: bold white line, then the yellow handwritten line
+        l1, l2 = tc["lines"][0], tc["lines"][-1]
+        front.append((anim(text_img(l1, SK_HEAD, shadow=True), min(a, vis(t, t0 + 0.1, t1, 0.4, 0.3)), 1.0), 540, pos["line"] - 40))
+        front.append((anim(script_img(l2, 120), min(a, vis(t, t0 + 0.25, t1, 0.4, 0.3)), 1.06), 540, pos["line"] + 105))
+        return
     size = tc.get("size", 132)   # smaller for a long accent phrase that must stay on one line
     if ("tl", size) not in cache: cache[("tl", size)] = TL_FONT if size == 132 else jakarta("ExtraBold", size)
     fnt, lh = cache[("tl", size)], TITLE_LINE_H * size / 132
@@ -217,6 +239,8 @@ def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""
     back, front = [], []
     sub_y = SUB_Y
+    skrip = cfg.get("theme") == "skrip"
+    head_f, num_f, sub_f = (SK_HEAD, SK_NUM, SK_SUB) if skrip else (H_FONT, N_FONT, S_FONT)
     oy = cfg.get("top_offset", 0)   # negative lifts the top text for footage where the head sits high
     for s in cfg["segments"]:
         if "title" in s:
@@ -228,20 +252,23 @@ def layers(cfg, t):
         if a <= 0: continue
         soy = s.get("offset", oy)   # per-segment override, e.g. a count-up that must stay clear of the app's top bar
         if s.get("kicker"):
-            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + soy))
+            if skrip:   # the kicker becomes the yellow handwritten line
+                front.append((anim(script_img(s["kicker"]), a, 1.06), 540, (HEAD_Y - 118 if "count" not in s else 235) + soy))
+            else:
+                front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + soy))
         if s.get("head"):
             behind = s.get("behind", cfg.get("behind", True))   # in front: soft shadow so it reads on a light hijab
-            (back if behind else front).append((anim(text_img(s["head"], H_FONT, shadow=not behind), a), 540, HEAD_Y + soy))
+            (back if behind else front).append((anim(text_img(s["head"], head_f, shadow=not behind or skrip), a), 540, HEAD_Y + soy))
         if "count" in s:
             p = ease_out((t - t0 - 0.1) / 1.2)
             behind = s.get("behind", cfg.get("behind", True))
-            (back if behind else front).append((anim(text_img(count_text(s, t), N_FONT, shadow=not behind), a), 540, 385 + soy))
+            (back if behind else front).append((anim(text_img(count_text(s, t), num_f, shadow=not behind or skrip), a), 540, 385 + soy))
             la = a * ease_out((t - t0 - 0.6) / 0.35)
             if la > 0 and s.get("label"):
-                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528 + soy))
+                front.append((anim(text_img(s["label"], SK_LABEL if skrip else L_FONT, shadow=True), la), 540, 528 + soy))
             bw = int(240 * p)
             if bw > 4:
-                bar = Image.new("RGBA", (bw, 8), GREEN + (0,)); bm = Image.new("L", (bw, 8), 0)
+                bar = Image.new("RGBA", (bw, 8), (SKRIP_YELLOW if skrip else GREEN) + (0,)); bm = Image.new("L", (bw, 8), 0)
                 ImageDraw.Draw(bm).rounded_rectangle((0, 0, bw - 1, 7), radius=4, fill=255); bar.putalpha(bm)
                 front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572 + soy))
         if s.get("pills"):
@@ -260,7 +287,7 @@ def layers(cfg, t):
                 front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + soy + 72 + bob))
     for s0, s1, txt in cfg["subs"]:
         if s0 <= t < s1:
-            front.append((text_img(txt, S_FONT, shadow=True), 540, sub_y))
+            front.append((text_img(txt, sub_f, shadow=True), 540, sub_y))
     return back, front
 
 

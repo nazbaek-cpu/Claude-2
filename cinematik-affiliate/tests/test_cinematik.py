@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import render, sfx, speed, transcribe, voice  # noqa: E402
+import project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -56,6 +56,22 @@ def test_top_title_and_top_offset(cfg):
     assert back[0][2] == render.HEAD_Y - 80
 
 
+def test_project_wide_front_and_segment_offset(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "Hai.", "offset": -60}
+    back, front = render.layers(dict(cfg, segments=[seg], subs=[], behind=False, top_offset=-150), 2.0)
+    assert not back and front[1][2] == render.HEAD_Y - 60
+
+
+def test_skrip_theme_uses_script_kicker_and_title(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "Jumbo", "head": "Besar sangat."}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], theme="skrip", behind=False), 2.0)
+    assert front[0][0].getpixel((front[0][0].width // 2, front[0][0].height // 2)) is not None
+    assert len(front) == 2 and front[0][2] < front[1][2]          # handwritten line sits above the bold line
+    title = {"start": 0.0, "end": 3.0, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}}
+    _, front = render.layers(dict(cfg, segments=[title], subs=[], theme="skrip", title_pos="top"), 2.0)
+    assert len(front) == 3                                           # scrim + two lines, no kicker or underline
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]
@@ -95,6 +111,12 @@ def test_speed_shrinks_pauses_without_cutting_words():
     assert keep[0][0] == 0.35 and (0.6, 1.5) not in keep
 
 
+def test_speed_hold_keeps_silent_moments():
+    words = [w("satu", 0.5, 1.0), w("dua", 4.0, 4.4)]
+    assert len(speed.keep_intervals(words, [], 10.0, 0.2)) == 2
+    assert speed.keep_intervals(words, [], 10.0, 0.2, hold=[[1.5, 3.0]]) == [(0.35, 5.2)]
+
+
 def test_time_map_follows_cuts_and_tempo():
     keep = [(0.0, 1.0), (2.0, 3.0)]
     assert speed.to_output(0.5, keep, 1.0) == 0.5
@@ -107,6 +129,22 @@ def test_studio_chain_is_a_valid_filtergraph():
     fc = f"sine=f=220:d=1,{voice.CHAIN}"
     r = subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", fc, "-f", "null", "-"], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+def test_reorder_puts_hook_first_and_clips_spans():
+    ranges = [(5.0, 7.0), (0.0, 5.0), (7.0, 10.0)]
+    keep = speed.ordered([(0.0, 10.0)], ranges)
+    assert keep == [(5.0, 7.0), (0.0, 5.0), (7.0, 10.0)]
+    assert speed.to_output(5.5, keep, 1.0) == 0.5            # hook plays first
+    assert speed.to_output(1.0, keep, 1.0) == 3.0            # then the start of the take
+    assert speed.span(6.0, 8.0, keep, 1.0, ranges) == pytest.approx((1.0, 1.999))   # a subtitle never runs past its piece
+
+
+def test_food_preset_fills_in_and_project_wins():
+    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "sate-ikan-jumbo"))
+    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True
+    assert cfg["top_offset"] == -170                                  # set by the project itself
+    assert project.merge({"a": {"x": 1, "y": 2}}, {"a": {"y": 3}}) == {"a": {"x": 1, "y": 3}}
 
 
 def test_example_project_is_valid_json():

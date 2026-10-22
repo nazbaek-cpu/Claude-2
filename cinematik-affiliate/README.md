@@ -50,7 +50,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "speed": {"tempo": 1.12, "max_pause": 0.22, "hold": [[20.6, 28.4]]},   // optional: shrink pauses + gentle tempo-up; "hold" = silent moments to keep (a bite, showing the inside); "order": [[22.5, 27.6], [0, 22.5], [27.6, null]] plays a moment first as the hook
   "top_offset": 0,                    // e.g. -80 lifts kickers/headlines/CTA when the head sits high in frame
   "segments": [                       // what sits at the top of the frame, in seconds
-    {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
+    {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},   // optional "size": 100 for a long accent line
     {"start": 0.5, "end": 4.35, "kicker": "PUFFER SLING BAG", "head": "Ringan."},
     {"start": 7.2, "end": 11.1, "kicker": "BANYAK RUANG", "count": 6, "label": "kompartmen."},
     {"start": 26.0, "end": 30.6, "kicker": "KAPASITI", "count": 4.5, "decimals": 1, "label": "liter."},

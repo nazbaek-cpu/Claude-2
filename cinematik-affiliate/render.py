@@ -198,17 +198,20 @@ def title_layers(cfg, s, t, front):
     if a <= 0: return
     pos = TITLE_POS[cfg.get("title_pos", "bottom")]
     front.append((scrim(a * 0.72, cfg.get("title_pos", "bottom")), W / 2, H / 2))
+    size = tc.get("size", 132)   # smaller for a long accent phrase that must stay on one line
+    if ("tl", size) not in cache: cache[("tl", size)] = TL_FONT if size == 132 else jakarta("ExtraBold", size)
+    fnt, lh = cache[("tl", size)], TITLE_LINE_H * size / 132
     k = text_img(tc["kicker"], TK_FONT, fill=accent, track=6)
     front.append((anim(k, a, 1.0), TITLE_X - 4 + k.width / 2, pos["kick"]))
     for i, line in enumerate(tc["lines"]):
         words = line.split(" ")
         runs = [(w + (" " if j < len(words) - 1 else ""), accent if w in acc_words else (255, 255, 255)) for j, w in enumerate(words)]
-        im = anim(rich_img(runs, TL_FONT), min(a, vis(t, t0 + 0.1 * (i + 1), t1, 0.4, 0.3)), 1.0)
-        front.append((im, TITLE_X - 4 + im.width / 2, pos["line"] + i * TITLE_LINE_H))
+        im = anim(rich_img(runs, fnt), min(a, vis(t, t0 + 0.1 * (i + 1), t1, 0.4, 0.3)), 1.0)
+        front.append((im, TITLE_X - 4 + im.width / 2, pos["line"] + i * lh))
     bw = int(190 * ease_out((t - t0 - 0.45) / 0.45))
     if bw > 3:
         bar = Image.new("RGBA", (bw, 5), accent + (255,))
-        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, pos["line"] + (len(tc["lines"]) - 1) * TITLE_LINE_H + 108))
+        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, pos["line"] + (len(tc["lines"]) - 1) * lh + 108 * size / 132))
 
 def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""

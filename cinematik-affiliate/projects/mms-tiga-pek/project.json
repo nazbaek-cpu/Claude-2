@@ -1,0 +1,122 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "M&M's Crunchy Cookie, tiga pack, Australia, sah halal, combo.",
+ "preset": "food",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -110,
+ "segments": [
+  {
+   "start": 2.3,
+   "end": 10.4,
+   "title": {
+    "lines": [
+     "Satu, dua, tiga.",
+     "Combo murah!"
+    ]
+   }
+  },
+  {
+   "start": 10.5,
+   "end": 15.2,
+   "kicker": "Rare",
+   "head": "Takde di kedai."
+  },
+  {
+   "start": 15.3,
+   "end": 20.6,
+   "kicker": "Dari Australia",
+   "head": "Sah halal."
+  },
+  {
+   "start": 20.7,
+   "end": 27.2,
+   "kicker": "Peminat M&M's",
+   "head": "Wajib try."
+  },
+  {
+   "start": 27.3,
+   "end": null,
+   "cta": true,
+   "head": "Ambil combo.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   2.33,
+   6.82,
+   "Satu, dua dan tiga."
+  ],
+  [
+   6.85,
+   9.08,
+   "Tiga pek harga tengah murah"
+  ],
+  [
+   9.11,
+   10.44,
+   "dekat link."
+  ],
+  [
+   10.47,
+   12.66,
+   "Sebab yang ni tak boleh dapat"
+  ],
+  [
+   12.69,
+   14.02,
+   "dekat mana-mana kedai"
+  ],
+  [
+   14.05,
+   15.3,
+   "dalam Malaysia."
+  ],
+  [
+   15.33,
+   17.78,
+   "Yang ni ada hanya dekat Australia,"
+  ],
+  [
+   17.81,
+   20.64,
+   "dan ada sah halal Australia."
+  ],
+  [
+   20.67,
+   23.94,
+   "So untuk korang yang suka M&M's,"
+  ],
+  [
+   23.97,
+   26.38,
+   "nak try Crunchy Cookie,"
+  ],
+  [
+   26.41,
+   27.3,
+   "sangat sedap."
+  ],
+  [
+   27.33,
+   29.1,
+   "Boleh dapatkan dekat link bawah,"
+  ],
+  [
+   29.13,
+   30.3,
+   "combo."
+  ],
+  [
+   30.33,
+   32.44,
+   "Harga memang sangat berbaloi"
+  ],
+  [
+   32.47,
+   null,
+   "kalau ambil combo lah."
+  ]
+ ]
+}

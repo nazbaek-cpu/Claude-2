@@ -1,0 +1,161 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "M&M's Crunchy Cookie, Australia, sah halal, 3 pack.",
+ "preset": "food",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -160,
+ "segments": [
+  {
+   "start": 0.3,
+   "end": 9.1,
+   "title": {
+    "lines": [
+     "Crunchy Cookie,",
+     "takde di Malaysia!"
+    ]
+   }
+  },
+  {
+   "start": 9.2,
+   "end": 13.5,
+   "kicker": "Jangan risau",
+   "head": "Ada sah halal."
+  },
+  {
+   "start": 13.6,
+   "end": 21.7,
+   "kicker": "Harga",
+   "head": "Tengah murah."
+  },
+  {
+   "start": 21.8,
+   "end": 24.4,
+   "kicker": "Combo",
+   "count": 3,
+   "label": "pek.",
+   "offset": -60
+  },
+  {
+   "start": 24.5,
+   "end": 29.8,
+   "kicker": "Rasa dia",
+   "head": "Rare sangat."
+  },
+  {
+   "start": 29.9,
+   "end": 40.5,
+   "kicker": "Macam biskut",
+   "head": "Salut coklat."
+  },
+  {
+   "start": 40.6,
+   "end": null,
+   "cta": true,
+   "head": "Tak boleh berhenti.",
+   "offset": -60
+  }
+ ],
+ "subs": [
+  [
+   0.27,
+   3.06,
+   "Crunchy Cookie ni takde tau"
+  ],
+  [
+   3.09,
+   5.2,
+   "dekat dalam Malaysia,"
+  ],
+  [
+   5.23,
+   9.16,
+   "dia ada hanya dekat Australia."
+  ],
+  [
+   9.19,
+   10.34,
+   "Crunchy Cookie ni,"
+  ],
+  [
+   10.37,
+   11.48,
+   "korang jangan risau,"
+  ],
+  [
+   11.51,
+   13.58,
+   "yang ni dia ada sah halal tau."
+  ],
+  [
+   13.61,
+   16.96,
+   "Lepas tu yang penting,"
+  ],
+  [
+   16.99,
+   17.94,
+   "kalau korang nak,"
+  ],
+  [
+   17.97,
+   19.54,
+   "harga dia tengah murah,"
+  ],
+  [
+   19.57,
+   21.74,
+   "boleh dapat dekat link di bawah."
+  ],
+  [
+   21.77,
+   23.92,
+   "Malaysia ada sampai 3 pek lagi,"
+  ],
+  [
+   23.95,
+   24.5,
+   "saya dah grab."
+  ],
+  [
+   24.53,
+   28.24,
+   "Memang sangat-sangat rasa dia rare,"
+  ],
+  [
+   28.27,
+   29.8,
+   "lain daripada yang lain"
+  ],
+  [
+   29.83,
+   31.3,
+   "untuk M&M's ni."
+  ],
+  [
+   31.33,
+   33.36,
+   "Yang ni memang rasa macam"
+  ],
+  [
+   33.39,
+   34.88,
+   "kita tengah makan biskut,"
+  ],
+  [
+   34.91,
+   38.12,
+   "tapi coating dengan coklat M&M's."
+  ],
+  [
+   38.15,
+   40.56,
+   "Memang sangat-sangat sedap lah."
+  ],
+  [
+   40.59,
+   null,
+   "Makan dia tak boleh berhenti."
+  ]
+ ]
+}

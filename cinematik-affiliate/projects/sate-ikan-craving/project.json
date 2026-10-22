@@ -1,0 +1,40 @@
+{
+  "source": "input/source.mp4",
+  "whisper_prompt": "Craving sate ikan. Pulau Pangkor, Langkawi, Terengganu, Kelantan. Sira. 500 gram, satu kilo.",
+  "preset": "food",
+  "top_offset": -40,
+  "segments": [
+    {"start": 0.18, "end": 7.99, "title": {"lines": ["Craving sate ikan?", "tak payah jauh!"]}},
+    {"start": 10.52, "end": 14.05, "kicker": "Jumbo", "head": "Size besar."},
+    {"start": 14.08, "end": 19.45, "kicker": "Sekali makan", "head": "Memang nikmat."},
+    {"start": 19.48, "end": 22.35, "kicker": "Rasa dia", "head": "Ikan sangat."},
+    {"start": 22.38, "end": 25.85, "kicker": "Sira dia", "head": "Banyak gila."},
+    {"start": 25.88, "end": 32.08, "kicker": "Lembut", "head": "Mesra gigi."},
+    {"start": 34.08, "end": 42.65, "kicker": "200 gram?", "head": "Tak cukup!"},
+    {"start": 42.70, "end": 44.99, "kicker": "Ambil terus", "count": 500, "label": "gram.", "offset": 0},
+    {"start": 45.02, "end": null, "cta": true, "head": "Terus 1 kilo.", "offset": 0}
+  ],
+  "subs": [
+    [0.18, 1.71, "Kalau craving sate ikan,"],
+    [1.74, 3.21, "tak payah tunggu nak pergi"],
+    [3.24, 5.25, "ke Pulau Pangkor ataupun"],
+    [5.28, 7.99, "Langkawi, Terengganu, Kelantan."],
+    [8.02, 10.49, "Sate ikan ni dia ada tau."],
+    [10.52, 14.05, "Sate ikan ni size dia besar tau."],
+    [14.08, 16.35, "Hampa boleh makan,"],
+    [16.38, 19.45, "memang sangat nikmat lah."],
+    [19.48, 22.35, "Rasa dia sangat-sangat ikan."],
+    [22.38, 25.85, "Sira dia memang sangat banyak,"],
+    [25.88, 28.93, "lembut. Yang ada masalah gigi,"],
+    [28.96, 30.75, "gigi tak kuat ke apa kan,"],
+    [30.78, 32.08, "makan ni tak ada masalah."],
+    [32.10, 33.35, "Korang boleh dapatkan"],
+    [33.38, 34.05, "dekat link bawah."],
+    [34.08, 36.83, "Jangan ambil yang 100-200 gram,"],
+    [36.86, 39.19, "tak cukup. Saya sendiri ambil"],
+    [39.22, 42.65, "200 gram, memang tak cukup."],
+    [42.70, 44.99, "Ambil terus 500 gram"],
+    [45.02, 47.71, "dengan satu kilo, baru puas."],
+    [47.74, null, "Tak payah beli banyak kali dah."]
+  ]
+}

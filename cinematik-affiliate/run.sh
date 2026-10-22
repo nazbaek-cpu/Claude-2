@@ -12,8 +12,9 @@ PRJ="${1%/}"; shift
 PY=python3; [ -x .venv/bin/python ] && PY=.venv/bin/python
 [ -f "$PRJ/project.json" ] || { echo "no project.json in $PRJ" >&2; exit 1; }
 
-prep() {  # pause/tempo pass (only when project.json has "speed"), then the SFX track
+prep() {  # pause/tempo pass (only when project.json has "speed"), studio voice, then the SFX track
   if grep -q '"speed"' "$PRJ/project.json"; then $PY speed.py "$PRJ"; fi
+  if ! grep -q '"studio": false' "$PRJ/project.json"; then $PY voice.py "$PRJ"; fi
   $PY sfx.py "$PRJ"
 }
 case "${1:-}" in

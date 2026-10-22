@@ -302,14 +302,16 @@ def main():
     fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}," + ("hflip," if cfg.get("hflip") else "")  # hflip: un-mirror selfie footage
     dec_cmd = ["ffmpeg", "-v", "error", "-i", src] + (["-t", str(args.limit)] if args.limit else [])
     dec = subprocess.Popen(dec_cmd + ["-vf", fit + GRADE, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
-    voice = "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"
+    studio = os.path.join(args.project, "build", "voice.wav")   # from voice.py: already cleaned and levelled
+    use_studio = cfg.get("voice", {}).get("studio", True) and os.path.exists(studio)
+    voice = "[1:a]aresample=48000" if use_studio else "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"
     if os.path.exists(sfx):
         audio = ["-i", sfx, "-filter_complex", voice + "[v];[2:a]aresample=48000[s];"
                  "[v][s]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89[a]", "-map", "0:v", "-map", "[a]"]
     else:
         audio = ["-filter_complex", voice + "[a]", "-map", "0:v", "-map", "[a]"]
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", rate, "-i", "-", "-i", src] + audio +
+                            "-r", rate, "-i", "-", "-i", studio if use_studio else src] + audio +
                            ["-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-profile:v", "high",
                             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)

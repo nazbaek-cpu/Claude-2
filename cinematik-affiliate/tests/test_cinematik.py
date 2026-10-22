@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import render, sfx, speed, transcribe  # noqa: E402
+import render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -100,6 +100,13 @@ def test_time_map_follows_cuts_and_tempo():
     assert speed.to_output(0.5, keep, 1.0) == 0.5
     assert speed.to_output(1.5, keep, 1.0) == 1.0          # inside a cut -> next kept moment
     assert speed.to_output(2.5, keep, 2.0) == 0.75
+
+
+def test_studio_chain_is_a_valid_filtergraph():
+    import subprocess
+    fc = f"sine=f=220:d=1,{voice.CHAIN}"
+    r = subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", fc, "-f", "null", "-"], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
 
 
 def test_example_project_is_valid_json():

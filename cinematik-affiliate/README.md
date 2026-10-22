@@ -15,6 +15,7 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | **CTA** | Yellow `Beli di beg kuning` pill with bouncing ⌄⌄ chevrons. |
 | **Subtitles** | Inter SemiBold with a soft shadow, cut per phrase, no animation. |
 | **Pace** | Optional `speed`: long pauses shortened to 0.22 s and a 1.12× pitch-preserving tempo, so slow talking feels brisk but natural. Project times stay in source seconds. |
+| **Voice** | "Expensive mic" chain (on by default): DeepFilterNet AI denoise, phrase-by-phrase auto-levelling so the voice never fades in and out, warm close-mic EQ, de-esser, two gentle compressors, light saturation, −14 LUFS. `"voice": {"studio": false}` turns it off. |
 | **Audio** | Voice at −14 LUFS. SFX synthesized from scratch: a whoosh on each headline, a pop per pill, a tick per count step and a ding on each CTA. |
 
 All text animates in and out with blur + fade (0.32 s in, 0.25 s out).
@@ -75,6 +76,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `render.py` | grade, beauty, zoom cuts, text layers, person mask, encode + audio mix |
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
 | `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
+| `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |

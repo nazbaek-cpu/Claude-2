@@ -1,0 +1,160 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Lampu LED dekoratif, hiasan dinding. Remote control, dim, timer 10 minit 30 minit, magnetic.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -130,
+ "segments": [
+  {
+   "start": 0.8,
+   "end": 10.2,
+   "title": {
+    "kicker": "LAMPU LED DEKORATIF",
+    "lines": [
+     "Dinding kosong?",
+     "Terus estetik."
+    ],
+    "accent": [
+     "estetik."
+    ],
+    "size": 110
+   }
+  },
+  {
+   "start": 10.3,
+   "end": 20.4,
+   "kicker": "SIAP DENGAN",
+   "head": "Remote control.",
+   "pills": [
+    [
+     "On / Off",
+     19.5
+    ]
+   ]
+  },
+  {
+   "start": 20.5,
+   "end": 25.8,
+   "kicker": "DIM & WARNA",
+   "head": "Ikut mood."
+  },
+  {
+   "start": 25.9,
+   "end": 30.2,
+   "kicker": "TIMER",
+   "head": "10 / 30 minit."
+  },
+  {
+   "start": 30.3,
+   "end": 35.0,
+   "kicker": "UNTUK DEKOR",
+   "head": "Ambil yang ni."
+  },
+  {
+   "start": 35.1,
+   "end": 39.8,
+   "kicker": "MAGNETIK",
+   "head": "Lekat di dinding."
+  },
+  {
+   "start": 39.9,
+   "end": null,
+   "cta": true,
+   "head": "Jom dekor.",
+   "offset": -30
+  }
+ ],
+ "subs": [
+  [
+   0.85,
+   2.86,
+   "Lampu yang jenis macam ni,"
+  ],
+  [
+   2.89,
+   4.1,
+   "kalau kita nak buat sebagai"
+  ],
+  [
+   4.13,
+   6.68,
+   "hiasan dinding ataupun"
+  ],
+  [
+   6.71,
+   9.2,
+   "dekoratif untuk rumah,"
+  ],
+  [
+   9.23,
+   10.24,
+   "memang sangat sesuai."
+  ],
+  [
+   10.27,
+   11.76,
+   "Dia datang sekali dengan"
+  ],
+  [
+   11.79,
+   13.54,
+   "remote control."
+  ],
+  [
+   13.57,
+   16.26,
+   "Jadi kita boleh, tengok ni,"
+  ],
+  [
+   16.29,
+   20.44,
+   "control dia bagi on off."
+  ],
+  [
+   20.47,
+   23.72,
+   "Lepas tu lampu ni boleh dim,"
+  ],
+  [
+   23.75,
+   25.9,
+   "tukar-tukar colour."
+  ],
+  [
+   25.93,
+   28.56,
+   "Lepas tu boleh set 10 minit"
+  ],
+  [
+   28.59,
+   30.26,
+   "dan 30 minit untuk on."
+  ],
+  [
+   30.29,
+   32.28,
+   "Korang kalau nak cari"
+  ],
+  [
+   32.31,
+   35.08,
+   "yang jenis dekoratif, ambil yang ni."
+  ],
+  [
+   35.11,
+   37.36,
+   "Yang ni datang dengan magnetic,"
+  ],
+  [
+   37.39,
+   39.84,
+   "boleh lekat dekat dinding ke apa."
+  ],
+  [
+   39.87,
+   null,
+   "Lepas tu kita boleh sangkut je."
+  ]
+ ]
+}

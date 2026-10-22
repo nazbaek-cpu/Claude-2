@@ -1,0 +1,195 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Buku melukis karakter. 30 topik, 40 bengkel melukis komik.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -90,
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 8.1,
+   "title": {
+    "kicker": "BUKU MELUKIS KARAKTER",
+    "lines": [
+     "Minat melukis,",
+     "masa depan cerah."
+    ],
+    "accent": [
+     "masa",
+     "depan",
+     "cerah."
+    ],
+    "size": 100
+   }
+  },
+  {
+   "start": 8.2,
+   "end": 20.3,
+   "kicker": "DENGAN SOKONGAN KITA",
+   "head": "Potensi besar."
+  },
+  {
+   "start": 20.4,
+   "end": 29.6,
+   "kicker": "BUKAN PAKSA",
+   "head": "Support minat dia."
+  },
+  {
+   "start": 29.7,
+   "end": 44.5,
+   "kicker": "DALAM BUKU NI",
+   "count": 30,
+   "label": "topik melukis.",
+   "offset": -30
+  },
+  {
+   "start": 44.6,
+   "end": 54.8,
+   "kicker": "DIKUMPUL DARIPADA",
+   "count": 40,
+   "label": "bengkel komik.",
+   "offset": -30
+  },
+  {
+   "start": 54.9,
+   "end": 62.4,
+   "kicker": "KURANG GADGET",
+   "head": "Lebih kreatif."
+  },
+  {
+   "start": 62.5,
+   "end": null,
+   "cta": true,
+   "head": "Jom mula.",
+   "offset": -30
+  }
+ ],
+ "subs": [
+  [
+   0.43,
+   3.26,
+   "Jangan sekali-sekali anggap"
+  ],
+  [
+   3.29,
+   5.56,
+   "anak yang minat lukis ni"
+  ],
+  [
+   5.59,
+   8.22,
+   "tak ada masa depan."
+  ],
+  [
+   8.25,
+   10.34,
+   "Tapi dengan effort kita,"
+  ],
+  [
+   10.37,
+   12.08,
+   "kita bagi sokongan kat dia"
+  ],
+  [
+   12.11,
+   13.96,
+   "supaya dia boleh besarkan"
+  ],
+  [
+   13.99,
+   17.5,
+   "potensi melukis itu."
+  ],
+  [
+   17.53,
+   19.18,
+   "Minat dia melukis itu"
+  ],
+  [
+   19.21,
+   20.34,
+   "boleh pergi jauh."
+  ],
+  [
+   20.37,
+   23.46,
+   "So, daripada kita nak bagi dia"
+  ],
+  [
+   23.49,
+   25.18,
+   "belajar benda yang dia tak suka,"
+  ],
+  [
+   25.21,
+   27.18,
+   "kita support dia dengan"
+  ],
+  [
+   27.21,
+   29.66,
+   "buku melukis karakter ni."
+  ],
+  [
+   29.69,
+   32.76,
+   "Daripada buku ni,"
+  ],
+  [
+   32.79,
+   35.74,
+   "anak-anak boleh dapat 30 topik,"
+  ],
+  [
+   35.77,
+   39.94,
+   "belajar cara nak melukis muka,"
+  ],
+  [
+   39.97,
+   42.26,
+   "cara nak melukis karakter"
+  ],
+  [
+   42.29,
+   44.54,
+   "yang dia nak."
+  ],
+  [
+   44.57,
+   48.42,
+   "Buku ni sebenarnya dikumpul"
+  ],
+  [
+   48.45,
+   51.42,
+   "daripada 40 bengkel melukis komik"
+  ],
+  [
+   51.45,
+   54.86,
+   "yang dijalankan."
+  ],
+  [
+   54.89,
+   58.06,
+   "So ibu ayah, tak nak anak-anak"
+  ],
+  [
+   58.09,
+   59.76,
+   "leka main gadget,"
+  ],
+  [
+   59.79,
+   62.46,
+   "ataupun nak besarkan potensi dia,"
+  ],
+  [
+   62.49,
+   null,
+   "boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

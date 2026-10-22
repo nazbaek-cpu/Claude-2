@@ -59,10 +59,10 @@ def events(cfg):
         for _, ts in s.get("pills", []): ev.append((ts, "pop"))
         if s.get("cta"): ev.append((s["start"] + 0.05, "ding"))
         if "count" in s:
-            last = 0
+            last, last_t = 0, -1.0
             for ms in range(2000):
                 t = s["start"] + ms / 1000; v = count_value(s, t)
-                if v != last: ev.append((t, "tick")); last = v
+                if v != last and t - last_t >= 0.07: ev.append((t, "tick")); last, last_t = v, t   # decimals: no machine-gun
     return sorted(ev)
 
 def main():

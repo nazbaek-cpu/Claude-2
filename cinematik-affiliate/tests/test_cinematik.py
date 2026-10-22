@@ -30,6 +30,17 @@ def test_count_up_reaches_target(cfg):
     assert render.count_value(seg, seg["start"] + 2) == seg["count"]
 
 
+def test_count_up_with_decimals():
+    seg = {"start": 0.0, "count": 4.5, "decimals": 1}
+    assert render.count_text(seg, 0.0) == "0.0" and render.count_text(seg, 3.0) == "4.5"
+
+
+def test_headline_can_sit_in_front(cfg):
+    seg = dict(cfg["segments"][0], behind=False)
+    back, front = render.layers(dict(cfg, segments=[seg], subs=[]), 2.0)
+    assert not back and len(front) == 2
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]
@@ -54,6 +65,11 @@ def test_phrases_split_on_punctuation_and_pauses():
     out = transcribe.phrases([w("Ringan,", 0, 0.5), w("banyak", 0.6, 0.9), w("ruang.", 0.9, 1.2), w("Lepas", 2.0, 2.3)])
     assert [p[2] for p in out] == ["Ringan,", "banyak ruang.", "Lepas"]
     assert out[-1][1] is None
+
+
+def test_phrases_split_on_capitalised_sentence_start():
+    out = transcribe.phrases([w("dekat", 0, 0.3), w("dalam", 0.3, 0.6), w("Sebab", 0.6, 0.9), w("dia", 0.9, 1.1)])
+    assert [p[2] for p in out] == ["dekat dalam", "Sebab dia"]
 
 
 def test_example_project_is_valid_json():

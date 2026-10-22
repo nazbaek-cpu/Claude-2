@@ -43,6 +43,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "segments": [                       // what sits at the top of the frame, in seconds
     {"start": 0.5, "end": 4.35, "kicker": "PUFFER SLING BAG", "head": "Ringan."},
     {"start": 7.2, "end": 11.1, "kicker": "BANYAK RUANG", "count": 6, "label": "kompartmen."},
+    {"start": 26.0, "end": 30.6, "kicker": "KAPASITI", "count": 4.5, "decimals": 1, "label": "liter."},
+    {"start": 0.3, "end": 2.55, "kicker": "UNTUK SEMUA", "head": "Lelaki. Wanita.", "behind": false},  // in front: subject off-centre or leaning in
     {"start": 11.15, "end": 16.3, "kicker": "KIRI & KANAN", "head": "Poket tambahan.",
      "pills": [["Kiri", 12.33], ["Kanan", 12.97]]},                  // pill text, appear time
     {"start": 24.4, "end": 26.4, "cta": true},
@@ -67,3 +69,4 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

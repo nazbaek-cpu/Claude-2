@@ -111,7 +111,10 @@ def vis(t, t0, t1, tin=0.32, tout=0.25):
     return ease_out(min((t - t0) / tin, (t1 - t) / tout))
 
 def count_value(seg, t):
-    return round(seg["count"] * ease_out((t - seg["start"] - 0.1) / 1.2))
+    return round(seg["count"] * ease_out((t - seg["start"] - 0.1) / 1.2), seg.get("decimals", 0) or None)
+
+def count_text(seg, t):
+    return f'{count_value(seg, t):.{seg.get("decimals", 0)}f}'
 
 def anim(img, a, scale_from=1.04):
     """blur-in / blur-out with fade"""
@@ -147,10 +150,10 @@ def layers(cfg, t):
         if s.get("kicker"):
             front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, KICK_Y if "count" not in s else 245))
         if s.get("head"):
-            back.append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y))
+            (back if s.get("behind", True) else front).append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y))
         if "count" in s:
             p = ease_out((t - t0 - 0.1) / 1.2)
-            back.append((anim(text_img(str(count_value(s, t)), N_FONT), a), 540, 385))
+            back.append((anim(text_img(count_text(s, t), N_FONT), a), 540, 385))
             la = a * ease_out((t - t0 - 0.6) / 0.35)
             if la > 0 and s.get("label"):
                 front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528))

@@ -23,3 +23,9 @@ sticker-reel/projects/*/build/
 sticker-reel/projects/*/out/
 *.mp3
 *.m4a
+# per-project footage and generated files never go to the repo
+cinematik-affiliate/.venv/
+cinematik-affiliate/models/
+cinematik-affiliate/projects/*/input/
+cinematik-affiliate/projects/*/build/
+cinematik-affiliate/projects/*/out/

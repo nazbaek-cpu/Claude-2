@@ -55,7 +55,7 @@ def events(cfg):
     """[(time, kind)] derived from the segments"""
     ev = []
     for s in cfg["segments"]:
-        if s.get("head") or "count" in s: ev.append((s["start"] - 0.22, "whoosh"))   # peaks as the text sharpens
+        if s.get("head") or "count" in s or "title" in s: ev.append((s["start"] - 0.22, "whoosh"))   # peaks as the text sharpens
         for _, ts in s.get("pills", []): ev.append((ts, "pop"))
         if s.get("cta"): ev.append((s["start"] + 0.05, "ding"))
         if "count" in s:

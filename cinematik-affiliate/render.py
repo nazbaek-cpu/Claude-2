@@ -23,6 +23,14 @@ C_FONT = font("Inter-Bold.otf", 38)            # CTA pill
 YELLOW, GREEN = (255, 214, 10), (48, 209, 88)
 KICK_Y, HEAD_Y, PILL_Y, SUB_Y, CTA_Y = 425, 525, 1165, 1300, 335
 
+# opening title card: left-aligned editorial block, Plus Jakarta Sans, one accent colour
+def jakarta(weight, size):
+    f = ImageFont.truetype(os.path.join(HERE, "fonts", "PlusJakartaSans.ttf"), size); f.set_variation_by_name(weight); return f
+TK_FONT = jakarta("Bold", 30)
+TL_FONT = jakarta("ExtraBold", 132)
+GOLD = (233, 185, 73)
+TITLE_X, TITLE_KICK_Y, TITLE_LINE_Y, TITLE_LINE_H, TITLE_SUB_Y = 70, 1000, 1100, 132, 1480
+
 GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "eq=saturation=0.86:contrast=1.06:gamma=0.98,"
          "curves=master='0/0.035 0.25/0.22 0.75/0.75 1/0.94',"
@@ -140,10 +148,57 @@ def blend(frame, img, cx, cy):
     reg = frame[y0c:y1c, x0c:x1c]
     reg[:] = reg * (1 - al) + arr[..., :3] * al
 
+def rich_img(runs, fnt):
+    """one line of (text, rgb) runs, e.g. white words + an accent word"""
+    key = ("rich", tuple(runs), id(fnt))
+    if key in cache: return cache[key]
+    asc, desc = fnt.getmetrics(); pad = 4
+    w = int(sum(fnt.getlength(txt) for txt, _ in runs)) + 2
+    img = Image.new("RGBA", (w + pad * 2, asc + desc + pad * 2), (255, 255, 255, 0))
+    x = pad
+    for txt, rgb in runs:
+        m = Image.new("L", img.size, 0); ImageDraw.Draw(m).text((x, pad), txt, font=fnt, fill=255)
+        layer = Image.new("RGBA", img.size, tuple(rgb) + (0,)); layer.putalpha(m)
+        img = Image.alpha_composite(img, layer); x += fnt.getlength(txt)
+    cache[key] = img
+    return img
+
+def scrim(a):
+    """soft dark gradient over the lower-left so the title reads on any background"""
+    if "scrim" not in cache:
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        v = np.clip((yy - 760) / 420, 0, 1) * np.clip(1 - (yy - 1560) / 360, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
+        cache["scrim"] = Image.fromarray((np.dstack([np.zeros_like(v)] * 3 + [v * 255])).astype(np.uint8))
+    img = cache["scrim"]
+    return img if a >= 0.999 else Image.merge("RGBA", (*img.split()[:3], img.getchannel("A").point(lambda v: int(v * a))))
+
+def title_layers(cfg, s, t, front):
+    t0, t1 = s["start"], s["end"]
+    tc = s["title"]; accent = tuple(cfg.get("accent_rgb", GOLD)); acc_words = set(tc.get("accent", []))
+    a = vis(t, t0, t1, 0.4, 0.3)
+    if a <= 0: return
+    front.append((scrim(a * 0.72), W / 2, H / 2))
+    k = text_img(tc["kicker"], TK_FONT, fill=accent, track=6)
+    front.append((anim(k, a, 1.0), TITLE_X - 4 + k.width / 2, TITLE_KICK_Y))
+    for i, line in enumerate(tc["lines"]):
+        words = line.split(" ")
+        runs = [(w + (" " if j < len(words) - 1 else ""), accent if w in acc_words else (255, 255, 255)) for j, w in enumerate(words)]
+        im = anim(rich_img(runs, TL_FONT), min(a, vis(t, t0 + 0.1 * (i + 1), t1, 0.4, 0.3)), 1.0)
+        front.append((im, TITLE_X - 4 + im.width / 2, TITLE_LINE_Y + i * TITLE_LINE_H))
+    bw = int(190 * ease_out((t - t0 - 0.45) / 0.45))
+    if bw > 3:
+        bar = Image.new("RGBA", (bw, 5), accent + (255,))
+        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, TITLE_LINE_Y + (len(tc["lines"]) - 1) * TITLE_LINE_H + 108))
+
 def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""
     back, front = [], []
+    sub_y = SUB_Y
     for s in cfg["segments"]:
+        if "title" in s:
+            title_layers(cfg, s, t, front)
+            if s["start"] <= t <= s["end"]: sub_y = TITLE_SUB_Y
+            continue
         t0, t1 = s["start"], s["end"]
         a = vis(t, t0, t1)
         if a <= 0: continue
@@ -178,7 +233,7 @@ def layers(cfg, t):
                 front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + 72 + bob))
     for s0, s1, txt in cfg["subs"]:
         if s0 <= t < s1:
-            front.append((text_img(txt, S_FONT, shadow=True), 540, SUB_Y))
+            front.append((text_img(txt, S_FONT, shadow=True), 540, sub_y))
     return back, front
 
 

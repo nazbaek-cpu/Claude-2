@@ -41,6 +41,13 @@ def test_headline_can_sit_in_front(cfg):
     assert not back and len(front) == 2
 
 
+def test_title_card_is_in_front_and_lowers_subtitles(cfg):
+    seg = {"start": 0.0, "end": 3.0, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}}
+    back, front = render.layers(dict(cfg, segments=[seg], subs=[[0.0, 3.0, "Hai"]]), 2.0)
+    assert not back and len(front) == 6   # scrim, kicker, 2 lines, underline, subtitle
+    assert front[-1][2] == render.TITLE_SUB_Y
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]

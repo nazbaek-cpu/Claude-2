@@ -7,6 +7,7 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | **Grade** | Warm, muted, highlights held back, lifted blacks, vignette. Top of the frame darkened for headlines, bottom slightly darkened for subtitles. |
 | **Beauty** | Even, smooth skin that keeps about 30% of pore texture. Soft rosy-nude lipstick. Brows untouched by default. Uses MediaPipe face landmarks, so eyes, hijab and background are left alone. |
 | **Cuts** | Hard-cut punch-in (1.0 ↔ 1.12) on every subtitle phrase, so a single take feels multi-cam. |
+| **Title card** | Opening block, left-aligned over a soft dark scrim: tracked accent kicker, two big Plus Jakarta Sans ExtraBold lines with accent-coloured words, short accent underline. |
 | **Kicker** | `PUFFER SLING BAG`: small caps, wide tracking (Inter Medium). |
 | **Headline** | `Ringan.`: short, ends with a full stop (Inter Display Bold). Placed *behind* the person via a selfie-segmentation mask. |
 | **Count-up** | Big number (Inter ExtraBold) that eases up to the target, with a growing green bar and a label. |
@@ -40,7 +41,9 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "sfx_gain_db": 0,                   // +3 for louder SFX, -100 to mute
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
              "lip_rgb": [186, 92, 102], "lip_amount": 0.4, "brows": 0.0},   // brows 0.2 = soft fill
+  "accent_rgb": [233, 185, 73],       // title accent (gold)
   "segments": [                       // what sits at the top of the frame, in seconds
+    {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
     {"start": 0.5, "end": 4.35, "kicker": "PUFFER SLING BAG", "head": "Ringan."},
     {"start": 7.2, "end": 11.1, "kicker": "BANYAK RUANG", "count": 6, "label": "kompartmen."},
     {"start": 26.0, "end": 30.6, "kicker": "KAPASITI", "count": 4.5, "decimals": 1, "label": "liter."},

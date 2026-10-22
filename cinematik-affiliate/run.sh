@@ -12,11 +12,15 @@ PRJ="${1%/}"; shift
 PY=python3; [ -x .venv/bin/python ] && PY=.venv/bin/python
 [ -f "$PRJ/project.json" ] || { echo "no project.json in $PRJ" >&2; exit 1; }
 
+prep() {  # pause/tempo pass (only when project.json has "speed"), then the SFX track
+  if grep -q '"speed"' "$PRJ/project.json"; then $PY speed.py "$PRJ"; fi
+  $PY sfx.py "$PRJ"
+}
 case "${1:-}" in
   --transcribe) $PY transcribe.py "$PRJ"; exit 0 ;;
-  --limit) $PY sfx.py "$PRJ"; $PY render.py "$PRJ" --limit "$2" --out "$PRJ/out/preview.mp4"; exit 0 ;;
+  --limit) prep; $PY render.py "$PRJ" --limit "$2" --out "$PRJ/out/preview.mp4"; exit 0 ;;
   "") ;;
   *) echo "unknown option: $1" >&2; exit 2 ;;
 esac
-$PY sfx.py "$PRJ"
+prep
 $PY render.py "$PRJ"

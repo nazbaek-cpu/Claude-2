@@ -1,7 +1,9 @@
 {
   "source": "input/source.mp4",
   "whisper_prompt": "Buku Bestnya! Melukis Karakter oleh Irfan Foner. Mak Ayah.",
-  "cta": "Beli di beg kuning",
+  "cta": "Dapatkan di link bawah",
+  "hflip": true,
+  "speed": {"tempo": 1.12, "max_pause": 0.22},
   "accent_rgb": [233, 185, 73],
   "zoom": 1.12,
   "top_offset": -80,

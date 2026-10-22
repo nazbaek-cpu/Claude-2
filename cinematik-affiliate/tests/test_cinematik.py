@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import render, sfx, transcribe  # noqa: E402
+import render, sfx, speed, transcribe  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -85,6 +85,21 @@ def test_phrases_split_on_punctuation_and_pauses():
 def test_phrases_split_on_capitalised_sentence_start():
     out = transcribe.phrases([w("dekat", 0, 0.3), w("dalam", 0.3, 0.6), w("Sebab", 0.6, 0.9), w("dia", 0.9, 1.1)])
     assert [p[2] for p in out] == ["dekat dalam", "Sebab dia"]
+
+
+def test_speed_shrinks_pauses_without_cutting_words():
+    words = [w("satu", 0.5, 1.0), w("dua", 2.0, 2.4), w("tiga", 2.5, 3.0)]
+    keep = speed.keep_intervals(words, [(1.0, 2.0), (1.4, 1.6)], 10.0, 0.2)
+    assert keep == [(0.35, 1.1), (1.9, 3.8)]               # 1 s pause -> 0.2 s, ends 0.8 s after the last word
+    keep = speed.keep_intervals(words, [(0.6, 1.5)], 10.0, 0.2)   # "silence" over the middle of a word: left alone
+    assert keep[0][0] == 0.35 and (0.6, 1.5) not in keep
+
+
+def test_time_map_follows_cuts_and_tempo():
+    keep = [(0.0, 1.0), (2.0, 3.0)]
+    assert speed.to_output(0.5, keep, 1.0) == 0.5
+    assert speed.to_output(1.5, keep, 1.0) == 1.0          # inside a cut -> next kept moment
+    assert speed.to_output(2.5, keep, 2.0) == 0.75
 
 
 def test_example_project_is_valid_json():

@@ -50,9 +50,19 @@ def probe(path):
 
 
 def load(prj):
-    """project.json with end=null resolved to the video length"""
+    """project.json with end=null resolved to the video length; with "speed", times move onto build/fast.mp4"""
     cfg = json.load(open(os.path.join(prj, "project.json")))
     cfg["source"] = os.path.join(prj, cfg["source"])
+    tm = os.path.join(prj, "build", "timemap.json")
+    if cfg.get("speed") and os.path.exists(tm):
+        from speed import to_output
+        m = json.load(open(tm))
+        def f(x): return x if x is None else round(to_output(x, m["keep"], m["tempo"]), 3)
+        cfg["source"] = os.path.join(prj, "build", "fast.mp4")
+        for s in cfg["segments"]:
+            s["start"], s["end"] = f(s["start"]), f(s.get("end"))
+            if "pills" in s: s["pills"] = [[txt, f(ts)] for txt, ts in s["pills"]]
+        cfg["subs"] = [[f(a), f(b), txt] for a, b, txt in cfg["subs"]]
     dur = probe(cfg["source"])[4] if os.path.exists(cfg["source"]) else 9999.0
     for s in cfg["segments"]:
         if s.get("end") is None: s["end"] = dur + 1
@@ -289,7 +299,7 @@ def main():
         running_mode=vision.RunningMode.VIDEO))
 
     # fill 1080x1920 whatever the source size
-    fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+    fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}," + ("hflip," if cfg.get("hflip") else "")  # hflip: un-mirror selfie footage
     dec_cmd = ["ffmpeg", "-v", "error", "-i", src] + (["-t", str(args.limit)] if args.limit else [])
     dec = subprocess.Popen(dec_cmd + ["-vf", fit + GRADE, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
     voice = "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"

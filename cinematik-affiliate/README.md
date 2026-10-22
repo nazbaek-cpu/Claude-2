@@ -46,7 +46,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
   "hflip": false,                     // true un-mirrors selfie footage (text on the product reads the right way)
-  "speed": {"tempo": 1.12, "max_pause": 0.22},   // optional: shrink pauses + gentle pitch-preserving tempo-up
+  "speed": {"tempo": 1.12, "max_pause": 0.22, "hold": [[20.6, 28.4]]},   // optional: shrink pauses + gentle tempo-up; "hold" = silent moments to keep (a bite, showing the inside)
   "top_offset": 0,                    // e.g. -80 lifts kickers/headlines/CTA when the head sits high in frame
   "segments": [                       // what sits at the top of the frame, in seconds
     {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
@@ -80,5 +80,6 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

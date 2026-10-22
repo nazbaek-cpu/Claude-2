@@ -95,6 +95,12 @@ def test_speed_shrinks_pauses_without_cutting_words():
     assert keep[0][0] == 0.35 and (0.6, 1.5) not in keep
 
 
+def test_speed_hold_keeps_silent_moments():
+    words = [w("satu", 0.5, 1.0), w("dua", 4.0, 4.4)]
+    assert len(speed.keep_intervals(words, [], 10.0, 0.2)) == 2
+    assert speed.keep_intervals(words, [], 10.0, 0.2, hold=[[1.5, 3.0]]) == [(0.35, 5.2)]
+
+
 def test_time_map_follows_cuts_and_tempo():
     keep = [(0.0, 1.0), (2.0, 3.0)]
     assert speed.to_output(0.5, keep, 1.0) == 0.5

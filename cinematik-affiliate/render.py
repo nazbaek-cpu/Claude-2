@@ -29,7 +29,9 @@ def jakarta(weight, size):
 TK_FONT = jakarta("Bold", 30)
 TL_FONT = jakarta("ExtraBold", 132)
 GOLD = (233, 185, 73)
-TITLE_X, TITLE_KICK_Y, TITLE_LINE_Y, TITLE_LINE_H, TITLE_SUB_Y = 70, 1000, 1100, 132, 1480
+TITLE_X, TITLE_LINE_H = 70, 132
+# "bottom": lower-left like a product cover (subtitles drop below it); "top": above the head when the face is centred
+TITLE_POS = {"bottom": dict(kick=1000, line=1100, sub=1480), "top": dict(kick=250, line=350, sub=SUB_Y)}
 
 GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "eq=saturation=0.86:contrast=1.06:gamma=0.98,"
@@ -163,13 +165,17 @@ def rich_img(runs, fnt):
     cache[key] = img
     return img
 
-def scrim(a):
-    """soft dark gradient over the lower-left so the title reads on any background"""
-    if "scrim" not in cache:
+def scrim(a, pos="bottom"):
+    """soft dark gradient (lower-left, or from the top) so the title reads on any background"""
+    key = ("scrim", pos)
+    if key not in cache:
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-        v = np.clip((yy - 760) / 420, 0, 1) * np.clip(1 - (yy - 1560) / 360, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
-        cache["scrim"] = Image.fromarray((np.dstack([np.zeros_like(v)] * 3 + [v * 255])).astype(np.uint8))
-    img = cache["scrim"]
+        if pos == "top":
+            v = np.clip(1 - (yy - 420) / 420, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
+        else:
+            v = np.clip((yy - 760) / 420, 0, 1) * np.clip(1 - (yy - 1560) / 360, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
+        cache[key] = Image.fromarray((np.dstack([np.zeros_like(v)] * 3 + [v * 255])).astype(np.uint8))
+    img = cache[key]
     return img if a >= 0.999 else Image.merge("RGBA", (*img.split()[:3], img.getchannel("A").point(lambda v: int(v * a))))
 
 def title_layers(cfg, s, t, front):
@@ -177,46 +183,48 @@ def title_layers(cfg, s, t, front):
     tc = s["title"]; accent = tuple(cfg.get("accent_rgb", GOLD)); acc_words = set(tc.get("accent", []))
     a = vis(t, t0, t1, 0.4, 0.3)
     if a <= 0: return
-    front.append((scrim(a * 0.72), W / 2, H / 2))
+    pos = TITLE_POS[cfg.get("title_pos", "bottom")]
+    front.append((scrim(a * 0.72, cfg.get("title_pos", "bottom")), W / 2, H / 2))
     k = text_img(tc["kicker"], TK_FONT, fill=accent, track=6)
-    front.append((anim(k, a, 1.0), TITLE_X - 4 + k.width / 2, TITLE_KICK_Y))
+    front.append((anim(k, a, 1.0), TITLE_X - 4 + k.width / 2, pos["kick"]))
     for i, line in enumerate(tc["lines"]):
         words = line.split(" ")
         runs = [(w + (" " if j < len(words) - 1 else ""), accent if w in acc_words else (255, 255, 255)) for j, w in enumerate(words)]
         im = anim(rich_img(runs, TL_FONT), min(a, vis(t, t0 + 0.1 * (i + 1), t1, 0.4, 0.3)), 1.0)
-        front.append((im, TITLE_X - 4 + im.width / 2, TITLE_LINE_Y + i * TITLE_LINE_H))
+        front.append((im, TITLE_X - 4 + im.width / 2, pos["line"] + i * TITLE_LINE_H))
     bw = int(190 * ease_out((t - t0 - 0.45) / 0.45))
     if bw > 3:
         bar = Image.new("RGBA", (bw, 5), accent + (255,))
-        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, TITLE_LINE_Y + (len(tc["lines"]) - 1) * TITLE_LINE_H + 108))
+        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, pos["line"] + (len(tc["lines"]) - 1) * TITLE_LINE_H + 108))
 
 def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""
     back, front = [], []
     sub_y = SUB_Y
+    oy = cfg.get("top_offset", 0)   # negative lifts the top text for footage where the head sits high
     for s in cfg["segments"]:
         if "title" in s:
             title_layers(cfg, s, t, front)
-            if s["start"] <= t <= s["end"]: sub_y = TITLE_SUB_Y
+            if s["start"] <= t <= s["end"]: sub_y = TITLE_POS[cfg.get("title_pos", "bottom")]["sub"]
             continue
         t0, t1 = s["start"], s["end"]
         a = vis(t, t0, t1)
         if a <= 0: continue
         if s.get("kicker"):
-            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, KICK_Y if "count" not in s else 245))
+            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + oy))
         if s.get("head"):
-            (back if s.get("behind", True) else front).append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y))
+            (back if s.get("behind", True) else front).append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y + oy))
         if "count" in s:
             p = ease_out((t - t0 - 0.1) / 1.2)
-            back.append((anim(text_img(count_text(s, t), N_FONT), a), 540, 385))
+            back.append((anim(text_img(count_text(s, t), N_FONT), a), 540, 385 + oy))
             la = a * ease_out((t - t0 - 0.6) / 0.35)
             if la > 0 and s.get("label"):
-                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528))
+                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528 + oy))
             bw = int(240 * p)
             if bw > 4:
                 bar = Image.new("RGBA", (bw, 8), GREEN + (0,)); bm = Image.new("L", (bw, 8), 0)
                 ImageDraw.Draw(bm).rounded_rectangle((0, 0, bw - 1, 7), radius=4, fill=255); bar.putalpha(bm)
-                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572))
+                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572 + oy))
         if s.get("pills"):
             imgs = [pill(txt, P_FONT, (255, 255, 255), (20, 20, 20)) for txt, _ in s["pills"]]
             gap = 16; total = sum(i.width for i in imgs) + gap * (len(imgs) - 1)
@@ -226,11 +234,11 @@ def layers(cfg, t):
                 if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, PILL_Y))
                 x += im.width + gap
         if s.get("cta"):
-            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y))
+            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y + oy))
             ca = min(a, vis(t, t0 + 0.3, t1, 0.25))
             if ca > 0:
                 bob = 7 * math.sin(2 * math.pi * 1.4 * (t - t0))
-                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + 72 + bob))
+                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + oy + 72 + bob))
     for s0, s1, txt in cfg["subs"]:
         if s0 <= t < s1:
             front.append((text_img(txt, S_FONT, shadow=True), 540, sub_y))

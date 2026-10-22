@@ -45,7 +45,15 @@ def test_title_card_is_in_front_and_lowers_subtitles(cfg):
     seg = {"start": 0.0, "end": 3.0, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}}
     back, front = render.layers(dict(cfg, segments=[seg], subs=[[0.0, 3.0, "Hai"]]), 2.0)
     assert not back and len(front) == 6   # scrim, kicker, 2 lines, underline, subtitle
-    assert front[-1][2] == render.TITLE_SUB_Y
+    assert front[-1][2] == render.TITLE_POS["bottom"]["sub"]
+
+
+def test_top_title_and_top_offset(cfg):
+    seg = {"start": 0.0, "end": 3.0, "title": {"kicker": "K", "lines": ["A"], "accent": []}}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[[0.0, 3.0, "Hai"]], title_pos="top"), 2.0)
+    assert front[-1][2] == render.SUB_Y and front[1][2] == render.TITLE_POS["top"]["kick"]
+    back, _ = render.layers(dict(cfg, top_offset=-80), 2.0)
+    assert back[0][2] == render.HEAD_Y - 80
 
 
 def test_zoom_alternates_per_phrase(cfg):

@@ -42,6 +42,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
              "lip_rgb": [186, 92, 102], "lip_amount": 0.4, "brows": 0.0},   // brows 0.2 = soft fill
   "accent_rgb": [233, 185, 73],       // title accent (gold)
+  "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
+  "top_offset": 0,                    // e.g. -80 lifts kickers/headlines/CTA when the head sits high in frame
   "segments": [                       // what sits at the top of the frame, in seconds
     {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
     {"start": 0.5, "end": 4.35, "kicker": "PUFFER SLING BAG", "head": "Ringan."},
@@ -72,4 +74,5 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

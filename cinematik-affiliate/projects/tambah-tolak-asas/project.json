@@ -1,0 +1,209 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Matematik 2 & 3 digit, 1640 soalan, 15 minit, darab dan bahagi.",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -130,
+ "speed": {
+  "order": [
+   [
+    0,
+    26.45
+   ],
+   [
+    36.0,
+    null
+   ]
+  ]
+ },
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 4.7,
+   "title": {
+    "kicker": "MATEMATIK · 2 & 3 DIGIT",
+    "lines": [
+     "Tak kuasai asas?",
+     "Ibu ayah kena risau."
+    ],
+    "accent": [
+     "Ibu",
+     "ayah",
+     "kena",
+     "risau."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.8,
+   "end": 13.3,
+   "kicker": "TANPA ASAS",
+   "head": "Topik lain susah."
+  },
+  {
+   "start": 13.4,
+   "end": 19.0,
+   "kicker": "SEMUA TOPIK",
+   "head": "Saling berkait."
+  },
+  {
+   "start": 19.1,
+   "end": 26.4,
+   "kicker": "LATIHAN HARIAN",
+   "count": 15,
+   "label": "minit sehari.",
+   "offset": -40
+  },
+  {
+   "start": 36.1,
+   "end": 41.5,
+   "kicker": "DALAM BUKU NI",
+   "count": 1640,
+   "label": "soalan + jawapan.",
+   "offset": -40
+  },
+  {
+   "start": 41.6,
+   "end": 50.3,
+   "kicker": "CONGAK",
+   "head": "2 hingga 3 digit."
+  },
+  {
+   "start": 50.4,
+   "end": 56.5,
+   "kicker": "STEP BY STEP",
+   "head": "Darab & bahagi."
+  },
+  {
+   "start": 56.6,
+   "end": null,
+   "cta": true,
+   "head": "Jom mula.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.4,
+   2.39,
+   "Kalau anak-anak tak kuasai"
+  ],
+  [
+   2.42,
+   3.79,
+   "asas matematik,"
+  ],
+  [
+   3.82,
+   4.79,
+   "ibu ayah kena risau."
+  ],
+  [
+   4.82,
+   5.57,
+   "Sebab apa tau?"
+  ],
+  [
+   5.6,
+   7.65,
+   "Bila dia tak dapat kuasai"
+  ],
+  [
+   7.68,
+   9.35,
+   "asas matematik,"
+  ],
+  [
+   9.38,
+   11.01,
+   "topik-topik yang lain pun"
+  ],
+  [
+   11.04,
+   13.41,
+   "susah dia nak belajar."
+  ],
+  [
+   13.44,
+   15.81,
+   "Sebab dengan asas matematik tu,"
+  ],
+  [
+   15.84,
+   17.09,
+   "daripada asas tu,"
+  ],
+  [
+   17.12,
+   19.03,
+   "dia relate each other."
+  ],
+  [
+   19.06,
+   22.31,
+   "So ibu ayah bagi satu buku"
+  ],
+  [
+   22.34,
+   24.97,
+   "yang ada latihan setiap hari,"
+  ],
+  [
+   25.0,
+   36.05,
+   "15 minit saja."
+  ],
+  [
+   36.08,
+   40.01,
+   "So ni buku yang ada 1640 soalan"
+  ],
+  [
+   40.04,
+   41.57,
+   "siap dengan jawapan."
+  ],
+  [
+   41.6,
+   45.43,
+   "Buku ni siap bagi lagi soalan-soalan"
+  ],
+  [
+   45.46,
+   47.89,
+   "daripada anak-anak buat congak"
+  ],
+  [
+   47.92,
+   50.37,
+   "dua digit sampai tiga digit."
+  ],
+  [
+   50.4,
+   53.93,
+   "Bagi dia buat latihan setiap hari"
+  ],
+  [
+   53.96,
+   55.29,
+   "dan buat step by step,"
+  ],
+  [
+   55.32,
+   56.57,
+   "darab dan bahagi."
+  ],
+  [
+   56.6,
+   57.89,
+   "Ibu ayah boleh dapatkan buku ni"
+  ],
+  [
+   57.92,
+   null,
+   "dekat link di bawah."
+  ]
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Super Minds English, buku teks tahun satu, lima unit.",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -140,
+ "segments": [
+  {
+   "start": 1.0,
+   "end": 7.6,
+   "title": {
+    "kicker": "SUPER MINDS ENGLISH",
+    "lines": [
+     "Anak boring",
+     "belajar English?"
+    ],
+    "accent": [
+     "belajar",
+     "English?"
+    ],
+    "size": 124
+   }
+  },
+  {
+   "start": 7.7,
+   "end": 13.4,
+   "kicker": "BUKU NI",
+   "head": "Simple sangat."
+  },
+  {
+   "start": 13.5,
+   "end": 25.4,
+   "kicker": "DALAM SET NI",
+   "count": 5,
+   "label": "buah buku.",
+   "offset": -40
+  },
+  {
+   "start": 25.5,
+   "end": 33.7,
+   "kicker": "BERDASARKAN",
+   "head": "Buku teks tahun 1."
+  },
+  {
+   "start": 33.8,
+   "end": 41.7,
+   "kicker": "PENUH AKTIVITI",
+   "head": "Seronok belajar."
+  },
+  {
+   "start": 41.8,
+   "end": null,
+   "cta": true,
+   "head": "Jom cuba.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   1.04,
+   3.21,
+   "Anak boring belajar English"
+  ],
+  [
+   3.24,
+   6.15,
+   "sebab satunya aktiviti yang diberi"
+  ],
+  [
+   6.18,
+   7.63,
+   "dia tak rasa menarik."
+  ],
+  [
+   7.66,
+   9.81,
+   "Buku sebenarnya dia ada"
+  ],
+  [
+   9.84,
+   11.59,
+   "sampai lima unit."
+  ],
+  [
+   11.62,
+   13.45,
+   "Buku ni simple saja,"
+  ],
+  [
+   13.48,
+   15.67,
+   "tapi anak-anak boleh belajar English"
+  ],
+  [
+   15.7,
+   18.31,
+   "pada waktu-waktu yang dia suka."
+  ],
+  [
+   18.34,
+   19.63,
+   "Dalam buku ni dia bagi"
+  ],
+  [
+   19.66,
+   21.57,
+   "sampai lima buah,"
+  ],
+  [
+   21.6,
+   24.31,
+   "iaitu lima waktu yang kita boleh bagi"
+  ],
+  [
+   24.34,
+   25.49,
+   "untuk dia belajar English."
+  ],
+  [
+   25.52,
+   28.39,
+   "Buku ni sebenarnya dibuat"
+  ],
+  [
+   28.42,
+   32.77,
+   "daripada buku teks Super Minds"
+  ],
+  [
+   32.8,
+   33.75,
+   "untuk tahun satu."
+  ],
+  [
+   33.78,
+   37.85,
+   "So ibu ayah nak bagi anak-anak"
+  ],
+  [
+   37.88,
+   40.19,
+   "buat aktiviti-aktiviti"
+  ],
+  [
+   40.22,
+   41.81,
+   "yang dia boleh belajar English,"
+  ],
+  [
+   41.84,
+   null,
+   "boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

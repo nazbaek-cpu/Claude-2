@@ -1,0 +1,252 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Modul Konstruk Fizik tingkatan 4 dan 5, formula, mnemonik, cikgu cemerlang fizik, SPM.",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -110,
+ "segments": [
+  {
+   "start": 0.3,
+   "end": 7.8,
+   "title": {
+    "kicker": "MODUL KONSTRUK FIZIK",
+    "lines": [
+     "Benci fizik",
+     "sebab formula?"
+    ],
+    "accent": [
+     "sebab",
+     "formula?"
+    ],
+    "size": 124
+   }
+  },
+  {
+   "start": 7.9,
+   "end": 19.1,
+   "kicker": "MASALAH BIASA",
+   "head": "Hafal je formula."
+  },
+  {
+   "start": 19.2,
+   "end": 25.5,
+   "kicker": "TINGKATAN 4 & 5",
+   "head": "Modul Konstruk."
+  },
+  {
+   "start": 25.6,
+   "end": 32.6,
+   "kicker": "CARA KREATIF",
+   "head": "Ingat formula."
+  },
+  {
+   "start": 32.7,
+   "end": 40.9,
+   "kicker": "SOALAN + CARA",
+   "head": "Guna formula."
+  },
+  {
+   "start": 41.0,
+   "end": 46.2,
+   "kicker": "TAK TERBEBAN",
+   "head": "Senang ingat."
+  },
+  {
+   "start": 46.3,
+   "end": 52.8,
+   "kicker": "FOKUS",
+   "head": "Soalan SPM."
+  },
+  {
+   "start": 52.9,
+   "end": 62.1,
+   "kicker": "GUNA",
+   "head": "Mnemonik."
+  },
+  {
+   "start": 62.2,
+   "end": null,
+   "cta": true,
+   "head": "Cikgu cemerlang.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.3,
+   1.71,
+   "Jangan bagi anak-anak"
+  ],
+  [
+   1.74,
+   2.77,
+   "sampai give up"
+  ],
+  [
+   2.8,
+   4.47,
+   "ataupun benci dengan subjek fizik"
+  ],
+  [
+   4.5,
+   5.95,
+   "disebabkan dia nak kena"
+  ],
+  [
+   5.98,
+   7.89,
+   "hafal banyak formula."
+  ],
+  [
+   7.92,
+   10.15,
+   "Lepas itu bila dia nak jawab soalan,"
+  ],
+  [
+   10.18,
+   12.35,
+   "dia tak tahu nak guna formula."
+  ],
+  [
+   12.38,
+   13.51,
+   "Dan kita tak nak lah,"
+  ],
+  [
+   13.54,
+   15.65,
+   "bila dia nak menjawab soalan,"
+  ],
+  [
+   15.68,
+   17.35,
+   "dia hanya hafal saja"
+  ],
+  [
+   17.38,
+   19.15,
+   "formula-formula yang dia tahu."
+  ],
+  [
+   19.18,
+   21.05,
+   "Jadi dalam buku ini,"
+  ],
+  [
+   21.08,
+   23.51,
+   "buku modul konstruk"
+  ],
+  [
+   23.54,
+   24.45,
+   "tingkatan 5,"
+  ],
+  [
+   24.48,
+   25.57,
+   "tapi dia ada tingkatan 4 juga."
+  ],
+  [
+   25.6,
+   28.97,
+   "Dalam buku ini dia bagi cara"
+  ],
+  [
+   29.0,
+   32.65,
+   "secara kreatif nak ingat formula."
+  ],
+  [
+   32.68,
+   34.61,
+   "Jadi dia bagi macam soalan"
+  ],
+  [
+   34.64,
+   37.21,
+   "dan cara nak menggunakan formula"
+  ],
+  [
+   37.24,
+   39.25,
+   "yang dia bagi secara kreatif."
+  ],
+  [
+   39.28,
+   40.99,
+   "Dia bagi senang nak ingat itu."
+  ],
+  [
+   41.02,
+   42.39,
+   "So anak-anak tak ada rasa"
+  ],
+  [
+   42.42,
+   44.51,
+   "terbeban dekat kepala ni"
+  ],
+  [
+   44.54,
+   45.29,
+   "bila dia nak kena"
+  ],
+  [
+   45.32,
+   46.29,
+   "ingat banyak-banyak."
+  ],
+  [
+   46.32,
+   48.33,
+   "Dengan soalan-soalan yang"
+  ],
+  [
+   48.36,
+   51.33,
+   "dia dah fokus untuk menjawab"
+  ],
+  [
+   51.36,
+   52.91,
+   "soalan SPM nanti."
+  ],
+  [
+   52.94,
+   57.05,
+   "So yang macam ni contoh dia bagi"
+  ],
+  [
+   57.08,
+   59.57,
+   "formula yang sangat-sangat menarik,"
+  ],
+  [
+   59.6,
+   62.13,
+   "yang menggunakan mnemonik."
+  ],
+  [
+   62.16,
+   64.51,
+   "Ibu ayah, boleh dapatkan dekat link."
+  ],
+  [
+   64.54,
+   66.97,
+   "Buku ini ada tingkatan 4 dengan 5,"
+  ],
+  [
+   67.0,
+   68.13,
+   "dan buku ini ditulis"
+  ],
+  [
+   68.16,
+   null,
+   "oleh cikgu cemerlang fizik."
+  ]
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Lampu travel dengan extension 3 pin, boleh lipat, portable.",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -20,
+ "head_scrim": true,
+ "segments": [
+  {
+   "start": 0.1,
+   "end": 3.4,
+   "title": {
+    "kicker": "LAMPU + EXTENSION",
+    "lines": [
+     "Kecil, tapi",
+     "banyak fungsi."
+    ],
+    "accent": [
+     "banyak",
+     "fungsi."
+    ],
+    "size": 124
+   }
+  },
+  {
+   "start": 3.5,
+   "end": 12.7,
+   "kicker": "SIAP DENGAN",
+   "head": "Extension 3 pin."
+  },
+  {
+   "start": 12.8,
+   "end": 21.3,
+   "kicker": "UNTUK",
+   "head": "Kaki travel."
+  },
+  {
+   "start": 21.4,
+   "end": 27.1,
+   "kicker": "SESUAI UNTUK",
+   "head": "Asrama & bacaan."
+  },
+  {
+   "start": 27.2,
+   "end": 33.9,
+   "kicker": "PADA MASA SAMA",
+   "head": "Charge phone."
+  },
+  {
+   "start": 34.0,
+   "end": 41.7,
+   "kicker": "BOLEH LIPAT",
+   "head": "Ringan & portable."
+  },
+  {
+   "start": 41.8,
+   "end": null,
+   "cta": true,
+   "head": "Jom grab.",
+   "offset": 0
+  }
+ ],
+ "subs": [
+  [
+   0.11,
+   2.06,
+   "Jenis yang kecil macam ni"
+  ],
+  [
+   2.09,
+   3.52,
+   "boleh dijadikan lampu."
+  ],
+  [
+   3.55,
+   5.74,
+   "Lepas tu dia ada sekali"
+  ],
+  [
+   5.77,
+   7.57,
+   "dengan extension yang"
+  ],
+  [
+   7.6,
+   9.08,
+   "banyak macam ni,"
+  ],
+  [
+   9.11,
+   12.76,
+   "dan juga dia pakai 3 pin wire lah."
+  ],
+  [
+   12.79,
+   14.98,
+   "So kalau korang yang nak bawa"
+  ],
+  [
+   15.01,
+   15.92,
+   "pergi travel,"
+  ],
+  [
+   15.95,
+   18.98,
+   "kalau korang yang suka travel,"
+  ],
+  [
+   19.01,
+   21.38,
+   "lampu ni memang sangat sesuai"
+  ],
+  [
+   21.41,
+   23.5,
+   "untuk anak yang masuk asrama"
+  ],
+  [
+   23.53,
+   25.38,
+   "ataupun untuk ibu ayah"
+  ],
+  [
+   25.41,
+   27.18,
+   "yang suka membaca waktu malam."
+  ],
+  [
+   27.21,
+   28.68,
+   "Pada masa yang sama"
+  ],
+  [
+   28.71,
+   30.2,
+   "nak charge phone ke,"
+  ],
+  [
+   30.23,
+   32.44,
+   "nak charge bateri ke kan,"
+  ],
+  [
+   32.47,
+   33.98,
+   "pakai lampu yang macam ni."
+  ],
+  [
+   34.01,
+   35.74,
+   "Yang ni dia siap boleh lipat,"
+  ],
+  [
+   35.77,
+   37.9,
+   "memang sangat-sangat ringan,"
+  ],
+  [
+   37.93,
+   40.1,
+   "sesuai nak bawa ke mana-mana,"
+  ],
+  [
+   40.13,
+   41.76,
+   "sangat-sangat portable lah."
+  ],
+  [
+   41.79,
+   null,
+   "Boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

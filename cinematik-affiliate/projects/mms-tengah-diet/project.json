@@ -1,0 +1,163 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "M&M's Crunchy Cookie, diet, Australia, halal.",
+ "preset": "food",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -110,
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 8.5,
+   "title": {
+    "lines": [
+     "Tengah diet,",
+     "tapi tetap makan!"
+    ]
+   }
+  },
+  {
+   "start": 8.6,
+   "end": 17.0,
+   "kicker": "Tak tahan",
+   "head": "Makan juga."
+  },
+  {
+   "start": 17.1,
+   "end": 21.4,
+   "kicker": "Crunchy Cookie",
+   "head": "Takde di Malaysia."
+  },
+  {
+   "start": 21.5,
+   "end": 29.1,
+   "kicker": "Dari Australia",
+   "head": "Sah halal."
+  },
+  {
+   "start": 29.2,
+   "end": 36.1,
+   "kicker": "Peminat M&M's",
+   "head": "Wajib cuba."
+  },
+  {
+   "start": 36.2,
+   "end": null,
+   "cta": true,
+   "head": "Harga murah.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.37,
+   3.58,
+   "Aku sebenarnya tengah diet tau,"
+  ],
+  [
+   3.61,
+   5.24,
+   "tapi kan aku bila buat"
+  ],
+  [
+   5.27,
+   6.44,
+   "nak cerita kat korang,"
+  ],
+  [
+   6.47,
+   8.6,
+   "aku tak mahu makan ni."
+  ],
+  [
+   8.63,
+   10.94,
+   "Tapi itulah, aku tetap akan makan."
+  ],
+  [
+   10.97,
+   12.7,
+   "So kalau, tapi itulah,"
+  ],
+  [
+   12.73,
+   14.86,
+   "aku makan juga."
+  ],
+  [
+   14.89,
+   16.24,
+   "Habis, yang ni kan,"
+  ],
+  [
+   16.27,
+   18.38,
+   "ni aku makan, Crunchy Cookie."
+  ],
+  [
+   18.41,
+   19.36,
+   "Crunchy Cookie ni"
+  ],
+  [
+   19.39,
+   21.46,
+   "dia tak ada kat Malaysia."
+  ],
+  [
+   21.49,
+   24.12,
+   "Dia hanya ada kat Australia sahaja."
+  ],
+  [
+   24.15,
+   26.0,
+   "Yang ni dia ada siap sekali"
+  ],
+  [
+   26.03,
+   27.32,
+   "dengan dia punya tu lah,"
+  ],
+  [
+   27.35,
+   29.18,
+   "halal daripada Australia."
+  ],
+  [
+   29.21,
+   32.26,
+   "So kalau korang nak, teringin kan,"
+  ],
+  [
+   32.29,
+   33.0,
+   "korang yang jenis"
+  ],
+  [
+   33.03,
+   33.78,
+   "penggemar M&M's,"
+  ],
+  [
+   33.81,
+   34.78,
+   "nampak saja M&M's,"
+  ],
+  [
+   34.81,
+   36.2,
+   "semua cuba kan."
+  ],
+  [
+   36.23,
+   37.42,
+   "Harga tengah murah"
+  ],
+  [
+   37.45,
+   null,
+   "kat link di bawah."
+  ]
+ ]
+}

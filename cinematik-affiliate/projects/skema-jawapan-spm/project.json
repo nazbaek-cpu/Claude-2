@@ -1,0 +1,206 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Skema Jawapan SPM, tingkatan 4 dan 5, cikgu cemerlang.",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "top_offset": -110,
+ "segments": [
+  {
+   "start": 0.7,
+   "end": 9.0,
+   "title": {
+    "kicker": "SKEMA JAWAPAN SPM",
+    "lines": [
+     "Dah ulang kaji,",
+     "markah masih rendah?"
+    ],
+    "accent": [
+     "markah",
+     "masih",
+     "rendah?"
+    ],
+    "size": 86
+   }
+  },
+  {
+   "start": 9.1,
+   "end": 16.4,
+   "kicker": "BUKU NI AJAR",
+   "head": "Markah penuh."
+  },
+  {
+   "start": 16.5,
+   "end": 25.1,
+   "kicker": "TINGKATAN 4 & 5",
+   "head": "Terus ke skema."
+  },
+  {
+   "start": 25.2,
+   "end": 35.0,
+   "kicker": "SOALAN + JAWAPAN",
+   "head": "Jawapan lengkap."
+  },
+  {
+   "start": 35.1,
+   "end": 47.9,
+   "kicker": "DITULIS OLEH",
+   "head": "Cikgu cemerlang."
+  },
+  {
+   "start": 48.0,
+   "end": 54.8,
+   "kicker": "BUKAN MATEMATIK SAJA",
+   "head": "Banyak subjek."
+  },
+  {
+   "start": 54.9,
+   "end": null,
+   "cta": true,
+   "head": "Harga berbaloi.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.66,
+   2.79,
+   "Dah banyak buat ulang kaji,"
+  ],
+  [
+   2.82,
+   3.69,
+   "dah nak SPM,"
+  ],
+  [
+   3.72,
+   6.45,
+   "tapi masih lagi dapat markah rendah"
+  ],
+  [
+   6.48,
+   9.05,
+   "bila dia masuk ke peperiksaan."
+  ],
+  [
+   9.08,
+   11.35,
+   "Buku ni ajar cara macam mana"
+  ],
+  [
+   11.38,
+   13.03,
+   "nak dapat markah penuh"
+  ],
+  [
+   13.06,
+   15.03,
+   "dan markah padu"
+  ],
+  [
+   15.06,
+   16.51,
+   "bila dia jawab soalan."
+  ],
+  [
+   16.54,
+   18.47,
+   "So ibu ayah, bagi anak-anak"
+  ],
+  [
+   18.5,
+   20.41,
+   "skema jawapan terus."
+  ],
+  [
+   20.44,
+   22.85,
+   "Skema jawapan SPM dalam buku ni"
+  ],
+  [
+   22.88,
+   25.21,
+   "ada tingkatan 4 dengan 5 terus."
+  ],
+  [
+   25.24,
+   27.85,
+   "Buku ni bagi soalan,"
+  ],
+  [
+   27.88,
+   29.73,
+   "lepas tu dekat bawah tu"
+  ],
+  [
+   29.76,
+   31.91,
+   "dia bagi jawapan yang lengkap"
+  ],
+  [
+   31.94,
+   33.29,
+   "untuk anak-anak faham"
+  ],
+  [
+   33.32,
+   35.07,
+   "cara nak menjawab dengan betul."
+  ],
+  [
+   35.1,
+   37.55,
+   "Buku ni sebenarnya ditulis"
+  ],
+  [
+   37.58,
+   40.15,
+   "oleh cikgu terlatih dan cemerlang."
+  ],
+  [
+   40.18,
+   42.93,
+   "Jadi buku ni disusun dengan teratur"
+  ],
+  [
+   42.96,
+   45.21,
+   "dan teliti, nak bagi anak-anak"
+  ],
+  [
+   45.24,
+   48.01,
+   "ulang kaji dengan mudah sekali."
+  ],
+  [
+   48.04,
+   50.13,
+   "Ibu ayah, buku ni bukan ada"
+  ],
+  [
+   50.16,
+   51.81,
+   "subjek matematik saja tau,"
+  ],
+  [
+   51.84,
+   54.83,
+   "tapi ada subjek-subjek lain juga."
+  ],
+  [
+   54.86,
+   57.75,
+   "Boleh dapatkan dekat link di bawah,"
+  ],
+  [
+   57.78,
+   59.77,
+   "harga memang sangat berbaloi"
+  ],
+  [
+   59.8,
+   null,
+   "dengan latihan yang dia bagi ni."
+  ]
+ ]
+}

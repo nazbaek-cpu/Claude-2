@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Suri rumah, tisu gantung, 1,000 pieces, 8 pack.",
  "preset": "product",
- "hflip": true,
+ "hflip": false,
  "behind": false,
  "top_offset": -60,
  "segments": [

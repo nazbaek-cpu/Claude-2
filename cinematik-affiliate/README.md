@@ -7,12 +7,15 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | **Grade** | Warm, muted, highlights held back, lifted blacks, vignette. Top of the frame darkened for headlines, bottom slightly darkened for subtitles. |
 | **Beauty** | Even, smooth skin that keeps about 30% of pore texture. Soft rosy-nude lipstick. Brows untouched by default. Uses MediaPipe face landmarks, so eyes, hijab and background are left alone. |
 | **Cuts** | Hard-cut punch-in (1.0 ↔ 1.12) on every subtitle phrase, so a single take feels multi-cam. |
+| **Title card** | Opening block, left-aligned over a soft dark scrim: tracked accent kicker, two big Plus Jakarta Sans ExtraBold lines with accent-coloured words, short accent underline. |
 | **Kicker** | `PUFFER SLING BAG`: small caps, wide tracking (Inter Medium). |
 | **Headline** | `Ringan.`: short, ends with a full stop (Inter Display Bold). Placed *behind* the person via a selfie-segmentation mask. |
 | **Count-up** | Big number (Inter ExtraBold) that eases up to the target, with a growing green bar and a label. |
 | **Pills** | White rounded tags that pop in one by one at the moment the word is said. |
 | **CTA** | Yellow `Beli di beg kuning` pill with bouncing ⌄⌄ chevrons. |
 | **Subtitles** | Inter SemiBold with a soft shadow, cut per phrase, no animation. |
+| **Pace** | Optional `speed`: long pauses shortened to 0.22 s and a 1.12× pitch-preserving tempo, so slow talking feels brisk but natural. Project times stay in source seconds. |
+| **Voice** | "Expensive mic" chain (on by default): DeepFilterNet AI denoise, phrase-by-phrase auto-levelling so the voice never fades in and out, warm close-mic EQ, de-esser, two gentle compressors, light saturation, −14 LUFS. `"voice": {"studio": false}` turns it off. |
 | **Audio** | Voice at −14 LUFS. SFX synthesized from scratch: a whoosh on each headline, a pop per pill, a tick per count step and a ding on each CTA. |
 
 All text animates in and out with blur + fade (0.32 s in, 0.25 s out).
@@ -40,9 +43,17 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "sfx_gain_db": 0,                   // +3 for louder SFX, -100 to mute
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
              "lip_rgb": [186, 92, 102], "lip_amount": 0.4, "brows": 0.0},   // brows 0.2 = soft fill
+  "accent_rgb": [233, 185, 73],       // title accent (gold)
+  "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
+  "hflip": false,                     // true un-mirrors selfie footage (text on the product reads the right way)
+  "speed": {"tempo": 1.12, "max_pause": 0.22},   // optional: shrink pauses + gentle pitch-preserving tempo-up
+  "top_offset": 0,                    // e.g. -80 lifts kickers/headlines/CTA when the head sits high in frame
   "segments": [                       // what sits at the top of the frame, in seconds
+    {"start": 0.3, "end": 4.7, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
     {"start": 0.5, "end": 4.35, "kicker": "PUFFER SLING BAG", "head": "Ringan."},
     {"start": 7.2, "end": 11.1, "kicker": "BANYAK RUANG", "count": 6, "label": "kompartmen."},
+    {"start": 26.0, "end": 30.6, "kicker": "KAPASITI", "count": 4.5, "decimals": 1, "label": "liter."},
+    {"start": 0.3, "end": 2.55, "kicker": "UNTUK SEMUA", "head": "Lelaki. Wanita.", "behind": false},  // in front: subject off-centre or leaning in
     {"start": 11.15, "end": 16.3, "kicker": "KIRI & KANAN", "head": "Poket tambahan.",
      "pills": [["Kiri", 12.33], ["Kanan", 12.97]]},                  // pill text, appear time
     {"start": 24.4, "end": 26.4, "cta": true},
@@ -64,6 +75,10 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 |---|---|
 | `render.py` | grade, beauty, zoom cuts, text layers, person mask, encode + audio mix |
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
+| `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
+| `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
+| `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

@@ -23,6 +23,16 @@ C_FONT = font("Inter-Bold.otf", 38)            # CTA pill
 YELLOW, GREEN = (255, 214, 10), (48, 209, 88)
 KICK_Y, HEAD_Y, PILL_Y, SUB_Y, CTA_Y = 425, 525, 1165, 1300, 335
 
+# opening title card: left-aligned editorial block, Plus Jakarta Sans, one accent colour
+def jakarta(weight, size):
+    f = ImageFont.truetype(os.path.join(HERE, "fonts", "PlusJakartaSans.ttf"), size); f.set_variation_by_name(weight); return f
+TK_FONT = jakarta("Bold", 30)
+TL_FONT = jakarta("ExtraBold", 132)
+GOLD = (233, 185, 73)
+TITLE_X, TITLE_LINE_H = 70, 132
+# "bottom": lower-left like a product cover (subtitles drop below it); "top": above the head when the face is centred
+TITLE_POS = {"bottom": dict(kick=1000, line=1100, sub=1480), "top": dict(kick=250, line=350, sub=SUB_Y)}
+
 GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "eq=saturation=0.86:contrast=1.06:gamma=0.98,"
          "curves=master='0/0.035 0.25/0.22 0.75/0.75 1/0.94',"
@@ -40,9 +50,19 @@ def probe(path):
 
 
 def load(prj):
-    """project.json with end=null resolved to the video length"""
+    """project.json with end=null resolved to the video length; with "speed", times move onto build/fast.mp4"""
     cfg = json.load(open(os.path.join(prj, "project.json")))
     cfg["source"] = os.path.join(prj, cfg["source"])
+    tm = os.path.join(prj, "build", "timemap.json")
+    if cfg.get("speed") and os.path.exists(tm):
+        from speed import to_output
+        m = json.load(open(tm))
+        def f(x): return x if x is None else round(to_output(x, m["keep"], m["tempo"]), 3)
+        cfg["source"] = os.path.join(prj, "build", "fast.mp4")
+        for s in cfg["segments"]:
+            s["start"], s["end"] = f(s["start"]), f(s.get("end"))
+            if "pills" in s: s["pills"] = [[txt, f(ts)] for txt, ts in s["pills"]]
+        cfg["subs"] = [[f(a), f(b), txt] for a, b, txt in cfg["subs"]]
     dur = probe(cfg["source"])[4] if os.path.exists(cfg["source"]) else 9999.0
     for s in cfg["segments"]:
         if s.get("end") is None: s["end"] = dur + 1
@@ -111,7 +131,10 @@ def vis(t, t0, t1, tin=0.32, tout=0.25):
     return ease_out(min((t - t0) / tin, (t1 - t) / tout))
 
 def count_value(seg, t):
-    return round(seg["count"] * ease_out((t - seg["start"] - 0.1) / 1.2))
+    return round(seg["count"] * ease_out((t - seg["start"] - 0.1) / 1.2), seg.get("decimals", 0) or None)
+
+def count_text(seg, t):
+    return f'{count_value(seg, t):.{seg.get("decimals", 0)}f}'
 
 def anim(img, a, scale_from=1.04):
     """blur-in / blur-out with fade"""
@@ -137,28 +160,81 @@ def blend(frame, img, cx, cy):
     reg = frame[y0c:y1c, x0c:x1c]
     reg[:] = reg * (1 - al) + arr[..., :3] * al
 
+def rich_img(runs, fnt):
+    """one line of (text, rgb) runs, e.g. white words + an accent word"""
+    key = ("rich", tuple(runs), id(fnt))
+    if key in cache: return cache[key]
+    asc, desc = fnt.getmetrics(); pad = 4
+    w = int(sum(fnt.getlength(txt) for txt, _ in runs)) + 2
+    img = Image.new("RGBA", (w + pad * 2, asc + desc + pad * 2), (255, 255, 255, 0))
+    x = pad
+    for txt, rgb in runs:
+        m = Image.new("L", img.size, 0); ImageDraw.Draw(m).text((x, pad), txt, font=fnt, fill=255)
+        layer = Image.new("RGBA", img.size, tuple(rgb) + (0,)); layer.putalpha(m)
+        img = Image.alpha_composite(img, layer); x += fnt.getlength(txt)
+    cache[key] = img
+    return img
+
+def scrim(a, pos="bottom"):
+    """soft dark gradient (lower-left, or from the top) so the title reads on any background"""
+    key = ("scrim", pos)
+    if key not in cache:
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        if pos == "top":
+            v = np.clip(1 - (yy - 420) / 420, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
+        else:
+            v = np.clip((yy - 760) / 420, 0, 1) * np.clip(1 - (yy - 1560) / 360, 0, 1) * np.clip(1.25 - xx / W * 0.6, 0, 1)
+        cache[key] = Image.fromarray((np.dstack([np.zeros_like(v)] * 3 + [v * 255])).astype(np.uint8))
+    img = cache[key]
+    return img if a >= 0.999 else Image.merge("RGBA", (*img.split()[:3], img.getchannel("A").point(lambda v: int(v * a))))
+
+def title_layers(cfg, s, t, front):
+    t0, t1 = s["start"], s["end"]
+    tc = s["title"]; accent = tuple(cfg.get("accent_rgb", GOLD)); acc_words = set(tc.get("accent", []))
+    a = vis(t, t0, t1, 0.4, 0.3)
+    if a <= 0: return
+    pos = TITLE_POS[cfg.get("title_pos", "bottom")]
+    front.append((scrim(a * 0.72, cfg.get("title_pos", "bottom")), W / 2, H / 2))
+    k = text_img(tc["kicker"], TK_FONT, fill=accent, track=6)
+    front.append((anim(k, a, 1.0), TITLE_X - 4 + k.width / 2, pos["kick"]))
+    for i, line in enumerate(tc["lines"]):
+        words = line.split(" ")
+        runs = [(w + (" " if j < len(words) - 1 else ""), accent if w in acc_words else (255, 255, 255)) for j, w in enumerate(words)]
+        im = anim(rich_img(runs, TL_FONT), min(a, vis(t, t0 + 0.1 * (i + 1), t1, 0.4, 0.3)), 1.0)
+        front.append((im, TITLE_X - 4 + im.width / 2, pos["line"] + i * TITLE_LINE_H))
+    bw = int(190 * ease_out((t - t0 - 0.45) / 0.45))
+    if bw > 3:
+        bar = Image.new("RGBA", (bw, 5), accent + (255,))
+        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, pos["line"] + (len(tc["lines"]) - 1) * TITLE_LINE_H + 108))
+
 def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""
     back, front = [], []
+    sub_y = SUB_Y
+    oy = cfg.get("top_offset", 0)   # negative lifts the top text for footage where the head sits high
     for s in cfg["segments"]:
+        if "title" in s:
+            title_layers(cfg, s, t, front)
+            if s["start"] <= t <= s["end"]: sub_y = TITLE_POS[cfg.get("title_pos", "bottom")]["sub"]
+            continue
         t0, t1 = s["start"], s["end"]
         a = vis(t, t0, t1)
         if a <= 0: continue
         if s.get("kicker"):
-            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, KICK_Y if "count" not in s else 245))
+            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + oy))
         if s.get("head"):
-            back.append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y))
+            (back if s.get("behind", True) else front).append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y + oy))
         if "count" in s:
             p = ease_out((t - t0 - 0.1) / 1.2)
-            back.append((anim(text_img(str(count_value(s, t)), N_FONT), a), 540, 385))
+            back.append((anim(text_img(count_text(s, t), N_FONT), a), 540, 385 + oy))
             la = a * ease_out((t - t0 - 0.6) / 0.35)
             if la > 0 and s.get("label"):
-                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528))
+                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528 + oy))
             bw = int(240 * p)
             if bw > 4:
                 bar = Image.new("RGBA", (bw, 8), GREEN + (0,)); bm = Image.new("L", (bw, 8), 0)
                 ImageDraw.Draw(bm).rounded_rectangle((0, 0, bw - 1, 7), radius=4, fill=255); bar.putalpha(bm)
-                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572))
+                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572 + oy))
         if s.get("pills"):
             imgs = [pill(txt, P_FONT, (255, 255, 255), (20, 20, 20)) for txt, _ in s["pills"]]
             gap = 16; total = sum(i.width for i in imgs) + gap * (len(imgs) - 1)
@@ -168,14 +244,14 @@ def layers(cfg, t):
                 if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, PILL_Y))
                 x += im.width + gap
         if s.get("cta"):
-            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y))
+            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y + oy))
             ca = min(a, vis(t, t0 + 0.3, t1, 0.25))
             if ca > 0:
                 bob = 7 * math.sin(2 * math.pi * 1.4 * (t - t0))
-                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + 72 + bob))
+                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + oy + 72 + bob))
     for s0, s1, txt in cfg["subs"]:
         if s0 <= t < s1:
-            front.append((text_img(txt, S_FONT, shadow=True), 540, SUB_Y))
+            front.append((text_img(txt, S_FONT, shadow=True), 540, sub_y))
     return back, front
 
 
@@ -223,17 +299,19 @@ def main():
         running_mode=vision.RunningMode.VIDEO))
 
     # fill 1080x1920 whatever the source size
-    fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+    fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}," + ("hflip," if cfg.get("hflip") else "")  # hflip: un-mirror selfie footage
     dec_cmd = ["ffmpeg", "-v", "error", "-i", src] + (["-t", str(args.limit)] if args.limit else [])
     dec = subprocess.Popen(dec_cmd + ["-vf", fit + GRADE, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
-    voice = "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"
+    studio = os.path.join(args.project, "build", "voice.wav")   # from voice.py: already cleaned and levelled
+    use_studio = cfg.get("voice", {}).get("studio", True) and os.path.exists(studio)
+    voice = "[1:a]aresample=48000" if use_studio else "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"
     if os.path.exists(sfx):
         audio = ["-i", sfx, "-filter_complex", voice + "[v];[2:a]aresample=48000[s];"
                  "[v][s]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.89[a]", "-map", "0:v", "-map", "[a]"]
     else:
         audio = ["-filter_complex", voice + "[a]", "-map", "0:v", "-map", "[a]"]
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", rate, "-i", "-", "-i", src] + audio +
+                            "-r", rate, "-i", "-", "-i", studio if use_studio else src] + audio +
                            ["-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", "-profile:v", "high",
                             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)

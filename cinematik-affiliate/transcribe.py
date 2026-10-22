@@ -11,13 +11,14 @@ from faster_whisper import WhisperModel
 MAX_CHARS, GAP = 36, 0.25
 
 def phrases(words):
-    """split on punctuation, pauses and length, like the subtitle style of the reference"""
+    """split on punctuation, sentence starts, pauses and length"""
     out, cur = [], []
     for i, w in enumerate(words):
         cur.append(w)
         text = " ".join(x["w"] for x in cur)
         nxt = words[i + 1] if i + 1 < len(words) else None
-        if (nxt is None or w["w"][-1] in ",.?!" or nxt["s"] - w["e"] > GAP
+        # Whisper often drops full stops but still capitalises the next sentence
+        if (nxt is None or w["w"][-1] in ",.?!" or nxt["s"] - w["e"] > GAP or nxt["w"][:1].isupper()
                 or len(text) + len(nxt["w"]) + 1 > MAX_CHARS):
             out.append([round(cur[0]["s"], 2), round(nxt["s"] - 0.03, 2) if nxt else None, text])
             cur = []

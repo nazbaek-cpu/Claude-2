@@ -252,6 +252,8 @@ def layers(cfg, t):
         a = vis(t, t0, t1)
         if a <= 0: continue
         soy = s.get("offset", oy)   # per-segment override, e.g. a count-up that must stay clear of the app's top bar
+        if cfg.get("head_scrim") and (s.get("head") or "count" in s):   # e.g. a lit lamp held up behind the text
+            front.append((scrim(a * 0.6, "top"), W / 2, H / 2))
         if s.get("kicker"):
             if skrip:   # the kicker becomes the yellow handwritten line
                 front.append((anim(script_img(s["kicker"]), a, 1.06), 540, (HEAD_Y - 118 if "count" not in s else 235) + soy))

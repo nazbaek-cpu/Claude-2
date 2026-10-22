@@ -4,6 +4,7 @@
  "preset": "product",
  "hflip": true,
  "behind": false,
+ "head_scrim": true,
  "top_offset": -20,
  "segments": [
   {

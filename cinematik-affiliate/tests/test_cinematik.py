@@ -72,6 +72,12 @@ def test_skrip_theme_uses_script_kicker_and_title(cfg):
     assert len(front) == 3                                           # scrim + two lines, no kicker or underline
 
 
+def test_head_scrim_adds_a_dark_layer_first(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "Hai."}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], behind=False, head_scrim=True), 2.0)
+    assert len(front) == 3 and front[0][0].size == (render.W, render.H)
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]

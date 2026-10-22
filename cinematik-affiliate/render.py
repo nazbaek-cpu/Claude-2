@@ -55,14 +55,17 @@ def load(prj):
     cfg["source"] = os.path.join(prj, cfg["source"])
     tm = os.path.join(prj, "build", "timemap.json")
     if cfg.get("speed") and os.path.exists(tm):
-        from speed import to_output
-        m = json.load(open(tm))
-        def f(x): return x if x is None else round(to_output(x, m["keep"], m["tempo"]), 3)
+        from speed import span, to_output
+        m = json.load(open(tm)); keep, tempo = m["keep"], m["tempo"]; ranges = m.get("ranges", [[0, 1e9]])
+        def f(x): return round(to_output(x, keep, tempo), 3)
+        def g(a, b):  # an open end (None) stays open; otherwise clipped to the piece that holds the start
+            oa, ob = span(a, 1e9 if b is None else b, keep, tempo, ranges)
+            return round(oa, 3), None if b is None and ranges[-1][0] <= a else round(ob, 3)
         cfg["source"] = os.path.join(prj, "build", "fast.mp4")
         for s in cfg["segments"]:
-            s["start"], s["end"] = f(s["start"]), f(s.get("end"))
+            s["start"], s["end"] = g(s["start"], s.get("end"))
             if "pills" in s: s["pills"] = [[txt, f(ts)] for txt, ts in s["pills"]]
-        cfg["subs"] = [[f(a), f(b), txt] for a, b, txt in cfg["subs"]]
+        cfg["subs"] = [[*g(a, b), txt] for a, b, txt in cfg["subs"]]
     dur = probe(cfg["source"])[4] if os.path.exists(cfg["source"]) else 9999.0
     for s in cfg["segments"]:
         if s.get("end") is None: s["end"] = dur + 1

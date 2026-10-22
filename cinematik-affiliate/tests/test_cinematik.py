@@ -115,5 +115,14 @@ def test_studio_chain_is_a_valid_filtergraph():
     assert r.returncode == 0, r.stderr
 
 
+def test_reorder_puts_hook_first_and_clips_spans():
+    ranges = [(5.0, 7.0), (0.0, 5.0), (7.0, 10.0)]
+    keep = speed.ordered([(0.0, 10.0)], ranges)
+    assert keep == [(5.0, 7.0), (0.0, 5.0), (7.0, 10.0)]
+    assert speed.to_output(5.5, keep, 1.0) == 0.5            # hook plays first
+    assert speed.to_output(1.0, keep, 1.0) == 3.0            # then the start of the take
+    assert speed.span(6.0, 8.0, keep, 1.0, ranges) == (1.0, 1.999)   # a subtitle never runs past its piece
+
+
 def test_example_project_is_valid_json():
     json.load(open(os.path.join(PRJ, "project.json")))

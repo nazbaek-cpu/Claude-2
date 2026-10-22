@@ -35,13 +35,25 @@ def keep_intervals(words, quiet, duration, max_pause, lead=0.15, tail=0.8, hold=
     return [(round(a, 3), round(b, 3)) for a, b in keep if b - a > 0.05]
 
 def to_output(t, keep, tempo):
-    """source time -> output time (a time inside a cut snaps to the next kept moment)"""
-    acc = 0.0
+    """source time -> output time; keep is in playback order (may be reordered).
+    A time inside a cut snaps to the next kept moment."""
+    acc, snap = 0.0, None
     for a, b in keep:
-        if t < a: return acc / tempo
-        if t <= b: return (acc + t - a) / tempo
+        if a <= t <= b: return (acc + t - a) / tempo
+        if a > t and (snap is None or a < snap[0]): snap = (a, acc)
         acc += b - a
-    return acc / tempo
+    return (snap[1] if snap else acc) / tempo
+
+def span(a, b, keep, tempo, ranges):
+    """(start, end) source -> output; end is clipped to the reordered piece that holds start"""
+    for ra, rb in ranges:
+        if ra <= a < rb:
+            b = min(b, rb - 1e-3); break
+    return to_output(a, keep, tempo), to_output(b, keep, tempo)
+
+def ordered(keep, ranges):
+    """clip the (time-sorted) keep list to each range of "order", in that order"""
+    return [(max(a, ra), min(b, rb)) for ra, rb in ranges for a, b in keep if min(b, rb) - max(a, ra) > 0.04]
 
 def main():
     prj = sys.argv[1]
@@ -55,20 +67,35 @@ def main():
     duration, rate = float(j["format"]["duration"]), j["streams"][0]["r_frame_rate"]
     quiet = silences(src, sp.get("silence_db", -30), max_pause + 0.08)
     num, den = map(int, rate.split("/")); fd = den / num
+    # "order": play source ranges in a new order, e.g. a tasting moment first as the hook
+    ranges = [(a, duration if b is None else b) for a, b in sp.get("order", [[0, None]])]
+    keep = ordered(keep_intervals(words, quiet, duration, max_pause, hold=sp.get("hold", [])), ranges)
     # snap every piece to the frame grid so picture and sound keep exactly the same length (no lip-sync drift)
-    keep = [(round(a / fd) * fd, round(b / fd) * fd) for a, b in keep_intervals(words, quiet, duration, max_pause, hold=sp.get("hold", []))]
-    keep = [(round(a, 4), round(b, 4)) for a, b in keep if b > a]
-    vsel = "+".join(f"between(t,{a - fd / 2:.4f},{b - fd / 2:.4f})" for a, b in keep)
-    asel = "+".join(f"between(t,{a},{b})" for a, b in keep)
-    vf = f"select='{vsel}',setpts=N/FRAME_RATE/TB,setpts=PTS/{tempo}"
-    af = f"aselect='{asel}',asetpts=N/SR/TB,atempo={tempo}"
+    keep = [(round(round(a / fd) * fd, 4), round(round(b / fd) * fd, 4)) for a, b in keep]
+    keep = [(a, b) for a, b in keep if b > a]
     out = os.path.join(build, "fast.mp4")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf, "-af", af, "-r", rate,
-                    "-c:v", "libx264", "-crf", "12", "-preset", "fast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", out],
-                   check=True)
-    json.dump({"tempo": tempo, "keep": keep}, open(os.path.join(build, "timemap.json"), "w"), indent=1)
-    new = to_output(duration, keep, tempo)
-    print(f"speed: {duration:.1f}s -> {new:.1f}s ({len(keep) - 1} pauses shortened, tempo {tempo}) -> {out}")
+    enc = ["-r", rate, "-c:v", "libx264", "-crf", "12", "-preset", "fast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", out]
+    if "order" not in sp:
+        vsel = "+".join(f"between(t,{a - fd / 2:.4f},{b - fd / 2:.4f})" for a, b in keep)
+        asel = "+".join(f"between(t,{a},{b})" for a, b in keep)
+        vf = f"select='{vsel}',setpts=N/FRAME_RATE/TB,setpts=PTS/{tempo}"
+        af = f"aselect='{asel}',asetpts=N/SR/TB,atempo={tempo}"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf, "-af", af] + enc, check=True)
+    else:
+        # reordered: trim + concat; 6 ms fades so joins inside speech do not click
+        parts, labels = [], []
+        for i, (a, b) in enumerate(keep):
+            fa, fb = round(a / fd), round(b / fd)
+            parts.append(f"[0:v]trim=start_frame={fa}:end_frame={fb},setpts=PTS-STARTPTS[v{i}];"
+                         f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,afade=t=in:d=0.006,afade=t=out:st={b - a - 0.006:.4f}:d=0.006[a{i}]")
+            labels.append(f"[v{i}][a{i}]")
+        fc = ";".join(parts) + ";" + "".join(labels) + f"concat=n={len(keep)}:v=1:a=1[cv][ca];" \
+             f"[cv]setpts=PTS/{tempo}[v];[ca]atempo={tempo}[a]"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-filter_complex", fc, "-map", "[v]", "-map", "[a]"] + enc,
+                       check=True)
+    json.dump({"tempo": tempo, "keep": keep, "ranges": ranges}, open(os.path.join(build, "timemap.json"), "w"), indent=1)
+    new = sum(b - a for a, b in keep) / tempo
+    print(f"speed: {duration:.1f}s -> {new:.1f}s ({len(keep) - len(ranges)} pauses shortened, tempo {tempo}) -> {out}")
 
 if __name__ == "__main__":
     main()

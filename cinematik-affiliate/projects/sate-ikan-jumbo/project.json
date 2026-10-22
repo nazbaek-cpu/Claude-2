@@ -1,17 +1,8 @@
 {
   "source": "input/source.mp4",
   "whisper_prompt": "Sate ikan dari Pulau Pangkor dan Langkawi. Sira. Lembut.",
-  "theme": "skrip",
-  "cta": "Dapatkan di link bawah",
-  "hflip": true,
-  "speed": {"tempo": 1.12, "max_pause": 0.22},
-  "zoom": 1.12,
+  "preset": "food",
   "top_offset": -170,
-  "title_pos": "top",
-  "behind": false,
-  "sfx_gain_db": 0,
-  "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
-             "lip_rgb": [164, 114, 102], "lip_amount": 0.65, "brows": 0.0},
   "segments": [
     {"start": 0.08, "end": 7.50, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}},
     {"start": 8.98, "end": 16.10, "kicker": "Jumbo", "head": "Besar sangat."},

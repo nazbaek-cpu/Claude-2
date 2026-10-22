@@ -8,6 +8,7 @@ blur-in animations, headlines tucked behind the subject, pills, count-up, yellow
 import argparse, json, math, os, subprocess
 import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import project
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H = 1080, 1920
@@ -68,7 +69,7 @@ def probe(path):
 
 def load(prj):
     """project.json with end=null resolved to the video length; with "speed", times move onto build/fast.mp4"""
-    cfg = json.load(open(os.path.join(prj, "project.json")))
+    cfg = project.read(prj)
     cfg["source"] = os.path.join(prj, cfg["source"])
     tm = os.path.join(prj, "build", "timemap.json")
     if cfg.get("speed") and os.path.exists(tm):

@@ -6,6 +6,7 @@ changes on every phrase hides the jump. Project times stay in source seconds; re
     python speed.py projects/<name>     -> build/fast.mp4 + build/timemap.json
 """
 import json, os, re, subprocess, sys
+import project
 
 def silences(src, noise_db, min_len):
     """[(start, end)] of real silence, from ffmpeg silencedetect"""
@@ -57,7 +58,7 @@ def ordered(keep, ranges):
 
 def main():
     prj = sys.argv[1]
-    cfg = json.load(open(os.path.join(prj, "project.json")))
+    cfg = project.read(prj)
     sp = cfg["speed"]; tempo = sp.get("tempo", 1.12); max_pause = sp.get("max_pause", 0.22)
     src = os.path.join(prj, cfg["source"]); build = os.path.join(prj, "build")
     words = json.load(open(os.path.join(build, "words.json")))

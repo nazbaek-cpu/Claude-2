@@ -7,6 +7,7 @@ Copy the draft into project.json "subs", fix the spelling, then plan the segment
 import argparse, json, os, subprocess
 import numpy as np
 from faster_whisper import WhisperModel
+import project
 
 MAX_CHARS, GAP = 36, 0.25
 
@@ -28,7 +29,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("project"); ap.add_argument("--model", default="medium"); ap.add_argument("--lang", default="ms")
     args = ap.parse_args()
-    cfg = json.load(open(os.path.join(args.project, "project.json")))
+    cfg = project.read(args.project)
     src = os.path.join(args.project, cfg["source"])
     pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", src, "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
                          capture_output=True, check=True).stdout

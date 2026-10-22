@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import render, sfx, speed, transcribe, voice  # noqa: E402
+import project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -138,6 +138,13 @@ def test_reorder_puts_hook_first_and_clips_spans():
     assert speed.to_output(5.5, keep, 1.0) == 0.5            # hook plays first
     assert speed.to_output(1.0, keep, 1.0) == 3.0            # then the start of the take
     assert speed.span(6.0, 8.0, keep, 1.0, ranges) == pytest.approx((1.0, 1.999))   # a subtitle never runs past its piece
+
+
+def test_food_preset_fills_in_and_project_wins():
+    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "sate-ikan-jumbo"))
+    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True
+    assert cfg["top_offset"] == -170                                  # set by the project itself
+    assert project.merge({"a": {"x": 1, "y": 2}}, {"a": {"y": 3}}) == {"a": {"x": 1, "y": 3}}
 
 
 def test_example_project_is_valid_json():

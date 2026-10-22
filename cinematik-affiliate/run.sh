@@ -13,8 +13,9 @@ PY=python3; [ -x .venv/bin/python ] && PY=.venv/bin/python
 [ -f "$PRJ/project.json" ] || { echo "no project.json in $PRJ" >&2; exit 1; }
 
 prep() {  # pause/tempo pass (only when project.json has "speed"), studio voice, then the SFX track
-  if grep -q '"speed"' "$PRJ/project.json"; then $PY speed.py "$PRJ"; fi
-  if ! grep -q '"studio": false' "$PRJ/project.json"; then $PY voice.py "$PRJ"; fi
+  opt() { $PY -c "import sys, project; c = project.read(sys.argv[1]); sys.exit(0 if eval(sys.argv[2]) else 1)" "$PRJ" "$1"; }
+  if opt 'c.get("speed")'; then $PY speed.py "$PRJ"; fi
+  if opt 'c.get("voice", {}).get("studio", True)'; then $PY voice.py "$PRJ"; fi
   $PY sfx.py "$PRJ"
 }
 case "${1:-}" in

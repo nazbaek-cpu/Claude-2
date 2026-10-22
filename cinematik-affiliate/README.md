@@ -20,6 +20,36 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 
 All text animates in and out with blur + fade (0.32 s in, 0.25 s out).
 
+## Cinematik Food Affiliate (preset `food`)
+
+The food-review look, saved as a preset so a new project only needs its own text:
+
+- **Text:** yellow handwritten line (Pacifico, thin white outline) over bold white Plus Jakarta Sans.
+- **Title:** centred above the head.
+- **CTA:** "Dapatkan di link bawah".
+- **Also on:**
+  - studio voice
+  - speed pass (1.12×, pauses 0.22 s)
+  - selfie un-mirroring
+  - natural lips, brows untouched
+  - headlines in front of the subject
+
+```jsonc
+{
+  "source": "input/source.mp4",
+  "preset": "food",                  // presets/food.json; anything set here wins over the preset
+  "top_offset": -170,                // per take: how high the head sits
+  "segments": [
+    {"start": 0.1, "end": 7.5, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}},
+    {"start": 9.0, "end": 16.1, "kicker": "Jumbo", "head": "Besar sangat."},
+    {"start": 40.5, "end": null, "cta": true, "head": "Jom cuba.", "offset": -70}
+  ],
+  "subs": [[0.08, 2.15, "Kalau pergi Pulau Pangkor,"]]
+}
+```
+
+Example: `projects/sate-ikan-jumbo/`.
+
 ## Quick start
 
 ```bash
@@ -79,6 +109,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 |---|---|
 | `render.py` | grade, beauty, zoom cuts, text layers, person mask, encode + audio mix |
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
+| `project.py` | reads `project.json` over its `"preset"` (`presets/*.json`) |
 | `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
 | `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |

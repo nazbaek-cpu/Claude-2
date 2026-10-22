@@ -56,6 +56,12 @@ def test_top_title_and_top_offset(cfg):
     assert back[0][2] == render.HEAD_Y - 80
 
 
+def test_project_wide_front_and_segment_offset(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "Hai.", "offset": -60}
+    back, front = render.layers(dict(cfg, segments=[seg], subs=[], behind=False, top_offset=-150), 2.0)
+    assert not back and front[1][2] == render.HEAD_Y - 60
+
+
 def test_zoom_alternates_per_phrase(cfg):
     zooms = [render.zoom_for(cfg, s[0] + 0.01) for s in cfg["subs"][:4]]
     assert zooms == [1.0, cfg["zoom"], 1.0, cfg["zoom"]]

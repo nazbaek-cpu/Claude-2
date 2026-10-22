@@ -223,21 +223,24 @@ def layers(cfg, t):
         t0, t1 = s["start"], s["end"]
         a = vis(t, t0, t1)
         if a <= 0: continue
+        soy = s.get("offset", oy)   # per-segment override, e.g. a count-up that must stay clear of the app's top bar
         if s.get("kicker"):
-            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + oy))
+            front.append((anim(text_img(s["kicker"], K_FONT, track=7), a), 540, (KICK_Y if "count" not in s else 245) + soy))
         if s.get("head"):
-            (back if s.get("behind", True) else front).append((anim(text_img(s["head"], H_FONT), a), 540, HEAD_Y + oy))
+            behind = s.get("behind", cfg.get("behind", True))   # in front: soft shadow so it reads on a light hijab
+            (back if behind else front).append((anim(text_img(s["head"], H_FONT, shadow=not behind), a), 540, HEAD_Y + soy))
         if "count" in s:
             p = ease_out((t - t0 - 0.1) / 1.2)
-            back.append((anim(text_img(count_text(s, t), N_FONT), a), 540, 385 + oy))
+            behind = s.get("behind", cfg.get("behind", True))
+            (back if behind else front).append((anim(text_img(count_text(s, t), N_FONT, shadow=not behind), a), 540, 385 + soy))
             la = a * ease_out((t - t0 - 0.6) / 0.35)
             if la > 0 and s.get("label"):
-                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528 + oy))
+                front.append((anim(text_img(s["label"], L_FONT, shadow=True), la), 540, 528 + soy))
             bw = int(240 * p)
             if bw > 4:
                 bar = Image.new("RGBA", (bw, 8), GREEN + (0,)); bm = Image.new("L", (bw, 8), 0)
                 ImageDraw.Draw(bm).rounded_rectangle((0, 0, bw - 1, 7), radius=4, fill=255); bar.putalpha(bm)
-                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572 + oy))
+                front.append((anim(bar, a, 1.0), 540 - 120 + bw / 2, 572 + soy))
         if s.get("pills"):
             imgs = [pill(txt, P_FONT, (255, 255, 255), (20, 20, 20)) for txt, _ in s["pills"]]
             gap = 16; total = sum(i.width for i in imgs) + gap * (len(imgs) - 1)
@@ -247,11 +250,11 @@ def layers(cfg, t):
                 if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, PILL_Y))
                 x += im.width + gap
         if s.get("cta"):
-            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y + oy))
+            front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y + soy))
             ca = min(a, vis(t, t0 + 0.3, t1, 0.25))
             if ca > 0:
                 bob = 7 * math.sin(2 * math.pi * 1.4 * (t - t0))
-                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + oy + 72 + bob))
+                front.append((anim(chevrons(), ca, 1.0), 540, CTA_Y + soy + 72 + bob))
     for s0, s1, txt in cfg["subs"]:
         if s0 <= t < s1:
             front.append((text_img(txt, S_FONT, shadow=True), 540, sub_y))

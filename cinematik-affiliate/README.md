@@ -5,7 +5,7 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | Element | What it does |
 |---|---|
 | **Grade** | Warm, muted, highlights held back, lifted blacks, vignette. Top of the frame darkened for headlines, bottom slightly darkened for subtitles. |
-| **Beauty** | Even, smooth skin that keeps about 30% of pore texture. Soft rosy-nude lipstick. Brows untouched by default. Uses MediaPipe face landmarks, so eyes, hijab and background are left alone. |
+| **Beauty** | Even, smooth skin that keeps about 30% of pore texture. Natural nude-rose lip tone (pulls back strong red). Brows untouched by default. Uses MediaPipe face landmarks, so eyes, hijab and background are left alone. |
 | **Cuts** | Hard-cut punch-in (1.0 ↔ 1.12) on every subtitle phrase, so a single take feels multi-cam. |
 | **Title card** | Opening block, left-aligned over a soft dark scrim: tracked accent kicker, two big Plus Jakarta Sans ExtraBold lines with accent-coloured words, short accent underline. |
 | **Kicker** | `PUFFER SLING BAG`: small caps, wide tracking (Inter Medium). |
@@ -42,7 +42,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "zoom": 1.12,                       // punch-in on every other phrase
   "sfx_gain_db": 0,                   // +3 for louder SFX, -100 to mute
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
-             "lip_rgb": [186, 92, 102], "lip_amount": 0.4, "brows": 0.0},   // brows 0.2 = soft fill
+             "lip_rgb": [164, 114, 102], "lip_amount": 0.65, "brows": 0.0},   // natural nude-rose lips; brows 0.2 = soft fill
+  "behind": true,                     // false puts every headline/number in front (with a soft shadow) when the head fills the top
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
   "hflip": false,                     // true un-mirrors selfie footage (text on the product reads the right way)
@@ -80,6 +81,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `sfx.py` | builds `build/sfx.wav` from the segments |
 | `transcribe.py` | faster-whisper word times → phrase subtitles draft |
 | `projects/puffer-bag/` | example: puffer sling bag review (Malay) |
+| `projects/latihan-matematik/` | example: maths workbooks, head high in frame (front headlines, per-segment offset), two count-ups (Malay) |
 | `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

@@ -13,8 +13,8 @@ BROW_L = [300,293,334,296,336,285,295,282,283,276]
 SMOOTH = 0.80          # how much of the skin gets the smoothed version
 KEEP_TEXTURE = 0.32    # fraction of pore detail kept (natural, not plastic)
 TONE_EVEN = 0.75       # how much blotchy colour is evened out
-LIP_RGB = (186, 92, 102)  # soft rosy nude (MLBB)
-LIP_AMT = 0.40         # 0 = no lipstick
+LIP_RGB = (164, 114, 102)  # natural nude-rose: evens the lip tone, pulls back strong red
+LIP_AMT = 0.65         # 0 = lips untouched
 BROW_AMT = 0.0         # 0 = brows untouched; ~0.2 = soft brown fill
 
 def configure(cfg):

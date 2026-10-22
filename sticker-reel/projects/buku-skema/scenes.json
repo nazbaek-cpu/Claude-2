@@ -1,0 +1,86 @@
+{
+  "scenes": [
+    {"at": "spm dah nak",
+     "poses": [{"pose": "tunjuk_korang", "x": -60}, {"at": "lemah", "pose": "terkejut", "x": 40}, {"at": "nak dapat b", "pose": "berfikir", "x": -30}],
+     "items": [
+       {"type": "kick", "text": "SPM DAH NAK DEKAT!", "at": "spm", "top": 160},
+       {"type": "icon", "icon": "⏰", "at": "dah nak dekat", "left": 840, "top": 110, "size": 150},
+       {"type": "text", "text": "anak masih lemah", "serif": true, "size": 100, "anim": "up", "at": "anak masih", "out": "nak dapat b-0.1", "top": 300},
+       {"type": "text", "text": "MATEMATIK?", "size": "xl", "color": "accent2", "icon": "📐", "at": "matematik", "out": "nak dapat b-0.1", "top": 450},
+       {"type": "text", "text": "B", "size": 300, "color": "accent2", "anim": "slam", "at": "dapat b", "left": 170, "top": 300},
+       {"type": "arrow", "at": "tapi susah", "left": 440, "top": 430},
+       {"type": "text", "text": "A?", "size": 300, "color": "accent", "anim": "slam", "rot": 6, "at": "capai a", "left": 650, "top": 300},
+       {"type": "text", "text": "susah nak capai…", "serif": true, "size": 96, "anim": "up", "at": "susah nak", "top": 730}
+     ]},
+    {"at": "sebenarnya anak",
+     "poses": [{"pose": "tenang_yakin", "x": 50}, {"at": "markah hilang", "pose": "isyarat_tangan", "x": -40}],
+     "items": [
+       {"type": "text", "text": "Sebenarnya…", "serif": true, "size": 110, "anim": "up", "at": "sebenarnya", "top": 160},
+       {"type": "chip", "text": "anak bukan tak pandai", "icon": "🙅", "size": 62, "at": "bukan tak pandai", "top": 320},
+       {"type": "blowtext", "text": "MARKAH", "size": 170, "color": "accent2", "at": "markah hilang", "blow_at": "hilang+0.15", "top": 500},
+       {"type": "chip", "text": "hilang sebab jalan kira tak lengkap", "icon": "❌", "bg": "ink", "size": 46, "at": "sebab jalan", "top": 760}
+     ]},
+    {"at": "buku skema jawapan", "flash": true, "riser": true,
+     "poses": [{"pose": "senyum_lebar", "x": -20}, {"at": "cikgu cemerlang", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "chip", "text": "{{series}}", "bg": "navy", "size": 66, "anim": "drop", "rot": -3, "at": "buku skema", "top": 140},
+       {"type": "image", "src": "tip_peperiksaan.jpg", "width": 600, "rot": -2, "at": "jawapan spm", "top": 270},
+       {"type": "stamp", "text": "✍️ CIKGU CEMERLANG", "size": 64, "rot": -3, "at": "ditulis oleh", "top": 960},
+       {"type": "chip", "text": "& TERLATIH", "bg": "ink", "size": 48, "anim": "pop", "rot": 4, "at": "terlatih", "left": 640, "top": 1075}
+     ]},
+    {"at": "tengok ni setiap",
+     "poses": [{"pose": "tunjuk_korang", "x": 40}, {"at": "markah yang penuh", "pose": "kenyit_peace", "x": -40}],
+     "items": [
+       {"type": "text", "text": "TENGOK NI!", "color": "white", "icon": "👀", "at": "tengok ni", "top": 130},
+       {"type": "image", "src": "penyelesaian_k1n1.jpg", "width": 520, "anim": "left", "rot": -3, "at": "setiap soalan", "left": 40, "top": 270},
+       {"type": "chip", "text": "STEP BY STEP", "bg": "navy", "size": 50, "anim": "slam", "rot": 5, "at": "step by", "left": 590, "top": 330},
+       {"type": "chip", "text": "K1 = kaedah", "icon": "✅", "size": 48, "anim": "right", "at": "cara nak", "left": 610, "top": 470},
+       {"type": "chip", "text": "N1 = nilai", "icon": "✅", "size": 48, "anim": "right", "at": "dapat markah", "left": 630, "top": 590},
+       {"type": "stamp", "text": "MARKAH PENUH!", "icon": "💯", "size": 92, "rot": -4, "at": "markah yang penuh", "top": 940, "sfx": "sparkle"}
+     ]},
+    {"at": "siap dengan kesalahan",
+     "poses": [{"pose": "berfikir", "x": -40}, {"at": "tak ulang", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "kick", "text": "KESALAHAN UMUM PELAJAR", "at": "kesalahan umum", "top": 130},
+       {"type": "image", "src": "kesalahan_umum.jpg", "width": 500, "anim": "left", "rot": -4, "at": "kesalahan umum", "left": 40, "top": 230},
+       {"type": "chip", "text": "SALAH", "icon": "❌", "bg": "accent", "size": 54, "anim": "slam", "rot": -8, "at": "umum pelajar", "left": 60, "top": 640},
+       {"type": "image", "src": "betul.jpg", "width": 460, "anim": "right", "rot": 3, "at": "supaya", "left": 580, "top": 420},
+       {"type": "chip", "text": "BETUL", "icon": "✅", "bg": "accent2", "size": 54, "anim": "slam", "rot": 6, "at": "supaya anak", "left": 660, "top": 720},
+       {"type": "stamp", "text": "TAK ULANG SILAP!", "size": 84, "rot": -3, "at": "tak ulang", "top": 960}
+     ]},
+    {"at": "sesuai untuk calon",
+     "poses": [{"pose": "kenyit_peace", "x": 0}, {"at": "banyak lagi", "pose": "senyum_lebar", "x": 40}],
+     "items": [
+       {"type": "text", "text": "CALON SPM", "size": "xl", "color": "white", "anim": "slam", "at": "calon spm", "top": 140},
+       {"type": "chip", "text": "TINGKATAN 4", "bg": "accent2", "size": 52, "rot": -5, "at": "tingkatan 4", "left": 90, "top": 320},
+       {"type": "chip", "text": "TINGKATAN 5", "bg": "accent", "size": 52, "rot": 5, "at": "dan 5", "left": 590, "top": 320},
+       {"type": "text", "text": "bukan Matematik je…", "serif": true, "size": 90, "anim": "up", "at": "bukan matematik", "top": 450},
+       {"type": "tiles", "top": 580, "items": [
+         {"icon": "⚛️", "label": "FIZIK", "at": "fizik", "rot": -4},
+         {"icon": "🧪", "label": "KIMIA", "at": "kimia", "rot": 3},
+         {"icon": "📜", "label": "SEJARAH", "at": "sejarah", "rot": -2}]},
+       {"type": "chip", "text": "+ banyak lagi subjek!", "bg": "ink", "size": 54, "at": "banyak lagi", "top": 1000}
+     ]},
+    {"at": "ni bukan skema",
+     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "cara nak jawab", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "chip", "text": "skema bagi jawapan je", "icon": "📄", "bg": "grey", "size": 66, "at": "ni bukan", "strike_at": "jawapan je", "top": 190},
+       {"type": "chip", "text": "BUKAN", "bg": "accent", "size": 54, "anim": "slam", "rot": -10, "at": "bukan skema", "left": 60, "top": 120},
+       {"type": "kick", "text": "BUKU NI AJAR ANAK", "at": "buku ni", "top": 420},
+       {"type": "stamp", "text": "CARA JAWAB DENGAN BETUL", "icon": "✅", "size": 66, "rot": -3, "at": "cara nak jawab", "top": 530, "sfx": "sparkle"},
+       {"type": "image", "src": "kaedah_alternatif.jpg", "width": 640, "anim": "rise", "rot": 2, "at": "dengan betul", "top": 760}
+     ]},
+    {"at": "bantu anak upgrade", "flash": true,
+     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "dapatkan", "pose": "melambai_hai", "x": 20}],
+     "items": [
+       {"type": "kick", "text": "{{series}}", "at": "bantu", "top": 130},
+       {"type": "text", "text": "UPGRADE", "size": 110, "color": "accent2", "anim": "slam", "at": "upgrade", "top": 240},
+       {"type": "text", "text": "B", "size": 280, "color": "accent2", "anim": "pop", "at": "dari b", "left": 200, "top": 380},
+       {"type": "arrow", "at": "kepada", "left": 440, "top": 500},
+       {"type": "text", "text": "A", "size": 320, "color": "accent", "anim": "slam", "rot": 6, "at": "kepada a", "left": 670, "top": 350, "sfx": "sparkle"},
+       {"type": "icon", "icon": "✨", "anim": "pop", "at": "kepada a+0.1", "left": 880, "top": 330, "size": 110},
+       {"type": "text", "text": "DALAM SPM!", "size": 90, "color": "white", "anim": "up", "at": "dalam spm", "top": 760},
+       {"type": "cta", "text": "{{cta_short}}", "icon": "👇", "size": 64, "at": "dapatkan", "cursor_at": "dapatkan+1.0", "top": 980}
+     ]}
+  ]
+}

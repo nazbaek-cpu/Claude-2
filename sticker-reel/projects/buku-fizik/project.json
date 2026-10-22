@@ -1,0 +1,32 @@
+{
+  "title": "Modul Konstruk Fizik - sticker reel",
+  "language": "ms",
+  "whisper_model": "large-v3",
+  "vars": {
+    "product": "Modul Konstruk Fizik",
+    "product_short": "buku Fizik",
+    "series": "MODUL KONSTRUK 2026",
+    "author": "Cikgu Cemerlang Fizik",
+    "author_name": "A. H. Roslan",
+    "cta_line": "dapatkan link di bawah.",
+    "cta_short": "Dapatkan link di bawah"
+  },
+  "vo": {"file": "input/vo.mp4", "tempo": 1.25, "pause_s": 0.2, "silence_db": "auto", "tail_s": 1.0},
+  "stickers": {
+    "ready": {
+      "tenang_depan": "input/poses/tenang_depan.png", "senyum_tangan_pipi": "input/poses/senyum_tangan_pipi.png",
+      "kenyit_peace": "input/poses/kenyit_peace.png", "terkejut": "input/poses/terkejut.png", "berfikir": "input/poses/berfikir.png",
+      "thumbs_up": "input/poses/thumbs_up.png", "tunjuk_korang": "input/poses/tunjuk_korang.png", "manja_hmm": "input/poses/manja_hmm.png",
+      "isyarat_tangan": "input/poses/isyarat_tangan.png", "tenang_yakin": "input/poses/tenang_yakin.png",
+      "senyum_lebar": "input/poses/senyum_lebar.png", "melambai_hai": "input/poses/melambai_hai.png"
+    },
+    "face_px": 300, "max_h": 720, "outline_px": 30
+  },
+  "theme": {"bg1": "#F4FAFF", "bg2": "#D6EBFF", "bg3": "#B3D7FA", "accent": "#E8343F", "accent2": "#1E5BB8", "navy": "#1C2B5A", "key": "#FFD23C"},
+  "background": {"rays": true, "doodles": ["bg/f0.svg", "bg/f1.svg", "bg/f2.svg", "bg/f3.svg", "bg/f4.svg", "bg/f5.svg", "bg/f6.svg", "bg/f7.svg"]},
+  "captions": {"max_words": 3, "max_chars": 18,
+               "keywords": ["fizik", "formula", "hafal", "mnemonik", "ilustrasi", "kreatif", "konstruk", "spm", "tingkatan", "penyelesai",
+                            "skor", "link", "exam", "ingat"]},
+  "music": {"generate": {"bpm": 104, "key": "C", "mood": "bright", "seed": 3}, "gain_db": -6, "duck_db": 4},
+  "sfx_gain": 0.5
+}

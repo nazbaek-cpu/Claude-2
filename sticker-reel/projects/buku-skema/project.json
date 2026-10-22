@@ -1,0 +1,30 @@
+{
+  "title": "Buku Skema Jawapan SPM - sticker reel",
+  "language": "ms",
+  "whisper_model": "large-v3",
+  "vars": {
+    "product_short": "Buku skema jawapan SPM",
+    "series": "SKEMA JAWAPAN SPM",
+    "author": "cikgu cemerlang dan terlatih",
+    "cta_line": "Dapatkan dekat link di bawah.",
+    "cta_short": "Dapatkan di link bawah"
+  },
+  "vo": {"file": "input/vo.mp4", "tempo": 1.32, "pause_s": 0.2, "silence_db": "auto", "tail_s": 1.0},
+  "stickers": {
+    "ready": {
+      "tenang_depan": "input/poses/tenang_depan.png", "senyum_tangan_pipi": "input/poses/senyum_tangan_pipi.png",
+      "kenyit_peace": "input/poses/kenyit_peace.png", "terkejut": "input/poses/terkejut.png", "berfikir": "input/poses/berfikir.png",
+      "thumbs_up": "input/poses/thumbs_up.png", "tunjuk_korang": "input/poses/tunjuk_korang.png", "manja_hmm": "input/poses/manja_hmm.png",
+      "isyarat_tangan": "input/poses/isyarat_tangan.png", "tenang_yakin": "input/poses/tenang_yakin.png",
+      "senyum_lebar": "input/poses/senyum_lebar.png", "melambai_hai": "input/poses/melambai_hai.png"
+    },
+    "face_px": 300, "max_h": 720, "outline_px": 30
+  },
+  "theme": {"bg1": "#F4FAFF", "bg2": "#D6EBFF", "bg3": "#B3D7FA", "accent": "#E8343F", "accent2": "#1E5BB8", "navy": "#1C2B5A", "green": "#1DB954", "key": "#FFD23C"},
+  "background": {"rays": true, "doodles": ["bg/m0.svg", "bg/m1.svg", "bg/m2.svg", "bg/m3.svg", "bg/m4.svg", "bg/m5.svg", "bg/m6.svg", "bg/m7.svg"]},
+  "captions": {"max_words": 3, "max_chars": 18,
+               "keywords": ["spm", "matematik", "lemah", "b", "a", "markah", "penuh", "jalan", "kira", "kesalahan", "umum", "silap",
+                            "tingkatan", "fizik", "kimia", "sejarah", "betul", "upgrade", "link"]},
+  "music": {"generate": {"bpm": 100, "key": "D", "mood": "bright", "seed": 7}, "gain_db": -6, "duck_db": 4},
+  "sfx_gain": 0.6
+}

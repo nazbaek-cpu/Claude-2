@@ -1,0 +1,37 @@
+{
+  "title": "Buku Melukis - sticker reel",
+  "language": "ms",
+  "whisper_model": "large-v3",
+  "vars": {
+    "product": "Buku Melukis",
+    "brand": "BESTNYA! BUKU LUKIS",
+    "author": "penulis",
+    "workshops": 40,
+    "sold_thousands": 200,
+    "price": "RM6",
+    "cta_line": "Besarkan potensi anak, dapatkan di link.",
+    "cta_short": "Dapatkan di link",
+    "cta_big": "Besarkan potensi anak,"
+  },
+  "vo": {"file": "input/vo.mp3", "tempo": 1.12, "pause_s": 0.2, "silence_db": -38, "tail_s": 1.0},
+  "stickers": {
+    "grid": {"file": "input/poses/grid.png", "cols": 3, "rows": 2},
+    "names": ["tenang_depan", "senyum_tangan_pipi", "kenyit_peace", "terkejut", "berfikir", "thumbs_up"],
+    "ready": {
+      "tunjuk_korang": "input/poses/tunjuk_korang.png",
+      "manja_hmm": "input/poses/manja_hmm.png",
+      "isyarat_tangan": "input/poses/isyarat_tangan.png",
+      "tenang_yakin": "input/poses/tenang_yakin.png",
+      "senyum_lebar": "input/poses/senyum_lebar.png",
+      "melambai_hai": "input/poses/melambai_hai.png"
+    },
+    "face_px": 300, "max_h": 720, "outline_px": 30
+  },
+  "theme": {"bg1": "#FFE46E", "bg2": "#FFD23C", "bg3": "#FFC41E", "accent": "#FF2E7E", "accent2": "#1FA2E8", "navy": "#1C2B5A", "key": "#FFD23C"},
+  "background": {"rays": true, "doodles": ["doodle/gembira.png", "doodle/sayang.png", "doodle/seronok.png", "doodle/yakin.png",
+                                          "doodle/keliru.png", "doodle/terkejut.png", "doodle/malu.png", "doodle/marah.png"]},
+  "captions": {"max_words": 3, "max_chars": 18,
+               "keywords": ["melukis", "kreatif", "bakat", "karakter", "40", "bengkel", "komik", "pencipta", "kreativiti", "buku",
+                            "jangan", "abaikan", "hilang", "sendiri", "step", "hero", "haiwan", "potensi", "link"]},
+  "sfx_gain": 0.5
+}

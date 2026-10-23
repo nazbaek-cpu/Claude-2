@@ -1,6 +1,7 @@
 {
   "_name": "Cinematik Affiliate (product)",
   "cta": "Dapatkan di link bawah",
+  "hflip": "auto",
   "accent_rgb": [233, 185, 73],
   "speed": {"tempo": 1.12, "max_pause": 0.22},
   "zoom": 1.12,

@@ -71,6 +71,9 @@ def load(prj):
     """project.json with end=null resolved to the video length; with "speed", times move onto build/fast.mp4"""
     cfg = project.read(prj)
     cfg["source"] = os.path.join(prj, cfg["source"])
+    if cfg.get("hflip") == "auto":  # mirrored product text -> flip (OCR, cached in build/mirror.json)
+        import mirror
+        cfg["hflip"] = mirror.cached(prj, cfg["source"])
     tm = os.path.join(prj, "build", "timemap.json")
     if cfg.get("speed") and os.path.exists(tm):
         from speed import span, to_output

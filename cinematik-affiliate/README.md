@@ -14,6 +14,7 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | **Pills** | White rounded tags that pop in one by one at the moment the word is said. |
 | **CTA** | Yellow `Beli di beg kuning` pill with bouncing ⌄⌄ chevrons. |
 | **Subtitles** | Inter SemiBold with a soft shadow, cut per phrase, no animation. |
+| **Un-mirror** | `"hflip": "auto"` reads the product text both ways and flips a mirrored front-camera take, so book titles and labels never show backwards. |
 | **Pace** | Optional `speed`: long pauses shortened to 0.22 s and a 1.12× pitch-preserving tempo, so slow talking feels brisk but natural. Project times stay in source seconds. |
 | **Voice** | "Expensive mic" chain (on by default): DeepFilterNet AI denoise, phrase-by-phrase auto-levelling so the voice never fades in and out, warm close-mic EQ, de-esser, two gentle compressors, light saturation, −14 LUFS. `"voice": {"studio": false}` turns it off. |
 | **Audio** | Voice at −14 LUFS. SFX synthesized from scratch: a whoosh on each headline, a pop per pill, a tick per count step and a ding on each CTA. |
@@ -30,7 +31,7 @@ The food-review look, saved as a preset so a new project only needs its own text
 - **Also on:**
   - studio voice
   - speed pass (1.12×, pauses 0.22 s)
-  - selfie un-mirroring
+  - automatic un-mirroring when the product text reads backwards
   - natural lips, brows untouched
   - headlines in front of the subject
 
@@ -80,7 +81,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
                                       // the title is "lines": ["bold line", "handwritten line"]
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
-  "hflip": false,                     // true un-mirrors selfie footage (text on the product reads the right way)
+  "hflip": "auto",                    // "auto" (preset default): OCR checks the product text and flips a mirrored take;
+                                      // true / false force it
   "speed": {"tempo": 1.12, "max_pause": 0.22, "hold": [[20.6, 28.4]]},   // optional: shrink pauses + gentle tempo-up; "hold" = silent moments to keep (a bite, showing the inside); "order": [[22.5, 27.6], [0, 22.5], [27.6, null]] plays a moment first as the hook
   "top_offset": 0,                    // e.g. -80 lifts kickers/headlines/CTA when the head sits high in frame
   "segments": [                       // what sits at the top of the frame, in seconds
@@ -111,6 +113,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `render.py` | grade, beauty, zoom cuts, text layers, person mask, encode + audio mix |
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
 | `project.py` | reads `project.json` over its `"preset"` (`presets/*.json`) |
+| `mirror.py` | `"hflip": "auto"`: OCRs 16 frames as shot and flipped (RapidOCR); flips when only the flipped side reads. `python mirror.py projects/<name>` shows what it read |
 | `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
 | `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |

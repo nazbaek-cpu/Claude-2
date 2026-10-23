@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import project, render, sfx, speed, transcribe, voice  # noqa: E402
+import mirror, project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -148,9 +148,20 @@ def test_reorder_puts_hook_first_and_clips_spans():
 
 def test_food_preset_fills_in_and_project_wins():
     cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "sate-ikan-jumbo"))
-    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True
+    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] == "auto"
     assert cfg["top_offset"] == -170                                  # set by the project itself
     assert project.merge({"a": {"x": 1, "y": 2}}, {"a": {"y": 3}}) == {"a": {"x": 1, "y": 3}}
+
+
+def test_mirror_verdict_needs_a_clear_winner():
+    assert mirror.verdict(7, 602) is True          # only the flipped frames read
+    assert mirror.verdict(300, 20) is False
+    assert mirror.verdict(40, 50) is None          # too close to call
+    assert mirror.verdict(3, 5) is None            # no real text in the take
+
+
+def test_auto_hflip_without_source_stays_unflipped(tmp_path):
+    assert mirror.cached(str(tmp_path), str(tmp_path / "missing.mp4")) is False
 
 
 def test_example_project_is_valid_json():

@@ -2,7 +2,7 @@
   "_name": "Cinematik Food Affiliate",
   "theme": "skrip",
   "cta": "Dapatkan di link bawah",
-  "hflip": true,
+  "hflip": "auto",
   "speed": {"tempo": 1.12, "max_pause": 0.22},
   "zoom": 1.12,
   "title_pos": "top",

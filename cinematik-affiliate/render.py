@@ -212,7 +212,97 @@ def scrim(a, pos="bottom"):
     img = cache[key]
     return img if a >= 0.999 else Image.merge("RGBA", (*img.split()[:3], img.getchannel("A").point(lambda v: int(v * a))))
 
+# "title_style": "orbit" -- title lines swing round a turning wall onto a frosted glass panel
+def orbit(img, p, out=False):
+    """img wrapped on a vertical cylinder that turns to face the camera as p goes 0 -> 1 (out: turns away)"""
+    if p >= 0.999: return img
+    w, h = img.width, img.height
+    e = ease_out(p)
+    th = (1 - e) * 1.35 * (1 if out else -1)       # radians the line is still turned about its vertical axis
+    bend = 0.35 * (1 - e)                           # the wall's curve, flattening as it lands
+    D = w * 1.6                                     # camera distance
+    xc = np.arange(w, dtype=np.float32) - w / 2
+    Z = xc * math.sin(th) + bend * xc * xc / w      # depth of each column (+ = away)
+    sc = D / (D + Z)
+    X = xc * math.cos(th) * sc                      # projected column position, monotonic while cos(th) > 0
+    cw, ch = w, int(h * 1.5)
+    u = np.arange(cw, dtype=np.float32) - cw / 2
+    order = np.argsort(X)
+    src_x = np.interp(u, X[order], xc[order] + w / 2, left=-1, right=-1)
+    s_u = np.interp(u, X[order], sc[order])
+    v = np.arange(ch, dtype=np.float32)[:, None] - ch / 2
+    map_x = np.repeat(src_x[None, :], ch, 0).astype(np.float32)
+    map_y = (v / s_u[None, :] + h / 2).astype(np.float32)
+    arr = cv2.remap(np.asarray(img), map_x, map_y, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+    shade = np.clip(s_u, 0, 1.2) ** 1.5             # the far side falls into shadow
+    arr = arr.astype(np.float32)
+    arr[..., :3] *= np.clip(shade, 0.45, 1)[None, :, None]
+    arr[..., 3] *= (src_x >= 0)[None, :] * min(1, 0.25 + e)
+    return Image.fromarray(arr.clip(0, 255).astype(np.uint8))
+
+def shadowed(img):
+    key = ("shadowed", id(img))
+    if key in cache: return cache[key]
+    pad = 24
+    out = Image.new("RGBA", (img.width + pad * 2, img.height + pad * 2), (0, 0, 0, 0))
+    sh = Image.new("RGBA", out.size, (0, 0, 0, 0)); sh.paste((0, 0, 0, 120), (pad, pad + 3), img.getchannel("A"))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(9))); out.alpha_composite(img, (pad, pad))
+    cache[key] = out
+    return out
+
+def glass(base, box, a, tint=0.30, radius=36):
+    """frosted glass: blur what is behind box, lay a white tint (tint = its opacity), soft rim and top sheen"""
+    x0, y0, x1, y1 = [int(round(c)) for c in box]
+    x0, y0, x1, y1 = max(x0, 0), max(y0, 0), min(x1, W), min(y1, H)
+    if a <= 0 or x1 <= x0 or y1 <= y0: return
+    key = ("glassmask", x1 - x0, y1 - y0, radius)
+    if key not in cache:
+        m = Image.new("L", ((x1 - x0) * 4, (y1 - y0) * 4), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=radius * 4, fill=255)
+        rim = Image.new("L", m.size, 0)
+        ImageDraw.Draw(rim).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=radius * 4, outline=255, width=8)
+        size = (x1 - x0, y1 - y0)
+        sheen = np.clip(1 - np.arange(size[1], dtype=np.float32) / (size[1] * 0.6), 0, 1)[:, None, None] * 0.10
+        cache[key] = (np.asarray(m.resize(size, Image.LANCZOS), np.float32)[..., None] / 255,
+                      np.asarray(rim.resize(size, Image.LANCZOS), np.float32)[..., None] / 255, sheen)
+    m, rim, sheen = cache[key]
+    reg = base[y0:y1, x0:x1]
+    frost = cv2.GaussianBlur(reg, (0, 0), 22) * (1 - tint) + 255 * tint
+    frost = frost * (1 - sheen) + 255 * sheen
+    reg[:] = reg * (1 - m * a) + frost * m * a
+    reg[:] = reg * (1 - rim * a * 0.55) + 255 * rim * a * 0.55
+
+def orbit_title(cfg, s, t, front):
+    t0, t1 = s["start"], s["end"]
+    tc = s["title"]; accent = tuple(cfg.get("accent_rgb", GOLD)); acc_words = set(tc.get("accent", []))
+    a = vis(t, t0, t1, 0.35, 0.45)
+    if a <= 0: return
+    pos = TITLE_POS[cfg.get("title_pos", "bottom")]
+    size = tc.get("size", 132)
+    if ("tl", size) not in cache: cache[("tl", size)] = TL_FONT if size == 132 else jakarta("ExtraBold", size)
+    fnt, lh = cache[("tl", size)], TITLE_LINE_H * size / 132
+    bottom = pos["line"] + (len(tc["lines"]) - 1) * lh + 108 * size / 132
+    rise = 24 * (1 - ease_out((t - t0) / 0.45))
+    front.append((("glass", (30, pos["kick"] - 52 + rise, W - 30, bottom + 44 + rise), a, cfg.get("glass", 0.30)), 0, 0))
+    k = shadowed(text_img(tc["kicker"], TK_FONT, fill=accent, track=6))
+    front.append((anim(k, a, 1.0), TITLE_X - 4 - 24 + k.width / 2, pos["kick"]))
+    leaving = t > t1 - 0.45
+    for i, line in enumerate(tc["lines"]):
+        words = line.split(" ")
+        runs = [(w + (" " if j < len(words) - 1 else ""), accent if w in acc_words else (255, 255, 255)) for j, w in enumerate(words)]
+        im = shadowed(rich_img(runs, fnt))
+        p = (t1 - t) / 0.45 if leaving else (t - t0 - 0.15 - 0.16 * i) / 0.75
+        if p <= 0: continue
+        cx = TITLE_X - 4 - 24 + im.width / 2       # the turned copy is centred on the flat line
+        front.append((orbit(im, min(p, 1), out=leaving), cx, pos["line"] + i * lh))
+    bw = int(190 * ease_out((t - t0 - 0.9) / 0.45))
+    if bw > 3:
+        bar = Image.new("RGBA", (bw, 5), accent + (255,))
+        front.append((anim(bar, a, 1.0), TITLE_X + bw / 2, bottom))
+
 def title_layers(cfg, s, t, front):
+    if cfg.get("title_style") == "orbit" and cfg.get("theme") != "skrip":
+        return orbit_title(cfg, s, t, front)
     t0, t1 = s["start"], s["end"]
     tc = s["title"]; accent = tuple(cfg.get("accent_rgb", GOLD)); acc_words = set(tc.get("accent", []))
     a = vis(t, t0, t1, 0.4, 0.3)
@@ -394,7 +484,9 @@ def main():
             base = withtext * (1 - mm) + base * mm
         else:
             prev = None
-        for img, cx, cy in front: blend(base, img, cx, cy)
+        for img, cx, cy in front:
+            if isinstance(img, tuple): glass(base, img[1], img[2], img[3])   # ("glass", box, alpha, tint)
+            else: blend(base, img, cx, cy)
         enc.stdin.write(np.clip(base, 0, 255).astype(np.uint8).tobytes())
         n += 1
         if n % 100 == 0: print(f"{n} frames", flush=True)

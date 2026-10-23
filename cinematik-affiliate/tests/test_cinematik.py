@@ -72,6 +72,16 @@ def test_skrip_theme_uses_script_kicker_and_title(cfg):
     assert len(front) == 3                                           # scrim + two lines, no kicker or underline
 
 
+def test_orbit_title_sits_on_glass_and_turns_in(cfg):
+    seg = {"start": 0.0, "end": 4.0, "title": {"kicker": "K", "lines": ["Tak kuasai asas?"], "accent": []}}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], title_style="orbit", title_pos="top"), 0.3)
+    assert front[0][0][0] == "glass" and front[0][0][3] == 0.30
+    flat = render.shadowed(render.text_img("Tak kuasai asas?", render.TK_FONT))
+    assert render.orbit(flat, 1.0) is flat                          # landed: untouched
+    mid = np.asarray(render.orbit(flat, 0.3))[..., 3]
+    assert mid.shape[1] == flat.width and mid.max() > 0              # mid-turn: same width, still visible
+
+
 def test_head_scrim_adds_a_dark_layer_first(cfg):
     seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "Hai."}
     _, front = render.layers(dict(cfg, segments=[seg], subs=[], behind=False, head_scrim=True), 2.0)

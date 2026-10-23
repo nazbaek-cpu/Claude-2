@@ -8,6 +8,7 @@ Takes one talking-head take (phone, Insta360, …) and gives it the "clean produ
 | **Beauty** | Even, smooth skin that keeps about 30% of pore texture. Natural nude-rose lip tone (pulls back strong red). Brows untouched by default. Uses MediaPipe face landmarks, so eyes, hijab and background are left alone. |
 | **Cuts** | Hard-cut punch-in (1.0 ↔ 1.12) on every subtitle phrase, so a single take feels multi-cam. |
 | **Title card** | Opening block, left-aligned over a soft dark scrim: tracked accent kicker, two big Plus Jakarta Sans ExtraBold lines with accent-coloured words, short accent underline. |
+| **Orbit title** | `"title_style": "orbit"`: each title line turns in about its own vertical axis on a curved "wall" (perspective, far side in shadow), over a frosted glass panel. `"glass": 0.30` is the panel's white tint. |
 | **Kicker** | `PUFFER SLING BAG`: small caps, wide tracking (Inter Medium). |
 | **Headline** | `Ringan.`: short, ends with a full stop (Inter Display Bold). Placed *behind* the person via a selfie-segmentation mask. |
 | **Count-up** | Big number (Inter ExtraBold) that eases up to the target, with a growing green bar and a label. |
@@ -81,6 +82,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
                                       // the title is "lines": ["bold line", "handwritten line"]
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
+  "title_style": "orbit",             // optional: title lines turn in on a curved wall over frosted glass
+  "glass": 0.30,                      // with "orbit": glass panel tint (0.30 = 30 % white over the blurred video)
   "hflip": "auto",                    // "auto" (preset default): OCR checks the product text and flips a mirrored take;
                                       // true / false force it
   "speed": {"tempo": 1.12, "max_pause": 0.22, "hold": [[20.6, 28.4]]},   // optional: shrink pauses + gentle tempo-up; "hold" = silent moments to keep (a bite, showing the inside); "order": [[22.5, 27.6], [0, 22.5], [27.6, null]] plays a moment first as the hook
@@ -123,4 +126,5 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `projects/latihan-matematik/` | example: maths workbooks, head high in frame (front headlines, per-segment offset), two count-ups (Malay) |
 | `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
+| `projects/tambah-tolak-orbit/` | example: the Tambah & Tolak take with the orbit title on 30 % glass (Malay) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

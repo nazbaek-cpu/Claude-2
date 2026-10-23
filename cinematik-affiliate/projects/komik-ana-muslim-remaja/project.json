@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Komik Ana Muslim. Remaja, datang bulan, sains, agama, sosial.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -130,
  "segments": [

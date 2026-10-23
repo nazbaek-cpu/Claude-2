@@ -21,6 +21,8 @@ fi
 
 [ -x .venv/bin/python ] || python3 -m venv .venv
 .venv/bin/pip install -q --disable-pip-version-check -r requirements.txt
+# OCR for "hflip": "auto"; --no-deps so its plain opencv-python never replaces opencv-contrib (guidedFilter)
+.venv/bin/pip install -q --disable-pip-version-check --no-deps rapidocr-onnxruntime==1.2.3
 
 # models (Apache-2.0): person mask for text-behind-subject, face landmarks for the beauty pass
 fetch() {  # fetch <url> <dest>

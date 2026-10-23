@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Tisu gantung, 1,000 pieces, 8 pack, 8,000.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": 0,
  "segments": [

@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Matematik 2 & 3 digit, 1640 soalan, 15 minit, darab dan bahagi.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -130,
  "speed": {

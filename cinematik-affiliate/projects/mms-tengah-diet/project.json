@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "M&M's Crunchy Cookie, diet, Australia, halal.",
  "preset": "food",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -110,
  "segments": [

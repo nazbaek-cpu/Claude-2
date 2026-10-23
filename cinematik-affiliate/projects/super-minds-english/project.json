@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Super Minds English, buku teks tahun satu, lima unit.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -140,
  "segments": [

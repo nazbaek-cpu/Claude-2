@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Komik Ana Muslim, infografik, Makcik Bawang, bahasa Korea.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -140,
  "segments": [

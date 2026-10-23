@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Lampu travel dengan extension 3 pin, boleh lipat, portable.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -20,
  "head_scrim": true,

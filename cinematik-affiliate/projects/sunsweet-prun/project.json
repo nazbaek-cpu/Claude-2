@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Sunsweet prun, susah nak membuang, 2 biji setiap hari.",
  "preset": "food",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -120,
  "segments": [

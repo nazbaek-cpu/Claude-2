@@ -2,7 +2,7 @@
  "source": "input/source.mp4",
  "whisper_prompt": "Skema Jawapan SPM, tingkatan 4 dan 5, cikgu cemerlang.",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "behind": false,
  "top_offset": -110,
  "segments": [

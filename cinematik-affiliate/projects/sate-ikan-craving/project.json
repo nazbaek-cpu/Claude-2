@@ -2,6 +2,7 @@
   "source": "input/source.mp4",
   "whisper_prompt": "Craving sate ikan. Pulau Pangkor, Langkawi, Terengganu, Kelantan. Sira. 500 gram, satu kilo.",
   "preset": "food",
+  "hflip": true,
   "top_offset": -40,
   "segments": [
     {"start": 0.18, "end": 7.99, "title": {"lines": ["Craving sate ikan?", "tak payah jauh!"]}},

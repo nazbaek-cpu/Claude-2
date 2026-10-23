@@ -148,7 +148,8 @@ def test_reorder_puts_hook_first_and_clips_spans():
 
 def test_food_preset_fills_in_and_project_wins():
     cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "sate-ikan-jumbo"))
-    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] == "auto"
+    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True   # project pins it
+    assert json.load(open(os.path.join(os.path.dirname(HERE), "presets", "food.json")))["hflip"] == "auto"
     assert cfg["top_offset"] == -170                                  # set by the project itself
     assert project.merge({"a": {"x": 1, "y": 2}}, {"a": {"y": 3}}) == {"a": {"x": 1, "y": 3}}
 

@@ -7,22 +7,70 @@
   {
    "start": 0.0,
    "in": "cut",
-   "dark": false,
+   "dark": true,
    "items": [
+    {
+     "kind": "photo",
+     "img": "budak_lukis.jpg",
+     "at": 0.0,
+     "until": 10.5,
+     "zoom": [
+      1.0,
+      1.18
+     ],
+     "focus": [
+      0.55,
+      0.44
+     ],
+     "parallax": 0.035,
+     "floor": [
+      [
+       0,
+       0.66
+      ],
+      [
+       1,
+       0.59
+      ]
+     ],
+     "subject_box": [
+      0.22,
+      0.28,
+      0.78,
+      0.72
+     ],
+     "lights_box": [
+      0.46,
+      0.09,
+      0.78,
+      0.28
+     ],
+     "glow": [
+      0.93,
+      0.52,
+      0.25
+     ],
+     "dim": [
+      [
+       0,
+       0.0
+      ],
+      [
+       0,
+       6.0
+      ],
+      [
+       0.35,
+       8.6
+      ]
+     ],
+     "focus_at": 0.6
+    },
     {
      "kind": "setup",
      "text": "Anak asyik lukis watak anime…",
      "at": 0.0,
      "y": 330
-    },
-    {
-     "kind": "card",
-     "img": "lukisan_anak.png",
-     "at": 0.8,
-     "x": 540,
-     "y": 1130,
-     "w": 300,
-     "rot": -4
     },
     {
      "kind": "head",
@@ -41,6 +89,22 @@
       "TU",
       "JE?"
      ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 4.9,
+     "x": 250,
+     "y": 900,
+     "size": 120
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 5.3,
+     "x": 830,
+     "y": 880,
+     "size": 100
     }
    ]
   },
@@ -50,17 +114,67 @@
    "dark": true,
    "items": [
     {
-     "kind": "floaters",
-     "glyphs": [
-      "?"
+     "kind": "photo",
+     "img": "budak_lukis.jpg",
+     "at": 0.0,
+     "until": 10.5,
+     "zoom": [
+      1.0,
+      1.18
      ],
-     "n": 12
+     "focus": [
+      0.55,
+      0.44
+     ],
+     "parallax": 0.035,
+     "floor": [
+      [
+       0,
+       0.66
+      ],
+      [
+       1,
+       0.59
+      ]
+     ],
+     "subject_box": [
+      0.22,
+      0.28,
+      0.78,
+      0.72
+     ],
+     "lights_box": [
+      0.46,
+      0.09,
+      0.78,
+      0.28
+     ],
+     "glow": [
+      0.93,
+      0.52,
+      0.25
+     ],
+     "dim": [
+      [
+       0,
+       0.0
+      ],
+      [
+       0,
+       6.0
+      ],
+      [
+       0.35,
+       8.6
+      ]
+     ],
+     "focus_at": 0.6
     },
     {
      "kind": "setup",
      "text": "Bukan dia tak berbakat.",
      "at": 6.06,
-     "y": 560
+     "y": 330
     },
     {
      "kind": "head",
@@ -74,7 +188,7 @@
        8.8
       ]
      ],
-     "y": 720,
+     "y": 480,
      "accent": [
       "PANDUAN."
      ]
@@ -82,10 +196,26 @@
     {
      "kind": "tile",
      "glyph": "?",
+     "at": 4.9,
+     "x": 250,
+     "y": 900,
+     "size": 120
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 5.3,
+     "x": 830,
+     "y": 880,
+     "size": 100
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
      "at": 9.56,
-     "x": 540,
-     "y": 1180,
-     "size": 200
+     "x": 860,
+     "y": 1120,
+     "size": 130
     }
    ]
   },

@@ -433,13 +433,97 @@ def cta(frame, t, it, sc):
     chev = Image.new("RGBA", (cw, chh), ACC + (0,)); chev.putalpha(m.resize((cw, chh), Image.LANCZOS).point(lambda v: int(v * a)))
     blend(frame, chev, W / 2, it["y"] + 100 + 8 * math.sin(2 * math.pi * 1.4 * (t - it["at"])))
 
+# ---------- photo: a still (e.g. an AI illustration) brought to life ----------
+def photo_layers(it, prj):
+    """the still at cover size for the largest zoom, a foreground mask (subject above the floor line + all below it),
+    twinkle maps for small bright lights and a soft glow map"""
+    key = ("photo", it["img"])
+    if key in cache: return cache[key]
+    src8 = np.asarray(Image.open(os.path.join(prj, "input", it["img"])).convert("RGB"))
+    h, w = src8.shape[:2]; zmax = max(it.get("zoom", [1.0, 1.15])) * (1 + it.get("parallax", 0.035)) * 1.02
+    s = max(W / w, H / h) * zmax; size = (int(w * s) + 2, int(h * s) + 2)
+    big = cv2.resize(src8, size, interpolation=cv2.INTER_LANCZOS4).astype(np.float32)
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    (fx0, fy0), (fx1, fy1) = it.get("floor", [[0, 1.1], [1, 1.1]])           # desk / floor edge, as fractions
+    below = yy > (fy0 + (fy1 - fy0) * xx / w) * h
+    subj = np.zeros((h, w), bool)
+    if it.get("subject_box"):
+        import mediapipe as mp
+        from mediapipe.tasks.python import vision, BaseOptions
+        seg = vision.ImageSegmenter.create_from_options(vision.ImageSegmenterOptions(
+            base_options=BaseOptions(model_asset_path=os.path.join(HERE, "models", "selfie_segmenter.tflite")),
+            output_confidence_masks=True, running_mode=vision.RunningMode.IMAGE))
+        m = np.squeeze(seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(src8))).confidence_masks[0].numpy_view())
+        bx0, by0, bx1, by1 = it["subject_box"]
+        subj = (m > 0.5) & (xx > bx0 * w) & (xx < bx1 * w) & (yy > by0 * h) & ~below
+    mask = cv2.GaussianBlur((below | subj).astype(np.float32), (0, 0), 3)
+    mask = cv2.resize(mask, size, interpolation=cv2.INTER_LINEAR)
+    lights = []
+    if it.get("lights_box"):
+        lx0, ly0, lx1, ly1 = it["lights_box"]; lum = src8.mean(axis=2)
+        reg = (lum > it.get("lights_min", 205)) & (xx > lx0 * w) & (xx < lx1 * w) & (yy > ly0 * h) & (yy < ly1 * h)
+        n, lab, stats, cent = cv2.connectedComponentsWithStats(reg.astype(np.uint8))
+        groups = [np.zeros((h, w), np.float32) for _ in range(3)]
+        for i in range(1, n):
+            if 2 <= stats[i][4] <= 400: cv2.circle(groups[i % 3], (int(cent[i][0]), int(cent[i][1])), 5, 1.0, -1)
+        q = (size[0] // 4, size[1] // 4)   # quarter size: warped per frame, so keep them cheap
+        lights = [cv2.resize(cv2.GaussianBlur(g, (0, 0), 6), q, interpolation=cv2.INTER_AREA) for g in groups]
+    glow = None
+    if it.get("glow"):
+        gx, gy, gr = it["glow"]; d = np.sqrt((xx / w - gx) ** 2 + ((yy / h - gy) * h / w) ** 2)
+        glow = cv2.resize(np.clip(1 - d / gr, 0, 1) ** 2, (size[0] // 4, size[1] // 4), interpolation=cv2.INTER_AREA)
+    cache[key] = (big, mask, lights, glow)
+    return cache[key]
+
+PHOTO_SHADE = (1 - 0.62 * np.clip(1 - np.arange(H, dtype=np.float32) / 1000, 0, 1) ** 1.2)[:, None, None]   # text stays legible
+
+def photo(frame, t, it, sc, prj):
+    """slow push-in on the focus point with foreground parallax, twinkling lights, a breathing glow and dust in it"""
+    big, mask, lights, glow = photo_layers(it, prj)
+    bh, bw = big.shape[:2]
+    p = ramp(t, it["at"], it.get("until", it["at"] + 8) - it["at"]); p = p * p * (3 - 2 * p)
+    z0, z1 = it.get("zoom", [1.0, 1.15]); z = z0 + (z1 - z0) * p
+    fx, fy = it.get("focus", [0.5, 0.45])
+    zmax = max(it.get("zoom", [1.0, 1.15])) * (1 + it.get("parallax", 0.035)) * 1.02   # the scale photo_layers built at
+    def affine(zl):
+        k = zl / zmax
+        tx = min(0.0, max(W - bw * k, W / 2 - fx * bw * k))
+        ty = min(0.0, max(H - bh * k, H * it.get("focus_at", 0.5) - fy * bh * k))   # where the focus point sits on screen
+        return np.float32([[k, 0, tx], [0, k, ty]])
+    Mb, Mf = affine(z), affine(z * (1 + it.get("parallax", 0.035) * p))
+    bg = cv2.warpAffine(big, Mb, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    fg = cv2.warpAffine(big, Mf, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    m = cv2.warpAffine(mask, Mf, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)[..., None]
+    img = bg * (1 - m) + fg * m
+    if lights or glow is not None:   # twinkle + breathing glow, built at quarter size and scaled up
+        Mq = Mb.copy(); Mq[:, 2] /= 4; add = np.zeros((H // 4, W // 4, 3), np.float32)
+        for i, g in enumerate(lights):
+            amp = 0.5 + 0.5 * math.sin(2 * math.pi * (0.55 + 0.25 * i) * t + i * 2.1)
+            add += cv2.warpAffine(g, Mq, (W // 4, H // 4))[..., None] * np.array((255, 214, 150), np.float32) * 0.55 * amp
+        if glow is not None:
+            add += cv2.warpAffine(glow, Mq, (W // 4, H // 4))[..., None] * np.array((255, 190, 120), np.float32) * (0.10 + 0.04 * math.sin(2 * math.pi * 0.35 * t))
+        img += cv2.resize(add, (W, H), interpolation=cv2.INTER_LINEAR)
+    if it.get("glow"):   # dust drifting up through the lamp light
+        gx, gy, _ = it["glow"]; cx, cy = Mb @ np.array([gx * bw, gy * bh, 1.0])
+        rng = np.random.default_rng(2)
+        for i in range(22):
+            ox, oy, sp = rng.uniform(-260, 120), rng.uniform(-200, 260), rng.uniform(10, 26)
+            x = int(cx + ox + 14 * math.sin(t * 0.7 + i)); y = int(cy + (oy - t * sp) % 460 - 230)
+            if 0 <= x < W and 0 <= y < H: cv2.circle(img, (x, y), 2, (255, 236, 200), -1, cv2.LINE_AA)
+    dim = it.get("dim")
+    if dim:
+        amt = float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
+        img *= 1 - amt
+    frame[:] = img * PHOTO_SHADE
+
 DRAW = {"setup": setup, "kicker": kicker, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
     for it in sc["items"]:
-        if it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
+        if it["kind"] == "photo": photo(frame, t, it, sc, prj)
+        elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
         else: DRAW[it["kind"]](frame, t, it, sc)
     return frame
@@ -513,7 +597,7 @@ def remap(cfg, m):
         for it in sc["items"]:
             for k in TIME_KEYS:
                 if k in it: it[k] = f(it[k])
-            for k in ("lines", "items", "labels"):
+            for k in ("lines", "items", "labels", "dim"):
                 if k in it: it[k] = [[x, f(t)] for x, t in it[k]]
             for k in ("dur", "step"):
                 if k in it: it[k] = round(it[k] / tempo, 3)

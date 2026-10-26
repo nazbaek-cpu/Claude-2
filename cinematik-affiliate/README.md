@@ -95,6 +95,7 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `ticks` | a worksheet card that fills with check marks |
 | `calendar` | seven days, ticked one by one |
 | `cta` | orange pill with bouncing chevrons |
+| `photo` | a still (e.g. an AI illustration from `input/`) brought to life: slow push-in on `focus` (`focus_at` = where it sits on screen), parallax between the subject (`subject_box`, selfie mask) plus everything below the `floor` line and the room, twinkling `lights_box`, a breathing `glow` with dust, and `dim` ([amount, time] pairs). Give the same item to consecutive scenes to keep one continuous shot |
 | `pile` | chips (e.g. formulas) that rain into a messy heap; `scatter_at` blows them away |
 | `floaters` | drifting maths symbols (or your own `glyphs`) behind a dark scene |
 

@@ -516,6 +516,33 @@ def photo(frame, t, it, sc, prj):
         img *= 1 - amt
     frame[:] = img * PHOTO_SHADE
 
+def clip_frames(name, prj):
+    """every frame of a clip in input/ (e.g. an AI image-to-video), decoded once"""
+    key = ("clip", name)
+    if key not in cache:
+        path = os.path.join(prj, "input", name)
+        j = json.loads(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,r_frame_rate",
+                                       "-of", "json", path], capture_output=True, text=True, check=True).stdout)["streams"][0]
+        w, h = j["width"], j["height"]; num, den = map(int, j["r_frame_rate"].split("/"))
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
+        cache[key] = (np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3), num / den)
+    return cache[key]
+
+def clip(frame, t, it, sc, prj):
+    """a video clip as the scene's picture; "fit" stretches it over at..until, with a gentle push-in and dim like photo"""
+    frames, fps = clip_frames(it["video"], prj)
+    n, h, w = frames.shape[:3]; t0, t1 = it["at"], it.get("until", it["at"] + n / fps)
+    rate = (n / fps) / (t1 - t0) if it.get("fit") else 1.0
+    src = frames[min(n - 1, max(0, int((t - t0) * rate * fps)))]
+    p = ramp(t, t0, t1 - t0); p = p * p * (3 - 2 * p)
+    z0, z1 = it.get("zoom", [1.0, 1.06]); k = max(W / w, H / h) * (z0 + (z1 - z0) * p)
+    fx, fy = it.get("focus", [0.5, 0.45])
+    tx = min(0.0, max(W - w * k, W / 2 - fx * w * k)); ty = min(0.0, max(H - h * k, H * it.get("focus_at", 0.5) - fy * h * k))
+    img = cv2.warpAffine(src, np.float32([[k, 0, tx], [0, k, ty]]), (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE).astype(np.float32)
+    dim = it.get("dim")
+    if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
+    frame[:] = img * PHOTO_SHADE
+
 DRAW = {"setup": setup, "kicker": kicker, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
@@ -523,6 +550,7 @@ def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
     for it in sc["items"]:
         if it["kind"] == "photo": photo(frame, t, it, sc, prj)
+        elif it["kind"] == "clip": clip(frame, t, it, sc, prj)
         elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
         else: DRAW[it["kind"]](frame, t, it, sc)

@@ -1,6 +1,13 @@
 {
  "type": "explainer",
  "source": "input/vo.mp4",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "voice": {
+  "chain": "clean"
+ },
  "end": 54.4,
  "whisper_prompt": "Fizik, formula, Modul Konstruk Fizik, mnemonik, SPM, Tingkatan 4 dan 5, dwibahasa, guru cemerlang fizik.",
  "segments": [],

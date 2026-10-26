@@ -11,7 +11,7 @@ project.json: {"type": "explainer", "source": "input/vo.mp4", "segments": [], "s
 Item kinds (times in seconds of the voiceover): setup, kicker, head, card, tile, count, timer, race,
 blocks, stairs, ticks, calendar, cta, floaters. See projects/matematik-explainer for every kind in use.
 """
-import argparse, math, os, subprocess, wave
+import argparse, json, math, os, subprocess, wave
 import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import project
@@ -499,11 +499,35 @@ def sfx_track(cfg, dur, out):
         w.writeframes((np.clip(track, -1, 1) * 32767).astype("<i2").tobytes())
     return len(ev)
 
+TIME_KEYS = ("start", "at", "until", "scatter_at", "label_at", "tick_at", "wobble_at", "fall_at")
+
+def remap(cfg, m):
+    """voiceover times -> times in the sped-up voice (speed.py timemap); steps and durations shrink with the tempo"""
+    from speed import to_output
+    keep, tempo = m["keep"], m["tempo"]
+    f = lambda t: round(to_output(t, keep, tempo), 3)   # noqa: E731
+    cfg = json.loads(json.dumps(cfg))
+    if "end" in cfg: cfg["end"] = f(cfg["end"])
+    for sc in cfg["scenes"]:
+        sc["start"] = f(sc["start"])
+        for it in sc["items"]:
+            for k in TIME_KEYS:
+                if k in it: it[k] = f(it[k])
+            for k in ("lines", "items", "labels"):
+                if k in it: it[k] = [[x, f(t)] for x, t in it[k]]
+            for k in ("dur", "step"):
+                if k in it: it[k] = round(it[k] / tempo, 3)
+    return cfg
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project"); ap.add_argument("--limit", type=float); ap.add_argument("--start", type=float, default=0)
     ap.add_argument("--out"); args = ap.parse_args()
     prj = args.project.rstrip("/"); cfg = project.read(prj)
-    src = os.path.join(prj, cfg["source"]); dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
+    src = os.path.join(prj, cfg["source"])
+    tm = os.path.join(prj, "build", "timemap.json")
+    if cfg.get("speed") and os.path.exists(tm):   # speed.py shortened the pauses: every scene time follows the voice
+        cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
+    dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)
     sfx_wav = os.path.join(build, "sfx.wav"); n_ev = sfx_track(cfg, dur, sfx_wav)

@@ -191,5 +191,21 @@ def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
     assert explainer.head_size(["SEMUA DIBINA SEKALI GUS"]) < 150     # long lines shrink to fit
 
 
+def test_explainer_scenes_follow_the_sped_up_voice():
+    cfg = {"end": 10.0, "scenes": [{"start": 4.0, "items": [{"kind": "head", "lines": [["A.", 5.0]], "until": 6.0},
+                                                             {"kind": "pile", "chips": ["x"], "at": 4.5, "step": 0.2}]}]}
+    out = explainer.remap(cfg, {"keep": [[0.0, 2.0], [3.0, 10.0]], "tempo": 2.0})    # 1 s pause cut, double speed
+    sc = out["scenes"][0]
+    assert sc["start"] == 1.5 and sc["items"][0]["lines"][0][1] == 2.0 and sc["items"][0]["until"] == 2.5
+    assert sc["items"][1]["step"] == 0.1 and out["end"] == 4.5 and cfg["scenes"][0]["start"] == 4.0   # original untouched
+
+
+def test_clean_voice_chain_is_a_valid_filtergraph():
+    import subprocess
+    r = subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", "sine=f=220:d=1", "-af", voice.CHAIN_CLEAN, "-f", "null", "-"],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+
+
 def test_example_project_is_valid_json():
     json.load(open(os.path.join(PRJ, "project.json")))

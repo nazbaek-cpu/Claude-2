@@ -1,6 +1,13 @@
 {
  "type": "explainer",
  "source": "input/vo.mp4",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "voice": {
+  "chain": "clean"
+ },
  "whisper_prompt": "Latihan matematik 2 dan 3 digit, tambah, tolak, darab, bahagi, 1640 soalan, 15 minit.",
  "segments": [],
  "subs": [],

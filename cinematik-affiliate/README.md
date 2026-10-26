@@ -81,7 +81,10 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `pile` | chips (e.g. formulas) that rain into a messy heap; `scatter_at` blows them away |
 | `floaters` | drifting maths symbols (or your own `glyphs`) behind a dark scene |
 
-`"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
+`"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word.
+`"speed": {"tempo": 1.12, "max_pause": 0.22}` speeds up the voiceover (pauses shortened, pitch kept) and every scene time
+follows it, so write the times from the original recording. `"voice": {"chain": "clean"}` is the gentle studio chain for a
+voiceover that is already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light denoise, no saturation. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
 
 ## Quick start
 

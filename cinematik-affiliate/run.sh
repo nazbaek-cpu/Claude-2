@@ -18,6 +18,12 @@ prep() {  # pause/tempo pass (only when project.json has "speed"), studio voice,
   if opt 'c.get("voice", {}).get("studio", True)'; then $PY voice.py "$PRJ"; fi
   $PY sfx.py "$PRJ"
 }
+if $PY -c "import sys, project; sys.exit(0 if project.read(sys.argv[1]).get('type') == 'explainer' else 1)" "$PRJ"; then
+  # no-face motion-graphics reel on a voiceover: studio voice, then explainer.py (builds its own SFX)
+  [ "${1:-}" = "--transcribe" ] && { $PY transcribe.py "$PRJ"; exit 0; }
+  $PY voice.py "$PRJ"
+  $PY explainer.py "$PRJ" "$@"; exit 0
+fi
 case "${1:-}" in
   --transcribe) $PY transcribe.py "$PRJ"; exit 0 ;;
   --limit) prep; $PY render.py "$PRJ" --limit "$2" --out "$PRJ/out/preview.mp4"; exit 0 ;;

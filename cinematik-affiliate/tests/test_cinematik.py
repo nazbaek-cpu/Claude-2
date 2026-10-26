@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import mirror, project, render, sfx, speed, transcribe, voice  # noqa: E402
+import explainer, mirror, project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -173,6 +173,21 @@ def test_mirror_verdict_needs_a_clear_winner():
 
 def test_auto_hflip_without_source_stays_unflipped(tmp_path):
     assert mirror.cached(str(tmp_path), str(tmp_path / "missing.mp4")) is False
+
+
+def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
+    scenes = [{"start": 0.0, "in": "cut", "items": [
+                  {"kind": "setup", "text": "Kalau asas tak kuat…", "at": 0.0},
+                  {"kind": "head", "lines": [["TAMBAH.", 0.1], ["TOLAK.", 0.2]], "scatter_at": 0.9},
+                  {"kind": "tile", "glyph": "+", "at": 0.1, "x": 300, "y": 1000},
+                  {"kind": "count", "to": 1640, "at": 0.0, "y": 600, "label": "soalan"}]},
+              {"start": 1.0, "dark": True, "items": [{"kind": "floaters"}, {"kind": "timer", "at": 1.0, "to": 15, "y": 900},
+                                                     {"kind": "calendar", "at": 1.0, "y": 600, "tick_at": 1.1}]}]
+    still = explainer.frame_at(scenes, 0.5, str(tmp_path))
+    assert still.shape == (explainer.H, explainer.W, 3)
+    mid = explainer.frame_at(scenes, 1.0, str(tmp_path))            # inside the whip: blurred mix of both scenes
+    assert mid.mean() < still.mean()                                  # half dark scene, half light
+    assert explainer.head_size(["SEMUA DIBINA SEKALI GUS"]) < 150     # long lines shrink to fit
 
 
 def test_example_project_is_valid_json():

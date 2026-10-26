@@ -52,6 +52,36 @@ The food-review look, saved as a preset so a new project only needs its own text
 
 Example: `projects/sate-ikan-jumbo/`.
 
+## Cinematik Explainer (`"type": "explainer"`)
+
+A no-face motion-graphics reel built on a voiceover, in the style of a product explainer:
+
+- **Look:** peach paper with a faint grid; dark scenes for the low point of the story.
+- **Type:** an italic serif setup line (Instrument Serif) appears word by word over a heavy uppercase headline (Plus Jakarta Sans ExtraBold); every final full stop is orange.
+- **Motion:** blur-in text, tilted photo cards with a white border, terracotta clay icons, words that scatter, and a sideways motion-blur "whip" between scenes.
+- **Sound:** the studio voice chain on the voiceover, plus synthesised whooshes, pops, ticks and a ding.
+
+Scenes are listed in `project.json` with times taken from the voiceover (`--transcribe` gives word times). Item kinds:
+
+| Kind | What it draws |
+|---|---|
+| `setup` | italic line, word by word |
+| `kicker` | small tracked caps |
+| `head` | headline lines; `accent`, `box` (highlighter), `offset_shadow`, `scatter_at` |
+| `card` | product photo card: `img` from `input/`, `x`, `y`, `w`, `rot`, `from: "bottom"` |
+| `tile` | clay icon with a glyph and an optional label |
+| `count` | big count-up number with a label |
+| `timer` | ring that fills while the number counts up (e.g. 15 minutes) |
+| `race` | two bars: the class moves on, the child lags behind |
+| `blocks` | a tower of topics on a base block: `wobble_at`, then `fall_at` |
+| `stairs` | steps that rise, with a ball hopping up them |
+| `ticks` | a worksheet card that fills with check marks |
+| `calendar` | seven days, ticked one by one |
+| `cta` | orange pill with bouncing chevrons |
+| `floaters` | drifting maths symbols behind a dark scene |
+
+`"in": "cut"` hard-cuts into a scene; the default is the whip. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
+
 ## Quick start
 
 ```bash
@@ -117,6 +147,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
 | `project.py` | reads `project.json` over its `"preset"` (`presets/*.json`) |
 | `mirror.py` | `"hflip": "auto"`: OCRs 16 frames as shot and flipped (RapidOCR); flips when only the flipped side reads. `python mirror.py projects/<name>` shows what it read |
+| `explainer.py` | `"type": "explainer"`: the no-face motion-graphics reel, scene by scene, with its own SFX track |
 | `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
 | `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |
@@ -127,4 +158,5 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/tambah-tolak-orbit/` | example: the Tambah & Tolak take with the orbit title on 30 % glass (Malay) |
+| `projects/matematik-explainer/` | example: Cinematik Explainer for the Latihan Matematik 2 & 3 Digit books on a Malay voiceover |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

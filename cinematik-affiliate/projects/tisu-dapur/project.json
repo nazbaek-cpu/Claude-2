@@ -1,0 +1,133 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Tisu dapur, 80 pieces, multifunction.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -90,
+ "segments": [
+  {
+   "start": 0.8,
+   "end": 4.4,
+   "title": {
+    "kicker": "TISU DAPUR",
+    "lines": [
+     "Kotor & berminyak?",
+     "Lap sekali je."
+    ],
+    "accent": [
+     "Lap",
+     "sekali",
+     "je."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.5,
+   "end": 8.7,
+   "kicker": "SATU SET",
+   "count": 80,
+   "label": "helai.",
+   "offset": -30
+  },
+  {
+   "start": 8.8,
+   "end": 16.2,
+   "kicker": "UNTUK DAPUR",
+   "head": "Kotor & berminyak."
+  },
+  {
+   "start": 16.3,
+   "end": 18.7,
+   "kicker": "MULTIFUNCTION",
+   "head": "Serba boleh."
+  },
+  {
+   "start": 18.8,
+   "end": 26.0,
+   "kicker": "IBU-IBU",
+   "head": "Ganti kain buruk."
+  },
+  {
+   "start": 26.1,
+   "end": 28.3,
+   "kicker": "HARGA",
+   "head": "Murah sangat."
+  },
+  {
+   "start": 28.4,
+   "end": null,
+   "cta": true,
+   "head": "Lagi jimat.",
+   "offset": -30
+  }
+ ],
+ "subs": [
+  [
+   0.85,
+   4.52,
+   "Tisu dapur yang sangat serap."
+  ],
+  [
+   4.55,
+   6.44,
+   "Dalam ni dia satu set"
+  ],
+  [
+   6.47,
+   8.82,
+   "ada sampai 80 pieces."
+  ],
+  [
+   8.85,
+   11.46,
+   "Sesuai untuk basuh dapur"
+  ],
+  [
+   11.49,
+   13.84,
+   "yang kotor ataupun"
+  ],
+  [
+   13.87,
+   16.24,
+   "yang berminyak tu."
+  ],
+  [
+   16.27,
+   18.76,
+   "Yang ni memang multifunction lah."
+  ],
+  [
+   18.79,
+   21.82,
+   "So untuk ibu-ibu"
+  ],
+  [
+   21.85,
+   24.42,
+   "yang selalu basuh pakai kain buruk,"
+  ],
+  [
+   24.45,
+   26.06,
+   "betul tukar kepada tisu ni."
+  ],
+  [
+   26.09,
+   28.4,
+   "Harga murah sangat-sangat."
+  ],
+  [
+   28.43,
+   30.9,
+   "Boleh dapatkan dekat link di bawah."
+  ],
+  [
+   30.93,
+   null,
+   "Banyak pek lagi jimat."
+  ]
+ ]
+}

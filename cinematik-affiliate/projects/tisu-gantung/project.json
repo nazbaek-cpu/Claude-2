@@ -1,0 +1,158 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Tisu gantung, 1,000 pieces, 8 pack, 8,000.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": 0,
+ "segments": [
+  {
+   "start": 0.3,
+   "end": 13.6,
+   "title": {
+    "kicker": "TISU GANTUNG",
+    "lines": [
+     "Tebal, lembut,",
+     "tak mudah koyak."
+    ],
+    "accent": [
+     "tak",
+     "mudah",
+     "koyak."
+    ],
+    "size": 104
+   }
+  },
+  {
+   "start": 13.7,
+   "end": 19.9,
+   "kicker": "SATU PEK",
+   "count": 1000,
+   "label": "helai."
+  },
+  {
+   "start": 20.0,
+   "end": 26.8,
+   "kicker": "SATU KOTAK",
+   "count": 8,
+   "label": "pek."
+  },
+  {
+   "start": 26.9,
+   "end": 31.3,
+   "kicker": "TOTAL",
+   "count": 8000,
+   "label": "helai."
+  },
+  {
+   "start": 31.4,
+   "end": 36.1,
+   "kicker": "LEMBUT",
+   "head": "Tak mudah koyak."
+  },
+  {
+   "start": 36.2,
+   "end": 38.7,
+   "kicker": "KEISTIMEWAAN",
+   "head": "Cepat serap."
+  },
+  {
+   "start": 38.8,
+   "end": null,
+   "cta": true,
+   "head": "Jom stok."
+  }
+ ],
+ "subs": [
+  [
+   0.34,
+   3.07,
+   "Mak-mak yang nak cari tisu gantung"
+  ],
+  [
+   3.1,
+   5.81,
+   "yang murah, berkualiti, tebal, lembut,"
+  ],
+  [
+   5.84,
+   7.23,
+   "boleh pakai dekat muka,"
+  ],
+  [
+   7.26,
+   9.25,
+   "boleh basuh, boleh sapu"
+  ],
+  [
+   9.28,
+   10.51,
+   "benda-benda yang kotor,"
+  ],
+  [
+   10.54,
+   12.27,
+   "dan juga cepat serap,"
+  ],
+  [
+   12.3,
+   13.67,
+   "tak cepat koyak."
+  ],
+  [
+   13.7,
+   15.79,
+   "Tisu gantung ni siap ada"
+  ],
+  [
+   15.82,
+   19.97,
+   "sampai 1,000 pieces satu pek."
+  ],
+  [
+   20.0,
+   24.73,
+   "Kalau kita beli satu kotak ni,"
+  ],
+  [
+   24.76,
+   26.91,
+   "dia ada sampai 8 pek tau."
+  ],
+  [
+   26.94,
+   29.51,
+   "Total semua boleh jadi"
+  ],
+  [
+   29.54,
+   31.37,
+   "8,000 helai."
+  ],
+  [
+   31.4,
+   34.11,
+   "Sangat-sangat lembut"
+  ],
+  [
+   34.14,
+   36.17,
+   "dan tak mudah terkoyak."
+  ],
+  [
+   36.2,
+   38.81,
+   "Ini keistimewaan tisu macam ni."
+  ],
+  [
+   38.84,
+   40.81,
+   "Mak-mak boleh dapatkan"
+  ],
+  [
+   40.84,
+   null,
+   "dekat link di bawah."
+  ]
+ ]
+}

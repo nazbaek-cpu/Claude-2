@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import project, render, sfx, speed, transcribe, voice  # noqa: E402
+import explainer, mirror, project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -70,6 +70,22 @@ def test_skrip_theme_uses_script_kicker_and_title(cfg):
     title = {"start": 0.0, "end": 3.0, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}}
     _, front = render.layers(dict(cfg, segments=[title], subs=[], theme="skrip", title_pos="top"), 2.0)
     assert len(front) == 3                                           # scrim + two lines, no kicker or underline
+
+
+def test_orbit_title_sits_on_glass_and_turns_in(cfg):
+    seg = {"start": 0.0, "end": 4.0, "title": {"kicker": "K", "lines": ["Tak kuasai asas?"], "accent": []}}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], title_style="orbit", title_pos="top"), 0.3)
+    assert front[0][0][0] == "glass" and front[0][0][3] == 0.30
+    flat = render.shadowed(render.text_img("Tak kuasai asas?", render.TK_FONT))
+    assert render.orbit(flat, 1.0) is flat                          # landed: untouched
+    mid = np.asarray(render.orbit(flat, 0.3))[..., 3]
+    assert mid.shape[1] == flat.width and mid.max() > 0              # mid-turn: same width, still visible
+
+
+def test_head_scrim_adds_a_dark_layer_first(cfg):
+    seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "Hai."}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[], behind=False, head_scrim=True), 2.0)
+    assert len(front) == 3 and front[0][0].size == (render.W, render.H)
 
 
 def test_zoom_alternates_per_phrase(cfg):
@@ -142,9 +158,59 @@ def test_reorder_puts_hook_first_and_clips_spans():
 
 def test_food_preset_fills_in_and_project_wins():
     cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "sate-ikan-jumbo"))
-    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True
+    assert cfg["theme"] == "skrip" and cfg["speed"]["tempo"] == 1.12 and cfg["hflip"] is True   # project pins it
+    assert json.load(open(os.path.join(os.path.dirname(HERE), "presets", "food.json")))["hflip"] == "auto"
     assert cfg["top_offset"] == -170                                  # set by the project itself
     assert project.merge({"a": {"x": 1, "y": 2}}, {"a": {"y": 3}}) == {"a": {"x": 1, "y": 3}}
+
+
+def test_mirror_verdict_needs_a_clear_winner():
+    assert mirror.verdict(7, 602) is True          # only the flipped frames read
+    assert mirror.verdict(300, 20) is False
+    assert mirror.verdict(40, 50) is None          # too close to call
+    assert mirror.verdict(3, 5) is None            # no real text in the take
+
+
+def test_auto_hflip_without_source_stays_unflipped(tmp_path):
+    assert mirror.cached(str(tmp_path), str(tmp_path / "missing.mp4")) is False
+
+
+def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
+    scenes = [{"start": 0.0, "in": "cut", "items": [
+                  {"kind": "setup", "text": "Kalau asas tak kuat…", "at": 0.0},
+                  {"kind": "head", "lines": [["TAMBAH.", 0.1], ["TOLAK.", 0.2]], "scatter_at": 0.9},
+                  {"kind": "tile", "glyph": "+", "at": 0.1, "x": 300, "y": 1000},
+                  {"kind": "count", "to": 1640, "at": 0.0, "y": 600, "label": "soalan"},
+                  {"kind": "pile", "chips": ["F = ma", "V = IR"], "at": 0.1, "box": [200, 900, 880, 1500], "scatter_at": 0.6}]},
+              {"start": 1.0, "dark": True, "items": [{"kind": "floaters"}, {"kind": "timer", "at": 1.0, "to": 15, "y": 900},
+                                                     {"kind": "calendar", "at": 1.0, "y": 600, "tick_at": 1.1}]}]
+    still = explainer.frame_at(scenes, 0.5, str(tmp_path))
+    assert still.shape == (explainer.H, explainer.W, 3)
+    mid = explainer.frame_at(scenes, 1.0, str(tmp_path))            # inside the whip: blurred mix of both scenes
+    assert mid.mean() < still.mean()                                  # half dark scene, half light
+    assert explainer.head_size(["SEMUA DIBINA SEKALI GUS"]) < 150     # long lines shrink to fit
+
+
+def test_explainer_scenes_follow_the_sped_up_voice():
+    cfg = {"end": 10.0, "scenes": [{"start": 4.0, "items": [{"kind": "head", "lines": [["A.", 5.0]], "until": 6.0},
+                                                             {"kind": "pile", "chips": ["x"], "at": 4.5, "step": 0.2}]}]}
+    out = explainer.remap(cfg, {"keep": [[0.0, 2.0], [3.0, 10.0]], "tempo": 2.0})    # 1 s pause cut, double speed
+    sc = out["scenes"][0]
+    assert sc["start"] == 1.5 and sc["items"][0]["lines"][0][1] == 2.0 and sc["items"][0]["until"] == 2.5
+    assert sc["items"][1]["step"] == 0.1 and out["end"] == 4.5 and cfg["scenes"][0]["start"] == 4.0   # original untouched
+
+
+def test_clean_voice_chain_is_a_valid_filtergraph():
+    import subprocess
+    r = subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", "sine=f=220:d=1", "-af", voice.CHAIN_CLEAN, "-f", "null", "-"],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+
+
+def test_edukasi_preset_makes_an_explainer():
+    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "fizik-explainer"))
+    assert cfg["_name"] == "Animasi Edukasi Buku" and cfg["type"] == "explainer"
+    assert cfg["voice"]["chain"] == "clean" and cfg["speed"]["tempo"] == 1.12 and cfg["end"] == 54.4
 
 
 def test_example_project_is_valid_json():

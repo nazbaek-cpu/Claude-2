@@ -2,6 +2,7 @@
   "source": "input/source.mp4",
   "whisper_prompt": "Sate ikan dari Pulau Pangkor dan Langkawi. Sira. Lembut.",
   "preset": "food",
+  "hflip": true,
   "top_offset": -170,
   "segments": [
     {"start": 0.08, "end": 7.50, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}},

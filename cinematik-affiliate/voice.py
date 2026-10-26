@@ -25,6 +25,20 @@ CHAIN = (
     "acompressor=threshold=-16dB:ratio=1.8:attack=12:release=180:knee=4,"
     "loudnorm=I=-14:TP=-1.5:LRA=5,aresample=48000,alimiter=limit=0.89:attack=2:release=40")
 
+# "voice": {"chain": "clean"} -- for a voiceover that is already loud and squashed (phone / CapCut "enhance"):
+# headroom first, declip, notch the mains hum, soften harshness; no levelling or saturation, which make it crack
+CHAIN_CLEAN = (
+    "volume=-6dB,adeclip,highpass=f=80:p=2,"
+    "bandreject=f=50:w=6,bandreject=f=100:w=8,bandreject=f=150:w=8,"
+    "equalizer=f=160:t=q:w=1.0:g=1.5,"
+    "equalizer=f=450:t=q:w=1.0:g=-3,"
+    "equalizer=f=3400:t=q:w=1.4:g=-2,"
+    "equalizer=f=7000:t=q:w=2.0:g=-2.5,"
+    "lowpass=f=15000,"
+    "deesser=i=0.4:m=0.5:f=0.5,"
+    "acompressor=threshold=-20dB:ratio=2:attack=8:release=120:knee=6,"
+    "loudnorm=I=-14:TP=-2:LRA=7,aresample=48000,alimiter=limit=0.84:attack=5:release=60")
+
 def run(cmd): subprocess.run(cmd, check=True)
 
 def main():
@@ -34,10 +48,11 @@ def main():
     raw = os.path.join(build, "voice_raw.wav")
     run(["ffmpeg", "-v", "error", "-y", "-i", cfg["source"], "-vn", "-ac", "1", "-ar", "48000", "-c:a", "pcm_s16le", raw])
     # -D compensates the model delay so the voice stays in sync with the lips
-    atten = str(cfg.get("voice", {}).get("denoise_atten_db", 40))
+    clean = cfg.get("voice", {}).get("chain") == "clean"
+    atten = str(cfg.get("voice", {}).get("denoise_atten_db", 15 if clean else 40))   # light denoise: no metallic artefacts
     run([DEEP_FILTER, "-D", "-a", atten, "-o", dfn, raw])
     dur = cfg["duration"]
-    fc = f"[0:a]apad=whole_dur={dur:.6f},atrim=0:{dur:.6f},{CHAIN},aformat=channel_layouts=stereo[v]"
+    fc = f"[0:a]apad=whole_dur={dur:.6f},atrim=0:{dur:.6f},{CHAIN_CLEAN if clean else CHAIN},aformat=channel_layouts=stereo[v]"
     out = os.path.join(build, "voice.wav")
     run(["ffmpeg", "-v", "error", "-y", "-i", os.path.join(dfn, "voice_raw.wav"), "-filter_complex", fc, "-map", "[v]", out])
     print(f"voice: studio chain -> {out}")

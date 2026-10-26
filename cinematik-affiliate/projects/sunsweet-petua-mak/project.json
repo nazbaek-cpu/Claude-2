@@ -1,0 +1,204 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Sunsweet prun, mak saya umur 74 tahun, susah nak membuang.",
+ "preset": "food",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -160,
+ "segments": [
+  {
+   "start": 0.1,
+   "end": 4.7,
+   "title": {
+    "lines": [
+     "Susah membuang?",
+     "Saya ada solusi!"
+    ]
+   }
+  },
+  {
+   "start": 4.8,
+   "end": 12.0,
+   "kicker": "Sehari",
+   "head": "2 hingga 4 biji."
+  },
+  {
+   "start": 12.1,
+   "end": 21.4,
+   "kicker": "Sejak zaman mak",
+   "head": "Petua mak."
+  },
+  {
+   "start": 21.5,
+   "end": 32.1,
+   "kicker": "Rupanya",
+   "head": "Senang setiap pagi."
+  },
+  {
+   "start": 32.2,
+   "end": 37.3,
+   "kicker": "Bagus untuk",
+   "head": "Perut."
+  },
+  {
+   "start": 37.4,
+   "end": 43.0,
+   "kicker": "Sunsweet",
+   "head": "Memang bagus."
+  },
+  {
+   "start": 43.1,
+   "end": null,
+   "cta": true,
+   "head": "Harga murah.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.14,
+   1.47,
+   "Korang yang susah"
+  ],
+  [
+   1.5,
+   3.19,
+   "sangat nak membuang,"
+  ],
+  [
+   3.22,
+   4.81,
+   "saya ada satu solusi."
+  ],
+  [
+   4.84,
+   6.79,
+   "Lepas saya makan je yang ni,"
+  ],
+  [
+   6.82,
+   9.39,
+   "dalam dua biji ataupun tiga biji,"
+  ],
+  [
+   9.42,
+   11.25,
+   "kalau susah sangat, empat biji."
+  ],
+  [
+   11.28,
+   13.59,
+   "Yang ni, Sunsweet ni,"
+  ],
+  [
+   13.62,
+   15.17,
+   "daripada zaman mak saya."
+  ],
+  [
+   15.2,
+   17.73,
+   "Mak saya dah umur 74 tahun,"
+  ],
+  [
+   17.76,
+   19.71,
+   "tapi masa dia muda-muda dulu,"
+  ],
+  [
+   19.74,
+   20.57,
+   "saya selalu nampak"
+  ],
+  [
+   20.6,
+   21.51,
+   "dia makan yang ni."
+  ],
+  [
+   21.54,
+   22.63,
+   "So baru saya faham,"
+  ],
+  [
+   22.66,
+   23.97,
+   "bila saya dah berusia,"
+  ],
+  [
+   24.0,
+   27.09,
+   "rupanya kita perlu juga tau"
+  ],
+  [
+   27.12,
+   28.79,
+   "untuk bagi senang nak membuang"
+  ],
+  [
+   28.82,
+   31.11,
+   "setiap pagi, petang ataupun malam,"
+  ],
+  [
+   31.14,
+   32.13,
+   "setiap kali lepas makan."
+  ],
+  [
+   32.16,
+   35.25,
+   "So ini bagus untuk perut."
+  ],
+  [
+   35.28,
+   36.33,
+   "Tengok tu, saya dah"
+  ],
+  [
+   36.36,
+   37.39,
+   "makan, dah habis."
+  ],
+  [
+   37.42,
+   38.86,
+   "So korang kalau nak"
+  ],
+  [
+   38.89,
+   40.21,
+   "senang membuang,"
+  ],
+  [
+   40.24,
+   40.86,
+   "yang ni memang"
+  ],
+  [
+   40.89,
+   41.87,
+   "sangat-sangat bagus."
+  ],
+  [
+   41.9,
+   43.49,
+   "Sunsweet ni boleh"
+  ],
+  [
+   43.52,
+   45.51,
+   "dapatkan dekat link,"
+  ],
+  [
+   45.54,
+   46.13,
+   "harga tengah murah,"
+  ],
+  [
+   46.16,
+   null,
+   "kat luar tak dapat harga macam ni."
+  ]
+ ]
+}

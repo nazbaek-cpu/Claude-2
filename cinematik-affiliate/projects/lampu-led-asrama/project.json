@@ -1,0 +1,200 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Lampu LED magnetic untuk asrama. Roommate, housemate. Remote, dim.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -80,
+ "segments": [
+  {
+   "start": 0.6,
+   "end": 5.8,
+   "title": {
+    "kicker": "LAMPU LED MAGNETIK",
+    "lines": [
+     "Wajib ada",
+     "budak asrama."
+    ],
+    "accent": [
+     "budak",
+     "asrama."
+    ],
+    "size": 118
+   }
+  },
+  {
+   "start": 5.9,
+   "end": 13.2,
+   "kicker": "BELAJAR WAKTU MALAM",
+   "head": "Roommate lena."
+  },
+  {
+   "start": 13.3,
+   "end": 16.3,
+   "kicker": "TAK PAYAH",
+   "head": "Buka lampu besar."
+  },
+  {
+   "start": 16.4,
+   "end": 27.7,
+   "kicker": "MAGNETIC",
+   "head": "Mana-mana pun.",
+   "pills": [
+    [
+     "Dinding",
+     19.3
+    ],
+    [
+     "Touch",
+     21.4
+    ]
+   ]
+  },
+  {
+   "start": 27.8,
+   "end": 41.8,
+   "kicker": "SIAP DENGAN",
+   "head": "Remote control.",
+   "pills": [
+    [
+     "On / Off",
+     34.9
+    ],
+    [
+     "Dim",
+     40.0
+    ]
+   ]
+  },
+  {
+   "start": 41.9,
+   "end": 46.4,
+   "kicker": "BOLEH TUKAR",
+   "head": "Warna lampu."
+  },
+  {
+   "start": 46.5,
+   "end": null,
+   "cta": true,
+   "head": "Jom study.",
+   "offset": -20
+  }
+ ],
+ "subs": [
+  [
+   0.56,
+   2.51,
+   "Untuk anak yang duduk"
+  ],
+  [
+   2.54,
+   3.97,
+   "asrama penuh,"
+  ],
+  [
+   4.0,
+   5.87,
+   "yang ini memang sangat berfungsi."
+  ],
+  [
+   5.9,
+   8.59,
+   "Ini lampu untuk belajar"
+  ],
+  [
+   8.62,
+   9.87,
+   "waktu malam."
+  ],
+  [
+   9.9,
+   12.19,
+   "Tak ganggu roommate dia,"
+  ],
+  [
+   12.22,
+   13.27,
+   "housemate pun."
+  ],
+  [
+   13.3,
+   15.39,
+   "Tak payah buka lampu besar-besar tu."
+  ],
+  [
+   15.42,
+   16.33,
+   "Pakai saja lampu ni."
+  ],
+  [
+   16.36,
+   18.03,
+   "Lepas tu dia datang magnetic."
+  ],
+  [
+   18.06,
+   20.45,
+   "Kita boleh tampal dekat dinding."
+  ],
+  [
+   20.48,
+   22.47,
+   "Lepas tu kita boleh touch dia"
+  ],
+  [
+   22.5,
+   25.03,
+   "dan tampal dekat mana-mana."
+  ],
+  [
+   25.06,
+   27.77,
+   "Yang ni memang sangat berfungsi tau."
+  ],
+  [
+   27.8,
+   32.09,
+   "Lagi satu, dia siap ada"
+  ],
+  [
+   32.12,
+   34.21,
+   "sekali dengan remote."
+  ],
+  [
+   34.24,
+   36.85,
+   "Dia boleh tutup, boleh buka,"
+  ],
+  [
+   36.88,
+   41.89,
+   "boleh terangkan ataupun dim."
+  ],
+  [
+   41.92,
+   46.47,
+   "Dia boleh tukar juga warna lampu."
+  ],
+  [
+   46.5,
+   48.61,
+   "So memang sangat berfungsi."
+  ],
+  [
+   48.64,
+   51.01,
+   "Untuk anak-anak duduk asrama,"
+  ],
+  [
+   51.04,
+   53.85,
+   "yang tak nak ganggu orang lain,"
+  ],
+  [
+   53.88,
+   null,
+   "nak study, dapatkan ni."
+  ]
+ ]
+}

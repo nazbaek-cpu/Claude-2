@@ -1,0 +1,622 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "whisper_prompt": "Latihan matematik 2 dan 3 digit, tambah, tolak, darab, bahagi, 1640 soalan, 15 minit.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Kalau asas tak kuat sekarang…",
+     "at": 0.0,
+     "until": 3.1,
+     "y": 330
+    },
+    {
+     "kind": "kicker",
+     "text": "LATIHAN MATEMATIK",
+     "at": 0.3,
+     "until": 3.1,
+     "y": 420
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAMBAH.",
+       0.94
+      ],
+      [
+       "TOLAK.",
+       1.46
+      ]
+     ],
+     "y": 570,
+     "size": 190,
+     "scatter_at": 2.95
+    },
+    {
+     "kind": "card",
+     "img": "tambah_ws_pg.png",
+     "at": 0.9,
+     "x": 300,
+     "y": 1160,
+     "w": 470,
+     "rot": -7,
+     "until": 3.1
+    },
+    {
+     "kind": "card",
+     "img": "buku_tt.png",
+     "at": 1.4,
+     "x": 790,
+     "y": 1240,
+     "w": 360,
+     "rot": 6,
+     "until": 3.1
+    }
+   ]
+  },
+  {
+   "start": 3.1,
+   "in": "cut",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Tahun depan…",
+     "at": 3.22,
+     "until": 5.5,
+     "y": 330
+    },
+    {
+     "kind": "setup",
+     "text": "Masa tu nak kejar, lagi susah.",
+     "at": 5.6,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "ANAK MULA",
+       3.9
+      ],
+      [
+       "TERTINGGAL",
+       4.42
+      ]
+     ],
+     "y": 520,
+     "box": "TERTINGGAL"
+    },
+    {
+     "kind": "race",
+     "at": 3.9,
+     "y": 1060
+    },
+    {
+     "kind": "tile",
+     "glyph": "!",
+     "at": 5.8,
+     "x": 540,
+     "y": 1420,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "start": 7.7,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Mak ayah kena ingat…",
+     "at": 7.84,
+     "until": 12.6,
+     "y": 330
+    },
+    {
+     "kind": "setup",
+     "text": "Kalau asas goyang…",
+     "at": 12.76,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMUA DIBINA",
+       10.52
+      ],
+      [
+       "ATAS ASAS.",
+       11.1
+      ]
+     ],
+     "y": 470,
+     "until": 12.6,
+     "accent": [
+      "ASAS."
+     ]
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MAKIN",
+       14.12
+      ],
+      [
+       "TERTINGGAL.",
+       14.46
+      ]
+     ],
+     "y": 470
+    },
+    {
+     "kind": "blocks",
+     "items": [
+      [
+       "TAMBAH & TOLAK",
+       9.02
+      ],
+      [
+       "DARAB",
+       9.46
+      ],
+      [
+       "BAHAGI",
+       9.9
+      ],
+      [
+       "TOPIK LAIN",
+       10.3
+      ]
+     ],
+     "y": 1500,
+     "wobble_at": 13.32,
+     "fall_at": 14.3
+    }
+   ]
+  },
+  {
+   "start": 15.84,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters"
+    },
+    {
+     "kind": "setup",
+     "text": "Lepas tu…",
+     "at": 15.84,
+     "until": 19.7,
+     "y": 560
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAKUT",
+       17.54
+      ],
+      [
+       "MATEMATIK.",
+       17.84
+      ]
+     ],
+     "y": 700
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "HILANG YAKIN.",
+       18.82
+      ]
+     ],
+     "y": 1010,
+     "accent": [
+      "HILANG",
+      "YAKIN."
+     ]
+    },
+    {
+     "kind": "setup",
+     "text": "Itu yang kita tak mahu.",
+     "at": 19.84,
+     "y": 1200
+    }
+   ]
+  },
+  {
+   "start": 21.0,
+   "in": "cut",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Tapi tak perlu duduk berjam-jam…",
+     "at": 21.0,
+     "until": 23.5,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CUKUP",
+       23.66
+      ]
+     ],
+     "y": 420
+    },
+    {
+     "kind": "timer",
+     "at": 23.9,
+     "to": 15,
+     "dur": 0.95,
+     "y": 1000
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEHARI.",
+       25.52
+      ]
+     ],
+     "y": 1420,
+     "size": 130
+    }
+   ]
+  },
+  {
+   "start": 26.5,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Buku latihan…",
+     "at": 26.58,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MATEMATIK",
+       27.2
+      ],
+      [
+       "2 & 3 DIGIT.",
+       28.02
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "2",
+      "&",
+      "3",
+      "DIGIT."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "buku_darab.png",
+     "at": 28.5,
+     "x": 290,
+     "y": 1260,
+     "w": 330,
+     "rot": -9
+    },
+    {
+     "kind": "card",
+     "img": "buku_bahagi.png",
+     "at": 29.0,
+     "x": 790,
+     "y": 1260,
+     "w": 330,
+     "rot": 9
+    },
+    {
+     "kind": "card",
+     "img": "buku_tt.png",
+     "at": 28.02,
+     "x": 540,
+     "y": 1200,
+     "w": 380,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "start": 30.6,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "TAMBAH & TOLAK",
+     "at": 30.7,
+     "until": 34.9,
+     "y": 380
+    },
+    {
+     "kind": "count",
+     "to": 1640,
+     "at": 30.88,
+     "dur": 1.6,
+     "y": 640,
+     "label": "soalan dengan jawapan",
+     "label_at": 33.72,
+     "until": 34.9
+    },
+    {
+     "kind": "setup",
+     "text": "Tambah, tolak, darab, bahagi…",
+     "at": 35.1,
+     "y": 420
+    },
+    {
+     "kind": "tile",
+     "glyph": "+",
+     "at": 35.1,
+     "x": 210,
+     "y": 1060,
+     "label": "Tambah"
+    },
+    {
+     "kind": "tile",
+     "glyph": "−",
+     "at": 35.7,
+     "x": 420,
+     "y": 1060,
+     "label": "Tolak"
+    },
+    {
+     "kind": "tile",
+     "glyph": "×",
+     "at": 36.32,
+     "x": 660,
+     "y": 1060,
+     "label": "Darab"
+    },
+    {
+     "kind": "tile",
+     "glyph": "÷",
+     "at": 36.82,
+     "x": 870,
+     "y": 1060,
+     "label": "Bahagi"
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMUA ADA.",
+       37.34
+      ]
+     ],
+     "y": 620
+    }
+   ]
+  },
+  {
+   "start": 38.2,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Soalan dia…",
+     "at": 38.28,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "STEP BY STEP.",
+       39.06
+      ]
+     ],
+     "y": 480
+    },
+    {
+     "kind": "stairs",
+     "labels": [
+      [
+       "Mudah",
+       40.34
+      ],
+      [
+       "",
+       40.7
+      ],
+      [
+       "Susah",
+       41.18
+      ]
+     ],
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 42.0,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SENANG SEMAK.",
+       42.48
+      ]
+     ],
+     "y": 480,
+     "accent": [
+      "SEMAK."
+     ]
+    },
+    {
+     "kind": "setup",
+     "text": "Jawapan dah ada.",
+     "at": 43.68,
+     "y": 330
+    },
+    {
+     "kind": "ticks",
+     "img": "tambah_ws_pg.png",
+     "at": 42.1,
+     "x": 540,
+     "y": 1150,
+     "w": 900,
+     "rot": 0,
+     "tick_at": 42.9,
+     "n": 10,
+     "step": 0.12
+    }
+   ]
+  },
+  {
+   "start": 44.35,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Buat sikit-sikit setiap hari…",
+     "at": 45.1,
+     "y": 330
+    },
+    {
+     "kind": "calendar",
+     "at": 45.1,
+     "y": 690,
+     "tick_at": 46.16,
+     "step": 0.2
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "ASAS KUKUH.",
+       47.68
+      ],
+      [
+       "ANAK YAKIN.",
+       50.04
+      ]
+     ],
+     "y": 980,
+     "accent": [
+      "KUKUH.",
+      "YAKIN."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "mak_anak.png",
+     "at": 48.6,
+     "x": 540,
+     "y": 1450,
+     "w": 460,
+     "rot": -3,
+     "from": "bottom"
+    }
+   ]
+  },
+  {
+   "start": 51.85,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters"
+    },
+    {
+     "kind": "setup",
+     "text": "Nak anak kuat asas matematik…",
+     "at": 51.9,
+     "y": 380
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "DARI",
+       54.46
+      ],
+      [
+       "TAHUN 1.",
+       54.76
+      ]
+     ],
+     "y": 500,
+     "accent": [
+      "TAHUN",
+      "1."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "kombo.png",
+     "at": 52.4,
+     "x": 540,
+     "y": 1060,
+     "w": 500,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "tile",
+     "glyph": "+",
+     "at": 53.0,
+     "x": 300,
+     "y": 1400,
+     "size": 110
+    },
+    {
+     "kind": "tile",
+     "glyph": "−",
+     "at": 53.15,
+     "x": 460,
+     "y": 1400,
+     "size": 110
+    },
+    {
+     "kind": "tile",
+     "glyph": "×",
+     "at": 53.3,
+     "x": 620,
+     "y": 1400,
+     "size": 110
+    },
+    {
+     "kind": "tile",
+     "glyph": "÷",
+     "at": 53.45,
+     "x": 780,
+     "y": 1400,
+     "size": 110
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 55.78,
+     "y": 1560
+    }
+   ]
+  }
+ ]
+}

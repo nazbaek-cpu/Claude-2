@@ -65,9 +65,9 @@ def background(dark):
 
 def floaters(frame, t, it):
     """slow drifting, blurred maths symbols behind a dark scene"""
-    rng = np.random.default_rng(3)
+    rng = np.random.default_rng(3); glyphs = it.get("glyphs", list("+−×÷="))
     for i in range(it.get("n", 16)):
-        g = "+−×÷="[i % 5]; size = int(rng.uniform(90, 220))
+        g = glyphs[i % len(glyphs)]; size = int(rng.uniform(90, 220) / max(1, len(g) / 2.5))
         key = ("float", g, size)
         if key not in cache:
             img = text_img(g, font("heavy", size), CREAM)
@@ -216,7 +216,7 @@ def clay(glyph, size):
     face.putalpha(m)
     hl = Image.new("L", (n, n), 0); ImageDraw.Draw(hl).ellipse((n * 0.12, n * 0.05, n * 0.88, n * 0.42), fill=70)
     face.alpha_composite(Image.merge("RGBA", (Image.new("L", (n, n), 255),) * 3 + (Image.composite(hl.filter(ImageFilter.GaussianBlur(n / 18)), Image.new("L", (n, n), 0), m),)))
-    g = font("heavy", int(size * 0.62) * s); gw = g.getlength(glyph); asc, desc = g.getmetrics()
+    g = font("heavy", int(size * (0.62 if len(glyph) == 1 else 0.4)) * s); gw = g.getlength(glyph); asc, desc = g.getmetrics()
     gl = Image.new("RGBA", (n, n), (0, 0, 0, 0)); d = ImageDraw.Draw(gl)
     d.text(((n - gw) / 2, (n - asc - desc) / 2 + n * 0.02 + 6 * s), glyph, font=g, fill=(120, 44, 20, 120))
     gl = gl.filter(ImageFilter.GaussianBlur(4 * s))
@@ -239,6 +239,34 @@ def tile(frame, t, it, sc):
         la = ease_out(ramp(t, it["at"] + 0.25, 0.3)) * (1 - out)
         col = (236, 226, 212) if sc.get("dark") else (92, 74, 60)
         if la > 0: blend(frame, anim(text_img(it["label"], font("serif", 44), col), la, 1.0), it["x"], it["y"] + it.get("size", 170) * 0.5 + 50)
+
+def chip_img(txt):
+    key = ("chip", txt)
+    if key in cache: return cache[key]
+    f = font("heavy", 78); tw = int(f.getlength(txt)); asc, desc = f.getmetrics(); w, h = tw + 72, asc + desc + 38; s = 3
+    m = Image.new("L", (w * s, h * s), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * s - 1, h * s - 1), radius=22 * s, fill=255)
+    img = Image.new("RGBA", (w, h), (255, 255, 255, 0)); img.putalpha(m.resize((w, h), Image.LANCZOS))
+    ImageDraw.Draw(img).text((36, 17), txt, font=f, fill=INK + (255,))
+    cache[key] = soft_shadow(img, 90, 12, 10)
+    return cache[key]
+
+def pile(frame, t, it, sc):
+    """formula chips rain down into a messy heap; scatter_at blows them away"""
+    rng = np.random.default_rng(it.get("seed", 5)); x0, y0, x1, y1 = it["box"]
+    scat, until = it.get("scatter_at"), it.get("until", 1e9)
+    for i, txt in enumerate(it["chips"]):
+        tx, ty, rot0, ang = rng.uniform(x0, x1), rng.uniform(y0, y1), rng.uniform(-28, 28), rng.uniform(0, 2 * math.pi)
+        at = it["at"] + i * it.get("step", 0.16); p = ramp(t, at, 0.5)
+        if p <= 0: continue
+        x, y = tx, ty - (1 - ease_back(p, 1.3)) * 1100
+        rot = rot0 * ease_out(p); a = ease_out(p * 3) * (1 - ramp(t, until - 0.25, 0.25))
+        if scat is not None and t > scat:
+            q = ease_out(ramp(t, scat + 0.03 * i, 0.6))
+            x += math.cos(ang) * 800 * q; y += math.sin(ang) * 800 * q; rot += 90 * q * (1 if i % 2 else -1); a *= 1 - q
+        if a <= 0: continue
+        im = chip_img(txt).rotate(rot, Image.BICUBIC, expand=True)
+        if a < 0.999: im.putalpha(im.getchannel("A").point(lambda v, a=a: int(v * a)))
+        blend(frame, im, x, y)
 
 # ---------- data visuals ----------
 def underline(frame, t, at, cx, y, w=220):
@@ -406,7 +434,7 @@ def cta(frame, t, it, sc):
     blend(frame, chev, W / 2, it["y"] + 100 + 8 * math.sin(2 * math.pi * 1.4 * (t - it["at"])))
 
 DRAW = {"setup": setup, "kicker": kicker, "head": head, "tile": tile, "count": count, "timer": timer,
-        "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters}
+        "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
@@ -453,6 +481,9 @@ def sfx_track(cfg, dur, out):
                 n = it.get("n", 10) if it["kind"] == "ticks" else 7
                 ev += [(it["tick_at"] + i * it.get("step", 0.12 if it["kind"] == "ticks" else 0.2), "tick", -18) for i in range(n)]
             elif it["kind"] == "stairs": ev += [(at + 0.1, "pop", -15) for _, at in it["labels"]]
+            elif it["kind"] == "pile":
+                ev += [(it["at"] + i * it.get("step", 0.16) + 0.35, "tick", -17) for i in range(len(it["chips"]))]
+                if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -15))
             elif it["kind"] == "cta": ev.append((it["at"], "ding", -16))
             elif it["kind"] in ("count", "timer"):
                 last = -1
@@ -472,7 +503,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project"); ap.add_argument("--limit", type=float); ap.add_argument("--start", type=float, default=0)
     ap.add_argument("--out"); args = ap.parse_args()
     prj = args.project.rstrip("/"); cfg = project.read(prj)
-    src = os.path.join(prj, cfg["source"]); dur = probe(src)[4]
+    src = os.path.join(prj, cfg["source"]); dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)
     sfx_wav = os.path.join(build, "sfx.wav"); n_ev = sfx_track(cfg, dur, sfx_wav)

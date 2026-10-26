@@ -180,7 +180,8 @@ def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
                   {"kind": "setup", "text": "Kalau asas tak kuat…", "at": 0.0},
                   {"kind": "head", "lines": [["TAMBAH.", 0.1], ["TOLAK.", 0.2]], "scatter_at": 0.9},
                   {"kind": "tile", "glyph": "+", "at": 0.1, "x": 300, "y": 1000},
-                  {"kind": "count", "to": 1640, "at": 0.0, "y": 600, "label": "soalan"}]},
+                  {"kind": "count", "to": 1640, "at": 0.0, "y": 600, "label": "soalan"},
+                  {"kind": "pile", "chips": ["F = ma", "V = IR"], "at": 0.1, "box": [200, 900, 880, 1500], "scatter_at": 0.6}]},
               {"start": 1.0, "dark": True, "items": [{"kind": "floaters"}, {"kind": "timer", "at": 1.0, "to": 15, "y": 900},
                                                      {"kind": "calendar", "at": 1.0, "y": 600, "tick_at": 1.1}]}]
     still = explainer.frame_at(scenes, 0.5, str(tmp_path))

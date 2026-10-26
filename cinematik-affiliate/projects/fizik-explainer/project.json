@@ -1,0 +1,562 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "end": 54.4,
+ "whisper_prompt": "Fizik, formula, Modul Konstruk Fizik, mnemonik, SPM, Tingkatan 4 dan 5, dwibahasa, guru cemerlang fizik.",
+ "segments": [],
+ "subs": [],
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "HAMPIR",
+       0.66
+      ],
+      [
+       "GIVE UP?",
+       0.96
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "GIVE",
+      "UP?"
+     ],
+     "size": 170
+    },
+    {
+     "kind": "setup",
+     "text": "Sebab formula terlalu banyak…",
+     "at": 2.34,
+     "y": 330
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "F = ma",
+      "V = IR",
+      "p = mv",
+      "P = F/A",
+      "W = Fs",
+      "Q = It",
+      "E = ½mv²",
+      "P = IV",
+      "F = kx",
+      "v = u + at",
+      "E = mgh",
+      "s = ut + ½at²"
+     ],
+     "at": 2.8,
+     "step": 0.17,
+     "box": [
+      200,
+      920,
+      880,
+      1560
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.3,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "F = ma",
+      "V = IR",
+      "p = mv",
+      "P = F/A",
+      "W = Fs",
+      "Q = It",
+      "E = ½mv²",
+      "P = IV"
+     ],
+     "n": 14
+    },
+    {
+     "kind": "setup",
+     "text": "Hafal malam-malam…",
+     "at": 5.42,
+     "until": 6.95,
+     "y": 560
+    },
+    {
+     "kind": "setup",
+     "text": "Tapi masuk exam, tengok soalan…",
+     "at": 7.04,
+     "y": 560
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TERUS BLANK.",
+       9.22
+      ]
+     ],
+     "y": 720
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 10.24,
+     "x": 540,
+     "y": 1120,
+     "size": 220
+    },
+    {
+     "kind": "setup",
+     "text": "Tak tahu nak guna formula yang mana.",
+     "at": 10.4,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 12.2,
+   "in": "cut",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Masalahnya…",
+     "at": 12.32,
+     "until": 15.2,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BUKAN",
+       13.12
+      ],
+      [
+       "TAK PANDAI.",
+       13.92
+      ]
+     ],
+     "y": 470,
+     "until": 15.2
+    },
+    {
+     "kind": "setup",
+     "text": "Cara dia ingat yang tak kena.",
+     "at": 15.34,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CARA INGAT",
+       16.0
+      ]
+     ],
+     "y": 520,
+     "box": "INGAT"
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "F = ma",
+      "V = IR",
+      "p = mv",
+      "P = F/A",
+      "W = Fs",
+      "Q = It",
+      "E = ½mv²",
+      "P = IV",
+      "F = kx"
+     ],
+     "at": 12.4,
+     "step": 0.06,
+     "box": [
+      220,
+      1000,
+      860,
+      1560
+     ],
+     "seed": 9
+    }
+   ]
+  },
+  {
+   "start": 17.7,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Modul Konstruk Fizik…",
+     "at": 17.84,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CARA KREATIF",
+       20.24
+      ],
+      [
+       "INGAT FORMULA.",
+       21.4
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "KREATIF"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_t4.png",
+     "at": 17.84,
+     "x": 330,
+     "y": 1230,
+     "w": 380,
+     "rot": -7
+    },
+    {
+     "kind": "card",
+     "img": "cover_t5.png",
+     "at": 18.3,
+     "x": 760,
+     "y": 1250,
+     "w": 380,
+     "rot": 7
+    }
+   ]
+  },
+  {
+   "start": 23.7,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Contoh macam ni…",
+     "at": 23.8,
+     "y": 330
+    },
+    {
+     "kind": "card",
+     "img": "pick.png",
+     "at": 23.9,
+     "x": 540,
+     "y": 840,
+     "w": 1040,
+     "rot": -1
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEKALI FAHAM,",
+       25.4
+      ],
+      [
+       "TERUS LEKAT.",
+       26.82
+      ]
+     ],
+     "y": 1260,
+     "accent": [
+      "LEKAT."
+     ]
+    }
+   ]
+  },
+  {
+   "start": 27.85,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Bukan setakat ingat…",
+     "at": 27.92,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CARA GUNA",
+       29.98
+      ],
+      [
+       "FORMULA.",
+       31.1
+      ]
+     ],
+     "y": 470,
+     "until": 33.0
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "STEP BY STEP.",
+       33.28
+      ]
+     ],
+     "y": 520
+    },
+    {
+     "kind": "card",
+     "img": "jawapan.png",
+     "at": 29.5,
+     "x": 540,
+     "y": 1200,
+     "w": 760,
+     "rot": 3
+    }
+   ]
+  },
+  {
+   "start": 34.55,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Soalan dia…",
+     "at": 34.66,
+     "until": 37.5,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "FOKUS SPM.",
+       35.54
+      ]
+     ],
+     "y": 480,
+     "accent": [
+      "SPM."
+     ],
+     "until": 37.5
+    },
+    {
+     "kind": "card",
+     "img": "konstruk.png",
+     "at": 34.8,
+     "x": 540,
+     "y": 1100,
+     "w": 860,
+     "rot": -2,
+     "until": 37.5
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TINGKATAN",
+       37.78
+      ],
+      [
+       "4 & 5.",
+       38.18
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "4",
+      "&",
+      "5."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_t4.png",
+     "at": 38.18,
+     "x": 330,
+     "y": 1130,
+     "w": 340,
+     "rot": -6
+    },
+    {
+     "kind": "card",
+     "img": "cover_t5.png",
+     "at": 39.52,
+     "x": 750,
+     "y": 1150,
+     "w": 340,
+     "rot": 6
+    },
+    {
+     "kind": "tile",
+     "glyph": "BM",
+     "at": 40.82,
+     "x": 400,
+     "y": 1530,
+     "size": 130,
+     "label": "Bahasa Melayu"
+    },
+    {
+     "kind": "tile",
+     "glyph": "EN",
+     "at": 41.0,
+     "x": 680,
+     "y": 1530,
+     "size": 130,
+     "label": "English"
+    }
+   ]
+  },
+  {
+   "start": 41.95,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "A. H. ROSLAN",
+     "at": 42.46,
+     "until": 44.8,
+     "y": 390
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "GURU CEMERLANG",
+       42.86
+      ],
+      [
+       "FIZIK.",
+       43.9
+      ]
+     ],
+     "y": 520,
+     "accent": [
+      "FIZIK."
+     ],
+     "until": 44.8
+    },
+    {
+     "kind": "card",
+     "img": "cover_t5.png",
+     "at": 42.1,
+     "x": 540,
+     "y": 1230,
+     "w": 420,
+     "rot": 0,
+     "until": 44.8
+    },
+    {
+     "kind": "setup",
+     "text": "Anak tak rasa…",
+     "at": 44.92,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK TERBEBAN",
+       45.44
+      ],
+      [
+       "LAGI.",
+       46.1
+      ]
+     ],
+     "y": 480
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "F = ma",
+      "V = IR",
+      "p = mv",
+      "P = F/A",
+      "W = Fs",
+      "Q = It",
+      "E = ½mv²",
+      "P = IV"
+     ],
+     "at": 44.95,
+     "step": 0.05,
+     "box": [
+      220,
+      1000,
+      860,
+      1560
+     ],
+     "seed": 4,
+     "scatter_at": 46.15
+    }
+   ]
+  },
+  {
+   "start": 47.35,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "F = ma",
+      "V = IR",
+      "p = mv",
+      "P = F/A",
+      "W = Fs",
+      "Q = It",
+      "E = ½mv²",
+      "P = IV"
+     ],
+     "n": 14
+    },
+    {
+     "kind": "setup",
+     "text": "Ibu ayah, jangan biar anak give up…",
+     "at": 47.46,
+     "y": 380
+    },
+    {
+     "kind": "card",
+     "img": "covers_both.png",
+     "at": 48.3,
+     "x": 540,
+     "y": 1030,
+     "w": 600,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SPM DAH DEKAT.",
+       52.36
+      ]
+     ],
+     "y": 560,
+     "accent": [
+      "DEKAT."
+     ]
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 50.42,
+     "y": 1450
+    }
+   ]
+  }
+ ]
+}

@@ -78,9 +78,10 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `ticks` | a worksheet card that fills with check marks |
 | `calendar` | seven days, ticked one by one |
 | `cta` | orange pill with bouncing chevrons |
-| `floaters` | drifting maths symbols behind a dark scene |
+| `pile` | chips (e.g. formulas) that rain into a messy heap; `scatter_at` blows them away |
+| `floaters` | drifting maths symbols (or your own `glyphs`) behind a dark scene |
 
-`"in": "cut"` hard-cuts into a scene; the default is the whip. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
+`"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
 
 ## Quick start
 

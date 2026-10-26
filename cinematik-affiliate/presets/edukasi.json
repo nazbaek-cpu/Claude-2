@@ -1,0 +1,13 @@
+{
+ "_name": "Animasi Edukasi Buku",
+ "type": "explainer",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "voice": {
+  "chain": "clean"
+ },
+ "segments": [],
+ "subs": []
+}

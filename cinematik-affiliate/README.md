@@ -52,9 +52,26 @@ The food-review look, saved as a preset so a new project only needs its own text
 
 Example: `projects/sate-ikan-jumbo/`.
 
-## Cinematik Explainer (`"type": "explainer"`)
+## Animasi Edukasi Buku (preset `edukasi`)
 
-A no-face motion-graphics reel built on a voiceover, in the style of a product explainer:
+A no-face motion-graphics reel for educational books, built on a voiceover in the style of a product explainer. The preset
+sets `"type": "explainer"`, the speed pass (1.12×, pauses 0.22 s) and the clean voice chain, so a project only needs its
+voiceover, photos and scenes:
+
+```jsonc
+{
+  "source": "input/vo.mp4",          // the voiceover (a black CapCut export is fine)
+  "preset": "edukasi",
+  "end": 54.4,                       // optional: trim silence after the last word
+  "scenes": [
+    {"start": 0.0, "in": "cut", "items": [
+      {"kind": "head", "lines": [["HAMPIR", 0.66], ["GIVE UP?", 0.96]], "accent": ["GIVE", "UP?"]},
+      {"kind": "pile", "chips": ["F = ma", "V = IR"], "at": 2.8, "box": [200, 920, 880, 1560]}]}
+  ]
+}
+```
+
+What it looks like:
 
 - **Look:** peach paper with a faint grid; dark scenes for the low point of the story.
 - **Type:** an italic serif setup line (Instrument Serif) appears word by word over a heavy uppercase headline (Plus Jakarta Sans ExtraBold); every final full stop is orange.
@@ -82,9 +99,9 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `floaters` | drifting maths symbols (or your own `glyphs`) behind a dark scene |
 
 `"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word.
-`"speed": {"tempo": 1.12, "max_pause": 0.22}` speeds up the voiceover (pauses shortened, pitch kept) and every scene time
-follows it, so write the times from the original recording. `"voice": {"chain": "clean"}` is the gentle studio chain for a
-voiceover that is already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light denoise, no saturation. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
+The preset's `"speed"` shortens pauses and speeds up the voiceover (pitch kept), and every scene time follows it, so write
+the times from the original recording. Its `"voice": {"chain": "clean"}` is the gentle studio chain for a voiceover that is
+already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light denoise, no saturation. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
 
 ## Quick start
 
@@ -151,7 +168,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `beauty.py` | skin smoothing / tone evening, lipstick, brow fill |
 | `project.py` | reads `project.json` over its `"preset"` (`presets/*.json`) |
 | `mirror.py` | `"hflip": "auto"`: OCRs 16 frames as shot and flipped (RapidOCR); flips when only the flipped side reads. `python mirror.py projects/<name>` shows what it read |
-| `explainer.py` | `"type": "explainer"`: the no-face motion-graphics reel, scene by scene, with its own SFX track |
+| `explainer.py` | Animasi Edukasi Buku (`"type": "explainer"`): the no-face motion-graphics reel, scene by scene, with its own SFX track |
 | `speed.py` | with `"speed"`: trims pauses (Whisper gaps + measured silence, never through a word), tempo-up, frame-aligned → `build/fast.mp4`; all project times are remapped automatically |
 | `voice.py` | studio voice → `build/voice.wav` (DeepFilterNet binary in `tools/`, fetched by `setup.sh`) |
 | `sfx.py` | builds `build/sfx.wav` from the segments |
@@ -162,5 +179,6 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `projects/mms-crunchy-cookie/` | example: snack review, hflip, speed with a held tasting moment, CTA with price pills (Malay) |
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/tambah-tolak-orbit/` | example: the Tambah & Tolak take with the orbit title on 30 % glass (Malay) |
-| `projects/matematik-explainer/` | example: Cinematik Explainer for the Latihan Matematik 2 & 3 Digit books on a Malay voiceover |
+| `projects/matematik-explainer/` | example: Animasi Edukasi Buku for the Latihan Matematik 2 & 3 Digit books (Malay voiceover) |
+| `projects/fizik-explainer/` | example: Animasi Edukasi Buku for Modul Konstruk Fizik T4 & T5 (formula pile, PICK mnemonic page) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

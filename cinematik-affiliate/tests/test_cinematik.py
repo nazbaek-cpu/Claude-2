@@ -207,5 +207,11 @@ def test_clean_voice_chain_is_a_valid_filtergraph():
     assert r.returncode == 0, r.stderr
 
 
+def test_edukasi_preset_makes_an_explainer():
+    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "fizik-explainer"))
+    assert cfg["_name"] == "Animasi Edukasi Buku" and cfg["type"] == "explainer"
+    assert cfg["voice"]["chain"] == "clean" and cfg["speed"]["tempo"] == 1.12 and cfg["end"] == 54.4
+
+
 def test_example_project_is_valid_json():
     json.load(open(os.path.join(PRJ, "project.json")))

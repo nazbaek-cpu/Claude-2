@@ -1,4 +1,4 @@
-"""Cinematik Explainer: a no-face motion-graphics reel on a voiceover.
+"""Animasi Edukasi Buku (preset "edukasi"): a no-face motion-graphics reel on a voiceover.
 
 Peach paper with a faint grid, an italic serif setup line over a heavy sans headline that ends in an
 orange full stop, tilted photo cards, clay icons, and dark scenes for the low point of the story.
@@ -6,10 +6,10 @@ orange full stop, tilted photo cards, clay icons, and dark scenes for the low po
     python explainer.py projects/<name>                 -> out/final.mp4 (voice.py + SFX first, see run.sh)
     python explainer.py projects/<name> --limit 8       -> out/preview.mp4
 
-project.json: {"type": "explainer", "source": "input/vo.mp4", "segments": [], "subs": [],
+project.json: {"source": "input/vo.mp4", "preset": "edukasi",
                "scenes": [{"start": 0.0, "in": "cut"|"whip", "dark": false, "items": [...]}, ...]}
-Item kinds (times in seconds of the voiceover): setup, kicker, head, card, tile, count, timer, race,
-blocks, stairs, ticks, calendar, cta, floaters. See projects/matematik-explainer for every kind in use.
+Item kinds (times in seconds of the original voiceover): setup, kicker, head, card, tile, count, timer, race,
+blocks, stairs, ticks, calendar, cta, pile, floaters. Examples: projects/matematik-explainer, projects/fizik-explainer.
 """
 import argparse, json, math, os, subprocess, wave
 import numpy as np, cv2

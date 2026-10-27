@@ -317,6 +317,40 @@
    "dark": true,
    "items": [
     {
+     "kind": "photo",
+     "img": "hook_ibu_anak.jpg",
+     "at": 0.0,
+     "until": 3.73,
+     "zoom": [
+      1.0,
+      1.12
+     ],
+     "focus": [
+      0.6,
+      0.42
+     ],
+     "focus_at": 0.48,
+     "parallax": 0.03,
+     "subject_box": [
+      0.35,
+      0.15,
+      0.98,
+      0.95
+     ],
+     "glow": [
+      0.2,
+      0.47,
+      0.22
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.73,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
      "kind": "floaters",
      "glyphs": [
       "?"
@@ -326,13 +360,13 @@
     {
      "kind": "kicker",
      "text": "SEJARAH SPM",
-     "at": 0.2,
+     "at": 3.73,
      "y": 300
     },
     {
      "kind": "card",
      "img": "pelajar.png",
-     "at": 0.3,
+     "at": 3.73,
      "x": 540,
      "y": 840,
      "w": 900,

@@ -47,17 +47,23 @@
    "head": "Pelbagai idea."
   },
   {
-   "start": 35.98,
-   "end": 38.62,
+   "start": 36.58,
+   "end": 39.95,
    "kicker": "BUKAN BUKU BIASA",
-   "head": "Dimodulkan."
+   "head": "Dikumpul."
   },
   {
-   "start": 38.66,
-   "end": 48.7,
-   "kicker": "DIKUMPUL DARIPADA",
+   "start": 43.0,
+   "end": 46.62,
+   "kicker": "DARIPADA",
    "count": 40,
    "label": "bengkel melukis komik."
+  },
+  {
+   "start": 46.64,
+   "end": 49.15,
+   "kicker": "SEMUA DALAM",
+   "head": "Satu buku."
   },
   {
    "start": 51.02,
@@ -99,8 +105,12 @@
     25.84
    ],
    [
-    35.95,
-    48.74
+    36.55,
+    39.95
+   ],
+   [
+    43.0,
+    49.15
    ],
    [
     51.0,

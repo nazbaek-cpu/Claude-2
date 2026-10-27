@@ -338,14 +338,14 @@ def title_layers(cfg, s, t, front):
 def layers(cfg, t):
     """returns (behind_subject, in_front) lists of (img, cx, cy)"""
     back, front = [], []
-    sub_y = SUB_Y
+    sub_y = cfg.get("sub_y", SUB_Y)   # e.g. 540 with top_offset -100: subtitles above the head, clear of a product held low
     skrip = cfg.get("theme") == "skrip"
     head_f, num_f, sub_f = (SK_HEAD, SK_NUM, SK_SUB) if skrip else (H_FONT, N_FONT, S_FONT)
     oy = cfg.get("top_offset", 0)   # negative lifts the top text for footage where the head sits high
     for s in cfg["segments"]:
         if "title" in s:
             title_layers(cfg, s, t, front)
-            if s["start"] <= t <= s["end"]: sub_y = TITLE_POS[cfg.get("title_pos", "bottom")]["sub"]
+            if s["start"] <= t <= s["end"] and "sub_y" not in cfg: sub_y = TITLE_POS[cfg.get("title_pos", "bottom")]["sub"]
             continue
         t0, t1 = s["start"], s["end"]
         a = vis(t, t0, t1)

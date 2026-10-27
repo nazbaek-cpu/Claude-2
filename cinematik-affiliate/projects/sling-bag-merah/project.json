@@ -1,0 +1,181 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "Sling bag, beg sling, kalis air, banyak poket, zip, tahan lasak.",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 1.0
+ },
+ "segments": [
+  {
+   "start": 0.3,
+   "end": 6.93,
+   "kicker": "LELAKI & WANITA",
+   "head": "Tahan lasak."
+  },
+  {
+   "start": 6.96,
+   "end": 11.8,
+   "kicker": "KENA HENTAK?",
+   "head": "Tak ada masalah."
+  },
+  {
+   "start": 11.82,
+   "end": 14.45,
+   "kicker": "MATERIAL",
+   "head": "Cordura."
+  },
+  {
+   "start": 14.48,
+   "end": 21.69,
+   "kicker": "BANYAK RUANG",
+   "head": "Banyak kompartmen."
+  },
+  {
+   "start": 21.72,
+   "end": 26.0,
+   "kicker": "BAHAGIAN BELAKANG",
+   "head": "Luas."
+  },
+  {
+   "start": 28.3,
+   "end": 32.85,
+   "kicker": "KAPASITI",
+   "count": 4.5,
+   "decimals": 1,
+   "label": "liter."
+  },
+  {
+   "start": 32.88,
+   "end": 35.08,
+   "kicker": "TENGOK NI",
+   "head": "Sangat luas."
+  },
+  {
+   "start": 35.1,
+   "end": 40.09,
+   "kicker": "LAPISAN BALDU",
+   "head": "Lembut."
+  },
+  {
+   "start": 40.12,
+   "end": 44.53,
+   "kicker": "LETAK PHONE",
+   "head": "Tak mudah calar."
+  },
+  {
+   "start": 44.56,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [
+  [
+   0.3,
+   2.87,
+   "Lelaki ataupun wanita,"
+  ],
+  [
+   2.9,
+   6.93,
+   "kalau nak cari sling bag yang tahan lasak."
+  ],
+  [
+   6.96,
+   9.73,
+   "Kalau terhentak ke apa ke,"
+  ],
+  [
+   9.76,
+   11.79,
+   "takde masalah dekat dalam."
+  ],
+  [
+   11.82,
+   14.45,
+   "Sebab dia pakai material Cordura."
+  ],
+  [
+   14.48,
+   17.25,
+   "Dia ada banyak kompartmen."
+  ],
+  [
+   17.28,
+   21.69,
+   "Paling best, ada slot kad macam ni."
+  ],
+  [
+   21.72,
+   23.89,
+   "Lepas tu bahagian belakang ni,"
+  ],
+  [
+   23.92,
+   26.02,
+   "yang saya ambil ni adalah"
+  ],
+  [
+   28.3,
+   30.13,
+   "4.5 liter."
+  ],
+  [
+   30.16,
+   32.85,
+   "Boleh isi banyak."
+  ],
+  [
+   32.88,
+   35.07,
+   "Tengok ni, sangat-sangat luas."
+  ],
+  [
+   35.1,
+   36.83,
+   "Bahagian sini dia siap bagi"
+  ],
+  [
+   36.86,
+   40.09,
+   "material macam baldu."
+  ],
+  [
+   40.12,
+   41.71,
+   "Jadi kalau letak phone,"
+  ],
+  [
+   41.74,
+   44.53,
+   "tak mudah nak calar."
+  ],
+  [
+   44.56,
+   null,
+   "Boleh dapatkan dekat link di bawah."
+  ]
+ ],
+ "top_offset": -100,
+ "sub_y": 540,
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "order": [
+   [
+    0,
+    26.02
+   ],
+   [
+    28.28,
+    null
+   ]
+  ]
+ }
+}

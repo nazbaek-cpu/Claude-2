@@ -180,5 +180,5 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
 | `projects/buku-melukis-karakter/` | example: children's drawing book, title on top, two count-ups, lifted top text (Malay) |
 | `projects/tambah-tolak-orbit/` | example: the Tambah & Tolak take with the orbit title on 30 % glass (Malay) |
 | `projects/matematik-explainer/` | example: Animasi Edukasi Buku for the Latihan Matematik 2 & 3 Digit books (Malay voiceover) |
-| `projects/fizik-explainer/` | example: Animasi Edukasi Buku for Modul Konstruk Fizik T4 & T5 (formula pile, PICK mnemonic page) |
+| `projects/timbunan-chip/` | example: Animasi Edukasi Buku for Modul Konstruk Fizik T4 & T5 (formula pile, PICK mnemonic page) |
 | `projects/sling-bag-cordura/` | example: Cordura slim sling bag, 4.5 L count-up, opening wide shot (Malay) |

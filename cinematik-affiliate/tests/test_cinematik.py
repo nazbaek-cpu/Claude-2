@@ -208,7 +208,7 @@ def test_clean_voice_chain_is_a_valid_filtergraph():
 
 
 def test_edukasi_preset_makes_an_explainer():
-    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "fizik-explainer"))
+    cfg = project.read(os.path.join(os.path.dirname(HERE), "projects", "timbunan-chip"))
     assert cfg["_name"] == "Animasi Edukasi Buku" and cfg["type"] == "explainer"
     assert cfg["voice"]["chain"] == "clean" and cfg["speed"]["tempo"] == 1.12 and cfg["end"] == 54.4
 

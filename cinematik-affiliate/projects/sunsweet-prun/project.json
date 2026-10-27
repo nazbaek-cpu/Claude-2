@@ -1,0 +1,160 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Sunsweet prun, susah nak membuang, 2 biji setiap hari.",
+ "preset": "food",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -120,
+ "segments": [
+  {
+   "start": 0.9,
+   "end": 8.5,
+   "title": {
+    "lines": [
+     "Susah membuang?",
+     "ini solusinya!"
+    ]
+   }
+  },
+  {
+   "start": 8.6,
+   "end": 15.8,
+   "kicker": "Dulu",
+   "head": "Seminggu 2 kali."
+  },
+  {
+   "start": 15.9,
+   "end": 21.2,
+   "kicker": "Sekarang",
+   "head": "Lancar setiap hari."
+  },
+  {
+   "start": 21.3,
+   "end": 28.5,
+   "kicker": "Setiap hari",
+   "count": 2,
+   "label": "biji.",
+   "offset": -40
+  },
+  {
+   "start": 28.6,
+   "end": 32.3,
+   "kicker": "Sunsweet",
+   "head": "Bagus untuk badan."
+  },
+  {
+   "start": 32.4,
+   "end": null,
+   "cta": true,
+   "head": "Jom cuba.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.91,
+   3.2,
+   "Dulu sebelum saya makan yang ni,"
+  ],
+  [
+   3.23,
+   4.78,
+   "memang sangat-sangat susah"
+  ],
+  [
+   4.81,
+   6.14,
+   "nak membuang."
+  ],
+  [
+   6.17,
+   7.35,
+   "Serius-serius sangat"
+  ],
+  [
+   7.38,
+   8.58,
+   "susah nak membuang."
+  ],
+  [
+   8.61,
+   9.72,
+   "So dalam seminggu tu"
+  ],
+  [
+   9.75,
+   13.18,
+   "ada dalam 2 kali, 3 kali,"
+  ],
+  [
+   13.21,
+   15.84,
+   "tu lagi bagus lah daripada 2 kali kan."
+  ],
+  [
+   15.87,
+   16.95,
+   "Tapi lepas saya"
+  ],
+  [
+   16.98,
+   18.68,
+   "amalkan makan yang ni,"
+  ],
+  [
+   18.71,
+   21.3,
+   "setiap hari saya tak risau dah."
+  ],
+  [
+   21.33,
+   23.88,
+   "Setiap hari saya akan makan 2 biji"
+  ],
+  [
+   23.91,
+   25.76,
+   "untuk bagi senang nak membuang."
+  ],
+  [
+   25.79,
+   26.88,
+   "Kalau susah sangat,"
+  ],
+  [
+   26.91,
+   28.58,
+   "saya makan 4 biji macam tu."
+  ],
+  [
+   28.61,
+   29.63,
+   "Sunsweet ni memang"
+  ],
+  [
+   29.66,
+   30.82,
+   "sangat-sangat bagus"
+  ],
+  [
+   30.85,
+   32.38,
+   "untuk tubuh badan kita."
+  ],
+  [
+   32.41,
+   34.18,
+   "So untuk hampa yang"
+  ],
+  [
+   34.21,
+   35.72,
+   "ada masalah tu,"
+  ],
+  [
+   35.75,
+   null,
+   "boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

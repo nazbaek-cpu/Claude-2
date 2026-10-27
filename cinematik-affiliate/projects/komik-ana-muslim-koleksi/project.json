@@ -1,0 +1,255 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Komik Ana Muslim, infografik, Makcik Bawang, bahasa Korea.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -140,
+ "segments": [
+  {
+   "start": 0.2,
+   "end": 10.3,
+   "title": {
+    "kicker": "KOMIK ANA MUSLIM",
+    "lines": [
+     "Komik yang",
+     "ada ilmu."
+    ],
+    "accent": [
+     "ada",
+     "ilmu."
+    ]
+   }
+  },
+  {
+   "start": 10.4,
+   "end": 20.8,
+   "kicker": "BELAJAR TENTANG",
+   "head": "Sains & remaja."
+  },
+  {
+   "start": 20.9,
+   "end": 30.2,
+   "kicker": "CONTOH",
+   "head": "Datang bulan."
+  },
+  {
+   "start": 30.3,
+   "end": 34.4,
+   "kicker": "SIAP DENGAN",
+   "head": "Infografik menarik."
+  },
+  {
+   "start": 34.5,
+   "end": 47.7,
+   "kicker": "HIBURAN + ILMU",
+   "head": "Belajar & seronok."
+  },
+  {
+   "start": 47.8,
+   "end": 61.6,
+   "kicker": "KOLEKSI TERBARU",
+   "head": "Makcik Bawang."
+  },
+  {
+   "start": 61.7,
+   "end": 75.5,
+   "kicker": "DIALOG",
+   "head": "Ada bahasa Korea."
+  },
+  {
+   "start": 75.6,
+   "end": null,
+   "cta": true,
+   "head": "Jom koleksi.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.18,
+   2.89,
+   "Daripada anak minat membaca"
+  ],
+  [
+   2.92,
+   6.83,
+   "buku komik yang kita tak tahu,"
+  ],
+  [
+   6.86,
+   9.11,
+   "baik bagi komik yang macam ni,"
+  ],
+  [
+   9.14,
+   10.35,
+   "Ana Muslim."
+  ],
+  [
+   10.38,
+   12.75,
+   "Dalam ni dia banyak sangat-sangat"
+  ],
+  [
+   12.78,
+   15.41,
+   "boleh belajar tentang sains,"
+  ],
+  [
+   15.44,
+   17.81,
+   "tentang cara dia mengatasi"
+  ],
+  [
+   17.84,
+   19.83,
+   "bila dia dah meningkat remaja,"
+  ],
+  [
+   19.86,
+   20.87,
+   "apa yang akan berlaku."
+  ],
+  [
+   20.9,
+   23.09,
+   "Contoh, datang bulan."
+  ],
+  [
+   23.12,
+   26.45,
+   "Dalam buku ini dia ajar semua."
+  ],
+  [
+   26.48,
+   28.49,
+   "Dalam buku ini dia ajar"
+  ],
+  [
+   28.52,
+   31.53,
+   "dan dia juga bagi infografik."
+  ],
+  [
+   31.56,
+   32.75,
+   "Contoh yang macam ni,"
+  ],
+  [
+   32.78,
+   34.51,
+   "infografik yang sangat menarik."
+  ],
+  [
+   34.54,
+   37.33,
+   "Jadi ibu ayah nak bagi anak belajar"
+  ],
+  [
+   37.36,
+   39.99,
+   "sambil bagi anak-anak hiburan,"
+  ],
+  [
+   40.02,
+   41.15,
+   "buku komik yang hiburan"
+  ],
+  [
+   41.18,
+   42.73,
+   "tapi dia belajar,"
+  ],
+  [
+   42.76,
+   44.83,
+   "dapat banyak intipati."
+  ],
+  [
+   44.86,
+   46.73,
+   "Dia dapat ilmiah dalam buku ini."
+  ],
+  [
+   46.76,
+   47.89,
+   "Ini Ana Muslim."
+  ],
+  [
+   47.92,
+   51.41,
+   "Ada sampai banyak koleksi."
+  ],
+  [
+   51.44,
+   53.47,
+   "Koleksi dia lebih daripada lima,"
+  ],
+  [
+   53.5,
+   55.97,
+   "enam, tujuh, lapan dah sekarang ni."
+  ],
+  [
+   56.0,
+   57.07,
+   "So koleksi yang terbaru,"
+  ],
+  [
+   57.1,
+   60.03,
+   "Makcik Bawang."
+  ],
+  [
+   60.06,
+   61.71,
+   "So budak-budak suka lah kan."
+  ],
+  [
+   61.74,
+   63.25,
+   "Lagi satu dia ada macam"
+  ],
+  [
+   63.28,
+   65.09,
+   "cakap pula,"
+  ],
+  [
+   65.12,
+   66.89,
+   "macam cakap bahasa"
+  ],
+  [
+   66.92,
+   68.81,
+   "Korea sikit-sikit."
+  ],
+  [
+   68.84,
+   70.87,
+   "Chincha, mashita."
+  ],
+  [
+   70.9,
+   72.89,
+   "Itu yang ada dalam dialog-dialog"
+  ],
+  [
+   72.92,
+   75.57,
+   "yang anak-anak akan suka."
+  ],
+  [
+   75.6,
+   76.69,
+   "So boleh dapatkan"
+  ],
+  [
+   76.72,
+   null,
+   "dekat link di bawah."
+  ]
+ ]
+}

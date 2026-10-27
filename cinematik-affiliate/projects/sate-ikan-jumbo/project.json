@@ -1,0 +1,37 @@
+{
+  "source": "input/source.mp4",
+  "whisper_prompt": "Sate ikan dari Pulau Pangkor dan Langkawi. Sira. Lembut.",
+  "preset": "food",
+  "hflip": true,
+  "top_offset": -170,
+  "segments": [
+    {"start": 0.08, "end": 7.50, "title": {"lines": ["Sate ikan,", "saiz jumbo!"]}},
+    {"start": 8.98, "end": 16.10, "kicker": "Jumbo", "head": "Besar sangat."},
+    {"start": 16.18, "end": 24.75, "kicker": "Sira dia", "head": "Melimpah ruah."},
+    {"start": 24.80, "end": 35.18, "kicker": "Lembut", "head": "Tak perlu gigi."},
+    {"start": 35.24, "end": 40.40, "kicker": "Rasa ikan", "head": "Puas hati."},
+    {"start": 40.46, "end": null, "cta": true, "head": "Jom cuba.", "offset": -70}
+  ],
+  "subs": [
+    [0.08, 2.15, "Kalau pergi Pulau Pangkor,"],
+    [2.18, 3.85, "pergi ke Langkawi,"],
+    [3.88, 6.33, "kita akan jumpa sate ikan"],
+    [6.36, 7.55, "yang kecil-kecil tu kan."],
+    [7.58, 8.95, "Tapi,"],
+    [8.98, 12.03, "dalam ni kita jumpa sate ikan,"],
+    [12.06, 13.09, "korang tengok ni."],
+    [13.12, 16.15, "Size dia besar sangat-sangat."],
+    [16.18, 17.95, "Lepas tu dia punya sira,"],
+    [17.98, 21.09, "bukan sira yang sikit-sikit tu."],
+    [21.12, 23.37, "Sira dia memang sangat-sangat"],
+    [23.40, 24.77, "banyak, puas hati."],
+    [24.80, 26.57, "Lagi satu dia sangat lembut tau,"],
+    [26.60, 28.39, "korang yang tak ada gigi kan,"],
+    [28.42, 31.41, "yang ni tak ada masalah."],
+    [31.44, 33.43, "Kalau yang tak ada gigi,"],
+    [33.46, 35.21, "yang ni sangat-sangat lembut."],
+    [35.24, 37.63, "Bila makan, memang rasa"],
+    [37.66, 40.43, "ikan dan rasa puas hati."],
+    [40.46, null, "Boleh dapatkan dekat link di bawah."]
+  ]
+}

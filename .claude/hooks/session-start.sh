@@ -8,3 +8,4 @@ fi
 
 "$CLAUDE_PROJECT_DIR/fizik-reel/setup.sh"
 "$CLAUDE_PROJECT_DIR/sticker-reel/setup.sh"
+"$CLAUDE_PROJECT_DIR/cinematik-affiliate/setup.sh"

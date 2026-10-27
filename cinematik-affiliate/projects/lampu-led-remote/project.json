@@ -1,0 +1,187 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Lampu LED harga murah, remote control, colour, magnetik, timer 10 minit 30 minit.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -80,
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 7.9,
+   "title": {
+    "kicker": "LAMPU LED + REMOTE",
+    "lines": [
+     "Harga murah,",
+     "banyak fungsi."
+    ],
+    "accent": [
+     "banyak",
+     "fungsi."
+    ],
+    "size": 122
+   }
+  },
+  {
+   "start": 8.0,
+   "end": 16.1,
+   "kicker": "LAMPU BACA",
+   "head": "Atau dekor rumah."
+  },
+  {
+   "start": 16.2,
+   "end": 23.6,
+   "kicker": "SIAP DENGAN",
+   "head": "Remote control.",
+   "pills": [
+    [
+     "Colour",
+     22.6
+    ]
+   ]
+  },
+  {
+   "start": 23.7,
+   "end": 29.0,
+   "kicker": "HARGA",
+   "head": "Murah sangat."
+  },
+  {
+   "start": 29.1,
+   "end": 38.9,
+   "kicker": "MAGNETIK",
+   "head": "Lekat mana-mana."
+  },
+  {
+   "start": 39.1,
+   "end": 48.6,
+   "kicker": "BOLEH TUKAR",
+   "head": "Warna lampu."
+  },
+  {
+   "start": 48.7,
+   "end": 55.4,
+   "kicker": "TIMER",
+   "head": "10 / 30 minit."
+  },
+  {
+   "start": 55.5,
+   "end": null,
+   "cta": true,
+   "head": "Jom grab.",
+   "offset": -20
+  }
+ ],
+ "subs": [
+  [
+   0.4,
+   3.27,
+   "Harga murah tapi banyak fungsi."
+  ],
+  [
+   3.3,
+   8.01,
+   "Yang ni boleh jadi lampu"
+  ],
+  [
+   8.04,
+   10.19,
+   "untuk lampu baca ataupun"
+  ],
+  [
+   10.22,
+   13.17,
+   "lampu dekoratif dekat rumah,"
+  ],
+  [
+   13.2,
+   16.17,
+   "ataupun nak dekor rumah."
+  ],
+  [
+   16.2,
+   18.51,
+   "Lampu ni siap datang sekali"
+  ],
+  [
+   18.54,
+   20.11,
+   "dengan remote control."
+  ],
+  [
+   20.14,
+   23.63,
+   "Lepas tu siap ada colour-colour."
+  ],
+  [
+   23.66,
+   26.17,
+   "Harga murah sangat-sangat."
+  ],
+  [
+   26.2,
+   27.43,
+   "Kalau korang tak percaya,"
+  ],
+  [
+   27.46,
+   29.03,
+   "cuba cek dekat bawah tu."
+  ],
+  [
+   29.06,
+   30.07,
+   "Memang sangat berfungsi,"
+  ],
+  [
+   30.1,
+   31.85,
+   "dah sekali dengan magnetik."
+  ],
+  [
+   31.88,
+   33.55,
+   "Kita boleh tampal dekat dinding,"
+  ],
+  [
+   33.58,
+   35.59,
+   "lepas tu boleh lekat"
+  ],
+  [
+   35.62,
+   39.03,
+   "dekat mana-mana dinding."
+  ],
+  [
+   39.06,
+   41.51,
+   "Korang siap boleh tukar-tukar"
+  ],
+  [
+   41.54,
+   44.01,
+   "dia punya lampu ni."
+  ],
+  [
+   44.04,
+   48.67,
+   "Lampu ni boleh tukar-tukar lagi."
+  ],
+  [
+   48.7,
+   51.53,
+   "Lepas tu siap ada 10 minit, 30 minit."
+  ],
+  [
+   51.56,
+   55.47,
+   "Boleh set berapa lama nak buka."
+  ],
+  [
+   55.5,
+   null,
+   "Boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

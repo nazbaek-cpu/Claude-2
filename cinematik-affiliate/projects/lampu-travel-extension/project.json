@@ -1,0 +1,167 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Lampu travel dengan extension. Dua pin, tiga pin, USB, Type C, international.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "head_scrim": true,
+ "top_offset": -20,
+ "segments": [
+  {
+   "start": 0.2,
+   "end": 7.9,
+   "title": {
+    "kicker": "LAMPU + EXTENSION",
+    "lines": [
+     "Lampu travel,",
+     "plus extension."
+    ],
+    "accent": [
+     "plus",
+     "extension."
+    ],
+    "size": 118
+   }
+  },
+  {
+   "start": 8.0,
+   "end": 12.7,
+   "kicker": "BOLEH JADI",
+   "head": "Lampu tidur.",
+   "pills": [
+    [
+     "Lampu bacaan",
+     11.6
+    ]
+   ]
+  },
+  {
+   "start": 12.8,
+   "end": 18.2,
+   "kicker": "SOKET",
+   "head": "2 pin & 3 pin."
+  },
+  {
+   "start": 18.3,
+   "end": 22.1,
+   "kicker": "SIAP ADA",
+   "head": "USB & Type-C."
+  },
+  {
+   "start": 22.2,
+   "end": 25.2,
+   "kicker": "BOLEH TUKAR",
+   "head": "Warna lampu."
+  },
+  {
+   "start": 25.3,
+   "end": 34.5,
+   "kicker": "UNTUK TRAVEL",
+   "head": "Plug international."
+  },
+  {
+   "start": 34.6,
+   "end": null,
+   "cta": true,
+   "head": "Murah sangat.",
+   "offset": 0
+  }
+ ],
+ "subs": [
+  [
+   0.18,
+   2.99,
+   "Lampu sesuai untuk bawa travel."
+  ],
+  [
+   3.02,
+   5.05,
+   "Kalau yang suka travel,"
+  ],
+  [
+   5.08,
+   6.81,
+   "nak dapat banyak extension"
+  ],
+  [
+   6.84,
+   7.99,
+   "dekat bahagian sini."
+  ],
+  [
+   8.02,
+   9.09,
+   "Pada masa yang sama,"
+  ],
+  [
+   9.12,
+   11.09,
+   "dia boleh jadi lampu tidur,"
+  ],
+  [
+   11.12,
+   12.77,
+   "lampu bacaan."
+  ],
+  [
+   12.8,
+   14.79,
+   "Lepas tu dia ada sampai"
+  ],
+  [
+   14.82,
+   18.23,
+   "dua pin untuk tiga pin extension."
+  ],
+  [
+   18.26,
+   20.11,
+   "Dan dia ada sekali dengan"
+  ],
+  [
+   20.14,
+   22.17,
+   "USB dan Type-C dekat sini."
+  ],
+  [
+   22.2,
+   25.31,
+   "Lampu ni boleh ubah warna dia."
+  ],
+  [
+   25.34,
+   29.05,
+   "Dan boleh dijadikan lampu travel"
+  ],
+  [
+   29.08,
+   30.57,
+   "dan extension travel."
+  ],
+  [
+   30.6,
+   32.05,
+   "Korang tengok ni, extension dia"
+  ],
+  [
+   32.08,
+   34.57,
+   "siap dengan international."
+  ],
+  [
+   34.6,
+   37.09,
+   "So kalau korang nak, harga"
+  ],
+  [
+   37.12,
+   38.73,
+   "murah sangat-sangat."
+  ],
+  [
+   38.76,
+   null,
+   "Boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "source": "input/source.mp4",
+ "whisper_prompt": "Komik Ana Muslim. Remaja, datang bulan, sains, agama, sosial.",
+ "preset": "product",
+ "hflip": true,
+ "behind": false,
+ "top_offset": -130,
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 9.1,
+   "title": {
+    "kicker": "KOMIK ANA MUSLIM",
+    "lines": [
+     "Anak dah remaja?",
+     "Belajar dari komik."
+    ],
+    "accent": [
+     "Belajar",
+     "dari",
+     "komik."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 9.2,
+   "end": 16.9,
+   "kicker": "TOPIK REMAJA",
+   "head": "Datang bulan."
+  },
+  {
+   "start": 17.0,
+   "end": 25.8,
+   "kicker": "BOLEH BELAJAR",
+   "head": "Sains & agama.",
+   "pills": [
+    [
+     "Sains",
+     20.9
+    ],
+    [
+     "Agama",
+     22.1
+    ],
+    [
+     "Sosial",
+     24.9
+    ]
+   ]
+  },
+  {
+   "start": 25.9,
+   "end": 36.9,
+   "kicker": "UNTUK ANAK MUSLIM",
+   "head": "Senang faham."
+  },
+  {
+   "start": 37.0,
+   "end": null,
+   "cta": true,
+   "head": "Jom baca.",
+   "offset": -40
+  }
+ ],
+ "subs": [
+  [
+   0.43,
+   2.88,
+   "Anak meningkat remaja,"
+  ],
+  [
+   2.91,
+   4.62,
+   "dah start datang bulan."
+  ],
+  [
+   4.65,
+   7.12,
+   "Ha, buku ni buku komik tau,"
+  ],
+  [
+   7.15,
+   9.12,
+   "tapi dia boleh belajar."
+  ],
+  [
+   9.15,
+   11.44,
+   "Datang bulan, ha, dekat sini."
+  ],
+  [
+   11.47,
+   13.08,
+   "Dalam buku ni dia ada cerita"
+  ],
+  [
+   13.11,
+   14.56,
+   "tentang intipati,"
+  ],
+  [
+   14.59,
+   16.96,
+   "cerita pasal diari Merah Afiyah."
+  ],
+  [
+   16.99,
+   18.02,
+   "Ha, ni buku komik"
+  ],
+  [
+   18.05,
+   19.36,
+   "yang sangat menarik,"
+  ],
+  [
+   19.39,
+   21.4,
+   "tapi anak-anak boleh belajar sains,"
+  ],
+  [
+   21.43,
+   22.64,
+   "belajar ilmu agama"
+  ],
+  [
+   22.67,
+   25.9,
+   "dan juga belajar tentang sosial."
+  ],
+  [
+   25.93,
+   28.48,
+   "Ibu ayah, bagi anak-anak muslim"
+  ],
+  [
+   28.51,
+   29.66,
+   "yang macam ni supaya dia"
+  ],
+  [
+   29.69,
+   31.38,
+   "boleh belajar senang"
+  ],
+  [
+   31.41,
+   34.76,
+   "untuk dia memahami peringkat"
+  ],
+  [
+   34.79,
+   36.92,
+   "nak masuk remaja."
+  ],
+  [
+   36.95,
+   null,
+   "Boleh dapatkan dekat link di bawah."
+  ]
+ ]
+}

@@ -1,0 +1,6 @@
+line-length = 130
+extend-exclude = ["node_modules", ".venv"]
+
+[lint]
+# compact house style: grouped imports, short `a; b` and one-line `if x: y` statements are intentional
+ignore = ["E401", "E701", "E702"]

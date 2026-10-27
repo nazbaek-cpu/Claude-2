@@ -1,0 +1,43 @@
+{
+  "source": "input/source.mp4",
+  "whisper_prompt": "Slim bag tahan lasak. Material Cordura. Beli di beg kuning.",
+  "cta": "Beli di beg kuning",
+  "accent_rgb": [233, 185, 73],
+  "zoom": 1.12,
+  "sfx_gain_db": 0,
+  "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
+             "lip_rgb": [186, 92, 102], "lip_amount": 0.4, "brows": 0.0},
+  "segments": [
+    {"start": 0.30, "end": 4.70, "title": {"kicker": "SLING BAG", "lines": ["Material", "Cordura."], "accent": ["Cordura."]}},
+    {"start": 4.76, "end": 7.15, "kicker": "SLIM SLING BAG", "head": "Tahan lasak."},
+    {"start": 7.20, "end": 11.90, "kicker": "KENA HENTAK?", "head": "Tak ada masalah."},
+    {"start": 11.96, "end": 14.75, "kicker": "MATERIAL", "head": "Cordura."},
+    {"start": 14.78, "end": 21.75, "kicker": "BANYAK KOMPARTMEN", "head": "Tersusun kemas.", "behind": false},
+    {"start": 21.80, "end": 26.00, "kicker": "BAHAGIAN BELAKANG", "head": "Ada poket lagi."},
+    {"start": 26.04, "end": 30.60, "kicker": "KAPASITI", "count": 4.5, "decimals": 1, "label": "liter."},
+    {"start": 30.66, "end": 35.30, "kicker": "MUAT BANYAK", "head": "Sangat luas."},
+    {"start": 35.36, "end": 44.85, "kicker": "LAPISAN BALDU", "head": "Lembut di dalam.",
+     "pills": [["Phone selamat", 41.32], ["Tak calar", 43.96]]},
+    {"start": 44.90, "end": null, "cta": true, "head": "Jom dapatkan."}
+  ],
+  "subs": [
+    [0.30, 2.04, "Lelaki ataupun wanita,"],
+    [2.06, 4.74, "kalau anda nak cari slim bag"],
+    [4.76, 7.18, "yang tahan lasak."],
+    [7.20, 10.10, "Kalau terhentak ke apa ke,"],
+    [10.12, 11.94, "dia tak ada masalah dekat dalam."],
+    [11.96, 14.76, "Sebab dia pakai material Cordura."],
+    [14.78, 17.14, "Yang ni ada banyak kompartmen."],
+    [17.16, 21.78, "Paling best, kompartmen macam ni."],
+    [21.80, 24.78, "Lepas tu dekat bahagian belakang ni."],
+    [24.80, 26.02, "Yang saya ambil ni"],
+    [26.04, 30.64, "kapasiti 4.5 liter."],
+    [30.66, 33.04, "Yang ni boleh isi banyak."],
+    [33.06, 35.34, "Tengok ni, sangat-sangat luas."],
+    [35.36, 38.48, "Bahagian sini siap bagi material"],
+    [38.50, 40.24, "macam baldu."],
+    [40.26, 42.12, "Jadi kalau kita letak phone,"],
+    [42.14, 44.88, "dia tak mudah calar."],
+    [44.90, null, "Boleh dapatkan dekat link di bawah."]
+  ]
+}

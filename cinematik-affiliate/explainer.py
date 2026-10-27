@@ -563,7 +563,12 @@ def whip(a, b, p):
     mix = sa * (1 - e) + sb * e
     return cv2.blur(mix, (k, 1)) if k > 1 else mix
 
-def frame_at(scenes, t, prj):
+def frame_at(scenes, t, prj, caps=None):
+    fr = scene_frame(scenes, t, prj)
+    if caps: captions(fr, t, caps)
+    return fr
+
+def scene_frame(scenes, t, prj):
     i = max(j for j, s in enumerate(scenes) if s["start"] <= t or j == 0)
     sc = scenes[i]
     if i > 0 and sc.get("in", "whip") == "whip" and t < sc["start"] + 0.14:
@@ -573,6 +578,60 @@ def frame_at(scenes, t, prj):
         nxt = scenes[i + 1]; p = (t - (nxt["start"] - 0.14)) / 0.28
         return whip(draw_scene(sc, nxt["start"] - 0.01, prj), draw_scene(nxt, nxt["start"], prj), p)
     return draw_scene(sc, t, prj)
+
+# ---------- captions: the voiceover in big headline type ----------
+def caption_img(text, size):
+    """heavy capitals, ink with a thin white outline; a final '.' is orange"""
+    key = ("cap", text, size)
+    if key in cache: return cache[key]
+    f = font("heavy", size); sw = max(2, round(size / 36)); pad = sw + 12
+    body, dot = (text[:-1], ".") if text.endswith(".") else (text, "")
+    w = int(f.getlength(body) + (f.getlength(".") if dot else 0)) + pad * 2; asc, desc = f.getmetrics()
+    img = Image.new("RGBA", (w, asc + desc + pad * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    d.text((pad, pad), body, font=f, fill=INK + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
+    if dot: d.text((pad + f.getlength(body) - 4, pad), ".", font=f, fill=ACC + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
+    halo = Image.new("RGBA", (img.width + 40, img.height + 40), (255, 255, 255, 0))   # soft white glow: reads on dark scenes too
+    a = Image.new("L", halo.size, 0); a.paste(img.getchannel("A").filter(ImageFilter.MaxFilter(9)), (20, 20))
+    halo.putalpha(a.filter(ImageFilter.GaussianBlur(12)).point(lambda v: int(v * 0.75)))
+    halo.alpha_composite(img, (20, 20))
+    cache[key] = halo
+    return cache[key]
+
+def captions(frame, t, cap):
+    """the chunk being spoken pops in; long chunks wrap to two lines"""
+    size, y = cap.get("size", 100), cap.get("y", 1390)
+    for text, s0, s1 in cap["chunks"]:
+        if not s0 <= t < s1: continue
+        words = text.split(" "); lines = [text]
+        if font("heavy", size).getlength(text) > 940 and len(words) > 1:
+            k = (len(words) + 1) // 2; lines = [" ".join(words[:k]), " ".join(words[k:])]
+        a = ease_out(ramp(t, s0, 0.12)); sc_ = 0.9 + 0.1 * ease_back(ramp(t, s0, 0.22), 2.0)
+        for i, ln in enumerate(lines):
+            img = caption_img(ln, size)
+            if abs(sc_ - 1) > 1e-3: img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC)
+            if a < 0.999: img = img.copy(); img.putalpha(img.getchannel("A").point(lambda v: int(v * a)))
+            blend(frame, img, W / 2, y + (i - (len(lines) - 1) / 2) * size * 1.02)
+        break
+
+def caption_chunks(words, fixes=None, max_words=3, size=100, maxw=900):
+    """[[TEXT, start, end]] from Whisper words: break at punctuation, after max_words or when too wide;
+    a chunk stays up until the next one, unless there is a real pause"""
+    fixes = fixes or {}; out, cur = [], []
+    def flush():
+        if not cur: return
+        text = " ".join(fixes.get(w["w"], w["w"]) for w in cur).upper()
+        text = text.replace(",", "").rstrip("!")
+        out.append([text, cur[0]["s"], cur[-1]["e"]]); cur.clear()
+    for w in words:
+        cand = " ".join(x["w"] for x in cur + [w]).upper()
+        if cur and (len(cur) >= max_words or font("heavy", size).getlength(cand) > maxw): flush()
+        cur.append(w)
+        if w["w"][-1:] in ".,?!": flush()
+    flush()
+    for i in range(len(out) - 1):
+        out[i][2] = out[i + 1][1] if out[i + 1][1] - out[i][2] < 0.6 else out[i][2] + 0.3
+    out[-1][2] += 0.6
+    return [[t, round(a, 3), round(b, 3)] for t, a, b in out]
 
 # ---------- sound ----------
 def sfx_track(cfg, dur, out):
@@ -620,6 +679,7 @@ def remap(cfg, m):
     f = lambda t: round(to_output(t, keep, tempo), 3)   # noqa: E731
     cfg = json.loads(json.dumps(cfg))
     if "end" in cfg: cfg["end"] = f(cfg["end"])
+    if cfg.get("captions"): cfg["captions"]["chunks"] = [[x, f(a), f(b)] for x, a, b in cfg["captions"]["chunks"]]
     for sc in cfg["scenes"]:
         sc["start"] = f(sc["start"])
         for it in sc["items"]:
@@ -656,7 +716,7 @@ def main():
                             "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
     n = 0; total = int(round((t1 - t0) * FPS))
     while n < total:
-        fr = frame_at(scenes, t0 + n / FPS, prj)
+        fr = frame_at(scenes, t0 + n / FPS, prj, cfg.get("captions"))
         enc.stdin.write(np.clip(fr, 0, 255).astype(np.uint8).tobytes()); n += 1
         if n % 150 == 0: print(f"{n}/{total} frames", flush=True)
     enc.stdin.close(); enc.wait()

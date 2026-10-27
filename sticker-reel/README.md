@@ -62,7 +62,7 @@ Because scenes are timed by phrases, re-recording the voiceover (new voice, diff
   },
   "theme": {"bg1": "#FFE46E", "bg2": "#FFD23C", "bg3": "#FFC41E", "accent": "#FF2E7E", "accent2": "#1FA2E8", "navy": "#1C2B5A", "key": "#FFD23C"},
   "background": {"rays": true, "doodles": ["doodle/gembira.png", ...]},   // up to 8 images from input/img, drifting faintly
-  "captions": {"max_words": 3, "max_chars": 18, "keywords": ["melukis", "kreatif", ...]},
+  "captions": {"enabled": true, "max_words": 3, "max_chars": 18, "keywords": ["melukis", "kreatif", ...]},   // enabled: false = no captions
   "music": {"generate": {"bpm": 104, "key": "C", "mood": "bright", "seed": 3},   // or {"file": "input/track.mp3"} (a track you have the rights to)
             "gain_db": -6, "duck_db": 4},   // music level vs the voice (-6 dB = half volume), extra dip while the voice speaks
   "sfx_gain": 0.5,

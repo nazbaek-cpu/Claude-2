@@ -1,0 +1,22 @@
+{
+  "title": "Persediaan UASA KSSM - sticker reel",
+  "language": "ms",
+  "whisper_model": "large-v3",
+  "vars": {"product": "Persediaan UASA KSSM", "series": "PERSEDIAAN UASA KSSM", "cta_short": "Tekan link dekat bawah"},
+  "vo": {"file": "input/vo.mp3", "tempo": 1.12, "pause_s": 0.2, "silence_db": "auto", "tail_s": 1.0},
+  "stickers": {
+    "ready": {
+      "tenang_depan": "input/poses/tenang_depan.png", "senyum_tangan_pipi": "input/poses/senyum_tangan_pipi.png",
+      "kenyit_peace": "input/poses/kenyit_peace.png", "terkejut": "input/poses/terkejut.png", "berfikir": "input/poses/berfikir.png",
+      "thumbs_up": "input/poses/thumbs_up.png", "tunjuk_korang": "input/poses/tunjuk_korang.png", "manja_hmm": "input/poses/manja_hmm.png",
+      "isyarat_tangan": "input/poses/isyarat_tangan.png", "tenang_yakin": "input/poses/tenang_yakin.png",
+      "senyum_lebar": "input/poses/senyum_lebar.png", "melambai_hai": "input/poses/melambai_hai.png"
+    },
+    "face_px": 300, "max_h": 720, "outline_px": 30
+  },
+  "theme": {"bg1": "#EEF2FF", "bg2": "#C9D6F8", "bg3": "#A9BDF2", "accent": "#EF5B5B", "accent2": "#2E3FA8", "navy": "#1C2B5A", "green": "#1DB954", "key": "#FFD23C"},
+  "background": {"rays": true, "doodles": ["bg/u0.svg", "bg/u1.svg", "bg/u2.svg", "bg/u3.svg", "bg/u4.svg", "bg/u5.svg", "bg/u6.svg", "bg/u7.svg"]},
+  "captions": {"enabled": false, "max_words": 3, "max_chars": 18, "keywords": []},
+  "music": {"generate": {"bpm": 104, "key": "C", "mood": "bright", "seed": 11}, "gain_db": -6, "duck_db": 4},
+  "sfx_gain": 0.6
+}

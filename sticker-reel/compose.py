@@ -320,7 +320,8 @@ def build(prj, words, vodur):
     page = open(os.path.join(HERE, "template.html")).read()
     for k, v in {"{{THEME_CSS}}": " ".join(f"--{k}: {v};" for k, v in theme.items()), "{{BG}}": "\n".join(bg),
                  "{{SCENES}}": "\n".join(scenes_html), "{{STK}}": "\n".join(stk), "{{FLASH}}": json.dumps(flash),
-                 "{{CAPS}}": "\n".join("    " + c for c in captions(words, cfg.get("captions", {}), dur)), "{{DUR}}": f"{dur}"}.items():
+                 "{{CAPS}}": "\n".join("    " + c for c in captions(words, cfg.get("captions", {}), dur))
+                 if cfg.get("captions", {}).get("enabled", True) else "", "{{DUR}}": f"{dur}"}.items():
         page = page.replace(k, v)
     sfx.sort(); thin = []
     for c in sfx:   # no two hits closer than 0.12 s

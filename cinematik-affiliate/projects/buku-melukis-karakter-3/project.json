@@ -1,0 +1,111 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "grade": "bright",
+ "whisper_prompt": "Bestnya! Melukis Karakter, asas mencipta watak anda sendiri, Irfan Foner, bengkel melukis, komik, kreatif.",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 1.0
+ },
+ "segments": [
+  {
+   "start": 0.34,
+   "end": 9.3,
+   "title": {
+    "kicker": "BESTNYA! MELUKIS KARAKTER",
+    "lines": [
+     "Anak suka melukis,",
+     "tapi asyik tiru?"
+    ],
+    "accent": [
+     "tiru?"
+    ],
+    "size": 86
+   }
+  },
+  {
+   "start": 11.7,
+   "end": 17.45,
+   "kicker": "MAK AYAH, SUPPORT ANAK",
+   "head": "Besarkan potensi."
+  },
+  {
+   "start": 17.48,
+   "end": 21.0,
+   "kicker": "BESTNYA!",
+   "head": "Melukis Karakter."
+  },
+  {
+   "start": 21.02,
+   "end": 25.84,
+   "kicker": "DARIPADA BUKU NI",
+   "head": "Pelbagai idea."
+  },
+  {
+   "start": 35.98,
+   "end": 38.62,
+   "kicker": "BUKAN BUKU BIASA",
+   "head": "Dimodulkan."
+  },
+  {
+   "start": 38.66,
+   "end": 48.7,
+   "kicker": "DIKUMPUL DARIPADA",
+   "count": 40,
+   "label": "bengkel melukis komik."
+  },
+  {
+   "start": 51.02,
+   "end": 55.97,
+   "kicker": "ANAK BOLEH BELAJAR",
+   "count": 30,
+   "label": "topik."
+  },
+  {
+   "start": 56.0,
+   "end": 61.35,
+   "kicker": "DARI KEPALA SAMPAI",
+   "head": "Cipta karakter."
+  },
+  {
+   "start": 61.38,
+   "end": 69.03,
+   "kicker": "BERFIKIR SECARA",
+   "head": "Kreatif & kritis."
+  },
+  {
+   "start": 69.06,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "order": [
+   [
+    0,
+    9.36
+   ],
+   [
+    11.68,
+    25.84
+   ],
+   [
+    35.95,
+    48.74
+   ],
+   [
+    51.0,
+    null
+   ]
+  ]
+ }
+}

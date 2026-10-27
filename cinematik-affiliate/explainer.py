@@ -28,6 +28,8 @@ def font(kind, size):
     if key not in cache:
         if kind == "serif":
             f = ImageFont.truetype(os.path.join(HERE, "fonts", "InstrumentSerif-Italic.ttf"), size)
+        elif kind == "script":   # Damion: thick casual handwriting
+            f = ImageFont.truetype(os.path.join(HERE, "fonts", "Damion-Regular.ttf"), size)
         elif kind == "kick":
             f = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Medium.otf", size)
         else:   # heavy / bold: Plus Jakarta Sans variable
@@ -112,7 +114,8 @@ def soft_shadow(img, alpha=110, blur=10, dy=6):
 def setup(frame, t, it, sc):
     """italic serif line, word by word"""
     dark = sc.get("dark"); col = (236, 226, 212) if dark else soft_ink(sc)
-    fnt = font(face(sc, "serif"), it.get("size", 66 if not sc.get("bold") else 56)); words = it["text"].split(" ")
+    kind = sc.get("setup_face") or face(sc, "serif")
+    fnt = font(kind, it.get("size", 76 if kind == "script" else 66 if not sc.get("bold") else 56)); words = it["text"].split(" ")
     widths = [fnt.getlength(w + " ") for w in words]; x = W / 2 - sum(widths) / 2 + fnt.getlength(" ") / 2
     out_a = 1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25)
     for i, w in enumerate(words):
@@ -587,51 +590,54 @@ def scene_frame(scenes, t, prj):
     return draw_scene(sc, t, prj)
 
 # ---------- captions: the voiceover in big headline type ----------
-def caption_img(text, size):
-    """heavy capitals, ink with a thin white outline; a final '.' is orange"""
-    key = ("cap", text, size)
+def caption_img(text, size, kind="heavy"):
+    """heavy capitals (or "script"), ink with a thin white outline; a final '.' is orange"""
+    key = ("cap", text, size, kind)
     if key in cache: return cache[key]
-    f = font("heavy", size); sw = max(2, round(size / 36)); pad = sw + 12
+    f = font(kind, size); sw = max(2, round(size / 36)); pad = sw + 12
     body, dot = (text[:-1], ".") if text.endswith(".") else (text, "")
     w = int(f.getlength(body) + (f.getlength(".") if dot else 0)) + pad * 2; asc, desc = f.getmetrics()
     img = Image.new("RGBA", (w, asc + desc + pad * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
     d.text((pad, pad), body, font=f, fill=INK + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
     if dot: d.text((pad + f.getlength(body) - 4, pad), ".", font=f, fill=ACC + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
     halo = Image.new("RGBA", (img.width + 40, img.height + 40), (255, 255, 255, 0))   # soft white glow: reads on dark scenes too
-    a = Image.new("L", halo.size, 0); a.paste(img.getchannel("A").filter(ImageFilter.MaxFilter(9)), (20, 20))
-    halo.putalpha(a.filter(ImageFilter.GaussianBlur(12)).point(lambda v: int(v * 0.75)))
+    thin = kind == "script"   # handwriting strokes are thinner: a stronger glow keeps them readable on dark scenes
+    a = Image.new("L", halo.size, 0); a.paste(img.getchannel("A").filter(ImageFilter.MaxFilter(13 if thin else 9)), (20, 20))
+    halo.putalpha(a.filter(ImageFilter.GaussianBlur(10 if thin else 12)).point(lambda v: min(255, int(v * (1.0 if thin else 0.75)))))
     halo.alpha_composite(img, (20, 20))
     cache[key] = halo
     return cache[key]
 
 def captions(frame, t, cap):
     """the chunk being spoken pops in; long chunks wrap to two lines"""
-    size, y = cap.get("size", 100), cap.get("y", 1390)
+    size, y, kind = cap.get("size", 100), cap.get("y", 1390), cap.get("face", "heavy")
     for text, s0, s1 in cap["chunks"]:
         if not s0 <= t < s1: continue
         words = text.split(" "); lines = [text]
-        if font("heavy", size).getlength(text) > 940 and len(words) > 1:
+        if font(kind, size).getlength(text) > 940 and len(words) > 1:
             k = (len(words) + 1) // 2; lines = [" ".join(words[:k]), " ".join(words[k:])]
         a = ease_out(ramp(t, s0, 0.12)); sc_ = 0.9 + 0.1 * ease_back(ramp(t, s0, 0.22), 2.0)
         for i, ln in enumerate(lines):
-            img = caption_img(ln, size)
+            img = caption_img(ln, size, kind)
             if abs(sc_ - 1) > 1e-3: img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC)
             if a < 0.999: img = img.copy(); img.putalpha(img.getchannel("A").point(lambda v: int(v * a)))
             blend(frame, img, W / 2, y + (i - (len(lines) - 1) / 2) * size * 1.02)
         break
 
-def caption_chunks(words, fixes=None, max_words=3, size=100, maxw=900):
+def caption_chunks(words, fixes=None, max_words=3, size=100, maxw=900, upper=True, kind="heavy"):
     """[[TEXT, start, end]] from Whisper words: break at punctuation, after max_words or when too wide;
     a chunk stays up until the next one, unless there is a real pause"""
-    fixes = fixes or {}; out, cur = [], []
+    fixes = fixes or {}; out, cur = [], []; start = [True]   # sentence case: only a new sentence gets a capital
     def flush():
         if not cur: return
-        text = " ".join(fixes.get(w["w"], w["w"]) for w in cur).upper()
+        text = " ".join(fixes.get(w["w"], w["w"]) for w in cur)
+        text = text.upper() if upper else (text[:1].upper() + text[1:] if start[0] else text)
+        start[0] = text[-1:] in ".?!"
         text = text.replace(",", "").rstrip("!")
         out.append([text, cur[0]["s"], cur[-1]["e"]]); cur.clear()
     for w in words:
-        cand = " ".join(x["w"] for x in cur + [w]).upper()
-        if cur and (len(cur) >= max_words or font("heavy", size).getlength(cand) > maxw): flush()
+        cand = " ".join(x["w"] for x in cur + [w])
+        if cur and (len(cur) >= max_words or font(kind, size).getlength(cand.upper() if upper else cand) > maxw): flush()
         cur.append(w)
         if w["w"][-1:] in ".,?!": flush()
     flush()
@@ -708,7 +714,7 @@ def main():
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
-    for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False))
+    for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False)); sc.setdefault("setup_face", cfg.get("setup_face"))
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)
     sfx_wav = os.path.join(build, "sfx.wav"); n_ev = sfx_track(cfg, dur, sfx_wav)
     voice = os.path.join(build, "voice.wav")

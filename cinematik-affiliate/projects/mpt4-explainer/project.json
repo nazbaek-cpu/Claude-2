@@ -5,226 +5,255 @@
  "whisper_prompt": "Tahun 4, MPT4, latih tubi, 28 Hari Persediaan MPT4 Matematik Tahun 4, 140 latihan berperingkat.",
  "captions": {
   "y": 1390,
-  "size": 124,
-  "face": "script",
+  "size": 100,
   "chunks": [
    [
-    "Tahun depan anak",
+    "TAHUN DEPAN",
     0.0,
-    1.26
+    0.98
    ],
    [
-    "masuk tahun 4.",
-    1.26,
+    "ANAK MASUK",
+    0.98,
+    1.54
+   ],
+   [
+    "TAHUN 4.",
+    1.54,
     2.64
    ],
    [
-    "Jangan tunggu",
+    "JANGAN TUNGGU",
     2.64,
     3.3
    ],
    [
-    "MPT4 dah dekat",
+    "MPT4 DAH DEKAT",
     3.3,
     5.06
    ],
    [
-    "baru nak mula",
+    "BARU NAK MULA",
     5.06,
     5.84
    ],
    [
-    "latih tubi.",
+    "LATIH TUBI.",
     5.84,
     6.92
    ],
    [
-    "Masa tu baru",
+    "MASA TU BARU",
     6.92,
     7.98
    ],
    [
-    "nak kejar.",
+    "NAK KEJAR.",
     7.98,
     9.02
    ],
    [
-    "Anak tertekan",
+    "ANAK TERTEKAN",
     9.02,
     10.3
    ],
    [
-    "mak ayah pun",
+    "MAK AYAH PUN",
     10.3,
     11.02
    ],
    [
-    "kelam kabut.",
+    "KELAM KABUT.",
     11.02,
     12.0
    ],
    [
-    "Lebih baik mula",
+    "LEBIH BAIK MULA",
     12.0,
     13.04
    ],
    [
-    "awal.",
+    "AWAL.",
     13.04,
     13.86
    ],
    [
-    "Cuti sekolah ni",
+    "CUTI SEKOLAH NI",
     13.86,
     14.9
    ],
    [
-    "satu latihan sehari",
+    "SATU LATIHAN",
     14.9,
-    16.28
+    15.64
    ],
    [
-    "je.",
-    16.28,
+    "SEHARI JE.",
+    15.64,
     17.0
    ],
    [
-    "Siri 28 Hari",
+    "SIRI 28 HARI",
     17.0,
     18.46
    ],
    [
-    "Persediaan MPT4",
+    "PERSEDIAAN",
     18.46,
-    19.98
+    19.16
    ],
    [
-    "Matematik Tahun",
-    19.98,
-    20.92
+    "MPT4 MATEMATIK",
+    19.16,
+    20.6
    ],
    [
-    "4 ni memang",
-    20.92,
-    22.34
+    "TAHUN 4 NI",
+    20.6,
+    21.86
    ],
    [
-    "dibina untuk latih",
-    22.34,
+    "MEMANG DIBINA",
+    21.86,
+    22.84
+   ],
+   [
+    "UNTUK LATIH",
+    22.84,
     23.58
    ],
    [
-    "tubi.",
+    "TUBI.",
     23.58,
     24.5
    ],
    [
-    "140 latihan",
+    "140 LATIHAN",
     24.5,
     26.02
    ],
    [
-    "berperingkat dari",
+    "BERPERINGKAT",
     26.02,
-    27.26
+    26.9
    ],
    [
-    "mudah ke susah.",
-    27.26,
+    "DARI MUDAH KE",
+    26.9,
+    28.04
+   ],
+   [
+    "SUSAH.",
+    28.04,
     28.6
    ],
    [
-    "5 modul",
+    "5 MODUL",
     28.6,
     29.88
    ],
    [
-    "nombor bulat",
+    "NOMBOR BULAT",
     29.88,
     30.96
    ],
    [
-    "pecahan",
+    "PECAHAN",
     30.96,
     32.0
    ],
    [
-    "wang",
+    "WANG",
     32.0,
     32.68
    ],
    [
-    "masa",
+    "MASA",
     32.68,
     33.66
    ],
    [
-    "sampai koordinat",
+    "SAMPAI",
     33.66,
-    34.54
+    33.88
    ],
    [
-    "dan data.",
-    34.54,
+    "KOORDINAT DAN",
+    33.88,
+    34.8
+   ],
+   [
+    "DATA.",
+    34.8,
     35.78
    ],
    [
-    "Setiap modul 28",
+    "SETIAP MODUL 28",
     35.78,
     37.42
    ],
    [
-    "latihan habis",
+    "LATIHAN HABIS",
     37.42,
     38.76
    ],
    [
-    "dalam 28 hari.",
+    "DALAM 28 HARI.",
     38.76,
     40.7
    ],
    [
-    "Setiap latihan ada",
+    "SETIAP LATIHAN",
     40.7,
-    41.86
+    41.6
    ],
    [
-    "nota ringkas dulu",
-    41.86,
+    "ADA NOTA",
+    41.6,
+    42.14
+   ],
+   [
+    "RINGKAS DULU",
+    42.14,
     43.34
    ],
    [
-    "ruang jalan kerja",
+    "RUANG JALAN",
     43.34,
-    44.48
+    43.98
    ],
    [
-    "dan rekod",
-    44.48,
+    "KERJA DAN",
+    43.98,
+    44.9
+   ],
+   [
+    "REKOD",
+    44.9,
     45.3
    ],
    [
-    "pencapaian.",
+    "PENCAPAIAN.",
     45.3,
     46.4
    ],
    [
-    "Mak ayah senang",
+    "MAK AYAH",
     46.4,
-    47.44
+    46.9
    ],
    [
-    "pantau.",
-    47.44,
+    "SENANG PANTAU.",
+    46.9,
     48.32
    ],
    [
-    "Akhir sekali",
+    "AKHIR SEKALI",
     48.32,
     49.52
    ],
    [
-    "4 set simulasi",
+    "4 SET SIMULASI",
     49.52,
     50.88
    ],
@@ -234,88 +263,93 @@
     52.2
    ],
    [
-    "50 markah",
+    "50 MARKAH",
     52.2,
     53.54
    ],
    [
-    "1 jam 15",
+    "1 JAM 15",
     53.54,
     54.58
    ],
    [
-    "minit",
+    "MINIT",
     54.58,
     55.32
    ],
    [
-    "macam",
+    "MACAM",
     55.32,
     55.72
    ],
    [
-    "peperiksaan",
+    "PEPERIKSAAN",
     55.72,
     56.36
    ],
    [
-    "sebenar.",
+    "SEBENAR.",
     56.36,
     57.0
    ],
    [
-    "Ikut DSKP",
+    "IKUT DSKP KSSR",
     57.0,
-    58.3
+    59.44
    ],
    [
-    "KSSR semakan.",
-    58.3,
+    "SEMAKAN.",
+    59.44,
     60.44
    ],
    [
-    "Masuk tahun 4",
+    "MASUK TAHUN 4",
     60.44,
     61.26
    ],
    [
-    "nanti",
+    "NANTI",
     61.26,
     62.14
    ],
    [
-    "anak dah biasa",
+    "ANAK DAH BIASA",
     62.14,
     63.34
    ],
    [
-    "dah yakin.",
+    "DAH YAKIN.",
     63.34,
     64.5
    ],
    [
-    "Mula persediaan",
+    "MULA",
     64.5,
+    64.74
+   ],
+   [
+    "PERSEDIAAN",
+    64.74,
     65.48
    ],
    [
-    "sekarang.",
+    "SEKARANG.",
     65.48,
     66.36
    ],
    [
-    "Dapatkan set",
+    "DAPATKAN SET",
     66.36,
     67.06
    ],
    [
-    "lengkap dekat link",
+    "LENGKAP DEKAT",
     67.06,
-    68.1
+    67.9
    ],
    [
-    "di bawah.",
-    68.1,
+    "LINK DI BAWAH.",
+    67.9,
     69.3
    ]
   ]
@@ -688,6 +722,5 @@
    ]
   }
  ],
- "bold_text": true,
- "setup_face": "script"
+ "bold_text": true
 }

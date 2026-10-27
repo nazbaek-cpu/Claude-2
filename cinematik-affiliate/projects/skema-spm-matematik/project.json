@@ -1,7 +1,7 @@
 {
  "source": "input/src.mp4",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "whisper_prompt": "Skema Jawapan SPM Matematik, KSSM, Tingkatan 4 dan 5, format SPM terkini, jalan kira, markah.",
  "speed": {
   "tempo": 1.12,

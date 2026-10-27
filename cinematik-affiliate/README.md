@@ -133,6 +133,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
                                       // the title is "lines": ["bold line", "handwritten line"]
   "accent_rgb": [233, 185, 73],       // title accent (gold)
   "title_pos": "bottom",              // "top" when the face is centred and a lower title would cover it
+  "grade": "muted",                   // "bright": lifted mids, full whites, light vignette for a dim or grey take
   "title_style": "orbit",             // optional: title lines turn in on a curved wall over frosted glass
   "glass": 0.30,                      // with "orbit": glass panel tint (0.30 = 30 % white over the blurred video)
   "hflip": "auto",                    // "auto" (preset default): OCR checks the product text and flips a mirrored take;

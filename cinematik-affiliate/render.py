@@ -56,6 +56,12 @@ GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "curves=master='0/0.035 0.25/0.22 0.75/0.75 1/0.94',"
          "colorbalance=rs=0.03:bs=-0.03:rh=0.02:bh=-0.02,"
          "vignette=PI/5,format=rgb24")
+GRADES = {"muted": GRADE,   # "grade": "bright" (project.json): lifted mids and full whites for a dim or grey take
+          "bright": ("colortemperature=temperature=5400:mix=0.3,"
+                     "eq=saturation=1.08:contrast=1.04:gamma=1.18,"
+                     "curves=master='0/0.02 0.25/0.34 0.6/0.75 1/1',"
+                     "colorbalance=rs=0.025:bs=-0.02:rh=0.01,"
+                     "vignette=PI/9,format=rgb24")}
 
 
 def probe(path):
@@ -433,7 +439,7 @@ def main():
     # fill 1080x1920 whatever the source size
     fit = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}," + ("hflip," if cfg.get("hflip") else "")  # hflip: un-mirror selfie footage
     dec_cmd = ["ffmpeg", "-v", "error", "-i", src] + (["-t", str(args.limit)] if args.limit else [])
-    dec = subprocess.Popen(dec_cmd + ["-vf", fit + GRADE, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
+    dec = subprocess.Popen(dec_cmd + ["-vf", fit + GRADES[cfg.get("grade", "muted")], "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
     studio = os.path.join(args.project, "build", "voice.wav")   # from voice.py: already cleaned and levelled
     use_studio = cfg.get("voice", {}).get("studio", True) and os.path.exists(studio)
     voice = "[1:a]aresample=48000" if use_studio else "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000"

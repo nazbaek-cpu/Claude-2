@@ -36,6 +36,12 @@ def font(kind, size):
         cache[key] = f
     return cache[key]
 
+def face(sc, kind):
+    """"bold_text": thin faces (italic serif, tracked kicker) become Plus Jakarta Sans Bold"""
+    return "bold" if sc.get("bold") and kind in ("serif", "kick") else kind
+
+def soft_ink(sc): return (60, 48, 40) if sc.get("bold") else (92, 74, 60)
+
 def clamp(x): return min(max(x, 0.0), 1.0)
 def ease_out(x): x = clamp(x); return 1 - (1 - x) ** 3
 def ease_back(x, s=1.7):
@@ -105,8 +111,8 @@ def soft_shadow(img, alpha=110, blur=10, dy=6):
 
 def setup(frame, t, it, sc):
     """italic serif line, word by word"""
-    dark = sc.get("dark"); col = (236, 226, 212) if dark else (92, 74, 60)
-    fnt = font("serif", it.get("size", 66)); words = it["text"].split(" ")
+    dark = sc.get("dark"); col = (236, 226, 212) if dark else soft_ink(sc)
+    fnt = font(face(sc, "serif"), it.get("size", 66 if not sc.get("bold") else 56)); words = it["text"].split(" ")
     widths = [fnt.getlength(w + " ") for w in words]; x = W / 2 - sum(widths) / 2 + fnt.getlength(" ") / 2
     out_a = 1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25)
     for i, w in enumerate(words):
@@ -119,7 +125,8 @@ def setup(frame, t, it, sc):
 def kicker(frame, t, it, sc):
     col = (236, 226, 212) if sc.get("dark") else (60, 48, 40)
     a = ease_out(ramp(t, it["at"], 0.35)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
-    if a > 0: blend(frame, anim(text_img(it["text"], font("kick", 34), col, track=12), a, 1.0), W / 2, it.get("y", 390))
+    big = sc.get("bold")
+    if a > 0: blend(frame, anim(text_img(it["text"], font(face(sc, "kick"), 42 if big else 34), col, track=6 if big else 12), a, 1.0), W / 2, it.get("y", 390))
 
 def head_size(lines, maxw=950, size=150):
     while size > 70 and max(font("heavy", size).getlength(ln) for ln in lines) > maxw: size -= 4
@@ -238,7 +245,7 @@ def tile(frame, t, it, sc):
     if it.get("label"):
         la = ease_out(ramp(t, it["at"] + 0.25, 0.3)) * (1 - out)
         col = (236, 226, 212) if sc.get("dark") else (92, 74, 60)
-        if la > 0: blend(frame, anim(text_img(it["label"], font("serif", 44), col), la, 1.0), it["x"], it["y"] + it.get("size", 170) * 0.5 + 50)
+        if la > 0: blend(frame, anim(text_img(it["label"], font(face(sc, "serif"), 44 if not sc.get("bold") else 38), col), la, 1.0), it["x"], it["y"] + it.get("size", 170) * 0.5 + 50)
 
 def chip_img(txt):
     key = ("chip", txt)
@@ -281,7 +288,7 @@ def count(frame, t, it, sc):
     blend(frame, anim(soft_shadow(text_img(f"{v}", font("heavy", it.get("size", 300)), ink), 60, 10, 6), a, 1.0), W / 2, it["y"])
     la = ease_out(ramp(t, it.get("label_at", it["at"] + 0.6), 0.35)) * a
     if la > 0 and it.get("label"):
-        blend(frame, anim(text_img(it["label"], font("serif", 70), (92, 74, 60)), la, 1.0), W / 2, it["y"] + it.get("size", 300) * 0.62)
+        blend(frame, anim(text_img(it["label"], font(face(sc, "serif"), 70 if not sc.get("bold") else 58), soft_ink(sc)), la, 1.0), W / 2, it["y"] + it.get("size", 300) * 0.62)
     underline(frame, t, it["at"] + 0.4, W / 2, it["y"] + it.get("size", 300) * 0.62 + 64)
 
 def timer(frame, t, it, sc):
@@ -297,7 +304,7 @@ def timer(frame, t, it, sc):
     blend(frame, soft_shadow(img, 50, 14, 8), W / 2, it["y"])
     num = text_img(f"{round(it['to'] * p)}", font("heavy", 230), INK)
     blend(frame, anim(num, a, 1.0), W / 2, it["y"] - 18)
-    blend(frame, anim(text_img("minit", font("serif", 64), (92, 74, 60)), a, 1.0), W / 2, it["y"] + 120)
+    blend(frame, anim(text_img("minit", font(face(sc, "serif"), 64 if not sc.get("bold") else 52), soft_ink(sc)), a, 1.0), W / 2, it["y"] + 120)
 
 def race(frame, t, it, sc):
     """two bars: the class moves on, the child lags"""
@@ -362,7 +369,7 @@ def stairs(frame, t, it, sc):
         blk = Image.new("RGBA", (sw - 14, hgt), (INK if i < n - 1 else ACC) + (255,))
         blend(frame, blk, x0 + i * sw + sw / 2, base - hgt / 2)
         if lab:
-            blend(frame, anim(text_img(lab, font("serif", 58), (92, 74, 60)), ease_out(ramp(t, at + 0.2, 0.3)), 1.0),
+            blend(frame, anim(text_img(lab, font(face(sc, "serif"), 58 if not sc.get("bold") else 48), soft_ink(sc)), ease_out(ramp(t, at + 0.2, 0.3)), 1.0),
                   x0 + i * sw + sw / 2, base + 56)     # under the step, clear of the hopping ball
     # a ball hops up the steps in time with them
     hops = [at for _, at in labels]
@@ -701,6 +708,7 @@ def main():
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
+    for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False))
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)
     sfx_wav = os.path.join(build, "sfx.wav"); n_ev = sfx_track(cfg, dur, sfx_wav)
     voice = os.path.join(build, "voice.wav")

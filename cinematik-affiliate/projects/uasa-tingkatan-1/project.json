@@ -1,0 +1,66 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "end": 55.7,
+ "whisper_prompt": "Persediaan UASA untuk anak Tingkatan 1 tahun depan. Format UASA, sekolah rendah, dewan, Persediaan UASA KSSM, skema jawapan, BM, BI, Matematik, Sains, Sejarah, dwibahasa.",
+ "scenes": [
+  {"start": 0.0, "in": "cut", "dark": false, "items": [
+   {"kind": "setup", "text": "Persediaan UASA untuk anak…", "at": 0.05, "y": 330},
+   {"kind": "head", "lines": [["TINGKATAN 1", 1.68], ["TAHUN DEPAN.", 2.34]], "y": 470, "accent": ["1"]},
+   {"kind": "pile", "chips": ["BM", "BI", "Matematik", "Sains", "Sejarah", "Format UASA", "Kertas 1", "Kertas 2", "Skema", "Set 1", "Set 2", "Set 3"], "at": 2.5, "step": 0.09, "box": [220, 1020, 860, 1600]}]},
+  {"start": 3.6, "in": "cut", "dark": false, "items": [
+   {"kind": "setup", "text": "Ramai budak masuk Tingkatan 1…", "at": 3.7, "until": 7.1, "y": 330},
+   {"kind": "head", "lines": [["TERUS", 5.64], ["TERKEJUT.", 6.34]], "y": 470, "until": 7.1, "accent": ["TERKEJUT."]},
+   {"kind": "setup", "text": "Format UASA…", "at": 7.22, "y": 330},
+   {"kind": "head", "lines": [["LAIN SANGAT.", 8.2]], "y": 480, "box": "LAIN"},
+   {"kind": "card", "img": "page_bm.jpg", "at": 7.84, "x": 360, "y": 1180, "w": 420, "rot": -6},
+   {"kind": "tile", "glyph": "SR", "at": 9.46, "x": 800, "y": 1120, "size": 200, "label": "Sekolah rendah"}]},
+  {"start": 10.3, "in": "cut", "dark": true, "items": [
+   {"kind": "floaters", "glyphs": ["A", "B", "C", "D", "?", "UASA"], "n": 16},
+   {"kind": "setup", "text": "Masuk dewan, tengok soalan…", "at": 10.42, "y": 560},
+   {"kind": "head", "lines": [["TERUS BLANK.", 12.58]], "y": 720},
+   {"kind": "tile", "glyph": "?", "at": 13.04, "x": 540, "y": 1120, "size": 220},
+   {"kind": "setup", "text": "Masa tu, dah terlambat nak latih.", "at": 13.66, "y": 1400}]},
+  {"start": 16.45, "in": "whip", "dark": false, "items": [
+   {"kind": "setup", "text": "Sebab tu saya nak kenalkan…", "at": 16.6, "until": 21.2, "y": 330},
+   {"kind": "head", "lines": [["PERSEDIAAN", 18.86], ["UASA KSSM.", 19.64]], "y": 470, "accent": ["KSSM."], "until": 21.2},
+   {"kind": "card", "img": "banner.jpg", "at": 18.5, "x": 540, "y": 1230, "w": 620, "rot": -2},
+   {"kind": "setup", "text": "Soalan ikut…", "at": 21.3, "y": 330},
+   {"kind": "head", "lines": [["FORMAT UASA", 22.62], ["SEBENAR.", 23.26]], "y": 470, "accent": ["SEBENAR."]},
+   {"kind": "setup", "text": "Jadi anak dah biasa sebelum exam.", "at": 23.88, "y": 1700}]},
+  {"start": 26.2, "in": "whip", "dark": false, "items": [
+   {"kind": "setup", "text": "Korang just…", "at": 26.32, "until": 29.1, "y": 330},
+   {"kind": "head", "lines": [["KOYAK 1 SET.", 27.36]], "y": 480, "until": 29.1, "accent": ["1"]},
+   {"kind": "setup", "text": "Bagi anak jawab…", "at": 28.6, "until": 31.5, "y": 330},
+   {"kind": "head", "lines": [["MACAM EXAM", 29.72], ["BETUL.", 30.38]], "y": 470, "until": 31.5},
+   {"kind": "setup", "text": "Lepas tu…", "at": 30.92, "y": 330},
+   {"kind": "head", "lines": [["SEMAK SKEMA.", 31.64]], "y": 480, "box": "SKEMA."},
+   {"kind": "card", "img": "page_bi.jpg", "at": 27.36, "x": 330, "y": 1170, "w": 420, "rot": -6},
+   {"kind": "card", "img": "page_math.jpg", "at": 29.24, "x": 760, "y": 1210, "w": 420, "rot": 6},
+   {"kind": "tile", "glyph": "A+", "at": 32.62, "x": 540, "y": 1640, "size": 170, "label": "skema jawapan"}]},
+  {"start": 33.5, "in": "whip", "dark": false, "items": [
+   {"kind": "setup", "text": "Ada…", "at": 33.58, "until": 38.2, "y": 330},
+   {"kind": "head", "lines": [["5 SUBJEK.", 34.08]], "y": 480, "accent": ["5"], "until": 38.2},
+   {"kind": "card", "img": "cover_bm.jpg", "at": 34.08, "x": 140, "y": 860, "w": 200, "rot": -6},
+   {"kind": "card", "img": "cover_bi.jpg", "at": 34.78, "x": 340, "y": 880, "w": 200, "rot": 4},
+   {"kind": "card", "img": "cover_mt.jpg", "at": 35.62, "x": 540, "y": 860, "w": 200, "rot": -3},
+   {"kind": "card", "img": "cover_sn.jpg", "at": 36.6, "x": 740, "y": 880, "w": 200, "rot": 5},
+   {"kind": "card", "img": "cover_sj.jpg", "at": 37.46, "x": 940, "y": 860, "w": 200, "rot": -4},
+   {"kind": "setup", "text": "Matematik & Sains pun ada…", "at": 38.3, "y": 1160},
+   {"kind": "head", "lines": [["DWIBAHASA.", 40.16]], "y": 1300, "accent": ["DWIBAHASA."]},
+   {"kind": "tile", "glyph": "BM", "at": 40.3, "x": 400, "y": 1560, "size": 130, "label": "Bahasa Melayu"},
+   {"kind": "tile", "glyph": "EN", "at": 40.5, "x": 680, "y": 1560, "size": 130, "label": "English"}]},
+  {"start": 40.9, "in": "whip", "dark": false, "items": [
+   {"kind": "setup", "text": "Caranya senang…", "at": 41.0, "y": 330},
+   {"kind": "head", "lines": [["PILIH SUBJEK.", 43.26]], "y": 520, "until": 44.4},
+   {"kind": "head", "lines": [["1 SET", 45.86], ["SEMINGGU.", 46.94]], "y": 500, "until": 48.5, "accent": ["SEMINGGU."]},
+   {"kind": "head", "lines": [["SEMAK SKEMA.", 48.54]], "y": 520, "box": "SKEMA."},
+   {"kind": "stairs", "labels": [["Pilih", 42.5], ["1 set", 44.44], ["Semak", 47.58]], "y": 1500}]},
+  {"start": 49.8, "in": "cut", "dark": true, "items": [
+   {"kind": "floaters", "glyphs": ["BM", "BI", "MT", "SN", "SJ", "UASA"], "n": 14},
+   {"kind": "setup", "text": "Mula awal, anak masuk…", "at": 49.84, "y": 330},
+   {"kind": "head", "lines": [["TINGKATAN 1", 51.72], ["DENGAN YAKIN.", 52.56]], "y": 470, "accent": ["YAKIN."], "size": 120},
+   {"kind": "card", "img": "set_jimat.jpg", "at": 50.4, "x": 540, "y": 1060, "w": 600, "rot": 0, "from": "bottom"},
+   {"kind": "cta", "text": "Tekan link dekat bawah", "at": 54.02, "y": 1520}]}
+ ]
+}

@@ -12,6 +12,17 @@
   ],
   "lip_amount": 1.0
  },
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "order": [
+   [
+    0,
+    64.16
+   ]
+  ]
+ },
+ "behind": false,
  "segments": [
   {
    "start": 0.98,
@@ -97,15 +108,5 @@
    "head": "Dapatkan sekarang."
   }
  ],
- "subs": [],
- "speed": {
-  "tempo": 1.12,
-  "max_pause": 0.22,
-  "order": [
-   [
-    0,
-    64.16
-   ]
-  ]
- }
+ "subs": []
 }

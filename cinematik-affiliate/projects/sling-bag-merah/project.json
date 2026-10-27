@@ -2,6 +2,7 @@
  "source": "input/src.mp4",
  "preset": "product",
  "hflip": false,
+ "grade": "bright",
  "whisper_prompt": "Sling bag, beg sling, kalis air, banyak poket, zip, tahan lasak.",
  "beauty": {
   "lip_rgb": [
@@ -16,7 +17,8 @@
    "start": 0.3,
    "end": 6.93,
    "kicker": "LELAKI & WANITA",
-   "head": "Tahan lasak."
+   "head": "Tahan lasak.",
+   "behind": false
   },
   {
    "start": 6.96,

@@ -1,0 +1,111 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "grade": "bright",
+ "whisper_prompt": "Bestnya! Melukis Karakter, Irfan Foner, 30 topik, 30 aktiviti, 64 halaman berwarna, melukis mulut, gaya chibi, postur, bahasa badan.",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 1.0
+ },
+ "segments": [
+  {
+   "start": 0.98,
+   "end": 7.81,
+   "title": {
+    "kicker": "BESTNYA! MELUKIS KARAKTER",
+    "lines": [
+     "Dari lukis lidi,",
+     "ke pelbagai emosi."
+    ],
+    "accent": [
+     "emosi."
+    ],
+    "size": 86
+   }
+  },
+  {
+   "start": 7.84,
+   "end": 11.33,
+   "kicker": "PELBAGAI",
+   "head": "Gestur & badan."
+  },
+  {
+   "start": 11.36,
+   "end": 19.81,
+   "kicker": "ANATOMI",
+   "head": "Lelaki & wanita."
+  },
+  {
+   "start": 19.84,
+   "end": 27.15,
+   "kicker": "ANAK BOLEH CIPTA",
+   "head": "Karakter sendiri."
+  },
+  {
+   "start": 27.18,
+   "end": 31.85,
+   "kicker": "BOLEH BELAJAR",
+   "count": 30,
+   "label": "topik.",
+   "img": "img_30_topik.jpg",
+   "img_y": 1430,
+   "img_w": 680,
+   "img_rot": 3
+  },
+  {
+   "start": 31.88,
+   "end": 40.35,
+   "kicker": "DIKUMPUL DARIPADA",
+   "count": 40,
+   "label": "bengkel melukis komik."
+  },
+  {
+   "start": 40.38,
+   "end": 48.87,
+   "kicker": "STEP BY STEP",
+   "head": "Cara mudah.",
+   "img": "img_64_halaman.jpg",
+   "img_y": 1430,
+   "img_w": 680,
+   "img_rot": -3
+  },
+  {
+   "start": 48.9,
+   "end": 56.21,
+   "kicker": "ASAH FIKIRAN",
+   "head": "Lebih kreatif.",
+   "img": "img_30_aktiviti.jpg",
+   "img_y": 1430,
+   "img_w": 680,
+   "img_rot": 3
+  },
+  {
+   "start": 56.24,
+   "end": 61.33,
+   "kicker": "GABUNG SEMUA LUKISAN",
+   "head": "Jadi karakter baru."
+  },
+  {
+   "start": 61.36,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "order": [
+   [
+    0,
+    64.16
+   ]
+  ]
+ }
+}

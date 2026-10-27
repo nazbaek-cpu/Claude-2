@@ -77,6 +77,7 @@ def load(prj):
     """project.json with end=null resolved to the video length; with "speed", times move onto build/fast.mp4"""
     cfg = project.read(prj)
     cfg["source"] = os.path.join(prj, cfg["source"])
+    cfg["_input"] = os.path.join(prj, "input")   # overlay photos ("img" in a segment) live here, never in the repo
     if cfg.get("hflip") == "auto":  # mirrored product text -> flip (OCR, cached in build/mirror.json)
         import mirror
         cfg["hflip"] = mirror.cached(prj, cfg["source"])
@@ -204,6 +205,21 @@ def rich_img(runs, fnt):
         img = Image.alpha_composite(img, layer); x += fnt.getlength(txt)
     cache[key] = img
     return img
+
+def photo_card(path, w, rot):
+    """product photo on a white rounded card with a soft shadow, slightly tilted"""
+    key = ("photo", path, w, rot)
+    if key in cache: return cache[key]
+    src = Image.open(path).convert("RGB"); h = int(src.height * w / src.width); b, r, s = 14, 30, 3
+    card = Image.new("RGBA", (w + b * 2, h + b * 2), (255, 255, 255, 255)); card.paste(src.resize((w, h), Image.LANCZOS), (b, b))
+    m = Image.new("L", (card.width * s, card.height * s), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=r * s, fill=255)
+    card.putalpha(m.resize(card.size, Image.LANCZOS))
+    pad = 40; out = Image.new("RGBA", (card.width + pad * 2, card.height + pad * 2), (0, 0, 0, 0))
+    sh = Image.new("RGBA", out.size, (0, 0, 0, 0)); sh.paste((0, 0, 0, 120), (pad, pad + 14), card.getchannel("A"))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(16))); out.alpha_composite(card, (pad, pad))
+    cache[key] = out.rotate(rot, Image.BICUBIC, expand=True)
+    return cache[key]
 
 def scrim(a, pos="bottom"):
     """soft dark gradient (lower-left, or from the top) so the title reads on any background"""
@@ -381,6 +397,10 @@ def layers(cfg, t):
                 pa = min(a, vis(t, ts, t1, 0.28))
                 if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, PILL_Y))
                 x += im.width + gap
+        if s.get("img"):   # product photo card popping up over the lower frame, e.g. a page of the book being described
+            im = photo_card(os.path.join(cfg["_input"], s["img"]), s.get("img_w", 780), s.get("img_rot", -3))
+            ia = min(a, vis(t, t0 + 0.1, t1, 0.35))
+            if ia > 0: front.append((anim(im, ia, 0.8), 540, s.get("img_y", 1300) + 90 * (1 - ia)))
         if s.get("cta"):
             front.append((anim(pill(cfg.get("cta", "Beli di beg kuning"), C_FONT, YELLOW, (17, 17, 17)), a, 0.9), 540, CTA_Y + soy))
             ca = min(a, vis(t, t0 + 0.3, t1, 0.25))

@@ -149,6 +149,8 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
     {"start": 0.3, "end": 2.55, "kicker": "UNTUK SEMUA", "head": "Lelaki. Wanita.", "behind": false},  // in front: subject off-centre or leaning in
     {"start": 11.15, "end": 16.3, "kicker": "KIRI & KANAN", "head": "Poket tambahan.",
      "pills": [["Kiri", 12.33], ["Kanan", 12.97]]},                  // pill text, appear time
+    {"start": 31.0, "end": 35.5, "kicker": "30 TOPIK", "head": "Step by step.",
+     "img": "page.jpg", "img_y": 1300, "img_w": 780, "img_rot": -3},   // product photo from input/ popping up on a white card
     {"start": 24.4, "end": 26.4, "cta": true},
     {"start": 29.3, "end": null, "cta": true, "head": "Banyak warna."}   // null = until the end
   ],

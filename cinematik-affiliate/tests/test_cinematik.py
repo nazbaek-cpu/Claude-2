@@ -48,6 +48,15 @@ def test_title_card_is_in_front_and_lowers_subtitles(cfg):
     assert front[-1][2] == render.TITLE_POS["bottom"]["sub"]
 
 
+def test_sub_y_and_photo_card(cfg, tmp_path):
+    from PIL import Image
+    Image.new("RGB", (300, 200), (200, 40, 40)).save(tmp_path / "page.jpg")
+    seg = {"start": 0.0, "end": 3.0, "kicker": "K", "head": "H.", "img": "page.jpg", "img_y": 1250}
+    _, front = render.layers(dict(cfg, segments=[seg], subs=[[0.0, 3.0, "Hai"]], sub_y=540, _input=str(tmp_path)), 2.0)
+    card, subtitle = front[-2], front[-1]
+    assert card[0].width > 780 and card[2] == 1250 and subtitle[2] == 540
+
+
 def test_top_title_and_top_offset(cfg):
     seg = {"start": 0.0, "end": 3.0, "title": {"kicker": "K", "lines": ["A"], "accent": []}}
     _, front = render.layers(dict(cfg, segments=[seg], subs=[[0.0, 3.0, "Hai"]], title_pos="top"), 2.0)

@@ -9,7 +9,7 @@ orange full stop, tilted photo cards, clay icons, and dark scenes for the low po
 project.json: {"source": "input/vo.mp4", "preset": "edukasi",
                "scenes": [{"start": 0.0, "in": "cut"|"whip", "dark": false, "items": [...]}, ...]}
 Item kinds (times in seconds of the original voiceover): setup, kicker, head, card, tile, count, timer, race,
-blocks, stairs, ticks, calendar, cta, pile, floaters. Examples: projects/matematik-explainer, projects/fizik-explainer.
+blocks, stairs, ticks, calendar, cta, pile, floaters. Examples: projects/matematik-explainer, projects/timbunan-chip.
 """
 import argparse, json, math, os, subprocess, wave
 import numpy as np, cv2

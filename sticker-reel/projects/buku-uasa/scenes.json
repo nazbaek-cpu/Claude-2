@@ -1,0 +1,72 @@
+{
+  "scenes": [
+    {"at": "tahun depan anak",
+     "poses": [{"pose": "tunjuk_korang", "x": -60}, {"at": "risau", "pose": "berfikir", "x": 40}, {"at": "video ni", "pose": "tunjuk_korang", "x": -40}],
+     "items": [
+       {"type": "kick", "text": "TAHUN DEPAN", "at": "tahun depan", "top": 170},
+       {"type": "text", "text": "ANAK MASUK", "size": 110, "color": "white", "at": "anak masuk", "top": 270},
+       {"type": "stamp", "text": "TINGKATAN 1", "size": 110, "rot": -4, "at": "tingkatan 1", "top": 420},
+       {"type": "chip", "text": "risau format UASA?", "icon": "😟", "bg": "ink", "size": 58, "at": "risau", "top": 650},
+       {"type": "chip", "text": "Video ni untuk korang!", "icon": "👉", "bg": "accent2", "size": 54, "anim": "slam", "rot": 3, "at": "video ni", "top": 780}
+     ]},
+    {"at": "bayangkan anak", "flash": true,
+     "poses": [{"pose": "tenang_yakin", "x": 40}, {"at": "terus tahu", "pose": "senyum_lebar", "x": -30}, {"at": "3 set", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "text", "text": "Bayangkan…", "serif": true, "size": 110, "anim": "up", "at": "bayangkan", "top": 150},
+       {"type": "chip", "text": "masuk dewan peperiksaan", "icon": "🏫", "size": 52, "at": "dewan", "top": 300},
+       {"type": "chip", "text": "tengok soalan", "icon": "👀", "size": 52, "at": "tengok soalan", "top": 420},
+       {"type": "stamp", "text": "TERUS TAHU JAWAB!", "icon": "💡", "size": 80, "rot": -3, "at": "terus tahu", "top": 550},
+       {"type": "counter", "to": 3, "label": "SET SOALAN", "size": 220, "at": "sebab dia", "count_at": "3 set", "top": 720}
+     ]},
+    {"at": "tengok ni buku", "flash": true, "riser": true,
+     "poses": [{"pose": "kenyit_peace", "x": -20}, {"at": "format uasa sebenar", "pose": "thumbs_up", "x": 40}],
+     "items": [
+       {"type": "text", "text": "TENGOK NI!", "color": "white", "icon": "👀", "at": "tengok ni", "top": 130},
+       {"type": "image", "src": "banner.jpg", "width": 760, "rot": -2, "at": "buku", "top": 270},
+       {"type": "stamp", "text": "FORMAT UASA SEBENAR", "icon": "✅", "size": 70, "rot": -3, "at": "format uasa sebenar", "top": 1000}
+     ]},
+    {"at": "korang just koyak",
+     "poses": [{"pose": "isyarat_tangan", "x": -40}, {"at": "bagi anak jawab", "pose": "tenang_depan", "x": 40}, {"at": "semak", "pose": "thumbs_up", "x": -30}],
+     "items": [
+       {"type": "steps", "top": 140, "items": [{"text": "KOYAK 1 SET", "at": "koyak"}, {"text": "JAWAB", "at": "bagi anak jawab"}, {"text": "SEMAK", "at": "semak"}]},
+       {"type": "image", "src": "page_bm.jpg", "width": 420, "anim": "left", "rot": -6, "at": "1 set", "left": 70, "top": 300},
+       {"type": "image", "src": "page_math.jpg", "width": 420, "anim": "right", "rot": 5, "at": "macam exam", "left": 560, "top": 330},
+       {"type": "chip", "text": "macam exam betul!", "icon": "📝", "bg": "ink", "size": 50, "anim": "slam", "rot": -3, "at": "exam betul", "top": 960},
+       {"type": "chip", "text": "+ skema jawapan", "icon": "✅", "bg": "accent2", "size": 50, "at": "skema jawapan", "top": 1070}
+     ]},
+    {"at": "ada bm",
+     "poses": [{"pose": "senyum_lebar", "x": 40}, {"at": "dwibahasa", "pose": "kenyit_peace", "x": -40}],
+     "items": [
+       {"type": "kick", "text": "5 SUBJEK", "at": "ada bm", "top": 130},
+       {"type": "image", "src": "cover_bm.jpg", "width": 190, "anim": "pop", "rot": -6, "at": "bm", "left": 40, "top": 240},
+       {"type": "image", "src": "cover_bi.jpg", "width": 190, "anim": "pop", "rot": 4, "at": "bi", "left": 245, "top": 260},
+       {"type": "image", "src": "cover_mt.jpg", "width": 190, "anim": "pop", "rot": -3, "at": "matematik", "left": 450, "top": 240},
+       {"type": "image", "src": "cover_sn.jpg", "width": 190, "anim": "pop", "rot": 5, "at": "sains", "left": 655, "top": 260},
+       {"type": "image", "src": "cover_sj.jpg", "width": 190, "anim": "pop", "rot": -4, "at": "sejarah", "left": 850, "top": 240},
+       {"type": "chip", "text": "Matematik & Sains", "icon": "🔢", "size": 52, "at": "matematik dan sains", "top": 620},
+       {"type": "stamp", "text": "DWIBAHASA (DLP)", "icon": "🌐", "size": 74, "rot": -3, "at": "dwibahasa", "top": 750}
+     ]},
+    {"at": "so sekarang",
+     "poses": [{"pose": "senyum_tangan_pipi", "x": 40}],
+     "items": [
+       {"type": "text", "text": "Dah tak payah risau", "serif": true, "size": 96, "anim": "up", "at": "so sekarang", "top": 170},
+       {"type": "chip", "text": "anak blank masa exam", "icon": "😵", "size": 60, "bg": "grey", "at": "anak blank", "strike_at": "masa exam+0.2", "top": 330},
+       {"type": "icon", "icon": "😌", "anim": "pop", "at": "exam+0.3", "left": 470, "top": 480, "size": 160}
+     ]},
+    {"at": "1 pilih subjek",
+     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "2 bagi anak", "pose": "isyarat_tangan", "x": 40}, {"at": "3 semak", "pose": "thumbs_up", "x": -30}],
+     "items": [
+       {"type": "html", "html": "<div class=\"row a\" data-a=\"pop\" {at:1 pilih} style=\"top:150px\"><div class=\"card\" style=\"padding:22px 40px;display:flex;align-items:center;gap:26px\"><span class=\"txt stroke\" style=\"font-size:110px;color:var(--accent)\">01</span><span class=\"txt\" style=\"font-size:64px\">Pilih subjek</span></div></div>"},
+       {"type": "html", "html": "<div class=\"row a\" data-a=\"pop\" {at:2 bagi} style=\"top:380px\"><div class=\"card\" style=\"padding:22px 40px;display:flex;align-items:center;gap:26px\"><span class=\"txt stroke\" style=\"font-size:110px;color:var(--accent)\">02</span><span class=\"txt\" style=\"font-size:56px\">1 set seminggu</span></div></div>"},
+       {"type": "html", "html": "<div class=\"row a\" data-a=\"pop\" {at:3 semak} style=\"top:610px\"><div class=\"card\" style=\"padding:22px 40px;display:flex;align-items:center;gap:26px\"><span class=\"txt stroke\" style=\"font-size:110px;color:var(--accent)\">03</span><span class=\"txt\" style=\"font-size:56px\">Semak dengan skema</span></div></div>"}
+     ],
+     "sfx": [["1 pilih", "pop", 0.6], ["2 bagi", "pop", 0.6], ["3 semak", "pop", 0.6]]},
+    {"at": "tekan link", "flash": true,
+     "poses": [{"pose": "tunjuk_korang", "x": -40}, {"at": "dekat bawah", "pose": "melambai_hai", "x": 20}],
+     "items": [
+       {"type": "kick", "text": "{{series}}", "at": "tekan", "top": 130},
+       {"type": "image", "src": "set_jimat.jpg", "width": 560, "rot": -3, "at": "tekan+0.1", "top": 230},
+       {"type": "cta", "text": "{{cta_short}}", "icon": "👇", "size": 62, "at": "tekan link", "cursor_at": "dekat bawah", "top": 1000}
+     ]}
+  ]
+}

@@ -56,12 +56,12 @@ GRADE = ("colortemperature=temperature=5600:mix=0.35,"
          "curves=master='0/0.035 0.25/0.22 0.75/0.75 1/0.94',"
          "colorbalance=rs=0.03:bs=-0.03:rh=0.02:bh=-0.02,"
          "vignette=PI/5,format=rgb24")
-GRADES = {"muted": GRADE,   # "grade": "bright" (project.json): lifted mids and full whites for a dim or grey take
-          "bright": ("colortemperature=temperature=5400:mix=0.3,"
-                     "eq=saturation=1.08:contrast=1.04:gamma=1.18,"
-                     "curves=master='0/0.02 0.25/0.34 0.6/0.75 1/1',"
-                     "colorbalance=rs=0.025:bs=-0.02:rh=0.01,"
-                     "vignette=PI/9,format=rgb24")}
+GRADES = {"muted": GRADE,   # "grade": "bright" (project.json): warm, moderately brighter, skin keeps its colour (dim takes)
+          "bright": ("colortemperature=temperature=5000:mix=0.35,"
+                     "eq=saturation=1.14:contrast=1.08:gamma=1.07,"
+                     "curves=master='0/0 0.25/0.27 0.6/0.67 1/1',"
+                     "colorbalance=rs=0.04:gs=0.01:bs=-0.03:rm=0.03:bm=-0.02,"
+                     "vignette=PI/7,format=rgb24")}
 
 
 def probe(path):

@@ -265,109 +265,174 @@
     {
      "kind": "setup",
      "text": "Mak ayah ni guna…",
-     "at": 32.4,
-     "y": 330
+     "at": 32.32,
+     "y": 240
     },
     {
      "kind": "head",
      "lines": [
       [
        "SIRI 28 HARI",
-       33.905
+       33.9
       ],
       [
        "PERSEDIAAN MPT4.",
-       35.345
+       35.34
       ]
      ],
-     "y": 470,
+     "y": 380,
      "accent": [
       "MPT4."
      ]
     },
     {
-     "kind": "kicker",
-     "text": "MATEMATIK TAHUN 4",
-     "at": 36.945,
-     "y": 790
+     "kind": "card",
+     "img": "cover_set.jpg",
+     "at": 34.0,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
     }
    ]
   },
   {
-   "start": 38.665,
+   "start": 38.6,
    "in": "whip",
    "items": [
     {
      "kind": "kicker",
      "text": "SATU SET ADA",
-     "at": 38.715,
-     "y": 330
+     "at": 38.68,
+     "y": 240
     },
     {
-     "kind": "count",
-     "to": 6,
-     "label": "buku",
-     "at": 39.905,
-     "until": 40.865,
-     "y": 650
+     "kind": "head",
+     "lines": [
+      [
+       "6 BUKU.",
+       39.92
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "6"
+     ],
+     "until": 40.85
     },
     {
-     "kind": "count",
-     "to": 5,
-     "label": "modul ikut topik",
-     "at": 40.905,
-     "until": 42.685,
-     "y": 650
+     "kind": "card",
+     "img": "set6buku.jpg",
+     "at": 39.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 40.85
     },
     {
-     "kind": "count",
-     "to": 140,
-     "label": "latihan berperingkat",
-     "at": 42.725,
-     "until": 45.265,
-     "y": 650
+     "kind": "head",
+     "lines": [
+      [
+       "5 MODUL.",
+       40.9
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "5"
+     ],
+     "until": 42.65
     },
     {
-     "kind": "count",
-     "to": 1000,
-     "label": "soalan lebih",
-     "at": 45.285,
-     "y": 650,
-     "dur": 1.2
+     "kind": "card",
+     "img": "modul5.jpg",
+     "at": 40.95,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2,
+     "until": 42.65
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "140 LATIHAN.",
+       42.7
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "140"
+     ],
+     "until": 45.25
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "1,000+ SOALAN.",
+       45.28
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "1,000+"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "latihan140.jpg",
+     "at": 42.75,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
     }
    ]
   },
   {
-   "start": 47.165,
+   "start": 47.1,
    "in": "whip",
    "items": [
     {
      "kind": "setup",
      "text": "Setiap latihan ada…",
-     "at": 47.165,
-     "y": 330
+     "at": 47.18,
+     "y": 240
     },
     {
      "kind": "head",
      "lines": [
       [
        "REKOD",
-       48.665
+       48.64
       ],
       [
        "PENCAPAIAN.",
-       49.185
+       49.18
       ]
      ],
-     "y": 470,
+     "y": 380,
      "accent": [
       "PENCAPAIAN."
      ]
     },
     {
+     "kind": "card",
+     "img": "nota_latihan.jpg",
+     "at": 48.3,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2,
+     "until": 53.1
+    },
+    {
      "kind": "tile",
      "glyph": "A",
-     "at": 53.125,
+     "at": 53.14,
      "x": 330,
      "y": 1000,
      "size": 180,
@@ -376,7 +441,7 @@
     {
      "kind": "tile",
      "glyph": "?",
-     "at": 54.565,
+     "at": 54.58,
      "x": 750,
      "y": 1000,
      "size": 180,
@@ -489,7 +554,7 @@
    ]
   },
   {
-   "start": 68.065,
+   "start": 68.1,
    "in": "cut",
    "dark": true,
    "items": [
@@ -506,30 +571,40 @@
     {
      "kind": "setup",
      "text": "Mak ayah, mula awal…",
-     "at": 68.165,
-     "y": 380
+     "at": 68.18,
+     "y": 240
     },
     {
      "kind": "head",
      "lines": [
       [
        "DAPATKAN",
-       70.045
+       70.04
       ],
       [
        "SET LENGKAP.",
-       70.705
+       70.72
       ]
      ],
-     "y": 560,
+     "y": 380,
      "accent": [
       "LENGKAP."
      ]
     },
     {
+     "kind": "card",
+     "img": "cover_set.jpg",
+     "at": 69.2,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
      "kind": "cta",
      "text": "Dapatkan di link bawah",
-     "at": 70.065,
+     "at": 70.04,
      "y": 1650
     }
    ]

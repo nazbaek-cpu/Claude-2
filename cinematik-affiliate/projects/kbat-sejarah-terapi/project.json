@@ -1,0 +1,854 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "navy",
+ "whisper_prompt": "Terapi KBAT Sejarah SPM. Rangka Struktur Kotak. Soalan KBAT format SPM, panduan menjawab langkah demi langkah, video penerangan, skema jawapan lengkap. Sejarah wajib lulus SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "script_title",
+     "face": "archivo",
+     "lines": [
+      [
+       "TERAPI KBAT",
+       0.0
+      ],
+      [
+       "SEJARAH SPM",
+       1.26
+      ]
+     ],
+     "sizes": [
+      120,
+      120
+     ],
+     "colors": [
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       196,
+       56
+      ]
+     ],
+     "outline_color": [
+      6,
+      20,
+      62
+     ],
+     "outline": 4,
+     "leading": 0.95,
+     "y": 300,
+     "until": 8.05
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 2.68,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 10.1
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "RANGKA STRUKTUR",
+       8.12
+      ],
+      [
+       "KOTAK.",
+       9.46
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KOTAK."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 10.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "MAK AYAH",
+     "at": 10.16,
+     "y": 240,
+     "until": 19.2
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "HAFAL SAMPAI",
+       12.44
+      ],
+      [
+       "LEWAT MALAM.",
+       13.92
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "MALAM."
+     ],
+     "until": 14.95
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MARKAH KBAT",
+       16.96
+      ],
+      [
+       "TETAP RENDAH.",
+       18.16
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "RENDAH."
+     ],
+     "until": 21.1
+    },
+    {
+     "kind": "setup",
+     "text": "Sebab dia ada idea…",
+     "at": 19.24,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK TAHU",
+       21.14
+      ],
+      [
+       "SUSUN JAWAPAN.",
+       21.94
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "JAWAPAN."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "susah_kbat.jpg",
+     "at": 15.0,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 24.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Dengan…",
+     "at": 24.18,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "RANGKA STRUKTUR",
+       24.82
+      ],
+      [
+       "KOTAK.",
+       25.5
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KOTAK."
+     ],
+     "until": 32.35
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JAWAPAN",
+       32.4
+      ],
+      [
+       "TERATUR.",
+       33.24
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "TERATUR."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "bina_jawapan.jpg",
+     "at": 26.16,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 36.4,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Dalam buku ni ada…",
+     "at": 36.48,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SOALAN KBAT",
+       37.64
+      ],
+      [
+       "FORMAT SPM.",
+       39.28
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SPM."
+     ],
+     "until": 41.9
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "LANGKAH DEMI",
+       41.94
+      ],
+      [
+       "LANGKAH.",
+       42.82
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "LANGKAH."
+     ],
+     "until": 43.35
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "RUMUSAN",
+       43.78
+      ],
+      [
+       "MUDAH.",
+       44.26
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "MUDAH."
+     ],
+     "until": 46.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "VIDEO",
+       46.34
+      ],
+      [
+       "PENERANGAN.",
+       46.78
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "PENERANGAN."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 36.6,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 49.05,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SKEMA JAWAPAN",
+       49.1
+      ],
+      [
+       "LENGKAP.",
+       50.28
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "LENGKAP."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "A+",
+     "at": 51.92,
+     "x": 540,
+     "y": 980,
+     "size": 230,
+     "label": "anak semak sendiri"
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 53.45,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "1957",
+      "KBAT",
+      "SPM",
+      "?",
+      "1963"
+     ],
+     "n": 14
+    },
+    {
+     "kind": "setup",
+     "text": "Ingat, Sejarah subjek…",
+     "at": 53.5,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "WAJIB LULUS",
+       55.48
+      ],
+      [
+       "SPM.",
+       56.4
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SPM."
+     ],
+     "until": 56.98
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JANGAN TUNGGU",
+       57.02
+      ],
+      [
+       "KELAM-KABUT.",
+       59.36
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KELAM-KABUT."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 60.2,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Dapatkan…",
+     "at": 60.26,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TERAPI KBAT",
+       60.94
+      ],
+      [
+       "SEJARAH SPM.",
+       61.84
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SPM."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 60.5,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 62.36,
+     "y": 1650
+    }
+   ],
+   "dark": true
+  }
+ ],
+ "end": 66.1,
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "NI TERAPI KBAT",
+    0.0,
+    1.26
+   ],
+   [
+    "SEJARAH SPM.",
+    1.26,
+    2.68
+   ],
+   [
+    "BUKU YANG AJAR",
+    2.68,
+    3.9
+   ],
+   [
+    "ANAK CARA",
+    3.9,
+    4.4
+   ],
+   [
+    "JAWAB SOALAN",
+    4.4,
+    5.16
+   ],
+   [
+    "KBAT SEJARAH",
+    5.16,
+    6.16
+   ],
+   [
+    "GUNA SATU",
+    6.16,
+    6.96
+   ],
+   [
+    "TEKNIK JE.",
+    6.96,
+    8.12
+   ],
+   [
+    "RANGKA",
+    8.12,
+    8.84
+   ],
+   [
+    "STRUKTUR",
+    8.84,
+    9.46
+   ],
+   [
+    "KOTAK.",
+    9.46,
+    10.16
+   ],
+   [
+    "MAK AYAH",
+    10.16,
+    11.1
+   ],
+   [
+    "RAMAI ANAK DAH",
+    11.1,
+    12.44
+   ],
+   [
+    "HAFAL FAKTA",
+    12.44,
+    13.1
+   ],
+   [
+    "SEJARAH SAMPAI",
+    13.1,
+    13.92
+   ],
+   [
+    "LEWAT MALAM.",
+    13.92,
+    15.0
+   ],
+   [
+    "TAPI BILA JUMPA",
+    15.0,
+    16.66
+   ],
+   [
+    "SOALAN KBAT",
+    16.66,
+    17.56
+   ],
+   [
+    "MARKAH TETAP",
+    17.56,
+    18.76
+   ],
+   [
+    "RENDAH.",
+    18.76,
+    19.24
+   ],
+   [
+    "SEBAB DIA ADA",
+    19.24,
+    20.06
+   ],
+   [
+    "IDEA",
+    20.06,
+    20.72
+   ],
+   [
+    "TAPI TAK TAHU",
+    20.72,
+    21.74
+   ],
+   [
+    "NAK SUSUN",
+    21.74,
+    22.28
+   ],
+   [
+    "JAWAPAN IKUT",
+    22.28,
+    23.2
+   ],
+   [
+    "KEHENDAK",
+    23.2,
+    23.56
+   ],
+   [
+    "SOALAN.",
+    23.56,
+    24.18
+   ],
+   [
+    "DENGAN RANGKA",
+    24.18,
+    25.16
+   ],
+   [
+    "STRUKTUR",
+    25.16,
+    25.5
+   ],
+   [
+    "KOTAK",
+    25.5,
+    26.16
+   ],
+   [
+    "ANAK BELAJAR",
+    26.16,
+    27.0
+   ],
+   [
+    "PECAHKAN",
+    27.0,
+    27.56
+   ],
+   [
+    "SOALAN DULU",
+    27.56,
+    28.42
+   ],
+   [
+    "KEMUDIAN ISI",
+    28.42,
+    29.6
+   ],
+   [
+    "JAWAPAN DALAM",
+    29.6,
+    30.24
+   ],
+   [
+    "KOTAK",
+    30.24,
+    30.82
+   ],
+   [
+    "SATU DEMI SATU.",
+    30.82,
+    32.4
+   ],
+   [
+    "JAWAPAN JADI",
+    32.4,
+    33.24
+   ],
+   [
+    "TERATUR",
+    33.24,
+    33.92
+   ],
+   [
+    "TERUS KENA",
+    33.92,
+    34.94
+   ],
+   [
+    "DENGAN APA",
+    34.94,
+    35.5
+   ],
+   [
+    "YANG SOALAN",
+    35.5,
+    35.98
+   ],
+   [
+    "NAK.",
+    35.98,
+    36.48
+   ],
+   [
+    "DALAM BUKU NI",
+    36.48,
+    37.38
+   ],
+   [
+    "ADA PELBAGAI",
+    37.38,
+    38.26
+   ],
+   [
+    "SOALAN KBAT",
+    38.26,
+    39.28
+   ],
+   [
+    "FORMAT SPM",
+    39.28,
+    40.34
+   ],
+   [
+    "DENGAN",
+    40.34,
+    40.78
+   ],
+   [
+    "PANDUAN",
+    40.78,
+    41.4
+   ],
+   [
+    "MENJAWAB",
+    41.4,
+    41.94
+   ],
+   [
+    "LANGKAH DEMI",
+    41.94,
+    42.82
+   ],
+   [
+    "LANGKAH.",
+    42.82,
+    43.4
+   ],
+   [
+    "ADA RUMUSAN",
+    43.4,
+    44.26
+   ],
+   [
+    "MUDAH",
+    44.26,
+    44.92
+   ],
+   [
+    "PENERANGAN",
+    44.92,
+    45.52
+   ],
+   [
+    "JELAS DAN VIDEO",
+    45.52,
+    46.78
+   ],
+   [
+    "PENERANGAN",
+    46.78,
+    47.38
+   ],
+   [
+    "UNTUK SETIAP",
+    47.38,
+    48.32
+   ],
+   [
+    "JENIS KBAT.",
+    48.32,
+    49.1
+   ],
+   [
+    "SKEMA JAWAPAN",
+    49.1,
+    50.04
+   ],
+   [
+    "PUN LENGKAP",
+    50.04,
+    50.86
+   ],
+   [
+    "JADI ANAK BOLEH",
+    50.86,
+    51.92
+   ],
+   [
+    "SEMAK SENDIRI",
+    51.92,
+    52.62
+   ],
+   [
+    "DEKAT RUMAH.",
+    52.62,
+    53.5
+   ],
+   [
+    "INGAT",
+    53.5,
+    54.14
+   ],
+   [
+    "SEJARAH SUBJEK",
+    54.14,
+    55.48
+   ],
+   [
+    "WAJIB LULUS",
+    55.48,
+    56.4
+   ],
+   [
+    "SPM.",
+    56.4,
+    57.02
+   ],
+   [
+    "JANGAN TUNGGU",
+    57.02,
+    58.12
+   ],
+   [
+    "DAH DEKAT EXAM",
+    58.12,
+    58.82
+   ],
+   [
+    "BARU NAK KELAM",
+    58.82,
+    59.58
+   ],
+   [
+    "-KABUT.",
+    59.58,
+    60.26
+   ],
+   [
+    "DAPATKAN",
+    60.26,
+    60.94
+   ],
+   [
+    "TERAPI KBAT",
+    60.94,
+    61.84
+   ],
+   [
+    "SEJARAH SPM",
+    61.84,
+    63.0
+   ],
+   [
+    "DEKAT LINK DI",
+    63.0,
+    63.82
+   ],
+   [
+    "BAWAH.",
+    63.82,
+    64.24
+   ],
+   [
+    "ADA PILIHAN",
+    64.24,
+    65.02
+   ],
+   [
+    "COMBO SEKALI.",
+    65.02,
+    66.2
+   ]
+  ]
+ }
+}

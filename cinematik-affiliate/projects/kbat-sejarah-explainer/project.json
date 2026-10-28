@@ -1,0 +1,708 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "end": 51.25,
+ "bold_text": true,
+ "whisper_prompt": "Sejarah, KBAT, SPM, Terapi KBAT Sejarah SPM, Rangka Struktur Kotak.",
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "ANAK HAFAL",
+    0.0,
+    0.78
+   ],
+   [
+    "SEJARAH SAMPAI",
+    0.78,
+    1.96
+   ],
+   [
+    "LEWAT MALAM",
+    1.96,
+    3.32
+   ],
+   [
+    "TAPI MARKAH",
+    3.32,
+    4.0
+   ],
+   [
+    "SOALAN KBAT",
+    4.0,
+    4.82
+   ],
+   [
+    "TETAP RENDAH.",
+    4.82,
+    6.26
+   ],
+   [
+    "MASALAHNYA",
+    6.26,
+    7.04
+   ],
+   [
+    "BUKAN DIA TAK",
+    7.04,
+    7.84
+   ],
+   [
+    "BACA",
+    7.84,
+    8.62
+   ],
+   [
+    "DIA ADA IDEA",
+    8.62,
+    10.16
+   ],
+   [
+    "TAPI TAK TAHU",
+    10.16,
+    11.12
+   ],
+   [
+    "NAK SUSUN",
+    11.12,
+    11.6
+   ],
+   [
+    "JAWAPAN IKUT",
+    11.6,
+    12.64
+   ],
+   [
+    "KEHENDAK",
+    12.64,
+    13.02
+   ],
+   [
+    "SOALAN",
+    13.02,
+    14.0
+   ],
+   [
+    "SEDANGKAN",
+    14.0,
+    14.66
+   ],
+   [
+    "SEJARAH SUBJEK",
+    14.66,
+    15.6
+   ],
+   [
+    "WAJIB LULUS",
+    15.6,
+    16.48
+   ],
+   [
+    "SPM.",
+    16.48,
+    17.54
+   ],
+   [
+    "TERAPI KBAT",
+    17.54,
+    18.26
+   ],
+   [
+    "SEJARAH SPM NI",
+    18.26,
+    19.64
+   ],
+   [
+    "AJAR CARA",
+    19.64,
+    20.4
+   ],
+   [
+    "FAHAM",
+    20.4,
+    20.82
+   ],
+   [
+    "KEHENDAK",
+    20.82,
+    21.4
+   ],
+   [
+    "SOALAN DAN",
+    21.4,
+    22.46
+   ],
+   [
+    "BINA JAWAPAN",
+    22.46,
+    23.4
+   ],
+   [
+    "GUNA RANGKA",
+    23.4,
+    24.3
+   ],
+   [
+    "STRUKTUR",
+    24.3,
+    24.74
+   ],
+   [
+    "KOTAK.",
+    24.74,
+    25.36
+   ],
+   [
+    "PELBAGAI",
+    25.36,
+    26.06
+   ],
+   [
+    "SOALAN KBAT",
+    26.06,
+    26.9
+   ],
+   [
+    "FORMAT SPM",
+    26.9,
+    27.86
+   ],
+   [
+    "DENGAN",
+    27.86,
+    28.32
+   ],
+   [
+    "PANDUAN",
+    28.32,
+    28.8
+   ],
+   [
+    "MENJAWAB",
+    28.8,
+    29.46
+   ],
+   [
+    "LANGKAH DEMI",
+    29.46,
+    30.3
+   ],
+   [
+    "LANGKAH.",
+    30.3,
+    31.22
+   ],
+   [
+    "ADA RUMUSAN",
+    31.22,
+    31.78
+   ],
+   [
+    "MUDAH",
+    31.78,
+    32.58
+   ],
+   [
+    "PENERANGAN",
+    32.58,
+    33.0
+   ],
+   [
+    "JELAS DAN VIDEO",
+    33.0,
+    34.34
+   ],
+   [
+    "PENERANGAN",
+    34.34,
+    34.96
+   ],
+   [
+    "UNTUK SETIAP",
+    34.96,
+    35.92
+   ],
+   [
+    "JENIS KBAT.",
+    35.92,
+    37.34
+   ],
+   [
+    "SKEMA JAWAPAN",
+    37.34,
+    38.16
+   ],
+   [
+    "PUN LENGKAP.",
+    38.16,
+    39.38
+   ],
+   [
+    "ANAK BOLEH",
+    39.38,
+    39.82
+   ],
+   [
+    "SEMAK SENDIRI.",
+    39.82,
+    41.14
+   ],
+   [
+    "BILA DAH TAHU",
+    41.14,
+    41.82
+   ],
+   [
+    "CARA SUSUN",
+    41.82,
+    42.96
+   ],
+   [
+    "JAWAPAN LEBIH",
+    42.96,
+    43.7
+   ],
+   [
+    "TERATUR",
+    43.7,
+    44.68
+   ],
+   [
+    "ANAK LEBIH",
+    44.68,
+    45.34
+   ],
+   [
+    "YAKIN.",
+    45.34,
+    46.3
+   ],
+   [
+    "JANGAN TUNGGU",
+    46.3,
+    47.0
+   ],
+   [
+    "DEKAT SPM.",
+    47.0,
+    48.16
+   ],
+   [
+    "DAPATKAN DEKAT",
+    48.16,
+    48.94
+   ],
+   [
+    "LINK DI BAWAH",
+    48.94,
+    50.06
+   ],
+   [
+    "ADA PILIHAN",
+    50.06,
+    50.64
+   ],
+   [
+    "COMBO.",
+    50.64,
+    51.64
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "photo",
+     "img": "hook_ibu_anak.jpg",
+     "at": 0.0,
+     "until": 3.73,
+     "zoom": [
+      1.0,
+      1.12
+     ],
+     "focus": [
+      0.6,
+      0.42
+     ],
+     "focus_at": 0.48,
+     "parallax": 0.03,
+     "subject_box": [
+      0.35,
+      0.15,
+      0.98,
+      0.95
+     ],
+     "glow": [
+      0.2,
+      0.47,
+      0.22
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.73,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "kicker",
+     "text": "SEJARAH SPM",
+     "at": 3.73,
+     "y": 300
+    },
+    {
+     "kind": "card",
+     "img": "pelajar.png",
+     "at": 3.73,
+     "x": 540,
+     "y": 840,
+     "w": 900,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 6.2,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "setup",
+     "text": "Bukan dia tak baca…",
+     "at": 6.26,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK TAHU",
+       10.4
+      ],
+      [
+       "SUSUN.",
+       11.32
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "SUSUN."
+     ]
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Fakta",
+      "Idea",
+      "Huraian",
+      "Contoh",
+      "Isi",
+      "Kesimpulan",
+      "P.E.S.",
+      "Petikan"
+     ],
+     "at": 8.6,
+     "step": 0.18,
+     "box": [
+      200,
+      780,
+      880,
+      1180
+     ],
+     "seed": 4
+    }
+   ]
+  },
+  {
+   "start": 13.9,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "setup",
+     "text": "Sedangkan Sejarah…",
+     "at": 14.0,
+     "y": 400
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "WAJIB LULUS",
+       15.6
+      ],
+      [
+       "SPM.",
+       16.48
+      ]
+     ],
+     "y": 560,
+     "accent": [
+      "SPM."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "!",
+     "at": 15.6,
+     "x": 540,
+     "y": 980,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "start": 17.5,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "card",
+     "img": "cover.png",
+     "at": 17.6,
+     "x": 540,
+     "y": 820,
+     "w": 580,
+     "rot": -2,
+     "until": 22.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "STRUKTUR KOTAK.",
+       24.3
+      ]
+     ],
+     "y": 360,
+     "accent": [
+      "KOTAK."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "rangka.png",
+     "at": 22.46,
+     "x": 540,
+     "y": 900,
+     "w": 440,
+     "rot": -1
+    }
+   ]
+  },
+  {
+   "start": 25.3,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "PELBAGAI SOALAN KBAT FORMAT SPM",
+     "at": 25.4,
+     "until": 28.2,
+     "y": 330
+    },
+    {
+     "kind": "kicker",
+     "text": "PANDUAN LANGKAH DEMI LANGKAH",
+     "at": 28.32,
+     "y": 330
+    },
+    {
+     "kind": "card",
+     "img": "jenis_kbat.png",
+     "at": 25.4,
+     "x": 540,
+     "y": 860,
+     "w": 860,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "start": 31.1,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "RUMUSAN · PENERANGAN · VIDEO",
+     "at": 31.3,
+     "y": 330
+    },
+    {
+     "kind": "card",
+     "img": "ciri.png",
+     "at": 31.2,
+     "x": 540,
+     "y": 860,
+     "w": 860,
+     "rot": 0
+    }
+   ]
+  },
+  {
+   "start": 37.2,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SKEMA",
+       37.34
+      ],
+      [
+       "LENGKAP.",
+       38.4
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "LENGKAP."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "contoh_jawapan.png",
+     "at": 37.4,
+     "x": 540,
+     "y": 1010,
+     "w": 760,
+     "rot": 1
+    }
+   ]
+  },
+  {
+   "start": 41.0,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JAWAPAN",
+       42.96
+      ],
+      [
+       "LEBIH TERATUR.",
+       43.44
+      ]
+     ],
+     "y": 420,
+     "until": 44.6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "LEBIH YAKIN.",
+       44.68
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "YAKIN."
+     ]
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Fakta",
+      "Idea",
+      "Huraian",
+      "Contoh",
+      "Isi",
+      "Kesimpulan",
+      "P.E.S.",
+      "Petikan"
+     ],
+     "at": 41.1,
+     "step": 0.04,
+     "box": [
+      200,
+      700,
+      880,
+      1150
+     ],
+     "seed": 4,
+     "scatter_at": 42.0
+    },
+    {
+     "kind": "card",
+     "img": "rangka.png",
+     "at": 42.3,
+     "x": 540,
+     "y": 930,
+     "w": 420,
+     "rot": 2
+    }
+   ]
+  },
+  {
+   "start": 46.2,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?"
+     ],
+     "n": 10
+    },
+    {
+     "kind": "setup",
+     "text": "Jangan tunggu dekat SPM.",
+     "at": 46.3,
+     "y": 380
+    },
+    {
+     "kind": "card",
+     "img": "combo.png",
+     "at": 46.6,
+     "x": 540,
+     "y": 880,
+     "w": 760,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 48.16,
+     "y": 1580
+    }
+   ]
+  }
+ ]
+}

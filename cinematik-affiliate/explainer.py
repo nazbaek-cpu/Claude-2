@@ -28,6 +28,8 @@ def font(kind, size):
     if key not in cache:
         if kind == "serif":
             f = ImageFont.truetype(os.path.join(HERE, "fonts", "InstrumentSerif-Italic.ttf"), size)
+        elif kind == "script":   # Damion: thick casual handwriting
+            f = ImageFont.truetype(os.path.join(HERE, "fonts", "Damion-Regular.ttf"), size)
         elif kind == "kick":
             f = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Medium.otf", size)
         else:   # heavy / bold: Plus Jakarta Sans variable
@@ -35,6 +37,12 @@ def font(kind, size):
             f.set_variation_by_name("ExtraBold" if kind == "heavy" else "Bold")
         cache[key] = f
     return cache[key]
+
+def face(sc, kind):
+    """"bold_text": thin faces (italic serif, tracked kicker) become Plus Jakarta Sans Bold"""
+    return "bold" if sc.get("bold") and kind in ("serif", "kick") else kind
+
+def soft_ink(sc): return (60, 48, 40) if sc.get("bold") else (92, 74, 60)
 
 def clamp(x): return min(max(x, 0.0), 1.0)
 def ease_out(x): x = clamp(x); return 1 - (1 - x) ** 3
@@ -105,8 +113,9 @@ def soft_shadow(img, alpha=110, blur=10, dy=6):
 
 def setup(frame, t, it, sc):
     """italic serif line, word by word"""
-    dark = sc.get("dark"); col = (236, 226, 212) if dark else (92, 74, 60)
-    fnt = font("serif", it.get("size", 66)); words = it["text"].split(" ")
+    dark = sc.get("dark"); col = (236, 226, 212) if dark else soft_ink(sc)
+    kind = sc.get("setup_face") or face(sc, "serif")
+    fnt = font(kind, it.get("size", 76 if kind == "script" else 66 if not sc.get("bold") else 56)); words = it["text"].split(" ")
     widths = [fnt.getlength(w + " ") for w in words]; x = W / 2 - sum(widths) / 2 + fnt.getlength(" ") / 2
     out_a = 1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25)
     for i, w in enumerate(words):
@@ -119,7 +128,8 @@ def setup(frame, t, it, sc):
 def kicker(frame, t, it, sc):
     col = (236, 226, 212) if sc.get("dark") else (60, 48, 40)
     a = ease_out(ramp(t, it["at"], 0.35)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
-    if a > 0: blend(frame, anim(text_img(it["text"], font("kick", 34), col, track=12), a, 1.0), W / 2, it.get("y", 390))
+    big = sc.get("bold")
+    if a > 0: blend(frame, anim(text_img(it["text"], font(face(sc, "kick"), 42 if big else 34), col, track=6 if big else 12), a, 1.0), W / 2, it.get("y", 390))
 
 def head_size(lines, maxw=950, size=150):
     while size > 70 and max(font("heavy", size).getlength(ln) for ln in lines) > maxw: size -= 4
@@ -238,7 +248,7 @@ def tile(frame, t, it, sc):
     if it.get("label"):
         la = ease_out(ramp(t, it["at"] + 0.25, 0.3)) * (1 - out)
         col = (236, 226, 212) if sc.get("dark") else (92, 74, 60)
-        if la > 0: blend(frame, anim(text_img(it["label"], font("serif", 44), col), la, 1.0), it["x"], it["y"] + it.get("size", 170) * 0.5 + 50)
+        if la > 0: blend(frame, anim(text_img(it["label"], font(face(sc, "serif"), 44 if not sc.get("bold") else 38), col), la, 1.0), it["x"], it["y"] + it.get("size", 170) * 0.5 + 50)
 
 def chip_img(txt):
     key = ("chip", txt)
@@ -281,7 +291,7 @@ def count(frame, t, it, sc):
     blend(frame, anim(soft_shadow(text_img(f"{v}", font("heavy", it.get("size", 300)), ink), 60, 10, 6), a, 1.0), W / 2, it["y"])
     la = ease_out(ramp(t, it.get("label_at", it["at"] + 0.6), 0.35)) * a
     if la > 0 and it.get("label"):
-        blend(frame, anim(text_img(it["label"], font("serif", 70), (92, 74, 60)), la, 1.0), W / 2, it["y"] + it.get("size", 300) * 0.62)
+        blend(frame, anim(text_img(it["label"], font(face(sc, "serif"), 70 if not sc.get("bold") else 58), soft_ink(sc)), la, 1.0), W / 2, it["y"] + it.get("size", 300) * 0.62)
     underline(frame, t, it["at"] + 0.4, W / 2, it["y"] + it.get("size", 300) * 0.62 + 64)
 
 def timer(frame, t, it, sc):
@@ -297,7 +307,7 @@ def timer(frame, t, it, sc):
     blend(frame, soft_shadow(img, 50, 14, 8), W / 2, it["y"])
     num = text_img(f"{round(it['to'] * p)}", font("heavy", 230), INK)
     blend(frame, anim(num, a, 1.0), W / 2, it["y"] - 18)
-    blend(frame, anim(text_img("minit", font("serif", 64), (92, 74, 60)), a, 1.0), W / 2, it["y"] + 120)
+    blend(frame, anim(text_img("minit", font(face(sc, "serif"), 64 if not sc.get("bold") else 52), soft_ink(sc)), a, 1.0), W / 2, it["y"] + 120)
 
 def race(frame, t, it, sc):
     """two bars: the class moves on, the child lags"""
@@ -362,7 +372,7 @@ def stairs(frame, t, it, sc):
         blk = Image.new("RGBA", (sw - 14, hgt), (INK if i < n - 1 else ACC) + (255,))
         blend(frame, blk, x0 + i * sw + sw / 2, base - hgt / 2)
         if lab:
-            blend(frame, anim(text_img(lab, font("serif", 58), (92, 74, 60)), ease_out(ramp(t, at + 0.2, 0.3)), 1.0),
+            blend(frame, anim(text_img(lab, font(face(sc, "serif"), 58 if not sc.get("bold") else 48), soft_ink(sc)), ease_out(ramp(t, at + 0.2, 0.3)), 1.0),
                   x0 + i * sw + sw / 2, base + 56)     # under the step, clear of the hopping ball
     # a ball hops up the steps in time with them
     hops = [at for _, at in labels]
@@ -433,13 +443,125 @@ def cta(frame, t, it, sc):
     chev = Image.new("RGBA", (cw, chh), ACC + (0,)); chev.putalpha(m.resize((cw, chh), Image.LANCZOS).point(lambda v: int(v * a)))
     blend(frame, chev, W / 2, it["y"] + 100 + 8 * math.sin(2 * math.pi * 1.4 * (t - it["at"])))
 
+# ---------- photo: a still (e.g. an AI illustration) brought to life ----------
+def photo_layers(it, prj):
+    """the still at cover size for the largest zoom, a foreground mask (subject above the floor line + all below it),
+    twinkle maps for small bright lights and a soft glow map"""
+    key = ("photo", it["img"])
+    if key in cache: return cache[key]
+    src8 = np.asarray(Image.open(os.path.join(prj, "input", it["img"])).convert("RGB"))
+    h, w = src8.shape[:2]; zmax = max(it.get("zoom", [1.0, 1.15])) * (1 + it.get("parallax", 0.035)) * 1.02
+    s = max(W / w, H / h) * zmax; size = (int(w * s) + 2, int(h * s) + 2)
+    big = cv2.resize(src8, size, interpolation=cv2.INTER_LANCZOS4).astype(np.float32)
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    (fx0, fy0), (fx1, fy1) = it.get("floor", [[0, 1.1], [1, 1.1]])           # desk / floor edge, as fractions
+    below = yy > (fy0 + (fy1 - fy0) * xx / w) * h
+    subj = np.zeros((h, w), bool)
+    if it.get("subject_box"):
+        import mediapipe as mp
+        from mediapipe.tasks.python import vision, BaseOptions
+        seg = vision.ImageSegmenter.create_from_options(vision.ImageSegmenterOptions(
+            base_options=BaseOptions(model_asset_path=os.path.join(HERE, "models", "selfie_segmenter.tflite")),
+            output_confidence_masks=True, running_mode=vision.RunningMode.IMAGE))
+        m = np.squeeze(seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(src8))).confidence_masks[0].numpy_view())
+        bx0, by0, bx1, by1 = it["subject_box"]
+        subj = (m > 0.5) & (xx > bx0 * w) & (xx < bx1 * w) & (yy > by0 * h) & ~below
+    mask = cv2.GaussianBlur((below | subj).astype(np.float32), (0, 0), 3)
+    mask = cv2.resize(mask, size, interpolation=cv2.INTER_LINEAR)
+    lights = []
+    if it.get("lights_box"):
+        lx0, ly0, lx1, ly1 = it["lights_box"]; lum = src8.mean(axis=2)
+        reg = (lum > it.get("lights_min", 205)) & (xx > lx0 * w) & (xx < lx1 * w) & (yy > ly0 * h) & (yy < ly1 * h)
+        n, lab, stats, cent = cv2.connectedComponentsWithStats(reg.astype(np.uint8))
+        groups = [np.zeros((h, w), np.float32) for _ in range(3)]
+        for i in range(1, n):
+            if 2 <= stats[i][4] <= 400: cv2.circle(groups[i % 3], (int(cent[i][0]), int(cent[i][1])), 5, 1.0, -1)
+        q = (size[0] // 4, size[1] // 4)   # quarter size: warped per frame, so keep them cheap
+        lights = [cv2.resize(cv2.GaussianBlur(g, (0, 0), 6), q, interpolation=cv2.INTER_AREA) for g in groups]
+    glow = None
+    if it.get("glow"):
+        gx, gy, gr = it["glow"]; d = np.sqrt((xx / w - gx) ** 2 + ((yy / h - gy) * h / w) ** 2)
+        glow = cv2.resize(np.clip(1 - d / gr, 0, 1) ** 2, (size[0] // 4, size[1] // 4), interpolation=cv2.INTER_AREA)
+    cache[key] = (big, mask, lights, glow)
+    return cache[key]
+
+PHOTO_SHADE = (1 - 0.62 * np.clip(1 - np.arange(H, dtype=np.float32) / 1000, 0, 1) ** 1.2)[:, None, None]   # text stays legible
+
+def photo(frame, t, it, sc, prj):
+    """slow push-in on the focus point with foreground parallax, twinkling lights, a breathing glow and dust in it"""
+    big, mask, lights, glow = photo_layers(it, prj)
+    bh, bw = big.shape[:2]
+    p = ramp(t, it["at"], it.get("until", it["at"] + 8) - it["at"]); p = p * p * (3 - 2 * p)
+    z0, z1 = it.get("zoom", [1.0, 1.15]); z = z0 + (z1 - z0) * p
+    fx, fy = it.get("focus", [0.5, 0.45])
+    zmax = max(it.get("zoom", [1.0, 1.15])) * (1 + it.get("parallax", 0.035)) * 1.02   # the scale photo_layers built at
+    def affine(zl):
+        k = zl / zmax
+        tx = min(0.0, max(W - bw * k, W / 2 - fx * bw * k))
+        ty = min(0.0, max(H - bh * k, H * it.get("focus_at", 0.5) - fy * bh * k))   # where the focus point sits on screen
+        return np.float32([[k, 0, tx], [0, k, ty]])
+    Mb, Mf = affine(z), affine(z * (1 + it.get("parallax", 0.035) * p))
+    bg = cv2.warpAffine(big, Mb, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    fg = cv2.warpAffine(big, Mf, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+    m = cv2.warpAffine(mask, Mf, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)[..., None]
+    img = bg * (1 - m) + fg * m
+    if lights or glow is not None:   # twinkle + breathing glow, built at quarter size and scaled up
+        Mq = Mb.copy(); Mq[:, 2] /= 4; add = np.zeros((H // 4, W // 4, 3), np.float32)
+        for i, g in enumerate(lights):
+            amp = 0.5 + 0.5 * math.sin(2 * math.pi * (0.55 + 0.25 * i) * t + i * 2.1)
+            add += cv2.warpAffine(g, Mq, (W // 4, H // 4))[..., None] * np.array((255, 214, 150), np.float32) * 0.55 * amp
+        if glow is not None:
+            add += cv2.warpAffine(glow, Mq, (W // 4, H // 4))[..., None] * np.array((255, 190, 120), np.float32) * (0.10 + 0.04 * math.sin(2 * math.pi * 0.35 * t))
+        img += cv2.resize(add, (W, H), interpolation=cv2.INTER_LINEAR)
+    if it.get("glow"):   # dust drifting up through the lamp light
+        gx, gy, _ = it["glow"]; cx, cy = Mb @ np.array([gx * bw, gy * bh, 1.0])
+        rng = np.random.default_rng(2)
+        for i in range(22):
+            ox, oy, sp = rng.uniform(-260, 120), rng.uniform(-200, 260), rng.uniform(10, 26)
+            x = int(cx + ox + 14 * math.sin(t * 0.7 + i)); y = int(cy + (oy - t * sp) % 460 - 230)
+            if 0 <= x < W and 0 <= y < H: cv2.circle(img, (x, y), 2, (255, 236, 200), -1, cv2.LINE_AA)
+    dim = it.get("dim")
+    if dim:
+        amt = float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
+        img *= 1 - amt
+    frame[:] = img * PHOTO_SHADE
+
+def clip_frames(name, prj):
+    """every frame of a clip in input/ (e.g. an AI image-to-video), decoded once"""
+    key = ("clip", name)
+    if key not in cache:
+        path = os.path.join(prj, "input", name)
+        j = json.loads(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,r_frame_rate",
+                                       "-of", "json", path], capture_output=True, text=True, check=True).stdout)["streams"][0]
+        w, h = j["width"], j["height"]; num, den = map(int, j["r_frame_rate"].split("/"))
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True).stdout
+        cache[key] = (np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3), num / den)
+    return cache[key]
+
+def clip(frame, t, it, sc, prj):
+    """a video clip as the scene's picture; "fit" stretches it over at..until, with a gentle push-in and dim like photo"""
+    frames, fps = clip_frames(it["video"], prj)
+    n, h, w = frames.shape[:3]; t0, t1 = it["at"], it.get("until", it["at"] + n / fps)
+    rate = (n / fps) / (t1 - t0) if it.get("fit") else 1.0
+    src = frames[min(n - 1, max(0, int((t - t0) * rate * fps)))]
+    p = ramp(t, t0, t1 - t0); p = p * p * (3 - 2 * p)
+    z0, z1 = it.get("zoom", [1.0, 1.06]); k = max(W / w, H / h) * (z0 + (z1 - z0) * p)
+    fx, fy = it.get("focus", [0.5, 0.45])
+    tx = min(0.0, max(W - w * k, W / 2 - fx * w * k)); ty = min(0.0, max(H - h * k, H * it.get("focus_at", 0.5) - fy * h * k))
+    img = cv2.warpAffine(src, np.float32([[k, 0, tx], [0, k, ty]]), (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE).astype(np.float32)
+    dim = it.get("dim")
+    if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
+    frame[:] = img * PHOTO_SHADE
+
 DRAW = {"setup": setup, "kicker": kicker, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
     for it in sc["items"]:
-        if it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
+        if it["kind"] == "photo": photo(frame, t, it, sc, prj)
+        elif it["kind"] == "clip": clip(frame, t, it, sc, prj)
+        elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
         else: DRAW[it["kind"]](frame, t, it, sc)
     return frame
@@ -451,7 +573,12 @@ def whip(a, b, p):
     mix = sa * (1 - e) + sb * e
     return cv2.blur(mix, (k, 1)) if k > 1 else mix
 
-def frame_at(scenes, t, prj):
+def frame_at(scenes, t, prj, caps=None):
+    fr = scene_frame(scenes, t, prj)
+    if caps: captions(fr, t, caps)
+    return fr
+
+def scene_frame(scenes, t, prj):
     i = max(j for j, s in enumerate(scenes) if s["start"] <= t or j == 0)
     sc = scenes[i]
     if i > 0 and sc.get("in", "whip") == "whip" and t < sc["start"] + 0.14:
@@ -461,6 +588,63 @@ def frame_at(scenes, t, prj):
         nxt = scenes[i + 1]; p = (t - (nxt["start"] - 0.14)) / 0.28
         return whip(draw_scene(sc, nxt["start"] - 0.01, prj), draw_scene(nxt, nxt["start"], prj), p)
     return draw_scene(sc, t, prj)
+
+# ---------- captions: the voiceover in big headline type ----------
+def caption_img(text, size, kind="heavy"):
+    """heavy capitals (or "script"), ink with a thin white outline; a final '.' is orange"""
+    key = ("cap", text, size, kind)
+    if key in cache: return cache[key]
+    f = font(kind, size); sw = max(2, round(size / 36)); pad = sw + 12
+    body, dot = (text[:-1], ".") if text.endswith(".") else (text, "")
+    w = int(f.getlength(body) + (f.getlength(".") if dot else 0)) + pad * 2; asc, desc = f.getmetrics()
+    img = Image.new("RGBA", (w, asc + desc + pad * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    d.text((pad, pad), body, font=f, fill=INK + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
+    if dot: d.text((pad + f.getlength(body) - 4, pad), ".", font=f, fill=ACC + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
+    halo = Image.new("RGBA", (img.width + 40, img.height + 40), (255, 255, 255, 0))   # soft white glow: reads on dark scenes too
+    thin = kind == "script"   # handwriting strokes are thinner: a stronger glow keeps them readable on dark scenes
+    a = Image.new("L", halo.size, 0); a.paste(img.getchannel("A").filter(ImageFilter.MaxFilter(13 if thin else 9)), (20, 20))
+    halo.putalpha(a.filter(ImageFilter.GaussianBlur(10 if thin else 12)).point(lambda v: min(255, int(v * (1.0 if thin else 0.75)))))
+    halo.alpha_composite(img, (20, 20))
+    cache[key] = halo
+    return cache[key]
+
+def captions(frame, t, cap):
+    """the chunk being spoken pops in; long chunks wrap to two lines"""
+    size, y, kind = cap.get("size", 100), cap.get("y", 1390), cap.get("face", "heavy")
+    for text, s0, s1 in cap["chunks"]:
+        if not s0 <= t < s1: continue
+        words = text.split(" "); lines = [text]
+        if font(kind, size).getlength(text) > 940 and len(words) > 1:
+            k = (len(words) + 1) // 2; lines = [" ".join(words[:k]), " ".join(words[k:])]
+        a = ease_out(ramp(t, s0, 0.12)); sc_ = 0.9 + 0.1 * ease_back(ramp(t, s0, 0.22), 2.0)
+        for i, ln in enumerate(lines):
+            img = caption_img(ln, size, kind)
+            if abs(sc_ - 1) > 1e-3: img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC)
+            if a < 0.999: img = img.copy(); img.putalpha(img.getchannel("A").point(lambda v: int(v * a)))
+            blend(frame, img, W / 2, y + (i - (len(lines) - 1) / 2) * size * 1.02)
+        break
+
+def caption_chunks(words, fixes=None, max_words=3, size=100, maxw=900, upper=True, kind="heavy"):
+    """[[TEXT, start, end]] from Whisper words: break at punctuation, after max_words or when too wide;
+    a chunk stays up until the next one, unless there is a real pause"""
+    fixes = fixes or {}; out, cur = [], []; start = [True]   # sentence case: only a new sentence gets a capital
+    def flush():
+        if not cur: return
+        text = " ".join(fixes.get(w["w"], w["w"]) for w in cur)
+        text = text.upper() if upper else (text[:1].upper() + text[1:] if start[0] else text)
+        start[0] = text[-1:] in ".?!"
+        text = text.replace(",", "").rstrip("!")
+        out.append([text, cur[0]["s"], cur[-1]["e"]]); cur.clear()
+    for w in words:
+        cand = " ".join(x["w"] for x in cur + [w])
+        if cur and (len(cur) >= max_words or font(kind, size).getlength(cand.upper() if upper else cand) > maxw): flush()
+        cur.append(w)
+        if w["w"][-1:] in ".,?!": flush()
+    flush()
+    for i in range(len(out) - 1):
+        out[i][2] = out[i + 1][1] if out[i + 1][1] - out[i][2] < 0.6 else out[i][2] + 0.3
+    out[-1][2] += 0.6
+    return [[t, round(a, 3), round(b, 3)] for t, a, b in out]
 
 # ---------- sound ----------
 def sfx_track(cfg, dur, out):
@@ -508,12 +692,13 @@ def remap(cfg, m):
     f = lambda t: round(to_output(t, keep, tempo), 3)   # noqa: E731
     cfg = json.loads(json.dumps(cfg))
     if "end" in cfg: cfg["end"] = f(cfg["end"])
+    if cfg.get("captions"): cfg["captions"]["chunks"] = [[x, f(a), f(b)] for x, a, b in cfg["captions"]["chunks"]]
     for sc in cfg["scenes"]:
         sc["start"] = f(sc["start"])
         for it in sc["items"]:
             for k in TIME_KEYS:
                 if k in it: it[k] = f(it[k])
-            for k in ("lines", "items", "labels"):
+            for k in ("lines", "items", "labels", "dim"):
                 if k in it: it[k] = [[x, f(t)] for x, t in it[k]]
             for k in ("dur", "step"):
                 if k in it: it[k] = round(it[k] / tempo, 3)
@@ -529,6 +714,7 @@ def main():
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
+    for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False)); sc.setdefault("setup_face", cfg.get("setup_face"))
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)
     sfx_wav = os.path.join(build, "sfx.wav"); n_ev = sfx_track(cfg, dur, sfx_wav)
     voice = os.path.join(build, "voice.wav")
@@ -544,7 +730,7 @@ def main():
                             "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
     n = 0; total = int(round((t1 - t0) * FPS))
     while n < total:
-        fr = frame_at(scenes, t0 + n / FPS, prj)
+        fr = frame_at(scenes, t0 + n / FPS, prj, cfg.get("captions"))
         enc.stdin.write(np.clip(fr, 0, 255).astype(np.uint8).tobytes()); n += 1
         if n % 150 == 0: print(f"{n}/{total} frames", flush=True)
     enc.stdin.close(); enc.wait()

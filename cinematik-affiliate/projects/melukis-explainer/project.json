@@ -1,0 +1,505 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "end": 44.4,
+ "whisper_prompt": "Buku Melukis Karakter, Irfan Foner, pelukis komik, watak anime, 30 topik, 40 bengkel melukis komik.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "clip",
+     "video": "budak_melukis.mp4",
+     "at": 0.0,
+     "until": 10.5,
+     "fit": true,
+     "zoom": [
+      1.0,
+      1.08
+     ],
+     "focus": [
+      0.52,
+      0.42
+     ],
+     "focus_at": 0.55,
+     "dim": [
+      [
+       0,
+       0.0
+      ],
+      [
+       0,
+       6.0
+      ],
+      [
+       0.3,
+       8.6
+      ]
+     ]
+    },
+    {
+     "kind": "setup",
+     "text": "Anak asyik lukis watak anime…",
+     "at": 0.0,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MACAM",
+       4.36
+      ],
+      [
+       "TU JE?",
+       4.76
+      ]
+     ],
+     "y": 480,
+     "accent": [
+      "TU",
+      "JE?"
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 4.9,
+     "x": 250,
+     "y": 900,
+     "size": 120
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 5.3,
+     "x": 830,
+     "y": 880,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 6.0,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "clip",
+     "video": "budak_melukis.mp4",
+     "at": 0.0,
+     "until": 10.5,
+     "fit": true,
+     "zoom": [
+      1.0,
+      1.08
+     ],
+     "focus": [
+      0.52,
+      0.42
+     ],
+     "focus_at": 0.55,
+     "dim": [
+      [
+       0,
+       0.0
+      ],
+      [
+       0,
+       6.0
+      ],
+      [
+       0.3,
+       8.6
+      ]
+     ]
+    },
+    {
+     "kind": "setup",
+     "text": "Bukan dia tak berbakat.",
+     "at": 6.06,
+     "y": 330
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK ADA",
+       8.46
+      ],
+      [
+       "PANDUAN.",
+       8.8
+      ]
+     ],
+     "y": 480,
+     "accent": [
+      "PANDUAN."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 4.9,
+     "x": 250,
+     "y": 900,
+     "size": 120
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 5.3,
+     "x": 830,
+     "y": 880,
+     "size": 100
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 9.56,
+     "x": 860,
+     "y": 1120,
+     "size": 130
+    }
+   ]
+  },
+  {
+   "start": 10.5,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "setup",
+     "text": "Kalau minat ni tak diasah…",
+     "at": 10.62,
+     "y": 560
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "PUTUS ASA.",
+       13.64
+      ]
+     ],
+     "y": 720
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BERHENTI",
+       14.88
+      ],
+      [
+       "MELUKIS.",
+       15.34
+      ]
+     ],
+     "y": 900,
+     "accent": [
+      "BERHENTI",
+      "MELUKIS."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "lukisan_anak.png",
+     "at": 10.8,
+     "x": 540,
+     "y": 1420,
+     "w": 220,
+     "rot": 9,
+     "until": 15.6
+    }
+   ]
+  },
+  {
+   "start": 16.55,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Buku Melukis Karakter…",
+     "at": 16.64,
+     "y": 330
+    },
+    {
+     "kind": "card",
+     "img": "cover.png",
+     "at": 16.9,
+     "x": 540,
+     "y": 880,
+     "w": 820,
+     "rot": -3,
+     "until": 19.0
+    },
+    {
+     "kind": "card",
+     "img": "irfan.png",
+     "at": 19.12,
+     "x": 540,
+     "y": 960,
+     "w": 640,
+     "rot": 2
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "IRFAN FONER.",
+       19.12
+      ]
+     ],
+     "y": 1430
+    },
+    {
+     "kind": "kicker",
+     "text": "PELUKIS KOMIK · 15 TAHUN",
+     "at": 20.28,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 21.6,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Isi dia dikumpul daripada…",
+     "at": 21.78,
+     "y": 330
+    },
+    {
+     "kind": "count",
+     "to": 40,
+     "at": 23.56,
+     "dur": 0.9,
+     "y": 780,
+     "label": "bengkel melukis komik",
+     "label_at": 24.08
+    },
+    {
+     "kind": "card",
+     "img": "page_chibi.png",
+     "at": 24.6,
+     "x": 540,
+     "y": 1450,
+     "w": 420,
+     "rot": -5
+    }
+   ]
+  },
+  {
+   "start": 25.75,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "count",
+     "to": 30,
+     "at": 26.4,
+     "dur": 0.8,
+     "y": 470,
+     "size": 240,
+     "label": "topik",
+     "label_at": 26.98
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.png",
+     "at": 26.0,
+     "x": 540,
+     "y": 1230,
+     "w": 860,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 28.1,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "STEP BY STEP.",
+       28.2
+      ]
+     ],
+     "y": 470
+    },
+    {
+     "kind": "setup",
+     "text": "Dari cara lukis kepala…",
+     "at": 29.48,
+     "until": 31.3,
+     "y": 330
+    },
+    {
+     "kind": "setup",
+     "text": "…muka…",
+     "at": 31.42,
+     "until": 32.05,
+     "y": 330
+    },
+    {
+     "kind": "setup",
+     "text": "…sampai cipta karakter sendiri.",
+     "at": 32.18,
+     "y": 330
+    },
+    {
+     "kind": "card",
+     "img": "page_kepala.png",
+     "at": 28.4,
+     "x": 540,
+     "y": 1120,
+     "w": 860,
+     "rot": -3,
+     "until": 31.3
+    },
+    {
+     "kind": "card",
+     "img": "page_mata.png",
+     "at": 31.42,
+     "x": 540,
+     "y": 1120,
+     "w": 860,
+     "rot": 3,
+     "until": 32.95
+    },
+    {
+     "kind": "card",
+     "img": "page_chibi.png",
+     "at": 33.14,
+     "x": 540,
+     "y": 1120,
+     "w": 860,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 34.75,
+   "in": "whip",
+   "dark": false,
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "KURANG GADGET,",
+       35.24
+      ],
+      [
+       "LEBIH KREATIF.",
+       36.44
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "KREATIF."
+     ],
+     "until": 37.75
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "YouTube",
+      "Game",
+      "Tablet",
+      "Video",
+      "Scroll",
+      "Game"
+     ],
+     "at": 34.9,
+     "step": 0.07,
+     "box": [
+      220,
+      950,
+      860,
+      1450
+     ],
+     "scatter_at": 36.35,
+     "seed": 6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MINAT",
+       37.9
+      ],
+      [
+       "JADI BAKAT.",
+       38.54
+      ]
+     ],
+     "y": 470,
+     "accent": [
+      "BAKAT."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover.png",
+     "at": 36.7,
+     "x": 540,
+     "y": 1180,
+     "w": 800,
+     "rot": 2
+    }
+   ]
+  },
+  {
+   "start": 39.95,
+   "in": "cut",
+   "dark": true,
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Jangan biar bakat anak terhenti.",
+     "at": 40.14,
+     "y": 380
+    },
+    {
+     "kind": "kicker",
+     "text": "30 AKTIVITI · 64 HALAMAN",
+     "at": 40.6,
+     "y": 470
+    },
+    {
+     "kind": "card",
+     "img": "harga.png",
+     "at": 40.4,
+     "x": 540,
+     "y": 1020,
+     "w": 640,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 42.62,
+     "y": 1520
+    }
+   ]
+  }
+ ]
+}

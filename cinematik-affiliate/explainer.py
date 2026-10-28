@@ -411,7 +411,7 @@ def stairs(frame, t, it, sc):
         if p <= 0: continue
         hgt = int(sh * (i + 1) * min(p, 1.05))
         if hgt < 2: continue
-        blk = Image.new("RGBA", (sw - 14, hgt), (INK if i < n - 1 else ACC) + (255,))
+        blk = Image.new("RGBA", (sw - 14, hgt), (ACC if i == n - 1 else CREAM if sc.get("dark") else INK) + (255,))
         blend(frame, blk, x0 + i * sw + sw / 2, base - hgt / 2)
         if lab:
             blend(frame, anim(text_img(lab, font(face(sc, "serif"), 58 if not sc.get("bold") else 48), soft_ink(sc)), ease_out(ramp(t, at + 0.2, 0.3)), 1.0),

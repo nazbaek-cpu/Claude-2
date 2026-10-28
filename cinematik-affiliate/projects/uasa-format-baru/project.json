@@ -1,0 +1,1013 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "navy",
+ "whisper_prompt": "Buku Persediaan UASA KSSM, format UASA sebenar, BM, BI, Matematik, Sains, Sejarah, dwibahasa, skema jawapan, Tingkatan 1, sekolah menengah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "script_title",
+     "face": "archivo",
+     "lines": [
+      [
+       "PERSEDIAAN UASA",
+       0.0
+      ],
+      [
+       "KSSM",
+       1.34
+      ]
+     ],
+     "sizes": [
+      84,
+      170
+     ],
+     "colors": [
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       196,
+       56
+      ]
+     ],
+     "outline_color": [
+      6,
+      20,
+      62
+     ],
+     "outline": 4,
+     "leading": 0.95,
+     "y": 280,
+     "until": 4.45
+    },
+    {
+     "kind": "card",
+     "img": "banner.jpg",
+     "at": 0.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 4.45
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "FORMAT UASA",
+       4.26
+      ],
+      [
+       "SEBENAR.",
+       5.0
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SEBENAR."
+     ],
+     "until": 6.0
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 4.5,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2,
+     "until": 7.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "5 SUBJEK.",
+       6.02
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "5"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "set_jimat.jpg",
+     "at": 7.34,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 11.75,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Matematik & Sains pun ada…",
+     "at": 11.78,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "DWIBAHASA.",
+       13.88
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "DWIBAHASA."
+     ],
+     "until": 14.74
+    },
+    {
+     "kind": "card",
+     "img": "page_mt_sn.jpg",
+     "at": 12.0,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 14.74
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "+ SKEMA",
+       15.58
+      ],
+      [
+       "JAWAPAN.",
+       16.14
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "JAWAPAN."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "A+",
+     "at": 15.72,
+     "x": 540,
+     "y": 980,
+     "size": 230
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 16.5,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "MAK AYAH, KALAU ANAK MASUK",
+     "at": 16.56,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TINGKATAN 1",
+       18.92
+      ],
+      [
+       "TAHUN DEPAN.",
+       19.58
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "1"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ai_hantar_sekolah.jpg",
+     "at": 16.7,
+     "x": 540,
+     "y": 985,
+     "w": 390,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 22.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Sebab masuk sekolah menengah…",
+     "at": 22.12,
+     "y": 240,
+     "until": 30.35
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMUA",
+       24.1
+      ],
+      [
+       "BENDA BARU.",
+       24.5
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "BARU."
+     ],
+     "until": 30.35
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Subjek baru",
+      "Cikgu baru",
+      "Format baru",
+      "Kelas baru",
+      "Kawan baru"
+     ],
+     "at": 25.52,
+     "step": 0.9,
+     "box": [
+      230,
+      820,
+      850,
+      1250
+     ],
+     "until": 30.35,
+     "seed": 4
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "ANAK",
+       31.12
+      ],
+      [
+       "TERKEJUT.",
+       31.26
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "TERKEJUT."
+     ],
+     "until": 34.0
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BARU NAK",
+       34.76
+      ],
+      [
+       "KEJAR…",
+       35.42
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KEJAR…"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ai_risau.jpg",
+     "at": 30.45,
+     "x": 540,
+     "y": 985,
+     "w": 390,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 36.4,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Dengan buku ni…",
+     "at": 36.4,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BIASAKAN DIRI",
+       38.16
+      ],
+      [
+       "DARI SEKARANG.",
+       39.22
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SEKARANG."
+     ],
+     "until": 40.0
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "KOYAK 1 SET.",
+       40.02
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "1"
+     ],
+     "until": 41.38
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JAWAB.",
+       41.4
+      ]
+     ],
+     "y": 400,
+     "until": 43.6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMAK.",
+       43.7
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "SEMAK."
+     ],
+     "until": 45.3
+    },
+    {
+     "kind": "card",
+     "img": "page_bm_bi.jpg",
+     "at": 40.1,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 45.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "NAMPAK SUBJEK",
+       46.82
+      ],
+      [
+       "KUAT & LEMAH.",
+       47.86
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "LEMAH."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ai_belajar.jpg",
+     "at": 45.4,
+     "x": 540,
+     "y": 985,
+     "w": 390,
+     "rot": 2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 50.9,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Caranya senang…",
+     "at": 50.92,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "PILIH SUBJEK.",
+       52.22
+      ]
+     ],
+     "y": 420,
+     "until": 53.48
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "1 SET",
+       53.92
+      ],
+      [
+       "SEMINGGU.",
+       54.48
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "SEMINGGU."
+     ],
+     "until": 55.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMAK SKEMA.",
+       55.36
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "SKEMA."
+     ]
+    },
+    {
+     "kind": "stairs",
+     "labels": [
+      [
+       "Pilih",
+       52.22
+      ],
+      [
+       "1 set",
+       53.92
+      ],
+      [
+       "Semak",
+       55.36
+      ]
+     ],
+     "y": 1200
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 56.7,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "MASUK TINGKATAN 1 NANTI",
+     "at": 56.7,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK",
+       59.32
+      ],
+      [
+       "TERKEJUT.",
+       59.56
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "TERKEJUT."
+     ],
+     "until": 60.15
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "DAH BIASA.",
+       60.72
+      ],
+      [
+       "DAH YAKIN.",
+       61.68
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "YAKIN."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ai_gembira.jpg",
+     "at": 56.8,
+     "x": 540,
+     "y": 985,
+     "w": 390,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 62.5,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "BM",
+      "BI",
+      "MT",
+      "SN",
+      "SJ",
+      "UASA"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "setup",
+     "text": "Mak ayah, mula awal…",
+     "at": 62.56,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "PERSEDIAAN",
+       65.42
+      ],
+      [
+       "UASA KSSM.",
+       66.1
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KSSM."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "banner.jpg",
+     "at": 63.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 64.66,
+     "y": 1650
+    }
+   ],
+   "dark": true
+  }
+ ],
+ "end": 68.8,
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "BUKU",
+    0.0,
+    0.38
+   ],
+   [
+    "PERSEDIAAN",
+    0.38,
+    0.98
+   ],
+   [
+    "UASA KSSM NI",
+    0.98,
+    2.34
+   ],
+   [
+    "ADA SET SOALAN",
+    2.34,
+    3.74
+   ],
+   [
+    "IKUT FORMAT",
+    3.74,
+    4.5
+   ],
+   [
+    "UASA SEBENAR",
+    4.5,
+    5.52
+   ],
+   [
+    "UNTUK 5 SUBJEK",
+    5.52,
+    7.34
+   ],
+   [
+    "BM",
+    7.34,
+    8.26
+   ],
+   [
+    "BI",
+    8.26,
+    9.14
+   ],
+   [
+    "MATEMATIK",
+    9.14,
+    10.08
+   ],
+   [
+    "SAINS DAN",
+    10.08,
+    10.9
+   ],
+   [
+    "SEJARAH.",
+    10.9,
+    11.78
+   ],
+   [
+    "MATEMATIK DAN",
+    11.78,
+    12.72
+   ],
+   [
+    "SAINS PUN ADA",
+    12.72,
+    13.88
+   ],
+   [
+    "DWIBAHASA",
+    13.88,
+    14.76
+   ],
+   [
+    "SIAP DENGAN",
+    14.76,
+    15.72
+   ],
+   [
+    "SKEMA",
+    15.72,
+    16.14
+   ],
+   [
+    "JAWAPAN.",
+    16.14,
+    16.56
+   ],
+   [
+    "MAK AYAH",
+    16.56,
+    17.74
+   ],
+   [
+    "KALAU ANAK",
+    17.74,
+    18.62
+   ],
+   [
+    "MASUK",
+    18.62,
+    18.92
+   ],
+   [
+    "TINGKATAN 1",
+    18.92,
+    19.58
+   ],
+   [
+    "TAHUN DEPAN",
+    19.58,
+    20.56
+   ],
+   [
+    "NI YANG DIA",
+    20.56,
+    21.42
+   ],
+   [
+    "PERLUKAN.",
+    21.42,
+    22.12
+   ],
+   [
+    "SEBAB MASUK",
+    22.12,
+    23.16
+   ],
+   [
+    "SEKOLAH",
+    23.16,
+    23.6
+   ],
+   [
+    "MENENGAH",
+    23.6,
+    24.1
+   ],
+   [
+    "SEMUA BENDA",
+    24.1,
+    25.06
+   ],
+   [
+    "BARU.",
+    25.06,
+    25.52
+   ],
+   [
+    "SUBJEK BARU",
+    25.52,
+    26.94
+   ],
+   [
+    "CIKGU BARU DAN",
+    26.94,
+    28.2
+   ],
+   [
+    "FORMAT",
+    28.2,
+    28.74
+   ],
+   [
+    "PEPERIKSAAN",
+    28.74,
+    29.52
+   ],
+   [
+    "PUN BARU.",
+    29.52,
+    30.4
+   ],
+   [
+    "RAMAI ANAK",
+    30.4,
+    31.26
+   ],
+   [
+    "TERKEJUT BILA",
+    31.26,
+    32.06
+   ],
+   [
+    "PERTAMA KALI",
+    32.06,
+    32.68
+   ],
+   [
+    "JUMPA SOALAN",
+    32.68,
+    33.52
+   ],
+   [
+    "UASA.",
+    33.52,
+    34.04
+   ],
+   [
+    "MASA TU BARU",
+    34.04,
+    35.42
+   ],
+   [
+    "NAK KEJAR.",
+    35.42,
+    36.4
+   ],
+   [
+    "DENGAN BUKU NI",
+    36.4,
+    37.52
+   ],
+   [
+    "ANAK BOLEH",
+    37.52,
+    38.16
+   ],
+   [
+    "BIASAKAN DIRI",
+    38.16,
+    39.22
+   ],
+   [
+    "DARI SEKARANG.",
+    39.22,
+    40.02
+   ],
+   [
+    "KOYAK SATU SET",
+    40.02,
+    41.4
+   ],
+   [
+    "JAWAB MACAM",
+    41.4,
+    42.12
+   ],
+   [
+    "EXAM BETUL",
+    42.12,
+    43.04
+   ],
+   [
+    "LEPAS TU SEMAK",
+    43.04,
+    44.32
+   ],
+   [
+    "GUNA SKEMA",
+    44.32,
+    44.92
+   ],
+   [
+    "JAWAPAN.",
+    44.92,
+    45.32
+   ],
+   [
+    "MAK AYAH PUN",
+    45.32,
+    46.56
+   ],
+   [
+    "BOLEH NAMPAK",
+    46.56,
+    47.3
+   ],
+   [
+    "SUBJEK MANA",
+    47.3,
+    47.86
+   ],
+   [
+    "ANAK KUAT",
+    47.86,
+    48.78
+   ],
+   [
+    "SUBJEK MANA",
+    48.78,
+    49.54
+   ],
+   [
+    "PERLU TAMBAH",
+    49.54,
+    50.36
+   ],
+   [
+    "LATIHAN.",
+    50.36,
+    50.92
+   ],
+   [
+    "CARANYA",
+    50.92,
+    51.68
+   ],
+   [
+    "SENANG.",
+    51.68,
+    52.22
+   ],
+   [
+    "PILIH SUBJEK",
+    52.22,
+    53.5
+   ],
+   [
+    "BUAT SATU SET",
+    53.5,
+    54.48
+   ],
+   [
+    "SEMINGGU DAN",
+    54.48,
+    55.36
+   ],
+   [
+    "SEMAK DENGAN",
+    55.36,
+    56.1
+   ],
+   [
+    "SKEMA.",
+    56.1,
+    56.7
+   ],
+   [
+    "BILA MASUK",
+    56.7,
+    57.58
+   ],
+   [
+    "TINGKATAN 1",
+    57.58,
+    58.24
+   ],
+   [
+    "NANTI",
+    58.24,
+    58.88
+   ],
+   [
+    "ANAK TAK",
+    58.88,
+    59.56
+   ],
+   [
+    "TERKEJUT.",
+    59.56,
+    60.16
+   ],
+   [
+    "DIA DAH BIASA",
+    60.16,
+    61.36
+   ],
+   [
+    "DAH YAKIN.",
+    61.36,
+    62.56
+   ],
+   [
+    "MAK AYAH",
+    62.56,
+    63.56
+   ],
+   [
+    "MULA AWAL.",
+    63.56,
+    64.66
+   ],
+   [
+    "DAPATKAN",
+    64.66,
+    65.42
+   ],
+   [
+    "PERSEDIAAN",
+    65.42,
+    66.1
+   ],
+   [
+    "UASA KSSM",
+    66.1,
+    67.36
+   ],
+   [
+    "DEKAT LINK DI",
+    67.36,
+    68.24
+   ],
+   [
+    "BAWAH.",
+    68.24,
+    69.24
+   ]
+  ]
+ }
+}

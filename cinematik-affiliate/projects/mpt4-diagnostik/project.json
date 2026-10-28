@@ -27,21 +27,51 @@
     },
     {
      "kind": "script_title",
+     "face": "archivo",
      "lines": [
       [
-       "Ujian Diagnostik",
+       "UJIAN",
        0.1
       ],
       [
+       "DIAGNOSTIK",
+       0.25
+      ],
+      [
        "MPT4",
-       0.45
+       0.5
       ]
      ],
      "sizes": [
-      150,
-      190
+      120,
+      108,
+      200
      ],
-     "y": 330,
+     "colors": [
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       214,
+       64
+      ]
+     ],
+     "outline_color": [
+      25,
+      20,
+      15
+     ],
+     "outline": 4,
+     "leading": 0.9,
+     "y": 270,
      "until": 4.6
     }
    ]

@@ -200,6 +200,14 @@ def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
     assert explainer.head_size(["SEMUA DIBINA SEKALI GUS"]) < 150     # long lines shrink to fit
 
 
+def test_explainer_title_faces(tmp_path):
+    for face in ("script", "archivo"):
+        sc = {"start": 0.0, "dark": True, "items": [{"kind": "script_title", "face": face, "lines": [["UJIAN", 0.0], ["MPT4", 0.1]],
+                                                    "sizes": [120, 200], "colors": [[255, 255, 255], [255, 214, 64]], "y": 300}]}
+        fr = explainer.frame_at([sc], 1.0, str(tmp_path))
+        assert fr[200:700].max() > 200 and fr[1200:].max() < 60   # bright title at the top, dark scene below
+
+
 def test_explainer_scenes_follow_the_sped_up_voice():
     cfg = {"end": 10.0, "scenes": [{"start": 4.0, "items": [{"kind": "head", "lines": [["A.", 5.0]], "until": 6.0},
                                                              {"kind": "pile", "chips": ["x"], "at": 4.5, "step": 0.2}]}]}

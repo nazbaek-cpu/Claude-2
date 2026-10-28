@@ -83,6 +83,7 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | Kind | What it draws |
 |---|---|
 | `setup` | italic line, word by word |
+| `script_title` | big opening title over a picture: `lines` [[text, at]], `sizes`, `colors`, `face` (`script` handwriting or `archivo` Archivo Black capitals), thin `outline` |
 | `kicker` | small tracked caps |
 | `head` | headline lines; `accent`, `box` (highlighter), `offset_shadow`, `scatter_at` |
 | `card` | product photo card: `img` from `input/`, `x`, `y`, `w`, `rot`, `from: "bottom"` |

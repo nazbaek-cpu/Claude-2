@@ -10,7 +10,7 @@
    "items": [
     {
      "kind": "clip",
-     "video": "klip_ibu_anak.mp4",
+     "video": "klip_animasi.mp4",
      "at": 0.0,
      "until": 4.7,
      "fit": false,
@@ -20,9 +20,19 @@
      ],
      "focus": [
       0.5,
-      0.42
+      0.5
      ],
-     "focus_at": 0.5
+     "focus_at": 0.55,
+     "dim": [
+      [
+       0.32,
+       0.0
+      ],
+      [
+       0.32,
+       4.7
+      ]
+     ]
     },
     {
      "kind": "script_title",
@@ -71,13 +81,7 @@
      "outline": 4,
      "leading": 0.9,
      "y": 270,
-     "until": 2.6
-    },
-    {
-     "kind": "setup",
-     "text": "Bayangkan anak masuk kelas…",
-     "at": 2.64,
-     "y": 300
+     "until": 4.7
     }
    ],
    "dark": true

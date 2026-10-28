@@ -24,8 +24,10 @@ PEACH_TOP, PEACH_BOT, DARK = (250, 209, 167), (246, 236, 226), (15, 15, 11)
 DARK_BOT = None                                # set by a theme: dark scenes become a top-to-bottom gradient
 CAP_FILL, CAP_EDGE, HALO = INK, (255, 255, 255), (255, 255, 255)   # caption letters, thin outline, soft glow
 CTA_TEXT = (255, 255, 255)
+CAP_STROKE = 36                                # caption outline = size / CAP_STROKE
 THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 196, 56),   # deep royal blue, gold accent
-                   "CAP_FILL": (255, 255, 255), "CAP_EDGE": (6, 20, 62), "HALO": (2, 10, 34), "CTA_TEXT": (6, 20, 62)}}
+                   "CAP_FILL": (255, 255, 255), "CAP_EDGE": (6, 20, 62), "HALO": (2, 10, 34), "CTA_TEXT": (6, 20, 62),
+                   "CAP_STROKE": 14}}   # white letters need a thicker edge on light footage
 cache = {}
 
 def set_theme(name):
@@ -634,7 +636,7 @@ def caption_img(text, size, kind="heavy"):
     """heavy capitals (or "script"), ink with a thin white outline; a final '.' is orange"""
     key = ("cap", text, size, kind)
     if key in cache: return cache[key]
-    f = font(kind, size); sw = max(2, round(size / 36)); pad = sw + 12
+    f = font(kind, size); sw = max(2, round(size / CAP_STROKE)); pad = sw + 12
     body, dot = (text[:-1], ".") if text.endswith(".") else (text, "")
     w = int(f.getlength(body) + (f.getlength(".") if dot else 0)) + pad * 2; asc, desc = f.getmetrics()
     img = Image.new("RGBA", (w, asc + desc + pad * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(img)

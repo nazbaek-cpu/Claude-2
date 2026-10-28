@@ -21,7 +21,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
 INK, ACC, CREAM = (18, 15, 11), (226, 121, 80), (244, 236, 226)
 PEACH_TOP, PEACH_BOT, DARK = (250, 209, 167), (246, 236, 226), (15, 15, 11)
+DARK_BOT = None                                # set by a theme: dark scenes become a top-to-bottom gradient
+CAP_FILL, CAP_EDGE, HALO = INK, (255, 255, 255), (255, 255, 255)   # caption letters, thin outline, soft glow
+CTA_TEXT = (255, 255, 255)
+THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 196, 56),   # deep royal blue, gold accent
+                   "CAP_FILL": (255, 255, 255), "CAP_EDGE": (6, 20, 62), "HALO": (2, 10, 34), "CTA_TEXT": (6, 20, 62)}}
 cache = {}
+
+def set_theme(name):
+    """"theme": "navy" in project.json: dark scenes on a deep blue gradient, gold accents, white captions"""
+    if name: globals().update(THEMES[name])
 
 def font(kind, size):
     key = ("font", kind, size)
@@ -44,7 +53,7 @@ def face(sc, kind):
     """"bold_text": thin faces (italic serif, tracked kicker) become Plus Jakarta Sans Bold"""
     return "bold" if sc.get("bold") and kind in ("serif", "kick") else kind
 
-def soft_ink(sc): return (60, 48, 40) if sc.get("bold") else (92, 74, 60)
+def soft_ink(sc): return (236, 226, 212) if sc.get("dark") else (60, 48, 40) if sc.get("bold") else (92, 74, 60)
 
 def clamp(x): return min(max(x, 0.0), 1.0)
 def ease_out(x): x = clamp(x); return 1 - (1 - x) ** 3
@@ -58,8 +67,9 @@ def background(dark):
     if key in cache: return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if dark:
-        bg = np.empty((H, W, 3), np.float32); bg[:] = DARK
-        line, step, alpha = np.array(CREAM, np.float32), 108, 0.035
+        top = np.array(DARK, np.float32); bot = np.array(DARK_BOT or DARK, np.float32)
+        bg = np.broadcast_to(top + (bot - top) * yy ** 1.1, (H, W, 3)).copy()
+        line, step, alpha = np.array(CREAM, np.float32), 108, 0.035 if DARK_BOT is None else 0.06
     else:
         top, bot = np.array(PEACH_TOP, np.float32), np.array(PEACH_BOT, np.float32)
         bg = np.broadcast_to(top + (bot - top) * yy ** 0.9, (H, W, 3)).copy()
@@ -465,7 +475,7 @@ def cta(frame, t, it, sc):
         f = font("bold", 50); tw = int(f.getlength(it["text"])); w, h = tw + 110, 104; s = 3
         m = Image.new("L", (w * s, h * s), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * s - 1, h * s - 1), radius=h * s // 2, fill=255)
         img = Image.new("RGBA", (w, h), ACC + (0,)); img.putalpha(m.resize((w, h), Image.LANCZOS))
-        asc, desc = f.getmetrics(); ImageDraw.Draw(img).text(((w - tw) / 2, (h - asc - desc) / 2 - 2), it["text"], font=f, fill=(255, 255, 255, 255))
+        asc, desc = f.getmetrics(); ImageDraw.Draw(img).text(((w - tw) / 2, (h - asc - desc) / 2 - 2), it["text"], font=f, fill=CTA_TEXT + (255,))
         cache[key] = soft_shadow(img, 110, 16, 10)
     blend(frame, anim(cache[key], a, 0.85), W / 2, it["y"])
     s = 4; cw, chh = 60, 52; m = Image.new("L", (cw * s, chh * s), 0); d = ImageDraw.Draw(m)
@@ -628,9 +638,9 @@ def caption_img(text, size, kind="heavy"):
     body, dot = (text[:-1], ".") if text.endswith(".") else (text, "")
     w = int(f.getlength(body) + (f.getlength(".") if dot else 0)) + pad * 2; asc, desc = f.getmetrics()
     img = Image.new("RGBA", (w, asc + desc + pad * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
-    d.text((pad, pad), body, font=f, fill=INK + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
-    if dot: d.text((pad + f.getlength(body) - 4, pad), ".", font=f, fill=ACC + (255,), stroke_width=sw, stroke_fill=(255, 255, 255, 255))
-    halo = Image.new("RGBA", (img.width + 40, img.height + 40), (255, 255, 255, 0))   # soft white glow: reads on dark scenes too
+    d.text((pad, pad), body, font=f, fill=CAP_FILL + (255,), stroke_width=sw, stroke_fill=CAP_EDGE + (255,))
+    if dot: d.text((pad + f.getlength(body) - 4, pad), ".", font=f, fill=ACC + (255,), stroke_width=sw, stroke_fill=CAP_EDGE + (255,))
+    halo = Image.new("RGBA", (img.width + 40, img.height + 40), HALO + (0,))   # soft glow (white by default): reads on dark scenes too
     thin = kind == "script"   # handwriting strokes are thinner: a stronger glow keeps them readable on dark scenes
     a = Image.new("L", halo.size, 0); a.paste(img.getchannel("A").filter(ImageFilter.MaxFilter(13 if thin else 9)), (20, 20))
     halo.putalpha(a.filter(ImageFilter.GaussianBlur(10 if thin else 12)).point(lambda v: min(255, int(v * (1.0 if thin else 0.75)))))
@@ -743,6 +753,7 @@ def main():
     if cfg.get("speed") and os.path.exists(tm):   # speed.py shortened the pauses: every scene time follows the voice
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
+    set_theme(cfg.get("theme"))
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
     for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False)); sc.setdefault("setup_face", cfg.get("setup_face"))
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)

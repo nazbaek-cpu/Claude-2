@@ -1,0 +1,1349 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "whisper_prompt": "Ujian diagnostik MPT4. Bayangkan anak masuk kelas. Tahun 4. Soalan berjejak, penyelesaian masalah, jalan kerja. Siri 28 Hari Persediaan MPT4 Matematik Tahun 4. DSKP KSSR Semakan. Simulasi MPT4.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "clip",
+     "video": "klip_ibu_anak.mp4",
+     "at": 0.0,
+     "until": 4.7,
+     "fit": false,
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "focus": [
+      0.5,
+      0.42
+     ],
+     "focus_at": 0.5
+    },
+    {
+     "kind": "script_title",
+     "face": "archivo",
+     "lines": [
+      [
+       "UJIAN",
+       0.0
+      ],
+      [
+       "DIAGNOSTIK",
+       0.34
+      ],
+      [
+       "MPT4",
+       1.2
+      ]
+     ],
+     "sizes": [
+      120,
+      108,
+      200
+     ],
+     "colors": [
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       255,
+       255
+      ],
+      [
+       255,
+       196,
+       56
+      ]
+     ],
+     "outline_color": [
+      6,
+      20,
+      62
+     ],
+     "outline": 4,
+     "leading": 0.9,
+     "y": 270,
+     "until": 2.6
+    },
+    {
+     "kind": "setup",
+     "text": "Bayangkan anak masuk kelas…",
+     "at": 2.64,
+     "y": 300
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 4.7,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "?",
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "n": 14
+    },
+    {
+     "kind": "setup",
+     "text": "Tengok kertas soalan…",
+     "at": 4.88,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "FORMAT",
+       7.06
+      ],
+      [
+       "TAK PERNAH JUMPA.",
+       8.08
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "JUMPA."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 8.3,
+     "x": 540,
+     "y": 980,
+     "size": 220
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 9.3,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "MAK AYAH",
+     "at": 9.32,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAHUN DEPAN",
+       10.12
+      ],
+      [
+       "TAHUN 4.",
+       11.54
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "4."
+     ],
+     "until": 12.32
+    },
+    {
+     "kind": "tile",
+     "glyph": "4",
+     "at": 11.76,
+     "x": 540,
+     "y": 980,
+     "size": 230,
+     "until": 12.32
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JANGAN BIAR",
+       12.38
+      ],
+      [
+       "NI JADI.",
+       13.34
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "JADI."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 14.0,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BUKAN TAK",
+       14.58
+      ],
+      [
+       "PANDAI.",
+       14.92
+      ]
+     ],
+     "y": 380,
+     "until": 15.55
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CUMA TAK",
+       15.9
+      ],
+      [
+       "BIASA.",
+       16.36
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "BIASA."
+     ],
+     "until": 21.4
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Berjejak",
+      "Masalah",
+      "Jalan kerja",
+      "Pecahan",
+      "Wang",
+      "Masa",
+      "Data"
+     ],
+     "at": 17.28,
+     "step": 0.45,
+     "box": [
+      220,
+      830,
+      860,
+      1230
+     ],
+     "scatter_at": 23.92,
+     "seed": 6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "KALAU TAK",
+       21.46
+      ],
+      [
+       "PERNAH LATIH…",
+       22.24
+      ]
+     ],
+     "y": 380,
+     "until": 23.85
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "KAKU.",
+       23.92
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "KAKU."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 24.4,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Sebab tu, mak ayah kena mula…",
+     "at": 24.46,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SIRI 28 HARI",
+       27.36
+      ],
+      [
+       "PERSEDIAAN MPT4.",
+       28.98
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "MPT4."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_set.jpg",
+     "at": 27.5,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 32.5,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "kicker",
+     "text": "SATU SET LENGKAP",
+     "at": 32.58,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "6 BUKU.",
+       34.1
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "6"
+     ],
+     "until": 34.92
+    },
+    {
+     "kind": "card",
+     "img": "set6buku.jpg",
+     "at": 33.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 34.92
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "5 MODUL.",
+       34.96
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "5"
+     ],
+     "until": 41.82
+    },
+    {
+     "kind": "card",
+     "img": "modul5.jpg",
+     "at": 35.0,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2,
+     "until": 41.82
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "+ 1 SIMULASI.",
+       41.86
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "SIMULASI."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "set6buku.jpg",
+     "at": 41.9,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 45.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Setiap latihan bermula dengan…",
+     "at": 45.18,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "NOTA",
+       47.14
+      ],
+      [
+       "RINGKAS.",
+       47.4
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "RINGKAS."
+     ],
+     "until": 52.4
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JALAN",
+       52.48
+      ],
+      [
+       "KERJA.",
+       52.72
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "KERJA."
+     ],
+     "until": 54.6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "ADA SKOR.",
+       55.2
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "SKOR."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "nota_latihan.jpg",
+     "at": 45.9,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 56.5,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MAK AYAH",
+       56.96
+      ],
+      [
+       "NAMPAK SENDIRI.",
+       57.4
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SENDIRI."
+     ]
+    },
+    {
+     "kind": "tile",
+     "glyph": "A",
+     "at": 59.4,
+     "x": 330,
+     "y": 980,
+     "size": 180,
+     "label": "topik kuat"
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 60.74,
+     "x": 750,
+     "y": 980,
+     "size": 180,
+     "label": "perlu ulang"
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 61.4,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "140 LATIHAN.",
+       62.16
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "140"
+     ],
+     "until": 64.65
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "1,000+ SOALAN.",
+       64.7
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "1,000+"
+     ],
+     "until": 66.35
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "IKUT DSKP.",
+       66.4
+      ]
+     ],
+     "y": 400,
+     "accent": [
+      "DSKP."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "latihan140.jpg",
+     "at": 61.6,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 69.7,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Dan bila dah habis…",
+     "at": 69.74,
+     "y": 240
+    },
+    {
+     "kind": "count",
+     "to": 4,
+     "label": "set simulasi MPT4",
+     "at": 72.14,
+     "y": 820
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MACAM UJIAN",
+       74.2
+      ],
+      [
+       "SEBENAR.",
+       75.26
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SEBENAR."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 75.85,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK PERLU",
+       75.9
+      ],
+      [
+       "TUISYEN MAHAL.",
+       76.48
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "MAHAL."
+     ],
+     "until": 77.45
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK PERLU",
+       77.52
+      ],
+      [
+       "PENING.",
+       77.92
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "PENING."
+     ],
+     "until": 79.7
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "1 LATIHAN",
+       79.76
+      ],
+      [
+       "SEHARI.",
+       80.62
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SEHARI."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "sehari.jpg",
+     "at": 79.9,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 83.9,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ibu_anak_senyum.jpg",
+     "at": 83.9,
+     "until": 90.6,
+     "zoom": [
+      1.0,
+      1.12
+     ],
+     "focus": [
+      0.55,
+      0.6
+     ],
+     "focus_at": 0.62
+    },
+    {
+     "kind": "setup",
+     "text": "Bayangkan pula…",
+     "at": 83.96,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TERUS",
+       88.16
+      ],
+      [
+       "SENYUM.",
+       88.62
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "SENYUM."
+     ]
+    }
+   ],
+   "dark": true
+  },
+  {
+   "start": 90.6,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "floaters",
+     "glyphs": [
+      "+",
+      "−",
+      "×",
+      "÷"
+     ],
+     "n": 12
+    },
+    {
+     "kind": "setup",
+     "text": "Mak ayah, mula awal…",
+     "at": 90.62,
+     "y": 240
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "DAPATKAN",
+       92.54
+      ],
+      [
+       "SET LENGKAP.",
+       93.22
+      ]
+     ],
+     "y": 380,
+     "accent": [
+      "LENGKAP."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_set.jpg",
+     "at": 91.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Dapatkan di link bawah",
+     "at": 92.54,
+     "y": 1650
+    }
+   ],
+   "dark": true
+  }
+ ],
+ "theme": "navy",
+ "end": 95.3,
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "UJIAN",
+    0.0,
+    0.34
+   ],
+   [
+    "DIAGNOSTIK",
+    0.34,
+    1.2
+   ],
+   [
+    "MPT4.",
+    1.2,
+    2.64
+   ],
+   [
+    "BAYANGKAN",
+    2.64,
+    3.36
+   ],
+   [
+    "ANAK MASUK",
+    3.36,
+    4.22
+   ],
+   [
+    "KELAS",
+    4.22,
+    4.88
+   ],
+   [
+    "TENGOK KERTAS",
+    4.88,
+    5.78
+   ],
+   [
+    "SOALAN DAN",
+    5.78,
+    6.6
+   ],
+   [
+    "SEMUA FORMAT",
+    6.6,
+    7.72
+   ],
+   [
+    "DIA TAK PERNAH",
+    7.72,
+    8.3
+   ],
+   [
+    "JUMPA.",
+    8.3,
+    9.32
+   ],
+   [
+    "MAK AYAH",
+    9.32,
+    10.12
+   ],
+   [
+    "TAHUN DEPAN",
+    10.12,
+    11.02
+   ],
+   [
+    "ANAK MASUK",
+    11.02,
+    11.54
+   ],
+   [
+    "TAHUN 4.",
+    11.54,
+    12.38
+   ],
+   [
+    "JANGAN BIAR NI",
+    12.38,
+    13.44
+   ],
+   [
+    "JADI.",
+    13.44,
+    14.06
+   ],
+   [
+    "ANAK BUKAN TAK",
+    14.06,
+    14.92
+   ],
+   [
+    "PANDAI",
+    14.92,
+    15.6
+   ],
+   [
+    "DIA CUMA TAK",
+    15.6,
+    16.36
+   ],
+   [
+    "BIASA.",
+    16.36,
+    17.28
+   ],
+   [
+    "SOALAN",
+    17.28,
+    18.0
+   ],
+   [
+    "BERJEJAK",
+    18.0,
+    18.92
+   ],
+   [
+    "PENYELESAIAN",
+    18.92,
+    19.52
+   ],
+   [
+    "MASALAH",
+    19.52,
+    20.28
+   ],
+   [
+    "TUNJUK JALAN",
+    20.28,
+    21.06
+   ],
+   [
+    "KERJA.",
+    21.06,
+    21.46
+   ],
+   [
+    "KALAU TAK",
+    21.46,
+    22.24
+   ],
+   [
+    "PERNAH LATIH",
+    22.24,
+    23.04
+   ],
+   [
+    "MEMANG DIA",
+    23.04,
+    23.74
+   ],
+   [
+    "AKAN KAKU.",
+    23.74,
+    24.46
+   ],
+   [
+    "SEBAB TU",
+    24.46,
+    25.38
+   ],
+   [
+    "MAK AYAH KENA",
+    25.38,
+    26.0
+   ],
+   [
+    "MULA SEKARANG",
+    26.0,
+    26.58
+   ],
+   [
+    "DENGAN SIRI 28",
+    26.58,
+    28.28
+   ],
+   [
+    "HARI PERSEDIAAN",
+    28.28,
+    29.92
+   ],
+   [
+    "MPT4 MATEMATIK",
+    29.92,
+    31.64
+   ],
+   [
+    "TAHUN 4.",
+    31.64,
+    32.58
+   ],
+   [
+    "SATU SET",
+    32.58,
+    33.52
+   ],
+   [
+    "LENGKAP",
+    33.52,
+    34.1
+   ],
+   [
+    "ENAM BUKU.",
+    34.1,
+    34.96
+   ],
+   [
+    "LIMA MODUL IKUT",
+    34.96,
+    36.4
+   ],
+   [
+    "TOPIK.",
+    36.4,
+    36.84
+   ],
+   [
+    "DARI NOMBOR",
+    36.84,
+    37.6
+   ],
+   [
+    "BULAT",
+    37.6,
+    38.16
+   ],
+   [
+    "PECAHAN",
+    38.16,
+    38.96
+   ],
+   [
+    "WANG",
+    38.96,
+    39.54
+   ],
+   [
+    "MASA",
+    39.54,
+    40.16
+   ],
+   [
+    "SAMPAI",
+    40.16,
+    40.6
+   ],
+   [
+    "KOORDINAT DAN",
+    40.6,
+    41.32
+   ],
+   [
+    "DATA.",
+    41.32,
+    41.86
+   ],
+   [
+    "PLUS",
+    41.86,
+    42.64
+   ],
+   [
+    "SATU BUKU",
+    42.64,
+    43.44
+   ],
+   [
+    "SIMULASI MPT4.",
+    43.44,
+    45.18
+   ],
+   [
+    "SETIAP LATIHAN",
+    45.18,
+    46.26
+   ],
+   [
+    "BERMULA",
+    46.26,
+    46.9
+   ],
+   [
+    "DENGAN NOTA",
+    46.9,
+    47.4
+   ],
+   [
+    "RINGKAS.",
+    47.4,
+    48.1
+   ],
+   [
+    "JADI ANAK",
+    48.1,
+    48.74
+   ],
+   [
+    "FAHAM KONSEP",
+    48.74,
+    49.6
+   ],
+   [
+    "DULU.",
+    49.6,
+    49.76
+   ],
+   [
+    "LEPAS TU",
+    49.76,
+    50.82
+   ],
+   [
+    "JAWAB SOALAN",
+    50.82,
+    51.58
+   ],
+   [
+    "DAN TULIS JALAN",
+    51.58,
+    52.72
+   ],
+   [
+    "KERJA DALAM",
+    52.72,
+    53.32
+   ],
+   [
+    "RUANG YANG",
+    53.32,
+    53.88
+   ],
+   [
+    "DISEDIAKAN.",
+    53.88,
+    54.64
+   ],
+   [
+    "ADA SKOR DI",
+    54.64,
+    55.74
+   ],
+   [
+    "SETIAP LATIHAN.",
+    55.74,
+    56.58
+   ],
+   [
+    "JADI MAK AYAH",
+    56.58,
+    57.4
+   ],
+   [
+    "NAMPAK SENDIRI",
+    57.4,
+    58.06
+   ],
+   [
+    "TOPIK MANA",
+    58.06,
+    58.84
+   ],
+   [
+    "ANAK DAH KUAT",
+    58.84,
+    59.8
+   ],
+   [
+    "TOPIK MANA",
+    59.8,
+    60.4
+   ],
+   [
+    "PERLU ULANG.",
+    60.4,
+    61.44
+   ],
+   [
+    "SEMUANYA 140",
+    61.44,
+    62.8
+   ],
+   [
+    "LATIHAN",
+    62.8,
+    63.88
+   ],
+   [
+    "BERPERINGKAT.",
+    63.88,
+    64.7
+   ],
+   [
+    "LEBIH 1000",
+    64.7,
+    65.88
+   ],
+   [
+    "SOALAN.",
+    65.88,
+    66.4
+   ],
+   [
+    "IKUT DSKP KSSR",
+    66.4,
+    68.98
+   ],
+   [
+    "SEMAKAN.",
+    68.98,
+    69.74
+   ],
+   [
+    "DAN BILA DAH",
+    69.74,
+    70.84
+   ],
+   [
+    "HABIS",
+    70.84,
+    71.38
+   ],
+   [
+    "ANAK CUBA",
+    71.38,
+    72.14
+   ],
+   [
+    "EMPAT SET",
+    72.14,
+    72.84
+   ],
+   [
+    "SIMULASI MPT4",
+    72.84,
+    74.2
+   ],
+   [
+    "MACAM UJIAN",
+    74.2,
+    75.26
+   ],
+   [
+    "SEBENAR.",
+    75.26,
+    75.9
+   ],
+   [
+    "TAK PERLU",
+    75.9,
+    76.48
+   ],
+   [
+    "TUISYEN MAHAL",
+    76.48,
+    77.52
+   ],
+   [
+    "TAK PERLU",
+    77.52,
+    77.92
+   ],
+   [
+    "PENING SUSUN",
+    77.92,
+    78.74
+   ],
+   [
+    "LATIHAN SENDIRI.",
+    78.74,
+    79.76
+   ],
+   [
+    "SATU LATIHAN",
+    79.76,
+    80.62
+   ],
+   [
+    "SEHARI JE.",
+    80.62,
+    81.46
+   ],
+   [
+    "28 HARI",
+    81.46,
+    82.78
+   ],
+   [
+    "SATU MODUL.",
+    82.78,
+    83.96
+   ],
+   [
+    "BAYANGKAN",
+    83.96,
+    84.72
+   ],
+   [
+    "PULA",
+    84.72,
+    85.14
+   ],
+   [
+    "ANAK MASUK",
+    85.14,
+    85.88
+   ],
+   [
+    "KELAS",
+    85.88,
+    86.56
+   ],
+   [
+    "TENGOK KERTAS",
+    86.56,
+    87.4
+   ],
+   [
+    "SOALAN DAN",
+    87.4,
+    88.16
+   ],
+   [
+    "TERUS SENYUM",
+    88.16,
+    89.14
+   ],
+   [
+    "SEBAB DIA DAH",
+    89.14,
+    89.84
+   ],
+   [
+    "BIASA.",
+    89.84,
+    90.62
+   ],
+   [
+    "MAK AYAH",
+    90.62,
+    91.52
+   ],
+   [
+    "MULA AWAL.",
+    91.52,
+    92.54
+   ],
+   [
+    "DAPATKAN SET",
+    92.54,
+    93.5
+   ],
+   [
+    "LENGKAP DEKAT",
+    93.5,
+    94.26
+   ],
+   [
+    "LINK DI BAWAH.",
+    94.26,
+    95.62
+   ]
+  ]
+ }
+}

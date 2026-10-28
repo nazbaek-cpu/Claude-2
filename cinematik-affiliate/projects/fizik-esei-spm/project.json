@@ -1,0 +1,926 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "whisper_prompt": "SPM Fizik Koleksi Soalan Esei, Tingkatan 4 dan 5, 95 soalan esei, jawapan lengkap, skema, cikgu Fizik, 4.9 bintang.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "10 MARKAH",
+       0.0
+      ],
+      [
+       "HILANG.",
+       1.86
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "HILANG."
+     ],
+     "scatter_at": 4.3
+    },
+    {
+     "kind": "tile",
+     "glyph": "?",
+     "at": 3.5,
+     "x": 540,
+     "y": 1000,
+     "size": 240
+    }
+   ]
+  },
+  {
+   "start": 5.0,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Ramai calon SPM…",
+     "at": 5.02,
+     "y": 280
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAHU FORMULA.",
+       6.46
+      ],
+      [
+       "TAHU TEORI.",
+       7.5
+      ]
+     ],
+     "y": 420,
+     "until": 9.75
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Terangkan",
+      "Bandingkan",
+      "Cadangkan",
+      "Ubah suai",
+      "Wajarkan"
+     ],
+     "at": 9.82,
+     "step": 0.55,
+     "box": [
+      220,
+      820,
+      860,
+      1220
+     ],
+     "scatter_at": 16.72,
+     "seed": 3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK TAHU",
+       13.38
+      ],
+      [
+       "NAK TULIS APA.",
+       13.88
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "APA."
+     ],
+     "until": 15.85
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK KENA",
+       16.36
+      ],
+      [
+       "SKEMA.",
+       16.72
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "SKEMA."
+     ]
+    }
+   ]
+  },
+  {
+   "start": 17.3,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Kalau hari-hari ulang kaji…",
+     "at": 17.34,
+     "y": 280
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK PERNAH",
+       19.52
+      ],
+      [
+       "TENGOK JAWAPAN.",
+       20.04
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "JAWAPAN."
+     ],
+     "until": 24.45
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "PENAT CARI",
+       24.52
+      ],
+      [
+       "MERATA TEMPAT.",
+       25.62
+      ]
+     ],
+     "y": 420,
+     "until": 28.8
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "GRED",
+       31.2
+      ],
+      [
+       "JATUH.",
+       31.52
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "JATUH."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "ai_ibu_anak.jpg",
+     "at": 17.5,
+     "x": 540,
+     "y": 990,
+     "w": 390,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 32.0,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Sebab tu buku…",
+     "at": 32.04,
+     "y": 280,
+     "until": 36.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SPM FIZIK",
+       33.02
+      ],
+      [
+       "KOLEKSI ESEI.",
+       33.78
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "ESEI."
+     ],
+     "until": 36.3
+    },
+    {
+     "kind": "card",
+     "img": "cover_langit.jpg",
+     "at": 32.6,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 36.3
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "95+ SOALAN",
+       37.14
+      ],
+      [
+       "ESEI.",
+       37.66
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "95+"
+     ],
+     "until": 41.15
+    },
+    {
+     "kind": "card",
+     "img": "esei95.jpg",
+     "at": 36.4,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JAWAPAN LENGKAP.",
+       41.18
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "LENGKAP."
+     ],
+     "until": 42.1
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "IKUT TOPIK.",
+       42.14
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "TOPIK."
+     ]
+    }
+   ]
+  },
+  {
+   "start": 43.0,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Anak terus nampak…",
+     "at": 43.04,
+     "y": 280,
+     "until": 46.5
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JAWAPAN",
+       44.62
+      ],
+      [
+       "KENA SKEMA.",
+       45.54
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "SKEMA."
+     ],
+     "until": 46.5
+    },
+    {
+     "kind": "card",
+     "img": "ting4.jpg",
+     "at": 43.1,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 44.9
+    },
+    {
+     "kind": "card",
+     "img": "ting5.jpg",
+     "at": 44.95,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2,
+     "until": 46.5
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SAIZ KECIL.",
+       47.1
+      ]
+     ],
+     "y": 440,
+     "until": 49.05
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JELAS &",
+       49.68
+      ],
+      [
+       "BERWARNA.",
+       50.18
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "BERWARNA."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_meja.jpg",
+     "at": 46.6,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 51.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "4.9 BINTANG.",
+       53.04
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "4.9"
+     ],
+     "until": 54.48
+    },
+    {
+     "kind": "count",
+     "to": 300,
+     "label": "pembeli",
+     "at": 51.7,
+     "y": 820,
+     "until": 54.48
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "CIKGU FIZIK",
+       55.0
+      ],
+      [
+       "RECOMMEND.",
+       56.1
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "RECOMMEND."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "form4.jpg",
+     "at": 54.6,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 57.1,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Harga…",
+     "at": 57.1,
+     "y": 280
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BAWAH RM25.",
+       57.94
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "RM25."
+     ],
+     "until": 60.75
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "JANGAN BIAR",
+       60.8
+      ],
+      [
+       "MARKAH HILANG.",
+       61.52
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "HILANG."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover_langit.jpg",
+     "at": 57.3,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 59.54,
+     "y": 1650
+    }
+   ]
+  }
+ ],
+ "end": 63.0,
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "10 MARKAH SATU",
+    0.0,
+    0.86
+   ],
+   [
+    "SOALAN ESEI",
+    0.86,
+    1.54
+   ],
+   [
+    "FIZIK HILANG",
+    1.54,
+    2.5
+   ],
+   [
+    "MACAM TU JE",
+    2.5,
+    3.02
+   ],
+   [
+    "SEBAB TAK TAHU",
+    3.02,
+    3.82
+   ],
+   [
+    "NAK SUSUN",
+    3.82,
+    4.2
+   ],
+   [
+    "JAWAPAN.",
+    4.2,
+    5.02
+   ],
+   [
+    "RAMAI CALON",
+    5.02,
+    5.8
+   ],
+   [
+    "SPM TAHU",
+    5.8,
+    6.46
+   ],
+   [
+    "FORMULA",
+    6.46,
+    7.06
+   ],
+   [
+    "TAHU TEORI.",
+    7.06,
+    8.18
+   ],
+   [
+    "TAPI BILA",
+    8.18,
+    9.02
+   ],
+   [
+    "SOALAN ESEI",
+    9.02,
+    9.6
+   ],
+   [
+    "MINTA",
+    9.6,
+    9.82
+   ],
+   [
+    "TERANGKAN",
+    9.82,
+    10.44
+   ],
+   [
+    "BANDINGKAN",
+    10.44,
+    11.26
+   ],
+   [
+    "ATAU",
+    11.26,
+    11.5
+   ],
+   [
+    "CADANGKAN",
+    11.5,
+    11.98
+   ],
+   [
+    "PENGUBAHSUAIAN",
+    11.98,
+    12.9
+   ],
+   [
+    "TERUS TAK TAHU",
+    12.9,
+    13.78
+   ],
+   [
+    "NAK TULIS APA.",
+    13.78,
+    14.8
+   ],
+   [
+    "JAWAPAN",
+    14.8,
+    15.32
+   ],
+   [
+    "PANJANG",
+    15.32,
+    15.88
+   ],
+   [
+    "TAPI TAK KENA",
+    15.88,
+    16.72
+   ],
+   [
+    "SKEMA.",
+    16.72,
+    17.34
+   ],
+   [
+    "KALAU HARI",
+    17.34,
+    18.06
+   ],
+   [
+    "-HARI ULANG",
+    18.06,
+    18.58
+   ],
+   [
+    "KAJI",
+    18.58,
+    19.0
+   ],
+   [
+    "TAPI TAK PERNAH",
+    19.0,
+    19.74
+   ],
+   [
+    "TENGOK",
+    19.74,
+    20.04
+   ],
+   [
+    "JAWAPAN ESEI",
+    20.04,
+    20.72
+   ],
+   [
+    "YANG BETUL",
+    20.72,
+    21.28
+   ],
+   [
+    "SAMPAI KE SPM",
+    21.28,
+    22.58
+   ],
+   [
+    "PUN CARA",
+    22.58,
+    22.96
+   ],
+   [
+    "MENULIS TAK",
+    22.96,
+    23.58
+   ],
+   [
+    "AKAN BERUBAH.",
+    23.58,
+    24.52
+   ],
+   [
+    "PENAT CARI",
+    24.52,
+    25.3
+   ],
+   [
+    "JAWAPAN DARI",
+    25.3,
+    25.8
+   ],
+   [
+    "BUKU LAIN",
+    25.8,
+    26.54
+   ],
+   [
+    "WEBSITE LAIN",
+    26.54,
+    27.6
+   ],
+   [
+    "TAPI TAK PERNAH",
+    27.6,
+    28.5
+   ],
+   [
+    "LENGKAP.",
+    28.5,
+    28.88
+   ],
+   [
+    "AKHIRNYA",
+    28.88,
+    29.78
+   ],
+   [
+    "MARKAH ESEI TU",
+    29.78,
+    30.46
+   ],
+   [
+    "JUGA YANG TARIK",
+    30.46,
+    31.2
+   ],
+   [
+    "GRED KE",
+    31.2,
+    31.52
+   ],
+   [
+    "BAWAH.",
+    31.52,
+    32.04
+   ],
+   [
+    "SEBAB TU BUKU",
+    32.04,
+    33.02
+   ],
+   [
+    "SPM FIZIK",
+    33.02,
+    33.78
+   ],
+   [
+    "KOLEKSI.",
+    33.78,
+    34.66
+   ],
+   [
+    "SOALAN ESEI NI",
+    34.66,
+    35.64
+   ],
+   [
+    "LAKU SANGAT.",
+    35.64,
+    36.36
+   ],
+   [
+    "ADA LEBIH 95",
+    36.36,
+    37.66
+   ],
+   [
+    "SOALAN ESEI",
+    37.66,
+    38.62
+   ],
+   [
+    "TINGKATAN 4 DAN",
+    38.62,
+    39.46
+   ],
+   [
+    "5",
+    39.46,
+    39.88
+   ],
+   [
+    "SEMUANYA",
+    39.88,
+    40.64
+   ],
+   [
+    "DENGAN",
+    40.64,
+    40.8
+   ],
+   [
+    "JAWAPAN",
+    40.8,
+    41.18
+   ],
+   [
+    "LENGKAP",
+    41.18,
+    41.66
+   ],
+   [
+    "DISUSUN IKUT",
+    41.66,
+    42.38
+   ],
+   [
+    "TOPIK.",
+    42.38,
+    43.04
+   ],
+   [
+    "ANAK TERUS",
+    43.04,
+    43.78
+   ],
+   [
+    "NAMPAK MACAM",
+    43.78,
+    44.4
+   ],
+   [
+    "MANA JAWAPAN",
+    44.4,
+    44.98
+   ],
+   [
+    "ESEI YANG KENA",
+    44.98,
+    45.8
+   ],
+   [
+    "SKEMA.",
+    45.8,
+    46.54
+   ],
+   [
+    "SAIZ KECIL",
+    46.54,
+    47.64
+   ],
+   [
+    "SENANG BAWA KE",
+    47.64,
+    48.52
+   ],
+   [
+    "SEKOLAH",
+    48.52,
+    49.08
+   ],
+   [
+    "CETAKAN JELAS",
+    49.08,
+    50.06
+   ],
+   [
+    "DAN BERWARNA.",
+    50.06,
+    51.14
+   ],
+   [
+    "LEBIH 300",
+    51.14,
+    51.96
+   ],
+   [
+    "PEMBELI BAGI 4.9",
+    51.96,
+    53.7
+   ],
+   [
+    "BINTANG DAN",
+    53.7,
+    55.0
+   ],
+   [
+    "CIKGU FIZIK",
+    55.0,
+    55.64
+   ],
+   [
+    "SENDIRI PUN",
+    55.64,
+    56.1
+   ],
+   [
+    "RECOMMEND UNTUK",
+    56.1,
+    56.62
+   ],
+   [
+    "ESEI.",
+    56.62,
+    57.1
+   ],
+   [
+    "HARGA BAWAH",
+    57.1,
+    58.18
+   ],
+   [
+    "RM25 JE.",
+    58.18,
+    59.54
+   ],
+   [
+    "TEKAN LINK",
+    59.54,
+    60.18
+   ],
+   [
+    "DEKAT BAWAH.",
+    60.18,
+    60.8
+   ],
+   [
+    "JANGAN BIAR",
+    60.8,
+    61.52
+   ],
+   [
+    "MARKAH ESEI",
+    61.52,
+    62.1
+   ],
+   [
+    "HILANG LAGI.",
+    62.1,
+    63.1
+   ]
+  ]
+ }
+}

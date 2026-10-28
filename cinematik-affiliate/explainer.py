@@ -125,6 +125,29 @@ def setup(frame, t, it, sc):
             blend(frame, img, x + fnt.getlength(w) / 2, it.get("y", 300) - 8 * (1 - a))
         x += widths[i]
 
+def script_line(text, size, fill, edge, width):
+    """one line of handwriting (Damion) with a thin outline and a soft drop shadow"""
+    key = ("scriptline", text, size, fill, edge, width)
+    if key in cache: return cache[key]
+    f = font("script", size); pad = width + 24; asc, desc = f.getmetrics()
+    img = Image.new("RGBA", (int(f.getlength(text)) + pad * 2, asc + desc + pad * 2), (0, 0, 0, 0))
+    ImageDraw.Draw(img).text((pad, pad), text, font=f, fill=fill + (255,), stroke_width=width, stroke_fill=edge + (255,))
+    cache[key] = soft_shadow(img, 150, 10, 6)
+    return cache[key]
+
+def script_title(frame, t, it, sc):
+    """big handwritten title over a picture (e.g. the opening AI clip): each line pops in on its time"""
+    fill, edge = tuple(it.get("color", (255, 214, 92))), tuple(it.get("outline_color", (58, 30, 12)))
+    size, lh = it.get("size", 150), it.get("size", 150) * 0.95
+    out = 1 - ramp(t, it.get("until", 1e9) - 0.3, 0.3)
+    for i, (text, at) in enumerate(it["lines"]):
+        p = ramp(t, at, 0.45); a = ease_out(p * 2) * out
+        if a <= 0: continue
+        img = script_line(text, it.get("sizes", [size] * len(it["lines"]))[i], fill, edge, it.get("outline", 3))
+        s = 0.8 + 0.2 * ease_back(p, 2.2)
+        if abs(s - 1) > 1e-3: img = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC)
+        blend(frame, anim(img, a, 1.0), W / 2, it.get("y", 330) + i * lh + 30 * (1 - ease_out(p)))
+
 def kicker(frame, t, it, sc):
     col = (236, 226, 212) if sc.get("dark") else (60, 48, 40)
     a = ease_out(ramp(t, it["at"], 0.35)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
@@ -553,7 +576,7 @@ def clip(frame, t, it, sc, prj):
     if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
     frame[:] = img * PHOTO_SHADE
 
-DRAW = {"setup": setup, "kicker": kicker, "head": head, "tile": tile, "count": count, "timer": timer,
+DRAW = {"setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):

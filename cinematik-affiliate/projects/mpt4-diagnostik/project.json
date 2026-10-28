@@ -26,10 +26,23 @@
      "focus_at": 0.5
     },
     {
-     "kind": "kicker",
-     "text": "UJIAN DIAGNOSTIK MPT4",
-     "at": 0.15,
-     "y": 300
+     "kind": "script_title",
+     "lines": [
+      [
+       "Ujian Diagnostik",
+       0.1
+      ],
+      [
+       "MPT4",
+       0.45
+      ]
+     ],
+     "sizes": [
+      150,
+      190
+     ],
+     "y": 330,
+     "until": 4.6
     }
    ]
   },

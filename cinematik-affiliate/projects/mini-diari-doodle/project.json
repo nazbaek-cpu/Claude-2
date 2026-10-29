@@ -12,6 +12,7 @@
     {
      "kind": "doodle",
      "at": 0.0,
+     "until": 32.74,
      "x": 540,
      "y": 460,
      "h": 570,
@@ -345,30 +346,22 @@
      "y": 880
     },
     {
-     "kind": "tape",
-     "text": "SOLUSINYA",
-     "at": 32.74,
-     "until": 42.56,
-     "rot": -2,
-     "y": 800
-    },
-    {
      "kind": "say",
      "text": "Sebab tu kau perlukan",
      "key": "MINI DIARI 2027",
      "at": 32.74,
      "until": 36.64,
-     "y": 880
+     "y": 250
     },
     {
      "kind": "card",
      "img": "kenapa_pilih.jpg",
-     "at": 33.2,
+     "at": 32.8,
      "until": 36.64,
      "x": 540,
-     "y": 1420,
-     "w": 470,
-     "rot": -2
+     "y": 1080,
+     "w": 1000,
+     "rot": -1
     },
     {
      "kind": "say",
@@ -376,17 +369,17 @@
      "key": "MUAT DALAM POKET",
      "at": 36.64,
      "until": 39.06,
-     "y": 880
+     "y": 250
     },
     {
      "kind": "card",
      "img": "saiz_kecil.jpg",
-     "at": 36.7,
+     "at": 36.66,
      "until": 39.06,
      "x": 540,
-     "y": 1420,
-     "w": 470,
-     "rot": 2
+     "y": 1080,
+     "w": 1000,
+     "rot": 1
     },
     {
      "kind": "say",
@@ -394,25 +387,17 @@
      "key": "HARD COVER, TAK KOYAK",
      "at": 39.06,
      "until": 42.56,
-     "y": 880
+     "y": 250
     },
     {
      "kind": "card",
      "img": "bahagian_dalam.jpg",
-     "at": 39.1,
+     "at": 39.08,
      "until": 42.56,
      "x": 540,
-     "y": 1420,
-     "w": 470,
-     "rot": -2
-    },
-    {
-     "kind": "tape",
-     "text": "8 DESIGN",
-     "at": 42.56,
-     "until": 45.86,
-     "rot": 2,
-     "y": 800
+     "y": 1080,
+     "w": 1000,
+     "rot": -1
     },
     {
      "kind": "say",
@@ -420,25 +405,17 @@
      "key": "PILIH IKUT GAYA KAU",
      "at": 42.56,
      "until": 45.86,
-     "y": 880
+     "y": 250
     },
     {
      "kind": "card",
      "img": "kegunaan.jpg",
-     "at": 42.6,
+     "at": 42.58,
      "until": 45.86,
      "x": 540,
-     "y": 1420,
-     "w": 470,
-     "rot": 2
-    },
-    {
-     "kind": "tape",
-     "text": "HARGA",
-     "at": 45.86,
-     "until": 99,
-     "rot": -2,
-     "y": 800
+     "y": 1080,
+     "w": 1000,
+     "rot": 1
     },
     {
      "kind": "say",
@@ -446,24 +423,24 @@
      "key": "RM3 JE!",
      "at": 45.86,
      "until": 99,
-     "y": 880,
+     "y": 250,
      "color": "gold"
     },
     {
      "kind": "card",
      "img": "rancang_hari.jpg",
-     "at": 45.9,
+     "at": 45.88,
      "until": 99,
      "x": 540,
-     "y": 1420,
-     "w": 470,
-     "rot": -2
+     "y": 1040,
+     "w": 960,
+     "rot": -1
     },
     {
      "kind": "cta",
      "text": "Tekan link dekat bawah",
      "at": 46.6,
-     "y": 1720
+     "y": 1690
     }
    ]
   }

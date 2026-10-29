@@ -31,11 +31,11 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # "animasi kartun" (styles/animasi-kartun.md): ruled cream paper, deep green + gold, flat props, a stick mascot
           "kartun": {"PEACH_TOP": (248, 242, 233), "PEACH_BOT": (246, 239, 228), "RULED": True, "INK": (30, 38, 34),
                      "ACC": (27, 106, 70), "TINT_PROPS": True},
-          # brown paper: cream text, yellow key words, colour props with a cream sticker edge
-          "coklat": {"PEACH_TOP": (104, 68, 48), "PEACH_BOT": (104, 68, 48), "RULED": True, "RULE_LINE": (117, 79, 58),
-                     "INK": (255, 244, 224), "ACC": (255, 206, 84), "CTA_TEXT": (52, 32, 22), "K_DARK": (52, 32, 22),
-                     "K_GREEN": (255, 206, 84), "K_GOLD": (255, 160, 138), "K_TAPE": (246, 222, 160), "PROP_EDGE": (255, 244, 224)}}
-RULED, TINT_PROPS, RULE_LINE, PROP_EDGE = False, False, (233, 225, 212), None
+          # light brown paper with a barely-there box grid: dark brown text, rust key words, colour props with a cream sticker edge
+          "coklat": {"PEACH_TOP": (222, 198, 166), "PEACH_BOT": (222, 198, 166), "RULED": True, "GRID": 72, "RULE_LINE": (214, 189, 156),
+                     "INK": (66, 42, 28), "ACC": (92, 58, 38), "CTA_TEXT": (255, 244, 224), "K_DARK": (66, 42, 28),
+                     "K_GREEN": (142, 62, 24), "K_GOLD": (178, 58, 72), "K_TAPE": (255, 236, 172), "PROP_EDGE": (255, 248, 236)}}
+RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
 
@@ -74,7 +74,7 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if dark:
@@ -83,7 +83,10 @@ def background(dark):
         line, step, alpha = np.array(CREAM, np.float32), 108, 0.035 if DARK_BOT is None else 0.06
     elif RULED:   # notebook paper: flat cream, faint ruled lines, no grid or vignette
         bg = np.empty((H, W, 3), np.float32); bg[:] = PEACH_TOP
-        for y in range(290, H - 120, 74): bg[y:y + 2] = RULE_LINE
+        if GRID:   # faint box grid over the whole page
+            for v in range(GRID // 2, max(W, H), GRID): bg[v:v + 2] = RULE_LINE; bg[:, v:v + 2] = RULE_LINE
+        else:
+            for y in range(290, H - 120, 74): bg[y:y + 2] = RULE_LINE
         cache[key] = bg
         return bg
     else:

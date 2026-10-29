@@ -278,9 +278,10 @@ def test_explainer_coklat_doodle_and_scribble(tmp_path):
         sc = {"start": 0.0, "items": [{"kind": "doodle", "at": 0.0, "x": 540, "y": 450, "h": 400, "poses": [["pose1.png", 0.0], ["pose2.png", 2.0]]},
                                       {"kind": "scribble", "at": 0.0, "x": 540, "y": 1300, "size": 300}]}
         first, later = (explainer.frame_at([sc], t, str(tmp_path)) for t in (1.0, 3.0))
-        assert tuple(first[100, 20].astype(int)) == explainer.PEACH_TOP          # brown paper
+        assert tuple(first[100, 20].astype(int)) == explainer.PEACH_TOP          # light brown paper
+        assert tuple(first[36, 20].astype(int)) == explainer.RULE_LINE           # its faint box grid
         assert first[450, 540][0] > 200 and later[450, 540][2] > 200             # the pose switches from red to blue
-        assert (first[1150:1450, 390:690].min(-1) > 200).any()                   # the cream scribble
+        assert (first[1150:1450, 390:690].max(-1) < 100).any()                   # the dark brown scribble
         cfg = explainer.remap({"scenes": [sc]}, {"keep": [[0.0, 10.0]], "tempo": 2.0})
         assert cfg["scenes"][0]["items"][0]["poses"][1] == ["pose2.png", 1.0]
     finally:

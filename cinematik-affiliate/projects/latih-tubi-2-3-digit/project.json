@@ -5,7 +5,7 @@
  "whisper_prompt": "Tambah dengan tolak, darab dan bahagi. Asas matematik. 1640 soalan dan jawapan. Ibu ayah. 15 minit setiap hari, latih tubi.",
  "speed": {"tempo": 1.12, "max_pause": 0.22},
  "grade": "bright",
- "beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02},
+ "beauty": {"lip_rgb": [172, 98, 98], "lip_amount": 1.0},
  "segments": [],
  "fx": [
   {"kind": "headline", "start": 0.1, "end": 3.36, "tag": "IBU AYAH · HARI INI", "lines": ["Tambah, tolak, darab, bahagi:", "latih tubi 2 & 3 digit"], "y": 300},

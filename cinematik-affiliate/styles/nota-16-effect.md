@@ -9,8 +9,10 @@ Panggil: **"buat video ni guna Nota 16 EFFECT"**.
 ## Langkah
 
 1. **Flip:** semak tulisan produk sebelah-menyebelah (asal vs flip). Kalau terbalik → `"hflip": true`.
-2. **Muka:** `"grade": "bright"` (cerah sederhana), `"beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02}`
-   (lipstik rose terang "no 2"), kening asli.
+2. **Muka:** `"grade": "bright"` (cerah sederhana), kening asli. Lipstik ikut cahaya:
+   - cahaya cerah (rumah, siang): `"beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02}` (rose terang "no 2")
+   - cahaya malap (dalam kereta): `"beauty": {"lip_rgb": [172, 98, 98], "lip_amount": 1.0}` (nude-rose "biasa"); no 2 jadi terlalu merah
+   - kalau ragu, buat perbandingan 4 warna pada satu frame dulu.
 3. **Rentak:** `"speed": {"tempo": 1.12, "max_pause": 0.22}`.
 4. **Transkrip:** `transcribe.py <projek> --model large-v3` (model yang dah ada dalam cache), ambil masa setiap perkataan.
 5. **Petakan efek ke ayat** (jadual bawah), tulis `fx` dalam `project.json`, render, semak satu frame sesaat.

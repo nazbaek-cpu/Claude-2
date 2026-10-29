@@ -34,8 +34,12 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # light brown paper with a barely-there box grid: dark brown text, rust key words, colour props with a cream sticker edge
           "coklat": {"PEACH_TOP": (222, 198, 166), "PEACH_BOT": (222, 198, 166), "RULED": True, "GRID": 72, "RULE_LINE": (214, 189, 156),
                      "INK": (66, 42, 28), "ACC": (92, 58, 38), "CTA_TEXT": (255, 244, 224), "K_DARK": (66, 42, 28),
-                     "K_GREEN": (142, 62, 24), "K_GOLD": (178, 58, 72), "K_TAPE": (255, 236, 172), "PROP_EDGE": (255, 248, 236)}}
+                     "K_GREEN": (142, 62, 24), "K_GOLD": (178, 58, 72), "K_TAPE": (255, 236, 172), "PROP_EDGE": (255, 248, 236)},
+          # green self-healing cutting mat: white text, keyword boxes, every sticker torn out of a sheet
+          "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
+                  "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
+MAT, TORN, BADGE_BG, BADGE_FG = False, False, None, (255, 255, 255)
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
 
@@ -74,9 +78,12 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, GRID, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, MAT, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
+    if MAT and not dark:
+        cache[key] = cutting_mat()
+        return cache[key]
     if dark:
         top = np.array(DARK, np.float32); bot = np.array(DARK_BOT or DARK, np.float32)
         bg = np.broadcast_to(top + (bot - top) * yy ** 1.1, (H, W, 3)).copy()
@@ -348,8 +355,8 @@ def badge(frame, t, it, sc):
     if key not in cache:
         f = font("heavy", it.get("size", 34)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics(); w, h = tw + 64, asc + desc + 26; s = 3
         m = Image.new("L", (w * s, h * s), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * s - 1, h * s - 1), radius=h * s // 2, fill=255)
-        img = Image.new("RGBA", (w, h), K_DARK + (0,)); img.putalpha(m.resize((w, h), Image.LANCZOS))
-        ImageDraw.Draw(img).text((32, 12), it["text"], font=f, fill=(255, 255, 255, 255))
+        img = Image.new("RGBA", (w, h), (BADGE_BG or K_DARK) + (0,)); img.putalpha(m.resize((w, h), Image.LANCZOS))
+        ImageDraw.Draw(img).text((32, 12), it["text"], font=f, fill=BADGE_FG + (255,))
         cache[key] = img
     blend(frame, anim(cache[key], a, 1.0), W / 2, it.get("y", 200))
 
@@ -459,12 +466,13 @@ def doodle(frame, t, it, sc, prj):
     for f, at in it["poses"]:
         if t >= at: cur, since = f, max(at, it["at"])
     h, ew = it.get("h", 560), it.get("edge", 8)
-    key = ("doodle", cur, h, ew, PROP_EDGE)
+    key = ("doodle", cur, h, ew, PROP_EDGE, TORN)
     if key not in cache:
         img = Image.open(os.path.join(prj, "input", cur)).convert("RGBA")
         img = img.resize((round(img.width * h / img.height), h), Image.LANCZOS)
         pad = Image.new("RGBA", (img.width + 40, img.height + 40), (0, 0, 0, 0)); pad.paste(img, (20, 20))
-        if ew and PROP_EDGE: pad = sticker_edge(pad, PROP_EDGE, ew)
+        if TORN: pad = torn_sticker(pad, ew * 2, seed=len(cur))
+        elif ew and PROP_EDGE: pad = sticker_edge(pad, PROP_EDGE, ew)
         cache[key] = soft_shadow(pad, 60, 10, 8)
     img = cache[key]; k = t - since
     s = (0.55 + 0.45 * ease_back(ramp(t, it["at"], 0.45), 2.0)) * (1 + 0.07 * math.sin(math.pi * min(k / 0.3, 1)) * (since > it["at"]))
@@ -487,6 +495,111 @@ def scribble(frame, t, it, sc):
     d.line(xy, fill=tuple(it.get("color", INK)) + (255,), width=7 * S, joint="curve")
     img = img.resize((w, w), Image.LANCZOS)
     blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 300))
+
+def cutting_mat():
+    """green self-healing cutting mat: small squares, a heavier line every five, rulers along two edges, faint angle guides"""
+    rng = np.random.default_rng(7)
+    bg = np.empty((H, W, 3), np.float32); bg[:] = PEACH_TOP
+    bg += cv2.GaussianBlur(rng.normal(0, 3.0, (H, W)).astype(np.float32), (0, 0), 1.2)[..., None]
+    img = Image.fromarray(np.clip(bg, 0, 255).astype(np.uint8)); d = ImageDraw.Draw(img, "RGBA")
+    step, x0, y0 = 36, 54, 54
+    for k, x in enumerate(range(x0, W, step)): d.line((x, 0, x, H), fill=(120, 190, 150, 120 if k % 5 == 0 else 52), width=2 if k % 5 == 0 else 1)
+    for k, y in enumerate(range(y0, H, step)): d.line((0, y, W, y), fill=(120, 190, 150, 120 if k % 5 == 0 else 52), width=2 if k % 5 == 0 else 1)
+    for ang in (30, 45, 60):   # angle guides from the bottom-left corner
+        a = math.radians(ang); d.line((x0, H - y0, x0 + 3000 * math.cos(a), H - y0 - 3000 * math.sin(a)), fill=(150, 210, 170, 40), width=2)
+    f = font("bold", 20)
+    for k, x in enumerate(range(x0, W, step)):   # ruler along the top and the left edge
+        d.line((x, 0, x, 22 if k % 5 == 0 else 12), fill=(235, 228, 160, 170), width=2)
+        if k % 5 == 0 and k: d.text((x + 4, 18), str(k), font=f, fill=(235, 228, 160, 170))
+    for k, y in enumerate(range(y0, H, step)):
+        d.line((0, y, 22 if k % 5 == 0 else 12, y), fill=(235, 228, 160, 170), width=2)
+        if k % 5 == 0 and k: d.text((18, y + 2), str(k), font=f, fill=(235, 228, 160, 170))
+    return np.asarray(img).astype(np.float32)
+
+def torn_sticker(img, border=24, amp=20, seed=1):
+    """the picture on a white sticker torn out of its sheet: a white margin with a ragged edge, a grey paper-fibre rim,
+    one bite torn away, and a soft shadow"""
+    a = (np.asarray(img.getchannel("A")) > 40).astype(np.uint8); pad = border + amp + 14
+    A = np.pad(a, pad); h, w = A.shape
+    ff = A.copy(); cv2.floodFill(ff, np.zeros((h + 2, w + 2), np.uint8), (0, 0), 2); filled = (ff != 2).astype(np.uint8)   # holes become sticker too
+    dil = cv2.dilate(filled, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (border * 2 + 1, border * 2 + 1)))
+    dist = cv2.distanceTransform(dil, cv2.DIST_L2, 5)
+    rng = np.random.default_rng(seed)
+    def nz(sig):
+        n = cv2.GaussianBlur(rng.random((h, w)).astype(np.float32), (0, 0), sig); return (n - n.min()) / max(1e-6, n.max() - n.min())
+    keep = (dist > amp * (0.35 * nz(0.8) + 0.35 * nz(2.5) + 0.3 * nz(12))).astype(np.uint8)
+    ys, xs = np.nonzero((dist > 0) & (dist < 3))   # one bite torn off the edge
+    if len(xs):
+        k = rng.integers(len(xs)); r = border * 1.6
+        yy, xx = np.ogrid[:h, :w]; bite = (xx - xs[k]) ** 2 + (yy - ys[k]) ** 2 < (r * (0.8 + 0.4 * nz(3))) ** 2
+        keep[bite & (cv2.dilate(filled, np.ones((9, 9), np.uint8)) == 0)] = 0
+    d2 = cv2.distanceTransform(keep, cv2.DIST_L2, 3)
+    base = np.zeros((h, w, 4), np.float32); base[keep > 0] = (255, 255, 252, 255)
+    rim = (keep > 0) & (d2 < 6)   # torn fibres: grey at the very edge, fading to white
+    f = np.clip(d2[rim] / 6, 0, 1)[:, None]
+    base[rim, :3] = np.array((196, 192, 182), np.float32) * (1 - f) + np.array((255, 255, 252), np.float32) * f
+    out = Image.fromarray(base.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(0.5))
+    out.alpha_composite(img, (pad, pad))
+    return soft_shadow(out, 80, 9, 8)
+
+def sticker(frame, t, it, sc, prj):
+    """an icon PNG from input/ as a torn sticker that slaps on: "img", "x", "y", "size" (longest side) and "rot" """
+    p = ramp(t, it["at"], 0.32)
+    if p <= 0: return
+    a = ease_out(p * 2.5) * (1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2))
+    if a <= 0: return
+    key = ("stk", it["img"], it.get("size", 260))
+    if key not in cache:
+        src = Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"); k = it.get("size", 260) / max(src.size)
+        cache[key] = torn_sticker(src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS), seed=len(it["img"]) * 3)
+    img = cache[key]; sc_ = 1.25 - 0.25 * ease_out(p); rot = it.get("rot", 0) + 9 * (1 - ease_out(p))
+    img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC).rotate(rot, Image.BICUBIC, expand=True)
+    blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 1100) + 5 * math.sin((t - it["at"]) * 2.1 + it.get("x", 0) / 70))
+
+HL = {"y": ((246, 196, 60), (28, 30, 28)), "r": ((232, 92, 70), (255, 255, 255)), "g": ((126, 224, 170), (16, 58, 42))}
+
+def hl(frame, t, it, sc):
+    """two-line title: plain words appear one by one, then the key words in a box whose colour carries the meaning
+    ("color": "y" key, "r" bad, "g" good)"""
+    a = fade_in_out(t, it, 0.2)
+    if a <= 0: return
+    y = it.get("y", 300); words = (it.get("text") or "").split(); n = len(words)
+    if words:
+        size = it.get("size1", 60)
+        while size > 36 and font("bold", size).getlength(" ".join(words)) > 980: size -= 2
+        f = font("bold", size); x = W / 2 - f.getlength(" ".join(words)) / 2
+        for i, w_ in enumerate(words):
+            wa = a * ease_out(ramp(t, it["at"] + 0.06 * i, 0.18))
+            if wa > 0:
+                img = soft_shadow(text_img(w_, f, INK), 120, 6, 3)
+                blend(frame, anim(img, wa, 1.0), x + f.getlength(w_) / 2, y + 8 * (1 - wa))
+            x += f.getlength(w_ + " ")
+        y += size * 1.25
+    if it.get("key"):
+        bgc, fgc = HL[it.get("color", "y")]; size = it.get("size2", 84)
+        while size > 44 and font("heavy", size).getlength(it["key"]) > 940: size -= 4
+        f = font("heavy", size); tw = f.getlength(it["key"]); asc, desc = f.getmetrics(); bw, bh = int(tw + 36), asc + desc + 10
+        t0 = it["at"] + 0.06 * n + 0.05; q = ease_out(ramp(t, t0, 0.25))
+        if q > 0:
+            box = Image.new("RGBA", (max(1, int(bw * q)), bh), bgc + (255,))
+            blend(frame, anim(box, a, 1.0), W / 2 - bw / 2 + box.width / 2, y + bh / 2)
+            ta = a * ease_out(ramp(t, t0 + 0.12, 0.15))
+            if ta > 0: blend(frame, anim(text_img(it["key"], f, fgc), ta, 1.0), W / 2, y + bh / 2)
+
+def pill_caption(text, size=40):
+    key = ("pillcap", text, size)
+    if key in cache: return cache[key]
+    f = font("bold", size); words = text.split(); lines, cur = [], ""
+    for w_ in words:
+        if cur and f.getlength(cur + " " + w_) > 860: lines.append(cur); cur = w_
+        else: cur = (cur + " " + w_).strip()
+    lines.append(cur)
+    lh = int(size * 1.3); w = int(max(f.getlength(x) for x in lines)) + 64; h = lh * len(lines) + 34; s = 3
+    m = Image.new("L", (w * s, h * s), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * s - 1, h * s - 1), radius=26 * s, fill=235)
+    img = Image.new("RGBA", (w, h), (22, 26, 24, 0)); img.putalpha(m.resize((w, h), Image.LANCZOS)); d = ImageDraw.Draw(img)
+    for i, ln in enumerate(lines): d.text(((w - f.getlength(ln)) / 2, 15 + i * lh), ln, font=f, fill=(255, 255, 255, 255))
+    cache[key] = soft_shadow(img, 90, 10, 6)
+    return cache[key]
 
 def prop(frame, t, it, sc, prj):
     """flat prop (a Fluent flat emoji) that pops in and bobs gently"""
@@ -817,7 +930,7 @@ def clip(frame, t, it, sc, prj):
     if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
     frame[:] = img * PHOTO_SHADE
 
-DRAW = {"scribble": scribble, "badge": badge, "say": say, "tape": tape, "mascot": mascot, "setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
+DRAW = {"hl": hl, "scribble": scribble, "badge": badge, "say": say, "tape": tape, "mascot": mascot, "setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):
@@ -827,6 +940,7 @@ def draw_scene(sc, t, prj):
         elif it["kind"] == "emoji": emoji(frame, t, it, sc, prj)
         elif it["kind"] == "prop": prop(frame, t, it, sc, prj)
         elif it["kind"] == "doodle": doodle(frame, t, it, sc, prj)
+        elif it["kind"] == "sticker": sticker(frame, t, it, sc, prj)
         elif it["kind"] == "clip": clip(frame, t, it, sc, prj)
         elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
@@ -878,6 +992,11 @@ def caption_img(text, size, kind="heavy"):
 def captions(frame, t, cap):
     """the chunk being spoken pops in; long chunks wrap to two lines"""
     size, y, kind = cap.get("size", 100), cap.get("y", 1390), cap.get("face", "heavy")
+    if cap.get("style") == "pill":   # whole sentence in a dark rounded pill, like a subtitle bar
+        for text, s0, s1 in cap["chunks"]:
+            if s0 <= t < s1:
+                blend(frame, anim(pill_caption(text, cap.get("size", 40)), ease_out(ramp(t, s0, 0.12)), 1.0), W / 2, y); break
+        return
     for text, s0, s1 in cap["chunks"]:
         if not s0 <= t < s1: continue
         words = text.split(" "); lines = [text]
@@ -927,6 +1046,8 @@ def sfx_track(cfg, dur, out):
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -17))
             elif it["kind"] in ("card", "tile", "emoji", "prop", "tape"): ev.append((it["at"], "pop", -16))
             elif it["kind"] == "doodle": ev += [(at, "pop", -18) for *_, at in it["poses"][1:]]
+            elif it["kind"] == "sticker": ev.append((it["at"], "pop", -15))
+            elif it["kind"] == "hl": ev.append((it["at"] - 0.1, "whoosh", -24))
             elif it["kind"] == "scribble": ev.append((it["at"], "whoosh", -22))
             elif it["kind"] == "say": ev.append((it["at"] - 0.1, "whoosh", -26))
             elif it["kind"] == "blocks":

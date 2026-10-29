@@ -1,8 +1,10 @@
 """Cut a character pose sheet (a grid of poses on a flat paper background, labels under each) into transparent PNGs.
 
-    python poses.py sheet.png projects/<name>/input/doodle --grid 4x2
+    python poses.py sheet.png projects/<name>/input/doodle --grid 4x2 [--top 110]
+    python poses.py icons.png projects/<name>/input/icons --grid 5x5 --top 100 --icons --names diari,pen,...
 
-Writes pose1.png ... poseN.png (left to right, top to bottom) for the explainer's "doodle" item. The paper colour is
+Writes pose1.png ... poseN.png (left to right, top to bottom) for the explainer's "doodle" item; --top skips a title
+above the grid, --icons crops every cell to its own icon (no shared box, no floor shadow) and --names names the files. The paper colour is
 read from the corner; anything that colour becomes transparent (holes between arms and body too), the anti-aliased rim
 next to it is un-mixed from the paper, the label under each pose is dropped and the pink floor shadow turns into a soft
 dark one.
@@ -13,8 +15,8 @@ import cv2
 import numpy as np
 from PIL import Image
 
-def cut(sheet, cols, rows, tol=14):
-    a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)
+def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False):
+    a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)[top_skip:]
     paper = np.median(np.concatenate([a[:8, :8].reshape(-1, 3), a[:8, -8:].reshape(-1, 3)]), axis=0)
     dist = np.linalg.norm(a - paper, axis=-1)
     bg = dist < tol
@@ -38,11 +40,15 @@ def cut(sheet, cols, rows, tol=14):
             if len(bands) > 1 and bands[-1][1] - bands[-1][0] < 80 and bands[-1][0] > H * 0.75: bands.pop()
             top, bot = bands[0][0], bands[-1][1]
             al[bot + 1:] = 0
-            p = px.astype(np.float32)   # pink floor shadow (low, reddish) -> soft dark shadow
-            pink = (p[..., 0] > 150) & (p[..., 0] - p[..., 2] > 25) & (np.arange(H)[:, None] > top + (bot - top) * 0.85)
-            px[pink] = (20, 12, 8); al[pink] = np.minimum(al[pink], 0.22)
+            if not icons:
+                p = px.astype(np.float32)   # pink floor shadow (low, reddish) -> soft dark shadow
+                pink = (p[..., 0] > 150) & (p[..., 0] - p[..., 2] > 25) & (np.arange(H)[:, None] > top + (bot - top) * 0.85)
+                px[pink] = (20, 12, 8); al[pink] = np.minimum(al[pink], 0.22)
             xs = np.where((al > 0.3).sum(0) > 0)[0]
             cells.append((px, al, (xs[0], top, xs[-1], bot)))
+    if icons:
+        return [Image.fromarray(np.dstack([px, al[..., None] * 255]).astype(np.uint8)[max(0, b[1] - 4):b[3] + 5, max(0, b[0] - 4):b[2] + 5], "RGBA")
+                for px, al, b in cells]
     # one crop box for every pose, in cell coordinates: the character stays where the sheet drew it when poses switch
     x0 = max(0, min(b[0] for *_, b in cells) - 4); y0 = max(0, min(b[1] for *_, b in cells) - 4)
     x1 = max(b[2] for *_, b in cells) + 5; y1 = max(b[3] for *_, b in cells) + 5
@@ -51,10 +57,13 @@ def cut(sheet, cols, rows, tol=14):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("sheet"); ap.add_argument("out"); ap.add_argument("--grid", default="4x2")
+    ap.add_argument("--top", type=int, default=0); ap.add_argument("--icons", action="store_true"); ap.add_argument("--names", default="")
     args = ap.parse_args(); cols, rows = map(int, args.grid.lower().split("x"))
+    names = [n.strip() for n in args.names.split(",") if n.strip()]
     os.makedirs(args.out, exist_ok=True)
-    for i, im in enumerate(cut(args.sheet, cols, rows), 1):
-        im.save(os.path.join(args.out, f"pose{i}.png")); print(f"pose{i}.png {im.size}")
+    for i, im in enumerate(cut(args.sheet, cols, rows, top_skip=args.top, icons=args.icons), 1):
+        name = (names[i - 1] if i <= len(names) else f"pose{i}") + ".png"
+        im.save(os.path.join(args.out, name)); print(f"{name} {im.size}")
 
 if __name__ == "__main__":
     main()

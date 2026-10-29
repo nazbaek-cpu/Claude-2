@@ -1,0 +1,28 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Tambah dengan tolak, darab dan bahagi. Asas matematik. 1640 soalan dan jawapan. Ibu ayah. 15 minit setiap hari, latih tubi.",
+ "speed": {"tempo": 1.12, "max_pause": 0.22},
+ "grade": "bright",
+ "beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02},
+ "segments": [],
+ "fx": [
+  {"kind": "headline", "start": 0.1, "end": 3.36, "tag": "IBU AYAH · HARI INI", "lines": ["Tambah, tolak, darab, bahagi:", "latih tubi 2 & 3 digit"], "y": 300},
+  {"kind": "zoomcut", "at": 3.36},
+  {"kind": "digizoom", "start": 3.36, "end": 7.32, "zoom": 1.25, "zoom_at": 3.5, "focus": [700, 900], "ui_y": 1830},
+  {"kind": "checklist", "start": 8.3, "end": 40.6, "title": ["6 sebab ibu ayah", "pilih latih tubi ni"], "hide": [[16.6, 19.2]],
+   "items": [["4 operasi asas", 8.3], ["Kuasai asas matematik", 12.68], ["1640 soalan", 17.78],
+             ["Siap dengan jawapan", 21.46], ["Ikut turutan betul", 29.08], ["15 minit sehari", 36.32]]},
+  {"kind": "doodle", "start": 7.32, "end": 14.62, "box": [0, 0, 640, 1150], "sparks": [[150, 1100], [210, 620], [700, 470]]},
+  {"kind": "zoomcut", "at": 14.68},
+  {"kind": "papercut", "start": 16.8, "end": 19.16, "word": "1640 soalan", "word_at": 17.7, "word_y": 270},
+  {"kind": "beforeafter", "start": 21.4, "end": 25.08, "labels": ["soalan", "jawapan"]},
+  {"kind": "zoomcut", "at": 25.08},
+  {"kind": "framebreak", "start": 25.08, "end": 33.7, "user": "ibu ayah", "caption": "tambah tolak dulu, baru darab & bahagi"},
+  {"kind": "depth", "start": 33.7, "end": 40.6, "scatter_at": 40.3, "y_back": 640,
+   "words": [["15 MINIT", 36.32, "back"], ["SETIAP HARI", 37.7, "back"], ["LATIH TUBI", 39.76, "back"]]},
+  {"kind": "comment", "start": 40.6, "end": null, "text": "DAPATKAN DI LINK BAWAH", "cps": 40, "y": 330}
+ ],
+ "subs": []
+}

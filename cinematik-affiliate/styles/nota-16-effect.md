@@ -40,6 +40,9 @@ Panggil: **"buat video ni guna Nota 16 EFFECT"**.
 - Pills dan kotak komen jangan di tengah: atas (330) atau bawah (1770).
 - Tiada subtitle bawah untuk video bercakap.
 - Semak setiap saat dalam contact sheet sebelum hantar preview.
+- Produk diangkat tinggi / jauh dari badan (contoh `latih-tubi-2-3-digit`): mask orang tak tangkap seluruh buku.
+  Elak `papercut` dan `depth` masa tu; `doodle` guna `box` (kepala dan bahu sahaja); checklist mula bila buku dah turun;
+  teks/kotak komen di sisi yang kosong (atas atau bawah). Semak kedudukan buku setiap 0.5 s dulu.
 
 ## Templat `fx`
 

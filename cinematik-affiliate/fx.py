@@ -96,7 +96,9 @@ def checklist(s, t):
             d.text((x0, y0 + 6), f"{i + 1:02d}", font=fn, fill=(255, 255, 255, 120))
             d.text((x0 + 40, y0), txt, font=fi, fill=c)
         cache[key] = shadow(img, 90, 10, 4)
-    return [(fade(cache[key], vis(t, s)), W / 2, s.get("y", 250))]
+    hide = max([ease(ramp(t, a, 0.2)) * (1 - ease(ramp(t, b, 0.25))) for a, b in s.get("hide", [])], default=0.0)   # make room up top
+    a = vis(t, s) * (1 - hide)
+    return [(fade(cache[key], a), W / 2, s.get("y", 250))] if a > 0 else []
 
 def paper_strip(lines, tag, w=900, seed=4, mark=None, mark_p=0.0):
     """torn newspaper strip: small tag line, then serif lines; mark (a line index) gets a yellow highlighter sweep"""
@@ -317,7 +319,8 @@ def doodle(fr, s, t, mask):
         step = max(1, len(c) // 160); c = c[::step]
         rng = np.random.default_rng(int(t * 8) * 10 + seed)
         c = (c + rng.normal(0, 2.2, c.shape)) * 2
-        keep = (c[:, 1] < H - 30) & (c[:, 0] > 6) & (c[:, 0] < W - 6)   # no line along the frame edges
+        bx0, by0, bx1, by1 = s.get("box", (0, 0, W, H))   # e.g. head and shoulders only, when a raised product is half outside the mask
+        keep = (c[:, 1] < min(H - 30, by1)) & (c[:, 1] > by0) & (c[:, 0] > max(6, bx0)) & (c[:, 0] < min(W - 6, bx1))   # not along the frame edges
         runs, cur = [], []
         for pt, k in zip(c, keep):
             if k: cur.append(pt)
@@ -433,7 +436,7 @@ def picture(cfg, t, fr, get_mask):
             cutout = paper_bg() * (1 - edge) + 255 * edge
             cutout = cutout * (1 - m) + fr * m
             fr = fr * (1 - a) + cutout * a
-        extra += ransom(s.get("word", ""), s["start"] + 0.15, t, s.get("word_y", 1560))
+        extra += ransom(s.get("word", ""), s.get("word_at", s["start"] + 0.15), t, s.get("word_y", 1560))
     for s in active(cfg, t, "depth"):
         back, front = depth_layers(s, t)
         if back and mask is not None:
@@ -456,7 +459,7 @@ def paint(fr, items):
         fr[Y0:Y1, X0:X1] = fr[Y0:Y1, X0:X1] * (1 - al) + sub[..., :3] * al
     return fr
 
-TIME_KEYS = ("start", "end", "at", "zoom_at", "scatter_at")
+TIME_KEYS = ("start", "end", "at", "zoom_at", "scatter_at", "word_at")
 
 def remap(fx, f, dur=None):
     """voice times -> output times (render.load passes speed's mapping); lists keep their text, times move"""
@@ -465,4 +468,5 @@ def remap(fx, f, dur=None):
             if s.get(k) is not None: s[k] = f(s[k])
         if "items" in s: s["items"] = [[x, f(at)] for x, at in s["items"]]
         if "words" in s: s["words"] = [[x, f(at), sl] for x, at, sl in s["words"]]
+        if "hide" in s: s["hide"] = [[f(a), f(b)] for a, b in s["hide"]]
     return fx

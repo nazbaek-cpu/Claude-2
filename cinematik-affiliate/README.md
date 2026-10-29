@@ -121,14 +121,14 @@ Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek
 
 | Kind | What it does |
 |---|---|
-| `checklist` | title + numbered two-column list on a dark card; the item being spoken turns yellow (`items` [[text, at]]) |
+| `checklist` | title + numbered two-column list on a dark card; the item being spoken turns yellow (`items` [[text, at]]); `hide` [[from, to]] clears the top for a moment |
 | `headline` | torn newspaper strip with a yellow highlighter sweep (`tag`, `lines`, `y`), plus `wall` clippings pinned behind the person |
 | `zoomcut` | zoom blur and a yellow flash through a cut (`at`) |
 | `digizoom` | camcorder UI (REC, timecode, face brackets, zoom readout) and a punch-in (`zoom`, `zoom_at`, `focus`) |
-| `papercut` | person cut out with a white edge over a torn-paper collage, ransom-note letters (`word`, `word_y`) |
+| `papercut` | person cut out with a white edge over a torn-paper collage, ransom-note letters (`word`, `word_y`, `word_at`) |
 | `depth` | big words behind the head (`back`) or in front (`front`) that burst into letters when the next one comes (`words` [[text, at, slot]]) |
 | `beforeafter` | glowing wipe from a flat grey "before" to the graded picture (`labels`) |
-| `doodle` | hand-drawn outline that boils around the person, with sparkles |
+| `doodle` | hand-drawn outline that boils around the person, with `sparks`; `box` limits it (e.g. head and shoulders when a raised product is half outside the mask) |
 | `framebreak` | the video shrinks into a reel frame over a blurred copy, the head pokes out over the top edge (`user`, `caption`, `cut`) |
 | `comment` | comment box where a keyword types itself in (`text`, `cps`, `y`) |
 

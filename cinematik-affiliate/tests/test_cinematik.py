@@ -200,6 +200,16 @@ def test_explainer_draws_scenes_and_whips_between_them(tmp_path):
     assert explainer.head_size(["SEMUA DIBINA SEKALI GUS"]) < 150     # long lines shrink to fit
 
 
+def test_explainer_emoji_uses_the_cached_png(tmp_path):
+    from PIL import Image
+    os.makedirs(tmp_path / "build" / "emoji")
+    Image.new("RGBA", (64, 64), (255, 40, 40, 255)).save(tmp_path / "build" / "emoji" / "exploding_head.png")   # no download in tests
+    sc = {"start": 0.0, "dark": True, "items": [{"kind": "emoji", "name": "Exploding head", "at": 0.0, "x": 540, "y": 900, "size": 300, "wobble": 8}]}
+    fr = explainer.frame_at([sc], 1.0, str(tmp_path))
+    r, g, b = fr[900, 540]
+    assert r > 200 and g < 120   # the red test emoji sits in the middle of the frame
+
+
 def test_explainer_title_faces(tmp_path):
     for face in ("script", "archivo"):
         sc = {"start": 0.0, "dark": True, "items": [{"kind": "script_title", "face": face, "lines": [["UJIAN", 0.0], ["MPT4", 0.1]],

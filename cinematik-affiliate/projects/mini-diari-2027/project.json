@@ -1,0 +1,965 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "whisper_prompt": "Tiga ringgit je untuk ubah cara kau study tahun 2027. Assignment, kuiz, study group, TikTok. Mini diari 2027, saiz A7, 120 muka surat, hard cover, Galaxy, Butterfly, Floral, Foodie.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "script_title",
+     "face": "archivo",
+     "lines": [
+      [
+       "TIGA RINGGIT",
+       0.0
+      ],
+      [
+       "UBAH CARA",
+       0.9
+      ],
+      [
+       "STUDY 2027.",
+       1.64
+      ]
+     ],
+     "sizes": [
+      104,
+      100,
+      124
+     ],
+     "colors": [
+      [
+       18,
+       15,
+       11
+      ],
+      [
+       18,
+       15,
+       11
+      ],
+      [
+       226,
+       121,
+       80
+      ]
+     ],
+     "outline_color": [
+      255,
+      255,
+      255
+     ],
+     "outline": 4,
+     "leading": 0.92,
+     "y": 300,
+     "until": 3.75
+    },
+    {
+     "kind": "emoji",
+     "name": "Money with wings",
+     "at": 0.15,
+     "x": 540,
+     "y": 1000,
+     "size": 380,
+     "until": 1.6
+    },
+    {
+     "kind": "emoji",
+     "name": "Books",
+     "at": 1.64,
+     "x": 540,
+     "y": 1000,
+     "size": 380,
+     "until": 3.75
+    }
+   ]
+  },
+  {
+   "start": 3.8,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Cuba ingat balik tahun ni…",
+     "at": 3.8,
+     "y": 280
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BERAPA KALI",
+       5.1
+      ],
+      [
+       "KAU LUPA?",
+       5.96
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "LUPA?"
+     ],
+     "until": 11.45
+    },
+    {
+     "kind": "emoji",
+     "name": "Exploding head",
+     "at": 5.96,
+     "x": 540,
+     "y": 930,
+     "size": 380,
+     "wobble": 6,
+     "until": 6.8
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "Assignment",
+      "Kuiz",
+      "Buku",
+      "Study group"
+     ],
+     "at": 6.82,
+     "step": 1.15,
+     "box": [
+      230,
+      820,
+      850,
+      1200
+     ],
+     "scatter_at": 11.0,
+     "seed": 7
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SIMPAN DALAM",
+       11.52
+      ],
+      [
+       "KEPALA JE.",
+       12.04
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "KEPALA"
+     ]
+    },
+    {
+     "kind": "emoji",
+     "name": "Brain",
+     "at": 12.04,
+     "x": 540,
+     "y": 930,
+     "size": 380
+    }
+   ]
+  },
+  {
+   "start": 12.7,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "LAST MINUTE.",
+       13.28
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "MINUTE."
+     ],
+     "until": 15.95
+    },
+    {
+     "kind": "emoji",
+     "name": "Alarm clock",
+     "at": 13.28,
+     "x": 540,
+     "y": 930,
+     "size": 380,
+     "wobble": 14,
+     "until": 15.95
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MARKAH",
+       16.02
+      ],
+      [
+       "TAK SEBERAPA.",
+       16.58
+      ]
+     ],
+     "y": 420,
+     "until": 18.05
+    },
+    {
+     "kind": "emoji",
+     "name": "Chart decreasing",
+     "at": 16.02,
+     "x": 540,
+     "y": 930,
+     "size": 380,
+     "until": 18.05
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SCROLL",
+       20.56
+      ],
+      [
+       "TIKTOK…",
+       20.9
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "TIKTOK…"
+     ],
+     "until": 21.5
+    },
+    {
+     "kind": "emoji",
+     "name": "Mobile phone",
+     "at": 18.84,
+     "x": 540,
+     "y": 930,
+     "size": 380,
+     "wobble": 5,
+     "until": 21.5
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "HABIS MASA.",
+       21.9
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "MASA."
+     ]
+    },
+    {
+     "kind": "emoji",
+     "name": "Hourglass done",
+     "at": 21.52,
+     "x": 540,
+     "y": 930,
+     "size": 380
+    }
+   ]
+  },
+  {
+   "start": 22.2,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "setup",
+     "text": "Sebab tu kau perlukan…",
+     "at": 22.26,
+     "y": 280
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "MINI DIARI",
+       23.18
+      ],
+      [
+       "2027.",
+       23.84
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "2027."
+     ],
+     "until": 26.45
+    },
+    {
+     "kind": "card",
+     "img": "kenapa_pilih.jpg",
+     "at": 22.9,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2,
+     "until": 26.45
+    },
+    {
+     "kind": "emoji",
+     "name": "Sparkles",
+     "at": 23.84,
+     "x": 900,
+     "y": 640,
+     "size": 200,
+     "until": 26.45
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "KECIL JE.",
+       26.48
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "KECIL"
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "saiz_kecil.jpg",
+     "at": 26.5,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 2
+    }
+   ]
+  },
+  {
+   "start": 29.1,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "120 MUKA",
+       29.7
+      ],
+      [
+       "SURAT.",
+       30.14
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "120"
+     ],
+     "until": 31.2
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "HARD COVER.",
+       31.24
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "COVER."
+     ],
+     "until": 35.6
+    },
+    {
+     "kind": "emoji",
+     "name": "Flexed biceps",
+     "at": 31.24,
+     "x": 900,
+     "y": 640,
+     "size": 200,
+     "until": 35.6
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "SEMUA DALAM",
+       35.7
+      ],
+      [
+       "SATU TEMPAT.",
+       36.26
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "TEMPAT."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "bahagian_dalam.jpg",
+     "at": 29.2,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 36.9,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "TAK ADA",
+       37.2
+      ],
+      [
+       "NOTIFICATION.",
+       37.36
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "NOTIFICATION."
+     ]
+    },
+    {
+     "kind": "emoji",
+     "name": "Bell with slash",
+     "at": 37.36,
+     "x": 540,
+     "y": 930,
+     "size": 380,
+     "wobble": 10
+    }
+   ]
+  },
+  {
+   "start": 39.0,
+   "in": "whip",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "8 DESIGN",
+       39.42
+      ],
+      [
+       "COVER.",
+       39.98
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "8"
+     ]
+    },
+    {
+     "kind": "emoji",
+     "name": "Milky way",
+     "at": 40.52,
+     "x": 310,
+     "y": 820,
+     "size": 270,
+     "until": 44.1
+    },
+    {
+     "kind": "emoji",
+     "name": "Butterfly",
+     "at": 41.34,
+     "x": 770,
+     "y": 820,
+     "size": 270,
+     "until": 44.1
+    },
+    {
+     "kind": "emoji",
+     "name": "Cherry blossom",
+     "at": 42.06,
+     "x": 310,
+     "y": 1150,
+     "size": 270,
+     "until": 44.1
+    },
+    {
+     "kind": "emoji",
+     "name": "Doughnut",
+     "at": 42.66,
+     "x": 770,
+     "y": 1150,
+     "size": 270,
+     "until": 44.1
+    },
+    {
+     "kind": "card",
+     "img": "kenapa_pilih.jpg",
+     "at": 44.12,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "start": 45.9,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "BAWAH RM3.",
+       46.38
+      ]
+     ],
+     "y": 440,
+     "accent": [
+      "RM3."
+     ],
+     "until": 48.0
+    },
+    {
+     "kind": "head",
+     "lines": [
+      [
+       "UNTUK KAU &",
+       48.08
+      ],
+      [
+       "KAWAN-KAWAN.",
+       48.52
+      ]
+     ],
+     "y": 420,
+     "accent": [
+      "KAWAN-KAWAN."
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "rancang_hari.jpg",
+     "at": 46.0,
+     "x": 540,
+     "y": 975,
+     "w": 620,
+     "rot": 0,
+     "from": "bottom"
+    },
+    {
+     "kind": "emoji",
+     "name": "Wrapped gift",
+     "at": 48.52,
+     "x": 900,
+     "y": 640,
+     "size": 210
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 51.74,
+     "y": 1650
+    }
+   ]
+  }
+ ],
+ "end": 53.7,
+ "captions": {
+  "y": 1390,
+  "size": 100,
+  "chunks": [
+   [
+    "TIGA RINGGIT JE",
+    0.0,
+    0.7
+   ],
+   [
+    "UNTUK UBAH",
+    0.7,
+    1.3
+   ],
+   [
+    "CARA KAU STUDY",
+    1.3,
+    1.88
+   ],
+   [
+    "TAHUN 2027.",
+    1.88,
+    3.8
+   ],
+   [
+    "CUBA INGAT",
+    3.8,
+    4.44
+   ],
+   [
+    "BALIK TAHUN NI.",
+    4.44,
+    5.1
+   ],
+   [
+    "BERAPA KALI KAU",
+    5.1,
+    5.96
+   ],
+   [
+    "LUPA TARIKH",
+    5.96,
+    6.54
+   ],
+   [
+    "HANTAR",
+    6.54,
+    6.82
+   ],
+   [
+    "ASSIGNMENT",
+    6.82,
+    7.36
+   ],
+   [
+    "LUPA ADA KUIZ",
+    7.36,
+    8.44
+   ],
+   [
+    "LUPA NAK BAWA",
+    8.44,
+    9.14
+   ],
+   [
+    "BUKU",
+    9.14,
+    9.6
+   ],
+   [
+    "LUPA JANJI STUDY",
+    9.6,
+    10.44
+   ],
+   [
+    "GROUP.",
+    10.44,
+    10.96
+   ],
+   [
+    "SEMUA SEBAB",
+    10.96,
+    11.52
+   ],
+   [
+    "SIMPAN DALAM",
+    11.52,
+    12.04
+   ],
+   [
+    "KEPALA JE.",
+    12.04,
+    12.78
+   ],
+   [
+    "LEPAS TU LAST",
+    12.78,
+    13.44
+   ],
+   [
+    "MINUTE BARU",
+    13.44,
+    13.92
+   ],
+   [
+    "KELAM KABUT.",
+    13.92,
+    14.6
+   ],
+   [
+    "SIAPKAN KERJA",
+    14.6,
+    15.38
+   ],
+   [
+    "MALAM-MALAM",
+    15.38,
+    16.02
+   ],
+   [
+    "MARKAH TAK",
+    16.02,
+    16.58
+   ],
+   [
+    "SEBERAPA",
+    16.58,
+    17.2
+   ],
+   [
+    "CIKGU PUN",
+    17.2,
+    17.66
+   ],
+   [
+    "TEGUR.",
+    17.66,
+    18.1
+   ],
+   [
+    "NAK CATAT",
+    18.1,
+    18.72
+   ],
+   [
+    "DALAM PHONE",
+    18.72,
+    19.32
+   ],
+   [
+    "BUKA JE PHONE",
+    19.32,
+    20.26
+   ],
+   [
+    "TERUS SCROLL",
+    20.26,
+    20.9
+   ],
+   [
+    "TIKTOK",
+    20.9,
+    21.52
+   ],
+   [
+    "HABIS MASA.",
+    21.52,
+    22.26
+   ],
+   [
+    "SEBAB TU KAU",
+    22.26,
+    22.84
+   ],
+   [
+    "PERLUKAN MINI",
+    22.84,
+    23.42
+   ],
+   [
+    "DIARI 2027 NI",
+    23.42,
+    25.32
+   ],
+   [
+    "SAIZ A7",
+    25.32,
+    26.48
+   ],
+   [
+    "KECIL JE",
+    26.48,
+    27.2
+   ],
+   [
+    "MUAT DALAM",
+    27.2,
+    27.68
+   ],
+   [
+    "POKET BAJU ATAU",
+    27.68,
+    28.54
+   ],
+   [
+    "PENSIL KES.",
+    28.54,
+    29.14
+   ],
+   [
+    "ADA 120 MUKA",
+    29.14,
+    30.8
+   ],
+   [
+    "SURAT",
+    30.8,
+    31.24
+   ],
+   [
+    "HARD COVER",
+    31.24,
+    31.94
+   ],
+   [
+    "TAK MUDAH",
+    31.94,
+    32.46
+   ],
+   [
+    "KOYAK",
+    32.46,
+    32.86
+   ],
+   [
+    "TULIS TARIKH",
+    32.86,
+    33.54
+   ],
+   [
+    "EXAM",
+    33.54,
+    34.06
+   ],
+   [
+    "ASSIGNMENT",
+    34.06,
+    34.76
+   ],
+   [
+    "TO-DO LIST",
+    34.76,
+    35.18
+   ],
+   [
+    "HARIAN",
+    35.18,
+    35.7
+   ],
+   [
+    "SEMUA DALAM",
+    35.7,
+    36.26
+   ],
+   [
+    "SATU TEMPAT.",
+    36.26,
+    36.98
+   ],
+   [
+    "TAK ADA",
+    36.98,
+    37.36
+   ],
+   [
+    "NOTIFICATION",
+    37.36,
+    38.14
+   ],
+   [
+    "TAK ADA",
+    38.14,
+    38.5
+   ],
+   [
+    "GANGGUAN.",
+    38.5,
+    39.04
+   ],
+   [
+    "ADA 8 DESIGN",
+    39.04,
+    39.98
+   ],
+   [
+    "COVER",
+    39.98,
+    40.52
+   ],
+   [
+    "GALAXY",
+    40.52,
+    41.34
+   ],
+   [
+    "BUTTERFLY",
+    41.34,
+    42.06
+   ],
+   [
+    "FLORAL",
+    42.06,
+    42.66
+   ],
+   [
+    "FOODIE DAN",
+    42.66,
+    43.36
+   ],
+   [
+    "BANYAK LAGI.",
+    43.36,
+    44.12
+   ],
+   [
+    "PILIH YANG",
+    44.12,
+    44.7
+   ],
+   [
+    "PALING IKUT",
+    44.7,
+    45.36
+   ],
+   [
+    "GAYA KAU.",
+    45.36,
+    45.92
+   ],
+   [
+    "BAWAH 3 RINGGIT",
+    45.92,
+    46.92
+   ],
+   [
+    "JE.",
+    46.92,
+    47.16
+   ],
+   [
+    "BELI TERUS",
+    47.16,
+    47.84
+   ],
+   [
+    "UNTUK KAU DAN",
+    47.84,
+    48.52
+   ],
+   [
+    "KAWAN-KAWAN",
+    48.52,
+    49.1
+   ],
+   [
+    "SEBELUM SESI",
+    49.1,
+    49.92
+   ],
+   [
+    "2027 BERMULA.",
+    49.92,
+    51.74
+   ],
+   [
+    "TEKAN LINK",
+    51.74,
+    52.42
+   ],
+   [
+    "DEKAT BAWAH",
+    52.42,
+    53.0
+   ],
+   [
+    "SEKARANG.",
+    53.0,
+    53.76
+   ]
+  ]
+ }
+}

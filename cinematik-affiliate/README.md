@@ -83,6 +83,7 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | Kind | What it draws |
 |---|---|
 | `setup` | italic line, word by word |
+| `emoji` | big 3D emoji (Microsoft Fluent Emoji 3D, MIT, fetched into `build/emoji/`): `name` as in the Fluent set (e.g. `Exploding head`), `x`, `y`, `size`, `wobble` |
 | `script_title` | big opening title over a picture: `lines` [[text, at]], `sizes`, `colors`, `face` (`script` handwriting or `archivo` Archivo Black capitals), thin `outline` |
 | `kicker` | small tracked caps |
 | `head` | headline lines; `accent`, `box` (highlighter), `offset_shadow`, `scatter_at` |

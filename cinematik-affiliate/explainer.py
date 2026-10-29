@@ -278,6 +278,47 @@ def clay(glyph, size):
     cache[key] = img
     return img
 
+FLUENT = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/"   # Microsoft Fluent Emoji, MIT licence
+
+def emoji_png(name, prj):
+    """the 3D Fluent emoji "name" (e.g. "Exploding head"), fetched once into build/emoji/"""
+    slug = name.lower().replace(" ", "_").replace("-", "_")
+    path = os.path.join(prj, "build", "emoji", slug + ".png")
+    if not os.path.exists(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        folder = FLUENT + name.replace(" ", "%20")
+        for url in (f"{folder}/3D/{slug}_3d.png", f"{folder}/Default/3D/{slug}_3d_default.png"):   # skin-tone emoji live under Default/
+            if subprocess.run(["curl", "-fsSL", "-o", path, url]).returncode == 0: break
+        else: raise FileNotFoundError(f"no 3D Fluent emoji called {name!r}")
+    return path
+
+def emoji_img(name, size, prj):
+    """big 3D emoji with a soft light behind it and a contact shadow"""
+    key = ("emoji", name, size)
+    if key in cache: return cache[key]
+    e = Image.open(emoji_png(name, prj)).convert("RGBA").resize((size, size), Image.LANCZOS)
+    pad = size // 2; out = Image.new("RGBA", (size + pad * 2,) * 2, (255, 255, 255, 0))
+    m = Image.new("L", out.size, 0); ImageDraw.Draw(m).ellipse((pad * 0.6, pad * 0.6, out.width - pad * 0.6, out.height - pad * 0.6), fill=120)
+    halo = Image.new("RGBA", out.size, (255, 255, 255, 0)); halo.putalpha(m.filter(ImageFilter.GaussianBlur(size / 7))); out.alpha_composite(halo)
+    sh = Image.new("RGBA", out.size, (0, 0, 0, 0)); sh.paste((60, 30, 10, 100), (pad, pad + size // 14), e.getchannel("A"))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(size / 25))); out.alpha_composite(e, (pad, pad))
+    cache[key] = out
+    return out
+
+def emoji(frame, t, it, sc, prj):
+    """3D emoji that pops in with a bounce, then floats; "wobble" (degrees) rocks it, e.g. a ringing alarm clock"""
+    p = ramp(t, it["at"], 0.45)
+    if p <= 0: return
+    a = ease_out(p * 2) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
+    if a <= 0: return
+    img = emoji_img(it["name"], it.get("size", 360), prj)
+    s = 0.3 + 0.7 * ease_back(p, 2.2); k = t - it["at"]
+    rot = it.get("wobble", 0) * math.sin(2 * math.pi * 2.0 * k) * math.exp(-0.4 * k) + it.get("rot", 0)
+    im = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC)
+    if abs(rot) > 0.2: im = im.rotate(rot, Image.BICUBIC, expand=True)
+    if a < 0.999: im = im.copy(); im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
+    blend(frame, im, it.get("x", W / 2), it.get("y", 900) + 10 * math.sin(k * 2.4 + it.get("x", 540) / 90))
+
 def tile(frame, t, it, sc):
     p = ramp(t, it["at"], 0.45)
     if p <= 0: return
@@ -602,6 +643,7 @@ def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
     for it in sc["items"]:
         if it["kind"] == "photo": photo(frame, t, it, sc, prj)
+        elif it["kind"] == "emoji": emoji(frame, t, it, sc, prj)
         elif it["kind"] == "clip": clip(frame, t, it, sc, prj)
         elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
@@ -700,7 +742,7 @@ def sfx_track(cfg, dur, out):
             if it["kind"] == "head":
                 for _, at in it["lines"]: ev.append((at - 0.18, "whoosh", -21))
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -17))
-            elif it["kind"] in ("card", "tile"): ev.append((it["at"], "pop", -16))
+            elif it["kind"] in ("card", "tile", "emoji"): ev.append((it["at"], "pop", -16))
             elif it["kind"] == "blocks":
                 ev += [(at + 0.3, "pop", -14) for _, at in it["items"]]
             elif it["kind"] in ("ticks", "calendar"):

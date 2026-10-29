@@ -44,10 +44,9 @@ Fail video tidak disimpan di sini (repo awam, hak cipta pemilik asal); ini nota 
 | Soalan untuk komen | "Korang tim masak sendiri atau tim kedai bawah rumah? Komen bawah." |
 | CTA + brand | like, komen, save, share, follow; tagline + logo; "Info umum, bukan nasihat kewangan" |
 
-## Untuk dibina dalam explainer.py (belum ada)
+## Dalam explainer.py
 
-- latar kertas bergaris + palet di atas (tema baru, contoh `"theme": "kartun"`)
-- label pita kuning
-- carta bar yang naik dengan nombor
-- mascot (watak lidi sendiri atau stiker muka pengguna)
-- set ikon prop rata berlesen bebas
+Dah ada: `"theme": "kartun"` (kertas bergaris + palet), `badge`, `say`, `tape`, `mascot` (lidi, pose bertukar ikut VO) dan
+`prop` (ikon rata Fluent, warna ditukar ke palet). Contoh: `projects/mini-diari-kartun/`.
+
+Belum ada: carta bar yang naik dengan nombor; stiker muka pengguna sebagai mascot.

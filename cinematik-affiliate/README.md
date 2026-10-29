@@ -100,7 +100,13 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `photo` | a still (e.g. an AI illustration from `input/`) brought to life: slow push-in on `focus` (`focus_at` = where it sits on screen), parallax between the subject (`subject_box`, selfie mask) plus everything below the `floor` line and the room, twinkling `lights_box`, a breathing `glow` with dust, and `dim` ([amount, time] pairs). Give the same item to consecutive scenes to keep one continuous shot |
 | `pile` | chips (e.g. formulas) that rain into a messy heap; `scatter_at` blows them away |
 | `floaters` | drifting maths symbols (or your own `glyphs`) behind a dark scene |
+| `badge` | small dark pill with the series name (e.g. `TIPS PELAJAR 2027`) |
+| `say` | the spoken line as a two-line title: `text` in plain ink, `key` big in green (or `"color": "gold"`) |
+| `tape` | tilted yellow tape label for the sub-topic (`MASALAH`, `SOLUSI`) |
+| `mascot` | the stick mascot on the left: `pose` point / wave / think / down, `face` calm / wow, `poses` [[pose, face, at]] to switch along the VO, `scale` |
+| `prop` | a flat Fluent emoji (MIT, SVG fetched into `build/flat/`, drawn with cairosvg): `name`, `x`, `y`, `size`, `wobble`; with the kartun theme it is recoloured to the palette |
 
+`"theme": "kartun"` switches to the "animasi kartun" look (ruled cream paper, deep green and gold, recoloured props; example `projects/mini-diari-kartun/`), `"navy"` to a deep-blue look.
 `"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word.
 The preset's `"speed"` shortens pauses and speeds up the voiceover (pitch kept), and every scene time follows it, so write
 the times from the original recording. Its `"voice": {"chain": "clean"}` is the gentle studio chain for a voiceover that is

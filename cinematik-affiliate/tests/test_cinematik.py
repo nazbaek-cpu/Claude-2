@@ -242,3 +242,26 @@ def test_edukasi_preset_makes_an_explainer():
 
 def test_example_project_is_valid_json():
     json.load(open(os.path.join(PRJ, "project.json")))
+
+
+def test_explainer_kartun_pieces(tmp_path):
+    os.makedirs(tmp_path / "build" / "flat")
+    (tmp_path / "build" / "flat" / "alarm_clock.svg").write_text(   # cached SVG: no download in tests
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#202020"/></svg>')
+    saved = {k: getattr(explainer, k) for k in explainer.THEMES["kartun"]}
+    explainer.set_theme("kartun")
+    try:
+        sc = {"start": 0.0, "items": [{"kind": "badge", "text": "TIPS", "at": 0.0},
+                                      {"kind": "say", "text": "Berapa kali kau", "key": "LUPA?", "at": 0.0},
+                                      {"kind": "tape", "text": "MASALAH", "at": 0.0},
+                                      {"kind": "mascot", "at": 0.0, "poses": [["think", "wow", 0.5]]},
+                                      {"kind": "prop", "name": "Alarm clock", "at": 0.0, "x": 800, "y": 1180, "size": 300}]}
+        fr = explainer.frame_at([sc], 1.0, str(tmp_path))
+        assert tuple(fr[100, 540].astype(int)) == explainer.PEACH_TOP          # cream paper
+        assert fr[1180, 800].max() < 80                                        # the dark test prop, tinted to deep green
+        assert (fr[1150:1350, 150:310].max(-1) < 80).mean() > 0.3              # the mascot body on the left
+        assert (fr[360:560, 300:780] < 120).any()                              # the spoken line at the top
+        cfg = explainer.remap({"scenes": [sc]}, {"keep": [[0.0, 10.0]], "tempo": 2.0})
+        assert cfg["scenes"][0]["items"][3]["poses"][0][2] == 0.25
+    finally:
+        vars(explainer).update(saved)   # back to the default theme for the other tests

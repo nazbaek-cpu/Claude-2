@@ -1,0 +1,503 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "whisper_prompt": "Tiga ringgit je untuk ubah cara kau study tahun 2027. Assignment, kuiz, study group, TikTok. Mini diari 2027, saiz A7, 120 muka surat, hard cover, Galaxy, Butterfly, Floral, Foodie.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "badge",
+     "text": "TIPS PELAJAR 2027",
+     "at": 0.0,
+     "y": 200
+    },
+    {
+     "kind": "mascot",
+     "at": 0.15,
+     "pose": "wave",
+     "face": "wow",
+     "poses": [
+      [
+       "think",
+       "calm",
+       3.8
+      ],
+      [
+       "point",
+       "wow",
+       5.1
+      ],
+      [
+       "down",
+       "wow",
+       12.78
+      ],
+      [
+       "point",
+       "wow",
+       18.1
+      ],
+      [
+       "point",
+       "calm",
+       22.26
+      ],
+      [
+       "wave",
+       "calm",
+       39.42
+      ],
+      [
+       "point",
+       "calm",
+       44.12
+      ],
+      [
+       "wave",
+       "wow",
+       45.92
+      ],
+      [
+       "point",
+       "calm",
+       51.74
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "Tiga ringgit je untuk ubah",
+     "key": "CARA KAU STUDY 2027",
+     "at": 0.0,
+     "until": 3.8
+    },
+    {
+     "kind": "tape",
+     "text": "RM3 JE",
+     "at": 0.3,
+     "until": 3.8,
+     "rot": -2
+    },
+    {
+     "kind": "prop",
+     "name": "Money with wings",
+     "at": 0.4,
+     "until": 3.8,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 8
+    },
+    {
+     "kind": "say",
+     "text": "Cuba ingat balik",
+     "key": "TAHUN NI...",
+     "at": 3.8,
+     "until": 5.1
+    },
+    {
+     "kind": "prop",
+     "name": "Thought balloon",
+     "at": 3.9,
+     "until": 5.1,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 0
+    },
+    {
+     "kind": "tape",
+     "text": "MASALAH",
+     "at": 5.1,
+     "until": 12.7,
+     "rot": 2
+    },
+    {
+     "kind": "say",
+     "text": "Berapa kali kau",
+     "key": "LUPA?",
+     "at": 5.1,
+     "until": 10.96
+    },
+    {
+     "kind": "pile",
+     "chips": [
+      "ASSIGNMENT",
+      "KUIZ",
+      "BUKU",
+      "STUDY GROUP"
+     ],
+     "at": 6.82,
+     "step": 1.16,
+     "box": [
+      660,
+      1020,
+      800,
+      1380
+     ],
+     "scatter_at": 10.96,
+     "until": 12.0
+    },
+    {
+     "kind": "say",
+     "text": "Semua sebab simpan",
+     "key": "DALAM KEPALA JE",
+     "at": 10.96,
+     "until": 12.78
+    },
+    {
+     "kind": "prop",
+     "name": "Brain",
+     "at": 11.1,
+     "until": 12.78,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 10
+    },
+    {
+     "kind": "tape",
+     "text": "AKIBATNYA",
+     "at": 12.78,
+     "until": 22.26,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Lepas tu last minute",
+     "key": "BARU KELAM KABUT",
+     "at": 12.78,
+     "until": 14.6
+    },
+    {
+     "kind": "prop",
+     "name": "Alarm clock",
+     "at": 13.3,
+     "until": 14.6,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 14
+    },
+    {
+     "kind": "say",
+     "text": "Siapkan kerja",
+     "key": "MALAM-MALAM",
+     "at": 14.6,
+     "until": 16.02
+    },
+    {
+     "kind": "prop",
+     "name": "Crescent moon",
+     "at": 14.7,
+     "until": 16.02,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 0
+    },
+    {
+     "kind": "say",
+     "text": "Markah tak seberapa,",
+     "key": "CIKGU PUN TEGUR",
+     "at": 16.02,
+     "until": 18.1
+    },
+    {
+     "kind": "prop",
+     "name": "Chart decreasing",
+     "at": 16.1,
+     "until": 18.1,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 0
+    },
+    {
+     "kind": "say",
+     "text": "Nak catat dalam",
+     "key": "PHONE?",
+     "at": 18.1,
+     "until": 19.32
+    },
+    {
+     "kind": "say",
+     "text": "Buka je phone, terus",
+     "key": "SCROLL TIKTOK",
+     "at": 19.32,
+     "until": 21.52
+    },
+    {
+     "kind": "prop",
+     "name": "Mobile phone",
+     "at": 18.3,
+     "until": 21.52,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 8
+    },
+    {
+     "kind": "say",
+     "text": "Last-last...",
+     "key": "HABIS MASA.",
+     "at": 21.52,
+     "until": 22.26,
+     "color": "gold"
+    },
+    {
+     "kind": "prop",
+     "name": "Hourglass done",
+     "at": 21.55,
+     "until": 22.26,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 0
+    },
+    {
+     "kind": "tape",
+     "text": "SOLUSI",
+     "at": 22.26,
+     "until": 29.7,
+     "rot": 2
+    },
+    {
+     "kind": "say",
+     "text": "Sebab tu kau perlukan",
+     "key": "MINI DIARI 2027",
+     "at": 22.26,
+     "until": 25.32
+    },
+    {
+     "kind": "card",
+     "img": "kenapa_pilih.jpg",
+     "at": 22.7,
+     "until": 25.32,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Saiz A7, kecil je,",
+     "key": "MUAT DALAM POKET",
+     "at": 25.32,
+     "until": 29.7
+    },
+    {
+     "kind": "card",
+     "img": "saiz_kecil.jpg",
+     "at": 25.4,
+     "until": 29.7,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": 2
+    },
+    {
+     "kind": "tape",
+     "text": "KELEBIHAN",
+     "at": 29.7,
+     "until": 39.42,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "120 muka surat,",
+     "key": "HARD COVER, TAK KOYAK",
+     "at": 29.7,
+     "until": 33.26
+    },
+    {
+     "kind": "card",
+     "img": "bahagian_dalam.jpg",
+     "at": 29.75,
+     "until": 36.98,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Tarikh exam, to-do list,",
+     "key": "SEMUA SATU TEMPAT",
+     "at": 33.26,
+     "until": 36.98
+    },
+    {
+     "kind": "say",
+     "text": "Tak ada notification,",
+     "key": "TAK ADA GANGGUAN",
+     "at": 36.98,
+     "until": 39.42
+    },
+    {
+     "kind": "prop",
+     "name": "Bell with slash",
+     "at": 37.1,
+     "until": 39.42,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 10
+    },
+    {
+     "kind": "tape",
+     "text": "8 DESIGN",
+     "at": 39.42,
+     "until": 45.92,
+     "rot": 2
+    },
+    {
+     "kind": "say",
+     "text": "Ada 8 design cover:",
+     "key": "PILIH YANG KAU SUKA",
+     "at": 39.42,
+     "until": 44.12
+    },
+    {
+     "kind": "prop",
+     "name": "Milky way",
+     "at": 40.52,
+     "until": 44.12,
+     "x": 650,
+     "y": 1040,
+     "size": 260,
+     "wobble": 0
+    },
+    {
+     "kind": "prop",
+     "name": "Butterfly",
+     "at": 41.34,
+     "until": 44.12,
+     "x": 920,
+     "y": 1040,
+     "size": 260,
+     "wobble": 0
+    },
+    {
+     "kind": "prop",
+     "name": "Cherry blossom",
+     "at": 42.06,
+     "until": 44.12,
+     "x": 650,
+     "y": 1330,
+     "size": 260,
+     "wobble": 0
+    },
+    {
+     "kind": "prop",
+     "name": "Hamburger",
+     "at": 42.66,
+     "until": 44.12,
+     "x": 920,
+     "y": 1330,
+     "size": 260,
+     "wobble": 0
+    },
+    {
+     "kind": "say",
+     "text": "Pilih ikut",
+     "key": "GAYA KAU",
+     "at": 44.12,
+     "until": 45.92
+    },
+    {
+     "kind": "card",
+     "img": "kegunaan.jpg",
+     "at": 44.15,
+     "until": 45.92,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": 2
+    },
+    {
+     "kind": "tape",
+     "text": "HARGA",
+     "at": 45.92,
+     "until": 51.74,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Bawah",
+     "key": "RM3 JE!",
+     "at": 45.92,
+     "until": 47.16,
+     "color": "gold"
+    },
+    {
+     "kind": "prop",
+     "name": "Money bag",
+     "at": 46.0,
+     "until": 47.16,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 10
+    },
+    {
+     "kind": "say",
+     "text": "Beli untuk kau",
+     "key": "DAN KAWAN-KAWAN",
+     "at": 47.16,
+     "until": 49.76
+    },
+    {
+     "kind": "prop",
+     "name": "Wrapped gift",
+     "at": 47.3,
+     "until": 49.76,
+     "x": 790,
+     "y": 1190,
+     "size": 400,
+     "wobble": 8
+    },
+    {
+     "kind": "say",
+     "text": "Sebelum bermula",
+     "key": "SESI 2027",
+     "at": 49.76,
+     "until": 51.74,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "rancang_hari.jpg",
+     "at": 49.8,
+     "until": 51.74,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Tekan link dekat bawah",
+     "key": "SEKARANG!",
+     "at": 51.74,
+     "until": 99
+    },
+    {
+     "kind": "card",
+     "img": "kenapa_pilih.jpg",
+     "at": 51.8,
+     "until": 99,
+     "x": 770,
+     "y": 1190,
+     "w": 500,
+     "rot": -2
+    }
+   ]
+  }
+ ],
+ "end": 53.7,
+ "theme": "kartun"
+}

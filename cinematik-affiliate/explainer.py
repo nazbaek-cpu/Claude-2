@@ -27,7 +27,12 @@ CTA_TEXT = (255, 255, 255)
 CAP_STROKE = 36                                # caption outline = size / CAP_STROKE
 THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 196, 56),   # deep royal blue, gold accent
                    "CAP_FILL": (255, 255, 255), "CAP_EDGE": (6, 20, 62), "HALO": (2, 10, 34), "CTA_TEXT": (6, 20, 62),
-                   "CAP_STROKE": 14}}   # white letters need a thicker edge on light footage
+                   "CAP_STROKE": 14},   # white letters need a thicker edge on light footage
+          # "animasi kartun" (styles/animasi-kartun.md): ruled cream paper, deep green + gold, flat props, a stick mascot
+          "kartun": {"PEACH_TOP": (248, 242, 233), "PEACH_BOT": (246, 239, 228), "RULED": True, "INK": (30, 38, 34),
+                     "ACC": (27, 106, 70), "TINT_PROPS": True}}
+RULED, TINT_PROPS = False, False
+K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
 
 def set_theme(name):
@@ -65,13 +70,18 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark)
+    key = ("bg", dark, RULED, PEACH_TOP, DARK)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if dark:
         top = np.array(DARK, np.float32); bot = np.array(DARK_BOT or DARK, np.float32)
         bg = np.broadcast_to(top + (bot - top) * yy ** 1.1, (H, W, 3)).copy()
         line, step, alpha = np.array(CREAM, np.float32), 108, 0.035 if DARK_BOT is None else 0.06
+    elif RULED:   # notebook paper: flat cream, faint ruled lines, no grid or vignette
+        bg = np.empty((H, W, 3), np.float32); bg[:] = PEACH_TOP
+        for y in range(290, H - 120, 74): bg[y:y + 2] = (233, 225, 212)
+        cache[key] = bg
+        return bg
     else:
         top, bot = np.array(PEACH_TOP, np.float32), np.array(PEACH_BOT, np.float32)
         bg = np.broadcast_to(top + (bot - top) * yy ** 0.9, (H, W, 3)).copy()
@@ -318,6 +328,125 @@ def emoji(frame, t, it, sc, prj):
     if abs(rot) > 0.2: im = im.rotate(rot, Image.BICUBIC, expand=True)
     if a < 0.999: im = im.copy(); im.putalpha(im.getchannel("A").point(lambda v: int(v * a)))
     blend(frame, im, it.get("x", W / 2), it.get("y", 900) + 10 * math.sin(k * 2.4 + it.get("x", 540) / 90))
+
+# ---------- "animasi kartun" pieces ----------
+def fade_in_out(t, it, tin=0.3):
+    return ease_out(ramp(t, it["at"], tin)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
+
+def badge(frame, t, it, sc):
+    """series pill (e.g. FAHAM DUIT): dark green, white bold caps"""
+    a = fade_in_out(t, it)
+    if a <= 0: return
+    key = ("badge", it["text"])
+    if key not in cache:
+        f = font("heavy", it.get("size", 34)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics(); w, h = tw + 64, asc + desc + 26; s = 3
+        m = Image.new("L", (w * s, h * s), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * s - 1, h * s - 1), radius=h * s // 2, fill=255)
+        img = Image.new("RGBA", (w, h), K_DARK + (0,)); img.putalpha(m.resize((w, h), Image.LANCZOS))
+        ImageDraw.Draw(img).text((32, 12), it["text"], font=f, fill=(255, 255, 255, 255))
+        cache[key] = img
+    blend(frame, anim(cache[key], a, 1.0), W / 2, it.get("y", 200))
+
+def say(frame, t, it, sc):
+    """the line being spoken as a two-line title: plain words in ink, then the key words big in green or gold"""
+    a = fade_in_out(t, it, 0.22)
+    if a <= 0: return
+    y = it.get("y", 360) + 18 * (1 - ease_out(ramp(t, it["at"], 0.3)))
+    col = K_GOLD if it.get("color") == "gold" else K_GREEN
+    for txt, kind, size, fill in ((it.get("text"), "bold", it.get("size1", 74), INK), (it.get("key"), "heavy", it.get("size2", 112), col)):
+        if not txt: continue
+        while size > 40 and font(kind, size).getlength(txt) > 1000: size -= 4
+        img = text_img(txt, font(kind, size), fill)
+        blend(frame, anim(img, a, 1.0), W / 2, y + img.height / 2); y += img.height * 0.9
+
+def tape(frame, t, it, sc):
+    """yellow masking-tape label, slightly tilted"""
+    p = ramp(t, it["at"], 0.35); a = ease_out(p * 2) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
+    if a <= 0: return
+    key = ("tape", it["text"], it.get("rot", -2))
+    if key not in cache:
+        f = font("heavy", it.get("size", 40)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics(); w, h = tw + 76, asc + desc + 34
+        img = Image.new("RGBA", (w, h), K_TAPE + (255,)); d = ImageDraw.Draw(img)
+        d.rectangle((w // 2 - 50, 0, w // 2 + 50, 8), fill=(255, 255, 255, 110))   # a strip of tape on top
+        d.text((38, 16), it["text"], font=f, fill=K_DARK + (255,))
+        cache[key] = soft_shadow(img, 60, 6, 5).rotate(it.get("rot", -2), Image.BICUBIC, expand=True)
+    img = cache[key]; s = 0.6 + 0.4 * ease_back(p, 2.0)
+    img = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC)
+    blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 700))
+
+def mascot_img(pose, k, face, sz=1.0):
+    """the stick mascot (round head, deep green body, gold tie) drawn at 2x; k is seconds since it appeared"""
+    S = 2; w, h = 600 * S, 760 * S; img = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    P = lambda x, y: (x * S, y * S)   # noqa: E731
+    lw = 9 * S; cx = 230
+    d.ellipse((*P(cx - 90, 728), *P(cx + 90, 748)), fill=(0, 0, 0, 28))                       # floor shadow
+    for x0, x1 in ((cx - 22, cx - 42), (cx + 22, cx + 42)): d.line((*P(x0, 560), *P(x1, 735)), fill=K_DARK, width=lw)
+    d.rounded_rectangle((*P(cx - 62, 360), *P(cx + 62, 580)), radius=62 * S, fill=K_DARK)                 # body
+    d.polygon([P(cx - 13, 368), P(cx + 13, 368), P(cx, 445)], fill=K_GOLD)                                # tie
+    def arm(sx, sy, ex, ey):
+        d.line((*P(sx, sy), *P(ex, ey)), fill=K_DARK, width=lw)
+        d.ellipse((*P(ex - 15, ey - 15), *P(ex + 15, ey + 15)), fill=(255, 255, 255), outline=K_DARK, width=6 * S)
+    arm(cx - 58, 395, cx - 115, 560)
+    if pose == "wave":
+        ang = math.radians(-60 + 18 * math.sin(2 * math.pi * 1.6 * k)); L = 150
+        arm(cx + 58, 395, cx + 58 + L * math.cos(ang), 395 + L * math.sin(ang))
+    elif pose == "think": arm(cx + 58, 395, cx + 40, 300)
+    elif pose == "down": arm(cx + 58, 395, cx + 115, 560)
+    else: arm(cx + 58, 395, cx + 210, 360 + 6 * math.sin(2 * math.pi * 0.8 * k))                         # point to the right
+    d.ellipse((*P(cx - 88, 175), *P(cx + 88, 351)), fill=(255, 255, 255), outline=K_DARK, width=lw)      # head
+    if face == "wow":
+        for ex in (cx - 30, cx + 30): d.ellipse((*P(ex - 11, 240), *P(ex + 11, 262)), fill=K_DARK)
+        d.ellipse((*P(cx - 14, 290), *P(cx + 14, 318)), fill=K_DARK)
+    else:   # calm: closed eyes, small smile
+        for ex in (cx - 32, cx + 32): d.arc((*P(ex - 16, 238), *P(ex + 16, 262)), 200, 340, fill=K_DARK, width=6 * S)
+        d.arc((*P(cx - 30, 270), *P(cx + 30, 312)), 20, 160, fill=K_DARK, width=6 * S)
+    return img.resize((int(w * sz / S), int(h * sz / S)), Image.LANCZOS)
+
+def mascot(frame, t, it, sc):
+    """stick mascot standing on the left ("x" body centre, "y" feet, "scale"): "pose" point | wave | think | down, "face" calm | wow;
+    "poses": [[pose, face, at], ...] switches pose in place along the VO"""
+    a = fade_in_out(t, it, 0.35)
+    if a <= 0: return
+    pose, face_ = it.get("pose", "point"), it.get("face", "calm")
+    for ps, fc, at in it.get("poses", []):
+        if t >= at: pose, face_ = ps, fc
+    k = t - it["at"]; sz = it.get("scale", 1.3); img = mascot_img(pose, k, face_, sz)
+    x = it.get("x", 230) - 60 * (1 - ease_out(ramp(t, it["at"], 0.4))); y = it.get("y", 1640) - 355 * sz + 4 * math.sin(k * 2.0)
+    blend(frame, anim(img, a, 1.0), x + 70 * sz, y)   # x is the body centre; the image is wider to the right for the arm
+
+def flat_png(name, size, prj):
+    """Fluent flat emoji "name" as a PNG at size, recoloured to the "kartun" palette when the theme asks"""
+    key = ("flat", name, size, TINT_PROPS)
+    if key in cache: return cache[key]
+    slug = name.lower().replace(" ", "_").replace("-", "_")
+    svg = os.path.join(prj, "build", "flat", slug + ".svg")
+    if not os.path.exists(svg):
+        os.makedirs(os.path.dirname(svg), exist_ok=True)
+        folder = FLUENT + name.replace(" ", "%20")
+        for url in (f"{folder}/Flat/{slug}_flat.svg", f"{folder}/Default/Flat/{slug}_flat_default.svg"):
+            if subprocess.run(["curl", "-fsSL", "-o", svg, url]).returncode == 0: break
+        else: raise FileNotFoundError(f"no flat Fluent emoji called {name!r}")
+    import cairosvg, io
+    img = Image.open(io.BytesIO(cairosvg.svg2png(url=svg, output_width=size, output_height=size))).convert("RGBA")
+    if TINT_PROPS:   # map light-to-dark onto paper white, tape, gold, green, deep green
+        a = np.asarray(img).astype(np.float32); rgb = a[..., :3]
+        lum = rgb @ np.array([0.299, 0.587, 0.114], np.float32); sat = rgb.max(-1) - rgb.min(-1)
+        pal = np.array([K_DARK, K_GREEN, K_GOLD, K_TAPE, (255, 255, 255)], np.float32)
+        out = pal[np.digitize(lum, [70, 120, 175, 225])]; out[(sat < 25) & (lum > 150) & (lum < 235)] = (225, 216, 200)
+        img = Image.fromarray(np.dstack([out, a[..., 3]]).astype(np.uint8), "RGBA")
+    cache[key] = soft_shadow(img, 50, 8, 8)
+    return cache[key]
+
+def prop(frame, t, it, sc, prj):
+    """flat prop (a Fluent flat emoji) that pops in and bobs gently"""
+    p = ramp(t, it["at"], 0.4)
+    if p <= 0: return
+    a = ease_out(p * 2) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
+    if a <= 0: return
+    img = flat_png(it["name"], it.get("size", 380), prj); s = 0.4 + 0.6 * ease_back(p, 2.0)
+    img = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC)
+    rot = it.get("wobble", 0) * math.sin(2 * math.pi * 2.0 * (t - it["at"])) * math.exp(-0.4 * (t - it["at"]))
+    if abs(rot) > 0.2: img = img.rotate(rot, Image.BICUBIC, expand=True)
+    blend(frame, anim(img, a, 1.0), it.get("x", 760), it.get("y", 1180) + 8 * math.sin((t - it["at"]) * 2.2 + it.get("x", 720) / 80))
 
 def tile(frame, t, it, sc):
     p = ramp(t, it["at"], 0.45)
@@ -636,7 +765,7 @@ def clip(frame, t, it, sc, prj):
     if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
     frame[:] = img * PHOTO_SHADE
 
-DRAW = {"setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
+DRAW = {"badge": badge, "say": say, "tape": tape, "mascot": mascot, "setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
         "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
 
 def draw_scene(sc, t, prj):
@@ -644,6 +773,7 @@ def draw_scene(sc, t, prj):
     for it in sc["items"]:
         if it["kind"] == "photo": photo(frame, t, it, sc, prj)
         elif it["kind"] == "emoji": emoji(frame, t, it, sc, prj)
+        elif it["kind"] == "prop": prop(frame, t, it, sc, prj)
         elif it["kind"] == "clip": clip(frame, t, it, sc, prj)
         elif it["kind"] in ("card", "ticks"): (card if it["kind"] == "card" else ticks)(frame, t, it, sc, prj)
         elif it["kind"] == "floaters": floaters(frame, t, it)
@@ -742,7 +872,8 @@ def sfx_track(cfg, dur, out):
             if it["kind"] == "head":
                 for _, at in it["lines"]: ev.append((at - 0.18, "whoosh", -21))
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -17))
-            elif it["kind"] in ("card", "tile", "emoji"): ev.append((it["at"], "pop", -16))
+            elif it["kind"] in ("card", "tile", "emoji", "prop", "tape"): ev.append((it["at"], "pop", -16))
+            elif it["kind"] == "say": ev.append((it["at"] - 0.1, "whoosh", -26))
             elif it["kind"] == "blocks":
                 ev += [(at + 0.3, "pop", -14) for _, at in it["items"]]
             elif it["kind"] in ("ticks", "calendar"):
@@ -784,6 +915,7 @@ def remap(cfg, m):
                 if k in it: it[k] = f(it[k])
             for k in ("lines", "items", "labels", "dim"):
                 if k in it: it[k] = [[x, f(t)] for x, t in it[k]]
+            if "poses" in it: it["poses"] = [[p, fc, f(t)] for p, fc, t in it["poses"]]
             for k in ("dur", "step"):
                 if k in it: it[k] = round(it[k] / tempo, 3)
     return cfg

@@ -5,7 +5,7 @@
  "whisper_prompt": "Calon SPM tahun depan. Nota buku sebesar tapak tangan. Sejarah, fizik, kimia, matematik dan matematik tambahan. Infografik, tarikh penting, peristiwa penting, buku teks.",
  "speed": {"tempo": 1.12, "max_pause": 0.22},
  "grade": "bright",
- "beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02},
+ "beauty": {"lip_amount": 0.0},
  "segments": [
   {"start": 34.08, "end": 35.2, "pills_y": 330, "pills": [["Senang", 34.08], ["Ringan", 34.58], ["Mudah", 35.0]]}
  ],

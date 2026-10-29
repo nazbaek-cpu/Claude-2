@@ -104,9 +104,11 @@ Scenes are listed in `project.json` with times taken from the voiceover (`--tran
 | `say` | the spoken line as a two-line title: `text` in plain ink, `key` big in green (or `"color": "gold"`) |
 | `tape` | tilted yellow tape label for the sub-topic (`MASALAH`, `SOLUSI`) |
 | `mascot` | the stick mascot on the left: `pose` point / wave / think / down, `face` calm / wow, `poses` [[pose, face, at]] to switch along the VO, `scale` |
+| `doodle` | your own character from a pose sheet: cut the sheet with `python poses.py sheet.png projects/<name>/input/doodle --grid 4x2`, then `poses` [[`doodle/poseN.png`, at]] switches pose along the VO (with a small pop); `x`, `y`, `h` |
+| `scribble` | a tangled pen scribble that draws itself ("kepala serabut"): `x`, `y`, `size`, `seed` |
 | `prop` | a flat Fluent emoji (MIT, SVG fetched into `build/flat/`, drawn with cairosvg): `name`, `x`, `y`, `size`, `wobble`; with the kartun theme it is recoloured to the palette |
 
-`"theme": "kartun"` switches to the "animasi kartun" look (ruled cream paper, deep green and gold, recoloured props; example `projects/mini-diari-kartun/`), `"navy"` to a deep-blue look.
+`"theme": "kartun"` switches to the "animasi kartun" look (ruled cream paper, deep green and gold, recoloured props; example `projects/mini-diari-kartun/`), `"navy"` to a deep-blue look, `"coklat"` to brown paper with cream text, yellow key words and colour props with a sticker edge (example `projects/mini-diari-doodle/`).
 `"in": "cut"` hard-cuts into a scene; the default is the whip. `"end"` trims silence after the last word.
 The preset's `"speed"` shortens pauses and speeds up the voiceover (pitch kept), and every scene time follows it, so write
 the times from the original recording. Its `"voice": {"chain": "clean"}` is the gentle studio chain for a voiceover that is

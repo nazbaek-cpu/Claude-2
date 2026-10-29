@@ -1,0 +1,472 @@
+{
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "coklat",
+ "whisper_prompt": "Otak kita untuk menjana idea, bukan untuk menyimpannya. David Allen. Print nota, hantar borang, bayar yuran kelas. Mini Diari 2027, saiz A7, 120 muka surat, hard cover, 8 design cover.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 540,
+     "y": 460,
+     "h": 570,
+     "poses": [
+      [
+       "doodle/pose5.png",
+       0.0
+      ],
+      [
+       "doodle/pose4.png",
+       4.12
+      ],
+      [
+       "doodle/pose7.png",
+       10.0
+      ],
+      [
+       "doodle/pose1.png",
+       17.82
+      ],
+      [
+       "doodle/pose7.png",
+       22.68
+      ],
+      [
+       "doodle/pose1.png",
+       25.28
+      ],
+      [
+       "doodle/pose7.png",
+       28.86
+      ],
+      [
+       "doodle/pose3.png",
+       32.74
+      ],
+      [
+       "doodle/pose8.png",
+       36.64
+      ],
+      [
+       "doodle/pose4.png",
+       39.06
+      ],
+      [
+       "doodle/pose6.png",
+       42.56
+      ],
+      [
+       "doodle/pose2.png",
+       45.86
+      ]
+     ]
+    },
+    {
+     "kind": "tape",
+     "text": "QUOTE HARI NI",
+     "at": 0.0,
+     "until": 4.12,
+     "rot": -2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "“Otak kita untuk",
+     "key": "MENJANA IDEA,",
+     "at": 0.0,
+     "until": 2.12,
+     "y": 880
+    },
+    {
+     "kind": "say",
+     "text": "bukan untuk",
+     "key": "MENYIMPANNYA.”",
+     "at": 2.12,
+     "until": 4.12,
+     "y": 880,
+     "color": "gold"
+    },
+    {
+     "kind": "prop",
+     "name": "Brain",
+     "at": 0.15,
+     "until": 2.12,
+     "x": 360,
+     "y": 1370,
+     "size": 340,
+     "wobble": 8
+    },
+    {
+     "kind": "prop",
+     "name": "Light bulb",
+     "at": 1.0,
+     "until": 2.12,
+     "x": 730,
+     "y": 1370,
+     "size": 340,
+     "wobble": 12
+    },
+    {
+     "kind": "prop",
+     "name": "File cabinet",
+     "at": 2.2,
+     "until": 4.12,
+     "x": 540,
+     "y": 1370,
+     "size": 380,
+     "wobble": 0
+    },
+    {
+     "kind": "prop",
+     "name": "Cross mark",
+     "at": 3.18,
+     "until": 4.12,
+     "x": 680,
+     "y": 1250,
+     "size": 200,
+     "wobble": 10
+    },
+    {
+     "kind": "tape",
+     "text": "DAVID ALLEN",
+     "at": 4.12,
+     "until": 10.0,
+     "rot": 2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Kata-kata David Allen,",
+     "key": "PENULIS TERKENAL DUNIA",
+     "at": 4.12,
+     "until": 10.0,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Open book",
+     "at": 4.3,
+     "until": 8.38,
+     "x": 540,
+     "y": 1370,
+     "size": 400,
+     "wobble": 6
+    },
+    {
+     "kind": "prop",
+     "name": "Globe showing Asia-Australia",
+     "at": 8.38,
+     "until": 10.0,
+     "x": 540,
+     "y": 1370,
+     "size": 400,
+     "wobble": 8
+    },
+    {
+     "kind": "tape",
+     "text": "KALAU TAK MENULIS",
+     "at": 10.0,
+     "until": 22.68,
+     "rot": -2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Tapi bila kau",
+     "key": "TAK TULIS...",
+     "at": 10.0,
+     "until": 12.38,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Pencil",
+     "at": 10.2,
+     "until": 12.38,
+     "x": 540,
+     "y": 1370,
+     "size": 360,
+     "wobble": 10
+    },
+    {
+     "kind": "say",
+     "text": "Walaupun benda kecil macam",
+     "key": "PRINT NOTA,",
+     "at": 12.38,
+     "until": 15.22,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Printer",
+     "at": 13.96,
+     "until": 21.2,
+     "x": 290,
+     "y": 1330,
+     "size": 270,
+     "wobble": 8
+    },
+    {
+     "kind": "say",
+     "text": "hantar borang atau",
+     "key": "BAYAR YURAN KELAS",
+     "at": 15.22,
+     "until": 17.82,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Page facing up",
+     "at": 15.22,
+     "until": 21.2,
+     "x": 540,
+     "y": 1420,
+     "size": 270,
+     "wobble": 8
+    },
+    {
+     "kind": "prop",
+     "name": "Dollar banknote",
+     "at": 16.56,
+     "until": 21.2,
+     "x": 790,
+     "y": 1330,
+     "size": 270,
+     "wobble": 8
+    },
+    {
+     "kind": "say",
+     "text": "Otak kau simpan semua tu sebagai",
+     "key": "“KERJA BELUM SIAP”",
+     "at": 17.82,
+     "until": 22.68,
+     "y": 880,
+     "color": "gold"
+    },
+    {
+     "kind": "tape",
+     "text": "KEPALA SERABUT",
+     "at": 22.68,
+     "until": 32.74,
+     "rot": 2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Dia ulang-ulang",
+     "key": "DALAM KEPALA",
+     "at": 22.68,
+     "until": 25.28,
+     "y": 880
+    },
+    {
+     "kind": "scribble",
+     "at": 23.0,
+     "until": 25.28,
+     "x": 540,
+     "y": 1370,
+     "size": 440,
+     "seed": 3
+    },
+    {
+     "kind": "say",
+     "text": "Nak study",
+     "key": "TAK FOKUS",
+     "at": 25.28,
+     "until": 27.28,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Books",
+     "at": 25.3,
+     "until": 27.28,
+     "x": 540,
+     "y": 1370,
+     "size": 380,
+     "wobble": 6
+    },
+    {
+     "kind": "scribble",
+     "at": 25.6,
+     "until": 27.28,
+     "x": 700,
+     "y": 1240,
+     "size": 220,
+     "seed": 5
+    },
+    {
+     "kind": "say",
+     "text": "Nak tidur pun",
+     "key": "TERINGAT",
+     "at": 27.28,
+     "until": 28.86,
+     "y": 880
+    },
+    {
+     "kind": "prop",
+     "name": "Bed",
+     "at": 27.3,
+     "until": 28.86,
+     "x": 540,
+     "y": 1370,
+     "size": 400,
+     "wobble": 6
+    },
+    {
+     "kind": "say",
+     "text": "Kepala",
+     "key": "SERABUT!",
+     "at": 28.86,
+     "until": 30.52,
+     "y": 880,
+     "color": "gold"
+    },
+    {
+     "kind": "scribble",
+     "at": 28.9,
+     "until": 32.74,
+     "x": 540,
+     "y": 1370,
+     "size": 520,
+     "seed": 7
+    },
+    {
+     "kind": "say",
+     "text": "Padahal",
+     "key": "BENDA KECIL JE.",
+     "at": 30.52,
+     "until": 32.74,
+     "y": 880
+    },
+    {
+     "kind": "tape",
+     "text": "SOLUSINYA",
+     "at": 32.74,
+     "until": 42.56,
+     "rot": -2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Sebab tu kau perlukan",
+     "key": "MINI DIARI 2027",
+     "at": 32.74,
+     "until": 36.64,
+     "y": 880
+    },
+    {
+     "kind": "card",
+     "img": "kenapa_pilih.jpg",
+     "at": 33.2,
+     "until": 36.64,
+     "x": 540,
+     "y": 1420,
+     "w": 470,
+     "rot": -2
+    },
+    {
+     "kind": "say",
+     "text": "Saiz A7,",
+     "key": "MUAT DALAM POKET",
+     "at": 36.64,
+     "until": 39.06,
+     "y": 880
+    },
+    {
+     "kind": "card",
+     "img": "saiz_kecil.jpg",
+     "at": 36.7,
+     "until": 39.06,
+     "x": 540,
+     "y": 1420,
+     "w": 470,
+     "rot": 2
+    },
+    {
+     "kind": "say",
+     "text": "120 muka surat,",
+     "key": "HARD COVER, TAK KOYAK",
+     "at": 39.06,
+     "until": 42.56,
+     "y": 880
+    },
+    {
+     "kind": "card",
+     "img": "bahagian_dalam.jpg",
+     "at": 39.1,
+     "until": 42.56,
+     "x": 540,
+     "y": 1420,
+     "w": 470,
+     "rot": -2
+    },
+    {
+     "kind": "tape",
+     "text": "8 DESIGN",
+     "at": 42.56,
+     "until": 45.86,
+     "rot": 2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Ada 8 design cover,",
+     "key": "PILIH IKUT GAYA KAU",
+     "at": 42.56,
+     "until": 45.86,
+     "y": 880
+    },
+    {
+     "kind": "card",
+     "img": "kegunaan.jpg",
+     "at": 42.6,
+     "until": 45.86,
+     "x": 540,
+     "y": 1420,
+     "w": 470,
+     "rot": 2
+    },
+    {
+     "kind": "tape",
+     "text": "HARGA",
+     "at": 45.86,
+     "until": 99,
+     "rot": -2,
+     "y": 800
+    },
+    {
+     "kind": "say",
+     "text": "Bawah",
+     "key": "RM3 JE!",
+     "at": 45.86,
+     "until": 99,
+     "y": 880,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "rancang_hari.jpg",
+     "at": 45.9,
+     "until": 99,
+     "x": 540,
+     "y": 1420,
+     "w": 470,
+     "rot": -2
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 46.6,
+     "y": 1720
+    }
+   ]
+  }
+ ],
+ "end": 47.96
+}

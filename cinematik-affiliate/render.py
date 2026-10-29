@@ -8,7 +8,7 @@ blur-in animations, headlines tucked behind the subject, pills, count-up, yellow
 import argparse, json, math, os, subprocess
 import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-import project
+import project, fx
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H = 1080, 1920
@@ -94,7 +94,10 @@ def load(prj):
             s["start"], s["end"] = g(s["start"], s.get("end"))
             if "pills" in s: s["pills"] = [[txt, f(ts)] for txt, ts in s["pills"]]
         cfg["subs"] = [[*g(a, b), txt] for a, b, txt in cfg["subs"]]
+        fx.remap(cfg.get("fx", []), f)
     dur = probe(cfg["source"])[4] if os.path.exists(cfg["source"]) else 9999.0
+    for s in cfg.get("fx", []):
+        if "start" in s and s.get("end") is None: s["end"] = dur + 1
     for s in cfg["segments"]:
         if s.get("end") is None: s["end"] = dur + 1
     cfg["subs"] = [[a, dur + 1 if b is None else b, txt] for a, b, txt in cfg["subs"]]
@@ -395,7 +398,7 @@ def layers(cfg, t):
             x = 540 - total / 2
             for (txt, ts), im in zip(s["pills"], imgs):
                 pa = min(a, vis(t, ts, t1, 0.28))
-                if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, PILL_Y))
+                if pa > 0: front.append((anim(im, pa, 0.9), x + im.width / 2, s.get("pills_y", PILL_Y)))   # e.g. top, clear of a book held low
                 x += im.width + gap
         if s.get("img"):   # product photo card popping up over the lower frame, e.g. a page of the book being described
             im = photo_card(os.path.join(cfg["_input"], s["img"]), s.get("img_w", 780), s.get("img_rot", -3))
@@ -474,7 +477,18 @@ def main():
                             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)
 
-    prev = None; pts_s = None; miss = 0; n = 0
+    pts_s = None; miss = 0; n = 0
+    mstate = {"prev": None, "n": -2, "m": None}
+    def person_mask(img):
+        """selfie mask at full size, smoothed over consecutive frames; computed once per frame"""
+        if mstate["n"] == n: return mstate["m"]
+        small = cv2.resize(np.clip(img, 0, 255).astype(np.uint8), (540, 960), interpolation=cv2.INTER_AREA)
+        m = np.squeeze(seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(small))).confidence_masks[0].numpy_view()).astype(np.float32)
+        prev = mstate["prev"] if mstate["n"] == n - 1 else None
+        m = m if prev is None else 0.65 * m + 0.35 * prev
+        mm = cv2.resize(cv2.GaussianBlur(np.clip((m - 0.35) / 0.3, 0, 1), (0, 0), 1.5), (W, H), interpolation=cv2.INTER_LINEAR)
+        mstate.update(prev=m, n=n, m=mm)
+        return mm
     while True:
         buf = dec.stdout.read(W * H * 3)
         if len(buf) < W * H * 3: break
@@ -493,24 +507,21 @@ def main():
                 miss += 1
             if pts_s is not None and miss < 4:
                 fr = beauty.beautify(fr, pts_s)
-        fr = apply_zoom(fr, zoom_for(cfg, t))
-        base = fr.astype(np.float32) * SHADE
+        fr = apply_zoom(fr, zoom_for(cfg, t)).astype(np.float32)
+        extra = []
+        if cfg.get("fx"):   # "16 efek" camera effects (fx.py)
+            fr, extra = fx.picture(cfg, t, fr, person_mask)
+            face_box = None if pts_s is None else (*pts_s.min(0), *pts_s.max(0))
+            extra += fx.overlays(cfg, t, face_box)
+        base = fr * SHADE
         back, front = layers(cfg, t)
         if back:
             # headline sits behind the person: paint it, then put the person back on top
-            small = cv2.resize(fr, (540, 960), interpolation=cv2.INTER_AREA)
-            m = seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(small))).confidence_masks[0].numpy_view()
-            m = np.squeeze(m).astype(np.float32)
-            m = m if prev is None else 0.65 * m + 0.35 * prev
-            prev = m
-            mm = cv2.GaussianBlur(np.clip((m - 0.35) / 0.3, 0, 1), (0, 0), 1.5)
-            mm = cv2.resize(mm, (W, H), interpolation=cv2.INTER_LINEAR)[..., None]
+            mm = person_mask(fr)[..., None]
             withtext = base.copy()
             for img, cx, cy in back: blend(withtext, img, cx, cy)
             base = withtext * (1 - mm) + base * mm
-        else:
-            prev = None
-        for img, cx, cy in front:
+        for img, cx, cy in front + extra:
             if isinstance(img, tuple): glass(base, img[1], img[2], img[3])   # ("glass", box, alpha, tint)
             else: blend(base, img, cx, cy)
         enc.stdin.write(np.clip(base, 0, 255).astype(np.uint8).tobytes())

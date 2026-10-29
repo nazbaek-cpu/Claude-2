@@ -114,6 +114,26 @@ The preset's `"speed"` shortens pauses and speeds up the voiceover (pitch kept),
 the times from the original recording. Its `"voice": {"chain": "clean"}` is the gentle studio chain for a voiceover that is
 already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light denoise, no saturation. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
 
+## "16 efek" camera effects (`fx` in project.json)
+
+Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek.md) through `fx.py`, each tied to a voice time
+(they follow the speed pass like the segments). Example: `projects/infografik-sejarah-16efek/`.
+
+| Kind | What it does |
+|---|---|
+| `checklist` | title + numbered two-column list on a dark card; the item being spoken turns yellow (`items` [[text, at]]) |
+| `headline` | torn newspaper strip with a yellow highlighter sweep (`tag`, `lines`, `y`), plus `wall` clippings pinned behind the person |
+| `zoomcut` | zoom blur and a yellow flash through a cut (`at`) |
+| `digizoom` | camcorder UI (REC, timecode, face brackets, zoom readout) and a punch-in (`zoom`, `zoom_at`, `focus`) |
+| `papercut` | person cut out with a white edge over a torn-paper collage, ransom-note letters (`word`, `word_y`) |
+| `depth` | big words behind the head (`back`) or in front (`front`) that burst into letters when the next one comes (`words` [[text, at, slot]]) |
+| `beforeafter` | glowing wipe from a flat grey "before" to the graded picture (`labels`) |
+| `doodle` | hand-drawn outline that boils around the person, with sparkles |
+| `framebreak` | the video shrinks into a reel frame over a blurred copy, the head pokes out over the top edge (`user`, `caption`, `cut`) |
+| `comment` | comment box where a keyword types itself in (`text`, `cps`, `y`) |
+
+A segment's `pills_y` moves its pills (e.g. to the top, clear of a book held low).
+
 ## Saved reference styles
 
 - [`styles/animasi-kartun.md`](styles/animasi-kartun.md): "animasi kartun", a flat cartoon explainer on ruled cream paper (mascot, flat props, tape labels, data bar charts) with its script formula.

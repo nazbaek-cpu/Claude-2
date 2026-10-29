@@ -63,6 +63,13 @@ def events(cfg):
             for ms in range(2000):
                 t = s["start"] + ms / 1000; v = count_value(s, t)
                 if v != last and t - last_t >= 0.07: ev.append((t, "tick")); last, last_t = v, t   # decimals: no machine-gun
+    for s in cfg.get("fx", []):   # "16 efek" (fx.py)
+        k = s["kind"]
+        if k == "zoomcut": ev.append((s["at"] - 0.3, "whoosh"))
+        elif k in ("headline", "papercut", "beforeafter", "framebreak", "digizoom"): ev.append((s["start"] - 0.15, "whoosh"))
+        elif k == "depth": ev += [(at - 0.15, "whoosh") for _, at, _ in s["words"]]
+        elif k == "checklist": ev += [(at, "tick") for _, at in s["items"]]
+        elif k == "comment": ev += [(s["start"] + 0.05, "pop"), (s["start"] + 0.45 + len(s.get("text", "")) / s.get("cps", 16), "ding")]
     return sorted(ev)
 
 def main():

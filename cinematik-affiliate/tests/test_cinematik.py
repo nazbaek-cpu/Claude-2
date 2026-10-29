@@ -286,3 +286,19 @@ def test_explainer_coklat_doodle_and_scribble(tmp_path):
         assert cfg["scenes"][0]["items"][0]["poses"][1] == ["pose2.png", 1.0]
     finally:
         vars(explainer).update(saved)
+
+
+def test_fx_effects_draw_and_follow_the_voice():
+    import fx
+    import numpy as np
+    cfg = {"fx": [{"kind": "checklist", "start": 0.0, "end": 9.0, "title": ["6 sebab"], "items": [["A", 1.0], ["B", 2.0]]},
+                  {"kind": "beforeafter", "start": 3.0, "end": 6.0, "labels": ["before", "after"]},
+                  {"kind": "comment", "start": 7.0, "end": 9.0, "text": "NAK"},
+                  {"kind": "zoomcut", "at": 5.0}]}
+    fr = np.zeros((fx.H, fx.W, 3), np.float32); fr[..., 0] = 200   # a red picture
+    out, extra = fx.picture(cfg, 3.4, fr.copy(), lambda f: None)
+    assert out[960, 100, 1] > 40 and out[960, 1000, 1] < 10     # left still grey "before", right already the graded red
+    assert any(img.width > 50 for img, _, _ in extra)           # the "before" label
+    assert fx.overlays(cfg, 1.5) and fx.overlays(cfg, 8.9)      # checklist card, comment box
+    two = fx.remap(json.loads(json.dumps(cfg["fx"])), lambda x: x / 2)
+    assert two[0]["items"][1] == ["B", 1.0] and two[3]["at"] == 2.5 and two[1]["end"] == 3.0

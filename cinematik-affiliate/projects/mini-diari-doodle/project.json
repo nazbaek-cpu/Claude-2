@@ -159,13 +159,13 @@
     },
     {
      "kind": "prop",
-     "name": "Globe showing Asia-Australia",
+     "name": "Glowing star",
      "at": 8.38,
      "until": 10.0,
      "x": 540,
      "y": 1370,
      "size": 400,
-     "wobble": 8
+     "wobble": 10
     },
     {
      "kind": "tape",

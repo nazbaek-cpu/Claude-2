@@ -2,6 +2,7 @@
 
 Rujukan: reel @tenfoldmarc, "16 video effects claude can create", 35.4 s, 9:16, 30 fps, bercakap terus ke kamera.
 Fail video tidak disimpan di sini (repo awam, hak cipta pemilik asal); ini nota gaya untuk dibina semula.
+Resipi yang dah diuji untuk video produk: [`nota-16-effect.md`](nota-16-effect.md) (efek dalam `fx.py`).
 
 ## Struktur
 

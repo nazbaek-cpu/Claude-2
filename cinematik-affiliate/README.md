@@ -138,6 +138,7 @@ A segment's `pills_y` moves its pills (e.g. to the top, clear of a book held low
 
 - [`styles/animasi-kartun.md`](styles/animasi-kartun.md): "animasi kartun", a flat cartoon explainer on ruled cream paper (mascot, flat props, tape labels, data bar charts) with its script formula.
 - [`styles/16-efek.md`](styles/16-efek.md): "16 efek", a talking-head reel that shows one camera effect a second (headline wall, paper cut, before/after wipe, depth text…) under an on-screen progress checklist, then a keyword-comment CTA.
+- [`styles/nota-16-effect.md`](styles/nota-16-effect.md): "Nota 16 EFFECT", the tested recipe for a product talking head in that style: flip, grade and lipstick settings, which effect goes with which kind of line, layout rules and an `fx` template.
 
 ## Quick start
 

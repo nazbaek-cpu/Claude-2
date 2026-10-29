@@ -15,12 +15,13 @@ KEEP_TEXTURE = 0.32    # fraction of pore detail kept (natural, not plastic)
 TONE_EVEN = 0.75       # how much blotchy colour is evened out
 LIP_RGB = (164, 114, 102)  # natural nude-rose: evens the lip tone, pulls back strong red
 LIP_AMT = 0.65         # 0 = lips untouched
+LIP_LIGHT = 0.97       # lip lightness: below 1 a touch deeper, above 1 a brighter lipstick
 BROW_AMT = 0.0         # 0 = brows untouched; ~0.2 = soft brown fill
 
 def configure(cfg):
     g = globals()
     for key, name in (("smooth", "SMOOTH"), ("keep_texture", "KEEP_TEXTURE"), ("tone_even", "TONE_EVEN"),
-                      ("lip_rgb", "LIP_RGB"), ("lip_amount", "LIP_AMT"), ("brows", "BROW_AMT")):
+                      ("lip_rgb", "LIP_RGB"), ("lip_amount", "LIP_AMT"), ("lip_light", "LIP_LIGHT"), ("brows", "BROW_AMT")):
         if key in cfg: g[name] = tuple(cfg[key]) if key == "lip_rgb" else float(cfg[key])
 
 def _poly(mask, pts, idx, val=1.0):
@@ -84,7 +85,7 @@ def beautify(frame, pts):
     la = (lips * LIP_AMT)[..., None]
     shifted = lab.copy()
     shifted[..., 1:] = tgt[1:]
-    shifted[..., 0] = lab[..., 0] * 0.97  # keep lip texture
+    shifted[..., 0] = np.minimum(lab[..., 0] * LIP_LIGHT, 100)  # keep lip texture
     lab = lab * (1 - la) + shifted * la
 
     # ---- brows: soft, natural fill ----

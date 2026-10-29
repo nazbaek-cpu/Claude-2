@@ -140,7 +140,7 @@ Any source size or frame rate works. It is scaled and cropped to fill 1080×1920
   "zoom": 1.12,                       // punch-in on every other phrase
   "sfx_gain_db": 0,                   // +3 for louder SFX, -100 to mute
   "beauty": {"enabled": true, "smooth": 0.8, "keep_texture": 0.32, "tone_even": 0.75,
-             "lip_rgb": [164, 114, 102], "lip_amount": 0.65, "brows": 0.0},   // natural nude-rose lips; brows 0.2 = soft fill
+             "lip_rgb": [164, 114, 102], "lip_amount": 0.65, "lip_light": 0.97, "brows": 0.0},   // nude-rose lips; lip_light above 1 = brighter; brows 0.2 = soft fill
   "head_scrim": false,                // true darkens the top behind headlines (a lit lamp or bright window behind the text)
   "behind": true,                     // false puts every headline/number in front (with a soft shadow) when the head fills the top
   "theme": "skrip",                   // optional simple food look: yellow handwritten line (Pacifico, thin white outline)

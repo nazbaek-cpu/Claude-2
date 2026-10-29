@@ -5,7 +5,7 @@
  "whisper_prompt": "Calon SPM tahun depan. Buku nota sebesar tapak tangan, Infografik Sejarah Tingkatan 5, buku teks padat, matematik tambahan, kimia, fizik.",
  "speed": {"tempo": 1.12, "max_pause": 0.22},
  "grade": "bright",
- "beauty": {"lip_rgb": [172, 98, 98], "lip_amount": 1.0},
+ "beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02},
  "behind": false,
  "segments": [
   {"start": 0.3, "end": 6.92, "title": {"kicker": "CALON SPM TAHUN DEPAN", "lines": ["Buat persiapan", "dari sekarang."], "accent": ["sekarang."]}},

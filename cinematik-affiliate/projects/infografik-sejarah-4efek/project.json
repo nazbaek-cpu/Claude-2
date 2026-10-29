@@ -1,0 +1,23 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Calon SPM tahun depan. Nota buku sebesar tapak tangan. Sejarah, fizik, kimia, matematik dan matematik tambahan. Infografik, tarikh penting, peristiwa penting, buku teks.",
+ "speed": {"tempo": 1.12, "max_pause": 0.22},
+ "grade": "bright",
+ "beauty": {"lip_rgb": [196, 92, 108], "lip_amount": 1.0, "lip_light": 1.02},
+ "segments": [
+  {"start": 34.08, "end": 35.2, "pills_y": 330, "pills": [["Senang", 34.08], ["Ringan", 34.58], ["Mudah", 35.0]]}
+ ],
+ "fx": [
+  {"kind": "headline", "start": 0.9, "end": 4.45, "tag": "BERITA PELAJAR · HARI INI", "lines": ["Calon SPM tahun depan,", "mula persiapan sekarang"], "y": 330,
+   "wall": [["SPM|2027", 175, 660, -6], ["nota|padat", 905, 720, 5], ["calon|SPM", 160, 930, 4]]},
+  {"kind": "digizoom", "start": 4.45, "end": 10.56, "zoom": 1.35, "zoom_at": 5.46, "focus": [540, 1050]},
+  {"kind": "framebreak", "start": 10.56, "end": 14.3, "user": "5 subjek SPM", "caption": "Sejarah · Fizik · Kimia · Matematik · Add Maths"},
+  {"kind": "headline", "start": 14.38, "end": 20.8, "tag": "INFOGRAFIK · DARI BUKU TEKS", "lines": ["Infografik menarik +", "tarikh & peristiwa penting"], "y": 330},
+  {"kind": "digizoom", "start": 20.82, "end": 24.44, "zoom": 1.3, "zoom_at": 21.0, "focus": [540, 1250], "ui_y": 1840},
+  {"kind": "framebreak", "start": 24.44, "end": 34.0, "user": "ibu ayah", "caption": "untuk anak calon SPM tahun depan"},
+  {"kind": "comment", "start": 35.1, "end": null, "text": "DAPATKAN DI LINK BAWAH", "cps": 70, "y": 1770}
+ ],
+ "subs": []
+}

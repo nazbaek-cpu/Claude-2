@@ -117,6 +117,7 @@ already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light 
 ## Saved reference styles
 
 - [`styles/animasi-kartun.md`](styles/animasi-kartun.md): "animasi kartun", a flat cartoon explainer on ruled cream paper (mascot, flat props, tape labels, data bar charts) with its script formula.
+- [`styles/16-efek.md`](styles/16-efek.md): "16 efek", a talking-head reel that shows one camera effect a second (headline wall, paper cut, before/after wipe, depth text…) under an on-screen progress checklist, then a keyword-comment CTA.
 
 ## Quick start
 

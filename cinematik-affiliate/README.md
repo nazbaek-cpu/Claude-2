@@ -106,6 +106,10 @@ The preset's `"speed"` shortens pauses and speeds up the voiceover (pitch kept),
 the times from the original recording. Its `"voice": {"chain": "clean"}` is the gentle studio chain for a voiceover that is
 already loud and squashed (phone or CapCut "enhance"): declip, hum notch, light denoise, no saturation. Example: `projects/matematik-explainer/` (voiceover and product photos go in its `input/`).
 
+## Saved reference styles
+
+- [`styles/animasi-kartun.md`](styles/animasi-kartun.md): "animasi kartun", a flat cartoon explainer on ruled cream paper (mascot, flat props, tape labels, data bar charts) with its script formula.
+
 ## Quick start
 
 ```bash

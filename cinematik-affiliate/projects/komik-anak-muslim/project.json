@@ -1,0 +1,202 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Anak dah mula remaja, datang bulan. Buku komik Ana Muslim. Toleransi, tauladan, nilai-nilai murni. Bahasa Korea: chincha, mashita. 6 siri, Makcik Bawang. Intipati.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.0,
+   "end": 7.42,
+   "tag": "IBU AYAH · HARI INI",
+   "lines": [
+    "Anak dah datang bulan,",
+    "tapi tak tahu nak terangkan?"
+   ],
+   "y": 330,
+   "wall": [
+    [
+     "anak|remaja",
+     165,
+     660,
+     -6
+    ],
+    [
+     "datang|bulan",
+     910,
+     700,
+     5
+    ]
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 7.42
+  },
+  {
+   "kind": "checklist",
+   "start": 7.42,
+   "end": 62.9,
+   "title": [
+    "6 sebab ibu ayah",
+    "pilih komik ni"
+   ],
+   "hide": [
+    [
+     32.2,
+     37.4
+    ]
+   ],
+   "items": [
+    [
+     "Faham datang bulan",
+     13.54
+    ],
+    [
+     "Komik + ilmiah",
+     18.98
+    ],
+    [
+     "Nilai murni & tauladan",
+     24.82
+    ],
+    [
+     "Belajar bahasa Korea",
+     33.86
+    ],
+    [
+     "6+ siri, ada Makcik Bawang",
+     47.32
+    ],
+    [
+     "Anak tak bosan membaca",
+     57.3
+    ]
+   ]
+  },
+  {
+   "kind": "digizoom",
+   "start": 7.42,
+   "end": 13.86,
+   "zoom": 1.3,
+   "zoom_at": 8.48,
+   "focus": [
+    540,
+    1150
+   ],
+   "ui_y": 1840
+  },
+  {
+   "kind": "beforeafter",
+   "start": 13.86,
+   "end": 20.5,
+   "labels": [
+    "komik biasa",
+    "komik + ilmu"
+   ],
+   "label_y": 900
+  },
+  {
+   "kind": "depth",
+   "start": 20.5,
+   "end": 26.18,
+   "scatter_at": 25.95,
+   "y_back": 640,
+   "words": [
+    [
+     "TOLERANSI",
+     22.34,
+     "back"
+    ],
+    [
+     "TAULADAN",
+     23.28,
+     "back"
+    ],
+    [
+     "NILAI MURNI",
+     24.82,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 26.18
+  },
+  {
+   "kind": "digizoom",
+   "start": 26.18,
+   "end": 32.42,
+   "zoom": 1.25,
+   "zoom_at": 27.18,
+   "focus": [
+    540,
+    1150
+   ],
+   "ui_y": 1840
+  },
+  {
+   "kind": "papercut",
+   "start": 32.42,
+   "end": 37.3,
+   "word": "chincha! mashita!",
+   "word_at": 34.82,
+   "word_y": 290,
+   "one_line": true
+  },
+  {
+   "kind": "zoomcut",
+   "at": 37.3
+  },
+  {
+   "kind": "framebreak",
+   "start": 37.3,
+   "end": 47.98,
+   "user": "komik ana muslim",
+   "caption": "dah 6+ siri, terbaru Makcik Bawang"
+  },
+  {
+   "kind": "depth",
+   "start": 55.52,
+   "end": 62.94,
+   "scatter_at": 62.7,
+   "y_back": 640,
+   "words": [
+    [
+     "TAK BOSAN",
+     57.3,
+     "back"
+    ],
+    [
+     "INTIPATI",
+     60.94,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "comment",
+   "start": 62.94,
+   "end": null,
+   "text": "DAPATKAN DI LINK BAWAH",
+   "cps": 30,
+   "y": 330
+  }
+ ],
+ "subs": []
+}

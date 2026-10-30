@@ -17,6 +17,8 @@ Panggil: **"buat video ni guna Nota 16 EFFECT"**.
 4. **Transkrip:** `transcribe.py <projek> --model large-v3` (model yang dah ada dalam cache), ambil masa setiap perkataan.
 5. **Petakan efek ke ayat** (jadual bawah), tulis `fx` dalam `project.json`, render, semak satu frame sesaat.
 6. **Preview 720p** suara kuat → tunggu "render" → final 1080p (crf 19, −10 LUFS) → caption + hashtag.
+   Encode final 1080p ke scratchpad **serentak dengan preview**: /dev/shm kerap terpadam, jadi bila pengguna kata
+   "render" fail final dah sedia (tak perlu render semula 20 minit).
 
 ## Efek ikut jenis ayat
 

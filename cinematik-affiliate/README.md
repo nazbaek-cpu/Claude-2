@@ -123,7 +123,7 @@ Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek
 
 | Kind | What it does |
 |---|---|
-| `checklist` | title + numbered two-column list on a dark card; the item being spoken turns yellow (`items` [[text, at]]); `hide` [[from, to]] clears the top for a moment |
+| `checklist` | title + numbered two-column list on a dark card; the item being spoken turns yellow (`items` [[text, at]]); `hide` [[from, to]] clears the top for a moment; `cols` 1, `scale` and `x` make a compact card on one side (several windows when the product moves) |
 | `headline` | torn newspaper strip with a yellow highlighter sweep (`tag`, `lines`, `y`), plus `wall` clippings pinned behind the person |
 | `zoomcut` | zoom blur and a yellow flash through a cut (`at`) |
 | `digizoom` | camcorder UI (REC, timecode, face brackets, zoom readout) and a punch-in (`zoom`, `zoom_at`, `focus`) |
@@ -132,7 +132,7 @@ Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek
 | `beforeafter` | glowing wipe from a flat grey "before" to the graded picture (`labels`) |
 | `doodle` | hand-drawn outline that boils around the person, with `sparks`; `box` limits it (e.g. head and shoulders when a raised product is half outside the mask) |
 | `framebreak` | the video shrinks into a reel frame over a blurred copy, the head pokes out over the top edge (`user`, `caption`, `cut`) |
-| `comment` | comment box where a keyword types itself in (`text`, `cps`, `y`) |
+| `comment` | comment box where a keyword types itself in (`text`, `cps`, `x`, `y`, `w`) |
 
 A segment's `pills_y` moves its pills (e.g. to the top, clear of a book held low).
 

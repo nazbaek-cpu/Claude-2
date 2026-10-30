@@ -75,30 +75,34 @@ def text(txt, f, fill=(255, 255, 255), stroke=0, stroke_fill=(0, 0, 0)):
 
 # ---------- overlays ----------
 def checklist(s, t):
-    """title plus a numbered two-column list; the item being spoken turns yellow (a progress bar for the viewer)"""
+    """title plus a numbered list (two columns, or "cols": 1); the item being spoken turns yellow (a progress bar for the
+    viewer). "scale" and "x" make a compact card on one side, e.g. when the product fills the other side"""
     items = s["items"]; cur = max([i for i, (_, at) in enumerate(items) if t >= at], default=-1)
-    key = ("check", id(s), cur)
+    ncol = s.get("cols", 2); key = ("check", id(s), cur)
     if key not in cache:
-        img = Image.new("RGBA", (960, 420), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+        rows = (len(items) + ncol - 1) // ncol; cw = 440 * ncol + 80
+        img = Image.new("RGBA", (cw, 140 + rows * 46 + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
         y = 0
         for k, line in enumerate(s.get("title", [])):
-            f = jak(56 if k == 0 else 50, 800); words = line.split(" "); x = 480 - f.getlength(line) / 2
+            f = jak(56 if k == 0 else 50, 800); words = line.split(" "); x = cw / 2 - f.getlength(line) / 2
             for w_ in words:   # a leading number is yellow, like "16 video effects"
                 col = YEL if w_.isdigit() else (255, 255, 255)
                 d.text((x, y), w_, font=f, fill=col, stroke_width=2, stroke_fill=(0, 0, 0, 90)); x += f.getlength(w_ + " ")
             y += 60
-        rows = (len(items) + 1) // 2; cy = y + 18; ch = rows * 46 + 26
-        img.alpha_composite(rounded((900, ch), 22, (14, 14, 16, 150)), (30, cy))
+        cy = y + 18; ch = rows * 46 + 26
+        img.alpha_composite(rounded((cw - 60, ch), 22, (14, 14, 16, 150)), (30, cy))
         fi, fn = jak(30, 700), jak(22, 600)
         for i, (txt, _) in enumerate(items):
             col, row = i // rows, i % rows; x0, y0 = 60 + col * 440, cy + 16 + row * 46
             c = YEL if i == cur else (255, 255, 255, 255 if i < cur else 150)
             d.text((x0, y0 + 6), f"{i + 1:02d}", font=fn, fill=(255, 255, 255, 120))
             d.text((x0 + 40, y0), txt, font=fi, fill=c)
-        cache[key] = shadow(img, 90, 10, 4)
+        img = shadow(img, 90, 10, 4)
+        if s.get("scale", 1) != 1: img = img.resize((int(img.width * s["scale"]), int(img.height * s["scale"])), Image.LANCZOS)
+        cache[key] = img
     hide = max([ease(ramp(t, a, 0.2)) * (1 - ease(ramp(t, b, 0.25))) for a, b in s.get("hide", [])], default=0.0)   # make room up top
     a = vis(t, s) * (1 - hide)
-    return [(fade(cache[key], a), W / 2, s.get("y", 250))] if a > 0 else []
+    return [(fade(cache[key], a), s.get("x", W / 2), s.get("y", 250))] if a > 0 else []
 
 def paper_strip(lines, tag, w=900, seed=4, mark=None, mark_p=0.0):
     """torn newspaper strip: small tag line, then serif lines; mark (a line index) gets a yellow highlighter sweep"""
@@ -175,10 +179,11 @@ def comment(s, t):
     txt = s.get("text", "NAK"); n = int(max(0, t - s["start"] - 0.45) * s.get("cps", 16)); shown = txt[:n]
     key = ("cmt", id(s), shown)
     if key not in cache:
-        w, h = 880, 104; img = rounded((w, h), 52, (18, 18, 20, 215)); d = ImageDraw.Draw(img)
+        w, h = s.get("w", 880), 104; img = rounded((w, h), 52, (18, 18, 20, 215)); d = ImageDraw.Draw(img)
         d.ellipse((22, 20, 86, 84), fill=(150, 150, 155)); d.ellipse((42, 30, 66, 54), fill=(225, 225, 230))
         d.pieslice((32, 52, 76, 96), 180, 360, fill=(225, 225, 230))
         f = jak(38, 800) if shown else font(INTER + "Inter-Medium.otf", 34)
+        while shown and f.size > 22 and f.getlength(shown) > w - 210: f = jak(f.size - 2, 800)   # a narrow box: smaller type
         d.text((108, 30 if shown else 32), shown or s.get("placeholder", "Tambah komen..."), font=f, fill=(255, 255, 255) if shown else (160, 160, 165))
         done = n >= len(txt); bx = w - 84
         d.ellipse((bx, 18, bx + 66, 84), fill=YEL if done else (70, 70, 75))
@@ -186,7 +191,7 @@ def comment(s, t):
         cache[key] = shadow(img, 120, 16, 8)
     sc = 0.8 + 0.2 * ease_back(ramp(t, s["start"], 0.35))
     img = cache[key].resize((int(cache[key].width * sc), int(cache[key].height * sc)), Image.BICUBIC)
-    return [(fade(img, a), W / 2, s.get("y", 1500))]
+    return [(fade(img, a), s.get("x", W / 2), s.get("y", 1500))]
 
 def overlays(cfg, t, face=None):
     out = []

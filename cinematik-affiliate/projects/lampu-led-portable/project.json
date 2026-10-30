@@ -1,0 +1,222 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "Terjaga malam nak baca buku. Tak nak ganggu partner. Lampu portable, bateri, remote, LED, color, decorate rumah, magnetic, dinding, perabot.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_amount": 0.0
+ },
+ "segments": [],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.0,
+   "end": 7.0,
+   "tag": "BERITA MALAM · HARI INI",
+   "lines": [
+    "Terjaga tengah malam nak baca,",
+    "tapi tak nak ganggu partner?"
+   ],
+   "y": 300
+  },
+  {
+   "kind": "headline",
+   "start": 7.0,
+   "end": 12.6,
+   "tag": "SOLUSI · BILIK TIDUR",
+   "lines": [
+    "Lampu LED portable:",
+    "terang, tak ganggu sesiapa"
+   ],
+   "y": 300
+  },
+  {
+   "kind": "checklist",
+   "start": 13.1,
+   "end": 23.4,
+   "title": [
+    "7 sebab kena ada",
+    "lampu ni"
+   ],
+   "items": [
+    [
+     "Lampu portable",
+     13.1
+    ],
+    [
+     "Guna bateri",
+     15.12
+    ],
+    [
+     "Ada remote",
+     17.04
+    ],
+    [
+     "LED sangat terang",
+     21.26
+    ],
+    [
+     "Boleh tukar warna",
+     27.2
+    ],
+    [
+     "Lampu hiasan rumah",
+     33.7
+    ],
+    [
+     "Magnetic, lekat mana-mana",
+     38.04
+    ]
+   ],
+   "cols": 1,
+   "scale": 0.8,
+   "x": 240,
+   "y": 240
+  },
+  {
+   "kind": "checklist",
+   "start": 25.0,
+   "end": 29.6,
+   "title": [
+    "7 sebab kena ada",
+    "lampu ni"
+   ],
+   "items": [
+    [
+     "Lampu portable",
+     13.1
+    ],
+    [
+     "Guna bateri",
+     15.12
+    ],
+    [
+     "Ada remote",
+     17.04
+    ],
+    [
+     "LED sangat terang",
+     21.26
+    ],
+    [
+     "Boleh tukar warna",
+     27.2
+    ],
+    [
+     "Lampu hiasan rumah",
+     33.7
+    ],
+    [
+     "Magnetic, lekat mana-mana",
+     38.04
+    ]
+   ],
+   "cols": 1,
+   "scale": 0.8,
+   "x": 240,
+   "y": 240
+  },
+  {
+   "kind": "checklist",
+   "start": 30.0,
+   "end": 35.8,
+   "title": [
+    "7 sebab kena ada",
+    "lampu ni"
+   ],
+   "items": [
+    [
+     "Lampu portable",
+     13.1
+    ],
+    [
+     "Guna bateri",
+     15.12
+    ],
+    [
+     "Ada remote",
+     17.04
+    ],
+    [
+     "LED sangat terang",
+     21.26
+    ],
+    [
+     "Boleh tukar warna",
+     27.2
+    ],
+    [
+     "Lampu hiasan rumah",
+     33.7
+    ],
+    [
+     "Magnetic, lekat mana-mana",
+     38.04
+    ]
+   ],
+   "cols": 1,
+   "scale": 0.8,
+   "x": 240,
+   "y": 240
+  },
+  {
+   "kind": "checklist",
+   "start": 37.0,
+   "end": 41.6,
+   "title": [
+    "7 sebab kena ada",
+    "lampu ni"
+   ],
+   "items": [
+    [
+     "Lampu portable",
+     13.1
+    ],
+    [
+     "Guna bateri",
+     15.12
+    ],
+    [
+     "Ada remote",
+     17.04
+    ],
+    [
+     "LED sangat terang",
+     21.26
+    ],
+    [
+     "Boleh tukar warna",
+     27.2
+    ],
+    [
+     "Lampu hiasan rumah",
+     33.7
+    ],
+    [
+     "Magnetic, lekat mana-mana",
+     38.04
+    ]
+   ],
+   "cols": 1,
+   "scale": 0.8,
+   "x": 840,
+   "y": 240
+  },
+  {
+   "kind": "comment",
+   "start": 44.36,
+   "end": null,
+   "text": "DAPATKAN DI LINK BAWAH",
+   "cps": 40,
+   "x": 370,
+   "w": 680,
+   "y": 1770
+  }
+ ],
+ "subs": []
+}

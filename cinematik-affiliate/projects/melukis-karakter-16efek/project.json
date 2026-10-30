@@ -1,0 +1,30 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Melukis lidi, emosi, gesture badan, anatomi lelaki dan wanita. Ibu ayah, cipta karakter. 30 topik, 40 bengkel melukis komik. Step by step. Bestnya Melukis Karakter.",
+ "speed": {"tempo": 1.12, "max_pause": 0.22},
+ "grade": "bright",
+ "beauty": {"lip_amount": 0.0},
+ "end": 63.9,
+ "segments": [
+  {"start": 56.22, "end": 61.3, "pills_y": 330, "pills": [["Gabung lukisan", 56.82], ["Cipta karakter", 59.74], ["Ikut suka dia", 60.74]]}
+ ],
+ "fx": [
+  {"kind": "checklist", "start": 1.0, "end": 56.2, "title": ["6 sebab ibu ayah", "pilih buku ni"], "hide": [[44.3, 48.9]],
+   "items": [["Lidi → emosi & gesture", 6.48], ["Anatomi lelaki & wanita", 15.82], ["Cipta karakter sendiri", 25.2],
+             ["30 topik, 40 bengkel", 29.1], ["Step by step, mudah", 46.68], ["Asah kreatif anak", 54.22]]},
+  {"kind": "beforeafter", "start": 1.0, "end": 9.2, "labels": ["lukis lidi", "emosi & gesture"], "label_y": 420},
+  {"kind": "zoomcut", "at": 9.22},
+  {"kind": "digizoom", "start": 9.22, "end": 19.9, "zoom": 1.25, "zoom_at": 10.44, "focus": [700, 1100], "ui_y": 1830},
+  {"kind": "zoomcut", "at": 19.98},
+  {"kind": "framebreak", "start": 19.98, "end": 27.04, "user": "ibu ayah", "caption": "anak suka melukis? biar dia cipta karakter sendiri"},
+  {"kind": "depth", "start": 27.04, "end": 40.36, "scatter_at": 40.1, "y_back": 640,
+   "words": [["30 TOPIK", 29.1, "back"], ["40 BENGKEL", 35.1, "back"], ["KOMIK", 39.4, "back"]]},
+  {"kind": "papercut", "start": 44.5, "end": 48.9, "word": "step by step", "word_at": 46.6, "word_y": 290, "one_line": true},
+  {"kind": "zoomcut", "at": 48.92},
+  {"kind": "digizoom", "start": 48.92, "end": 56.2, "zoom": 1.22, "zoom_at": 52.32, "focus": [540, 1000], "ui_y": 1830},
+  {"kind": "comment", "start": 61.3, "end": null, "text": "DAPATKAN DI LINK BAWAH", "cps": 40, "y": 330}
+ ],
+ "subs": []
+}

@@ -245,15 +245,17 @@ def paper_bg(seed=3):
     cache[key] = np.clip(a, 0, 255)
     return cache[key]
 
-def ransom(word, t0, t, y):
-    """paper-cut letters, each on its own scrap, popping in one by one"""
-    out = []; rng = np.random.default_rng(len(word)); lines = word.split(" ")
+def ransom(word, t0, t, y, one_line=False):
+    """paper-cut letters, each on its own scrap, popping in one by one; a line per word unless one_line"""
+    out = []; rng = np.random.default_rng(len(word)); lines = [word] if one_line else word.split(" ")
     styles = [((255, 255, 255), (20, 20, 20), SERIF), ((255, 214, 10), (20, 20, 20), os.path.join(HERE, "fonts", "ArchivoBlack-Regular.ttf")),
               ((20, 20, 20), (255, 255, 255), SERIF), ((30, 60, 160), (255, 255, 255), os.path.join(HERE, "fonts", "ArchivoBlack-Regular.ttf"))]
     i = 0
     for li, line in enumerate(lines):
         tiles = []
         for ch in line:
+            if ch == " ":
+                tiles.append((None, 0, i)); continue
             bg, fg, fp = styles[int(rng.integers(len(styles)))]; f = font(fp, int(rng.integers(92, 118)))
             key = ("rl", ch, bg, fp, f.size)
             if key not in cache:
@@ -261,8 +263,14 @@ def ransom(word, t0, t, y):
                 tile = Image.new("RGBA", (w, h), bg + (255,)); ImageDraw.Draw(tile).text((17 - x0, 17 - y0), ch.lower(), font=f, fill=fg)
                 cache[key] = shadow(tile, 100, 6, 4)
             tiles.append((cache[key], rng.uniform(-9, 9), i)); i += 1
-        total = sum(tl.width - 30 for tl, _, _ in tiles); x = W / 2 - total / 2
+        total = sum(tl.width - 30 if tl else 40 for tl, _, _ in tiles)
+        if total > 980:   # shrink a long line to fit the screen
+            k_ = 980 / total; tiles = [(tl.resize((int(tl.width * k_), int(tl.height * k_)), Image.LANCZOS) if tl else None, r_, n_) for tl, r_, n_ in tiles]
+            total = sum(tl.width - 30 * k_ if tl else 40 * k_ for tl, _, _ in tiles)
+        x = W / 2 - total / 2
         for tl, rot, k in tiles:
+            if tl is None:
+                x += 40; continue
             p = ramp(t, t0 + 0.07 * k, 0.18)
             if p > 0:
                 im = tl.rotate(rot, Image.BICUBIC, expand=True); sc = 0.4 + 0.6 * ease_back(p, 2.2)
@@ -436,7 +444,7 @@ def picture(cfg, t, fr, get_mask):
             cutout = paper_bg() * (1 - edge) + 255 * edge
             cutout = cutout * (1 - m) + fr * m
             fr = fr * (1 - a) + cutout * a
-        extra += ransom(s.get("word", ""), s.get("word_at", s["start"] + 0.15), t, s.get("word_y", 1560))
+        extra += ransom(s.get("word", ""), s.get("word_at", s["start"] + 0.15), t, s.get("word_y", 1560), s.get("one_line", False))
     for s in active(cfg, t, "depth"):
         back, front = depth_layers(s, t)
         if back and mask is not None:

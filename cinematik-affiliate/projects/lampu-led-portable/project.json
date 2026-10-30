@@ -9,7 +9,12 @@
  },
  "grade": "bright",
  "beauty": {
-  "lip_amount": 0.0
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
  },
  "segments": [],
  "fx": [

@@ -1,0 +1,227 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "end": 63.8,
+ "whisper_prompt": "Ibu ayah yang ada anak calon SPM tahun depan. Buku nota, buku teks padat. Sebesar tapak tangan. Infografik. Sejarah, matematik, matematik tambahan, fizik, kimia. Tingkatan 4 dan 5. Format SPM. Nilam Publication.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [
+  {
+   "start": 45.96,
+   "end": 54.06,
+   "pills_y": 330,
+   "pills": [
+    [
+     "Senang belajar",
+     50.2
+    ],
+    [
+     "Senang ingat",
+     51.6
+    ],
+    [
+     "Senang bawa",
+     53.1
+    ]
+   ]
+  }
+ ],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.0,
+   "end": 7.42,
+   "tag": "IBU AYAH · CALON SPM",
+   "lines": [
+    "Anak calon SPM tahun depan?",
+    "Ni buku teks padat dia"
+   ],
+   "y": 330,
+   "wall": [
+    [
+     "SPM|2027",
+     165,
+     660,
+     -6
+    ],
+    [
+     "nota|padat",
+     910,
+     700,
+     5
+    ]
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 7.42
+  },
+  {
+   "kind": "checklist",
+   "start": 7.42,
+   "end": 45.9,
+   "title": [
+    "6 sebab ibu ayah",
+    "pilih buku ni"
+   ],
+   "hide": [
+    [
+     21.9,
+     26.6
+    ]
+   ],
+   "items": [
+    [
+     "Sebesar tapak tangan",
+     9.86
+    ],
+    [
+     "Penuh infografik",
+     12.24
+    ],
+    [
+     "5 subjek SPM",
+     21.56
+    ],
+    [
+     "Tingkatan 4 & 5",
+     25.42
+    ],
+    [
+     "Ikut format SPM",
+     29.24
+    ],
+    [
+     "Warna menarik",
+     41.06
+    ]
+   ]
+  },
+  {
+   "kind": "digizoom",
+   "start": 7.42,
+   "end": 11.28,
+   "zoom": 1.3,
+   "zoom_at": 9.28,
+   "focus": [
+    540,
+    1100
+   ],
+   "ui_y": 1840
+  },
+  {
+   "kind": "beforeafter",
+   "start": 11.28,
+   "end": 16.2,
+   "labels": [
+    "teks biasa",
+    "infografik"
+   ],
+   "label_y": 900
+  },
+  {
+   "kind": "depth",
+   "start": 16.22,
+   "end": 22.02,
+   "scatter_at": 21.95,
+   "y_back": 640,
+   "words": [
+    [
+     "SEJARAH",
+     18.08,
+     "back"
+    ],
+    [
+     "MATEMATIK",
+     19.14,
+     "back"
+    ],
+    [
+     "ADD MATHS",
+     20.28,
+     "back"
+    ],
+    [
+     "FIZIK",
+     20.8,
+     "back"
+    ],
+    [
+     "KIMIA",
+     21.56,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "papercut",
+   "start": 22.02,
+   "end": 26.5,
+   "word": "tingkatan 4 & 5",
+   "word_at": 24.06,
+   "word_y": 290,
+   "one_line": true
+  },
+  {
+   "kind": "zoomcut",
+   "at": 26.62
+  },
+  {
+   "kind": "framebreak",
+   "start": 26.62,
+   "end": 40.2,
+   "user": "calon SPM",
+   "caption": "ikut format & tajuk soalan SPM"
+  },
+  {
+   "kind": "beforeafter",
+   "start": 40.24,
+   "end": 45.0,
+   "labels": [
+    "hitam putih",
+    "berwarna"
+   ],
+   "label_y": 900
+  },
+  {
+   "kind": "depth",
+   "start": 54.06,
+   "end": 59.5,
+   "scatter_at": 59.4,
+   "y_back": 640,
+   "words": [
+    [
+     "TAPAK TANGAN",
+     56.86,
+     "back"
+    ],
+    [
+     "STUDY MANA-MANA",
+     58.26,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "comment",
+   "start": 59.52,
+   "end": null,
+   "text": "DAPATKAN DI LINK BAWAH",
+   "cps": 40,
+   "y": 330
+  }
+ ],
+ "subs": []
+}

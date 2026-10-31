@@ -43,6 +43,15 @@ def tick():
     sig = np.sin(2 * np.pi * 2300 * t) * np.exp(-t / 0.004)
     return np.stack([sig, sig], 1)
 
+def boing():   # a cartoon bounce: pitch drops with a fast wobble
+    n = int(SR * 0.38); t = np.arange(n) / SR
+    f = (180 + 380 * np.exp(-t / 0.09)) * (1 + 0.08 * np.sin(2 * np.pi * 22 * t))
+    sig = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / 0.12) * np.minimum(t / 0.003, 1)
+    return np.stack([sig, sig], 1) * 0.9
+
+def swish():   # a short, bright whoosh for slides
+    return whoosh(0.24, 0.5)
+
 def ding():
     n = int(SR * 0.9); t = np.arange(n) / SR
     sig = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t / d)

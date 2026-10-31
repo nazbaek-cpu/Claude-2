@@ -479,11 +479,20 @@ def doodle(frame, t, it, sc, prj):
         if TORN: pad = torn_sticker(pad, ew * 2, seed=len(cur))
         elif ew and PROP_EDGE: pad = sticker_edge(pad, PROP_EDGE, ew)
         cache[key] = soft_shadow(pad, 60, 10, 8)
-    img = cache[key]; k = t - since
-    s = (0.55 + 0.45 * ease_back(ramp(t, it["at"], 0.45), 2.0)) * (1 + 0.07 * math.sin(math.pi * min(k / 0.3, 1)) * (since > it["at"]))
+    img = cache[key]; k = t - since; changed = since > it["at"]
+    if it.get("enter") == "slide":   # walk in from the side, hop on every pose change, slide back out at "until"
+        a = 1.0 if it["at"] <= t < it.get("until", 1e9) else 0.0
+        p = ramp(t, it["at"], 0.5); q = ramp(t, it.get("until", 1e9) - 0.35, 0.35)
+        dx = -620 * (1 - ease_back(p, 1.3)) - 700 * ease_out(q) * q
+        hop = -34 * math.sin(math.pi * min(k / 0.35, 1)) if changed and k < 0.35 else 0
+        s = (1 + 0.1 * math.sin(math.pi * min(k / 0.3, 1)) * changed) * (1 + 0.02 * math.sin(2 * math.pi * 0.7 * (t - it["at"])))
+    else:
+        dx, hop = 0, 0
+        s = (0.55 + 0.45 * ease_back(ramp(t, it["at"], 0.45), 2.0)) * (1 + 0.07 * math.sin(math.pi * min(k / 0.3, 1)) * changed)
+    if a <= 0: return
     rot = 1.6 * math.sin((t - it["at"]) * 1.7)
     im = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC).rotate(rot, Image.BICUBIC, expand=True)
-    blend(frame, anim(im, a, 1.0), it.get("x", W / 2), it.get("y", 450) + 6 * math.sin((t - it["at"]) * 2.3))
+    blend(frame, anim(im, a, 1.0), it.get("x", W / 2) + dx, it.get("y", 450) + 6 * math.sin((t - it["at"]) * 2.3) + hop)
 
 def scribble(frame, t, it, sc):
     """a tangled pen scribble that draws itself (a messy head): "x", "y", "size", "dur", "color", "seed"; it jitters while shown"""
@@ -572,23 +581,49 @@ def torn_sticker(img, border=24, amp=20, seed=1):
     out.alpha_composite(img, (pad, pad))
     return soft_shadow(out, 80, 9, 8)
 
+STICKER_ANIMS = ("pop", "slide_r", "drop", "spin", "slide_l")
+
+def sticker_anim(it):
+    """the entrance an icon uses: its own "anim", else one picked from its name so a run of icons varies"""
+    return it.get("anim") or STICKER_ANIMS[sum(map(ord, it["img"])) % len(STICKER_ANIMS)]
+
+def bounce_out(x):
+    """ease that lands and bounces a few times, like something dropped on the desk"""
+    x = min(max(x, 0.0), 1.0); n, d = 7.5625, 2.75
+    if x < 1 / d: return n * x * x
+    if x < 2 / d: x -= 1.5 / d; return n * x * x + 0.75
+    if x < 2.5 / d: x -= 2.25 / d; return n * x * x + 0.9375
+    x -= 2.625 / d; return n * x * x + 0.984375
+
 def sticker(frame, t, it, sc, prj):
-    """an icon PNG from input/ as a torn sticker that slaps on: "img", "x", "y", "size" (longest side) and "rot" """
-    p = ramp(t, it["at"], 0.32)
-    if p <= 0: return
-    a = ease_out(p * 2.5) * (1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2))
-    if a <= 0: return
+    """an icon PNG from input/ as a sticker: "img", "x", "y", "size" (longest side), "rot"; it comes in with "anim"
+    (pop | slide_r | slide_l | drop | spin), breathes gently while it stays, and zooms out at its "until" time"""
+    if t < it["at"]: return
+    until = it.get("until", 1e9); k = t - it["at"]
+    if t >= until: return
     key = ("stk", it["img"], it.get("size", 260), TORN)
     if key not in cache:
-        src = Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"); k = it.get("size", 260) / max(src.size)
-        src = src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS)
+        src = Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"); kk = it.get("size", 260) / max(src.size)
+        src = src.resize((max(1, int(src.width * kk)), max(1, int(src.height * kk))), Image.LANCZOS)
         if TORN: cache[key] = torn_sticker(src, seed=len(it["img"]) * 3)
         else:   # a neat die-cut sticker: white edge and a soft shadow
             pad = Image.new("RGBA", (src.width + 30, src.height + 30), (0, 0, 0, 0)); pad.paste(src, (15, 15))
             cache[key] = soft_shadow(sticker_edge(pad, (255, 255, 255), 7), 60, 8, 6)
-    img = cache[key]; sc_ = 1.25 - 0.25 * ease_out(p); rot = it.get("rot", 0) + 9 * (1 - ease_out(p))
-    img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC).rotate(rot, Image.BICUBIC, expand=True)
-    blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 1100) + 5 * math.sin((t - it["at"]) * 2.1 + it.get("x", 0) / 70))
+    mode = sticker_anim(it); p = ramp(t, it["at"], 0.45); x, y, rot = it.get("x", W / 2), it.get("y", 1100), it.get("rot", 0)
+    s_ = 1.0; a = ease_out(ramp(t, it["at"], 0.12))
+    if mode == "pop": s_ = max(0.01, ease_back(p, 2.6)); rot += 12 * (1 - ease_out(p))
+    elif mode in ("slide_r", "slide_l"):
+        d = 1 if mode == "slide_r" else -1; x += d * 620 * (1 - ease_back(p, 1.4)); rot += d * 16 * (1 - ease_out(p))
+    elif mode == "drop": y -= 560 * (1 - bounce_out(ramp(t, it["at"], 0.6)))
+    elif mode == "spin": s_ = 0.2 + 0.8 * ease_out(p); rot += 200 * (1 - ease_out(p))
+    s_ *= 1 + 0.035 * math.sin(2 * math.pi * 0.85 * k) * ease_out(ramp(t, it["at"] + 0.45, 0.3))   # breathing zoom
+    rot += 2.0 * math.sin(2 * math.pi * 0.5 * k + x / 90) * ease_out(ramp(t, it["at"] + 0.45, 0.3))
+    q = ramp(t, until - 0.3, 0.3)   # zoom out and tip away
+    if q > 0: s_ *= max(0.01, 1 - ease_out(q) * 1.0); rot += 25 * q; a *= 1 - q * 0.5
+    img = cache[key]
+    img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
+    if abs(rot) > 0.2: img = img.rotate(rot, Image.BICUBIC, expand=True)
+    blend(frame, anim(img, a, 1.0), x, y + 4 * math.sin(k * 2.1 + x / 70))
 
 HL = {"y": ((246, 196, 60), (28, 30, 28)), "r": ((232, 92, 70), (255, 255, 255)), "g": ((126, 224, 170), (16, 58, 42))}
 
@@ -959,15 +994,16 @@ def clip(frame, t, it, sc, prj):
     if it.get("card"):
         if t < t0 or t >= t1: return
         cd = it["card"]; cw = cd.get("w", 960); ch = int(h * cw / w); b = 14
-        p = ramp(t, t0, 0.4); a = ease_out(p * 2) * (1 - ramp(t, t1 - 0.25, 0.25))
+        p = ramp(t, t0, 0.45); a = ease_out(p * 3)
         face_ = Image.new("RGBA", (cw + b * 2, ch + b * 2), (255, 255, 255, 255))
         face_.paste(Image.fromarray(cv2.resize(src, (cw, ch), interpolation=cv2.INTER_AREA)), (b, b))
         m = Image.new("L", (face_.width * 2, face_.height * 2), 0)
         ImageDraw.Draw(m).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=44, fill=255); face_.putalpha(m.resize(face_.size, Image.LANCZOS))
         img = soft_shadow(face_, 90, 18, 12).rotate(cd.get("rot", 0), Image.BICUBIC, expand=True)
-        sc_ = 0.6 + 0.4 * ease_back(p, 1.6)
-        img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC)
-        blend(frame, anim(img, a, 1.0), cd.get("x", W / 2), cd.get("y", 1080) + 30 * (1 - ease_out(p)))
+        q = ramp(t, t1 - 0.35, 0.35); frm = cd.get("from", "bottom")   # slide in, then slide out to the left
+        dx = (900 * (1 - ease_back(p, 1.2)) if frm == "right" else 0) - 1300 * ease_out(q) * q
+        dy = 760 * (1 - ease_back(p, 1.2)) if frm == "bottom" else 0
+        blend(frame, anim(img, min(1.0, a + q), 1.0), cd.get("x", W / 2) + dx, cd.get("y", 1080) + dy)
         return
     p = ramp(t, t0, t1 - t0); p = p * p * (3 - 2 * p)
     z0, z1 = it.get("zoom", [1.0, 1.06]); k = max(W / w, H / h) * (z0 + (z1 - z0) * p)
@@ -1093,8 +1129,17 @@ def sfx_track(cfg, dur, out):
                 for _, at in it["lines"]: ev.append((at - 0.18, "whoosh", -21))
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -17))
             elif it["kind"] in ("card", "tile", "emoji", "prop", "tape"): ev.append((it["at"], "pop", -16))
-            elif it["kind"] == "doodle": ev += [(at, "pop", -18) for *_, at in it["poses"][1:]]
-            elif it["kind"] == "sticker": ev.append((it["at"], "pop", -15))
+            elif it["kind"] == "doodle":
+                ev += [(at, "pop", -18) for *_, at in it["poses"][1:]]
+                if it.get("enter") == "slide":
+                    ev.append((it["at"] - 0.05, "swish", -17))
+                    if it.get("until"): ev.append((it["until"] - 0.4, "swish", -19))
+            elif it["kind"] == "sticker":
+                m_ = sticker_anim(it)
+                ev.append((it["at"] + (0.12 if m_ == "drop" else 0), {"pop": "pop", "drop": "boing"}.get(m_, "swish"), -16))
+                if it.get("good"): ev.append((it["at"] + 0.3, "ding", -24))
+            elif it["kind"] == "clip" and it.get("card"):
+                ev.append((it["at"] - 0.05, "whoosh", -18)); ev.append((it.get("until", it["at"] + 3) - 0.4, "swish", -21))
             elif it["kind"] == "hl": ev.append((it["at"] - 0.1, "whoosh", -24))
             elif it["kind"] == "scribble": ev.append((it["at"], "whoosh", -22))
             elif it["kind"] == "say": ev.append((it["at"] - 0.1, "whoosh", -26))
@@ -1113,7 +1158,7 @@ def sfx_track(cfg, dur, out):
                 for ms in range(0, int(it.get("dur", 1.4) * 1000), 70):
                     tt = it["at"] + 0.1 + ms / 1000; v = round(it["to"] * ease_out(ms / 1000 / it.get("dur", 1.4)))
                     if v != last: ev.append((tt, "tick", -22)); last = v
-    make = {"whoosh": sfx.whoosh, "pop": sfx.pop, "tick": sfx.tick, "ding": sfx.ding}
+    make = {"whoosh": sfx.whoosh, "pop": sfx.pop, "tick": sfx.tick, "ding": sfx.ding, "boing": sfx.boing, "swish": sfx.swish}
     for at, kind, level in ev:
         clip = make[kind](); i = int(max(at, 0) * sfx.SR); j = min(i + len(clip), len(track))
         track[i:j] += clip[: j - i] * sfx.db(level + cfg.get("sfx_gain_db", 0))

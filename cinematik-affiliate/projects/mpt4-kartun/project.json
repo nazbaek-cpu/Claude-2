@@ -54,7 +54,8 @@
        "abang/idea.png",
        26.42
       ]
-     ]
+     ],
+     "enter": "slide"
     },
     {
      "kind": "say",
@@ -74,7 +75,9 @@
      "x": 770,
      "y": 1190,
      "size": 180,
-     "rot": 4
+     "rot": 4,
+     "good": true,
+     "anim": "pop"
     },
     {
      "kind": "say",
@@ -285,7 +288,8 @@
      "card": {
       "w": 900,
       "y": 1120,
-      "rot": -1
+      "rot": -1,
+      "from": "bottom"
      }
     },
     {
@@ -307,7 +311,8 @@
      "card": {
       "w": 900,
       "y": 1120,
-      "rot": -1
+      "rot": -1,
+      "from": "right"
      }
     },
     {
@@ -338,7 +343,8 @@
      "card": {
       "w": 900,
       "y": 1120,
-      "rot": -1
+      "rot": -1,
+      "from": "right"
      }
     },
     {
@@ -361,7 +367,8 @@
        "abang/bangga.png",
        41.36
       ]
-     ]
+     ],
+     "enter": "slide"
     },
     {
      "kind": "say",
@@ -381,7 +388,8 @@
      "x": 770,
      "y": 1190,
      "size": 180,
-     "rot": 3
+     "rot": 3,
+     "good": true
     },
     {
      "kind": "cta",

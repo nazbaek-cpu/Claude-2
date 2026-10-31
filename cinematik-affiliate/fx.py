@@ -205,17 +205,42 @@ def bounce_out(x):
     if x < 2.5 / d: x -= 2.25 / d; return n * x * x + 0.9375
     x -= 2.625 / d; return n * x * x + 0.984375
 
+def torn_paper(img, border=20, amp=17, seed=1):
+    """the icon on a scrap of paper torn out of a sheet: ragged edge, grey paper fibres, one bite torn away"""
+    a = (np.asarray(img.getchannel("A")) > 40).astype(np.uint8); pad = border + amp + 12
+    A = np.pad(a, pad); h, w = A.shape
+    ff = A.copy(); cv2.floodFill(ff, np.zeros((h + 2, w + 2), np.uint8), (0, 0), 2); filled = (ff != 2).astype(np.uint8)
+    dil = cv2.dilate(filled, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (border * 2 + 1, border * 2 + 1)))
+    dist = cv2.distanceTransform(dil, cv2.DIST_L2, 5); rng = np.random.default_rng(seed)
+    def nz(sig):
+        n = cv2.GaussianBlur(rng.random((h, w)).astype(np.float32), (0, 0), sig); return (n - n.min()) / max(1e-6, n.max() - n.min())
+    keep = (dist > amp * (0.35 * nz(0.8) + 0.35 * nz(2.5) + 0.3 * nz(12))).astype(np.uint8)
+    ys, xs = np.nonzero((dist > 0) & (dist < 3))
+    if len(xs):
+        k = rng.integers(len(xs)); r = border * 1.6; yy, xx = np.ogrid[:h, :w]
+        keep[((xx - xs[k]) ** 2 + (yy - ys[k]) ** 2 < (r * (0.8 + 0.4 * nz(3))) ** 2) & (cv2.dilate(filled, np.ones((9, 9), np.uint8)) == 0)] = 0
+    d2 = cv2.distanceTransform(keep, cv2.DIST_L2, 3)
+    base = np.zeros((h, w, 4), np.float32); base[keep > 0] = (255, 255, 250, 255)
+    rim = (keep > 0) & (d2 < 6); f = np.clip(d2[rim] / 6, 0, 1)[:, None]
+    base[rim, :3] = np.array((196, 192, 182), np.float32) * (1 - f) + np.array((255, 255, 250), np.float32) * f
+    out = Image.fromarray(base.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(0.5)); out.alpha_composite(img, (pad, pad))
+    return out
+
 def sticker(s, t, prj):
     """an icon from input/ as a die-cut sticker over the video: "img", "x", "y", "size", "rot"; enters with "anim"
-    (pop | slide_r | slide_l | drop | spin), breathes while it stays and zooms out at its "end" time"""
-    key = ("stk", s["img"], s.get("size", 220))
+    (pop | slide_r | slide_l | drop | spin), breathes while it stays and zooms out at its "end" time;
+    "style": "papercut" tears it out of a sheet of paper instead of a neat white die-cut edge"""
+    key = ("stk", s["img"], s.get("size", 220), s.get("style"))
     if key not in cache:
         src = Image.open(os.path.join(prj, "input", s["img"])).convert("RGBA"); k = s.get("size", 220) / max(src.size)
         src = src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS)
-        pad = Image.new("RGBA", (src.width + 34, src.height + 34), (0, 0, 0, 0)); pad.paste(src, (17, 17))
-        a = pad.getchannel("A").filter(ImageFilter.MaxFilter(17)).filter(ImageFilter.GaussianBlur(1))
-        edge = Image.new("RGBA", pad.size, (255, 255, 255, 0)); edge.putalpha(a); edge.alpha_composite(pad)
-        cache[key] = shadow(edge, 110, 10, 7)
+        if s.get("style") == "papercut":
+            cache[key] = shadow(torn_paper(src, seed=len(s["img"]) * 3), 120, 10, 8)
+        else:
+            pad = Image.new("RGBA", (src.width + 34, src.height + 34), (0, 0, 0, 0)); pad.paste(src, (17, 17))
+            a = pad.getchannel("A").filter(ImageFilter.MaxFilter(17)).filter(ImageFilter.GaussianBlur(1))
+            edge = Image.new("RGBA", pad.size, (255, 255, 255, 0)); edge.putalpha(a); edge.alpha_composite(pad)
+            cache[key] = shadow(edge, 110, 10, 7)
     mode = sticker_anim(s); p = ramp(t, s["start"], 0.45); k = t - s["start"]
     x, y, rot, sc_ = s.get("x", W / 2), s.get("y", 700), s.get("rot", 0), 1.0
     if mode == "pop": sc_ = max(0.01, ease_back(p, 2.6)); rot += 12 * (1 - ease(p))

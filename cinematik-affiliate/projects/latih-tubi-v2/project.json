@@ -19,70 +19,13 @@
  "segments": [],
  "fx": [
   {
-   "kind": "sticker",
-   "start": 1.18,
+   "kind": "papercut",
+   "start": 0.3,
    "end": 10.0,
-   "img": "icons/blok_abc.png",
-   "x": 190,
-   "y": 660,
-   "size": 200,
-   "rot": -6,
-   "style": "papercut"
-  },
-  {
-   "kind": "sticker",
-   "start": 2.28,
-   "end": 10.0,
-   "img": "icons/pensel.png",
-   "x": 890,
-   "y": 660,
-   "size": 200,
-   "rot": 8,
-   "style": "papercut"
-  },
-  {
-   "kind": "sticker",
-   "start": 2.88,
-   "end": 10.0,
-   "img": "icons/buku_tulis.png",
-   "x": 185,
-   "y": 990,
-   "size": 200,
-   "rot": 4,
-   "style": "papercut"
-  },
-  {
-   "kind": "sticker",
-   "start": 5.74,
-   "end": 10.0,
-   "img": "icons/kalkulator.png",
-   "x": 895,
-   "y": 990,
-   "size": 200,
-   "rot": -5,
-   "style": "papercut"
-  },
-  {
-   "kind": "sticker",
-   "start": 6.94,
-   "end": 10.0,
-   "img": "icons/markah_rendah.png",
-   "x": 380,
-   "y": 320,
-   "size": 200,
-   "rot": -4,
-   "style": "papercut"
-  },
-  {
-   "kind": "sticker",
-   "start": 8.94,
-   "end": 10.0,
-   "img": "icons/graf_turun.png",
-   "x": 700,
-   "y": 320,
-   "size": 200,
-   "rot": 5,
-   "style": "papercut"
+   "word": "asas matematik",
+   "word_at": 4.6,
+   "word_y": 290,
+   "one_line": true
   },
   {
    "kind": "checklist",

@@ -42,6 +42,7 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
 MAT, MEJA, TORN, BADGE_BG, BADGE_FG = False, False, False, None, (255, 255, 255)
+BG_IMAGE = None                                # "bg_image" in project.json: a picture behind every light scene
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
 
@@ -80,8 +81,14 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, GRID, MAT, MEJA, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, MAT, MEJA, PEACH_TOP, DARK, RULE_LINE, BG_IMAGE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
+    if BG_IMAGE and not dark:   # the user's own background: cover-fit to 9:16
+        im = Image.open(BG_IMAGE).convert("RGB"); s = max(W / im.width, H / im.height)
+        im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+        x0, y0 = (im.width - W) // 2, (im.height - H) // 2
+        cache[key] = np.asarray(im.crop((x0, y0, x0 + W, y0 + H))).astype(np.float32)
+        return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if MAT and not dark:
         cache[key] = cutting_mat()
@@ -432,9 +439,10 @@ def mascot(frame, t, it, sc):
     x = it.get("x", 230) - 60 * (1 - ease_out(ramp(t, it["at"], 0.4))); y = it.get("y", 1640) - 355 * sz + 4 * math.sin(k * 2.0)
     blend(frame, anim(img, a, 1.0), x + 70 * sz, y)   # x is the body centre; the image is wider to the right for the arm
 
-def flat_png(name, size, prj):
-    """Fluent flat emoji "name" as a PNG at size, recoloured to the "kartun" palette when the theme asks"""
-    key = ("flat", name, size, TINT_PROPS, PROP_EDGE)
+def flat_png(name, size, prj, raw=False):
+    """Fluent flat emoji "name" as a PNG at size, recoloured to the "kartun" palette when the theme asks
+    (raw: the emoji's own colours, no edge or shadow, for a sticker)"""
+    key = ("flat", name, size, TINT_PROPS, PROP_EDGE, raw)
     if key in cache: return cache[key]
     slug = name.lower().replace(" ", "_").replace("-", "_")
     svg = os.path.join(prj, "build", "flat", slug + ".svg")
@@ -446,6 +454,9 @@ def flat_png(name, size, prj):
         else: raise FileNotFoundError(f"no flat Fluent emoji called {name!r}")
     import cairosvg, io
     img = Image.open(io.BytesIO(cairosvg.svg2png(url=svg, output_width=size, output_height=size))).convert("RGBA")
+    if raw:
+        cache[key] = img
+        return img
     if TINT_PROPS:   # map light-to-dark onto paper white, tape, gold, green, deep green
         a = np.asarray(img).astype(np.float32); rgb = a[..., :3]
         lum = rgb @ np.array([0.299, 0.587, 0.114], np.float32); sat = rgb.max(-1) - rgb.min(-1)
@@ -585,7 +596,7 @@ STICKER_ANIMS = ("pop", "slide_r", "drop", "spin", "slide_l")
 
 def sticker_anim(it):
     """the entrance an icon uses: its own "anim", else one picked from its name so a run of icons varies"""
-    return it.get("anim") or STICKER_ANIMS[sum(map(ord, it["img"])) % len(STICKER_ANIMS)]
+    return it.get("anim") or STICKER_ANIMS[sum(map(ord, it.get("img") or it["emoji"])) % len(STICKER_ANIMS)]
 
 def bounce_out(x):
     """ease that lands and bounces a few times, like something dropped on the desk"""
@@ -597,15 +608,18 @@ def bounce_out(x):
 
 def sticker(frame, t, it, sc, prj):
     """an icon PNG from input/ as a sticker: "img", "x", "y", "size" (longest side), "rot"; it comes in with "anim"
-    (pop | slide_r | slide_l | drop | spin), breathes gently while it stays, and zooms out at its "until" time"""
+    (pop | slide_r | slide_l | drop | spin), breathes gently while it stays, and zooms out at its "until" time.
+    "emoji": "Light bulb" instead of "img" uses that Fluent flat emoji in its own colours"""
     if t < it["at"]: return
     until = it.get("until", 1e9); k = t - it["at"]
     if t >= until: return
-    key = ("stk", it["img"], it.get("size", 260), TORN)
+    key = ("stk", it.get("img") or it["emoji"], it.get("size", 260), TORN)
     if key not in cache:
-        src = Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"); kk = it.get("size", 260) / max(src.size)
+        src = (flat_png(it["emoji"], it.get("size", 260), prj, raw=True) if it.get("emoji")
+               else Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"))
+        kk = it.get("size", 260) / max(src.size)
         src = src.resize((max(1, int(src.width * kk)), max(1, int(src.height * kk))), Image.LANCZOS)
-        if TORN: cache[key] = torn_sticker(src, seed=len(it["img"]) * 3)
+        if TORN: cache[key] = torn_sticker(src, seed=len(key[1]) * 3)
         else:   # a neat die-cut sticker: white edge and a soft shadow
             pad = Image.new("RGBA", (src.width + 30, src.height + 30), (0, 0, 0, 0)); pad.paste(src, (15, 15))
             cache[key] = soft_shadow(sticker_edge(pad, (255, 255, 255), 7), 60, 8, 6)
@@ -1128,7 +1142,9 @@ def sfx_track(cfg, dur, out):
             if it["kind"] == "head":
                 for _, at in it["lines"]: ev.append((at - 0.18, "whoosh", -21))
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -17))
-            elif it["kind"] in ("card", "tile", "emoji", "prop", "tape"): ev.append((it["at"], "pop", -16))
+            elif it["kind"] in ("card", "tile", "emoji", "prop", "tape"):
+                ev.append((it["at"], "pop", -16))
+                if it["kind"] == "card" and it.get("until", 99) < dur: ev.append((it["until"] - 0.3, "swish", -22))
             elif it["kind"] == "doodle":
                 ev += [(at, "pop", -18) for *_, at in it["poses"][1:]]
                 if it.get("enter") == "slide":
@@ -1199,6 +1215,7 @@ def main():
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     set_theme(cfg.get("theme"))
+    if cfg.get("bg_image"): globals()["BG_IMAGE"] = os.path.join(prj, cfg["bg_image"])
     scenes = sorted(cfg["scenes"], key=lambda s: s["start"])
     for sc in scenes: sc.setdefault("bold", cfg.get("bold_text", False)); sc.setdefault("setup_face", cfg.get("setup_face"))
     build = os.path.join(prj, "build"); os.makedirs(build, exist_ok=True)

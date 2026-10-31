@@ -1,0 +1,789 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kartun",
+ "bg_image": "input/room_bg.jpg",
+ "whisper_prompt": "Dua calon SPM Fizik. Seorang dapat 9 markah, seorang dapat 3 markah. Esei Bahagian B dan C.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "badge",
+     "text": "SPM FIZIK · ESEI",
+     "at": 0.0,
+     "y": 200,
+     "size": 30
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/briefing.png",
+       0.0
+      ],
+      [
+       "abang/berfikir.png",
+       2.46
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "Dua calon SPM,",
+     "key": "SAMA-SAMA FAHAM FIZIK",
+     "at": 0.0,
+     "until": 3.22,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/eksperimen.png",
+     "at": 0.35,
+     "until": 3.22,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Atom symbol",
+     "at": 1.5,
+     "until": 3.22,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -6,
+     "anim": "pop"
+    },
+    {
+     "kind": "say",
+     "text": "sama-sama",
+     "key": "HAFAL FORMULA",
+     "at": 3.22,
+     "until": 5.5,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 3.3,
+     "until": 5.5,
+     "x": 780,
+     "y": 1180,
+     "size": 190,
+     "rot": -3,
+     "anim": "drop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 4.3,
+     "until": 5.5,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": 5,
+     "anim": "spin"
+    }
+   ]
+  },
+  {
+   "start": 5.5,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 4.0,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       4.0
+      ],
+      [
+       "abang/ketawa.png",
+       8.48
+      ],
+      [
+       "abang/sedih.png",
+       10.2
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "Tapi masa jawab",
+     "key": "ESEI 10 MARKAH",
+     "at": 5.5,
+     "until": 7.72,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 5.9,
+     "until": 7.72,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": -3,
+     "anim": "slide_r"
+    },
+    {
+     "kind": "say",
+     "text": "seorang dapat",
+     "key": "9 MARKAH",
+     "at": 7.72,
+     "until": 10.08,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 8.3,
+     "until": 10.08,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "anim": "pop",
+     "good": true
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Glowing star",
+     "at": 8.72,
+     "until": 10.08,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": 8,
+     "anim": "pop"
+    },
+    {
+     "kind": "say",
+     "text": "seorang lagi dapat",
+     "key": "3 MARKAH",
+     "at": 10.08,
+     "until": 11.66,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 10.12,
+     "until": 11.66,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": -4,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Downcast face with sweat",
+     "at": 10.45,
+     "until": 11.66,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -6,
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "start": 11.66,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 10.16,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/idea.png",
+       10.16
+      ],
+      [
+       "abang/berfikir.png",
+       13.64
+      ]
+     ]
+    },
+    {
+     "kind": "tape",
+     "text": "BEZANYA",
+     "at": 11.7,
+     "until": 17.22,
+     "rot": -2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "Bezanya",
+     "key": "CUMA SATU",
+     "at": 11.66,
+     "until": 13.64,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Index pointing up",
+     "at": 12.4,
+     "until": 13.64,
+     "x": 780,
+     "y": 1180,
+     "size": 170,
+     "rot": -4,
+     "anim": "pop"
+    },
+    {
+     "kind": "say",
+     "text": "calon 3 markah sebenarnya",
+     "key": "TAHU JAWAPAN",
+     "at": 13.64,
+     "until": 17.22,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 14.4,
+     "until": 17.22,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 5,
+     "anim": "slide_r"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Light bulb",
+     "at": 15.96,
+     "until": 17.22,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": 8,
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "start": 17.22,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 15.72,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       15.72
+      ],
+      [
+       "abang/stres.png",
+       22.92
+      ],
+      [
+       "abang/sedih.png",
+       25.74
+      ]
+     ]
+    },
+    {
+     "kind": "tape",
+     "text": "MASALAHNYA",
+     "at": 17.26,
+     "until": 27.46,
+     "rot": 2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "bila soalan minta",
+     "key": "TERANGKAN",
+     "at": 17.22,
+     "until": 19.6,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 18.2,
+     "until": 22.92,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": -3,
+     "anim": "pop"
+    },
+    {
+     "kind": "say",
+     "text": "bila soalan minta",
+     "key": "BANDINGKAN",
+     "at": 19.6,
+     "until": 21.26,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Balance scale",
+     "at": 19.7,
+     "until": 21.26,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -5,
+     "anim": "drop"
+    },
+    {
+     "kind": "say",
+     "text": "bila soalan minta",
+     "key": "CADANGKAN PENGUBAHSUAIAN",
+     "at": 21.26,
+     "until": 22.92,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hammer and wrench",
+     "at": 21.36,
+     "until": 22.92,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": 6,
+     "anim": "spin"
+    },
+    {
+     "kind": "say",
+     "text": "dia tulis panjang,",
+     "key": "TAPI TAK KENA SKEMA",
+     "at": 22.92,
+     "until": 27.46,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 23.56,
+     "until": 27.46,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "anim": "slide_l"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Cross mark",
+     "at": 25.74,
+     "until": 27.46,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -8,
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "start": 27.46,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 25.96,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/terkejut.png",
+       25.96
+      ],
+      [
+       "abang/stres.png",
+       30.76
+      ],
+      [
+       "abang/sedih.png",
+       33.46
+      ]
+     ]
+    },
+    {
+     "kind": "tape",
+     "text": "AKIBATNYA",
+     "at": 27.5,
+     "until": 36.52,
+     "rot": -2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "satu soalan Esei je dah",
+     "key": "10 MARKAH",
+     "at": 27.46,
+     "until": 30.76,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 28.2,
+     "until": 30.76,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": -4,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Warning",
+     "at": 29.3,
+     "until": 30.76,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": 6,
+     "anim": "pop"
+    },
+    {
+     "kind": "say",
+     "text": "2-3 soalan terlepas,",
+     "key": "GRADE FIZIK JADI MANGSA",
+     "at": 30.76,
+     "until": 36.52,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 31.82,
+     "until": 36.52,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "anim": "drop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Chart decreasing",
+     "at": 33.92,
+     "until": 36.52,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -6,
+     "anim": "slide_r"
+    }
+   ]
+  },
+  {
+   "start": 36.52,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 35.02,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/idea.png",
+       35.02
+      ],
+      [
+       "abang/bangga.png",
+       38.84
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "calon yang dapat 9?",
+     "key": "DAH BIASA TENGOK",
+     "at": 36.52,
+     "until": 39.74,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 37.18,
+     "until": 41.56,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "anim": "pop",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "contoh jawapan",
+     "key": "YANG BETUL",
+     "at": 39.74,
+     "until": 41.56,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Check mark button",
+     "at": 40.36,
+     "until": 41.56,
+     "x": 900,
+     "y": 880,
+     "size": 120,
+     "rot": -6,
+     "anim": "pop",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 41.56,
+   "items": [
+    {
+     "kind": "say",
+     "text": "sebab tu buku",
+     "key": "SPM FIZIK ESEI",
+     "at": 41.56,
+     "until": 45.5,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "covers.jpg",
+     "at": 42.0,
+     "until": 45.5,
+     "x": 540,
+     "y": 1150,
+     "w": 900,
+     "rot": -1
+    },
+    {
+     "kind": "say",
+     "text": "lebih",
+     "key": "95+ SOALAN ESEI",
+     "at": 45.5,
+     "until": 49.16,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "esei95.jpg",
+     "at": 45.56,
+     "until": 51.18,
+     "x": 540,
+     "y": 1150,
+     "w": 900,
+     "rot": 1
+    },
+    {
+     "kind": "say",
+     "text": "tingkatan 4 & 5,",
+     "key": "SIAP JAWAPAN LENGKAP",
+     "at": 49.16,
+     "until": 51.18,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "disusun ikut topik",
+     "key": "BM & ENGLISH",
+     "at": 51.18,
+     "until": 54.36,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "ting4.jpg",
+     "at": 51.24,
+     "until": 54.36,
+     "x": 540,
+     "y": 1150,
+     "w": 900,
+     "rot": -1
+    },
+    {
+     "kind": "say",
+     "text": "4.9 bintang",
+     "key": "300+ PEMBELI",
+     "at": 54.36,
+     "until": 60.56,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "covers.jpg",
+     "at": 54.42,
+     "until": 60.56,
+     "x": 540,
+     "y": 1120,
+     "w": 820,
+     "rot": 1
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Star",
+     "at": 55.74,
+     "until": 60.56,
+     "x": 340,
+     "y": 1700,
+     "size": 110,
+     "rot": -8,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Star",
+     "at": 56.0,
+     "until": 60.56,
+     "x": 540,
+     "y": 1715,
+     "size": 120,
+     "rot": 0,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Star",
+     "at": 56.26,
+     "until": 60.56,
+     "x": 740,
+     "y": 1700,
+     "size": 110,
+     "rot": 8,
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "start": 60.56,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 60.6,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/bangga.png",
+       60.6
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "jadi calon yang dapat 9,",
+     "key": "LINK DI BAWAH",
+     "at": 60.56,
+     "until": 99,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "covers.jpg",
+     "at": 60.9,
+     "until": 99,
+     "x": 770,
+     "y": 1130,
+     "w": 430,
+     "rot": 3
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Backhand index pointing down",
+     "at": 62.3,
+     "until": 99,
+     "x": 770,
+     "y": 820,
+     "size": 110,
+     "rot": 0,
+     "anim": "drop"
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 62.3,
+     "y": 1660
+    }
+   ]
+  }
+ ]
+}

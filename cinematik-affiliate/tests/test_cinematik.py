@@ -267,6 +267,27 @@ def test_explainer_kartun_pieces(tmp_path):
         vars(explainer).update(saved)   # back to the default theme for the other tests
 
 
+def test_explainer_bg_image_and_emoji_sticker(tmp_path):
+    from PIL import Image
+    os.makedirs(tmp_path / "input"); os.makedirs(tmp_path / "build" / "flat")
+    Image.new("RGB", (320, 180), (40, 90, 200)).save(tmp_path / "input" / "room.jpg")   # landscape: cover-fitted to 9:16
+    (tmp_path / "build" / "flat" / "light_bulb.svg").write_text(   # cached SVG: no download in tests
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#e02020"/></svg>')
+    explainer.BG_IMAGE = str(tmp_path / "input" / "room.jpg")
+    try:
+        sc = {"start": 0.0, "items": [{"kind": "sticker", "emoji": "Light bulb", "at": 0.0, "x": 800, "y": 1180, "size": 200, "anim": "pop"}]}
+        fr = explainer.frame_at([sc], 1.0, str(tmp_path))
+        assert np.abs(fr[100, 100].astype(int) - (40, 90, 200)).max() < 6     # the user's picture behind the scene
+        r, g, b = fr[1180, 800].astype(int)
+        assert r > 180 and g < 80 and b < 80                                   # the emoji keeps its own red, no kartun tint
+        assert explainer.sticker_anim({"emoji": "Light bulb"}) in explainer.STICKER_ANIMS
+        ev = explainer.sfx_track({"scenes": [dict(sc, items=sc["items"] + [{"kind": "card", "img": "x.jpg", "at": 1.0, "until": 2.0}])]},
+                                 3.0, str(tmp_path / "s.wav"))
+        assert ev == 3                                                         # sticker pop, card pop in, card swish out
+    finally:
+        explainer.BG_IMAGE = None
+
+
 def test_explainer_coklat_doodle_and_scribble(tmp_path):
     from PIL import Image
     os.makedirs(tmp_path / "input")

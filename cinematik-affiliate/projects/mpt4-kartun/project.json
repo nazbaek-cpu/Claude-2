@@ -280,19 +280,6 @@
      "size2": 78
     },
     {
-     "kind": "clip",
-     "video": "modul1.mp4",
-     "at": 29.55,
-     "until": 33.82,
-     "fit": true,
-     "card": {
-      "w": 900,
-      "y": 1120,
-      "rot": -1,
-      "from": "bottom"
-     }
-    },
-    {
      "kind": "say",
      "text": "biasakan format soalan,",
      "key": "SIKIT-SIKIT SETIAP HARI",
@@ -303,28 +290,6 @@
      "size2": 78
     },
     {
-     "kind": "clip",
-     "video": "dalam.mp4",
-     "at": 33.85,
-     "until": 37.5,
-     "fit": true,
-     "card": {
-      "w": 900,
-      "y": 1120,
-      "rot": -1,
-      "from": "right"
-     }
-    },
-    {
-     "kind": "tape",
-     "text": "28 LATIHAN · 1 LATIHAN SEHARI",
-     "at": 34.2,
-     "until": 37.5,
-     "rot": -1,
-     "y": 1540,
-     "size": 32
-    },
-    {
      "kind": "say",
      "text": "bila dah biasa, masuk exam",
      "key": "TENANG & YAKIN",
@@ -333,28 +298,6 @@
      "y": 330,
      "size1": 54,
      "size2": 78
-    },
-    {
-     "kind": "clip",
-     "video": "modul2_5.mp4",
-     "at": 37.55,
-     "until": 41.36,
-     "fit": true,
-     "card": {
-      "w": 900,
-      "y": 1120,
-      "rot": -1,
-      "from": "right"
-     }
-    },
-    {
-     "kind": "tape",
-     "text": "MODUL 1 HINGGA 5",
-     "at": 38.0,
-     "until": 41.36,
-     "rot": 1,
-     "y": 1540,
-     "size": 32
     },
     {
      "kind": "doodle",
@@ -381,21 +324,104 @@
      "size2": 78
     },
     {
-     "kind": "sticker",
-     "img": "icons/sijil.png",
-     "at": 41.6,
-     "until": 99,
-     "x": 770,
-     "y": 1190,
-     "size": 180,
-     "rot": 3,
-     "good": true
-    },
-    {
      "kind": "cta",
      "text": "Tekan link dekat bawah",
      "at": 41.6,
      "y": 1660
+    },
+    {
+     "kind": "clip",
+     "video": "modul1.mp4",
+     "at": 29.55,
+     "until": 31.58,
+     "fit": true,
+     "card": {
+      "w": 900,
+      "y": 1120,
+      "rot": -1,
+      "from": "bottom"
+     }
+    },
+    {
+     "kind": "card",
+     "img": "modul1_cover.jpg",
+     "at": 31.6,
+     "until": 33.82,
+     "x": 540,
+     "y": 1110,
+     "w": 470,
+     "rot": -2
+    },
+    {
+     "kind": "card",
+     "img": "latihan_page.jpg",
+     "at": 33.85,
+     "until": 35.38,
+     "x": 540,
+     "y": 1110,
+     "w": 470,
+     "rot": 2
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 35.4,
+     "until": 37.5,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1
+    },
+    {
+     "kind": "tape",
+     "text": "1 LATIHAN SEHARI",
+     "at": 35.6,
+     "until": 37.5,
+     "rot": -1,
+     "y": 1610,
+     "size": 30
+    },
+    {
+     "kind": "clip",
+     "video": "modul2_5.mp4",
+     "at": 37.55,
+     "until": 39.44,
+     "fit": true,
+     "card": {
+      "w": 900,
+      "y": 1120,
+      "rot": -1,
+      "from": "right"
+     }
+    },
+    {
+     "kind": "card",
+     "img": "empat_modul.jpg",
+     "at": 39.46,
+     "until": 41.36,
+     "x": 540,
+     "y": 1110,
+     "w": 540,
+     "rot": 1
+    },
+    {
+     "kind": "tape",
+     "text": "MODUL 1 HINGGA 5",
+     "at": 39.6,
+     "until": 41.36,
+     "rot": 1,
+     "y": 1610,
+     "size": 30
+    },
+    {
+     "kind": "card",
+     "img": "modul2_cover.jpg",
+     "at": 41.6,
+     "until": 99,
+     "x": 780,
+     "y": 1130,
+     "w": 330,
+     "rot": 3
     }
    ]
   }

@@ -1,0 +1,245 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Tahun 1, tahun 2, tahun 3. Asas matematik: tambah, tolak, darab, bahagi. 1640 soalan dan jawapan. 15 minit setiap hari. 2 digit, 3 digit. Cekap congak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [],
+ "fx": [
+  {
+   "kind": "sticker",
+   "start": 1.18,
+   "end": 10.0,
+   "img": "icons/blok_abc.png",
+   "x": 190,
+   "y": 660,
+   "size": 210,
+   "rot": -6
+  },
+  {
+   "kind": "sticker",
+   "start": 2.28,
+   "end": 10.0,
+   "img": "icons/pensel.png",
+   "x": 890,
+   "y": 660,
+   "size": 210,
+   "rot": 8
+  },
+  {
+   "kind": "sticker",
+   "start": 2.88,
+   "end": 10.0,
+   "img": "icons/buku_tulis.png",
+   "x": 185,
+   "y": 990,
+   "size": 210,
+   "rot": 4
+  },
+  {
+   "kind": "sticker",
+   "start": 5.74,
+   "end": 10.0,
+   "img": "icons/kalkulator.png",
+   "x": 895,
+   "y": 990,
+   "size": 210,
+   "rot": -5
+  },
+  {
+   "kind": "sticker",
+   "start": 6.94,
+   "end": 10.0,
+   "img": "icons/markah_rendah.png",
+   "x": 380,
+   "y": 320,
+   "size": 210,
+   "rot": -4
+  },
+  {
+   "kind": "sticker",
+   "start": 8.94,
+   "end": 10.0,
+   "img": "icons/graf_turun.png",
+   "x": 700,
+   "y": 320,
+   "size": 210,
+   "rot": 5
+  },
+  {
+   "kind": "checklist",
+   "start": 10.26,
+   "end": 46.4,
+   "title": [
+    "6 sebab ibu ayah",
+    "pilih latih tubi ni"
+   ],
+   "hide": [
+    [
+     18.9,
+     24.4
+    ],
+    [
+     24.3,
+     32.1
+    ]
+   ],
+   "items": [
+    [
+     "Kuasai asas matematik",
+     10.78
+    ],
+    [
+     "Tambah, tolak, darab, bahagi",
+     14.56
+    ],
+    [
+     "1640 soalan",
+     27.86
+    ],
+    [
+     "Siap dengan jawapan",
+     31.32
+    ],
+    [
+     "15 minit sehari",
+     35.52
+    ],
+    [
+     "2 hingga 3 digit",
+     43.36
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 10.26,
+   "end": 15.5,
+   "scatter_at": 15.35,
+   "y_back": 640,
+   "words": [
+    [
+     "TAMBAH",
+     11.76,
+     "back"
+    ],
+    [
+     "TOLAK",
+     12.28,
+     "back"
+    ],
+    [
+     "DARAB",
+     13.58,
+     "back"
+    ],
+    [
+     "BAHAGI",
+     14.56,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 15.6
+  },
+  {
+   "kind": "digizoom",
+   "start": 15.6,
+   "end": 19.02,
+   "zoom": 1.28,
+   "zoom_at": 16.66,
+   "focus": [
+    540,
+    950
+   ],
+   "ui_y": 1840
+  },
+  {
+   "kind": "papercut",
+   "start": 19.02,
+   "end": 24.38,
+   "word": "susah darab & bahagi",
+   "word_at": 22.0,
+   "word_y": 290,
+   "one_line": true
+  },
+  {
+   "kind": "zoomcut",
+   "at": 24.38
+  },
+  {
+   "kind": "headline",
+   "start": 24.38,
+   "end": 32.1,
+   "tag": "IBU AYAH · LATIH TUBI",
+   "lines": [
+    "1640 soalan,",
+    "siap dengan jawapan"
+   ],
+   "y": 330
+  },
+  {
+   "kind": "beforeafter",
+   "start": 32.1,
+   "end": 34.72,
+   "labels": [
+    "soalan",
+    "jawapan"
+   ],
+   "label_y": 900
+  },
+  {
+   "kind": "zoomcut",
+   "at": 34.72
+  },
+  {
+   "kind": "framebreak",
+   "start": 34.72,
+   "end": 46.24,
+   "user": "ibu ayah",
+   "caption": "15 minit sehari, 2 hingga 3 digit"
+  },
+  {
+   "kind": "depth",
+   "start": 46.42,
+   "end": 49.46,
+   "scatter_at": 49.35,
+   "y_back": 640,
+   "words": [
+    [
+     "CEKAP",
+     48.1,
+     "back"
+    ],
+    [
+     "CONGAK",
+     48.88,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "comment",
+   "start": 49.46,
+   "end": null,
+   "text": "DAPATKAN DI LINK BAWAH",
+   "cps": 40,
+   "y": 330
+  }
+ ],
+ "subs": []
+}

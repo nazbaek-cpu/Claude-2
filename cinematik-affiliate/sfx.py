@@ -7,6 +7,7 @@ whoosh: every headline / number entrance   pop: every pill   tick: every count-u
 import os, sys, wave
 import numpy as np
 from render import load, count_value
+import fx
 
 SR = 48000
 rng = np.random.default_rng(7)
@@ -79,13 +80,16 @@ def events(cfg):
         elif k == "depth": ev += [(at - 0.15, "whoosh") for _, at, _ in s["words"]]
         elif k == "checklist": ev += [(at, "tick") for _, at in s["items"]]
         elif k == "comment": ev += [(s["start"] + 0.05, "pop"), (s["start"] + 0.45 + len(s.get("text", "")) / s.get("cps", 16), "ding")]
+        elif k == "sticker":
+            m_ = fx.sticker_anim(s)
+            ev.append((s["start"] + (0.12 if m_ == "drop" else 0), {"pop": "pop", "drop": "boing"}.get(m_, "swish")))
     return sorted(ev)
 
 def main():
     prj = sys.argv[1]
     cfg = load(prj)
     track = np.zeros((int(SR * (cfg["duration"] + 0.5)), 2), np.float32)
-    sounds = {"whoosh": (whoosh, -19), "pop": (pop, -17), "tick": (tick, -21), "ding": (ding, -18)}
+    sounds = {"whoosh": (whoosh, -19), "pop": (pop, -17), "tick": (tick, -21), "ding": (ding, -18), "boing": (boing, -17), "swish": (swish, -18)}
     gain = cfg.get("sfx_gain_db", 0)
     for at, kind in events(cfg):
         make, level = sounds[kind]

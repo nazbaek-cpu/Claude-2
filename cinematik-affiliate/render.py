@@ -512,7 +512,7 @@ def main():
         if cfg.get("fx"):   # "16 efek" camera effects (fx.py)
             fr, extra = fx.picture(cfg, t, fr, person_mask)
             face_box = None if pts_s is None else (*pts_s.min(0), *pts_s.max(0))
-            extra += fx.overlays(cfg, t, face_box)
+            extra += fx.overlays(cfg, t, face_box, args.project)
         base = fr * SHADE
         back, front = layers(cfg, t)
         if back:

@@ -193,8 +193,47 @@ def comment(s, t):
     img = cache[key].resize((int(cache[key].width * sc), int(cache[key].height * sc)), Image.BICUBIC)
     return [(fade(img, a), s.get("x", W / 2), s.get("y", 1500))]
 
-def overlays(cfg, t, face=None):
+STICKER_ANIMS = ("pop", "slide_r", "drop", "spin", "slide_l")
+
+def sticker_anim(s):
+    return s.get("anim") or STICKER_ANIMS[sum(map(ord, s["img"])) % len(STICKER_ANIMS)]
+
+def bounce_out(x):
+    x = min(max(x, 0.0), 1.0); n, d = 7.5625, 2.75
+    if x < 1 / d: return n * x * x
+    if x < 2 / d: x -= 1.5 / d; return n * x * x + 0.75
+    if x < 2.5 / d: x -= 2.25 / d; return n * x * x + 0.9375
+    x -= 2.625 / d; return n * x * x + 0.984375
+
+def sticker(s, t, prj):
+    """an icon from input/ as a die-cut sticker over the video: "img", "x", "y", "size", "rot"; enters with "anim"
+    (pop | slide_r | slide_l | drop | spin), breathes while it stays and zooms out at its "end" time"""
+    key = ("stk", s["img"], s.get("size", 220))
+    if key not in cache:
+        src = Image.open(os.path.join(prj, "input", s["img"])).convert("RGBA"); k = s.get("size", 220) / max(src.size)
+        src = src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS)
+        pad = Image.new("RGBA", (src.width + 34, src.height + 34), (0, 0, 0, 0)); pad.paste(src, (17, 17))
+        a = pad.getchannel("A").filter(ImageFilter.MaxFilter(17)).filter(ImageFilter.GaussianBlur(1))
+        edge = Image.new("RGBA", pad.size, (255, 255, 255, 0)); edge.putalpha(a); edge.alpha_composite(pad)
+        cache[key] = shadow(edge, 110, 10, 7)
+    mode = sticker_anim(s); p = ramp(t, s["start"], 0.45); k = t - s["start"]
+    x, y, rot, sc_ = s.get("x", W / 2), s.get("y", 700), s.get("rot", 0), 1.0
+    if mode == "pop": sc_ = max(0.01, ease_back(p, 2.6)); rot += 12 * (1 - ease(p))
+    elif mode in ("slide_r", "slide_l"):
+        d = 1 if mode == "slide_r" else -1; x += d * 640 * (1 - ease_back(p, 1.4)); rot += d * 16 * (1 - ease(p))
+    elif mode == "drop": y -= 600 * (1 - bounce_out(ramp(t, s["start"], 0.6)))
+    elif mode == "spin": sc_ = 0.2 + 0.8 * ease(p); rot += 200 * (1 - ease(p))
+    settle = ease(ramp(t, s["start"] + 0.45, 0.3))
+    sc_ *= 1 + 0.035 * math.sin(2 * math.pi * 0.85 * k) * settle; rot += 2.0 * math.sin(2 * math.pi * 0.5 * k + x / 90) * settle
+    q = ramp(t, s["end"] - 0.3, 0.3)
+    if q > 0: sc_ *= max(0.01, 1 - ease(q)); rot += 25 * q
+    img = cache[key].resize((max(1, int(cache[key].width * sc_)), max(1, int(cache[key].height * sc_))), Image.BICUBIC)
+    if abs(rot) > 0.2: img = img.rotate(rot, Image.BICUBIC, expand=True)
+    return [(fade(img, ease(ramp(t, s["start"], 0.1))), x, y + 4 * math.sin(k * 2.1 + x / 70))]
+
+def overlays(cfg, t, face=None, prj=None):
     out = []
+    for s in active(cfg, t, "sticker"): out += sticker(s, t, prj or os.path.dirname(cfg.get("_input", ".")))
     for s in active(cfg, t, "checklist", "headline", "digizoom", "comment"):
         if s["kind"] == "checklist": out += checklist(s, t)
         elif s["kind"] == "headline": out += headline(s, t)

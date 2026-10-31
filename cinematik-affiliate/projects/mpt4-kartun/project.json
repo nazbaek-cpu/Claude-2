@@ -1,0 +1,395 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "meja",
+ "end": 43.6,
+ "whisper_prompt": "Anak nampak okay dalam kelas, tapi MPT4 nanti akan tunjuk sama ada asas dia betul-betul kukuh atau tak.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "badge",
+     "text": "MPT4 · TAHUN 4",
+     "at": 0.0,
+     "y": 200,
+     "size": 30
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "until": 29.4,
+     "x": 280,
+     "y": 1260,
+     "h": 540,
+     "poses": [
+      [
+       "abang/briefing.png",
+       0.0
+      ],
+      [
+       "abang/berfikir.png",
+       2.36
+      ],
+      [
+       "abang/terkejut.png",
+       8.54
+      ],
+      [
+       "abang/stres.png",
+       13.26
+      ],
+      [
+       "abang/berfikir.png",
+       15.38
+      ],
+      [
+       "abang/sedih.png",
+       21.0
+      ],
+      [
+       "abang/idea.png",
+       26.42
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "Anak nampak",
+     "key": "OKAY DALAM KELAS",
+     "at": 0.0,
+     "until": 1.78,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 0.3,
+     "until": 1.78,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": 4
+    },
+    {
+     "kind": "say",
+     "text": "tapi MPT4 akan tunjuk asas dia",
+     "key": "KUKUH ATAU TAK?",
+     "at": 1.78,
+     "until": 7.58,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 2.4,
+     "until": 7.58,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": -3
+    },
+    {
+     "kind": "tape",
+     "text": "MASALAH",
+     "at": 7.58,
+     "until": 21.0,
+     "rot": -2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "Ramai anak masuk MPT4",
+     "key": "TAK TAHU FORMAT SOALAN",
+     "at": 7.58,
+     "until": 11.38,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 8.0,
+     "until": 10.42,
+     "x": 770,
+     "y": 1190,
+     "size": 190,
+     "rot": -3
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 10.42,
+     "until": 11.38,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": 3
+    },
+    {
+     "kind": "say",
+     "text": "Jumpa soalan baru,",
+     "key": "TERUS PANIK!",
+     "at": 11.38,
+     "until": 15.38,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 11.94,
+     "until": 15.38,
+     "x": 700,
+     "y": 1110,
+     "size": 160,
+     "rot": -6
+    },
+    {
+     "kind": "scribble",
+     "at": 14.08,
+     "until": 15.38,
+     "x": 880,
+     "y": 1310,
+     "size": 200,
+     "seed": 5
+    },
+    {
+     "kind": "say",
+     "text": "ujian ni menentukan",
+     "key": "TAHAP ASAS KEFAHAMAN",
+     "at": 15.38,
+     "until": 18.92,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/blok_abc.png",
+     "at": 17.6,
+     "until": 21.0,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": -3
+    },
+    {
+     "kind": "say",
+     "text": "sama ada",
+     "key": "KUKUH ATAU TAK",
+     "at": 18.92,
+     "until": 21.0,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "tape",
+     "text": "AKIBATNYA",
+     "at": 21.0,
+     "until": 29.48,
+     "rot": 2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "kalau asas lemah,",
+     "key": "SUSAH NAK KEJAR",
+     "at": 21.0,
+     "until": 24.2,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 22.44,
+     "until": 26.42,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": 4
+    },
+    {
+     "kind": "say",
+     "text": "di darjah",
+     "key": "4, 5 DAN 6",
+     "at": 24.2,
+     "until": 26.42,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "padahal anak tu pandai,",
+     "key": "CUMA TAK BERLATIH",
+     "at": 26.42,
+     "until": 29.48,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 27.36,
+     "until": 29.48,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": -4
+    },
+    {
+     "kind": "tape",
+     "text": "SOLUSI",
+     "at": 29.48,
+     "until": 41.36,
+     "rot": -2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "mak ayah, start sekarang dengan",
+     "key": "28 HARI PERSEDIAAN MPT4",
+     "at": 29.48,
+     "until": 33.82,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "clip",
+     "video": "modul1.mp4",
+     "at": 29.55,
+     "until": 33.82,
+     "fit": true,
+     "card": {
+      "w": 900,
+      "y": 1120,
+      "rot": -1
+     }
+    },
+    {
+     "kind": "say",
+     "text": "biasakan format soalan,",
+     "key": "SIKIT-SIKIT SETIAP HARI",
+     "at": 33.82,
+     "until": 37.5,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "clip",
+     "video": "dalam.mp4",
+     "at": 33.85,
+     "until": 37.5,
+     "fit": true,
+     "card": {
+      "w": 900,
+      "y": 1120,
+      "rot": -1
+     }
+    },
+    {
+     "kind": "tape",
+     "text": "28 LATIHAN · 1 LATIHAN SEHARI",
+     "at": 34.2,
+     "until": 37.5,
+     "rot": -1,
+     "y": 1540,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "bila dah biasa, masuk exam",
+     "key": "TENANG & YAKIN",
+     "at": 37.5,
+     "until": 41.36,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "clip",
+     "video": "modul2_5.mp4",
+     "at": 37.55,
+     "until": 41.36,
+     "fit": true,
+     "card": {
+      "w": 900,
+      "y": 1120,
+      "rot": -1
+     }
+    },
+    {
+     "kind": "tape",
+     "text": "MODUL 1 HINGGA 5",
+     "at": 38.0,
+     "until": 41.36,
+     "rot": 1,
+     "y": 1540,
+     "size": 32
+    },
+    {
+     "kind": "doodle",
+     "at": 41.36,
+     "x": 280,
+     "y": 1260,
+     "h": 540,
+     "poses": [
+      [
+       "abang/bangga.png",
+       41.36
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "dapatkan sekarang",
+     "key": "LINK DI BAWAH",
+     "at": 41.36,
+     "until": 99,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 41.6,
+     "until": 99,
+     "x": 770,
+     "y": 1190,
+     "size": 180,
+     "rot": 3
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 41.6,
+     "y": 1660
+    }
+   ]
+  }
+ ]
+}

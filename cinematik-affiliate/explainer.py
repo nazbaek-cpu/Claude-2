@@ -36,10 +36,12 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
                      "INK": (66, 42, 28), "ACC": (92, 58, 38), "CTA_TEXT": (255, 244, 224), "K_DARK": (66, 42, 28),
                      "K_GREEN": (142, 62, 24), "K_GOLD": (178, 58, 72), "K_TAPE": (255, 236, 172), "PROP_EDGE": (255, 248, 236)},
           # green self-healing cutting mat: white text, keyword boxes, every sticker torn out of a sheet
+          # a sheet of paper on a wooden desk in window light (kartun colours on top)
+          "meja": {"MEJA": True, "PEACH_TOP": (232, 229, 222), "INK": (40, 40, 40), "ACC": (27, 106, 70), "TINT_PROPS": True},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
-MAT, TORN, BADGE_BG, BADGE_FG = False, False, None, (255, 255, 255)
+MAT, MEJA, TORN, BADGE_BG, BADGE_FG = False, False, False, None, (255, 255, 255)
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
 
@@ -78,11 +80,14 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, GRID, MAT, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, MAT, MEJA, PEACH_TOP, DARK, RULE_LINE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if MAT and not dark:
         cache[key] = cutting_mat()
+        return cache[key]
+    if MEJA and not dark:
+        cache[key] = desk_paper()
         return cache[key]
     if dark:
         top = np.array(DARK, np.float32); bot = np.array(DARK_BOT or DARK, np.float32)
@@ -496,6 +501,31 @@ def scribble(frame, t, it, sc):
     img = img.resize((w, w), Image.LANCZOS)
     blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 300))
 
+def desk_paper():
+    """a pale sheet of paper lying on a dark wooden desk, with the soft shadow of a window frame and leaves across both"""
+    rng = np.random.default_rng(11); yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    grain = cv2.GaussianBlur(rng.normal(0, 1, (H, W)).astype(np.float32), (0, 0), sigmaX=40, sigmaY=1.2)
+    plank = np.floor((yy + 30 * np.sin(xx / 400)) / 260) % 2
+    wood = np.dstack([92 + 10 * plank + 26 * grain, 58 + 6 * plank + 17 * grain, 36 + 4 * plank + 10 * grain])
+    x0, y0, x1, y1 = 34, 78, W - 34, H - 70   # the sheet
+    sh = np.zeros((H, W), np.float32); sh[y0 + 14:y1 + 18, x0 + 8:x1 + 12] = 1; sh = cv2.GaussianBlur(sh, (0, 0), 14)
+    img = wood * (1 - 0.55 * sh[..., None])
+    paper = np.array(PEACH_TOP, np.float32) + cv2.GaussianBlur(rng.normal(0, 3, (H, W)).astype(np.float32), (0, 0), 1)[..., None]
+    paper = paper * (1 - 0.05 * (yy / H))[..., None]
+    m = np.zeros((H, W), np.float32); m[y0:y1, x0:x1] = 1; m = cv2.GaussianBlur(m, (0, 0), 1.2)[..., None]
+    img = img * (1 - m) + paper * m
+    light = np.full((H, W), 255, np.uint8)   # window shadow: frame bars and a few leaves, slanted, very soft
+    def bar(pts, w): cv2.line(light, pts[0], pts[1], 150, w, cv2.LINE_AA)
+    bar(((-200, 1500), (1400, 300)), 46); bar(((-200, 1900), (1400, 700)), 46)
+    bar(((200, -100), (900, 1900)), 40); bar(((700, -100), (1400, 1500)), 40)
+    for (cx, cy, a_, b_, ang) in ((860, 360, 70, 26, 30), (930, 300, 60, 22, -20), (800, 270, 55, 20, 70), (990, 420, 65, 24, 10), (880, 470, 50, 18, -50)):
+        cv2.ellipse(light, (cx, cy), (a_, b_), ang, 0, 360, 165, -1, cv2.LINE_AA)
+    poly = np.array([[0, 1250], [W, 600], [W, H], [0, H]], np.int32); band = np.full((H, W), 255, np.uint8)
+    cv2.fillPoly(band, [poly], 215)   # the lower part of the page sits outside the sunlit patch
+    light = cv2.GaussianBlur(np.minimum(light, band).astype(np.float32), (0, 0), 22) / 255
+    img = img * (0.86 + 0.14 * light[..., None]) * (0.9 + 0.12 * light[..., None])
+    return np.clip(img, 0, 255).astype(np.float32)
+
 def cutting_mat():
     """green self-healing cutting mat: small squares, a heavier line every five, rulers along two edges, faint angle guides"""
     rng = np.random.default_rng(7)
@@ -548,10 +578,14 @@ def sticker(frame, t, it, sc, prj):
     if p <= 0: return
     a = ease_out(p * 2.5) * (1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2))
     if a <= 0: return
-    key = ("stk", it["img"], it.get("size", 260))
+    key = ("stk", it["img"], it.get("size", 260), TORN)
     if key not in cache:
         src = Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"); k = it.get("size", 260) / max(src.size)
-        cache[key] = torn_sticker(src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS), seed=len(it["img"]) * 3)
+        src = src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS)
+        if TORN: cache[key] = torn_sticker(src, seed=len(it["img"]) * 3)
+        else:   # a neat die-cut sticker: white edge and a soft shadow
+            pad = Image.new("RGBA", (src.width + 30, src.height + 30), (0, 0, 0, 0)); pad.paste(src, (15, 15))
+            cache[key] = soft_shadow(sticker_edge(pad, (255, 255, 255), 7), 60, 8, 6)
     img = cache[key]; sc_ = 1.25 - 0.25 * ease_out(p); rot = it.get("rot", 0) + 9 * (1 - ease_out(p))
     img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC).rotate(rot, Image.BICUBIC, expand=True)
     blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 1100) + 5 * math.sin((t - it["at"]) * 2.1 + it.get("x", 0) / 70))
@@ -916,11 +950,25 @@ def clip_frames(name, prj):
     return cache[key]
 
 def clip(frame, t, it, sc, prj):
-    """a video clip as the scene's picture; "fit" stretches it over at..until, with a gentle push-in and dim like photo"""
+    """a video clip as the scene's picture; "fit" stretches it over at..until, with a gentle push-in and dim like photo;
+    "card": {"w", "y", "rot"} plays it inside a white-framed card instead (e.g. landscape product footage on a paper scene)"""
     frames, fps = clip_frames(it["video"], prj)
     n, h, w = frames.shape[:3]; t0, t1 = it["at"], it.get("until", it["at"] + n / fps)
     rate = (n / fps) / (t1 - t0) if it.get("fit") else 1.0
     src = frames[min(n - 1, max(0, int((t - t0) * rate * fps)))]
+    if it.get("card"):
+        if t < t0 or t >= t1: return
+        cd = it["card"]; cw = cd.get("w", 960); ch = int(h * cw / w); b = 14
+        p = ramp(t, t0, 0.4); a = ease_out(p * 2) * (1 - ramp(t, t1 - 0.25, 0.25))
+        face_ = Image.new("RGBA", (cw + b * 2, ch + b * 2), (255, 255, 255, 255))
+        face_.paste(Image.fromarray(cv2.resize(src, (cw, ch), interpolation=cv2.INTER_AREA)), (b, b))
+        m = Image.new("L", (face_.width * 2, face_.height * 2), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=44, fill=255); face_.putalpha(m.resize(face_.size, Image.LANCZOS))
+        img = soft_shadow(face_, 90, 18, 12).rotate(cd.get("rot", 0), Image.BICUBIC, expand=True)
+        sc_ = 0.6 + 0.4 * ease_back(p, 1.6)
+        img = img.resize((max(1, int(img.width * sc_)), max(1, int(img.height * sc_))), Image.BICUBIC)
+        blend(frame, anim(img, a, 1.0), cd.get("x", W / 2), cd.get("y", 1080) + 30 * (1 - ease_out(p)))
+        return
     p = ramp(t, t0, t1 - t0); p = p * p * (3 - 2 * p)
     z0, z1 = it.get("zoom", [1.0, 1.06]); k = max(W / w, H / h) * (z0 + (z1 - z0) * p)
     fx, fy = it.get("focus", [0.5, 0.45])

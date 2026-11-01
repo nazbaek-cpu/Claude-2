@@ -50,3 +50,5 @@ Dah ada: `"theme": "kartun"` (kertas bergaris + palet), `badge`, `say`, `tape`, 
 `prop` (ikon rata Fluent, warna ditukar ke palet). Contoh: `projects/mini-diari-kartun/`.
 
 Belum ada: carta bar yang naik dengan nombor; stiker muka pengguna sebagai mascot.
+
+Watak perempuan: guna lembaran Kak Kira yang baru (10 pose + 10 ekspresi), lihat [`watak-kak-kira.md`](watak-kak-kira.md). Watak lelaki: Abang Bajet.

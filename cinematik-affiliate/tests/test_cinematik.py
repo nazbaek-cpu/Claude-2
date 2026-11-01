@@ -3,7 +3,7 @@ import numpy as np, pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
-import explainer, mirror, project, render, sfx, speed, transcribe, voice  # noqa: E402
+import explainer, mirror, poses, project, render, sfx, speed, transcribe, voice  # noqa: E402
 
 PRJ = os.path.join(os.path.dirname(HERE), "projects", "puffer-bag")
 
@@ -340,3 +340,20 @@ def test_fx_effects_draw_and_follow_the_voice():
     assert fx.overlays(cfg, 1.5) and fx.overlays(cfg, 8.9)      # checklist card, comment box
     two = fx.remap(json.loads(json.dumps(cfg["fx"])), lambda x: x / 2)
     assert two[0]["items"][1] == ["B", 1.0] and two[3]["at"] == 2.5 and two[1]["end"] == 3.0
+
+
+def test_poses_auto_finds_unevenly_spaced_figures(tmp_path):
+    from PIL import Image, ImageDraw
+    im = Image.new("RGB", (600, 300), (254, 245, 231)); d = ImageDraw.Draw(im)
+    d.rectangle((40, 60, 110, 240), fill=(30, 110, 90))                 # figure 1, near the left
+    d.rectangle((400, 80, 470, 240), fill=(150, 90, 200))               # figure 2, far to the right
+    d.ellipse((120, 30, 140, 50), fill=(250, 210, 40))                  # figure 1's light bulb, closer to it
+    d.rectangle((40, 262, 110, 280), fill=(60, 60, 60))                 # a label under figure 1's feet
+    im.save(tmp_path / "band.png")
+    a, b = poses.cut_auto(str(tmp_path / "band.png"), 2)
+    assert a.size == b.size                                             # one canvas, so poses switch in place
+    pa, pb = np.asarray(a)[..., 3], np.asarray(b)[..., 3]
+    assert pa.sum() > pb.sum()                                          # the bulb went to figure 1
+    yel = (np.asarray(a)[..., 0] > 200) & (np.asarray(a)[..., 2] < 100) & (pa > 200)
+    assert yel.any() and not ((np.asarray(b)[..., 0] > 200) & (np.asarray(b)[..., 2] < 100) & (pb > 200)).any()
+    assert not (np.asarray(a)[..., :3].max(-1) < 80)[pa > 200].any()     # the dark label was dropped

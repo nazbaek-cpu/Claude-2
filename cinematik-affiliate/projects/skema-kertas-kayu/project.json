@@ -1,0 +1,938 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-kayu",
+ "whisper_prompt": "Skema Jawapan SPM, Tingkatan 4 dan 5, KSSM, format SPM terkini, Sejarah, Bahasa Melayu, Sains, Biologi, Chemistry, Perniagaan. Calon SPM, markah, kata kunci, pemeriksa.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Pernah",
+    0.0,
+    0.3
+   ],
+   [
+    "tak",
+    0.3,
+    0.5
+   ],
+   [
+    "anak",
+    0.5,
+    0.88
+   ],
+   [
+    "balik",
+    0.88,
+    1.2
+   ],
+   [
+    "rumah",
+    1.2,
+    1.4
+   ],
+   [
+    "tunjuk",
+    1.4,
+    2.14
+   ],
+   [
+    "kertas",
+    2.14,
+    2.44
+   ],
+   [
+    "pemeriksaan?",
+    2.44,
+    3.18
+   ],
+   [
+    "Ibu,",
+    3.22,
+    3.84
+   ],
+   [
+    "jawapan",
+    3.98,
+    4.54
+   ],
+   [
+    "saya",
+    4.54,
+    4.74
+   ],
+   [
+    "betul",
+    4.74,
+    5.42
+   ],
+   [
+    "tapi",
+    5.42,
+    5.72
+   ],
+   [
+    "kenapa",
+    5.72,
+    6.44
+   ],
+   [
+    "markah",
+    6.44,
+    6.8
+   ],
+   [
+    "separuh?",
+    6.8,
+    7.32
+   ],
+   [
+    "Sebab",
+    7.62,
+    8.3
+   ],
+   [
+    "dalam",
+    8.3,
+    8.48
+   ],
+   [
+    "SPM",
+    8.48,
+    9.16
+   ],
+   [
+    "betul",
+    9.16,
+    9.94
+   ],
+   [
+    "je",
+    9.94,
+    10.0
+   ],
+   [
+    "tak",
+    10.0,
+    10.16
+   ],
+   [
+    "cukup.",
+    10.16,
+    10.62
+   ],
+   [
+    "jawapan",
+    10.8,
+    11.48
+   ],
+   [
+    "kena",
+    11.48,
+    11.72
+   ],
+   [
+    "ikut",
+    11.72,
+    12.04
+   ],
+   [
+    "skema,",
+    12.04,
+    12.46
+   ],
+   [
+    "kena",
+    12.62,
+    13.16
+   ],
+   [
+    "ada",
+    13.16,
+    13.34
+   ],
+   [
+    "kata",
+    13.34,
+    13.6
+   ],
+   [
+    "kunci,",
+    13.6,
+    14.12
+   ],
+   [
+    "kena",
+    14.18,
+    14.56
+   ],
+   [
+    "ikut",
+    14.56,
+    14.96
+   ],
+   [
+    "susunan.",
+    14.96,
+    15.5
+   ],
+   [
+    "Ramai",
+    15.68,
+    16.36
+   ],
+   [
+    "calon",
+    16.36,
+    16.62
+   ],
+   [
+    "pandai",
+    16.62,
+    17.16
+   ],
+   [
+    "tapi",
+    17.16,
+    17.44
+   ],
+   [
+    "kalah",
+    17.44,
+    18.1
+   ],
+   [
+    "sebab",
+    18.1,
+    18.44
+   ],
+   [
+    "cara",
+    18.44,
+    18.64
+   ],
+   [
+    "menjawab.",
+    18.64,
+    19.38
+   ],
+   [
+    "Buku",
+    19.44,
+    20.1
+   ],
+   [
+    "skema",
+    20.1,
+    20.42
+   ],
+   [
+    "jawapan",
+    20.42,
+    20.78
+   ],
+   [
+    "SPM",
+    20.78,
+    21.38
+   ],
+   [
+    "ni",
+    21.38,
+    21.5
+   ],
+   [
+    "tunjuk",
+    21.5,
+    21.94
+   ],
+   [
+    "terus",
+    21.94,
+    22.28
+   ],
+   [
+    "cara",
+    22.28,
+    22.54
+   ],
+   [
+    "jawab",
+    22.54,
+    23.02
+   ],
+   [
+    "yang",
+    23.02,
+    23.14
+   ],
+   [
+    "dapat",
+    23.14,
+    23.44
+   ],
+   [
+    "markah",
+    23.44,
+    23.92
+   ],
+   [
+    "penuh.",
+    23.92,
+    24.18
+   ],
+   [
+    "Tingkatan",
+    24.36,
+    25.04
+   ],
+   [
+    "4",
+    25.04,
+    25.24
+   ],
+   [
+    "dan",
+    25.24,
+    25.46
+   ],
+   [
+    "5,",
+    25.46,
+    25.76
+   ],
+   [
+    "Soalan",
+    25.94,
+    26.44
+   ],
+   [
+    "siap",
+    26.44,
+    26.94
+   ],
+   [
+    "jawapan",
+    26.94,
+    27.32
+   ],
+   [
+    "lengkap",
+    27.32,
+    27.7
+   ],
+   [
+    "dari",
+    27.7,
+    28.04
+   ],
+   [
+    "Cikgu",
+    28.04,
+    28.54
+   ],
+   [
+    "Cemerlang.",
+    28.54,
+    28.94
+   ],
+   [
+    "Mak",
+    28.94,
+    29.66
+   ],
+   [
+    "ayah,",
+    29.66,
+    30.08
+   ],
+   [
+    "jangan",
+    30.08,
+    30.48
+   ],
+   [
+    "biar",
+    30.48,
+    30.9
+   ],
+   [
+    "markah",
+    30.9,
+    31.22
+   ],
+   [
+    "anak",
+    31.22,
+    31.36
+   ],
+   [
+    "hilang",
+    31.36,
+    31.86
+   ],
+   [
+    "sebab",
+    31.86,
+    32.22
+   ],
+   [
+    "cara",
+    32.22,
+    32.4
+   ],
+   [
+    "menjawab.",
+    32.4,
+    33.22
+   ],
+   [
+    "Tekan",
+    33.22,
+    33.88
+   ],
+   [
+    "link",
+    33.88,
+    34.0
+   ],
+   [
+    "dekat",
+    34.0,
+    34.26
+   ],
+   [
+    "bawah.",
+    34.26,
+    34.62
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Pernah tak anak balik rumah,",
+       0.0
+      ],
+      [
+       "tunjuk *kertas peperiksaan?*",
+       1.4
+      ]
+     ],
+     "at": 0.0,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 1.6,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "KERTAS"
+    }
+   ]
+  },
+  {
+   "start": 3.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 2.7,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "“Ibu, jawapan saya betul,",
+       3.22
+      ],
+      [
+       "tapi kenapa markah *separuh?*”",
+       5.42
+      ]
+     ],
+     "at": 3.22,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 2.6,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/sedih.png",
+       2.6
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 5.72,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 6.44,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "MARKAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "SEPARUH!",
+     "at": 6.9,
+     "x": 760,
+     "y": 1330,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 7.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 7.1,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Dalam SPM, *betul je tak cukup.*",
+       7.62
+      ],
+      [
+       "Jawapan kena *ikut skema,*",
+       10.8
+      ],
+      [
+       "kena ada *kata kunci,*",
+       12.62
+      ],
+      [
+       "kena *ikut susunan.*",
+       14.18
+      ]
+     ],
+     "at": 7.62,
+     "y": 620,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 7.0,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       7.0
+      ],
+      [
+       "kira/menerang.png",
+       10.8
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 11.72,
+     "until": 13.34,
+     "x": 860,
+     "y": 1110,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "SKEMA"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 13.34,
+     "until": 14.56,
+     "x": 860,
+     "y": 1110,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "KATA KUNCI"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 14.56,
+     "until": 99,
+     "x": 860,
+     "y": 1110,
+     "size": 190,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "SUSUNAN"
+    }
+   ]
+  },
+  {
+   "start": 15.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 15.2,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Ramai calon *pandai,*",
+       15.68
+      ],
+      [
+       "tapi kalah sebab *cara menjawab.*",
+       17.16
+      ]
+     ],
+     "at": 15.68,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 15.1,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       15.1
+      ],
+      [
+       "kira/sedih.png",
+       17.44
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 16.62,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 5,
+     "anim": "slide_r",
+     "edge": 10,
+     "tag": "PANDAI"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 17.5,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "KALAH!",
+     "at": 18.1,
+     "x": 760,
+     "y": 1330,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 19.44,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 18.9,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Skema Jawapan SPM tunjuk cara",
+       19.44
+      ],
+      [
+       "jawab yang dapat *markah penuh.*",
+       22.28
+      ]
+     ],
+     "at": 19.44,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 19.6,
+     "until": 99,
+     "x": 540,
+     "y": 1050,
+     "w": 900,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 23.92,
+     "until": 99,
+     "x": 900,
+     "y": 1350,
+     "size": 110
+    }
+   ]
+  },
+  {
+   "start": 24.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 23.9,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "sejarah.jpg",
+     "at": 24.45,
+     "until": 27.32,
+     "x": 540,
+     "y": 700,
+     "w": 900,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "bm.jpg",
+     "at": 27.32,
+     "until": 99,
+     "x": 540,
+     "y": 700,
+     "w": 900,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Tingkatan 4 & 5",
+       24.36
+      ],
+      [
+       "Soalan siap *jawapan lengkap*",
+       25.94
+      ],
+      [
+       "Dari *cikgu cemerlang*",
+       28.04
+      ]
+     ],
+     "at": 24.36,
+     "y": 1220,
+     "w": 820,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.9,
+     "until": 99,
+     "x": 150,
+     "y": 1130,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.0,
+     "until": 99,
+     "x": 150,
+     "y": 1214,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 28.6,
+     "until": 99,
+     "x": 150,
+     "y": 1298,
+     "size": 70
+    }
+   ]
+  },
+  {
+   "start": 28.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UNTUK CALON SPM",
+     "at": 28.4,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Mak ayah, jangan biar markah anak",
+       28.94
+      ],
+      [
+       "*hilang* sebab cara menjawab.",
+       30.9
+      ]
+     ],
+     "at": 28.94,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 28.98,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       28.98
+      ],
+      [
+       "kira/bangga.png",
+       31.86
+      ],
+      [
+       "kira/sapa.png",
+       33.22
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 31.86,
+     "until": 33.22,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MARKAH PENUH",
+     "good": true
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 33.3,
+     "until": 99,
+     "x": 830,
+     "y": 1080,
+     "w": 420,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 33.88,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

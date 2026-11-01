@@ -46,6 +46,9 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # torn paper labels, stamps and white-edged stickers (styles/template-kertas.md)
           "kertas": {"KERTAS": True, "PEACH_TOP": (226, 222, 213), "INK": (44, 42, 40), "ACC": (196, 52, 46), "K_GREEN": (36, 122, 74),
                      "K_GOLD": (196, 52, 46), "K_DARK": (44, 42, 40), "CTA_TEXT": (255, 255, 255), "PROP_EDGE": (255, 255, 252)},
+          # the same template on solid wood boards instead of the sheet of paper
+          "kertas-kayu": {"KAYU": True, "PEACH_TOP": (128, 84, 52), "INK": (44, 42, 40), "ACC": (196, 52, 46), "K_GREEN": (60, 170, 96),
+                          "K_GOLD": (214, 56, 48), "K_DARK": (44, 42, 40), "CTA_TEXT": (255, 255, 255), "PROP_EDGE": (255, 255, 252)},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
@@ -1137,11 +1140,11 @@ def note(frame, t, it, sc):
         cache[key] = card_
     img = cache[key].copy(); d = ImageDraw.Draw(img)
     for li, (txt, at) in enumerate(it["lines"]):
-        words = txt.split(" "); plain = [w_.strip("*") for w_ in words]; total = f.getlength(" ".join(plain))
+        words = txt.split(" "); plain = [w_.replace("*", "") for w_ in words]; total = f.getlength(" ".join(plain))
         x = w / 2 - total / 2; y = 35 + li * lh; inside = False
         for wi, (w_, pw) in enumerate(zip(words, plain)):
             wa = ease_out(ramp(t, at + 0.07 * wi, 0.12))
-            red = inside or w_.startswith("*"); inside = red and not w_.endswith("*")
+            red = inside or w_.startswith("*"); inside = red and "*" not in w_[1:]   # the closing * may sit before a quote
             if wa > 0:
                 col = (K_GOLD if red else INK) + (int(255 * wa),)
                 d.text((x, y), pw, font=f, fill=col)
@@ -1162,7 +1165,9 @@ def marks(frame, t, it, sc):
         for k, (dx, dy, r) in enumerate(((-90, 30, -12), (0, -20, 6), (95, 20, 14))):
             p = ramp(t, it["at"] + 0.18 * k, 0.25)
             if p <= 0: continue
-            img = text_img("?", font("hand", int(sz * (0.8 + 0.2 * (k == 1)))), K_GOLD).rotate(r, Image.BICUBIC, expand=True)
+            f = font("hand", int(sz * (0.8 + 0.2 * (k == 1)))); asc, desc = f.getmetrics(); img = Image.new("RGBA", (int(f.getlength("?")) + 20, asc + desc + 20), (0, 0, 0, 0))
+            ImageDraw.Draw(img).text((10, 10), "?", font=f, fill=K_GOLD + (255,), stroke_width=4, stroke_fill=(255, 255, 255, 255))   # a white rim reads on wood too
+            img = img.rotate(r, Image.BICUBIC, expand=True)
             s_ = max(0.05, ease_back(p, 2.6)); img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
             blend(frame, anim(img, out, 1.0), x + dx, y + dy + 4 * math.sin((t - it["at"]) * 4 + k))
     else:
@@ -1187,6 +1192,8 @@ def stamp(frame, t, it, sc):
         rng = np.random.default_rng(len(it["text"])); al = np.asarray(img.getchannel("A")).astype(np.float32)
         al *= np.clip(rng.uniform(0.55, 1.15, al.shape), 0, 1)   # worn ink
         img.putalpha(Image.fromarray(al.astype(np.uint8)))
+        if it.get("paper", KAYU):   # on a dark desk the stamp sits on a scrap of white paper
+            slip = paper_slip(w + 36, h + 30, len(it["text"]) + 7); slip.alpha_composite(img, (18, 15)); img = soft_shadow(slip, 90, 8, 6)
         cache[key] = img.rotate(it.get("rot", -8), Image.BICUBIC, expand=True)
     p = ramp(t, it["at"], 0.16); s_ = 1.0 + 0.8 * (1 - ease_out(p)); a = ease_out(ramp(t, it["at"], 0.08)) * (1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2))
     img = cache[key].resize((max(1, int(cache[key].width * s_)), max(1, int(cache[key].height * s_))), Image.BICUBIC)

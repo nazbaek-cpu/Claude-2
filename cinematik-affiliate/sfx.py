@@ -53,6 +53,13 @@ def boing():   # a cartoon bounce: pitch drops with a fast wobble
 def swish():   # a short, bright whoosh for slides
     return whoosh(0.24, 0.5)
 
+def thud():   # a rubber stamp hitting the desk: a low knock with a papery slap on top
+    n = int(SR * 0.3); t = np.arange(n) / SR; rng = np.random.default_rng(5)
+    body = np.sin(2 * np.pi * (70 + 60 * np.exp(-t / 0.03)) * t) * np.exp(-t / 0.07)
+    slap = rng.normal(0, 1, n) * np.exp(-t / 0.012) * 0.5
+    sig = (body + slap) * np.minimum(t / 0.001, 1)
+    return np.stack([sig, sig], 1) * 0.95
+
 def ding():
     n = int(SR * 0.9); t = np.arange(n) / SR
     sig = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t / d)
@@ -89,7 +96,7 @@ def main():
     prj = sys.argv[1]
     cfg = load(prj)
     track = np.zeros((int(SR * (cfg["duration"] + 0.5)), 2), np.float32)
-    sounds = {"whoosh": (whoosh, -19), "pop": (pop, -17), "tick": (tick, -21), "ding": (ding, -18), "boing": (boing, -17), "swish": (swish, -18)}
+    sounds = {"whoosh": (whoosh, -19), "pop": (pop, -17), "tick": (tick, -21), "ding": (ding, -18), "boing": (boing, -17), "swish": (swish, -18), "thud": (thud, -14)}
     gain = cfg.get("sfx_gain_db", 0)
     for at, kind in events(cfg):
         make, level = sounds[kind]

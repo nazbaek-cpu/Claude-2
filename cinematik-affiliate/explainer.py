@@ -42,11 +42,15 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           "kayu": {"KAYU": True, "PEACH_TOP": (128, 84, 52), "INK": (255, 248, 236), "ACC": (246, 196, 60), "CTA_TEXT": (44, 28, 16),
                    "K_GREEN": (255, 212, 96), "K_GOLD": (255, 168, 120), "K_DARK": (52, 32, 18), "K_TAPE": (255, 236, 172),
                    "BADGE_BG": (246, 196, 60), "BADGE_FG": (44, 28, 16), "PROP_EDGE": (255, 255, 252), "TEXT_SHADOW": True},
+          # "kertas": a big grey sheet of paper on a wooden desk in strong window light, handwriting, red key words,
+          # torn paper labels, stamps and white-edged stickers (styles/template-kertas.md)
+          "kertas": {"KERTAS": True, "PEACH_TOP": (226, 222, 213), "INK": (44, 42, 40), "ACC": (196, 52, 46), "K_GREEN": (36, 122, 74),
+                     "K_GOLD": (196, 52, 46), "K_DARK": (44, 42, 40), "CTA_TEXT": (255, 255, 255), "PROP_EDGE": (255, 255, 252)},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
 MAT, MEJA, TORN, BADGE_BG, BADGE_FG = False, False, False, None, (255, 255, 255)
-KAYU, TEXT_SHADOW = False, False
+KAYU, TEXT_SHADOW, KERTAS = False, False, False
 BG_IMAGE = None                                # "bg_image" in project.json: a picture behind every light scene
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
@@ -64,6 +68,8 @@ def font(kind, size):
             f = ImageFont.truetype(os.path.join(HERE, "fonts", "Damion-Regular.ttf"), size)
         elif kind == "archivo":   # Archivo Black: heavy poster capitals for an opening title
             f = ImageFont.truetype(os.path.join(HERE, "fonts", "ArchivoBlack-Regular.ttf"), size)
+        elif kind == "hand":   # Patrick Hand: neat handwriting for labels and notes
+            f = ImageFont.truetype(os.path.join(HERE, "fonts", "PatrickHand-Regular.ttf"), size)
         elif kind == "kick":
             f = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Medium.otf", size)
         else:   # heavy / bold: Plus Jakarta Sans variable
@@ -86,7 +92,7 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, GRID, MAT, MEJA, KAYU, PEACH_TOP, DARK, RULE_LINE, BG_IMAGE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, MAT, MEJA, KAYU, KERTAS, PEACH_TOP, DARK, RULE_LINE, BG_IMAGE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     if BG_IMAGE and not dark:   # the user's own background: cover-fit to 9:16
         im = Image.open(BG_IMAGE).convert("RGB"); s = max(W / im.width, H / im.height)
@@ -97,6 +103,9 @@ def background(dark):
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if MAT and not dark:
         cache[key] = cutting_mat()
+        return cache[key]
+    if KERTAS and not dark:
+        cache[key] = paper_sheet()
         return cache[key]
     if KAYU and not dark:
         cache[key] = solid_wood()
@@ -574,6 +583,33 @@ def solid_wood():
     r = ((xx - W / 2) / W) ** 2 + ((yy - H / 2) / H) ** 2
     return np.clip(img * (1 - 0.45 * r[..., None]), 0, 255).astype(np.float32)
 
+def paper_sheet():
+    """one big sheet of grey-beige paper on a dark wooden desk (wood shows above and below), lit through a window:
+    soft bars and leaf shadows fall across sheet and desk"""
+    rng = np.random.default_rng(21); yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    grain = cv2.GaussianBlur(rng.normal(0, 1, (H, W)).astype(np.float32), (0, 0), sigmaX=60, sigmaY=1.4); grain /= grain.std()
+    plank = np.floor((yy + 20 * np.sin(xx / 500)) / 240) % 2
+    wood = np.dstack([96 + 10 * plank + 9 * grain, 60 + 6 * plank + 6 * grain, 38 + 4 * plank + 3 * grain])
+    sheet = np.zeros((H, W), np.uint8)   # the sheet, a hair off square
+    c, s_ = math.cos(math.radians(0.7)), math.sin(math.radians(0.7)); hw, hh = W / 2 - 22, H / 2 - 128
+    pts = np.array([[W / 2 + c * x - s_ * y, H / 2 + s_ * x + c * y] for x, y in ((-hw, -hh), (hw, -hh), (hw, hh), (-hw, hh))], np.int32)
+    cv2.fillPoly(sheet, [pts], 255, cv2.LINE_AA); m = sheet.astype(np.float32)[..., None] / 255
+    drop = cv2.GaussianBlur(np.roll(sheet, (16, 6), (0, 1)).astype(np.float32) / 255, (0, 0), 16)[..., None]
+    img = wood * (1 - 0.6 * drop)
+    paper = np.array(PEACH_TOP, np.float32) + cv2.GaussianBlur(rng.normal(0, 2.4, (H, W)).astype(np.float32), (0, 0), 1.2)[..., None]
+    img = img * (1 - m) + paper * m
+    light = np.full((H, W), 255, np.uint8)
+    def bar(p0, p1, w): cv2.line(light, p0, p1, 120, w, cv2.LINE_AA)
+    bar((-300, 1700), (1500, 200), 70); bar((-300, 2150), (1500, 650), 70)   # window frame
+    bar((150, -200), (900, 2000), 56); bar((760, -200), (1500, 1600), 56)
+    for cx, cy, a_, b_, ang in ((870, 420, 90, 32, 30), (950, 340, 76, 28, -20), (800, 300, 70, 26, 70), (1010, 470, 80, 30, 10),
+                                 (880, 540, 64, 22, -50), (180, 1500, 80, 28, 40), (260, 1590, 70, 24, -30)):
+        cv2.ellipse(light, (cx, cy), (a_, b_), ang, 0, 360, 135, -1, cv2.LINE_AA)
+    light = cv2.GaussianBlur(light.astype(np.float32), (0, 0), 18) / 255
+    img = img * (0.8 + 0.2 * light[..., None])
+    r = ((xx - W / 2) / W) ** 2 + ((yy - H / 2) / H) ** 2
+    return np.clip(img * (1 - 0.35 * r[..., None]), 0, 255).astype(np.float32)
+
 def cutting_mat():
     """green self-healing cutting mat: small squares, a heavier line every five, rulers along two edges, faint angle guides"""
     rng = np.random.default_rng(7)
@@ -664,6 +700,16 @@ def sticker(frame, t, it, sc, prj):
     q = ramp(t, until - 0.3, 0.3)   # zoom out and tip away
     if q > 0: s_ *= max(0.01, 1 - ease_out(q) * 1.0); rot += 25 * q; a *= 1 - q * 0.5
     img = cache[key]
+    if it.get("tag"):   # a small white paper tag with a handwritten word, stuck above the sticker
+        tk = ("tag", it["tag"], key)
+        if tk not in cache:
+            f = font("hand", it.get("tag_size", 44)); tw = int(f.getlength(it["tag"])); asc, desc = f.getmetrics()
+            tg = paper_slip(tw + 40, asc + desc + 22, len(it["tag"]) + 3); ImageDraw.Draw(tg).text((20, 9), it["tag"], font=f, fill=INK + (255,))
+            tg = soft_shadow(tg, 80, 6, 4).rotate(3, Image.BICUBIC, expand=True)
+            both = Image.new("RGBA", (max(img.width, tg.width), img.height + tg.height - 10), (0, 0, 0, 0))
+            both.alpha_composite(tg, ((both.width - tg.width) // 2, 0)); both.alpha_composite(img, ((both.width - img.width) // 2, tg.height - 10))
+            cache[tk] = both
+        img = cache[tk]
     img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
     if abs(rot) > 0.2: img = img.rotate(rot, Image.BICUBIC, expand=True)
     blend(frame, anim(img, a, 1.0), x, y + 4 * math.sin(k * 2.1 + x / 70))
@@ -1057,8 +1103,98 @@ def clip(frame, t, it, sc, prj):
     if dim: img *= 1 - float(np.interp(t, [d[1] for d in dim], [d[0] for d in dim]))
     frame[:] = img * PHOTO_SHADE
 
+def paper_slip(w, h, seed, fill=(250, 248, 243)):
+    """a strip of white paper with slightly ragged edges and a soft shadow"""
+    rng = np.random.default_rng(seed); S = 2; img = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    n = 18; top = [(i * w * S / n, rng.uniform(0, 5) * S) for i in range(n + 1)]
+    bot = [(w * S - i * w * S / n, h * S - rng.uniform(0, 5) * S) for i in range(n + 1)]
+    d.polygon(top + [(w * S - rng.uniform(0, 4) * S, h * S / 2)] + bot + [(rng.uniform(0, 4) * S, h * S / 2)], fill=fill + (255,))
+    return img.resize((w, h), Image.LANCZOS)
+
+def label(frame, t, it, sc):
+    """section title on a torn white paper slip at the top ("text", "y" 230, "rot", "size"); it drops in and settles"""
+    if t < it["at"] or t >= it.get("until", 1e9): return
+    key = ("label", it["text"], it.get("size", 66), it.get("rot", -1.5))
+    if key not in cache:
+        f = font("hand", it.get("size", 66)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics()
+        img = paper_slip(tw + 90, asc + desc + 44, len(it["text"]))
+        ImageDraw.Draw(img).text((45, 20), it["text"], font=f, fill=INK + (255,))
+        cache[key] = soft_shadow(img, 90, 9, 7).rotate(it.get("rot", -1.5), Image.BICUBIC, expand=True)
+    p = ramp(t, it["at"], 0.35); a = ease_out(ramp(t, it["at"], 0.12)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
+    img = cache[key]; s_ = 1.15 - 0.15 * ease_out(p)
+    if abs(s_ - 1) > 1e-3: img = img.resize((int(img.width * s_), int(img.height * s_)), Image.BICUBIC)
+    blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 230) - 40 * (1 - ease_back(p, 1.6)))
+
+def note(frame, t, it, sc):
+    """a white card with handwritten lines ("lines" [[text, at]]); *words* are red with a hand-drawn underline;
+    the card pops in at "at", every line writes itself word by word"""
+    if t < it["at"] or t >= it.get("until", 1e9): return
+    size = it.get("size", 62); f = font("hand", size); w = it.get("w", 960); lh = int(size * 1.35)
+    key = ("note", w, len(it["lines"]), size, it.get("rot", -0.6))
+    if key not in cache:
+        card_ = Image.new("RGBA", (w, lh * len(it["lines"]) + 70), (0, 0, 0, 0))
+        ImageDraw.Draw(card_).rounded_rectangle((0, 0, card_.width - 1, card_.height - 1), 18, fill=(252, 251, 248, 255))
+        cache[key] = card_
+    img = cache[key].copy(); d = ImageDraw.Draw(img)
+    for li, (txt, at) in enumerate(it["lines"]):
+        words = txt.split(" "); plain = [w_.strip("*") for w_ in words]; total = f.getlength(" ".join(plain))
+        x = w / 2 - total / 2; y = 35 + li * lh; inside = False
+        for wi, (w_, pw) in enumerate(zip(words, plain)):
+            wa = ease_out(ramp(t, at + 0.07 * wi, 0.12))
+            red = inside or w_.startswith("*"); inside = red and not w_.endswith("*")
+            if wa > 0:
+                col = (K_GOLD if red else INK) + (int(255 * wa),)
+                d.text((x, y), pw, font=f, fill=col)
+                if red:   # the underline draws itself under the red word
+                    u = ease_out(ramp(t, at + 0.07 * wi + 0.15, 0.3)); ww = f.getlength(pw + " " if inside else pw)   # one line under a phrase
+                    if u > 0: d.line([(x, y + size * 1.08), (x + ww * u, y + size * 1.1 + 2)], fill=K_GOLD + (255,), width=5)
+            x += f.getlength(pw + " ")
+    img = soft_shadow(img, 80, 12, 8).rotate(it.get("rot", -0.6), Image.BICUBIC, expand=True)
+    p = ramp(t, it["at"], 0.3); a = ease_out(p * 2) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25)); s_ = 0.85 + 0.15 * ease_back(p, 2.0)
+    img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
+    blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 520))
+
+def marks(frame, t, it, sc):
+    """little hand-drawn marks that pop in one after another: "type" q (three red question marks) or tick (a green check)"""
+    if t < it["at"] or t >= it.get("until", 1e9): return
+    x, y, sz = it.get("x", W / 2), it.get("y", 800), it.get("size", 90); out = 1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2)
+    if it.get("type", "q") == "q":
+        for k, (dx, dy, r) in enumerate(((-90, 30, -12), (0, -20, 6), (95, 20, 14))):
+            p = ramp(t, it["at"] + 0.18 * k, 0.25)
+            if p <= 0: continue
+            img = text_img("?", font("hand", int(sz * (0.8 + 0.2 * (k == 1)))), K_GOLD).rotate(r, Image.BICUBIC, expand=True)
+            s_ = max(0.05, ease_back(p, 2.6)); img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
+            blend(frame, anim(img, out, 1.0), x + dx, y + dy + 4 * math.sin((t - it["at"]) * 4 + k))
+    else:
+        p = ease_out(ramp(t, it["at"], 0.3)); S = 2; n = int(sz * 1.3); img = Image.new("RGBA", (n * S, n * S), (0, 0, 0, 0))
+        pts = [(0.1, 0.55), (0.38, 0.85), (0.92, 0.12)]; seg = p * 2
+        a_, b_, c_ = [(px * n * S, py * n * S) for px, py in pts]; d = ImageDraw.Draw(img); col = K_GREEN + (255,)
+        d.line([a_, (a_[0] + (b_[0] - a_[0]) * min(seg, 1), a_[1] + (b_[1] - a_[1]) * min(seg, 1))], fill=col, width=int(sz * 0.16) * S)
+        if seg > 1: d.line([b_, (b_[0] + (c_[0] - b_[0]) * (seg - 1), b_[1] + (c_[1] - b_[1]) * (seg - 1))], fill=col, width=int(sz * 0.16) * S, joint="curve")
+        blend(frame, anim(img.resize((n, n), Image.LANCZOS), out, 1.0), x, y)
+
+def stamp(frame, t, it, sc):
+    """a red rubber stamp ("text") that slams down from above the page and stays, slightly tilted"""
+    if t < it["at"] or t >= it.get("until", 1e9): return
+    key = ("stamp", it["text"], it.get("size", 74), it.get("rot", -8))
+    if key not in cache:
+        f = font("archivo", it.get("size", 74)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics(); w, h = tw + 60, asc + desc + 40
+        S = 2; img = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0)); d = ImageDraw.Draw(img); col = tuple(it.get("color", (200, 40, 40)))
+        d.rounded_rectangle((4 * S, 4 * S, (w - 4) * S, (h - 4) * S), 10 * S, outline=col + (255,), width=6 * S)
+        d.rounded_rectangle((12 * S, 12 * S, (w - 12) * S, (h - 12) * S), 6 * S, outline=col + (255,), width=2 * S)
+        d.text((30 * S, 18 * S), it["text"], font=font("archivo", it.get("size", 74) * S), fill=col + (255,))
+        img = img.resize((w, h), Image.LANCZOS)
+        rng = np.random.default_rng(len(it["text"])); al = np.asarray(img.getchannel("A")).astype(np.float32)
+        al *= np.clip(rng.uniform(0.55, 1.15, al.shape), 0, 1)   # worn ink
+        img.putalpha(Image.fromarray(al.astype(np.uint8)))
+        cache[key] = img.rotate(it.get("rot", -8), Image.BICUBIC, expand=True)
+    p = ramp(t, it["at"], 0.16); s_ = 1.0 + 0.8 * (1 - ease_out(p)); a = ease_out(ramp(t, it["at"], 0.08)) * (1 - ramp(t, it.get("until", 1e9) - 0.2, 0.2))
+    img = cache[key].resize((max(1, int(cache[key].width * s_)), max(1, int(cache[key].height * s_))), Image.BICUBIC)
+    blend(frame, anim(img, a, 1.0), it.get("x", 760), it.get("y", 1150))
+
 DRAW = {"hl": hl, "scribble": scribble, "badge": badge, "say": say, "tape": tape, "mascot": mascot, "setup": setup, "kicker": kicker, "script_title": script_title, "head": head, "tile": tile, "count": count, "timer": timer,
-        "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile}
+        "race": race, "blocks": blocks, "stairs": stairs, "calendar": calendar, "cta": cta, "floaters": floaters, "pile": pile,
+        "label": label, "note": note, "marks": marks, "stamp": stamp}
 
 def draw_scene(sc, t, prj):
     frame = background(sc.get("dark", False)).copy()
@@ -1119,6 +1255,16 @@ def caption_img(text, size, kind="heavy"):
 def captions(frame, t, cap):
     """the chunk being spoken pops in; long chunks wrap to two lines"""
     size, y, kind = cap.get("size", 100), cap.get("y", 1390), cap.get("face", "heavy")
+    if cap.get("style") == "words":   # subtitle line: words appear as they are spoken, the rest of the line waits faintly
+        for grp in word_lines(cap):
+            if grp[0][1] <= t < grp[-1][2] + 0.35:
+                f = font("bold", cap.get("size", 54)); gap = f.getlength(" ") + cap.get("size", 54) * 0.22   # room for the outline
+                x = W / 2 - (sum(f.getlength(w) for w, _, _ in grp) + gap * (len(grp) - 1)) / 2
+                for w, s0, _ in grp:
+                    img = caption_word(w, cap.get("size", 54)); a = 1.0 if t >= s0 else 0.35
+                    blend(frame, anim(img, a, 1.0), x + f.getlength(w) / 2, y); x += f.getlength(w) + gap
+                break
+        return
     if cap.get("style") == "pill":   # whole sentence in a dark rounded pill, like a subtitle bar
         for text, s0, s1 in cap["chunks"]:
             if s0 <= t < s1:
@@ -1136,6 +1282,27 @@ def captions(frame, t, cap):
             if a < 0.999: img = img.copy(); img.putalpha(img.getchannel("A").point(lambda v: int(v * a)))
             blend(frame, img, W / 2, y + (i - (len(lines) - 1) / 2) * size * 1.02)
         break
+
+def caption_word(w, size):
+    key = ("cw", w, size)
+    if key not in cache:
+        f = font("bold", size); sw = max(3, size // 12); pad = sw + 6; asc, desc = f.getmetrics()
+        img = Image.new("RGBA", (int(f.getlength(w)) + pad * 2, asc + desc + pad * 2), (0, 0, 0, 0))
+        ImageDraw.Draw(img).text((pad, pad), w, font=f, fill=(255, 255, 255, 255), stroke_width=sw, stroke_fill=(30, 26, 22, 255))
+        cache[key] = img
+    return cache[key]
+
+def word_lines(cap):
+    """the captions' "words" [[word, start, end]] in lines of at most "max_words", broken after punctuation"""
+    key = ("wl", id(cap))
+    if key not in cache:
+        out, cur = [], []
+        for w in cap["words"]:
+            cur.append(w)
+            if len(cur) >= cap.get("max_words", 4) or w[0][-1:] in ".,?!": out.append(cur); cur = []
+        if cur: out.append(cur)
+        cache[key] = out
+    return cache[key]
 
 def caption_chunks(words, fixes=None, max_words=3, size=100, maxw=900, upper=True, kind="heavy"):
     """[[TEXT, start, end]] from Whisper words: break at punctuation, after max_words or when too wide;
@@ -1198,12 +1365,18 @@ def sfx_track(cfg, dur, out):
                 ev += [(it["at"] + i * it.get("step", 0.16) + 0.35, "tick", -17) for i in range(len(it["chips"]))]
                 if it.get("scatter_at"): ev.append((it["scatter_at"] - 0.1, "whoosh", -15))
             elif it["kind"] == "cta": ev.append((it["at"], "ding", -16))
+            elif it["kind"] == "label": ev.append((it["at"], "swish", -18))
+            elif it["kind"] == "note":
+                ev.append((it["at"], "pop", -18)); ev += [(at, "tick", -22) for _, at in it["lines"]]
+            elif it["kind"] == "marks":
+                ev += [(it["at"] + 0.18 * k, "pop", -18) for k in range(3)] if it.get("type", "q") == "q" else [(it["at"], "ding", -22)]
+            elif it["kind"] == "stamp": ev.append((it["at"] + 0.12, "thud", -12))
             elif it["kind"] in ("count", "timer"):
                 last = -1
                 for ms in range(0, int(it.get("dur", 1.4) * 1000), 70):
                     tt = it["at"] + 0.1 + ms / 1000; v = round(it["to"] * ease_out(ms / 1000 / it.get("dur", 1.4)))
                     if v != last: ev.append((tt, "tick", -22)); last = v
-    make = {"whoosh": sfx.whoosh, "pop": sfx.pop, "tick": sfx.tick, "ding": sfx.ding, "boing": sfx.boing, "swish": sfx.swish}
+    make = {"whoosh": sfx.whoosh, "pop": sfx.pop, "tick": sfx.tick, "ding": sfx.ding, "boing": sfx.boing, "swish": sfx.swish, "thud": sfx.thud}
     for at, kind, level in ev:
         clip = make[kind](); i = int(max(at, 0) * sfx.SR); j = min(i + len(clip), len(track))
         track[i:j] += clip[: j - i] * sfx.db(level + cfg.get("sfx_gain_db", 0))
@@ -1221,7 +1394,8 @@ def remap(cfg, m):
     f = lambda t: round(to_output(t, keep, tempo), 3)   # noqa: E731
     cfg = json.loads(json.dumps(cfg))
     if "end" in cfg: cfg["end"] = f(cfg["end"])
-    if cfg.get("captions"): cfg["captions"]["chunks"] = [[x, f(a), f(b)] for x, a, b in cfg["captions"]["chunks"]]
+    if cfg.get("captions", {}).get("chunks"): cfg["captions"]["chunks"] = [[x, f(a), f(b)] for x, a, b in cfg["captions"]["chunks"]]
+    if cfg.get("captions", {}).get("words"): cfg["captions"]["words"] = [[x, f(a), f(b)] for x, a, b in cfg["captions"]["words"]]
     for sc in cfg["scenes"]:
         sc["start"] = f(sc["start"])
         for it in sc["items"]:

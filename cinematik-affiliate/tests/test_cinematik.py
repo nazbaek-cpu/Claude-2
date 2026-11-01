@@ -357,3 +357,26 @@ def test_poses_auto_finds_unevenly_spaced_figures(tmp_path):
     yel = (np.asarray(a)[..., 0] > 200) & (np.asarray(a)[..., 2] < 100) & (pa > 200)
     assert yel.any() and not ((np.asarray(b)[..., 0] > 200) & (np.asarray(b)[..., 2] < 100) & (pb > 200)).any()
     assert not (np.asarray(a)[..., :3].max(-1) < 80)[pa > 200].any()     # the dark label was dropped
+
+
+def test_explainer_kertas_template_pieces(tmp_path):
+    saved = {k: getattr(explainer, k) for k in explainer.THEMES["kertas"]}
+    explainer.set_theme("kertas")
+    try:
+        sc = {"start": 0.0, "items": [{"kind": "label", "text": "UNTUK CALON SPM", "at": 0.0},
+                                      {"kind": "note", "lines": [["Markah tetap *RENDAH?*", 0.0]], "at": 0.0, "y": 540},
+                                      {"kind": "marks", "type": "q", "at": 0.0, "x": 300, "y": 900},
+                                      {"kind": "marks", "type": "tick", "at": 0.0, "x": 800, "y": 900},
+                                      {"kind": "stamp", "text": "HUTANG", "at": 0.0, "x": 700, "y": 1300}]}
+        cap = {"style": "words", "y": 1470, "words": [["Dah", 0.0, 0.3], ["ulang", 0.3, 0.6], ["kaji.", 0.6, 1.0]]}
+        fr = explainer.frame_at([sc], 0.9, str(tmp_path), cap)   # inside the subtitle line
+        r, g, b = fr[40, 540].astype(int); assert r > g > b and r < 160          # wood above the sheet
+        assert abs(int(fr[1700, 300, 0]) - int(fr[1700, 300, 2])) < 40            # grey paper lower down
+        red = (fr[..., 0] > 150) & (fr[..., 1] < 90) & (fr[..., 2] < 90)
+        assert red[480:620].any() and red[1220:1380].any() and red[820:980, 200:400].any()   # key word, stamp, question marks
+        assert ((fr[..., 1] > 100) & (fr[..., 0] < 80))[850:950, 740:860].any()  # the green tick
+        assert (fr[1440:1500].min(-1) > 240).any()                                 # white subtitle words
+        ev = explainer.sfx_track({"scenes": [sc]}, 3.0, str(tmp_path / "s.wav"))
+        assert ev == 1 + 2 + 3 + 1 + 1                                            # swish, pop + tick, three pops, ding, thud
+    finally:
+        vars(explainer).update(saved)

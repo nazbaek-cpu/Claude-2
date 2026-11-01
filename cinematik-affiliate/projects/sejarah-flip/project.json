@@ -16,173 +16,95 @@
   ],
   "lip_amount": 0.85
  },
- "segments": [
-  {
-   "start": 31.1,
-   "end": 36.26,
-   "pills_y": 330,
-   "pills": [
-    [
-     "Infografik",
-     31.66
-    ],
-    [
-     "Berwarna",
-     32.88
-    ],
-    [
-     "Mind map",
-     34.38
-    ]
-   ]
-  }
- ],
+ "segments": [],
  "fx": [
   {
-   "kind": "headline",
+   "kind": "depth",
    "start": 0.3,
    "end": 6.14,
-   "tag": "BERITA PELAJAR · SPM",
-   "lines": [
-    "Buku teks Sejarah",
-    "jadi nota padat"
-   ],
-   "y": 330,
-   "wall": [
+   "scatter_at": 6.0,
+   "y_back": 640,
+   "words": [
     [
-     "nota|padat",
-     175,
-     660,
-     -6
+     "NOTA",
+     1.62,
+     "back"
     ],
     [
-     "buku|teks",
-     905,
-     720,
-     5
+     "BUKU TEKS",
+     4.22,
+     "back"
     ],
     [
-     "calon|SPM",
-     160,
-     930,
-     4
-    ]
-   ]
-  },
-  {
-   "kind": "zoomcut",
-   "at": 6.14
-  },
-  {
-   "kind": "digizoom",
-   "start": 6.14,
-   "end": 9.82,
-   "zoom": 1.3,
-   "zoom_at": 8.42,
-   "focus": [
-    540,
-    1050
-   ]
-  },
-  {
-   "kind": "checklist",
-   "start": 9.82,
-   "end": 40.94,
-   "title": [
-    "6 sebab ibu ayah",
-    "pilih nota ni"
-   ],
-   "items": [
-    [
-     "Padat dari buku teks",
-     9.9
-    ],
-    [
-     "Untuk calon SPM",
-     12.1
-    ],
-    [
-     "Infografik menarik",
-     18.82
-    ],
-    [
-     "Sebesar tapak tangan",
-     22.86
-    ],
-    [
-     "Berwarna & mind map",
-     33.22
-    ],
-    [
-     "Tarikh & peristiwa",
-     37.26
-    ]
-   ],
-   "hide": [
-    [
-     19.9,
-     25.4
-    ],
-    [
-     29.5,
-     36.2
+     "PADAT",
+     5.28,
+     "back"
     ]
    ]
   },
   {
    "kind": "framebreak",
-   "start": 9.82,
+   "start": 6.14,
    "end": 14.06,
    "user": "calon SPM",
-   "caption": "nota Sejarah untuk calon SPM"
+   "caption": "nota Sejarah dari buku teks sekolah"
   },
   {
-   "kind": "beforeafter",
+   "kind": "depth",
    "start": 14.06,
    "end": 19.9,
-   "labels": [
-    "buku teks",
-    "infografik"
-   ],
-   "label_y": 900
-  },
-  {
-   "kind": "zoomcut",
-   "at": 20.36
-  },
-  {
-   "kind": "digizoom",
-   "start": 20.36,
-   "end": 25.58,
-   "zoom": 1.25,
-   "zoom_at": 22.86,
-   "focus": [
-    540,
-    900
+   "scatter_at": 19.75,
+   "y_back": 640,
+   "words": [
+    [
+     "MUDAH INGAT",
+     16.26,
+     "back"
+    ],
+    [
+     "INFOGRAFIK",
+     18.82,
+     "back"
+    ]
    ]
   },
   {
-   "kind": "zoomcut",
-   "at": 28.16
+   "kind": "framebreak",
+   "start": 20.36,
+   "end": 30.7,
+   "user": "ibu ayah",
+   "caption": "sebesar tapak tangan, senang bawa"
   },
   {
-   "kind": "zoomcut",
-   "at": 36.26
+   "kind": "depth",
+   "start": 36.26,
+   "end": 40.94,
+   "scatter_at": 40.8,
+   "y_back": 640,
+   "words": [
+    [
+     "TARIKH",
+     37.26,
+     "back"
+    ],
+    [
+     "PERISTIWA",
+     38.28,
+     "back"
+    ],
+    [
+     "SEJARAH",
+     39.06,
+     "back"
+    ]
+   ]
   },
   {
    "kind": "framebreak",
    "start": 40.94,
-   "end": 46.8,
+   "end": null,
    "user": "ibu ayah",
    "caption": "mudah ingat, belajar di mana-mana"
-  },
-  {
-   "kind": "comment",
-   "start": 46.8,
-   "end": null,
-   "text": "DAPATKAN DI LINK BAWAH",
-   "cps": 40,
-   "y": 1770
   }
  ],
  "subs": []

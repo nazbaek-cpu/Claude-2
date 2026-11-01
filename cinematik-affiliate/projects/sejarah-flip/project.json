@@ -1,0 +1,189 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Ibu ayah, buku nota Infografik Sejarah untuk calon SPM. Buku teks padat, sebesar tapak tangan, nota poket, infografik, mind map, tarikh dan peristiwa sejarah Malaysia.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [
+  {
+   "start": 31.1,
+   "end": 36.26,
+   "pills_y": 330,
+   "pills": [
+    [
+     "Infografik",
+     31.66
+    ],
+    [
+     "Berwarna",
+     32.88
+    ],
+    [
+     "Mind map",
+     34.38
+    ]
+   ]
+  }
+ ],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.3,
+   "end": 6.14,
+   "tag": "BERITA PELAJAR · SPM",
+   "lines": [
+    "Buku teks Sejarah",
+    "jadi nota padat"
+   ],
+   "y": 330,
+   "wall": [
+    [
+     "nota|padat",
+     175,
+     660,
+     -6
+    ],
+    [
+     "buku|teks",
+     905,
+     720,
+     5
+    ],
+    [
+     "calon|SPM",
+     160,
+     930,
+     4
+    ]
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 6.14
+  },
+  {
+   "kind": "digizoom",
+   "start": 6.14,
+   "end": 9.82,
+   "zoom": 1.3,
+   "zoom_at": 8.42,
+   "focus": [
+    540,
+    1050
+   ]
+  },
+  {
+   "kind": "checklist",
+   "start": 9.82,
+   "end": 40.94,
+   "title": [
+    "6 sebab ibu ayah",
+    "pilih nota ni"
+   ],
+   "items": [
+    [
+     "Padat dari buku teks",
+     9.9
+    ],
+    [
+     "Untuk calon SPM",
+     12.1
+    ],
+    [
+     "Infografik menarik",
+     18.82
+    ],
+    [
+     "Sebesar tapak tangan",
+     22.86
+    ],
+    [
+     "Berwarna & mind map",
+     33.22
+    ],
+    [
+     "Tarikh & peristiwa",
+     37.26
+    ]
+   ],
+   "hide": [
+    [
+     19.9,
+     25.4
+    ],
+    [
+     29.5,
+     36.2
+    ]
+   ]
+  },
+  {
+   "kind": "framebreak",
+   "start": 9.82,
+   "end": 14.06,
+   "user": "calon SPM",
+   "caption": "nota Sejarah untuk calon SPM"
+  },
+  {
+   "kind": "beforeafter",
+   "start": 14.06,
+   "end": 19.9,
+   "labels": [
+    "buku teks",
+    "infografik"
+   ],
+   "label_y": 900
+  },
+  {
+   "kind": "zoomcut",
+   "at": 20.36
+  },
+  {
+   "kind": "digizoom",
+   "start": 20.36,
+   "end": 25.58,
+   "zoom": 1.25,
+   "zoom_at": 22.86,
+   "focus": [
+    540,
+    900
+   ]
+  },
+  {
+   "kind": "zoomcut",
+   "at": 28.16
+  },
+  {
+   "kind": "zoomcut",
+   "at": 36.26
+  },
+  {
+   "kind": "framebreak",
+   "start": 40.94,
+   "end": 46.8,
+   "user": "ibu ayah",
+   "caption": "mudah ingat, belajar di mana-mana"
+  },
+  {
+   "kind": "comment",
+   "start": 46.8,
+   "end": null,
+   "text": "DAPATKAN DI LINK BAWAH",
+   "cps": 40,
+   "y": 1770
+  }
+ ],
+ "subs": []
+}

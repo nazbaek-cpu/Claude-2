@@ -47,4 +47,9 @@ python poses.py /dev/shm/kira_bands/muka.png $OUT/muka --grid 10x1 --icons \
 ```
 
 Semua 10 pose dipotong dengan saiz kanvas yang sama dan diletak ikut kaki, jadi watak tak melompat bila pose bertukar.
-Item `doodle` biasa: `"x": 280, "y": 1250, "h": 520`, dengan `"enter": "slide"` pada babak pertama dan CTA.
+Susun atur (dari semakan pengguna: watak jangan terlalu bawah, tengah video jangan kosong):
+
+- watak `doodle`: `"x": 290, "y": 1080, "h": 680`, dengan `"enter": "slide"` pada babak pertama dan CTA
+- ikon utama `sticker`: `x` 790, `y` 1000, `size` 210; ikon/emoji kecil: `x` 930, `y` 730, `size` 140
+- gambar produk (`card`): `y` 1020; emoji di bawah gambar `y` 1400
+- tajuk di atas (y 185 badge, y 320 tajuk); bahagian bawah (y > 1500) dibiarkan untuk butang CTA dan UI TikTok

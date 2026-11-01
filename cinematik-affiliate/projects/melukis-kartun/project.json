@@ -1,0 +1,528 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Bestnya! Melukis Karakter oleh Irfan Foner. Mak ayah, anak suka conteng. 30 topik, 30 aktiviti, 64 halaman berwarna, gaya chibi.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "badge",
+     "text": "MAK AYAH, DENGAR NI",
+     "at": 0.0,
+     "until": 4.06,
+     "y": 200,
+     "size": 30
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/briefing.png",
+       0.0
+      ],
+      [
+       "abang/terkejut.png",
+       3.42
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "Mak ayah, jangan marah kalau",
+     "key": "BUKU PENUH CONTENGAN",
+     "at": 0.0,
+     "until": 4.06,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 1.7,
+     "until": 5.48,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": 4,
+     "edge": 11,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Crayon",
+     "at": 3.3,
+     "until": 5.48,
+     "x": 900,
+     "y": 880,
+     "size": 130,
+     "rot": -20,
+     "anim": "spin",
+     "edge": 11
+    },
+    {
+     "kind": "scribble",
+     "at": 3.42,
+     "until": 5.48,
+     "x": 800,
+     "y": 1420,
+     "size": 170,
+     "seed": 4
+    },
+    {
+     "kind": "say",
+     "text": "itu",
+     "key": "BUKAN MAIN-MAIN",
+     "at": 4.06,
+     "until": 5.48,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Red exclamation mark",
+     "at": 4.5,
+     "until": 5.48,
+     "x": 920,
+     "y": 1000,
+     "size": 100,
+     "rot": 8,
+     "anim": "drop",
+     "edge": 11
+    }
+   ]
+  },
+  {
+   "start": 5.48,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 4.5,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/idea.png",
+       4.5
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "itu otak dia",
+     "key": "TENGAH KREATIF",
+     "at": 5.48,
+     "until": 7.98,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Light bulb",
+     "at": 6.08,
+     "until": 7.98,
+     "x": 900,
+     "y": 880,
+     "size": 130,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel_warna.png",
+     "at": 6.92,
+     "until": 7.98,
+     "x": 780,
+     "y": 1180,
+     "size": 180,
+     "rot": -4,
+     "edge": 11,
+     "anim": "slide_r"
+    }
+   ]
+  },
+  {
+   "start": 7.98,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 7.0,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       7.0
+      ],
+      [
+       "abang/sedih.png",
+       10.1
+      ],
+      [
+       "abang/stres.png",
+       13.78
+      ]
+     ]
+    },
+    {
+     "kind": "tape",
+     "text": "MASALAHNYA",
+     "at": 8.02,
+     "until": 15.34,
+     "rot": -2,
+     "y": 605,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "bila tak ada siapa",
+     "key": "BIMBING",
+     "at": 7.98,
+     "until": 10.1,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Thinking face",
+     "at": 8.62,
+     "until": 10.1,
+     "x": 780,
+     "y": 1180,
+     "size": 175,
+     "rot": -5,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "minat tu lama-lama",
+     "key": "PADAM",
+     "at": 10.1,
+     "until": 11.86,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Broken heart",
+     "at": 11.0,
+     "until": 11.86,
+     "x": 780,
+     "y": 1180,
+     "size": 175,
+     "rot": 6,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "bakat yang boleh pergi jauh,",
+     "key": "HILANG MACAM TU JE",
+     "at": 11.86,
+     "until": 15.34,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Sparkles",
+     "at": 12.34,
+     "until": 13.78,
+     "x": 780,
+     "y": 1180,
+     "size": 175,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Dashing away",
+     "at": 13.78,
+     "until": 15.34,
+     "x": 780,
+     "y": 1180,
+     "size": 175,
+     "rot": 0,
+     "anim": "slide_r",
+     "edge": 11
+    }
+   ]
+  },
+  {
+   "start": 15.34,
+   "items": [
+    {
+     "kind": "say",
+     "text": "buku",
+     "key": "BESTNYA! MELUKIS KARAKTER",
+     "at": 15.34,
+     "until": 18.3,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 15.5,
+     "until": 18.3,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": -3,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "ajar dia",
+     "key": "STEP BY STEP",
+     "at": 18.3,
+     "until": 19.94,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sudut.jpg",
+     "at": 18.34,
+     "until": 19.94,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "ada",
+     "key": "30 TOPIK",
+     "at": 19.94,
+     "until": 21.0,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 19.98,
+     "until": 24.5,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": -3,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "lukis",
+     "key": "EMOSI · MULUT",
+     "at": 21.0,
+     "until": 22.86,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "lukis",
+     "key": "POSTUR · BAHASA BADAN",
+     "at": 22.86,
+     "until": 24.5,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "say",
+     "text": "sampai",
+     "key": "GAYA CHIBI",
+     "at": 24.5,
+     "until": 25.88,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "chibi.jpg",
+     "at": 24.54,
+     "until": 25.88,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "64 halaman",
+     "key": "BERWARNA",
+     "at": 25.88,
+     "until": 27.72,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "card",
+     "img": "mata.jpg",
+     "at": 25.92,
+     "until": 27.72,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": -3,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "sampai dia boleh",
+     "key": "CIPTA WATAK SENDIRI",
+     "at": 27.72,
+     "until": 30.0,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "irfan.jpg",
+     "at": 27.76,
+     "until": 30.6,
+     "x": 540,
+     "y": 1150,
+     "w": 860,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "items": [
+    {
+     "kind": "doodle",
+     "at": 30.04,
+     "x": 280,
+     "y": 1250,
+     "h": 500,
+     "poses": [
+      [
+       "abang/briefing.png",
+       30.04
+      ],
+      [
+       "abang/bangga.png",
+       32.48
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "daripada paksa,",
+     "key": "SUPPORT MINAT DIA",
+     "at": 30.0,
+     "until": 33.9,
+     "y": 330,
+     "size1": 54,
+     "size2": 78
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Artist palette",
+     "at": 30.6,
+     "until": 33.9,
+     "x": 780,
+     "y": 1180,
+     "size": 170,
+     "rot": -6,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Red heart",
+     "at": 32.48,
+     "until": 33.9,
+     "x": 900,
+     "y": 880,
+     "size": 130,
+     "rot": 8,
+     "anim": "pop",
+     "edge": 11,
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 33.9,
+     "until": 99,
+     "y": 330,
+     "size1": 54,
+     "size2": 78,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 33.95,
+     "until": 99,
+     "x": 770,
+     "y": 1130,
+     "w": 420,
+     "rot": 3.9000000000000004,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Backhand index pointing down",
+     "at": 34.38,
+     "until": 99,
+     "x": 770,
+     "y": 820,
+     "size": 110,
+     "rot": 0,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 34.38,
+     "y": 1660
+    }
+   ]
+  }
+ ]
+}

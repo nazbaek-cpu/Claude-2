@@ -38,10 +38,15 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # green self-healing cutting mat: white text, keyword boxes, every sticker torn out of a sheet
           # a sheet of paper on a wooden desk in window light (kartun colours on top)
           "meja": {"MEJA": True, "PEACH_TOP": (232, 229, 222), "INK": (40, 40, 40), "ACC": (27, 106, 70), "TINT_PROPS": True},
+          # solid wood boards: cream text with a soft shadow, warm yellow key words, white-edged stickers
+          "kayu": {"KAYU": True, "PEACH_TOP": (128, 84, 52), "INK": (255, 248, 236), "ACC": (246, 196, 60), "CTA_TEXT": (44, 28, 16),
+                   "K_GREEN": (255, 212, 96), "K_GOLD": (255, 168, 120), "K_DARK": (52, 32, 18), "K_TAPE": (255, 236, 172),
+                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (44, 28, 16), "PROP_EDGE": (255, 255, 252), "TEXT_SHADOW": True},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
 MAT, MEJA, TORN, BADGE_BG, BADGE_FG = False, False, False, None, (255, 255, 255)
+KAYU, TEXT_SHADOW = False, False
 BG_IMAGE = None                                # "bg_image" in project.json: a picture behind every light scene
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
@@ -81,7 +86,7 @@ def ramp(t, t0, dur): return clamp((t - t0) / dur)
 
 # ---------- backgrounds ----------
 def background(dark):
-    key = ("bg", dark, RULED, GRID, MAT, MEJA, PEACH_TOP, DARK, RULE_LINE, BG_IMAGE)   # the theme is part of the key: tests switch themes in one process
+    key = ("bg", dark, RULED, GRID, MAT, MEJA, KAYU, PEACH_TOP, DARK, RULE_LINE, BG_IMAGE)   # the theme is part of the key: tests switch themes in one process
     if key in cache: return cache[key]
     if BG_IMAGE and not dark:   # the user's own background: cover-fit to 9:16
         im = Image.open(BG_IMAGE).convert("RGB"); s = max(W / im.width, H / im.height)
@@ -92,6 +97,9 @@ def background(dark):
     yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     if MAT and not dark:
         cache[key] = cutting_mat()
+        return cache[key]
+    if KAYU and not dark:
+        cache[key] = solid_wood()
         return cache[key]
     if MEJA and not dark:
         cache[key] = desk_paper()
@@ -264,27 +272,33 @@ def head(frame, t, it, sc):
             x += widths[wi] + sp
 
 # ---------- cards and icons ----------
-def card_img(name, w, rot, prj):
-    key = ("card", name, w, rot)
+def card_img(name, w, rot, prj, sticker=False):
+    key = ("card", name, w, rot, sticker)
     if key in cache: return cache[key]
     src = Image.open(os.path.join(prj, "input", name)).convert("RGB")   # product photos stay out of the repo
-    h = int(src.height * w / src.width); b = 12; r = 26
+    h = int(src.height * w / src.width); b, r = (26, 40) if sticker else (12, 26)   # a sticker: thick white die-cut rim
     face = Image.new("RGBA", (w + b * 2, h + b * 2), (255, 255, 255, 255))
     face.paste(src.resize((w, h), Image.LANCZOS), (b, b))
     m = Image.new("L", (face.width * 3, face.height * 3), 0)
     ImageDraw.Draw(m).rounded_rectangle((0, 0, m.width - 1, m.height - 1), radius=r * 3, fill=255)
     face.putalpha(m.resize(face.size, Image.LANCZOS))
-    img = soft_shadow(face, 95, 22, 16).rotate(rot, Image.BICUBIC, expand=True)
+    img = soft_shadow(face, 130 if sticker else 95, 18 if sticker else 22, 14 if sticker else 16).rotate(rot, Image.BICUBIC, expand=True)
     cache[key] = img
     return img
 
 def card(frame, t, it, sc, prj):
+    """a photo in a white frame: "img", "x", "y", "w", "rot"; "sticker": true gives a thick die-cut rim and slaps it down
+    from a little above the page instead of growing it in"""
     p = ramp(t, it["at"], 0.5)
     if p <= 0: return
     out = ramp(t, it.get("until", 1e9) - 0.3, 0.3)
-    img = card_img(it["img"], it.get("w", 420), it.get("rot", 0), prj)
-    s = 0.55 + 0.45 * ease_back(p); a = ease_out(p * 1.8) * (1 - out)
-    dy = (1 - ease_out(p)) * (260 if it.get("from") == "bottom" else 40) + out * 120
+    img = card_img(it["img"], it.get("w", 420), it.get("rot", 0), prj, it.get("sticker", False))
+    if it.get("sticker"):
+        q = ramp(t, it["at"], 0.28); s = 1.0 + 0.32 * (1 - ease_out(q)) - 0.04 * math.sin(math.pi * ramp(t, it["at"] + 0.28, 0.2))
+        a = ease_out(q * 2.5) * (1 - out); s *= 1 - 0.5 * ease_out(out); p = 1.0
+    else:
+        s = 0.55 + 0.45 * ease_back(p); a = ease_out(p * 1.8) * (1 - out)
+    dy = (1 - ease_out(p)) * (260 if it.get("from") == "bottom" else 40) + out * (0 if it.get("sticker") else 120)
     if a <= 0: return
     if abs(s - 1) > 1e-3: img = img.resize((max(1, int(img.width * s)), max(1, int(img.height * s))), Image.BICUBIC)
     if a < 0.999:
@@ -381,8 +395,9 @@ def say(frame, t, it, sc):
     for txt, kind, size, fill in ((it.get("text"), "bold", it.get("size1", 74), INK), (it.get("key"), "heavy", it.get("size2", 112), col)):
         if not txt: continue
         while size > 40 and font(kind, size).getlength(txt) > 1000: size -= 4
-        img = text_img(txt, font(kind, size), fill)
-        blend(frame, anim(img, a, 1.0), W / 2, y + img.height / 2); y += img.height * 0.9
+        img = text_img(txt, font(kind, size), fill); h_ = img.height
+        if TEXT_SHADOW: img = soft_shadow(img, 170, 7, 4)   # light letters on a busy background
+        blend(frame, anim(img, a, 1.0), W / 2, y + h_ / 2); y += h_ * 0.9
 
 def tape(frame, t, it, sc):
     """yellow masking-tape label, slightly tilted"""
@@ -546,6 +561,19 @@ def desk_paper():
     img = img * (0.86 + 0.14 * light[..., None]) * (0.9 + 0.12 * light[..., None])
     return np.clip(img, 0, 255).astype(np.float32)
 
+def solid_wood():
+    """a tabletop of solid wood boards seen from above: grain streaks, a slightly different tone per board, thin dark seams"""
+    rng = np.random.default_rng(5); yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    board = 270; idx = (xx // board).astype(int)
+    tone = rng.uniform(-12, 12, W // board + 2)[idx]
+    grain = cv2.GaussianBlur(rng.normal(0, 1, (H, W)).astype(np.float32), (0, 0), sigmaX=1.5, sigmaY=70); grain /= grain.std()
+    rings = np.sin((xx + 30 * np.sin(yy / 340 + idx * 1.7) + 12 * np.sin(yy / 90 + idx)) / 7.0)   # fine wavy grain lines
+    shade = (tone + 9 * grain + 4 * rings)[..., None] * np.array([1.0, 0.7, 0.46], np.float32)
+    img = np.array(PEACH_TOP, np.float32) + shade
+    img[(xx % board) < 3] *= 0.55                                               # seams between boards
+    r = ((xx - W / 2) / W) ** 2 + ((yy - H / 2) / H) ** 2
+    return np.clip(img * (1 - 0.45 * r[..., None]), 0, 255).astype(np.float32)
+
 def cutting_mat():
     """green self-healing cutting mat: small squares, a heavier line every five, rulers along two edges, faint angle guides"""
     rng = np.random.default_rng(7)
@@ -613,7 +641,7 @@ def sticker(frame, t, it, sc, prj):
     if t < it["at"]: return
     until = it.get("until", 1e9); k = t - it["at"]
     if t >= until: return
-    key = ("stk", it.get("img") or it["emoji"], it.get("size", 260), TORN)
+    key = ("stk", it.get("img") or it["emoji"], it.get("size", 260), TORN, it.get("edge", 7))
     if key not in cache:
         src = (flat_png(it["emoji"], it.get("size", 260), prj, raw=True) if it.get("emoji")
                else Image.open(os.path.join(prj, "input", it["img"])).convert("RGBA"))
@@ -621,8 +649,9 @@ def sticker(frame, t, it, sc, prj):
         src = src.resize((max(1, int(src.width * kk)), max(1, int(src.height * kk))), Image.LANCZOS)
         if TORN: cache[key] = torn_sticker(src, seed=len(key[1]) * 3)
         else:   # a neat die-cut sticker: white edge and a soft shadow
-            pad = Image.new("RGBA", (src.width + 30, src.height + 30), (0, 0, 0, 0)); pad.paste(src, (15, 15))
-            cache[key] = soft_shadow(sticker_edge(pad, (255, 255, 255), 7), 60, 8, 6)
+            e = it.get("edge", 7)   # "edge": white rim width in px
+            pad = Image.new("RGBA", (src.width + 2 * e + 16, src.height + 2 * e + 16), (0, 0, 0, 0)); pad.paste(src, (e + 8, e + 8))
+            cache[key] = soft_shadow(sticker_edge(pad, (255, 255, 255), e), 60 + 4 * e, 8, 6)
     mode = sticker_anim(it); p = ramp(t, it["at"], 0.45); x, y, rot = it.get("x", W / 2), it.get("y", 1100), it.get("rot", 0)
     s_ = 1.0; a = ease_out(ramp(t, it["at"], 0.12))
     if mode == "pop": s_ = max(0.01, ease_back(p, 2.6)); rot += 12 * (1 - ease_out(p))

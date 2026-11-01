@@ -288,6 +288,23 @@ def test_explainer_bg_image_and_emoji_sticker(tmp_path):
         explainer.BG_IMAGE = None
 
 
+def test_explainer_kayu_wood_and_sticker_card(tmp_path):
+    from PIL import Image
+    os.makedirs(tmp_path / "input")
+    Image.new("RGB", (400, 400), (20, 160, 40)).save(tmp_path / "input" / "page.jpg")
+    saved = {k: getattr(explainer, k) for k in explainer.THEMES["kayu"]}
+    explainer.set_theme("kayu")
+    try:
+        sc = {"start": 0.0, "items": [{"kind": "card", "img": "page.jpg", "at": 0.0, "x": 540, "y": 1100, "w": 400, "sticker": True}]}
+        fr = explainer.frame_at([sc], 1.0, str(tmp_path))
+        r, g, b = fr[150, 400].astype(int)
+        assert r > g > b and 60 < r < 200                                     # brown wood behind the scene
+        assert np.abs(fr[1100, 540].astype(int) - (20, 160, 40)).max() < 8     # the photo, settled at full size
+        assert fr[1100, 540 - 200 - 12].min() > 240                            # inside the thick white sticker rim
+    finally:
+        vars(explainer).update(saved)
+
+
 def test_explainer_coklat_doodle_and_scribble(tmp_path):
     from PIL import Image
     os.makedirs(tmp_path / "input")

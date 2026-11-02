@@ -1304,8 +1304,8 @@ def word_lines(cap):
     key = ("wl", id(cap))
     if key not in cache:
         out, cur, words = [], [], []
-        for w in cap["words"]:   # Whisper splits "mana-mana" into "mana" + "-mana": join them back
-            if w[0].startswith("-") and words: words[-1] = [words[-1][0] + w[0], words[-1][1], w[2]]
+        for w in cap["words"]:   # Whisper splits "mana-mana" into "mana" + "-mana" and "P.E.S." into "P" ".E" ".S.": join them back
+            if w[0][:1] in "-." and w[0] and words: words[-1] = [words[-1][0] + w[0], words[-1][1], w[2]]
             else: words.append(list(w))
         for w in words:
             cur.append(w)

@@ -1303,8 +1303,11 @@ def word_lines(cap):
     """the captions' "words" [[word, start, end]] in lines of at most "max_words", broken after punctuation"""
     key = ("wl", id(cap))
     if key not in cache:
-        out, cur = [], []
-        for w in cap["words"]:
+        out, cur, words = [], [], []
+        for w in cap["words"]:   # Whisper splits "mana-mana" into "mana" + "-mana": join them back
+            if w[0].startswith("-") and words: words[-1] = [words[-1][0] + w[0], words[-1][1], w[2]]
+            else: words.append(list(w))
+        for w in words:
             cur.append(w)
             if len(cur) >= cap.get("max_words", 4) or w[0][-1:] in ".,?!": out.append(cur); cur = []
         if cur: out.append(cur)

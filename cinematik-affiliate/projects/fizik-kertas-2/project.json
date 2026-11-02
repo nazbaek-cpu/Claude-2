@@ -1,0 +1,928 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "SPM Fizik Koleksi Soalan Esei, Kertas 2, Bahagian B dan C, Tingkatan 4 dan 5, 95 soalan esei, jawapan lengkap, skema, dwibahasa BM dan English, pemeriksa, istilah.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Ramai",
+    0.0,
+    0.4
+   ],
+   [
+    "ingat",
+    0.4,
+    0.74
+   ],
+   [
+    "nak",
+    0.74,
+    0.84
+   ],
+   [
+    "skor",
+    0.84,
+    1.1
+   ],
+   [
+    "Fizik,",
+    1.1,
+    1.58
+   ],
+   [
+    "cukup",
+    1.58,
+    2.28
+   ],
+   [
+    "hafal",
+    2.28,
+    2.52
+   ],
+   [
+    "formula.",
+    2.52,
+    2.76
+   ],
+   [
+    "Kertas",
+    3.06,
+    3.6
+   ],
+   [
+    "1",
+    3.6,
+    3.86
+   ],
+   [
+    "mungkin",
+    3.86,
+    4.2
+   ],
+   [
+    "selamat.",
+    4.2,
+    4.64
+   ],
+   [
+    "Tapi",
+    4.84,
+    5.42
+   ],
+   [
+    "masuk",
+    5.42,
+    5.68
+   ],
+   [
+    "esei,",
+    5.68,
+    6.22
+   ],
+   [
+    "formula",
+    6.22,
+    6.68
+   ],
+   [
+    "je",
+    6.68,
+    7.08
+   ],
+   [
+    "tak",
+    7.08,
+    7.24
+   ],
+   [
+    "cukup.",
+    7.24,
+    7.62
+   ],
+   [
+    "Kena",
+    7.78,
+    8.18
+   ],
+   [
+    "reti",
+    8.18,
+    8.42
+   ],
+   [
+    "terangkan",
+    8.42,
+    8.76
+   ],
+   [
+    "konsep,",
+    8.76,
+    9.48
+   ],
+   [
+    "kena",
+    9.56,
+    9.78
+   ],
+   [
+    "reti",
+    9.78,
+    10.06
+   ],
+   [
+    "bagi",
+    10.06,
+    10.3
+   ],
+   [
+    "cadangan,",
+    10.3,
+    10.68
+   ],
+   [
+    "kena",
+    11.0,
+    11.38
+   ],
+   [
+    "reti",
+    11.38,
+    11.68
+   ],
+   [
+    "tulis",
+    11.68,
+    12.08
+   ],
+   [
+    "ikut",
+    12.08,
+    12.3
+   ],
+   [
+    "skema.",
+    12.3,
+    12.62
+   ],
+   [
+    "Kalau",
+    12.8,
+    13.32
+   ],
+   [
+    "tak",
+    13.32,
+    13.48
+   ],
+   [
+    "pernah",
+    13.48,
+    13.7
+   ],
+   [
+    "berlatih,",
+    13.7,
+    14.16
+   ],
+   [
+    "masa",
+    14.22,
+    14.6
+   ],
+   [
+    "peperiksaan,",
+    14.6,
+    15.38
+   ],
+   [
+    "anak",
+    15.4,
+    15.78
+   ],
+   [
+    "akan",
+    15.78,
+    15.98
+   ],
+   [
+    "blank.",
+    15.98,
+    16.26
+   ],
+   [
+    "Buku",
+    16.64,
+    17.26
+   ],
+   [
+    "SPM",
+    17.26,
+    17.72
+   ],
+   [
+    "Fizik",
+    17.72,
+    18.1
+   ],
+   [
+    "Koleksi",
+    18.1,
+    18.4
+   ],
+   [
+    "Soalan",
+    18.4,
+    18.76
+   ],
+   [
+    "Esei",
+    18.76,
+    19.08
+   ],
+   [
+    "ni",
+    19.08,
+    19.28
+   ],
+   [
+    "bagi",
+    19.28,
+    19.8
+   ],
+   [
+    "anak",
+    19.8,
+    19.98
+   ],
+   [
+    "latihan",
+    19.98,
+    20.44
+   ],
+   [
+    "yang",
+    20.44,
+    20.64
+   ],
+   [
+    "betul.",
+    20.64,
+    21.1
+   ],
+   [
+    "Lebih",
+    21.2,
+    21.88
+   ],
+   [
+    "95",
+    21.88,
+    22.3
+   ],
+   [
+    "soalan",
+    22.3,
+    22.94
+   ],
+   [
+    "esei",
+    22.94,
+    23.32
+   ],
+   [
+    "tingkatan",
+    23.32,
+    23.72
+   ],
+   [
+    "4",
+    23.72,
+    23.9
+   ],
+   [
+    "dan",
+    23.9,
+    24.1
+   ],
+   [
+    "5,",
+    24.1,
+    24.36
+   ],
+   [
+    "siap",
+    24.5,
+    25.22
+   ],
+   [
+    "jawapan",
+    25.22,
+    25.54
+   ],
+   [
+    "lengkap,",
+    25.54,
+    26.0
+   ],
+   [
+    "disusun",
+    26.06,
+    26.74
+   ],
+   [
+    "ikut",
+    26.74,
+    26.94
+   ],
+   [
+    "topik",
+    26.94,
+    27.38
+   ],
+   [
+    "dalam",
+    27.38,
+    27.74
+   ],
+   [
+    "BM",
+    27.74,
+    28.1
+   ],
+   [
+    "dan",
+    28.1,
+    28.48
+   ],
+   [
+    "English.",
+    28.48,
+    28.9
+   ],
+   [
+    "Mak",
+    28.9,
+    29.6
+   ],
+   [
+    "ayah,",
+    29.6,
+    29.9
+   ],
+   [
+    "mula",
+    29.92,
+    30.4
+   ],
+   [
+    "sekarang",
+    30.4,
+    30.58
+   ],
+   [
+    "sebelum",
+    30.58,
+    31.38
+   ],
+   [
+    "terlambat.",
+    31.38,
+    31.82
+   ],
+   [
+    "Tekan",
+    31.86,
+    32.44
+   ],
+   [
+    "link",
+    32.44,
+    32.56
+   ],
+   [
+    "dekat",
+    32.56,
+    32.78
+   ],
+   [
+    "bawah.",
+    32.78,
+    33.14
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "SKOR FIZIK?",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Ramai ingat nak skor *Fizik,*",
+       0.0
+      ],
+      [
+       "cukup *hafal formula.*",
+       1.58
+      ]
+     ],
+     "at": 0.0,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ],
+      [
+       "kira/menerang.png",
+       3.06
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 2.28,
+     "until": 3.06,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "FORMULA"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 3.06,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "KERTAS 1"
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 4.2,
+     "until": 99,
+     "x": 960,
+     "y": 1260,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 4.84,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI MASUK ESEI...",
+     "at": 4.3,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Formula je *tak cukup.*",
+       4.84
+      ]
+     ],
+     "at": 4.84,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 4.3,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       4.3
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 5.68,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "ESEI"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK CUKUP!",
+     "at": 7.0,
+     "x": 700,
+     "y": 1340,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 7.78,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK KENA RETI:",
+     "at": 7.3,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Terangkan* konsep,",
+       7.78
+      ],
+      [
+       "bagi *cadangan,*",
+       9.56
+      ],
+      [
+       "tulis *ikut skema.*",
+       11.0
+      ]
+     ],
+     "at": 7.78,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 7.2,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       7.2
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 8.42,
+     "until": 10.06,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "TERANGKAN"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Light bulb",
+     "at": 10.06,
+     "until": 11.68,
+     "x": 860,
+     "y": 1130,
+     "size": 170,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "CADANGAN"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 11.68,
+     "until": 99,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "SKEMA"
+    }
+   ]
+  },
+  {
+   "start": 12.8,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KALAU TAK BERLATIH...",
+     "at": 12.3,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Kalau tak pernah berlatih,",
+       12.8
+      ],
+      [
+       "masa peperiksaan anak akan *blank.*",
+       14.22
+      ]
+     ],
+     "at": 12.8,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 12.2,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/stres.png",
+       12.2
+      ],
+      [
+       "kira/sedih.png",
+       15.98
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 15.2,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 15.6,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "KOSONG"
+    }
+   ]
+  },
+  {
+   "start": 16.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PENYELESAIANNYA:",
+     "at": 16.1,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Buku SPM Fizik *Koleksi Soalan Esei*",
+       16.64
+      ],
+      [
+       "bagi anak *latihan yang betul.*",
+       19.28
+      ]
+     ],
+     "at": 16.64,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "covers.jpg",
+     "at": 16.8,
+     "until": 99,
+     "x": 540,
+     "y": 1060,
+     "w": 660,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 21.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 20.7,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "esei95.jpg",
+     "at": 21.3,
+     "until": 26.06,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ting4.jpg",
+     "at": 26.06,
+     "until": 99,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*95+ soalan esei* Tingkatan 4 & 5",
+       21.2
+      ],
+      [
+       "Siap *jawapan lengkap*",
+       24.5
+      ],
+      [
+       "Ikut topik, *BM & English*",
+       26.06
+      ]
+     ],
+     "at": 21.2,
+     "until": 99,
+     "y": 1230,
+     "w": 860,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.4,
+     "until": 99,
+     "x": 130,
+     "y": 1140,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.5,
+     "until": 99,
+     "x": 130,
+     "y": 1224,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.8,
+     "until": 99,
+     "x": 130,
+     "y": 1308,
+     "size": 70
+    }
+   ]
+  },
+  {
+   "start": 28.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 28.4,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Mak ayah, mula sekarang,",
+       28.9
+      ],
+      [
+       "*sebelum terlambat.*",
+       30.58
+      ]
+     ],
+     "at": 28.9,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 28.94,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/sapa.png",
+       28.94
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 30.4,
+     "until": 31.86,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MULA SEKARANG"
+    },
+    {
+     "kind": "card",
+     "img": "covers.jpg",
+     "at": 31.9,
+     "until": 99,
+     "x": 830,
+     "y": 1090,
+     "w": 400,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 32.44,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,936 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-kayu",
+ "whisper_prompt": "Skema Jawapan SPM, tuisyen, cikgu tuisyen, mak ayah, Tingkatan 4 dan 5, KSSM, format SPM terkini, penanda aras rendah, sederhana, tinggi, percubaan.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Mak",
+    0.0,
+    0.12
+   ],
+   [
+    "ayah",
+    0.12,
+    0.48
+   ],
+   [
+    "dah",
+    0.48,
+    0.58
+   ],
+   [
+    "habis",
+    0.58,
+    0.98
+   ],
+   [
+    "ratus",
+    0.98,
+    1.44
+   ],
+   [
+    "-ratus",
+    1.44,
+    1.74
+   ],
+   [
+    "ringgit",
+    1.74,
+    2.2
+   ],
+   [
+    "untuk",
+    2.2,
+    2.4
+   ],
+   [
+    "tuisyen.",
+    2.4,
+    2.82
+   ],
+   [
+    "Tapi",
+    2.94,
+    3.62
+   ],
+   [
+    "bila",
+    3.62,
+    4.02
+   ],
+   [
+    "keputusan",
+    4.02,
+    4.5
+   ],
+   [
+    "percubaan",
+    4.5,
+    4.98
+   ],
+   [
+    "keluar,",
+    4.98,
+    5.16
+   ],
+   [
+    "markah",
+    5.46,
+    5.92
+   ],
+   [
+    "anak",
+    5.92,
+    6.1
+   ],
+   [
+    "masih",
+    6.1,
+    6.36
+   ],
+   [
+    "sama.",
+    6.36,
+    6.64
+   ],
+   [
+    "Bukan",
+    6.98,
+    7.64
+   ],
+   [
+    "salah",
+    7.64,
+    7.8
+   ],
+   [
+    "cikgu",
+    7.8,
+    8.18
+   ],
+   [
+    "tuisyen.",
+    8.18,
+    8.56
+   ],
+   [
+    "Bukan",
+    8.68,
+    9.22
+   ],
+   [
+    "salah",
+    9.22,
+    9.42
+   ],
+   [
+    "anak.",
+    9.42,
+    9.78
+   ],
+   [
+    "Anak",
+    10.06,
+    10.62
+   ],
+   [
+    "dah",
+    10.62,
+    10.74
+   ],
+   [
+    "faham",
+    10.74,
+    11.08
+   ],
+   [
+    "isi,",
+    11.08,
+    11.52
+   ],
+   [
+    "cuma",
+    11.54,
+    12.0
+   ],
+   [
+    "dia",
+    12.0,
+    12.2
+   ],
+   [
+    "tak",
+    12.2,
+    12.34
+   ],
+   [
+    "pernah",
+    12.34,
+    12.56
+   ],
+   [
+    "nampak",
+    12.56,
+    13.1
+   ],
+   [
+    "macam",
+    13.1,
+    13.32
+   ],
+   [
+    "mana",
+    13.32,
+    13.54
+   ],
+   [
+    "jawapan",
+    13.54,
+    14.02
+   ],
+   [
+    "yang",
+    14.02,
+    14.18
+   ],
+   [
+    "dapat",
+    14.18,
+    14.38
+   ],
+   [
+    "markah",
+    14.38,
+    14.74
+   ],
+   [
+    "penuh",
+    14.74,
+    15.1
+   ],
+   [
+    "tu",
+    15.1,
+    15.2
+   ],
+   [
+    "rupanya.",
+    15.2,
+    15.5
+   ],
+   [
+    "Buku",
+    15.84,
+    16.48
+   ],
+   [
+    "skema",
+    16.48,
+    16.76
+   ],
+   [
+    "jawapan",
+    16.76,
+    17.14
+   ],
+   [
+    "SPM",
+    17.14,
+    17.68
+   ],
+   [
+    "ni",
+    17.68,
+    17.84
+   ],
+   [
+    "tunjuk",
+    17.84,
+    18.4
+   ],
+   [
+    "terus.",
+    18.4,
+    18.62
+   ],
+   [
+    "Soalan,",
+    18.96,
+    19.54
+   ],
+   [
+    "kemudian",
+    19.72,
+    20.26
+   ],
+   [
+    "jawapan",
+    20.26,
+    20.64
+   ],
+   [
+    "lengkap",
+    20.64,
+    21.18
+   ],
+   [
+    "ikut",
+    21.18,
+    21.46
+   ],
+   [
+    "skema,",
+    21.46,
+    21.82
+   ],
+   [
+    "Tingkatan",
+    21.88,
+    22.38
+   ],
+   [
+    "4",
+    22.38,
+    22.58
+   ],
+   [
+    "dan",
+    22.58,
+    22.98
+   ],
+   [
+    "5.",
+    22.98,
+    23.28
+   ],
+   [
+    "Ikut",
+    23.54,
+    24.14
+   ],
+   [
+    "format",
+    24.14,
+    24.32
+   ],
+   [
+    "SPM",
+    24.32,
+    24.96
+   ],
+   [
+    "terkini,",
+    24.96,
+    25.34
+   ],
+   [
+    "ada",
+    25.52,
+    25.88
+   ],
+   [
+    "penanda",
+    25.88,
+    26.26
+   ],
+   [
+    "aras",
+    26.26,
+    26.52
+   ],
+   [
+    "rendah,",
+    26.52,
+    27.0
+   ],
+   [
+    "sederhana",
+    27.02,
+    27.64
+   ],
+   [
+    "dan",
+    27.64,
+    27.88
+   ],
+   [
+    "tinggi.",
+    27.88,
+    28.44
+   ],
+   [
+    "Harga",
+    28.44,
+    29.28
+   ],
+   [
+    "sebuah",
+    29.28,
+    29.56
+   ],
+   [
+    "buku,",
+    29.56,
+    29.96
+   ],
+   [
+    "tapi",
+    29.98,
+    30.4
+   ],
+   [
+    "anak",
+    30.4,
+    30.86
+   ],
+   [
+    "belajar",
+    30.86,
+    31.4
+   ],
+   [
+    "cara",
+    31.4,
+    31.58
+   ],
+   [
+    "pemeriksa",
+    31.58,
+    32.12
+   ],
+   [
+    "bagi",
+    32.12,
+    32.38
+   ],
+   [
+    "markah.",
+    32.38,
+    32.78
+   ],
+   [
+    "Tekan",
+    32.78,
+    33.46
+   ],
+   [
+    "link",
+    33.46,
+    33.58
+   ],
+   [
+    "dekat",
+    33.58,
+    33.82
+   ],
+   [
+    "bawah.",
+    33.82,
+    34.18
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Dah habis *ratus-ratus ringgit*",
+       0.0
+      ],
+      [
+       "untuk *tuisyen.*",
+       2.2
+      ]
+     ],
+     "at": 0.0,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Money with wings",
+     "at": 1.0,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 170,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "TUISYEN"
+    }
+   ]
+  },
+  {
+   "start": 2.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 2.4,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Bila keputusan *percubaan* keluar,",
+       2.94
+      ],
+      [
+       "markah anak *masih sama.*",
+       5.46
+      ]
+     ],
+     "at": 2.94,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 2.4,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       2.4
+      ],
+      [
+       "kira/sedih.png",
+       5.92
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 4.5,
+     "until": 99,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "PERCUBAAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 5.6,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "MASIH SAMA",
+     "at": 6.3,
+     "x": 700,
+     "y": 1340,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 6.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SALAH SIAPA?",
+     "at": 6.45,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Bukan salah *cikgu tuisyen.*",
+       6.98
+      ],
+      [
+       "Bukan salah *anak.*",
+       8.68
+      ]
+     ],
+     "at": 6.98,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 6.4,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       6.4
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 7.8,
+     "until": 9.22,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": -4,
+     "anim": "slide_r",
+     "edge": 10,
+     "tag": "CIKGU"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 9.22,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "ANAK"
+    }
+   ]
+  },
+  {
+   "start": 10.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBENARNYA...",
+     "at": 9.55,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Anak dah *faham isi,*",
+       10.06
+      ],
+      [
+       "tapi tak pernah nampak jawapan",
+       11.54
+      ],
+      [
+       "yang dapat *markah penuh.*",
+       14.02
+      ]
+     ],
+     "at": 10.06,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 9.5,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       9.5
+      ],
+      [
+       "kira/idea.png",
+       14.38
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 10.74,
+     "until": 14.18,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "FAHAM"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 14.18,
+     "until": 99,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MARKAH PENUH",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 15.84,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SKEMA JAWAPAN SPM",
+     "at": 15.3,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Buku ni *tunjuk terus:*",
+       15.84
+      ],
+      [
+       "soalan, kemudian *jawapan ikut skema.*",
+       18.96
+      ]
+     ],
+     "at": 15.84,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 16.0,
+     "until": 99,
+     "x": 540,
+     "y": 1080,
+     "w": 920,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 21.88,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 21.35,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "sejarah.jpg",
+     "at": 22.0,
+     "until": 25.52,
+     "x": 540,
+     "y": 720,
+     "w": 900,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "bm.jpg",
+     "at": 25.52,
+     "until": 99,
+     "x": 540,
+     "y": 720,
+     "w": 900,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Tingkatan 4 & 5*",
+       21.88
+      ],
+      [
+       "Format *SPM terkini*",
+       23.54
+      ],
+      [
+       "Aras *rendah, sederhana, tinggi*",
+       25.52
+      ]
+     ],
+     "at": 21.88,
+     "until": 99,
+     "y": 1230,
+     "w": 860,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.6,
+     "until": 99,
+     "x": 130,
+     "y": 1140,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.6,
+     "until": 99,
+     "x": 130,
+     "y": 1224,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.8,
+     "until": 99,
+     "x": 130,
+     "y": 1308,
+     "size": 70
+    }
+   ]
+  },
+  {
+   "start": 28.44,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 27.9,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Harga sebuah buku, tapi anak belajar",
+       28.44
+      ],
+      [
+       "*cara pemeriksa bagi markah.*",
+       30.86
+      ]
+     ],
+     "at": 28.44,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 28.48,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/bangga.png",
+       28.48
+      ],
+      [
+       "kira/sapa.png",
+       32.78
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 30.86,
+     "until": 32.78,
+     "x": 860,
+     "y": 1080,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "A+",
+     "good": true
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 32.85,
+     "until": 99,
+     "x": 800,
+     "y": 1090,
+     "w": 460,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 33.46,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

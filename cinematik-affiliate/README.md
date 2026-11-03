@@ -133,6 +133,7 @@ Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek
 | `doodle` | hand-drawn outline that boils around the person, with `sparks`; `box` limits it (e.g. head and shoulders when a raised product is half outside the mask) |
 | `framebreak` | the video shrinks into a reel frame over a blurred copy, the head pokes out over the top edge (`user`, `caption`, `cut`) |
 | `comment` | comment box where a keyword types itself in (`text`, `cps`, `x`, `y`, `w`) |
+| `highlight` | the spoken line in bold white type, word by word, above the head (`y` 300): `phrases` [[text, at]], `*key words*` get a yellow highlighter swept behind them (swish) and turn dark; at most `max_lines` (2) lines, a new line pushes the oldest out; each line pops in |
 | `sticker` | an icon from `input/` (cut with `poses.py --icons`) as a die-cut sticker over the video: `img`, `x`, `y`, `size`, `rot`, `anim` (pop / slide_r / slide_l / drop / spin, each with its own sound), breathing while it stays, zooming out at `end`; `style`: `papercut` tears it out of a sheet of paper |
 
 A segment's `pills_y` moves its pills (e.g. to the top, clear of a book held low).

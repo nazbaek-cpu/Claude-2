@@ -9,6 +9,7 @@
            {"kind": "beforeafter", "start": 14.4, "end": 18.4, "labels": ["buku teks", "infografik"]},
            {"kind": "doodle", "start": 18.8, "end": 24.4},
            {"kind": "framebreak", "start": 24.4, "end": 34, "user": "ibu ayah", "caption": "untuk anak calon SPM"},
+           {"kind": "highlight", "start": 0.2, "end": 6.6, "phrases": [["bila anak *mula remaja*", 2.4]]},
            {"kind": "comment", "start": 35.6, "end": null, "text": "DAPATKAN DI LINK BAWAH"}]
 
 picture(...) changes the frame itself (zooms, backgrounds, wipes, text behind the person); overlays(...) gives the
@@ -193,6 +194,53 @@ def comment(s, t):
     img = cache[key].resize((int(cache[key].width * sc), int(cache[key].height * sc)), Image.BICUBIC)
     return [(fade(img, a), s.get("x", W / 2), s.get("y", 1500))]
 
+def phrase_words(txt):
+    """'bila anak *mula remaja*' -> [("bila", False), ("anak", False), ("mula", True), ("remaja", True)]"""
+    out, inside = [], False
+    for w_ in txt.split(" "):
+        key = inside or w_.startswith("*"); inside = key and "*" not in w_[1:]
+        out.append((w_.replace("*", ""), key))
+    return out
+
+def highlight_sweeps(s):
+    """when each key word's highlighter sweep starts (for the sound track)"""
+    out = []
+    for txt, at in s["phrases"]:
+        ws = phrase_words(txt)
+        out += [at + 0.07 * i + 0.12 for i, (_, k) in enumerate(ws) if k and (i == 0 or not ws[i - 1][1])]
+    return out
+
+def highlight(s, t):
+    """the line being spoken in bold white type, word by word; *key words* get a yellow highlighter swept behind them
+    and turn dark. "phrases" [[text, at]] stack as lines, at most "max_lines" (2): a new line pushes the oldest out, so the
+    text stays above the head; "y", "size" """
+    a = vis(t, s, 0.2)
+    if a <= 0: return []
+    size = s.get("size", 66); lh = int(size * 1.32); n = s.get("max_lines", 2)
+    shown = [ph for ph in s["phrases"] if t >= ph[1]][-n:]
+    img = Image.new("RGBA", (W, lh * n + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
+    for li, (txt, at) in enumerate(shown):
+        ws = phrase_words(txt); f = jak(size, 800)
+        while f.size > 36 and f.getlength(" ".join(w_ for w_, _ in ws)) > 980: f = jak(f.size - 2, 800)
+        sp = f.getlength(" "); total = sum(f.getlength(w_) for w_, _ in ws) + sp * (len(ws) - 1)
+        x = W / 2 - total / 2; y = 20 + li * lh; asc, desc = f.getmetrics()
+        for i, (w_, key) in enumerate(ws):   # the yellow first, so the letters sit on top of it
+            ww = f.getlength(w_); q = ease(ramp(t, at + 0.07 * i + 0.12, 0.28)) if key else 0
+            if q > 0:
+                x0 = x - 10; x1 = x0 + (ww + (sp if i + 1 < len(ws) and ws[i + 1][1] else 0) + 20) * q
+                y0, y1 = y + asc * 0.18, y + asc + desc * 0.55; j = 3 * math.sin(i * 2.3)
+                d.polygon([(x0 + 2, y0 + j), (x1, y0 - 2 + j), (x1 - 3, y1 + j), (x0, y1 + 2 + j)], fill=YEL + (240,))
+            x += ww + sp
+        x = W / 2 - total / 2
+        for i, (w_, key) in enumerate(ws):
+            wa = ease(ramp(t, at + 0.07 * i, 0.14))
+            if wa > 0:
+                dark = key and ramp(t, at + 0.07 * i + 0.12, 0.28) > 0.45
+                col = (24, 22, 20) if dark else (255, 255, 255)
+                d.text((x, y + 10 * (1 - wa)), w_, font=f, fill=col + (int(255 * wa),), stroke_width=0 if dark else 3, stroke_fill=(20, 20, 20, int(200 * wa)))
+            x += f.getlength(w_) + sp
+    return [(fade(shadow(img, 90, 10, 5), a), W / 2, s.get("y", 300) + img.height / 2 - 40)]
+
 STICKER_ANIMS = ("pop", "slide_r", "drop", "spin", "slide_l")
 
 def sticker_anim(s):
@@ -259,6 +307,7 @@ def sticker(s, t, prj):
 def overlays(cfg, t, face=None, prj=None):
     out = []
     for s in active(cfg, t, "sticker"): out += sticker(s, t, prj or os.path.dirname(cfg.get("_input", ".")))
+    for s in active(cfg, t, "highlight"): out += highlight(s, t)
     for s in active(cfg, t, "checklist", "headline", "digizoom", "comment"):
         if s["kind"] == "checklist": out += checklist(s, t)
         elif s["kind"] == "headline": out += headline(s, t)
@@ -546,4 +595,5 @@ def remap(fx, f, dur=None):
         if "items" in s: s["items"] = [[x, f(at)] for x, at in s["items"]]
         if "words" in s: s["words"] = [[x, f(at), sl] for x, at, sl in s["words"]]
         if "hide" in s: s["hide"] = [[f(a), f(b)] for a, b in s["hide"]]
+        if "phrases" in s: s["phrases"] = [[x, f(at)] for x, at in s["phrases"]]
     return fx

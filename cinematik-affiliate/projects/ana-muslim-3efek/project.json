@@ -1,0 +1,201 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "Komik Ana Muslim, kompilasi komik inspirasi, anak remaja, datang bulan, Makcik Bawang, Diva, Zee Wannabe, mak ayah.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "highlight",
+   "start": 0.0,
+   "end": 6.62,
+   "y": 300,
+   "phrases": [
+    [
+     "Komik *Ana Muslim*",
+     0.5
+    ],
+    [
+     "bila anak *mula remaja*",
+     2.46
+    ],
+    [
+     "*datang haid*",
+     4.56
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 6.68,
+   "end": 9.4,
+   "scatter_at": 9.25,
+   "y_back": 360,
+   "words": [
+    [
+     "DIARI",
+     7.9,
+     "back"
+    ],
+    [
+     "MERAH",
+     8.46,
+     "back"
+    ],
+    [
+     "AFIYAH",
+     8.9,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 9.44,
+   "end": 13.85,
+   "y": 300,
+   "phrases": [
+    [
+     "belajar *step by step*",
+     11.06
+    ],
+    [
+     "cara *menjaganya*",
+     12.4
+    ]
+   ]
+  },
+  {
+   "kind": "papercut",
+   "start": 17.85,
+   "end": 20.1,
+   "word": "bukan komik biasa",
+   "word_at": 18.2,
+   "word_y": 300,
+   "one_line": true
+  },
+  {
+   "kind": "depth",
+   "start": 20.14,
+   "end": 26.7,
+   "scatter_at": 26.55,
+   "y_back": 360,
+   "words": [
+    [
+     "ILMIAH",
+     21.8,
+     "back"
+    ],
+    [
+     "TAULADAN",
+     23.2,
+     "back"
+    ],
+    [
+     "BERSOSIAL",
+     25.36,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 26.76,
+   "end": 34.55,
+   "y": 300,
+   "phrases": [
+    [
+     "situasi di *sekolah*",
+     28.58
+    ],
+    [
+     "di *rumah*",
+     31.84
+    ],
+    [
+     "dengan *kawan-kawan*",
+     32.98
+    ]
+   ]
+  },
+  {
+   "kind": "papercut",
+   "start": 37.35,
+   "end": 40.1,
+   "word": "lebih 6 siri",
+   "word_at": 37.7,
+   "word_y": 300,
+   "one_line": true
+  },
+  {
+   "kind": "highlight",
+   "start": 40.14,
+   "end": 42.8,
+   "y": 300,
+   "phrases": [
+    [
+     "siri terbaru:",
+     40.52
+    ],
+    [
+     "*Makcik Bawang*",
+     41.62
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 42.84,
+   "end": 49.4,
+   "scatter_at": 49.25,
+   "y_back": 360,
+   "words": [
+    [
+     "KOLEKSI",
+     44.6,
+     "back"
+    ],
+    [
+     "SUKA",
+     47.66,
+     "back"
+    ],
+    [
+     "MEMBACA",
+     47.96,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 49.48,
+   "end": null,
+   "y": 300,
+   "phrases": [
+    [
+     "banyak *manfaat*",
+     50.24
+    ],
+    [
+     "dapatkan di *link bawah*",
+     53.82
+    ]
+   ]
+  }
+ ]
+}

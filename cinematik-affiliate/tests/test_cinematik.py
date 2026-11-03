@@ -380,3 +380,21 @@ def test_explainer_kertas_template_pieces(tmp_path):
         assert ev == 1 + 2 + 3 + 1 + 1                                            # swish, pop + tick, three pops, ding, thud
     finally:
         vars(explainer).update(saved)
+
+
+def test_fx_highlight_rolls_two_lines_and_sweeps_key_words():
+    import fx
+    s = {"kind": "highlight", "start": 0.0, "end": 9.0, "y": 300,
+         "phrases": [["Komik *Ana Muslim*", 0.5], ["bila anak *mula remaja*", 2.0], ["*datang haid*", 4.0]]}
+    assert fx.phrase_words("bila anak *mula remaja*") == [("bila", False), ("anak", False), ("mula", True), ("remaja", True)]
+    assert len(fx.highlight_sweeps(s)) == 3                                 # one sweep per key phrase, not per word
+    img, cx, cy = fx.highlight(s, 5.0)[0]
+    a = np.asarray(img).astype(int)
+    yellow = (a[..., 0] > 200) & (a[..., 1] > 170) & (a[..., 2] < 80) & (a[..., 3] > 150)
+    assert yellow.any()                                                     # the highlighter is down
+    rows = np.where(yellow.any(1))[0]
+    assert rows.max() - rows.min() < 66 * 1.32 * 2                          # two lines at most: the oldest rolled off
+    ev = [k for _, k in sfx.events({"fx": [s], "segments": [], "subs": [], "duration": 9})]
+    assert ev.count("swish") == 3 and ev.count("pop") == 3
+    two = fx.remap([json.loads(json.dumps(s))], lambda x: x / 2)[0]
+    assert two["phrases"][2][1] == 2.0

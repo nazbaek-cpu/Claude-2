@@ -83,9 +83,13 @@ def events(cfg):
     for s in cfg.get("fx", []):   # "16 efek" (fx.py)
         k = s["kind"]
         if k == "zoomcut": ev.append((s["at"] - 0.3, "whoosh"))
-        elif k in ("headline", "papercut", "beforeafter", "framebreak", "digizoom"): ev.append((s["start"] - 0.15, "whoosh"))
+        elif k in ("headline", "papercut", "beforeafter", "framebreak", "digizoom"):
+            ev.append((s["start"] - 0.15, "whoosh"))
+            if k == "papercut":   # a paper tick as each ransom letter lands
+                ev += [(s.get("word_at", s["start"] + 0.15) + 0.07 * i + 0.05, "tick") for i in range(len(s.get("word", "").replace(" ", "")))]
         elif k == "depth": ev += [(at - 0.15, "whoosh") for _, at, _ in s["words"]]
         elif k == "checklist": ev += [(at, "tick") for _, at in s["items"]]
+        elif k == "highlight": ev += [(at, "pop") for _, at in s["phrases"]] + [(at, "swish") for at in fx.highlight_sweeps(s)]
         elif k == "comment": ev += [(s["start"] + 0.05, "pop"), (s["start"] + 0.45 + len(s.get("text", "")) / s.get("cps", 16), "ding")]
         elif k == "sticker":
             m_ = fx.sticker_anim(s)

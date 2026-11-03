@@ -1,0 +1,792 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "bg_image": "input/bg.jpg",
+ "whisper_prompt": "Bestnya! Melukis Karakter, Irfan Foner, pelukis komik, 30 topik, 30 aktiviti, 64 halaman berwarna, gaya chibi, ekspresi, sudut kepala, anak suka melukis, mak ayah.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Anak",
+    0.0,
+    0.3
+   ],
+   [
+    "asyik",
+    0.3,
+    0.48
+   ],
+   [
+    "pegang",
+    0.48,
+    0.8
+   ],
+   [
+    "telefon",
+    0.8,
+    1.0
+   ],
+   [
+    "dari",
+    1.0,
+    1.34
+   ],
+   [
+    "balik",
+    1.34,
+    1.66
+   ],
+   [
+    "sekolah",
+    1.66,
+    2.02
+   ],
+   [
+    "sampai",
+    2.02,
+    2.14
+   ],
+   [
+    "malam.",
+    2.14,
+    2.64
+   ],
+   [
+    "Nak",
+    2.68,
+    3.18
+   ],
+   [
+    "rampas,",
+    3.18,
+    3.8
+   ],
+   [
+    "dia",
+    3.82,
+    4.02
+   ],
+   [
+    "mengamuk.",
+    4.02,
+    4.64
+   ],
+   [
+    "Nak",
+    4.7,
+    5.08
+   ],
+   [
+    "biar,",
+    5.08,
+    5.48
+   ],
+   [
+    "mata",
+    5.5,
+    5.9
+   ],
+   [
+    "dia",
+    5.9,
+    6.24
+   ],
+   [
+    "yang",
+    6.24,
+    6.42
+   ],
+   [
+    "rosak.",
+    6.42,
+    6.84
+   ],
+   [
+    "Cuba",
+    6.94,
+    7.46
+   ],
+   [
+    "tukar",
+    7.46,
+    7.84
+   ],
+   [
+    "skrin",
+    7.84,
+    8.12
+   ],
+   [
+    "tu",
+    8.12,
+    8.26
+   ],
+   [
+    "dengan",
+    8.26,
+    8.46
+   ],
+   [
+    "kertas",
+    8.46,
+    8.9
+   ],
+   [
+    "dan",
+    8.9,
+    9.0
+   ],
+   [
+    "pensel.",
+    9.0,
+    9.54
+   ],
+   [
+    "Buku",
+    9.76,
+    10.4
+   ],
+   [
+    "Bestnya!",
+    10.48,
+    11.08
+   ],
+   [
+    "Melukis",
+    11.56,
+    12.18
+   ],
+   [
+    "Karakter",
+    12.18,
+    12.56
+   ],
+   [
+    "ni",
+    12.56,
+    12.72
+   ],
+   [
+    "buat",
+    12.72,
+    12.96
+   ],
+   [
+    "anak",
+    12.96,
+    13.2
+   ],
+   [
+    "lupa",
+    13.2,
+    13.64
+   ],
+   [
+    "telefon",
+    13.64,
+    13.86
+   ],
+   [
+    "sebab",
+    13.86,
+    14.6
+   ],
+   [
+    "dia",
+    14.6,
+    14.72
+   ],
+   [
+    "sibuk",
+    14.72,
+    15.24
+   ],
+   [
+    "cipta",
+    15.24,
+    15.48
+   ],
+   [
+    "watak",
+    15.48,
+    15.8
+   ],
+   [
+    "sendiri.",
+    15.8,
+    15.98
+   ],
+   [
+    "30",
+    16.4,
+    16.82
+   ],
+   [
+    "topik,",
+    16.82,
+    17.42
+   ],
+   [
+    "ajar",
+    17.42,
+    17.76
+   ],
+   [
+    "step",
+    17.76,
+    17.98
+   ],
+   [
+    "by",
+    17.98,
+    18.24
+   ],
+   [
+    "step.",
+    18.24,
+    18.46
+   ],
+   [
+    "Lukis",
+    18.7,
+    19.2
+   ],
+   [
+    "emosi,",
+    19.2,
+    19.66
+   ],
+   [
+    "mulut,",
+    19.8,
+    20.42
+   ],
+   [
+    "postur,",
+    20.44,
+    20.82
+   ],
+   [
+    "bahasa",
+    21.12,
+    21.44
+   ],
+   [
+    "badan",
+    21.44,
+    21.94
+   ],
+   [
+    "sampai",
+    21.94,
+    22.2
+   ],
+   [
+    "gaya",
+    22.2,
+    22.8
+   ],
+   [
+    "chibi.",
+    22.8,
+    23.02
+   ],
+   [
+    "64",
+    23.26,
+    23.86
+   ],
+   [
+    "halaman",
+    23.86,
+    24.44
+   ],
+   [
+    "berwarna",
+    24.44,
+    25.02
+   ],
+   [
+    "oleh",
+    25.02,
+    25.32
+   ],
+   [
+    "pelukis",
+    25.32,
+    25.78
+   ],
+   [
+    "komik",
+    25.78,
+    26.12
+   ],
+   [
+    "Irfan",
+    26.12,
+    26.54
+   ],
+   [
+    "Foner.",
+    26.54,
+    26.82
+   ],
+   [
+    "Tekan",
+    27.02,
+    27.64
+   ],
+   [
+    "link",
+    27.64,
+    27.76
+   ],
+   [
+    "dekat",
+    27.76,
+    27.98
+   ],
+   [
+    "bawah.",
+    27.98,
+    28.34
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Anak asyik pegang *telefon*",
+       0.0
+      ],
+      [
+       "dari balik sekolah *sampai malam.*",
+       1.0
+      ]
+     ],
+     "at": 0.0,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/stres.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Mobile phone",
+     "at": 0.6,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 180,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "TELEFON"
+    }
+   ]
+  },
+  {
+   "start": 2.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SUSAH KAN?",
+     "at": 2.15,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Nak rampas, dia *mengamuk.*",
+       2.68
+      ],
+      [
+       "Nak biar, *mata dia yang rosak.*",
+       4.7
+      ]
+     ],
+     "at": 2.68,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 2.1,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       2.1
+      ],
+      [
+       "kira/sedih.png",
+       5.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Pouting face",
+     "at": 3.82,
+     "until": 5.5,
+     "x": 860,
+     "y": 1090,
+     "size": 170,
+     "rot": -5,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "MENGAMUK"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Eye",
+     "at": 5.5,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 170,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MATA"
+    },
+    {
+     "kind": "stamp",
+     "text": "MATA ROSAK",
+     "at": 6.0,
+     "x": 700,
+     "y": 1340,
+     "rot": -7,
+     "size": 52,
+     "paper": true
+    }
+   ]
+  },
+  {
+   "start": 6.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CUBA TUKAR...",
+     "at": 6.4,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Tukar *skrin* tu dengan",
+       6.94
+      ],
+      [
+       "*kertas dan pensel.*",
+       8.46
+      ]
+     ],
+     "at": 6.94,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 6.4,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/idea.png",
+       6.4
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Mobile phone",
+     "at": 7.84,
+     "until": 8.46,
+     "x": 860,
+     "y": 1090,
+     "size": 170,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "SKRIN"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel_warna.png",
+     "at": 8.46,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "PENSEL",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 9.76,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BESTNYA! MELUKIS KARAKTER",
+     "at": 9.25,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Buku *Bestnya! Melukis Karakter*",
+       9.76
+      ],
+      [
+       "buat anak *lupa telefon*, sebab sibuk",
+       12.72
+      ],
+      [
+       "*cipta watak sendiri.*",
+       14.72
+      ]
+     ],
+     "at": 9.76,
+     "until": 99,
+     "y": 580,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 9.9,
+     "until": 99,
+     "x": 540,
+     "y": 1085,
+     "w": 590,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 15.9,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "sudut.jpg",
+     "at": 16.5,
+     "until": 18.7,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "mata.jpg",
+     "at": 18.7,
+     "until": 21.94,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "chibi.jpg",
+     "at": 21.94,
+     "until": 23.26,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*30 topik,* step by step",
+       16.4
+      ],
+      [
+       "Lukis *emosi, mulut, postur*",
+       18.7
+      ],
+      [
+       "sampai *gaya chibi*",
+       21.94
+      ]
+     ],
+     "at": 16.4,
+     "until": 99,
+     "y": 1230,
+     "w": 840,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 17.4,
+     "until": 99,
+     "x": 130,
+     "y": 1140,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 20.5,
+     "until": 99,
+     "x": 130,
+     "y": 1224,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.8,
+     "until": 99,
+     "x": 130,
+     "y": 1308,
+     "size": 70
+    }
+   ]
+  },
+  {
+   "start": 23.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DIHASILKAN OLEH",
+     "at": 22.75,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 23.35,
+     "until": 27.02,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*64 halaman berwarna*",
+       23.26
+      ],
+      [
+       "oleh pelukis komik *Irfan Foner*",
+       25.02
+      ]
+     ],
+     "at": 23.26,
+     "until": 27.02,
+     "y": 1230,
+     "w": 900,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 27.06,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/sapa.png",
+       27.06
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 27.1,
+     "until": 99,
+     "x": 820,
+     "y": 1090,
+     "w": 420,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 27.64,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

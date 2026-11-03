@@ -1,0 +1,449 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Skema Jawapan SPM, Tingkatan 4 dan 5, KSSM, format SPM terkini, penanda aras rendah, sederhana, tinggi, Sejarah, Bahasa Melayu, pemeriksa, kata kunci.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "badge",
+     "text": "UNTUK CALON SPM",
+     "at": 0.0,
+     "until": 99,
+     "y": 185,
+     "size": 44
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1080,
+     "h": 680,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ],
+      [
+       "kira/sedih.png",
+       2.74
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "bayangkan hari",
+     "key": "KEPUTUSAN SPM",
+     "at": 0.0,
+     "until": 2.1,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Envelope",
+     "at": 0.6,
+     "until": 2.1,
+     "x": 790,
+     "y": 1000,
+     "size": 200,
+     "rot": -6,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "anak buka slip,",
+     "key": "LEPAS TU SENYAP",
+     "at": 2.1,
+     "until": 4.8,
+     "y": 330,
+     "size1": 54,
+     "size2": 76,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 2.96,
+     "until": 4.8,
+     "x": 790,
+     "y": 1000,
+     "size": 210,
+     "rot": 4,
+     "edge": 11,
+     "anim": "pop"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Pensive face",
+     "at": 4.0,
+     "until": 4.8,
+     "x": 930,
+     "y": 730,
+     "size": 140,
+     "rot": 8,
+     "anim": "pop",
+     "edge": 11
+    }
+   ]
+  },
+  {
+   "start": 4.8,
+   "items": [
+    {
+     "kind": "badge",
+     "text": "UNTUK CALON SPM",
+     "at": 4.3,
+     "until": 99,
+     "y": 185,
+     "size": 44
+    },
+    {
+     "kind": "doodle",
+     "at": 4.2,
+     "x": 290,
+     "y": 1080,
+     "h": 680,
+     "poses": [
+      [
+       "kira/sedih.png",
+       4.2
+      ],
+      [
+       "kira/berfikir.png",
+       9.46
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "dia tak menangis, tapi",
+     "key": "DIA KECEWA",
+     "at": 4.8,
+     "until": 7.96,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Broken heart",
+     "at": 7.38,
+     "until": 7.96,
+     "x": 790,
+     "y": 1000,
+     "size": 190,
+     "rot": 0,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "tape",
+     "text": "PALING SAKIT",
+     "at": 7.98,
+     "until": 13.52,
+     "rot": -2,
+     "y": 600,
+     "size": 32
+    },
+    {
+     "kind": "say",
+     "text": "sebenarnya dia",
+     "key": "PANDAI",
+     "at": 7.96,
+     "until": 10.82,
+     "y": 330,
+     "size1": 54,
+     "size2": 76,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 9.6,
+     "until": 10.82,
+     "x": 790,
+     "y": 1000,
+     "size": 210,
+     "rot": 5,
+     "edge": 11,
+     "anim": "slide_r"
+    },
+    {
+     "kind": "say",
+     "text": "cuma tak tahu cara jawab",
+     "key": "YANG PEMERIKSA NAK",
+     "at": 10.82,
+     "until": 13.52,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 11.86,
+     "until": 13.52,
+     "x": 790,
+     "y": 1000,
+     "size": 210,
+     "rot": -4,
+     "edge": 11,
+     "anim": "slide_r"
+    }
+   ]
+  },
+  {
+   "start": 13.52,
+   "items": [
+    {
+     "kind": "badge",
+     "text": "UNTUK CALON SPM",
+     "at": 13.0,
+     "until": 99,
+     "y": 185,
+     "size": 44
+    },
+    {
+     "kind": "doodle",
+     "at": 12.9,
+     "x": 290,
+     "y": 1080,
+     "h": 680,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       12.9
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "jangan tunggu hari tu",
+     "key": "BARU MENYESAL",
+     "at": 13.52,
+     "until": 15.82,
+     "y": 330,
+     "size1": 54,
+     "size2": 76,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hourglass done",
+     "at": 14.1,
+     "until": 15.82,
+     "x": 790,
+     "y": 1000,
+     "size": 200,
+     "rot": 6,
+     "anim": "spin",
+     "edge": 11
+    }
+   ]
+  },
+  {
+   "start": 15.82,
+   "items": [
+    {
+     "kind": "badge",
+     "text": "UNTUK CALON SPM",
+     "at": 15.3,
+     "until": 99,
+     "y": 185,
+     "size": 44
+    },
+    {
+     "kind": "say",
+     "text": "Skema Jawapan SPM tunjuk cara",
+     "key": "DAPAT MARKAH PENUH",
+     "at": 15.82,
+     "until": 20.16,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 15.95,
+     "until": 20.16,
+     "x": 540,
+     "y": 1040,
+     "w": 960,
+     "rot": -1.5,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hundred points",
+     "at": 19.3,
+     "until": 20.16,
+     "x": 540,
+     "y": 1420,
+     "size": 130,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "setiap soalan siap",
+     "key": "JAWAPAN IKUT SKEMA",
+     "at": 20.16,
+     "until": 23.14,
+     "y": 330,
+     "size1": 54,
+     "size2": 76,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sejarah.jpg",
+     "at": 20.25,
+     "until": 23.14,
+     "x": 540,
+     "y": 1040,
+     "w": 960,
+     "rot": 1.5,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "untuk",
+     "key": "TINGKATAN 4 & 5",
+     "at": 23.14,
+     "until": 24.78,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "card",
+     "img": "bm.jpg",
+     "at": 23.2,
+     "until": 24.78,
+     "x": 540,
+     "y": 1040,
+     "w": 960,
+     "rot": -1.5,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 24.78,
+   "items": [
+    {
+     "kind": "badge",
+     "text": "UNTUK CALON SPM",
+     "at": 24.3,
+     "until": 99,
+     "y": 185,
+     "size": 44
+    },
+    {
+     "kind": "doodle",
+     "at": 24.82,
+     "x": 290,
+     "y": 1080,
+     "h": 680,
+     "poses": [
+      [
+       "kira/gembira.png",
+       24.82
+      ],
+      [
+       "kira/sapa.png",
+       27.32
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "biar hari keputusan nanti,",
+     "key": "ANAK SENYUM",
+     "at": 24.78,
+     "until": 27.32,
+     "y": 330,
+     "size1": 54,
+     "size2": 76,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 25.86,
+     "until": 27.32,
+     "x": 790,
+     "y": 1000,
+     "size": 210,
+     "rot": 4,
+     "edge": 11,
+     "anim": "pop",
+     "good": true
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Smiling face with smiling eyes",
+     "at": 26.6,
+     "until": 27.32,
+     "x": 930,
+     "y": 730,
+     "size": 140,
+     "rot": -6,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.32,
+     "until": 99,
+     "y": 330,
+     "size1": 54,
+     "size2": 76
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 27.4,
+     "until": 99,
+     "x": 780,
+     "y": 1020,
+     "w": 480,
+     "rot": 3.9000000000000004,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Backhand index pointing down",
+     "at": 27.92,
+     "until": 99,
+     "x": 780,
+     "y": 760,
+     "size": 120,
+     "rot": 0,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 27.92,
+     "y": 1660
+    }
+   ]
+  }
+ ]
+}

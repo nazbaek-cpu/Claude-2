@@ -1,0 +1,854 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-kayu",
+ "whisper_prompt": "Skema Jawapan SPM, cikgu, tutor, latih tubi, kerja rumah, ulang kaji, Tingkatan 4 dan 5, format SPM terkini, penanda aras kesukaran, Sejarah, Bahasa Melayu, Sains, Biologi, Chemistry, Perniagaan.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Cikgu,",
+    0.0,
+    0.3
+   ],
+   [
+    "berapa",
+    0.38,
+    0.88
+   ],
+   [
+    "jam",
+    0.88,
+    1.18
+   ],
+   [
+    "seminggu",
+    1.18,
+    1.58
+   ],
+   [
+    "habis",
+    1.58,
+    2.06
+   ],
+   [
+    "untuk",
+    2.06,
+    2.2
+   ],
+   [
+    "cari",
+    2.2,
+    2.44
+   ],
+   [
+    "soalan",
+    2.44,
+    2.84
+   ],
+   [
+    "dan",
+    2.84,
+    3.02
+   ],
+   [
+    "buat",
+    3.02,
+    3.26
+   ],
+   [
+    "skema?",
+    3.26,
+    3.56
+   ],
+   [
+    "Masa",
+    3.96,
+    4.6
+   ],
+   [
+    "yang",
+    4.6,
+    4.66
+   ],
+   [
+    "sepatutnya",
+    4.66,
+    5.28
+   ],
+   [
+    "untuk",
+    5.28,
+    5.4
+   ],
+   [
+    "mengajar,",
+    5.4,
+    5.98
+   ],
+   [
+    "habis",
+    5.98,
+    6.64
+   ],
+   [
+    "untuk",
+    6.64,
+    6.76
+   ],
+   [
+    "sediakan",
+    6.76,
+    7.12
+   ],
+   [
+    "bahan.",
+    7.12,
+    7.62
+   ],
+   [
+    "Buku",
+    7.74,
+    8.38
+   ],
+   [
+    "skema",
+    8.38,
+    8.66
+   ],
+   [
+    "jawapan",
+    8.66,
+    9.04
+   ],
+   [
+    "SPM",
+    9.04,
+    9.56
+   ],
+   [
+    "ni",
+    9.56,
+    9.68
+   ],
+   [
+    "dah",
+    9.68,
+    9.9
+   ],
+   [
+    "siap",
+    9.9,
+    10.34
+   ],
+   [
+    "untuk",
+    10.34,
+    10.46
+   ],
+   [
+    "kelas",
+    10.46,
+    10.74
+   ],
+   [
+    "cikgu.",
+    10.74,
+    11.04
+   ],
+   [
+    "Soalan",
+    11.2,
+    11.82
+   ],
+   [
+    "ikut",
+    11.82,
+    12.2
+   ],
+   [
+    "format",
+    12.2,
+    12.38
+   ],
+   [
+    "SPM",
+    12.38,
+    13.02
+   ],
+   [
+    "terkini,",
+    13.02,
+    13.42
+   ],
+   [
+    "Tingkatan",
+    13.6,
+    14.14
+   ],
+   [
+    "4",
+    14.14,
+    14.32
+   ],
+   [
+    "dan",
+    14.32,
+    14.6
+   ],
+   [
+    "5,",
+    14.6,
+    14.84
+   ],
+   [
+    "setiap",
+    15.04,
+    15.72
+   ],
+   [
+    "satu",
+    15.72,
+    15.9
+   ],
+   [
+    "ada",
+    15.9,
+    16.24
+   ],
+   [
+    "jawapan",
+    16.24,
+    16.62
+   ],
+   [
+    "lengkap",
+    16.62,
+    17.08
+   ],
+   [
+    "ikut",
+    17.08,
+    17.42
+   ],
+   [
+    "skema",
+    17.42,
+    17.84
+   ],
+   [
+    "dan",
+    17.84,
+    18.04
+   ],
+   [
+    "penanda",
+    18.04,
+    18.48
+   ],
+   [
+    "aras",
+    18.48,
+    18.74
+   ],
+   [
+    "kesukaran.",
+    18.74,
+    19.18
+   ],
+   [
+    "Boleh",
+    19.36,
+    19.96
+   ],
+   [
+    "terus",
+    19.96,
+    20.14
+   ],
+   [
+    "guna",
+    20.14,
+    20.56
+   ],
+   [
+    "untuk",
+    20.56,
+    20.68
+   ],
+   [
+    "latih",
+    20.68,
+    21.02
+   ],
+   [
+    "tubi,",
+    21.02,
+    21.4
+   ],
+   [
+    "kerja",
+    21.46,
+    21.82
+   ],
+   [
+    "rumah",
+    21.82,
+    21.96
+   ],
+   [
+    "atau",
+    21.96,
+    22.36
+   ],
+   [
+    "ulang",
+    22.36,
+    22.68
+   ],
+   [
+    "kaji.",
+    22.68,
+    22.94
+   ],
+   [
+    "Ada",
+    23.12,
+    23.68
+   ],
+   [
+    "Sejarah,",
+    23.68,
+    24.28
+   ],
+   [
+    "Bahasa",
+    24.3,
+    24.64
+   ],
+   [
+    "Melayu,",
+    24.64,
+    25.1
+   ],
+   [
+    "Sains,",
+    25.16,
+    25.74
+   ],
+   [
+    "Biologi,",
+    25.82,
+    26.48
+   ],
+   [
+    "Chemistry",
+    26.5,
+    26.82
+   ],
+   [
+    "dan",
+    26.82,
+    27.36
+   ],
+   [
+    "Perniagaan.",
+    27.36,
+    28.04
+   ],
+   [
+    "Tekan",
+    28.1,
+    28.74
+   ],
+   [
+    "link",
+    28.74,
+    28.86
+   ],
+   [
+    "dekat",
+    28.86,
+    29.06
+   ],
+   [
+    "bawah.",
+    29.06,
+    29.44
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "CIKGU...",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Berapa jam *seminggu* habis untuk",
+       0.0
+      ],
+      [
+       "*cari soalan* dan *buat skema?*",
+       2.2
+      ]
+     ],
+     "at": 0.0,
+     "until": 99,
+     "y": 540,
+     "w": 1000,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 1.18,
+     "until": 2.2,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "SEMINGGU"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 2.2,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "CARI SOALAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.0,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 3.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MASALAHNYA...",
+     "at": 3.45,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Masa untuk *mengajar,*",
+       3.96
+      ],
+      [
+       "habis untuk *sediakan bahan.*",
+       5.98
+      ]
+     ],
+     "at": 3.96,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 3.4,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/stres.png",
+       3.4
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 5.4,
+     "until": 5.98,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MENGAJAR"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/fail.png",
+     "at": 5.98,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "BAHAN"
+    },
+    {
+     "kind": "stamp",
+     "text": "MASA HABIS!",
+     "at": 6.9,
+     "x": 700,
+     "y": 1340,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 7.74,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SKEMA JAWAPAN SPM",
+     "at": 7.2,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Buku ni *dah siap*",
+       7.74
+      ],
+      [
+       "untuk *kelas cikgu.*",
+       10.34
+      ]
+     ],
+     "at": 7.74,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 7.9,
+     "until": 99,
+     "x": 540,
+     "y": 1080,
+     "w": 920,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 11.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 10.7,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "sejarah.jpg",
+     "at": 11.3,
+     "until": 99,
+     "x": 540,
+     "y": 720,
+     "w": 900,
+     "rot": 0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Format *SPM terkini*",
+       11.2
+      ],
+      [
+       "*Tingkatan 4 & 5*",
+       13.6
+      ],
+      [
+       "Jawapan *ikut skema* & *aras kesukaran*",
+       15.04
+      ]
+     ],
+     "at": 11.2,
+     "until": 99,
+     "y": 1230,
+     "w": 900,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 12.6,
+     "until": 99,
+     "x": 120,
+     "y": 1140,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 14.4,
+     "until": 99,
+     "x": 120,
+     "y": 1224,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 17.6,
+     "until": 99,
+     "x": 120,
+     "y": 1308,
+     "size": 70
+    }
+   ]
+  },
+  {
+   "start": 19.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERUS GUNA UNTUK:",
+     "at": 18.85,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Latih tubi,*",
+       19.36
+      ],
+      [
+       "*kerja rumah*",
+       21.46
+      ],
+      [
+       "atau *ulang kaji.*",
+       21.96
+      ]
+     ],
+     "at": 19.36,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 18.8,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       18.8
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 20.68,
+     "until": 21.46,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "LATIH TUBI"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 21.46,
+     "until": 22.36,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "KERJA RUMAH"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 22.36,
+     "until": 99,
+     "x": 860,
+     "y": 1130,
+     "size": 190,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "ULANG KAJI"
+    }
+   ]
+  },
+  {
+   "start": 23.12,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADA SUBJEK:",
+     "at": 22.6,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "bm.jpg",
+     "at": 23.2,
+     "until": 28.1,
+     "x": 540,
+     "y": 720,
+     "w": 900,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Sejarah, Bahasa Melayu,*",
+       23.12
+      ],
+      [
+       "*Sains, Biologi,*",
+       25.16
+      ],
+      [
+       "*Chemistry & Perniagaan*",
+       26.5
+      ]
+     ],
+     "at": 23.12,
+     "until": 28.1,
+     "y": 1230,
+     "w": 820,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.5,
+     "until": 28.1,
+     "x": 140,
+     "y": 1140,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.9,
+     "until": 28.1,
+     "x": 140,
+     "y": 1224,
+     "size": 70
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.4,
+     "until": 28.1,
+     "x": 140,
+     "y": 1308,
+     "size": 70
+    },
+    {
+     "kind": "doodle",
+     "at": 28.14,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/sapa.png",
+       28.14
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "siri.jpg",
+     "at": 28.2,
+     "until": 99,
+     "x": 800,
+     "y": 1090,
+     "w": 460,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.74,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

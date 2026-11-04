@@ -398,3 +398,12 @@ def test_fx_highlight_rolls_two_lines_and_sweeps_key_words():
     assert ev.count("swish") == 3 and ev.count("pop") == 3
     two = fx.remap([json.loads(json.dumps(s))], lambda x: x / 2)[0]
     assert two["phrases"][2][1] == 2.0
+
+
+def test_warm_mask_finds_a_beige_product_on_a_cool_background():
+    small = np.zeros((960, 540, 3), np.uint8); small[:] = (110, 120, 140)        # blue-grey marble
+    small[400:960, 120:420] = (225, 200, 165)                                    # beige product rising from the bottom
+    small[200:205, 40:300] = (200, 150, 60)                                      # a thin gold vein
+    m = render.warm_mask(small)
+    assert m[700, 270] == 1 and m[100, 270] == 0                                 # product kept, background left out
+    assert m[202, 150] == 0                                                      # the vein is dropped

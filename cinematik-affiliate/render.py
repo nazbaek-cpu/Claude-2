@@ -434,6 +434,21 @@ def apply_zoom(fr, z, cy=760):
     return cv2.warpAffine(fr, M, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
 
 
+def warm_mask(small):
+    """warm-coloured shapes (beige product, hands) on a cool background, at 540x960: hue <= 28 or >= 170, some
+    saturation and light; thin warm streaks (marble veins) are dropped unless big or touching the bottom or sides"""
+    hsv = cv2.cvtColor(small, cv2.COLOR_RGB2HSV); h_, w_ = small.shape[:2]
+    m = (((hsv[..., 0] <= 28) | (hsv[..., 0] >= 170)) & (hsv[..., 1] >= 38) & (hsv[..., 2] >= 55)).astype(np.uint8)
+    m = cv2.morphologyEx(m, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (9, 9)))
+    m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25)))
+    k, lab, st, _ = cv2.connectedComponentsWithStats(m)
+    keep = np.zeros((h_, w_), np.float32)
+    for i in range(1, k):
+        x, y, w, h, area = st[i]
+        edge = y + h >= h_ - 5 or x <= 3 or x + w >= w_ - 3
+        if area > 30000 or (edge and area > 8000): keep[lab == i] = 1
+    return keep
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("project"); ap.add_argument("--limit", type=float); ap.add_argument("--out")
@@ -480,10 +495,13 @@ def main():
     pts_s = None; miss = 0; n = 0
     mstate = {"prev": None, "n": -2, "m": None}
     def person_mask(img):
-        """selfie mask at full size, smoothed over consecutive frames; computed once per frame"""
+        """selfie mask at full size, smoothed over consecutive frames; computed once per frame.
+        "mask": "warm" in project.json uses warm_mask instead (product B-roll with no person: skin- or beige-coloured
+        product and hands on a cool background)"""
         if mstate["n"] == n: return mstate["m"]
         small = cv2.resize(np.clip(img, 0, 255).astype(np.uint8), (540, 960), interpolation=cv2.INTER_AREA)
-        m = np.squeeze(seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(small))).confidence_masks[0].numpy_view()).astype(np.float32)
+        if cfg.get("mask") == "warm": m = warm_mask(small)
+        else: m = np.squeeze(seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(small))).confidence_masks[0].numpy_view()).astype(np.float32)
         prev = mstate["prev"] if mstate["n"] == n - 1 else None
         m = m if prev is None else 0.65 * m + 0.35 * prev
         mm = cv2.resize(cv2.GaussianBlur(np.clip((m - 0.35) / 0.3, 0, 1), (0, 0), 1.5), (W, H), interpolation=cv2.INTER_LINEAR)

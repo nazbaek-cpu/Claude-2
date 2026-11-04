@@ -1,0 +1,147 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": false,
+ "mask": "warm",
+ "whisper_prompt": "Stokin, sarung kaki, muslimah, lembut, tebal, tak jarang, getah, saiz, warna kulit.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "enabled": false
+ },
+ "segments": [],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "highlight",
+   "start": 3.0,
+   "end": 6.5,
+   "y": 300,
+   "phrases": [
+    [
+     "Muslimah nak cari *stokin?*",
+     3.02
+    ],
+    [
+     "*tiga pasang*",
+     5.18
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 6.52,
+   "end": 9.4,
+   "scatter_at": 9.25,
+   "y_back": 270,
+   "words": [
+    [
+     "SATU",
+     6.86,
+     "back"
+    ],
+    [
+     "DUA",
+     7.44,
+     "back"
+    ],
+    [
+     "TIGA",
+     7.84,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 9.4,
+   "end": 11.9,
+   "y": 300,
+   "phrases": [
+    [
+     "boleh dapat terus",
+     9.4
+    ],
+    [
+     "di *link bawah*",
+     11.12
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 11.94,
+   "end": 16.95,
+   "scatter_at": 16.8,
+   "y_back": 270,
+   "words": [
+    [
+     "KUALITI",
+     13.52,
+     "back"
+    ],
+    [
+     "SAMPAI",
+     14.18,
+     "back"
+    ],
+    [
+     "BETIS",
+     15.2,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 16.98,
+   "end": 21.05,
+   "y": 300,
+   "phrases": [
+    [
+     "tengok *jahitan* dia",
+     18.7
+    ],
+    [
+     "pun *kemas*",
+     19.78
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 21.11,
+   "end": 25.8,
+   "y": 300,
+   "phrases": [
+    [
+     "beli *satu pasang* je",
+     21.96
+    ],
+    [
+     "dapat harga ni *dekat luar*",
+     24.3
+    ]
+   ]
+  },
+  {
+   "kind": "highlight",
+   "start": 25.82,
+   "end": null,
+   "y": 300,
+   "phrases": [
+    [
+     "tapi di *link bawah*",
+     25.82
+    ],
+    [
+     "dapat *tiga pasang!*",
+     28.38
+    ]
+   ]
+  }
+ ]
+}

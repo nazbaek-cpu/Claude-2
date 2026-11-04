@@ -1,7 +1,7 @@
-"""Template "tulisan besar" (styles/template-tulisan-besar.md): the kertas pieces on solid wood, with the spoken line in
+"""Template kertas (styles/template-kertas.md): torn paper titles, sticker props, stamps and marks on solid wood, the spoken line in
 big type, one phrase at a time (no note cards). Build a project.json from Python:
 
-    from templates.tulisan_besar import *
+    from templates.kertas import *
     scenes = [scene(0.0, [label("ANAK SUKA MELUKIS?", 0.0),
                           say("kenapa ada anak yang lukisan dia", "NAMPAK HIDUP", 0.0, 2.72),
                           kira(0.05, [("berfikir", 0.0)], slide=True),

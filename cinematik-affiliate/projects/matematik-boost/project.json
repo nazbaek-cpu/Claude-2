@@ -1,0 +1,454 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, guru cemerlang Matematik, soalan berpotensi tinggi, subtopik, jawapan lengkap, bengkel kalkulator, 200 muka surat, persediaan akhir SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang masuk dewan",
+     "key": "MATEMATIK",
+     "at": 0.0,
+     "until": 2.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "jumpa soalan,",
+     "key": "TERUS SENYUM?",
+     "at": 2.92,
+     "until": 5.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 1.84,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DEWAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 4.3,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.02,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia dah",
+     "key": "JANGKA SOALAN TU",
+     "at": 5.02,
+     "until": 7.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/idea.png",
+       4.4
+      ],
+      [
+       "adik/setuju.png",
+       6.36
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 5.88,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DAH JANGKA",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 7.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 6.65,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buat latihan",
+     "key": "RAWAK",
+     "at": 7.18,
+     "until": 9.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "topik jarang keluar pun",
+     "key": "DIHAFAL",
+     "at": 9.52,
+     "until": 11.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "topik selalu keluar,",
+     "key": "TAK CUKUP LATIH",
+     "at": 11.54,
+     "until": 14.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 6.6,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       6.6
+      ],
+      [
+       "adik/stres.png",
+       9.52
+      ],
+      [
+       "adik/sedih.png",
+       13.1
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 8.14,
+     "until": 9.52,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "RAWAK"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 9.52,
+     "until": 11.54,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": -5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "HAFAL"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 11.54,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SELALU KELUAR"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK CUKUP!",
+     "at": 13.2,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 13.85,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "fokus soalan",
+     "key": "BERPOTENSI TINGGI",
+     "at": 14.36,
+     "until": 18.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 14.45,
+     "until": 18.24,
+     "x": 540,
+     "y": 1110,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "topik yang",
+     "key": "SELALU MASUK SPM",
+     "at": 18.24,
+     "until": 20.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 18.3,
+     "until": 20.42,
+     "x": 540,
+     "y": 1060,
+     "w": 920,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 19.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma",
+     "key": "ULANG LATIHAN",
+     "at": 20.42,
+     "until": 22.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cikgu.jpg",
+     "at": 20.5,
+     "until": 22.58,
+     "x": 540,
+     "y": 1000,
+     "w": 920,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "jawapan ada di belakang",
+     "key": "SETIAP TOPIK",
+     "at": 22.58,
+     "until": 24.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 22.65,
+     "until": 24.84,
+     "x": 540,
+     "y": 1060,
+     "w": 920,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 23.6,
+     "until": 24.84,
+     "x": 540,
+     "y": 1460,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 24.84,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 24.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila dah jangka soalan,",
+     "key": "MATEMATIK TAK MENAKUTKAN",
+     "at": 24.84,
+     "until": 28.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 24.88,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       24.88
+      ],
+      [
+       "adik/sapa.png",
+       28.66
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 26.3,
+     "until": 28.66,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "A+",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 28.66,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 28.75,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.46,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

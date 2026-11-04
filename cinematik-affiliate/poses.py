@@ -19,6 +19,11 @@ import cv2
 import numpy as np
 from PIL import Image
 
+def paper_colour(a):
+    """the sheet's paper: the median of every pixel on the band's edge (robust when a figure pokes into a corner)"""
+    edge = np.concatenate([a[:3].reshape(-1, 3), a[-3:].reshape(-1, 3), a[:, :3].reshape(-1, 3), a[:, -3:].reshape(-1, 3)])
+    return np.median(edge, axis=0)
+
 def outside(bg):
     """only the paper that reaches the sheet's edge: white shirts and eyes inside a figure stay solid"""
     k, lab = cv2.connectedComponents(bg.astype(np.uint8), connectivity=4)
@@ -27,7 +32,7 @@ def outside(bg):
 
 def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False, solid=False):
     a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)[top_skip:]
-    paper = np.median(np.concatenate([a[:8, :8].reshape(-1, 3), a[:8, -8:].reshape(-1, 3)]), axis=0)
+    paper = paper_colour(a)
     dist = np.linalg.norm(a - paper, axis=-1)
     bg = dist < tol
     if solid: bg = outside(bg)
@@ -69,7 +74,7 @@ def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False, solid=False):
 def matte(sheet, tol=14, top_skip=0, solid=False):
     """the sheet as un-mixed colour and alpha: paper (read from the corners) becomes transparent"""
     a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)[top_skip:]
-    paper = np.median(np.concatenate([a[:8, :8].reshape(-1, 3), a[:8, -8:].reshape(-1, 3)]), axis=0)
+    paper = paper_colour(a)
     bg = np.linalg.norm(a - paper, axis=-1) < tol
     if solid: bg = outside(bg)
     rim = cv2.dilate(bg.astype(np.uint8), np.ones((5, 5), np.uint8)).astype(bool) & ~bg

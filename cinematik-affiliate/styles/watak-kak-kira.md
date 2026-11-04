@@ -63,3 +63,11 @@ mata putih Abang Bajet hampir sama warna dengan kertas, dan tanpa `--solid` ia j
     python poses.py muka.png $OUT/muka --grid 10x1 --icons --solid --names gembira,teruja,ketawa,sedih,terkejut,risau,berfikir,bangga,marah,ingin_tahu
 
 Dalam `templates/kertas.py`: `kira(at, poses, folder="abang")`. Contoh: `projects/upsa-sejarah/`.
+
+## Watak budak lelaki: Adik Baju Hijau
+
+Lembaran ada watak besar di kiri, jadi jalur pose bermula pada x 262 (lajur x < 10 jalur dicat warna kertas) dan
+pil tajuk ditutup dulu. Potong dengan `--auto 10 --solid` (sapa, setuju, berfikir, idea, terkejut, gembira, sedih,
+stres, berlari, raikan) dan muka `--grid 10x1 --icons --solid` dari jalur y 652–902, x 22–1514.
+`kira(..., folder="adik")`. Contoh: `projects/matematik-boost/` (atas papan hitam: `"bg_image"` papan yang diregang
+sembilan-petak supaya bingkai kayu kekal tebal).

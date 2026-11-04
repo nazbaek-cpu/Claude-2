@@ -28,3 +28,9 @@ Video rujukan tidak disimpan di sini; ini nota reka bentuk untuk dibina semula. 
 - gambar produk `card` (`"sticker": true`): `y` 1050, atau `y` 700 bila ada senarai semak di bawah
 - subtitle: `y` 1470, `size` 54, 4 perkataan sebaris
 - CTA: `y` 1690
+
+## Varian "tulisan besar satu demi satu" (permintaan pengguna)
+
+Pengguna tak suka banyak ayat dalam satu kad `note`. Untuk varian ni: tiada `note`; setiap frasa VO jadi satu `say`
+(baris kecil + kata kunci besar, `y` 395, `size1` 60, `size2` 96) yang tukar ikut ayat, terus atas kayu (`"theme": "kayu"`).
+`label`, `sticker` bertag, `stamp`, `marks` dan gambar `card` kekal. Contoh: `projects/melukis-kayu-2/`.

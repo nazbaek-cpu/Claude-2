@@ -707,7 +707,7 @@ def sticker(frame, t, it, sc, prj):
         tk = ("tag", it["tag"], key)
         if tk not in cache:
             f = font("hand", it.get("tag_size", 44)); tw = int(f.getlength(it["tag"])); asc, desc = f.getmetrics()
-            tg = paper_slip(tw + 40, asc + desc + 22, len(it["tag"]) + 3); ImageDraw.Draw(tg).text((20, 9), it["tag"], font=f, fill=INK + (255,))
+            tg = paper_slip(tw + 40, asc + desc + 22, len(it["tag"]) + 3); ImageDraw.Draw(tg).text((20, 9), it["tag"], font=f, fill=K_DARK + (255,))
             tg = soft_shadow(tg, 80, 6, 4).rotate(3, Image.BICUBIC, expand=True)
             both = Image.new("RGBA", (max(img.width, tg.width), img.height + tg.height - 10), (0, 0, 0, 0))
             both.alpha_composite(tg, ((both.width - tg.width) // 2, 0)); both.alpha_composite(img, ((both.width - img.width) // 2, tg.height - 10))
@@ -1121,7 +1121,7 @@ def label(frame, t, it, sc):
     if key not in cache:
         f = font("hand", it.get("size", 66)); tw = int(f.getlength(it["text"])); asc, desc = f.getmetrics()
         img = paper_slip(tw + 90, asc + desc + 44, len(it["text"]))
-        ImageDraw.Draw(img).text((45, 20), it["text"], font=f, fill=INK + (255,))
+        ImageDraw.Draw(img).text((45, 20), it["text"], font=f, fill=K_DARK + (255,))   # dark on the white slip, whatever the theme ink
         cache[key] = soft_shadow(img, 90, 9, 7).rotate(it.get("rot", -1.5), Image.BICUBIC, expand=True)
     p = ramp(t, it["at"], 0.35); a = ease_out(ramp(t, it["at"], 0.12)) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25))
     img = cache[key]; s_ = 1.15 - 0.15 * ease_out(p)

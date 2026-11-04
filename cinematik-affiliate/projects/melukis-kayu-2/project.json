@@ -1,0 +1,485 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Bestnya! Melukis Karakter, Irfan Foner, pelukis komik 15 tahun, 30 topik, 30 aktiviti, 64 halaman berwarna, gaya chibi, ekspresi, gestur badan, sudut kepala, anak suka melukis.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK SUKA MELUKIS?",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada anak yang lukisan dia",
+     "key": "NAMPAK HIDUP",
+     "at": 0.0,
+     "until": 2.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "macam",
+     "key": "KELUAR DARI KOMIK?",
+     "at": 2.72,
+     "until": 4.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel_warna.png",
+     "at": 1.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "LUKISAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 4.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia tahu",
+     "key": "ASASNYA",
+     "at": 4.3,
+     "until": 6.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       3.7
+      ],
+      [
+       "kira/bangga.png",
+       5.44
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 5.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ASAS",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK LAIN...",
+     "at": 5.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak lain?",
+     "key": "LUKIS IKUT RASA",
+     "at": 6.3,
+     "until": 8.88,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "muka sama, badan",
+     "key": "TEGAK MACAM TIANG",
+     "at": 8.88,
+     "until": 11.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "emosi",
+     "key": "TAK NAMPAK",
+     "at": 11.58,
+     "until": 13.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       5.7
+      ],
+      [
+       "kira/stres.png",
+       8.88
+      ],
+      [
+       "kira/sedih.png",
+       11.58
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel.png",
+     "at": 7.38,
+     "until": 8.88,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "IKUT RASA"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pembaris.png",
+     "at": 8.88,
+     "until": 11.58,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -12,
+     "anim": "slide_r",
+     "edge": 11,
+     "tag": "KAKU"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Thinking face",
+     "at": 11.58,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "EMOSI?"
+    },
+    {
+     "kind": "stamp",
+     "text": "KAKU!",
+     "at": 12.2,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BESTNYA! MELUKIS KARAKTER",
+     "at": 12.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ajar asas tu",
+     "key": "SATU-SATU",
+     "at": 13.1,
+     "until": 17.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 13.2,
+     "until": 17.32,
+     "x": 540,
+     "y": 1080,
+     "w": 880,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "kepala, mata,",
+     "key": "EKSPRESI",
+     "at": 17.32,
+     "until": 20.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "mata.jpg",
+     "at": 17.4,
+     "until": 20.08,
+     "x": 540,
+     "y": 1080,
+     "w": 880,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "gestur badan sampai",
+     "key": "GAYA CHIBI",
+     "at": 20.08,
+     "until": 22.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "chibi.jpg",
+     "at": 20.15,
+     "until": 22.4,
+     "x": 540,
+     "y": 1080,
+     "w": 880,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ikut langkah,",
+     "key": "LUKISAN TERUS BERGERAK",
+     "at": 22.4,
+     "until": 26.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "sudut.jpg",
+     "at": 22.5,
+     "until": 26.08,
+     "x": 540,
+     "y": 1080,
+     "w": 880,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 26.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 25.55,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "30 topik,",
+     "key": "64 HALAMAN BERWARNA",
+     "at": 26.08,
+     "until": 29.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 26.2,
+     "until": 31.9,
+     "x": 540,
+     "y": 1080,
+     "w": 880,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "oleh pelukis komik",
+     "key": "15 TAHUN PENGALAMAN",
+     "at": 29.12,
+     "until": 31.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.0,
+     "until": 99,
+     "x": 540,
+     "y": 1560,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 31.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 31.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sekali faham asas,",
+     "key": "WATAK APA PUN BOLEH",
+     "at": 31.9,
+     "until": 35.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 31.94,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       31.94
+      ],
+      [
+       "kira/sapa.png",
+       35.14
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 33.24,
+     "until": 35.14,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BOLEH!",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 35.14,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 35.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 35.78,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

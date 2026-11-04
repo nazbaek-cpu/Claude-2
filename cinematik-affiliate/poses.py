@@ -19,11 +19,18 @@ import cv2
 import numpy as np
 from PIL import Image
 
-def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False):
+def outside(bg):
+    """only the paper that reaches the sheet's edge: white shirts and eyes inside a figure stay solid"""
+    k, lab = cv2.connectedComponents(bg.astype(np.uint8), connectivity=4)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    return np.isin(lab, edge[edge > 0])
+
+def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False, solid=False):
     a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)[top_skip:]
     paper = np.median(np.concatenate([a[:8, :8].reshape(-1, 3), a[:8, -8:].reshape(-1, 3)]), axis=0)
     dist = np.linalg.norm(a - paper, axis=-1)
     bg = dist < tol
+    if solid: bg = outside(bg)
     rim = cv2.dilate(bg.astype(np.uint8), np.ones((5, 5), np.uint8)).astype(bool) & ~bg
     # un-mix the rim from the paper (colour-to-alpha), so the outline keeps a clean soft edge on any background
     lo = np.where(a < paper, (paper - a) / np.maximum(paper, 1), (a - paper) / np.maximum(255 - paper, 1))
@@ -59,19 +66,20 @@ def cut(sheet, cols, rows, tol=14, top_skip=0, icons=False):
     out = [Image.fromarray(np.dstack([px, al[..., None] * 255]).astype(np.uint8)[y0:y1, x0:x1], "RGBA") for px, al, _ in cells]
     return out
 
-def matte(sheet, tol=14, top_skip=0):
+def matte(sheet, tol=14, top_skip=0, solid=False):
     """the sheet as un-mixed colour and alpha: paper (read from the corners) becomes transparent"""
     a = np.asarray(Image.open(sheet).convert("RGB")).astype(np.float32)[top_skip:]
     paper = np.median(np.concatenate([a[:8, :8].reshape(-1, 3), a[:8, -8:].reshape(-1, 3)]), axis=0)
     bg = np.linalg.norm(a - paper, axis=-1) < tol
+    if solid: bg = outside(bg)
     rim = cv2.dilate(bg.astype(np.uint8), np.ones((5, 5), np.uint8)).astype(bool) & ~bg
     lo = np.where(a < paper, (paper - a) / np.maximum(paper, 1), (a - paper) / np.maximum(255 - paper, 1))
     alpha = np.where(bg, 0.0, np.where(rim, np.clip(lo.max(-1), 0, 1), 1.0))
     rgb = np.where(rim[..., None], np.clip((a - paper) / np.maximum(alpha, 1e-3)[..., None] + paper, 0, 255), a)
     return rgb, alpha
 
-def cut_auto(sheet, n, tol=14, top_skip=0, icons=False):
-    rgb, alpha = matte(sheet, tol, top_skip)
+def cut_auto(sheet, n, tol=14, top_skip=0, icons=False, solid=False):
+    rgb, alpha = matte(sheet, tol, top_skip, solid)
     k, lab, stats, cent = cv2.connectedComponentsWithStats((alpha > 0.3).astype(np.uint8), connectivity=8)
     seeds = sorted(sorted(range(1, k), key=lambda i: -stats[i, cv2.CC_STAT_AREA])[:n], key=lambda i: cent[i][0])
     dist = [cv2.distanceTransform((lab != s).astype(np.uint8), cv2.DIST_L2, 3) for s in seeds]
@@ -126,11 +134,12 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("sheet"); ap.add_argument("out"); ap.add_argument("--grid", default="4x2")
     ap.add_argument("--top", type=int, default=0); ap.add_argument("--icons", action="store_true"); ap.add_argument("--names", default="")
     ap.add_argument("--auto", type=int, default=0, help="N figures, found by shape instead of a grid")
+    ap.add_argument("--solid", action="store_true", help="keep paper-coloured areas inside a figure (white shirt, eyes)")
     args = ap.parse_args(); cols, rows = map(int, args.grid.lower().split("x"))
     names = [n.strip() for n in args.names.split(",") if n.strip()]
     os.makedirs(args.out, exist_ok=True)
-    ims = (cut_auto(args.sheet, args.auto, top_skip=args.top, icons=args.icons) if args.auto
-           else cut(args.sheet, cols, rows, top_skip=args.top, icons=args.icons))
+    ims = (cut_auto(args.sheet, args.auto, top_skip=args.top, icons=args.icons, solid=args.solid) if args.auto
+           else cut(args.sheet, cols, rows, top_skip=args.top, icons=args.icons, solid=args.solid))
     for i, im in enumerate(ims, 1):
         name = (names[i - 1] if i <= len(names) else f"pose{i}") + ".png"
         im.save(os.path.join(args.out, name)); print(f"{name} {im.size}")

@@ -1,0 +1,482 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah Tingkatan 3, UPSA, UASA, Google Form, kod QR, jawapan lengkap dengan penerangan, Nilam Publication.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang jawab soalan objektif",
+     "key": "MARKAH HAMPIR PENUH?",
+     "at": 0.0,
+     "until": 4.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 2.74,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "HAMPIR PENUH"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia",
+     "key": "DAH BIASA",
+     "at": 4.32,
+     "until": 5.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.7
+      ],
+      [
+       "abang/yakin.png",
+       5.26
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 5.1,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BIASA",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 5.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 5.45,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca nota",
+     "key": "BERULANG KALI",
+     "at": 5.96,
+     "until": 8.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi masuk dewan,",
+     "key": "JUMPA SOALAN",
+     "at": 8.96,
+     "until": 11.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "terus ragu-ragu",
+     "key": "ANTARA A DENGAN B",
+     "at": 11.14,
+     "until": 14.34,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       5.4
+      ],
+      [
+       "abang/terkejut.png",
+       9.68
+      ],
+      [
+       "abang/stres.png",
+       11.14
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 7.06,
+     "until": 8.96,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "NOTA"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 8.96,
+     "until": 11.14,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DEWAN"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Thinking face",
+     "at": 11.14,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "A ATAU B?"
+    },
+    {
+     "kind": "stamp",
+     "text": "RAGU-RAGU!",
+     "at": 12.6,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.34,
+   "items": [
+    {
+     "kind": "label",
+     "text": "1088 SOALAN OBJEKTIF",
+     "at": 13.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bagi anak latihan",
+     "key": "1088 SOALAN",
+     "at": 14.34,
+     "until": 18.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 14.45,
+     "until": 18.68,
+     "x": 540,
+     "y": 1090,
+     "w": 700,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma jawab",
+     "key": "SATU BAB SEHARI",
+     "at": 18.68,
+     "until": 20.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "soalan2.jpg",
+     "at": 18.75,
+     "until": 20.92,
+     "x": 540,
+     "y": 1090,
+     "w": 720,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.92,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 20.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "soalan ikut format",
+     "key": "UASA & SPM",
+     "at": 20.92,
+     "until": 23.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "soalan2.jpg",
+     "at": 21.0,
+     "until": 23.5,
+     "x": 540,
+     "y": 1090,
+     "w": 720,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "setiap bab ada",
+     "key": "KOD QR GOOGLE FORM",
+     "at": 23.5,
+     "until": 27.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "soalan.jpg",
+     "at": 23.55,
+     "until": 27.48,
+     "x": 540,
+     "y": 1090,
+     "w": 720,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "siap jawapan lengkap",
+     "key": "DENGAN PENERANGAN",
+     "at": 27.48,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "jawapan.jpg",
+     "at": 27.55,
+     "until": 30.0,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.2,
+     "until": 23.5,
+     "x": 540,
+     "y": 1600,
+     "size": 90
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.2,
+     "until": 27.48,
+     "x": 540,
+     "y": 1600,
+     "size": 90
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 28.6,
+     "until": 30.0,
+     "x": 540,
+     "y": 1600,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 29.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sekali dah biasa, objektif jadi",
+     "key": "MARKAH PERCUMA",
+     "at": 30.0,
+     "until": 33.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 30.04,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       30.04
+      ],
+      [
+       "abang/sapa.png",
+       33.62
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 32.4,
+     "until": 33.62,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "A+",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 33.62,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 33.7,
+     "until": 99,
+     "x": 800,
+     "y": 1060,
+     "w": 400,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 34.26,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

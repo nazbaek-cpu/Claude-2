@@ -53,3 +53,13 @@ Susun atur (dari semakan pengguna: watak jangan terlalu bawah, tengah video jang
 - ikon utama `sticker`: `x` 790, `y` 1000, `size` 210; ikon/emoji kecil: `x` 930, `y` 730, `size` 140
 - gambar produk (`card`): `y` 1020; emoji di bawah gambar `y` 1400
 - tajuk di atas (y 185 badge, y 320 tajuk); bahagian bawah (y > 1500) dibiarkan untuk butang CTA dan UI TikTok
+
+## Watak lelaki: Abang Bajet (lembaran rujukan baru)
+
+Susun atur lembaran sama dengan Kak Kira (1536x1024), jadi potong dengan jalur yang sama, tapi tambah `--solid`: baju dan
+mata putih Abang Bajet hampir sama warna dengan kertas, dan tanpa `--solid` ia jadi lutsinar.
+
+    python poses.py pose.png $OUT --auto 10 --solid --names sapa,senarai,yakin,idea,terkejut,stres,berfikir,menerang,fokus,gembira
+    python poses.py muka.png $OUT/muka --grid 10x1 --icons --solid --names gembira,teruja,ketawa,sedih,terkejut,risau,berfikir,bangga,marah,ingin_tahu
+
+Dalam `templates/kertas.py`: `kira(at, poses, folder="abang")`. Contoh: `projects/upsa-sejarah/`.

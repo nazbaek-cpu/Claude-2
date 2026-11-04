@@ -1,0 +1,458 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Bestnya! Melukis Karakter, Irfan Foner, pelukis komik 15 tahun, 30 topik, 30 aktiviti, 64 halaman berwarna, gaya chibi, ekspresi, gestur badan, sudut kepala, anak suka melukis.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK SUKA MELUKIS?",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada anak yang boleh",
+     "key": "CIPTA WATAK SENDIRI",
+     "at": 0.0,
+     "until": 2.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "siap dengan",
+     "key": "NAMA & PERANGAI?",
+     "at": 2.6,
+     "until": 4.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel_warna.png",
+     "at": 1.34,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "WATAK SENDIRI"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.9,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia belajar dari",
+     "key": "PELUKIS KOMIK",
+     "at": 4.6,
+     "until": 6.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       4.0
+      ],
+      [
+       "abang/yakin.png",
+       5.94
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 5.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PELUKIS KOMIK",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.86,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK LAIN...",
+     "at": 6.35,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak lain?",
+     "key": "ASYIK TIRU KARTUN",
+     "at": 6.86,
+     "until": 9.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "bila suruh lukis sendiri,",
+     "key": "TAK TAHU NAK MULA",
+     "at": 9.8,
+     "until": 12.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       6.3
+      ],
+      [
+       "abang/stres.png",
+       9.8
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Mobile phone",
+     "at": 7.8,
+     "until": 9.8,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": 6,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SKRIN"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Thinking face",
+     "at": 9.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": -5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "NAK MULA?"
+    },
+    {
+     "kind": "stamp",
+     "text": "BLANK!",
+     "at": 11.7,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 12.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BESTNYA! MELUKIS KARAKTER",
+     "at": 12.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ditulis oleh",
+     "key": "IRFAN FONER",
+     "at": 12.94,
+     "until": 16.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 13.05,
+     "until": 16.82,
+     "x": 540,
+     "y": 1080,
+     "w": 860,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "pelukis komik",
+     "key": "15 TAHUN",
+     "at": 16.82,
+     "until": 18.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "chibi.jpg",
+     "at": 16.9,
+     "until": 18.68,
+     "x": 540,
+     "y": 1080,
+     "w": 860,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "dari anatomi sampai",
+     "key": "PERSONALITI",
+     "at": 18.68,
+     "until": 21.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 18.75,
+     "until": 21.24,
+     "x": 540,
+     "y": 1080,
+     "w": 860,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ikut",
+     "key": "TOPIK DEMI TOPIK",
+     "at": 21.24,
+     "until": 23.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "sudut.jpg",
+     "at": 21.3,
+     "until": 23.48,
+     "x": 540,
+     "y": 1080,
+     "w": 860,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 23.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.95,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "30 aktiviti,",
+     "key": "64 HALAMAN BERWARNA",
+     "at": 23.48,
+     "until": 26.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "mata.jpg",
+     "at": 23.55,
+     "until": 27.82,
+     "x": 540,
+     "y": 1080,
+     "w": 860,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "ajar",
+     "key": "STEP BY STEP",
+     "at": 26.86,
+     "until": 27.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.4,
+     "until": 27.82,
+     "x": 540,
+     "y": 1600,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 27.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "habis buku ni, dia ada",
+     "key": "WATAK CIPTAAN SENDIRI",
+     "at": 27.82,
+     "until": 31.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.86,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       27.86
+      ],
+      [
+       "abang/sapa.png",
+       31.72
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 30.1,
+     "until": 31.72,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SIAP!",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 31.72,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "koleksi.jpg",
+     "at": 31.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 32.22,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

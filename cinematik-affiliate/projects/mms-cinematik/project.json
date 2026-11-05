@@ -1,0 +1,206 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "M&M's Crunchy Cookie, Australia, halal, coklat, cookie, rangup, combo, pek.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [
+  {
+   "start": 0.37,
+   "end": 4.9,
+   "title": {
+    "kicker": "M&M'S CRUNCHY COOKIE",
+    "lines": [
+     "Tak ada",
+     "dekat Malaysia!"
+    ],
+    "accent": [
+     "dekat",
+     "Malaysia!"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 33.45,
+   "end": null,
+   "cta": true,
+   "head": "Bundle lagi murah.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "depth",
+   "start": 4.91,
+   "end": 7.9,
+   "scatter_at": 7.75,
+   "y_back": 300,
+   "words": [
+    [
+     "CRUNCHY",
+     6.27,
+     "back"
+    ],
+    [
+     "COOKIE",
+     7.23,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 7.9,
+   "end": 13.15,
+   "img": "screen.jpg",
+   "x": 870,
+   "y": 1250,
+   "w": 280,
+   "from": "right",
+   "scroll_at": 8.8
+  },
+  {
+   "kind": "depth",
+   "start": 13.23,
+   "end": 19.4,
+   "scatter_at": 19.25,
+   "y_back": 300,
+   "words": [
+    [
+     "LINK",
+     15.77,
+     "back"
+    ],
+    [
+     "DI BAWAH",
+     16.05,
+     "back"
+    ],
+    [
+     "SAHAJA",
+     18.39,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "orbit",
+   "start": 19.47,
+   "end": 24.1,
+   "imgs": [
+    "pack1.jpg",
+    "candy.jpg",
+    "pack2.jpg",
+    "back.jpg",
+    "pack3.jpg"
+   ],
+   "cx": 540,
+   "cy": 560,
+   "rx": 420,
+   "ry": -230,
+   "w": 240,
+   "speed": 1.4
+  },
+  {
+   "kind": "depth",
+   "start": 24.13,
+   "end": 29.3,
+   "scatter_at": 29.1,
+   "y_back": 300,
+   "words": [
+    [
+     "HALAL",
+     25.45,
+     "back"
+    ],
+    [
+     "AUSTRALIA",
+     27.01,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 29.41,
+   "end": 33.4,
+   "scatter_at": 33.25,
+   "y_back": 300,
+   "words": [
+    [
+     "LINK",
+     32.69,
+     "back"
+    ],
+    [
+     "DI BAWAH",
+     32.91,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "checklist",
+   "start": 7.9,
+   "end": 33.4,
+   "title": [
+    "Kenapa wajib",
+    "cuba"
+   ],
+   "cols": 1,
+   "scale": 0.58,
+   "x": 170,
+   "y": 1150,
+   "hide": [
+    [
+     19.47,
+     24.1
+    ]
+   ],
+   "items": [
+    [
+     "Tiada di Malaysia",
+     4.9
+    ],
+    [
+     "Crunchy cookie",
+     6.27
+    ],
+    [
+     "Coating + biskut",
+     11.95
+    ],
+    [
+     "Sangat sedap",
+     21.81
+    ],
+    [
+     "Dari Australia",
+     23.29
+    ],
+    [
+     "Halal Australia",
+     25.45
+    ],
+    [
+     "Bundle lagi murah",
+     33.0
+    ]
+   ]
+  }
+ ]
+}

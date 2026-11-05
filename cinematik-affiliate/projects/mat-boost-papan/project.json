@@ -1,0 +1,503 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, soalan berpotensi tinggi, persediaan akhir SPM, mak ayah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada mak ayah yang",
+     "key": "TENANG JE",
+     "at": 0.0,
+     "until": 1.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "walaupun",
+     "key": "SPM DAH DEKAT?",
+     "at": 1.98,
+     "until": 4.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "ortu/pasangan.png",
+       0.05
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 2.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "SPM"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab anak dia tengah latih",
+     "key": "SOALAN YANG BETUL",
+     "at": 4.0,
+     "until": 6.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       3.5
+      ],
+      [
+       "kira/menerang.png",
+       5.68
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 5.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN BETUL",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH LAIN...",
+     "at": 6.22,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "mak ayah lain?",
+     "key": "RISAU",
+     "at": 6.72,
+     "until": 8.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "tapi tak tahu nak",
+     "key": "BANTU MACAM MANA",
+     "at": 8.8,
+     "until": 11.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/ayah/risau.png",
+     "at": 7.4,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/risau.png",
+     "at": 8.2,
+     "until": 99,
+     "x": 780,
+     "y": 1000,
+     "size": 380,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 9.9,
+     "until": 99,
+     "x": 540,
+     "y": 760,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 11.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BELI BUKU...",
+     "at": 10.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "beli",
+     "key": "BANYAK BUKU",
+     "at": 11.24,
+     "until": 12.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "anak tak habis buat",
+     "key": "SATU PUN",
+     "at": 12.64,
+     "until": 14.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 10.74,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       10.74
+      ],
+      [
+       "kira/stres.png",
+       12.64
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 11.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BANYAK BUKU"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK HABIS!",
+     "at": 13.6,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 14.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Matematik SPM Final Boost,",
+     "key": "SATU BUKU JE",
+     "at": 14.9,
+     "until": 17.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 14.95,
+     "until": 17.96,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "fokus soalan berpotensi tinggi, topik",
+     "key": "SELALU KELUAR SPM",
+     "at": 17.96,
+     "until": 22.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 18.01,
+     "until": 22.28,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.28,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 21.78,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma buat",
+     "key": "SETIAP HARI",
+     "at": 22.28,
+     "until": 24.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 22.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       22.3
+      ],
+      [
+       "kira/gembira.png",
+       23.32
+      ]
+     ],
+     "enter": "slide",
+     "until": 24.24
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Calendar",
+     "at": 23.0,
+     "until": 24.24,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SETIAP HARI"
+    }
+   ]
+  },
+  {
+   "start": 24.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 23.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "jawapan ada di belakang",
+     "key": "SETIAP TOPIK",
+     "at": 24.24,
+     "until": 26.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 24.29,
+     "until": 26.52,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.4,
+     "until": 26.52,
+     "x": 860,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 26.52,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.02,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masih ada masa,",
+     "key": "BIAR BERBALOI",
+     "at": 26.52,
+     "until": 29.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 26.54,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "ortu/pasangan.png",
+       26.54
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.6,
+     "x": 800,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       27.6
+      ]
+     ],
+     "until": 29.3
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 29.3,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 29.4,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.6,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

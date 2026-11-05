@@ -4,7 +4,7 @@
  "preset": "edukasi",
  "bold_text": true,
  "theme": "kertas",
- "whisper_prompt": "Powerbank UGREEN 20000mAh, earbuds, smartwatch, mod arus rendah, fast charging 20W, kabel USB-C, travel, gajet.",
+ "whisper_prompt": "Powerbank UGREEN 20000mAh, earbuds, smartwatch, jam pintar, mod arus rendah, tahap pengecasan, fast charging 20W, kabel USB-C, travel, gajet.",
  "scenes": [
   {
    "start": 0.0,
@@ -22,7 +22,7 @@
      "text": "kenapa ada orang yang travel,",
      "key": "EARBUDS & SMARTWATCH",
      "at": 0.0,
-     "until": 2.94,
+     "until": 2.92,
      "y": 395,
      "size1": 60,
      "size2": 96
@@ -31,8 +31,8 @@
      "kind": "say",
      "text": "dia sentiasa",
      "key": "ADA BATERI?",
-     "at": 2.94,
-     "until": 4.8,
+     "at": 2.92,
+     "until": 4.62,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -53,7 +53,7 @@
     {
      "kind": "sticker",
      "img": "icons/earbuds_full.png",
-     "at": 1.6,
+     "at": 1.58,
      "until": 99,
      "x": 820,
      "y": 780,
@@ -65,7 +65,7 @@
     {
      "kind": "sticker",
      "img": "icons/watch_full.png",
-     "at": 2.34,
+     "at": 2.38,
      "until": 99,
      "x": 820,
      "y": 1060,
@@ -77,7 +77,7 @@
     {
      "kind": "sticker",
      "img": "icons/phone_full.png",
-     "at": 3.16,
+     "at": 3.14,
      "until": 99,
      "x": 820,
      "y": 1340,
@@ -89,7 +89,7 @@
     {
      "kind": "marks",
      "type": "q",
-     "at": 4.06,
+     "at": 3.98,
      "until": 99,
      "x": 300,
      "y": 760,
@@ -99,12 +99,12 @@
    "in": "cut"
   },
   {
-   "start": 4.8,
+   "start": 4.62,
    "items": [
     {
      "kind": "label",
      "text": "RAHSIANYA:",
-     "at": 4.3,
+     "at": 4.1,
      "y": 215,
      "size": 62,
      "rot": -1.5
@@ -113,8 +113,8 @@
      "kind": "say",
      "text": "sebab powerbank dia ada",
      "key": "MOD KHAS",
-     "at": 4.8,
-     "until": 7.12,
+     "at": 4.62,
+     "until": 6.88,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -122,21 +122,21 @@
     },
     {
      "kind": "doodle",
-     "at": 4.2,
+     "at": 4.0,
      "x": 290,
      "y": 1120,
      "h": 640,
      "poses": [
       [
        "adik/gembira.png",
-       4.2
+       4.0
       ]
      ]
     },
     {
      "kind": "sticker",
      "img": "icons/bubble_mod.png",
-     "at": 5.42,
+     "at": 5.26,
      "until": 99,
      "x": 760,
      "y": 860,
@@ -149,8 +149,8 @@
     {
      "kind": "card",
      "img": "arus.jpg",
-     "at": 6.0,
-     "until": 7.12,
+     "at": 5.8,
+     "until": 6.88,
      "x": 780,
      "y": 1250,
      "w": 380,
@@ -160,12 +160,12 @@
    ]
   },
   {
-   "start": 7.12,
+   "start": 6.88,
    "items": [
     {
      "kind": "label",
      "text": "ORANG LAIN...",
-     "at": 6.6,
+     "at": 6.35,
      "y": 215,
      "size": 62,
      "rot": -1.5
@@ -174,8 +174,8 @@
      "kind": "say",
      "text": "cas earbuds pakai",
      "key": "POWERBANK BIASA",
-     "at": 7.12,
-     "until": 10.3,
+     "at": 6.88,
+     "until": 9.86,
      "y": 395,
      "size1": 60,
      "size2": 96
@@ -184,8 +184,8 @@
      "kind": "say",
      "text": "sekejap je dia",
      "key": "BERHENTI CAS",
-     "at": 10.3,
-     "until": 11.96,
+     "at": 9.86,
+     "until": 11.46,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -195,8 +195,8 @@
      "kind": "say",
      "text": "bateri",
      "key": "TAK MASUK",
-     "at": 11.96,
-     "until": 13.14,
+     "at": 11.46,
+     "until": 12.64,
      "y": 395,
      "size1": 60,
      "size2": 96
@@ -204,7 +204,7 @@
     {
      "kind": "sticker",
      "img": "icons/orang_lain.png",
-     "at": 7.2,
+     "at": 6.95,
      "until": 99,
      "x": 300,
      "y": 1090,
@@ -216,7 +216,7 @@
     {
      "kind": "sticker",
      "img": "icons/earbuds_low.png",
-     "at": 8.52,
+     "at": 8.18,
      "until": 99,
      "x": 800,
      "y": 900,
@@ -228,7 +228,7 @@
     {
      "kind": "sticker",
      "img": "icons/battery_stop.png",
-     "at": 10.3,
+     "at": 9.86,
      "until": 99,
      "x": 800,
      "y": 1230,
@@ -240,7 +240,7 @@
     {
      "kind": "stamp",
      "text": "TAK MASUK!",
-     "at": 12.1,
+     "at": 11.7,
      "x": 720,
      "y": 1460,
      "rot": -7,
@@ -249,12 +249,12 @@
    ]
   },
   {
-   "start": 13.14,
+   "start": 12.64,
    "items": [
     {
      "kind": "label",
      "text": "POWERBANK UGREEN",
-     "at": 12.6,
+     "at": 12.1,
      "y": 215,
      "size": 62,
      "rot": -1.5
@@ -263,8 +263,8 @@
      "kind": "say",
      "text": "ada mod arus rendah untuk",
      "key": "DEVICE KECIL",
-     "at": 13.14,
-     "until": 16.68,
+     "at": 12.64,
+     "until": 16.3,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -273,8 +273,8 @@
     {
      "kind": "card",
      "img": "arus.jpg",
-     "at": 13.25,
-     "until": 16.68,
+     "at": 12.75,
+     "until": 16.3,
      "x": 540,
      "y": 1070,
      "w": 540,
@@ -284,7 +284,7 @@
     {
      "kind": "sticker",
      "img": "icons/bubble_arus.png",
-     "at": 14.64,
+     "at": 14.12,
      "until": 99,
      "x": 540,
      "y": 1500,
@@ -296,22 +296,22 @@
    ]
   },
   {
-   "start": 16.68,
+   "start": 16.3,
    "items": [
     {
      "kind": "label",
      "text": "CARANYA:",
-     "at": 16.15,
+     "at": 15.8,
      "y": 215,
      "size": 62,
      "rot": -1.5
     },
     {
      "kind": "say",
-     "text": "cuma tekan butang 2 saat,",
-     "key": "MOD ARUS RENDAH ON",
-     "at": 16.68,
-     "until": 18.52,
+     "text": "cuma tekan butang",
+     "key": "2 SAAT",
+     "at": 16.3,
+     "until": 18.12,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -319,18 +319,29 @@
     },
     {
      "kind": "say",
-     "text": "tahap pengecasan bertukar,",
-     "key": "SESUAI EARBUDS & JAM",
-     "at": 18.52,
-     "until": 20.86,
+     "text": "tahap pengecasan bertukar ke",
+     "key": "MOD ARUS RENDAH",
+     "at": 18.12,
+     "until": 20.78,
      "y": 395,
      "size1": 60,
      "size2": 96
     },
     {
+     "kind": "say",
+     "text": "sesuai untuk",
+     "key": "EARBUDS & JAM PINTAR",
+     "at": 20.78,
+     "until": 23.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
      "kind": "sticker",
      "img": "icons/button.png",
-     "at": 16.9,
+     "at": 16.5,
      "until": 99,
      "x": 300,
      "y": 950,
@@ -343,7 +354,7 @@
     {
      "kind": "sticker",
      "img": "icons/bubble_tekan.png",
-     "at": 17.2,
+     "at": 16.88,
      "until": 99,
      "x": 770,
      "y": 760,
@@ -355,7 +366,7 @@
     {
      "kind": "sticker",
      "img": "icons/earbuds_watch.png",
-     "at": 18.52,
+     "at": 21.0,
      "until": 99,
      "x": 720,
      "y": 1200,
@@ -369,7 +380,7 @@
     {
      "kind": "marks",
      "type": "tick",
-     "at": 20.1,
+     "at": 22.0,
      "until": 99,
      "x": 300,
      "y": 1300,
@@ -378,12 +389,12 @@
    ]
   },
   {
-   "start": 20.86,
+   "start": 23.12,
    "items": [
     {
      "kind": "label",
      "text": "PHONE PULA...",
-     "at": 20.35,
+     "at": 22.6,
      "y": 215,
      "size": 62,
      "rot": -1.5
@@ -392,8 +403,8 @@
      "kind": "say",
      "text": "phone pula dapat",
      "key": "FAST CHARGING 20W",
-     "at": 20.86,
-     "until": 23.42,
+     "at": 23.12,
+     "until": 25.82,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -402,7 +413,7 @@
     {
      "kind": "sticker",
      "img": "icons/phone_20w.png",
-     "at": 21.0,
+     "at": 23.25,
      "until": 99,
      "x": 330,
      "y": 1060,
@@ -414,7 +425,7 @@
     {
      "kind": "sticker",
      "img": "icons/label_20w.png",
-     "at": 21.84,
+     "at": 24.1,
      "until": 99,
      "x": 800,
      "y": 880,
@@ -426,8 +437,8 @@
     {
      "kind": "card",
      "img": "pd20w.jpg",
-     "at": 22.2,
-     "until": 23.42,
+     "at": 24.4,
+     "until": 25.82,
      "x": 790,
      "y": 1300,
      "w": 360,
@@ -437,12 +448,12 @@
    ]
   },
   {
-   "start": 23.42,
+   "start": 25.82,
    "items": [
     {
      "kind": "label",
      "text": "SIAP DENGAN:",
-     "at": 22.9,
+     "at": 25.3,
      "y": 215,
      "size": 62,
      "rot": -1.5
@@ -451,8 +462,8 @@
      "kind": "say",
      "text": "2 kabel USB-C",
      "key": "DAH TERPASANG",
-     "at": 23.42,
-     "until": 25.72,
+     "at": 25.82,
+     "until": 28.02,
      "y": 395,
      "size1": 60,
      "size2": 96
@@ -460,8 +471,8 @@
     {
      "kind": "card",
      "img": "kabel.jpg",
-     "at": 23.5,
-     "until": 25.72,
+     "at": 25.9,
+     "until": 28.02,
      "x": 430,
      "y": 1100,
      "w": 560,
@@ -471,7 +482,7 @@
     {
      "kind": "sticker",
      "img": "icons/label_kabel.png",
-     "at": 23.76,
+     "at": 26.26,
      "until": 99,
      "x": 850,
      "y": 800,
@@ -483,7 +494,7 @@
     {
      "kind": "marks",
      "type": "tick",
-     "at": 24.9,
+     "at": 27.4,
      "until": 99,
      "x": 880,
      "y": 1380,
@@ -492,22 +503,22 @@
    ]
   },
   {
-   "start": 25.72,
+   "start": 28.02,
    "items": [
     {
      "kind": "label",
      "text": "INGAT!",
-     "at": 25.2,
+     "at": 27.5,
      "y": 215,
      "size": 62,
      "rot": -1.5
     },
     {
      "kind": "say",
-     "text": "semua gadget travel,",
+     "text": "semua gajet travel,",
      "key": "1 POWERBANK",
-     "at": 25.72,
-     "until": 28.12,
+     "at": 28.02,
+     "until": 30.52,
      "y": 395,
      "size1": 60,
      "size2": 96,
@@ -515,18 +526,18 @@
     },
     {
      "kind": "doodle",
-     "at": 25.76,
+     "at": 28.06,
      "x": 290,
      "y": 1120,
      "h": 640,
      "poses": [
       [
        "adik/gembira.png",
-       25.76
+       28.06
       ],
       [
        "adik/selfie.png",
-       28.12
+       30.52
       ]
      ],
      "enter": "slide"
@@ -534,8 +545,8 @@
     {
      "kind": "sticker",
      "img": "icons/all_gadgets.png",
-     "at": 26.34,
-     "until": 28.12,
+     "at": 28.74,
+     "until": 30.52,
      "x": 780,
      "y": 1050,
      "size": 440,
@@ -548,7 +559,7 @@
      "kind": "say",
      "text": "tekan",
      "key": "LINK DI BAWAH",
-     "at": 28.12,
+     "at": 30.52,
      "until": 99,
      "y": 395,
      "size1": 60,
@@ -557,7 +568,7 @@
     {
      "kind": "card",
      "img": "grid.jpg",
-     "at": 28.2,
+     "at": 30.6,
      "until": 99,
      "x": 790,
      "y": 1060,
@@ -568,7 +579,7 @@
     {
      "kind": "sticker",
      "img": "icons/link.png",
-     "at": 28.64,
+     "at": 31.06,
      "until": 99,
      "x": 540,
      "y": 1640,

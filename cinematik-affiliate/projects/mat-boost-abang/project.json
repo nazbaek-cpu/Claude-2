@@ -1,0 +1,464 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Matematik SPM Final Boost, persediaan akhir SPM, calon SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang cuma pegang",
+     "key": "SATU BUKU MATEMATIK",
+     "at": 0.0,
+     "until": 2.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "masa",
+     "key": "MINGGU AKHIR SPM?",
+     "at": 2.92,
+     "until": 4.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       0.0
+      ],
+      [
+       "abang/gembira.png",
+       2.92
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 1.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "SATU BUKU"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.46,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.96,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab buku tu",
+     "key": "DAH CUKUP",
+     "at": 4.46,
+     "until": 6.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.96,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.96
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 5.5,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CUKUP",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 5.76,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buka",
+     "key": "LIMA BUKU",
+     "at": 6.26,
+     "until": 8.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "satu pun",
+     "key": "TAK HABIS",
+     "at": 8.46,
+     "until": 9.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "akhirnya stres sebab rasa",
+     "key": "TAK BERSEDIA",
+     "at": 9.84,
+     "until": 12.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.76,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       5.76
+      ],
+      [
+       "abang/terkejut.png",
+       8.46
+      ],
+      [
+       "abang/stres.png",
+       9.84
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 7.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "5 BUKU"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK HABIS!",
+     "at": 9.2,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 12.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 12.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Matematik SPM Final Boost,",
+     "key": "BUKU PERSEDIAAN AKHIR",
+     "at": 12.64,
+     "until": 16.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 12.69,
+     "until": 16.1,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "tebal dengan soalan, fokus topik",
+     "key": "SELALU MASUK SPM",
+     "at": 16.1,
+     "until": 19.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 16.15,
+     "until": 19.84,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.84,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.34,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ikut",
+     "key": "TOPIK DEMI TOPIK",
+     "at": 19.84,
+     "until": 22.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "semak",
+     "key": "JAWAPAN DI BELAKANG",
+     "at": 22.12,
+     "until": 23.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 19.86,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       19.86
+      ],
+      [
+       "abang/fokus.png",
+       22.12
+      ]
+     ],
+     "enter": "slide",
+     "until": 23.62
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 22.5,
+     "until": 23.62,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEMAK",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 23.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SATU BUKU...",
+     "at": 23.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu buku, fokus,",
+     "key": "HABIS",
+     "at": 23.62,
+     "until": 26.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 23.67,
+     "until": 26.06,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.36,
+     "until": 26.06,
+     "x": 860,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 26.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 25.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masuk dewan",
+     "key": "DENGAN YAKIN",
+     "at": 26.06,
+     "until": 27.76,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 26.6,
+     "until": 27.76,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "YAKIN",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 26.08,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       26.08
+      ],
+      [
+       "abang/sapa.png",
+       27.76
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.76,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 27.86,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.05,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

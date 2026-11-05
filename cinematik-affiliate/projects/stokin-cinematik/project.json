@@ -1,0 +1,77 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": false,
+ "behind": false,
+ "whisper_prompt": "Stokin, sarung kaki, muslimah, lembut, tebal, tak jarang, getah, saiz, warna kulit, jahitan kemas, betis.",
+ "grade": "bright",
+ "beauty": {
+  "enabled": false
+ },
+ "segments": [
+  {
+   "start": 0.6,
+   "end": 5.8,
+   "title": {
+    "kicker": "STOKIN MUSLIMAH",
+    "lines": [
+     "3 pasang,",
+     "satu harga."
+    ],
+    "accent": [
+     "3",
+     "pasang,"
+    ]
+   }
+  },
+  {
+   "start": 5.85,
+   "end": 12.45,
+   "kicker": "DEKAT LUAR",
+   "count": 1,
+   "label": "pasang je."
+  },
+  {
+   "start": 12.5,
+   "end": 15.5,
+   "kicker": "DEKAT SINI",
+   "count": 3,
+   "label": "pasang."
+  },
+  {
+   "start": 15.55,
+   "end": 18.1,
+   "kicker": "PANJANG",
+   "head": "Sampai betis."
+  },
+  {
+   "start": 18.13,
+   "end": 22.25,
+   "kicker": "KUALITI",
+   "head": "Puas hati."
+  },
+  {
+   "start": 22.29,
+   "end": 26.15,
+   "kicker": "MATERIAL",
+   "head": "Selesa dipakai.",
+   "pills": [
+    [
+     "Lembut",
+     24.55
+    ],
+    [
+     "Lama-lama pun okay",
+     25.07
+    ]
+   ]
+  },
+  {
+   "start": 26.21,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan 3 pasang."
+  }
+ ],
+ "subs": []
+}

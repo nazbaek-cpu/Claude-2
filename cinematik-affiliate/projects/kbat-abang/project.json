@@ -1,0 +1,520 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Terapi KBAT Sejarah SPM, KBAT, calon SPM, skema jawapan, rumus P.E.S., struktur kotak, video penerangan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang langsung",
+     "key": "TAK RISAU SEJARAH",
+     "at": 0.0,
+     "until": 2.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "walaupun subjek ni",
+     "key": "WAJIB LULUS?",
+     "at": 2.52,
+     "until": 4.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       0.0
+      ],
+      [
+       "abang/yakin.png",
+       2.52
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 1.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "SEJARAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "WAJIB LULUS!",
+     "at": 3.6,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia dah ada",
+     "key": "CARA JAWAB KBAT",
+     "at": 4.72,
+     "until": 6.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.2,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       4.2
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 5.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KBAT",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.92,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 6.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "hafal fakta",
+     "key": "SAMPAI PAGI",
+     "at": 6.92,
+     "until": 9.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi bila kena",
+     "key": "HURAIKAN",
+     "at": 9.22,
+     "until": 11.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "dia tak tahu",
+     "key": "NAK MULA",
+     "at": 11.28,
+     "until": 12.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 6.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/fokus.png",
+       6.4
+      ],
+      [
+       "abang/stres.png",
+       9.22
+      ],
+      [
+       "abang/terkejut.png",
+       11.28
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Alarm clock",
+     "at": 8.3,
+     "until": 9.22,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SAMPAI PAGI"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 9.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "HURAIKAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 11.5,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 12.58,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERAPI KBAT SEJARAH",
+     "at": 12.08,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Terapi KBAT Sejarah ajar",
+     "key": "RUMUS P.E.S.",
+     "at": 12.58,
+     "until": 15.44,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 12.63,
+     "until": 15.44,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "dan rangka",
+     "key": "STRUKTUR KOTAK",
+     "at": 15.44,
+     "until": 16.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "jenis.jpg",
+     "at": 15.49,
+     "until": 16.92,
+     "x": 540,
+     "y": 1115,
+     "w": 820,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.92,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 16.42,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma",
+     "key": "ISI KOTAK",
+     "at": 16.92,
+     "until": 18.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "jawapan terus tersusun macam",
+     "key": "PEMERIKSA NAK",
+     "at": 18.42,
+     "until": 21.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 16.94,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       16.94
+      ],
+      [
+       "abang/menerang.png",
+       18.42
+      ]
+     ],
+     "enter": "slide",
+     "until": 21.14
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 17.6,
+     "until": 18.42,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ISI KOTAK"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 19.18,
+     "until": 21.14,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TERSUSUN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 21.14,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 20.64,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "semua jenis KBAT",
+     "key": "FORMAT SPM",
+     "at": 21.14,
+     "until": 23.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "jenis.jpg",
+     "at": 21.19,
+     "until": 23.2,
+     "x": 540,
+     "y": 1115,
+     "w": 820,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "siap",
+     "key": "VIDEO & SKEMA JAWAPAN",
+     "at": 23.2,
+     "until": 25.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 23.25,
+     "until": 25.28,
+     "x": 540,
+     "y": 1115,
+     "w": 820,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.3,
+     "until": 25.28,
+     "x": 900,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 25.28,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 24.78,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sekali faham rumus, sejarah bukan lagi",
+     "key": "SUBJEK YANG DITAKUTI",
+     "at": 25.28,
+     "until": 28.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 26.6,
+     "until": 28.86,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TAK TAKUT",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 25.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       25.3
+      ],
+      [
+       "abang/sapa.png",
+       28.86
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 28.86,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 28.96,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.2,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

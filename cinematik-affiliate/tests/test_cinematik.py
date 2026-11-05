@@ -407,3 +407,29 @@ def test_warm_mask_finds_a_beige_product_on_a_cool_background():
     m = render.warm_mask(small)
     assert m[700, 270] == 1 and m[100, 270] == 0                                 # product kept, background left out
     assert m[202, 150] == 0                                                      # the vein is dropped
+
+
+def test_fx_phone_mockup_and_orbit(tmp_path):
+    import fx
+    from PIL import Image
+    os.makedirs(tmp_path / "input")
+    Image.new("RGB", (300, 1200), (200, 30, 30)).save(tmp_path / "input" / "screen.jpg")
+    for i, col in enumerate([(30, 30, 200), (30, 200, 30)]):
+        Image.new("RGB", (200, 140), col).save(tmp_path / "input" / f"c{i}.jpg")
+    cfg = {"_input": str(tmp_path / "input"), "fx": [
+        {"kind": "phone", "start": 0.0, "end": 4.0, "img": "screen.jpg", "x": 800, "y": 1200, "w": 300},
+        {"kind": "orbit", "start": 0.0, "end": 4.0, "imgs": ["c0.jpg", "c1.jpg"], "cx": 540, "cy": 560, "rx": 400, "ry": -200, "speed": 1.5}]}
+    (img, x, y), = fx.phone(cfg["fx"][0], 2.0, str(tmp_path))
+    a = np.asarray(img)
+    assert abs(x - 800) < 5 and ((a[..., 0] > 150) & (a[..., 2] < 80) & (a[..., 3] > 200)).any()   # landed, red screen showing
+    assert fx.phone(cfg["fx"][0], 0.1, str(tmp_path))[0][1] > 1000                                # still flying in from the right
+    back, front = fx.orbit_layers(cfg, cfg["fx"][1], 1.0)
+    assert len(back) + len(front) == 2
+    assert all(y < 560 for _, _, y in front) and all(y >= 560 for _, _, y in back)   # tilted: the near side passes above
+    fr = np.zeros((fx.H, fx.W, 3), np.float32)
+    person = np.zeros((fx.H, fx.W), np.float32); person[300:1500, 300:780] = 1
+    out, extra = fx.picture(cfg, 1.0, fr.copy(), lambda f: person)
+    assert np.abs(out[400:1400, 400:700]).max() == 0                  # cards behind never paint over the person
+    assert len(fx.orbit_passes(cfg["fx"][1])) >= 1
+    ev = [k for _, k in sfx.events({"fx": cfg["fx"], "segments": [], "subs": [], "duration": 5})]
+    assert ev.count("whoosh") == 2 and "pop" in ev and "swish" in ev

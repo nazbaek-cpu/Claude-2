@@ -89,6 +89,8 @@ def events(cfg):
                 ev += [(s.get("word_at", s["start"] + 0.15) + 0.07 * i + 0.05, "tick") for i in range(len(s.get("word", "").replace(" ", "")))]
         elif k == "depth": ev += [(at - 0.15, "whoosh") for _, at, _ in s["words"]]
         elif k == "checklist": ev += [(at, "tick") for _, at in s["items"]]
+        elif k == "phone": ev += [(s["start"] - 0.1, "whoosh"), (s["start"] + 0.42, "pop"), (s["end"] - 0.35, "swish")]
+        elif k == "orbit": ev += [(s["start"] - 0.1, "whoosh")] + [(tt - 0.12, "swish") for tt in fx.orbit_passes(s)]
         elif k == "highlight": ev += [(at, "pop") for _, at in s["phrases"]] + [(at, "swish") for at in fx.highlight_sweeps(s)]
         elif k == "comment": ev += [(s["start"] + 0.05, "pop"), (s["start"] + 0.45 + len(s.get("text", "")) / s.get("cps", 16), "ding")]
         elif k == "sticker":

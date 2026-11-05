@@ -16,27 +16,43 @@
   ],
   "lip_amount": 0.85
  },
- "segments": [],
+ "segments": [
+  {
+   "start": 0.27,
+   "end": 8.9,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Tak nak baca buku teks",
+     "last minute?"
+    ],
+    "accent": [
+     "last",
+     "minute?"
+    ],
+    "size": 74
+   }
+  },
+  {
+   "start": 43.43,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
  "subs": [],
  "fx": [
   {
-   "kind": "doodle",
-   "start": 0.27,
-   "end": 9.0,
-   "sparks": [
-    [
-     170,
-     560
-    ],
-    [
-     900,
-     480
-    ],
-    [
-     880,
-     1150
-    ]
-   ]
+   "kind": "phone",
+   "start": 2.3,
+   "end": 8.9,
+   "img": "screen.jpg",
+   "x": 870,
+   "y": 1330,
+   "w": 300,
+   "from": "right",
+   "scroll_at": 3.4
   },
   {
    "kind": "depth",
@@ -97,19 +113,22 @@
    ]
   },
   {
-   "kind": "doodle",
+   "kind": "orbit",
    "start": 27.17,
    "end": 32.3,
-   "sparks": [
-    [
-     170,
-     560
-    ],
-    [
-     900,
-     480
-    ]
-   ]
+   "imgs": [
+    "cover.jpg",
+    "p1.jpg",
+    "p2.jpg",
+    "p3.jpg",
+    "p4.jpg"
+   ],
+   "cx": 540,
+   "cy": 560,
+   "rx": 420,
+   "ry": -230,
+   "w": 250,
+   "speed": 1.4
   },
   {
    "kind": "depth",
@@ -160,21 +179,45 @@
    ]
   },
   {
-   "kind": "doodle",
-   "start": 43.43,
-   "end": null,
-   "sparks": [
+   "kind": "checklist",
+   "start": 9.0,
+   "end": 43.4,
+   "title": [
+    "6 sebab ibu ayah",
+    "pilih BTP Infografik"
+   ],
+   "y": 1690,
+   "scale": 0.8,
+   "items": [
     [
-     170,
-     560
+     "Besar tapak tangan",
+     12.53
     ],
     [
-     900,
-     480
+     "Nota padat buku teks",
+     15.19
     ],
     [
-     880,
-     1150
+     "5 subjek SPM",
+     19.25
+    ],
+    [
+     "Infografik menarik",
+     29.57
+    ],
+    [
+     "Tak perlu hafal buku teks",
+     36.73
+    ],
+    [
+     "Tarikh & peristiwa penting",
+     38.39
+    ]
+   ],
+   "hide": [
+    [
+     27.17,
+     32.3
     ]
    ]
   }

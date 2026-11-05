@@ -134,6 +134,8 @@ Talking-head reels can run the effects from [`styles/16-efek.md`](styles/16-efek
 | `framebreak` | the video shrinks into a reel frame over a blurred copy, the head pokes out over the top edge (`user`, `caption`, `cut`) |
 | `comment` | comment box where a keyword types itself in (`text`, `cps`, `x`, `y`, `w`) |
 | `"mask": "warm"` | product B-roll with no person: text behind (`depth`) uses a colour mask of warm shapes (beige product, hands) on a cool background instead of the selfie mask; put `y_back` where the background is most often clear (example `projects/sarung-kaki-2efek/`) |
+| `phone` | Phone Mockup: a phone flies in with a motion blur, lands with a bounce and scrolls a tall picture on its screen: `img` (input/), `x`, `y`, `w`, `from` right/left, `scroll_at`; flies out at `end` (whoosh, pop, swish) |
+| `orbit` | Orbit: picture cards (`imgs` in input/) circle the person on an ellipse (`cx`, `cy`, `rx`, `ry`, `speed`, `w`); the far side goes behind the person, the near side passes in front; a negative `ry` tilts it so the near side passes above the head and never covers a product (whoosh, swish on every pass) |
 | `highlight` | the spoken line in bold white type, word by word, above the head (`y` 300): `phrases` [[text, at]], `*key words*` get a yellow highlighter swept behind them (swish) and turn dark; at most `max_lines` (2) lines, a new line pushes the oldest out; each line pops in |
 | `sticker` | an icon from `input/` (cut with `poses.py --icons`) as a die-cut sticker over the video: `img`, `x`, `y`, `size`, `rot`, `anim` (pop / slide_r / slide_l / drop / spin, each with its own sound), breathing while it stays, zooming out at `end`; `style`: `papercut` tears it out of a sheet of paper |
 

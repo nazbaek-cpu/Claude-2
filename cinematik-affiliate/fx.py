@@ -241,6 +241,77 @@ def highlight(s, t):
             x += f.getlength(w_) + sp
     return [(fade(shadow(img, 90, 10, 5), a), W / 2, s.get("y", 300) + img.height / 2 - 40)]
 
+def phone_body(w, scr):
+    """a black phone with rounded corners and a camera pill; scr is the screen picture (already the screen size)"""
+    h = int(w * 2.05); b = max(10, w // 26); S = 2
+    m = Image.new("L", (w * S, h * S), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w * S - 1, h * S - 1), w * S // 7, fill=255)
+    body = Image.new("RGBA", (w, h), (18, 18, 20, 255)); body.putalpha(m.resize((w, h), Image.LANCZOS))
+    sm = Image.new("L", ((w - 2 * b) * S, (h - 2 * b) * S), 0)
+    ImageDraw.Draw(sm).rounded_rectangle((0, 0, sm.width - 1, sm.height - 1), (w - 2 * b) * S // 8, fill=255)
+    scr = scr.convert("RGBA"); scr.putalpha(sm.resize(scr.size, Image.LANCZOS)); body.alpha_composite(scr, (b, b))
+    pw = w // 4; ImageDraw.Draw(body).rounded_rectangle((w / 2 - pw / 2, b + 12, w / 2 + pw / 2, b + 12 + w // 14), w // 28, fill=(10, 10, 12, 255))
+    return body
+
+def phone(s, t, prj):
+    """Phone Mockup: a phone flies in with a motion blur, lands with a bounce and scrolls a tall picture on its screen
+    ("img" in input/, "x", "y", "w", "from" right|left, "scroll_at"); it flies back out at "end" """
+    if not (s["start"] <= t < s["end"]): return []
+    w = s.get("w", 340); b = max(10, w // 26); sw, sh = w - 2 * b, int(w * 2.05) - 2 * b
+    key = ("phone_strip", s["img"], sw)
+    if key not in cache:
+        im = Image.open(os.path.join(prj, "input", s["img"])).convert("RGB")
+        cache[key] = im.resize((sw, int(im.height * sw / im.width)), Image.LANCZOS)
+    strip = cache[key]; span = max(0, strip.height - sh)
+    k = ease(ramp(t, s.get("scroll_at", s["start"] + 0.8), max(0.5, s["end"] - 0.5 - s.get("scroll_at", s["start"] + 0.8))))
+    off = int(span * (k - 0.06 * math.sin(math.pi * k)))   # slows into each stop like a thumb scroll
+    img = phone_body(w, strip.crop((0, max(0, off), sw, max(0, off) + sh)))
+    d = -1 if s.get("from", "right") == "left" else 1
+    p = ramp(t, s["start"], 0.5); q = ramp(t, s["end"] - 0.35, 0.35)
+    dx = d * (W * 0.7 * (1 - ease_back(p, 1.4)) + W * 0.8 * ease(q) ** 2)
+    rot = d * (-22 * (1 - ease(p)) - 18 * ease(q)) + 3 * math.sin(2 * math.pi * 0.4 * (t - s["start"]))
+    img = shadow(img, 120, 18, 10).rotate(rot + s.get("rot", -6), Image.BICUBIC, expand=True)
+    blur = 14 * (1 - ease(p)) + 16 * ease(q)
+    if blur > 0.6: img = img.filter(ImageFilter.BoxBlur(blur))
+    return [(fade(img, min(1.0, 0.2 + p * 3) * (1 - q)), s.get("x", 780) + dx, s.get("y", 1150) + 8 * math.sin((t - s["start"]) * 2.2))]
+
+def orbit_card(path, w):
+    key = ("orbit_card", path, w)
+    if key not in cache:
+        im = Image.open(path).convert("RGB"); h = int(im.height * w / im.width); bd = max(6, w // 28)
+        card = Image.new("RGBA", (w + 2 * bd, h + 2 * bd), (255, 255, 255, 255)); card.paste(im.resize((w, h), Image.LANCZOS), (bd, bd))
+        m = Image.new("L", card.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, card.width - 1, card.height - 1), w // 12, fill=255)
+        card.putalpha(m); cache[key] = shadow(card, 110, 12, 8)
+    return cache[key]
+
+def orbit_layers(cfg, s, t):
+    """Orbit: picture cards ("imgs" in input/) circle the person on a tilted ellipse ("cx", "cy", "rx", "ry", "speed" rad/s);
+    a card on the far side goes behind the person, the near side passes in front, and each card turns with its path"""
+    imgs = s["imgs"]; n = len(imgs); grow = ease_back(ramp(t, s["start"], 0.55), 1.4); out = ramp(t, s["end"] - 0.4, 0.4)
+    back, front = [], []
+    for i, name in enumerate(imgs):
+        a = s.get("phase", 0.0) + 2 * math.pi * i / n + (t - s["start"]) * s.get("speed", 1.5)
+        z = math.sin(a); sc = (0.72 + 0.28 * z) * max(0.01, grow) * (1 - ease(out))
+        card = orbit_card(os.path.join(cfg.get("_input", "."), name), s.get("w", 260))
+        cw = max(1, int(card.width * sc * (0.28 + 0.72 * abs(z)))); ch = max(1, int(card.height * sc))
+        im = card.resize((cw, ch), Image.BICUBIC).rotate(-8 * math.cos(a), Image.BICUBIC, expand=True)
+        x = s.get("cx", W / 2) + s.get("rx", 430) * math.cos(a); y = s.get("cy", 900) + s.get("ry", 150) * z
+        item = (fade(im, min(1.0, ramp(t, s["start"], 0.25) * 1.0) * (1 - out) * (0.75 + 0.25 * (z > 0))), x, y)
+        (front if z > 0 else back).append((z, item))
+    return [it for _, it in sorted(back)], [it for _, it in sorted(front)]
+
+def orbit_passes(s):
+    """when each card crosses the front of the ellipse (for the sound track)"""
+    n = len(s["imgs"]); sp = s.get("speed", 1.5); out = []
+    if sp <= 0: return out
+    for i in range(n):
+        a0 = s.get("phase", 0.0) + 2 * math.pi * i / n; k = math.ceil((math.pi / 2 - a0) / (2 * math.pi))
+        while True:
+            tt = s["start"] + (math.pi / 2 + 2 * math.pi * k - a0) / sp
+            if tt >= s["end"] - 0.4: break
+            if tt > s["start"] + 0.3: out.append(tt)
+            k += 1
+    return sorted(out)
+
 STICKER_ANIMS = ("pop", "slide_r", "drop", "spin", "slide_l")
 
 def sticker_anim(s):
@@ -308,6 +379,7 @@ def overlays(cfg, t, face=None, prj=None):
     out = []
     for s in active(cfg, t, "sticker"): out += sticker(s, t, prj or os.path.dirname(cfg.get("_input", ".")))
     for s in active(cfg, t, "highlight"): out += highlight(s, t)
+    for s in active(cfg, t, "phone"): out += phone(s, t, prj or os.path.dirname(cfg.get("_input", ".")))
     for s in active(cfg, t, "checklist", "headline", "digizoom", "comment"):
         if s["kind"] == "checklist": out += checklist(s, t)
         elif s["kind"] == "headline": out += headline(s, t)
@@ -538,7 +610,7 @@ def frame_ui(s, t):
     return [(fade(cache[key], p), (x0 + x1) / 2, y1 - 170)]
 
 def needs_mask(cfg, t):
-    return bool(active(cfg, t, "papercut", "depth", "doodle", "framebreak", "headline"))
+    return bool(active(cfg, t, "papercut", "depth", "doodle", "framebreak", "headline", "orbit"))
 
 def picture(cfg, t, fr, get_mask):
     """apply the frame-changing effects; returns (frame, extra overlays drawn on top)"""
@@ -568,6 +640,11 @@ def picture(cfg, t, fr, get_mask):
         if back and mask is not None:
             withw = paint(fr.copy(), back); m = mask[..., None]; fr = withw * (1 - m) + fr * m
         extra += front
+    for s in active(cfg, t, "orbit"):
+        back, front = orbit_layers(cfg, s, t)
+        if back and mask is not None:
+            withc = paint(fr.copy(), back); m = mask[..., None]; fr = withc * (1 - m) + fr * m
+        extra += front
     for s in active(cfg, t, "beforeafter"):
         fr, x = before_after(fr, s, t); extra += ba_labels(s, t, x)
     for s in active(cfg, t, "doodle"): fr = doodle(fr, s, t, mask)
@@ -585,7 +662,7 @@ def paint(fr, items):
         fr[Y0:Y1, X0:X1] = fr[Y0:Y1, X0:X1] * (1 - al) + sub[..., :3] * al
     return fr
 
-TIME_KEYS = ("start", "end", "at", "zoom_at", "scatter_at", "word_at")
+TIME_KEYS = ("start", "end", "at", "zoom_at", "scatter_at", "word_at", "scroll_at")
 
 def remap(fx, f, dur=None):
     """voice times -> output times (render.load passes speed's mapping); lists keep their text, times move"""

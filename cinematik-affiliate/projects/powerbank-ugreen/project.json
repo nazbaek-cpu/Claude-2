@@ -1,0 +1,581 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Powerbank UGREEN 20000mAh, earbuds, smartwatch, mod arus rendah, fast charging 20W, kabel USB-C, travel, gajet.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ORANG YANG TRAVEL...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada orang yang travel,",
+     "key": "EARBUDS & SMARTWATCH",
+     "at": 0.0,
+     "until": 2.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "dia sentiasa",
+     "key": "ADA BATERI?",
+     "at": 2.94,
+     "until": 4.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/traveler.png",
+     "at": 0.15,
+     "until": 99,
+     "x": 300,
+     "y": 1090,
+     "size": 470,
+     "rot": -3,
+     "anim": "slide_l",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/earbuds_full.png",
+     "at": 1.6,
+     "until": 99,
+     "x": 820,
+     "y": 780,
+     "size": 230,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/watch_full.png",
+     "at": 2.34,
+     "until": 99,
+     "x": 820,
+     "y": 1060,
+     "size": 230,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/phone_full.png",
+     "at": 3.16,
+     "until": 99,
+     "x": 820,
+     "y": 1340,
+     "size": 230,
+     "rot": 3,
+     "anim": "slide_r",
+     "edge": 11
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 4.06,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.8,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab powerbank dia ada",
+     "key": "MOD KHAS",
+     "at": 4.8,
+     "until": 7.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.2,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/gembira.png",
+       4.2
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/bubble_mod.png",
+     "at": 5.42,
+     "until": 99,
+     "x": 760,
+     "y": 860,
+     "size": 440,
+     "rot": -3,
+     "anim": "pop",
+     "edge": 11,
+     "good": true
+    },
+    {
+     "kind": "card",
+     "img": "arus.jpg",
+     "at": 6.0,
+     "until": 7.12,
+     "x": 780,
+     "y": 1250,
+     "w": 380,
+     "rot": 2,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.12,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ORANG LAIN...",
+     "at": 6.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cas earbuds pakai",
+     "key": "POWERBANK BIASA",
+     "at": 7.12,
+     "until": 10.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "sekejap je dia",
+     "key": "BERHENTI CAS",
+     "at": 10.3,
+     "until": 11.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bateri",
+     "key": "TAK MASUK",
+     "at": 11.96,
+     "until": 13.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/orang_lain.png",
+     "at": 7.2,
+     "until": 99,
+     "x": 300,
+     "y": 1090,
+     "size": 440,
+     "rot": 2,
+     "anim": "slide_l",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/earbuds_low.png",
+     "at": 8.52,
+     "until": 99,
+     "x": 800,
+     "y": 900,
+     "size": 260,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/battery_stop.png",
+     "at": 10.3,
+     "until": 99,
+     "x": 800,
+     "y": 1230,
+     "size": 260,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 11
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK MASUK!",
+     "at": 12.1,
+     "x": 720,
+     "y": 1460,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.14,
+   "items": [
+    {
+     "kind": "label",
+     "text": "POWERBANK UGREEN",
+     "at": 12.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ada mod arus rendah untuk",
+     "key": "DEVICE KECIL",
+     "at": 13.14,
+     "until": 16.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "arus.jpg",
+     "at": 13.25,
+     "until": 16.68,
+     "x": 540,
+     "y": 1070,
+     "w": 540,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/bubble_arus.png",
+     "at": 14.64,
+     "until": 99,
+     "x": 540,
+     "y": 1500,
+     "size": 520,
+     "rot": 1,
+     "anim": "slide_r",
+     "edge": 11
+    }
+   ]
+  },
+  {
+   "start": 16.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 16.15,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cuma tekan butang",
+     "key": "2 SAAT",
+     "at": 16.68,
+     "until": 18.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "earbuds & jam cas sampai",
+     "key": "PENUH",
+     "at": 18.52,
+     "until": 20.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/button.png",
+     "at": 16.9,
+     "until": 99,
+     "x": 300,
+     "y": 950,
+     "size": 380,
+     "rot": -2,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/bubble_tekan.png",
+     "at": 17.2,
+     "until": 99,
+     "x": 770,
+     "y": 760,
+     "size": 380,
+     "rot": 3,
+     "anim": "slide_r",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/earbuds_watch_ok.png",
+     "at": 18.52,
+     "until": 99,
+     "x": 690,
+     "y": 1250,
+     "size": 480,
+     "rot": -2,
+     "anim": "pop",
+     "edge": 11,
+     "good": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 20.1,
+     "until": 99,
+     "x": 300,
+     "y": 1260,
+     "size": 110
+    }
+   ]
+  },
+  {
+   "start": 20.86,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PHONE PULA...",
+     "at": 20.35,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "phone pula dapat",
+     "key": "FAST CHARGING 20W",
+     "at": 20.86,
+     "until": 23.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/phone_20w.png",
+     "at": 21.0,
+     "until": 99,
+     "x": 330,
+     "y": 1060,
+     "size": 470,
+     "rot": -4,
+     "anim": "slide_l",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/label_20w.png",
+     "at": 21.84,
+     "until": 99,
+     "x": 800,
+     "y": 880,
+     "size": 340,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "card",
+     "img": "pd20w.jpg",
+     "at": 22.2,
+     "until": 23.42,
+     "x": 790,
+     "y": 1300,
+     "w": 360,
+     "rot": 2,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 23.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "2 kabel USB-C",
+     "key": "DAH TERPASANG",
+     "at": 23.42,
+     "until": 25.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kabel.jpg",
+     "at": 23.5,
+     "until": 25.72,
+     "x": 430,
+     "y": 1100,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/label_kabel.png",
+     "at": 23.76,
+     "until": 99,
+     "x": 850,
+     "y": 800,
+     "size": 300,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.9,
+     "until": 99,
+     "x": 880,
+     "y": 1380,
+     "size": 110
+    }
+   ]
+  },
+  {
+   "start": 25.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 25.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "semua gadget travel,",
+     "key": "1 POWERBANK",
+     "at": 25.72,
+     "until": 28.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 25.76,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/gembira.png",
+       25.76
+      ],
+      [
+       "adik/selfie.png",
+       28.12
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/all_gadgets.png",
+     "at": 26.34,
+     "until": 28.12,
+     "x": 780,
+     "y": 1050,
+     "size": 440,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 11,
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 28.12,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "grid.jpg",
+     "at": 28.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 380,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/link.png",
+     "at": 28.64,
+     "until": 99,
+     "x": 540,
+     "y": 1640,
+     "size": 420,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11
+    }
+   ]
+  }
+ ]
+}

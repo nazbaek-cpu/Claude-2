@@ -3,7 +3,7 @@
  "source": "input/vo.mp4",
  "preset": "edukasi",
  "bold_text": true,
- "theme": "kayu",
+ "theme": "kertas",
  "whisper_prompt": "Powerbank UGREEN 20000mAh, earbuds, smartwatch, mod arus rendah, fast charging 20W, kabel USB-C, travel, gajet.",
  "scenes": [
   {

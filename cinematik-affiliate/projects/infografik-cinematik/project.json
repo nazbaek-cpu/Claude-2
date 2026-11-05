@@ -1,0 +1,204 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Infografik Sejarah Tingkatan 5, Buku Teks Padat, BTP, Nilam Publication, calon SPM, tarikh penting, gambar rajah, mak ayah.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "segments": [
+  {
+   "start": 1.6,
+   "end": 8.2,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Senang ingat",
+     "tarikh sejarah?"
+    ],
+    "accent": [
+     "tarikh",
+     "sejarah?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 43.8,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "depth",
+   "start": 8.25,
+   "end": 14.6,
+   "scatter_at": 14.45,
+   "y_back": 300,
+   "words": [
+    [
+     "NOMBOR",
+     10.59,
+     "back"
+    ],
+    [
+     "PHONE",
+     10.77,
+     "back"
+    ],
+    [
+     "GAMBAR",
+     12.89,
+     "back"
+    ],
+    [
+     "RAJAH",
+     14.13,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 14.7,
+   "end": 23.15,
+   "img": "screen.jpg",
+   "x": 905,
+   "y": 640,
+   "w": 250,
+   "from": "right",
+   "scroll_at": 16.6
+  },
+  {
+   "kind": "depth",
+   "start": 23.2,
+   "end": 28.85,
+   "scatter_at": 28.7,
+   "y_back": 300,
+   "words": [
+    [
+     "BTP",
+     26.45,
+     "back"
+    ],
+    [
+     "INFOGRAFIK",
+     27.71,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "orbit",
+   "start": 28.9,
+   "end": 34.0,
+   "imgs": [
+    "buku.jpg",
+    "ekonomi.jpg",
+    "langkah.jpg",
+    "kuning.jpg",
+    "buku.jpg"
+   ],
+   "cx": 540,
+   "cy": 560,
+   "rx": 420,
+   "ry": -230,
+   "w": 240,
+   "speed": 1.4
+  },
+  {
+   "kind": "depth",
+   "start": 34.05,
+   "end": 40.95,
+   "scatter_at": 40.8,
+   "y_back": 300,
+   "words": [
+    [
+     "SENANG",
+     36.87,
+     "back"
+    ],
+    [
+     "INGAT",
+     37.61,
+     "back"
+    ],
+    [
+     "SIAP",
+     39.11,
+     "back"
+    ],
+    [
+     "INFOGRAFIK",
+     39.29,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 40.95,
+   "end": 43.75,
+   "scatter_at": 43.6,
+   "y_back": 300,
+   "words": [
+    [
+     "MENARIK",
+     42.99,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "checklist",
+   "start": 14.7,
+   "end": 43.75,
+   "title": [
+    "Kenapa",
+    "senang ingat"
+   ],
+   "cols": 1,
+   "scale": 0.56,
+   "x": 165,
+   "y": 640,
+   "hide": [
+    [
+     28.9,
+     34.0
+    ]
+   ],
+   "items": [
+    [
+     "No. phone",
+     14.8
+    ],
+    [
+     "Gambar rajah",
+     16.65
+    ],
+    [
+     "Tarikh + gambaran",
+     22.41
+    ],
+    [
+     "Mudah bawa",
+     31.89
+    ],
+    [
+     "Siap infografik",
+     39.11
+    ],
+    [
+     "Menarik",
+     42.99
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,438 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, Tingkatan 1, 2 dan 3, jadual, maklumat, jawapan dengan penerangan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SOALAN OBJEKTIF...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang",
+     "key": "TAK GELABAH LANGSUNG",
+     "at": 0.0,
+     "until": 2.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "bila soalan objektif keluar dalam bentuk",
+     "key": "JADUAL & MAKLUMAT?",
+     "at": 2.26,
+     "until": 6.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       0.0
+      ],
+      [
+       "adik/berfikir.png",
+       2.26
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 4.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "JADUAL"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 6.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 5.76,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia dah biasa dengan",
+     "key": "FORMAT TU",
+     "at": 6.26,
+     "until": 8.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.76,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/idea.png",
+       5.76
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 7.5,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "FORMAT",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 8.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 8.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "hafal",
+     "key": "TARIKH & NAMA TOKOH",
+     "at": 8.6,
+     "until": 11.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi bila soalan bagi jadual, suruh",
+     "key": "CARI X",
+     "at": 11.46,
+     "until": 14.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "terus",
+     "key": "TAK TAHU NAK JAWAB",
+     "at": 14.32,
+     "until": 16.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 8.1,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       8.1
+      ],
+      [
+       "adik/terkejut.png",
+       11.86
+      ],
+      [
+       "adik/stres.png",
+       14.32
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Calendar",
+     "at": 10.0,
+     "until": 11.46,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TARIKH"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 12.6,
+     "until": 14.32,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CARI X"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 14.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK TAHU!",
+     "at": 15.0,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 16.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "1088 SOALAN OBJEKTIF SEJARAH",
+     "at": 15.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "1088 soalan objektif sejarah",
+     "key": "TINGKATAN 1, 2 & 3",
+     "at": 16.4,
+     "until": 20.88,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 16.45,
+     "until": 20.88,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma jawab",
+     "key": "IKUT BAB",
+     "at": 20.88,
+     "until": 22.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 20.93,
+     "until": 22.68,
+     "x": 540,
+     "y": 1120,
+     "w": 520,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.18,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "soalan jadual, soalan maklumat,",
+     "key": "SOALAN I, II, III, IV",
+     "at": 22.68,
+     "until": 28.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "soalan.jpg",
+     "at": 22.73,
+     "until": 30.66,
+     "x": 540,
+     "y": 1120,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.44,
+     "until": 28.32,
+     "x": 860,
+     "y": 1520,
+     "size": 100
+    },
+    {
+     "kind": "say",
+     "text": "siap jawapan lengkap",
+     "key": "DENGAN PENERANGAN",
+     "at": 28.32,
+     "until": 30.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 29.5,
+     "until": 30.66,
+     "x": 860,
+     "y": 1520,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 30.66,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 30.16,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila format dah biasa, soalan yang nampak susah pun",
+     "key": "JADI SENANG",
+     "at": 30.66,
+     "until": 34.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 32.9,
+     "until": 34.66,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SENANG!",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 30.68,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       30.68
+      ],
+      [
+       "adik/sapa.png",
+       34.66
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 34.66,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 34.76,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 290,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 35.0,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

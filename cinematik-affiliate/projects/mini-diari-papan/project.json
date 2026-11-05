@@ -1,0 +1,577 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Mini Diari 2027, saiz A7, otak, idea, tulis, 120 muka surat, hard cover, 8 design cover.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ORANG KREATIF...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ramai orang kreatif selalu ada",
+     "key": "BUKU KECIL DALAM POKET?",
+     "at": 0.0,
+     "until": 3.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Memo",
+     "at": 2.1,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BUKU KECIL"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 2.96,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab idea",
+     "key": "DATANG TAK TUNGGU MASA",
+     "at": 3.64,
+     "until": 6.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.0
+      ],
+      [
+       "abang/yakin.png",
+       5.44
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Light bulb",
+     "at": 4.32,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "IDEA!",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ORANG LAIN...",
+     "at": 6.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dapat idea masa",
+     "key": "DALAM KERETA",
+     "at": 6.72,
+     "until": 9.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "cakap",
+     "key": "NANTI NAK INGAT",
+     "at": 9.52,
+     "until": 10.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "sampai rumah,",
+     "key": "IDEA DAH HILANG",
+     "at": 10.94,
+     "until": 13.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 6.1,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       6.1
+      ],
+      [
+       "abang/yakin.png",
+       9.52
+      ],
+      [
+       "abang/terkejut.png",
+       11.92
+      ],
+      [
+       "abang/stres.png",
+       12.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Automobile",
+     "at": 8.36,
+     "until": 9.52,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 4,
+     "anim": "slide_r",
+     "edge": 11,
+     "tag": "DALAM KERETA"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Thinking face",
+     "at": 9.52,
+     "until": 11.92,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "NANTI INGAT"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Dashing away",
+     "at": 11.92,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 5,
+     "anim": "slide_r",
+     "edge": 11,
+     "tag": "HILANG"
+    },
+    {
+     "kind": "stamp",
+     "text": "IDEA HILANG!",
+     "at": 12.5,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "FAKTANYA:",
+     "at": 12.75,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "otak bagus untuk",
+     "key": "JANA IDEA",
+     "at": 13.26,
+     "until": 15.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "tapi lemah untuk",
+     "key": "SIMPAN",
+     "at": 15.08,
+     "until": 16.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "idea yang tak ditulis,",
+     "key": "CEPAT TERLEPAS",
+     "at": 16.82,
+     "until": 20.04,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 12.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/menerang.png",
+       12.7
+      ],
+      [
+       "abang/stres.png",
+       18.42
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 13.96,
+     "until": 18.42,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JANA IDEA",
+     "good": true
+    },
+    {
+     "kind": "stamp",
+     "text": "LEMAH SIMPAN",
+     "at": 16.0,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Dashing away",
+     "at": 18.42,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "slide_r",
+     "edge": 11,
+     "tag": "TERLEPAS"
+    }
+   ]
+  },
+  {
+   "start": 20.04,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MINI DIARI 2027",
+     "at": 19.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "mini diari 2027",
+     "key": "SEBESAR TAPAK TANGAN",
+     "at": 20.04,
+     "until": 23.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "saiz.jpg",
+     "at": 20.15,
+     "until": 23.22,
+     "x": 540,
+     "y": 1120,
+     "w": 740,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "sentiasa ada bila",
+     "key": "IDEA DATANG",
+     "at": 23.22,
+     "until": 25.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kegunaan.jpg",
+     "at": 23.3,
+     "until": 25.54,
+     "x": 540,
+     "y": 1120,
+     "w": 740,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.54,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 25.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cuma catat terus,",
+     "key": "WALAU SEBARIS",
+     "at": 25.54,
+     "until": 27.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "rancang.jpg",
+     "at": 25.6,
+     "until": 27.62,
+     "x": 540,
+     "y": 1120,
+     "w": 740,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "120 muka surat,",
+     "key": "HARD COVER",
+     "at": 27.62,
+     "until": 30.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "dalam.jpg",
+     "at": 27.7,
+     "until": 30.36,
+     "x": 540,
+     "y": 1120,
+     "w": 740,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "ada",
+     "key": "8 DESIGN COVER",
+     "at": 30.36,
+     "until": 31.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kegunaan.jpg",
+     "at": 30.45,
+     "until": 31.94,
+     "x": 540,
+     "y": 1120,
+     "w": 740,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 28.6,
+     "until": 31.94,
+     "x": 540,
+     "y": 1560,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 31.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 31.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu idea yang ditulis,",
+     "key": "LEBIH BERHARGA",
+     "at": 31.94,
+     "until": 33.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "dari 10 yang",
+     "key": "DILUPAKAN",
+     "at": 33.62,
+     "until": 36.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 31.98,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       31.98
+      ],
+      [
+       "abang/sapa.png",
+       36.18
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Light bulb",
+     "at": 32.8,
+     "until": 36.18,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DITULIS",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 36.18,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "saiz.jpg",
+     "at": 36.25,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 460,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 36.82,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

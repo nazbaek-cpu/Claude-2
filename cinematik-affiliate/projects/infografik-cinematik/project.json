@@ -203,11 +203,11 @@
  ],
  "beauty": {
   "lip_rgb": [
-   196,
-   74,
-   88
+   188,
+   86,
+   96
   ],
-  "lip_amount": 0.88,
-  "lip_light": 1.08
+  "lip_amount": 0.8,
+  "lip_light": 1.05
  }
 }

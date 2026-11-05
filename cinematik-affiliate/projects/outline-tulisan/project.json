@@ -1,0 +1,182 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Calon SPM, ibu ayah, BTP Infografik Sejarah, buku nota, buku teks padat, besar tapak tangan, Sejarah, Fizik, Kimia, Matematik Tambahan, tarikh dan peristiwa penting.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   172,
+   98,
+   98
+  ],
+  "lip_amount": 0.85
+ },
+ "segments": [],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "doodle",
+   "start": 0.27,
+   "end": 9.0,
+   "sparks": [
+    [
+     170,
+     560
+    ],
+    [
+     900,
+     480
+    ],
+    [
+     880,
+     1150
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 9.01,
+   "end": 17.0,
+   "scatter_at": 16.8,
+   "y_back": 300,
+   "words": [
+    [
+     "BESAR",
+     12.21,
+     "back"
+    ],
+    [
+     "TAPAK TANGAN",
+     12.53,
+     "back"
+    ],
+    [
+     "NOTA PADAT",
+     14.81,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 17.05,
+   "end": 27.1,
+   "scatter_at": 24.0,
+   "y_back": 300,
+   "words": [
+    [
+     "SEJARAH",
+     19.25,
+     "back"
+    ],
+    [
+     "FIZIK",
+     19.81,
+     "back"
+    ],
+    [
+     "KIMIA",
+     20.21,
+     "back"
+    ],
+    [
+     "ADD MATHS",
+     20.77,
+     "back"
+    ],
+    [
+     "MATEMATIK",
+     23.11,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "doodle",
+   "start": 27.17,
+   "end": 32.3,
+   "sparks": [
+    [
+     170,
+     560
+    ],
+    [
+     900,
+     480
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 32.33,
+   "end": 38.05,
+   "scatter_at": 37.9,
+   "y_back": 300,
+   "words": [
+    [
+     "SENANG",
+     34.51,
+     "back"
+    ],
+    [
+     "BELAJAR",
+     35.61,
+     "back"
+    ],
+    [
+     "TAK HAFAL",
+     36.73,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 38.11,
+   "end": 43.4,
+   "scatter_at": 43.2,
+   "y_back": 300,
+   "words": [
+    [
+     "TARIKH",
+     38.39,
+     "back"
+    ],
+    [
+     "PERISTIWA",
+     40.45,
+     "back"
+    ],
+    [
+     "PENTING",
+     41.95,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "doodle",
+   "start": 43.43,
+   "end": null,
+   "sparks": [
+    [
+     170,
+     560
+    ],
+    [
+     900,
+     480
+    ],
+    [
+     880,
+     1150
+    ]
+   ]
+  }
+ ]
+}

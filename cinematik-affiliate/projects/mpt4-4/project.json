@@ -1,0 +1,459 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "MPT4 Matematik Tahun 4, 28 Hari Persediaan MPT4, Adel Learning Centre, modul, latihan berperingkat, satu latihan sehari, mak ayah, anak, rekod pencapaian, DSKP KSSR.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "mak ayah,",
+     "key": "28 HARI JE",
+     "at": 0.0,
+     "until": 2.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "itu masa yang anak perlukan untuk",
+     "key": "BERSEDIA SEBELUM MPT4",
+     "at": 2.2,
+     "until": 6.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "ortu/pasangan.png",
+       0.05
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Calendar",
+     "at": 0.6,
+     "until": 2.2,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "28 HARI"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 4.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "MPT4"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 6.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 5.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bukan belajar",
+     "key": "BERJAM-JAM",
+     "at": 6.2,
+     "until": 7.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "cuma",
+     "key": "SIKIT SETIAP HARI",
+     "at": 7.9,
+     "until": 9.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikhp/chatting.png",
+       5.7
+      ],
+      [
+       "adikhp/gembira.png",
+       7.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hourglass not done",
+     "at": 6.9,
+     "until": 7.9,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BERJAM-JAM"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Stopwatch",
+     "at": 8.3,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SIKIT JE"
+    }
+   ]
+  },
+  {
+   "start": 9.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 8.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kena ada",
+     "key": "SUSUNAN YANG BETUL",
+     "at": 9.4,
+     "until": 11.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/ayah/berfikir.png",
+     "at": 9.6,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/ingin_tahu.png",
+     "at": 9.9,
+     "until": 99,
+     "x": 780,
+     "y": 1000,
+     "size": 380,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 10.7,
+     "until": 99,
+     "x": 540,
+     "y": 1430,
+     "size": 210,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SUSUNAN"
+    }
+   ]
+  },
+  {
+   "start": 11.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "28 HARI PERSEDIAAN MPT4",
+     "at": 11.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "28 hari persediaan MPT4 dah susun",
+     "key": "SEMUANYA UNTUK ANAK",
+     "at": 11.9,
+     "until": 16.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "empat.jpg",
+     "at": 11.95,
+     "until": 16.4,
+     "x": 540,
+     "y": 1135,
+     "w": 580,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "hari pertama sampai",
+     "key": "HARI KE-28",
+     "at": 16.4,
+     "until": 18.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 16.45,
+     "until": 18.8,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "latihan berperingkat dari senang",
+     "key": "KE SUSAH",
+     "at": 18.8,
+     "until": 21.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "latihan.jpg",
+     "at": 18.85,
+     "until": 21.6,
+     "x": 540,
+     "y": 1135,
+     "w": 520,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 21.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 21.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "140 latihan, simulasi MPT4 dan",
+     "key": "REKOD PENCAPAIAN",
+     "at": 21.6,
+     "until": 26.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 21.65,
+     "until": 26.0,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "untuk mak ayah",
+     "key": "PANTAU",
+     "at": 26.0,
+     "until": 27.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul2.jpg",
+     "at": 26.05,
+     "until": 27.3,
+     "x": 540,
+     "y": 1135,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.4,
+     "until": 27.3,
+     "x": 870,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebulan dari sekarang, anak masuk ujian",
+     "key": "DENGAN YAKIN",
+     "at": 27.3,
+     "until": 30.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.32,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikhp/gembira.png",
+       27.32
+      ]
+     ],
+     "enter": "slide",
+     "until": 30.8
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/bangga.png",
+     "at": 28.7,
+     "until": 30.8,
+     "x": 790,
+     "y": 980,
+     "size": 320,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 30.8,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 30.900000000000002,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.1,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 30.82,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "ortu/pasangan.png",
+       30.82
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

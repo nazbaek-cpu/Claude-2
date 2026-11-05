@@ -1,0 +1,494 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "MPT4 Matematik Tahun 4, 28 Hari Persediaan MPT4, Adel Learning Centre, modul, latihan berperingkat, satu latihan sehari, mak ayah, anak, rekod pencapaian, DSKP KSSR.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MPT4...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "soalan",
+     "key": "BERJEJAK",
+     "at": 0.0,
+     "until": 1.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "inilah yang ramai anak tahun 4",
+     "key": "TAKUT DALAM MPT4",
+     "at": 1.3,
+     "until": 5.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/terkejut.png",
+       0.0
+      ],
+      [
+       "adik/stres.png",
+       3.2
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 2.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "MPT4"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SATU SOALAN...",
+     "at": 4.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu soalan,",
+     "key": "3-4 LANGKAH",
+     "at": 5.1,
+     "until": 7.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "silap satu,",
+     "key": "SEMUA JATUH",
+     "at": 7.6,
+     "until": 9.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 4.6,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       4.6
+      ],
+      [
+       "adik/sedih.png",
+       8.6
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Footprints",
+     "at": 6.3,
+     "until": 7.6,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "3-4 LANGKAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "SEMUA JATUH!",
+     "at": 8.6,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 9.8,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBENARNYA...",
+     "at": 9.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak bukan tak pandai, cuma tak biasa fikir",
+     "key": "LANGKAH DEMI LANGKAH",
+     "at": 9.8,
+     "until": 14.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 9.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       9.3
+      ],
+      [
+       "adik/idea.png",
+       12.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/angkat_tangan.png",
+     "at": 10.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PANDAI"
+    }
+   ]
+  },
+  {
+   "start": 14.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON TENANG...",
+     "at": 13.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dah berlatih jenis soalan ni",
+     "key": "BERULANG KALI",
+     "at": 14.0,
+     "until": 17.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 13.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/gembira.png",
+       13.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 15.3,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "LATIH BERULANG",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 17.7,
+   "items": [
+    {
+     "kind": "label",
+     "text": "28 HARI PERSEDIAAN MPT4",
+     "at": 17.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "28 Hari Persediaan",
+     "key": "MPT4",
+     "at": 17.7,
+     "until": 19.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 17.75,
+     "until": 19.9,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "latihan berjejak dari mudah",
+     "key": "KE MENCABAR",
+     "at": 19.9,
+     "until": 22.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "latihan.jpg",
+     "at": 19.95,
+     "until": 22.9,
+     "x": 540,
+     "y": 1135,
+     "w": 520,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 22.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma buat ikut hari,",
+     "key": "SATU DEMI SATU",
+     "at": 22.9,
+     "until": 25.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 22.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berlari.png",
+       22.92
+      ],
+      [
+       "adik/setuju.png",
+       24.5
+      ]
+     ],
+     "enter": "slide",
+     "until": 25.6
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Calendar",
+     "at": 24.1,
+     "until": 25.6,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "IKUT HARI"
+    }
+   ]
+  },
+  {
+   "start": 25.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 25.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "simulasi MPT4 dan",
+     "key": "REKOD PENCAPAIAN",
+     "at": 25.6,
+     "until": 29.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 25.65,
+     "until": 29.0,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.9,
+     "until": 29.0,
+     "x": 870,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 29.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 28.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sekali biasa, soalan panjang",
+     "key": "TAK MENAKUTKAN LAGI",
+     "at": 29.0,
+     "until": 32.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 30.6,
+     "until": 32.3,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN PANJANG",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 32.3,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 32.4,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 32.7,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 29.02,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       29.02
+      ],
+      [
+       "adik/sapa.png",
+       32.3
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

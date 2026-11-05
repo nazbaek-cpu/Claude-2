@@ -1,0 +1,527 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "MPT4 Matematik Tahun 4, 28 Hari Persediaan MPT4, Adel Learning Centre, modul, latihan berperingkat, satu latihan sehari, mak ayah, anak, rekod pencapaian, DSKP KSSR.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAHUN 4...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "asas matematik",
+     "key": "LEMAH DI TAHUN 4",
+     "at": 0.0,
+     "until": 2.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "akan jadi lebih susah di",
+     "key": "TAHUN 5 DAN 6",
+     "at": 2.0,
+     "until": 5.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikhp/chatting.png",
+       0.0
+      ]
+     ],
+     "enter": "slide",
+     "until": 5.1
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Chart decreasing",
+     "at": 0.9,
+     "until": 2.0,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ASAS LEMAH"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Mountain",
+     "at": 2.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MAKIN SUSAH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK...",
+     "at": 4.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "topik",
+     "key": "MAKIN BERAT",
+     "at": 5.1,
+     "until": 6.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "anak",
+     "key": "MAKIN KETINGGALAN",
+     "at": 6.4,
+     "until": 8.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "adikhp/muka/risau.png",
+     "at": 5.15,
+     "until": 6.4,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "adikhp/muka/sedih.png",
+     "at": 6.4,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 5.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TOPIK BERAT"
+    },
+    {
+     "kind": "stamp",
+     "text": "KETINGGALAN!",
+     "at": 7.3,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 8.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBENARNYA...",
+     "at": 7.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "MPT4 sebenarnya",
+     "key": "PELUANG",
+     "at": 8.1,
+     "until": 10.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "untuk kesan kelemahan tu",
+     "key": "AWAL",
+     "at": 10.3,
+     "until": 12.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 8.12,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       8.12
+      ],
+      [
+       "abang/menerang.png",
+       10.3
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Magnifying glass tilted left",
+     "at": 10.6,
+     "until": 12.0,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KESAN AWAL"
+    }
+   ]
+  },
+  {
+   "start": 12.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 11.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tapi anak kena bersedia",
+     "key": "BETUL-BETUL",
+     "at": 12.0,
+     "until": 14.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 11.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       11.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 12.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MPT4"
+    }
+   ]
+  },
+  {
+   "start": 14.7,
+   "items": [
+    {
+     "kind": "label",
+     "text": "28 HARI PERSEDIAAN MPT4",
+     "at": 14.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "28 Hari Persediaan MPT4",
+     "key": "LATIH SEMUA KEMAHIRAN ASAS",
+     "at": 14.7,
+     "until": 19.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 14.75,
+     "until": 17.2,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "empat.jpg",
+     "at": 17.2,
+     "until": 19.9,
+     "x": 540,
+     "y": 1135,
+     "w": 580,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma buat latihan berperingkat",
+     "key": "SETIAP HARI",
+     "at": 19.9,
+     "until": 23.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 19.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikhp/gembira.png",
+       19.92
+      ]
+     ],
+     "enter": "slide",
+     "until": 23.0
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Calendar",
+     "at": 21.6,
+     "until": 23.0,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SETIAP HARI"
+    }
+   ]
+  },
+  {
+   "start": 23.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ada",
+     "key": "140 LATIHAN",
+     "at": 23.0,
+     "until": 24.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 23.05,
+     "until": 24.8,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "simulasi MPT4 siap",
+     "key": "REKOD PENCAPAIAN",
+     "at": 24.8,
+     "until": 27.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "latihan.jpg",
+     "at": 24.85,
+     "until": 27.8,
+     "x": 540,
+     "y": 1135,
+     "w": 520,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.9,
+     "until": 27.8,
+     "x": 870,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.8,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 27.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "betulkan asas sekarang",
+     "key": "SEBELUM TERLAMBAT",
+     "at": 27.8,
+     "until": 30.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Alarm clock",
+     "at": 28.9,
+     "until": 30.5,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEKARANG"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 30.5,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 30.6,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 30.8,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 27.82,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       27.82
+      ],
+      [
+       "abang/sapa.png",
+       30.5
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

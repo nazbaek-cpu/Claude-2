@@ -1,0 +1,523 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "MPT4 Matematik Tahun 4, 28 Hari Persediaan MPT4, Adel Learning Centre, modul, latihan berperingkat, satu latihan sehari, mak ayah, anak, rekod pencapaian, DSKP KSSR.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK TAHUN 4...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada anak yang jawapan",
+     "key": "BETUL",
+     "at": 0.0,
+     "until": 1.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi markah tetap",
+     "key": "KENA POTONG?",
+     "at": 1.9,
+     "until": 3.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.0
+      ],
+      [
+       "abang/terkejut.png",
+       1.9
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 2.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "KENA POTONG"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.0,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA:",
+     "at": 3.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia tak tunjuk",
+     "key": "JALAN KERJA",
+     "at": 3.9,
+     "until": 6.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "dalam MPT4, cara mengira pun",
+     "key": "DINILAI",
+     "at": 6.4,
+     "until": 9.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 3.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.4
+      ],
+      [
+       "abang/menerang.png",
+       6.4
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 5.0,
+     "until": 6.4,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JALAN KERJA"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 7.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CARA MENGIRA",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 9.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK LAIN...",
+     "at": 8.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "terus tulis",
+     "key": "JAWAPAN",
+     "at": 9.2,
+     "until": 11.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "langkah di tengah",
+     "key": "HILANG",
+     "at": 11.2,
+     "until": 13.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 8.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       8.7
+      ],
+      [
+       "kira/terkejut.png",
+       11.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pen.png",
+     "at": 10.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TERUS JAWAPAN"
+    },
+    {
+     "kind": "stamp",
+     "text": "LANGKAH HILANG!",
+     "at": 12.2,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "28 HARI PERSEDIAAN MPT4",
+     "at": 12.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "28 Hari Persediaan",
+     "key": "MPT4",
+     "at": 13.0,
+     "until": 15.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 13.05,
+     "until": 15.5,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "latih anak tulis",
+     "key": "JALAN KERJA YANG BETUL",
+     "at": 15.5,
+     "until": 17.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "latihan.jpg",
+     "at": 15.55,
+     "until": 17.9,
+     "x": 540,
+     "y": 1135,
+     "w": 520,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 17.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 17.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ikut contoh,",
+     "key": "BUAT, SEMAK",
+     "at": 17.9,
+     "until": 21.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 17.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       17.92
+      ],
+      [
+       "abang/fokus.png",
+       19.5
+      ]
+     ],
+     "enter": "slide",
+     "until": 21.2
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 18.9,
+     "until": 19.5,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CONTOH"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 19.5,
+     "until": 20.5,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BUAT"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 20.5,
+     "until": 21.2,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEMAK"
+    }
+   ]
+  },
+  {
+   "start": 21.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 20.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "140 latihan",
+     "key": "BERPERINGKAT",
+     "at": 21.2,
+     "until": 23.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 21.25,
+     "until": 23.8,
+     "x": 540,
+     "y": 1135,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "ikut",
+     "key": "DSKP KSSR SEMAKAN",
+     "at": 23.8,
+     "until": 26.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "empat.jpg",
+     "at": 23.85,
+     "until": 26.6,
+     "x": 540,
+     "y": 1135,
+     "w": 580,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.1,
+     "until": 26.6,
+     "x": 870,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 26.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "jawapan betul, cara pun betul,",
+     "key": "MARKAH PENUH",
+     "at": 26.6,
+     "until": 30.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 28.6,
+     "until": 30.1,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MARKAH PENUH",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 30.1,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "modul1.jpg",
+     "at": 30.200000000000003,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 30.4,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 26.62,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       26.62
+      ],
+      [
+       "abang/sapa.png",
+       30.1
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

@@ -1,0 +1,142 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.11,
+   "end": 8.3,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Belajar sejarah,",
+     "jenuh kan?"
+    ],
+    "accent": [
+     "jenuh",
+     "kan?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 8.41,
+   "end": 12.45,
+   "kicker": "BUKU TEKS",
+   "head": "Tebal & berat."
+  },
+  {
+   "start": 12.51,
+   "end": 16.42,
+   "kicker": "TAHUN DEPAN SPM",
+   "head": "Mula awal."
+  },
+  {
+   "start": 16.47,
+   "end": 20.5,
+   "kicker": "INI DIA",
+   "head": "Buku Teks Padat."
+  },
+  {
+   "start": 20.55,
+   "end": 26.3,
+   "kicker": "SATU BAB",
+   "head": "Ringkas macam ni."
+  },
+  {
+   "start": 26.37,
+   "end": 31.3,
+   "kicker": "INFOGRAFIK",
+   "head": "Sangat menarik."
+  },
+  {
+   "start": 31.35,
+   "end": 39.3,
+   "kicker": "BUKAN SAHAJA",
+   "head": "Infografik.",
+   "pills": [
+    [
+     "Peristiwa",
+     35.01
+    ],
+    [
+     "Tarikh",
+     35.65
+    ],
+    [
+     "Senang ingat",
+     37.05
+    ]
+   ],
+   "pills_y": 170
+  },
+  {
+   "start": 39.35,
+   "end": 46.8,
+   "kicker": "SUBJEK LAIN",
+   "head": "Pun ada.",
+   "pills": [
+    [
+     "Matematik",
+     43.03
+    ],
+    [
+     "Fizik",
+     43.69
+    ],
+    [
+     "Kimia",
+     44.23
+    ],
+    [
+     "Add Maths",
+     45.89
+    ]
+   ],
+   "pills_y": 170
+  },
+  {
+   "start": 46.87,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "zoomcut",
+   "at": 8.41
+  },
+  {
+   "kind": "zoomcut",
+   "at": 16.47
+  },
+  {
+   "kind": "zoomcut",
+   "at": 26.37
+  },
+  {
+   "kind": "zoomcut",
+   "at": 39.35
+  }
+ ],
+ "behind": false
+}

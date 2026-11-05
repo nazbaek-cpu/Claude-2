@@ -1,0 +1,100 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 9.29,
+   "end": 12.95,
+   "kicker": "BUKU NOTA",
+   "head": "Kecil je."
+  },
+  {
+   "start": 12.97,
+   "end": 15.98,
+   "kicker": "BUKU TEKS PADAT",
+   "head": "Ringkas & padat."
+  },
+  {
+   "start": 16.01,
+   "end": 22.55,
+   "kicker": "SIAP INFOGRAFIK",
+   "head": "Senang ingat."
+  },
+  {
+   "start": 22.59,
+   "end": 29.6,
+   "kicker": "SIAP ADA",
+   "head": "Tarikh penting."
+  },
+  {
+   "start": 29.65,
+   "end": 36.5,
+   "kicker": "IBU AYAH",
+   "head": "Hafal cara mudah."
+  },
+  {
+   "start": 36.55,
+   "end": 40.38,
+   "kicker": "TAK PERLU",
+   "head": "Bawa buku tebal."
+  },
+  {
+   "start": 40.41,
+   "end": null,
+   "cta": true,
+   "head": "Nipis, muat poket.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.2,
+   "end": 9.25,
+   "tag": "BERITA PELAJAR · CALON SPM",
+   "lines": [
+    "Calon SPM tak perlu",
+    "bawa buku teks berat"
+   ],
+   "y": 330,
+   "wall": [
+    [
+     "SPM|2027",
+     175,
+     660,
+     -6
+    ],
+    [
+     "nota|padat",
+     905,
+     720,
+     5
+    ],
+    [
+     "calon|SPM",
+     160,
+     930,
+     4
+    ]
+   ]
+  }
+ ]
+}

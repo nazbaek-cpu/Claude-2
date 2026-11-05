@@ -1,0 +1,166 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 9.4,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Sejarah A,",
+     "tak hafal buku teks?"
+    ],
+    "accent": [
+     "A,"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 50.34,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "depth",
+   "start": 9.46,
+   "end": 15.7,
+   "scatter_at": 15.55,
+   "y_back": 300,
+   "words": [
+    [
+     "PERISTIWA",
+     11.12,
+     "back"
+    ],
+    [
+     "TARIKH",
+     13.1,
+     "back"
+    ],
+    [
+     "GAMBARAN",
+     15.1,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 15.74,
+   "end": 23.0,
+   "img": "screen.jpg",
+   "x": 905,
+   "y": 640,
+   "w": 250,
+   "from": "right",
+   "scroll_at": 17.0
+  },
+  {
+   "kind": "depth",
+   "start": 23.06,
+   "end": 32.75,
+   "scatter_at": 32.6,
+   "y_back": 300,
+   "words": [
+    [
+     "NIPIS",
+     27.22,
+     "back"
+    ],
+    [
+     "TINGKATAN 4",
+     28.46,
+     "back"
+    ],
+    [
+     "TINGKATAN 5",
+     29.2,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 32.82,
+   "end": 40.6,
+   "scatter_at": 40.45,
+   "y_back": 300,
+   "words": [
+    [
+     "MUDAH",
+     35.4,
+     "back"
+    ],
+    [
+     "INGAT",
+     36.22,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 40.68,
+   "end": 46.25,
+   "img": "screen.jpg",
+   "x": 905,
+   "y": 640,
+   "w": 250,
+   "from": "right",
+   "scroll_at": 41.8
+  },
+  {
+   "kind": "depth",
+   "start": 46.32,
+   "end": 50.3,
+   "scatter_at": 50.15,
+   "y_back": 300,
+   "words": [
+    [
+     "MATEMATIK",
+     47.2,
+     "back"
+    ],
+    [
+     "FIZIK",
+     48.0,
+     "back"
+    ],
+    [
+     "KIMIA",
+     48.6,
+     "back"
+    ],
+    [
+     "ADD MATHS",
+     49.32,
+     "back"
+    ]
+   ]
+  }
+ ]
+}

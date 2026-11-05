@@ -1,0 +1,142 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.35,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Bayangkan study",
+     "sejarah…"
+    ],
+    "accent": [
+     "sejarah…"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 46.52,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "depth",
+   "start": 4.4,
+   "end": 17.1,
+   "scatter_at": 16.95,
+   "y_back": 300,
+   "words": [
+    [
+     "HAFAL",
+     7.16,
+     "back"
+    ],
+    [
+     "BUKU",
+     7.98,
+     "back"
+    ],
+    [
+     "TEKS",
+     8.46,
+     "back"
+    ],
+    [
+     "TOPIK",
+     10.88,
+     "back"
+    ],
+    [
+     "GAMBARAN",
+     16.36,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 17.16,
+   "end": 29.95,
+   "img": "screen.jpg",
+   "x": 905,
+   "y": 640,
+   "w": 250,
+   "from": "right",
+   "scroll_at": 18.5
+  },
+  {
+   "kind": "depth",
+   "start": 30.0,
+   "end": 35.28,
+   "scatter_at": 35.13,
+   "y_back": 300,
+   "words": [
+    [
+     "TARIKH",
+     33.44,
+     "back"
+    ],
+    [
+     "PENTING",
+     34.74,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 35.32,
+   "end": 40.0,
+   "scatter_at": 39.85,
+   "y_back": 300,
+   "words": [
+    [
+     "KECIL",
+     36.3,
+     "back"
+    ],
+    [
+     "SENANG",
+     39.4,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "phone",
+   "start": 40.08,
+   "end": 46.45,
+   "img": "screen.jpg",
+   "x": 905,
+   "y": 640,
+   "w": 250,
+   "from": "right",
+   "scroll_at": 41.2
+  }
+ ]
+}

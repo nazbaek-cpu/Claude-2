@@ -1,0 +1,109 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.2,
+   "end": 7.9,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Tak payah suruh",
+     "baca sejarah?"
+    ],
+    "accent": [
+     "sejarah?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 20.41,
+   "end": 26.9,
+   "pills": [
+    [
+     "Menarik",
+     21.53
+    ],
+    [
+     "Senang ingat",
+     23.33
+    ],
+    [
+     "Berwarna",
+     25.59
+    ]
+   ],
+   "pills_y": 330
+  },
+  {
+   "start": 37.71,
+   "end": null,
+   "cta": true,
+   "head": "Nipis & ringan.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "checklist",
+   "start": 7.93,
+   "end": 37.65,
+   "title": [
+    "Kenapa senang",
+    "ingat sejarah"
+   ],
+   "y": 250,
+   "hide": [
+    [
+     20.41,
+     26.9
+    ]
+   ],
+   "items": [
+    [
+     "Teknik buka & ingat",
+     8.55
+    ],
+    [
+     "Buku Teks Padat",
+     13.89
+    ],
+    [
+     "Siap infografik",
+     17.77
+    ],
+    [
+     "Gambaran & warna",
+     24.35
+    ],
+    [
+     "Ibu ayah dapatkan",
+     27.69
+    ],
+    [
+     "Belajar seronok",
+     36.79
+    ]
+   ]
+  }
+ ]
+}

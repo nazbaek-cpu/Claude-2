@@ -1,0 +1,139 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.24,
+   "end": 6.1,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Tengok gambar,",
+     "lebih cepat ingat"
+    ],
+    "accent": [
+     "cepat",
+     "ingat"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 6.18,
+   "end": 12.0,
+   "pills": [
+    [
+     "Sejarah",
+     8.66
+    ],
+    [
+     "Matematik",
+     10.12
+    ],
+    [
+     "Add Maths",
+     11.02
+    ]
+   ],
+   "pills_y": 330
+  },
+  {
+   "start": 12.0,
+   "end": 16.95,
+   "pills": [
+    [
+     "Formula",
+     13.04
+    ],
+    [
+     "Tarikh penting",
+     14.6
+    ],
+    [
+     "Peristiwa",
+     15.72
+    ]
+   ],
+   "pills_y": 330
+  },
+  {
+   "start": 49.46,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "papercut",
+   "start": 17.02,
+   "end": 19.95,
+   "word": "buku infografik",
+   "word_y": 1730
+  },
+  {
+   "kind": "checklist",
+   "start": 19.98,
+   "end": 49.4,
+   "title": [
+    "Kenapa senang",
+    "ingat"
+   ],
+   "y": 250,
+   "hide": [
+    [
+     47.0,
+     49.4
+    ]
+   ],
+   "items": [
+    [
+     "Dari buku teks",
+     23.62
+    ],
+    [
+     "Infografik menarik",
+     27.64
+    ],
+    [
+     "Gambar rajah",
+     36.42
+    ],
+    [
+     "Tarikh & peristiwa",
+     40.82
+    ],
+    [
+     "Kecil, senang bawa",
+     47.62
+    ]
+   ]
+  },
+  {
+   "kind": "papercut",
+   "start": 47.02,
+   "end": 49.4,
+   "word": "senang bawa",
+   "word_y": 1730
+  }
+ ]
+}

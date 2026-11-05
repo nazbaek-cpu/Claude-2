@@ -1,0 +1,197 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 0.21,
+   "end": 9.2,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Jawab sejarah",
+     "macam dah tahu?"
+    ],
+    "accent": [
+     "dah",
+     "tahu?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 56.13,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "depth",
+   "start": 9.27,
+   "end": 11.15,
+   "scatter_at": 11.0,
+   "y_back": 300,
+   "words": [
+    [
+     "HUBUNG",
+     9.99,
+     "back"
+    ],
+    [
+     "KAIT",
+     10.51,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "digizoom",
+   "start": 11.19,
+   "end": 22.15,
+   "zoom": 1.3,
+   "zoom_at": 13.99,
+   "focus": [
+    540,
+    1050
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 22.19,
+   "end": 27.75,
+   "scatter_at": 27.6,
+   "y_back": 300,
+   "words": [
+    [
+     "PERISTIWA",
+     23.57,
+     "back"
+    ],
+    [
+     "PENTING",
+     26.05,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "digizoom",
+   "start": 27.79,
+   "end": 29.7,
+   "zoom": 1.3,
+   "zoom_at": 28.05,
+   "focus": [
+    540,
+    1050
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 29.75,
+   "end": 37.6,
+   "scatter_at": 37.45,
+   "y_back": 300,
+   "words": [
+    [
+     "PERISTIWA",
+     31.43,
+     "back"
+    ],
+    [
+     "SENANG",
+     35.11,
+     "back"
+    ],
+    [
+     "FAHAM",
+     37.17,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "digizoom",
+   "start": 37.65,
+   "end": 40.6,
+   "zoom": 1.3,
+   "zoom_at": 38.51,
+   "focus": [
+    540,
+    1050
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 40.65,
+   "end": 48.9,
+   "scatter_at": 48.75,
+   "y_back": 300,
+   "words": [
+    [
+     "KECIL",
+     41.37,
+     "back"
+    ],
+    [
+     "INFORMASI",
+     44.61,
+     "back"
+    ],
+    [
+     "SINGKAT",
+     48.47,
+     "back"
+    ]
+   ]
+  },
+  {
+   "kind": "depth",
+   "start": 48.93,
+   "end": 56.1,
+   "scatter_at": 55.95,
+   "y_back": 300,
+   "words": [
+    [
+     "SENANG",
+     50.87,
+     "back"
+    ],
+    [
+     "INGAT",
+     51.41,
+     "back"
+    ],
+    [
+     "HUBUNG",
+     52.97,
+     "back"
+    ],
+    [
+     "KAIT",
+     53.43,
+     "back"
+    ]
+   ]
+  }
+ ]
+}

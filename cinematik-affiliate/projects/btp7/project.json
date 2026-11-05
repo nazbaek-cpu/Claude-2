@@ -1,0 +1,101 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, Nilam Publication, infografik, calon SPM, Sejarah, mak ayah, anak.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "top_offset": -160,
+ "beauty": {
+  "lip_rgb": [
+   186,
+   96,
+   102
+  ],
+  "lip_amount": 0.78,
+  "lip_light": 1.07
+ },
+ "segments": [
+  {
+   "start": 9.64,
+   "end": 19.3,
+   "kicker": "TARIKH & PERISTIWA",
+   "head": "Penat nak ingat."
+  },
+  {
+   "start": 19.38,
+   "end": 22.9,
+   "kicker": "INGATAN",
+   "head": "Cepat hilang."
+  },
+  {
+   "start": 22.98,
+   "end": 28.3,
+   "kicker": "CARA MUDAH",
+   "head": "Infografik."
+  },
+  {
+   "start": 28.34,
+   "end": 33.95,
+   "kicker": "SIAP ADA",
+   "head": "Tarikh penting."
+  },
+  {
+   "start": 34.0,
+   "end": 37.38,
+   "kicker": "TINGKATAN 4 & 5",
+   "head": "Dua-dua ada."
+  },
+  {
+   "start": 37.42,
+   "end": 42.3,
+   "kicker": "SUBJEK LAIN",
+   "head": "Pun ada."
+  },
+  {
+   "start": 42.34,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang.",
+   "behind": false
+  }
+ ],
+ "subs": [],
+ "fx": [
+  {
+   "kind": "headline",
+   "start": 0.66,
+   "end": 9.6,
+   "tag": "BERITA PELAJAR · CALON SPM",
+   "lines": [
+    "Calon SPM tahun depan,",
+    "jenuh nak ingat sejarah?"
+   ],
+   "y": 330,
+   "wall": [
+    [
+     "SPM|2027",
+     175,
+     660,
+     -6
+    ],
+    [
+     "tarikh|penting",
+     905,
+     720,
+     5
+    ],
+    [
+     "calon|SPM",
+     160,
+     930,
+     4
+    ]
+   ]
+  }
+ ],
+ "behind": false
+}

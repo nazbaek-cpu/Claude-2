@@ -1,0 +1,461 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Matematik SPM Final Boost, soalan berpotensi tinggi, pola soalan SPM, calon SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang nampak",
+     "key": "SOALAN MATEMATIK",
+     "at": 0.0,
+     "until": 2.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "terus tahu nak guna",
+     "key": "CARA MANA?",
+     "at": 2.32,
+     "until": 4.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       0.0
+      ],
+      [
+       "kira/bangga.png",
+       2.32
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 1.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "MATEMATIK"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia dah kenal",
+     "key": "POLA SOALAN SPM",
+     "at": 4.38,
+     "until": 7.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.88,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       3.88
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Puzzle piece",
+     "at": 5.86,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "POLA SOALAN"
+    }
+   ]
+  },
+  {
+   "start": 7.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 6.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "faham",
+     "key": "FORMULA",
+     "at": 7.22,
+     "until": 9.44,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi bila soalan",
+     "key": "TUKAR AYAT SIKIT",
+     "at": 9.44,
+     "until": 11.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "terus",
+     "key": "BLANK",
+     "at": 11.7,
+     "until": 13.04,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 6.72,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       6.72
+      ],
+      [
+       "kira/terkejut.png",
+       9.96
+      ],
+      [
+       "kira/stres.png",
+       11.7
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 8.4,
+     "until": 9.44,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "FORMULA"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 10.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "BLANK!",
+     "at": 12.14,
+     "x": 760,
+     "y": 1380,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.04,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 12.54,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Matematik SPM Final Boost kumpul",
+     "key": "SOALAN BERPOTENSI TINGGI",
+     "at": 13.04,
+     "until": 17.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 13.09,
+     "until": 17.02,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "topik-topik famous yang",
+     "key": "SELALU MASUK SPM",
+     "at": 17.02,
+     "until": 19.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 17.07,
+     "until": 19.72,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.22,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma latih berulang sampai",
+     "key": "POLA SOALAN MELEKAT",
+     "at": 19.72,
+     "until": 23.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 19.74,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       19.74
+      ],
+      [
+       "kira/gembira.png",
+       21.82
+      ]
+     ],
+     "enter": "slide",
+     "until": 23.58
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Repeat button",
+     "at": 20.9,
+     "until": 23.58,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BERULANG"
+    }
+   ]
+  },
+  {
+   "start": 23.58,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 23.08,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "jawapan di belakang setiap topik untuk",
+     "key": "SEMAK SENDIRI",
+     "at": 23.58,
+     "until": 27.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 23.63,
+     "until": 27.06,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.0,
+     "until": 27.06,
+     "x": 860,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sekali kenal pola, soalan baru pun nampak macam",
+     "key": "SOALAN LAMA",
+     "at": 27.06,
+     "until": 31.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 29.2,
+     "until": 31.38,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SENANG!",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 27.08,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       27.08
+      ],
+      [
+       "kira/sapa.png",
+       31.38
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 31.38,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 31.48,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.7,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

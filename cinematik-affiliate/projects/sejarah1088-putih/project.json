@@ -1,0 +1,410 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, Kertas 1, objektif, calon.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEJARAH KERTAS 1...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang Kertas 1 Sejarah",
+     "key": "MARKAH HAMPIR PENUH",
+     "at": 0.0,
+     "until": 3.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "padahal esei dia",
+     "key": "BIASA-BIASA JE?",
+     "at": 3.82,
+     "until": 6.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       0.0
+      ],
+      [
+       "kira/berfikir.png",
+       3.82
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 2.7,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "HAMPIR PENUH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 6.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 5.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia tahu, objektif tu markah",
+     "key": "PALING SENANG NAK KUTIP",
+     "at": 6.24,
+     "until": 10.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.74,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       5.74
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 7.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "OBJEKTIF",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 10.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 9.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "habiskan masa",
+     "key": "HAFAL ESEI",
+     "at": 10.06,
+     "until": 12.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "Kertas 1 jawab",
+     "key": "IKUT RASA",
+     "at": 12.9,
+     "until": 14.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "akhirnya markah tercicir dekat soalan yang",
+     "key": "SEPATUTNYA PERCUMA",
+     "at": 14.64,
+     "until": 18.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 9.56,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/stres.png",
+       9.56
+      ],
+      [
+       "kira/berfikir.png",
+       12.9
+      ],
+      [
+       "kira/sedih.png",
+       14.64
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 11.0,
+     "until": 12.9,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "HAFAL ESEI"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Game die",
+     "at": 13.5,
+     "until": 14.64,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "IKUT RASA"
+    },
+    {
+     "kind": "stamp",
+     "text": "MARKAH TERCICIR!",
+     "at": 15.9,
+     "x": 660,
+     "y": 1400,
+     "rot": -7,
+     "size": 48
+    }
+   ]
+  },
+  {
+   "start": 18.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "1088 SOALAN OBJEKTIF SEJARAH",
+     "at": 18.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "1088 soalan objektif",
+     "key": "SEJARAH",
+     "at": 18.62,
+     "until": 23.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 18.67,
+     "until": 23.0,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma jawab satu bab,",
+     "key": "SEMAK, ULANG",
+     "at": 23.0,
+     "until": 25.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "soalan.jpg",
+     "at": 23.05,
+     "until": 25.92,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.92,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 25.42,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "seribu lebih soalan, ikut",
+     "key": "FORMAT PEPERIKSAAN",
+     "at": 25.92,
+     "until": 29.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 25.97,
+     "until": 29.5,
+     "x": 540,
+     "y": 1120,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 28.4,
+     "until": 29.5,
+     "x": 860,
+     "y": 1520,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 29.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 29.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila dah biasa, setiap soalan nampak macam",
+     "key": "PERNAH DIJAWAB",
+     "at": 29.5,
+     "until": 34.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 31.6,
+     "until": 34.2,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SENANG!",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 29.52,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       29.52
+      ],
+      [
+       "kira/sapa.png",
+       34.2
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 34.2,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 34.3,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 290,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 34.5,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

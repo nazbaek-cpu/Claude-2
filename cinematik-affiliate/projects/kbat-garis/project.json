@@ -1,0 +1,509 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Terapi KBAT Sejarah SPM, rumus P.E.S., huraian, skema jawapan, calon SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DUA CALON...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dua calon tulis",
+     "key": "ISI YANG SAMA",
+     "at": 0.0,
+     "until": 3.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       0.05
+      ],
+      [
+       "kira/bangga.png",
+       4.3
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.35,
+     "x": 810,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       0.35
+      ],
+      [
+       "adik/sedih.png",
+       5.54
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "seorang dapat penuh,",
+     "key": "SEORANG SEPARUH",
+     "at": 3.6,
+     "until": 6.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 4.3,
+     "until": 99,
+     "x": 270,
+     "y": 1620,
+     "size": 160,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PENUH",
+     "good": true
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 5.54,
+     "until": 99,
+     "x": 810,
+     "y": 1620,
+     "size": 160,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEPARUH"
+    },
+    {
+     "kind": "say",
+     "text": "isi sama,",
+     "key": "KENAPA?",
+     "at": 6.2,
+     "until": 7.44,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 6.46,
+     "until": 99,
+     "x": 810,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 7.44,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 6.94,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab",
+     "key": "CARA DIA SUSUN",
+     "at": 7.44,
+     "until": 9.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.94,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       6.94
+      ],
+      [
+       "kira/menerang.png",
+       8.68
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/fail.png",
+     "at": 8.3,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TERSUSUN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 9.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SEPARUH...",
+     "at": 8.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "calon yang dapat separuh tulis",
+     "key": "BERTERABUR",
+     "at": 9.42,
+     "until": 12.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "pemeriksa tak jumpa",
+     "key": "HURAIAN",
+     "at": 12.12,
+     "until": 14.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 8.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/stres.png",
+       8.92
+      ],
+      [
+       "adik/berfikir.png",
+       12.12
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 10.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BERTERABUR"
+    },
+    {
+     "kind": "stamp",
+     "text": "MANA HURAIAN?",
+     "at": 13.0,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERAPI KBAT SEJARAH",
+     "at": 13.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Terapi KBAT Sejarah ajar",
+     "key": "RUMUS P.E.S.",
+     "at": 14.06,
+     "until": 17.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 14.11,
+     "until": 17.64,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "setiap isi mesti ada",
+     "key": "HURAIAN",
+     "at": 17.64,
+     "until": 20.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "jenis.jpg",
+     "at": 17.69,
+     "until": 20.08,
+     "x": 540,
+     "y": 1115,
+     "w": 820,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma isi kotak ikut langkah, jawapan jadi",
+     "key": "MACAM SKEMA",
+     "at": 20.08,
+     "until": 24.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 20.1,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       20.1
+      ],
+      [
+       "kira/gembira.png",
+       22.26
+      ]
+     ],
+     "enter": "slide",
+     "until": 24.06
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 21.1,
+     "until": 22.26,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ISI KOTAK"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 22.7,
+     "until": 24.06,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MACAM SKEMA",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 24.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 23.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "siap video penerangan &",
+     "key": "SKEMA JAWAPAN LENGKAP",
+     "at": 24.06,
+     "until": 27.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 24.11,
+     "until": 27.06,
+     "x": 540,
+     "y": 1115,
+     "w": 820,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.2,
+     "until": 27.06,
+     "x": 900,
+     "y": 1500,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "isi yang sama, tapi",
+     "key": "MARKAH PENUH",
+     "at": 27.06,
+     "until": 29.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.08,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       27.08
+      ],
+      [
+       "kira/sapa.png",
+       29.3
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.3,
+     "x": 810,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       27.3
+      ]
+     ],
+     "until": 29.3
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 29.3,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 29.4,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 330,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.6,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

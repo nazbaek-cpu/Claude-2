@@ -308,8 +308,8 @@
     },
     {
      "kind": "say",
-     "text": "cuma tekan butang",
-     "key": "2 SAAT",
+     "text": "cuma tekan butang 2 saat,",
+     "key": "MOD ARUS RENDAH ON",
      "at": 16.68,
      "until": 18.52,
      "y": 395,
@@ -319,8 +319,8 @@
     },
     {
      "kind": "say",
-     "text": "earbuds & jam cas sampai",
-     "key": "PENUH",
+     "text": "tahap pengecasan bertukar,",
+     "key": "SESUAI EARBUDS & JAM",
      "at": 18.52,
      "until": 20.86,
      "y": 395,
@@ -337,7 +337,8 @@
      "size": 380,
      "rot": -2,
      "anim": "pop",
-     "edge": 11
+     "edge": 11,
+     "tag": "TEKAN 2 SAAT"
     },
     {
      "kind": "sticker",
@@ -353,15 +354,16 @@
     },
     {
      "kind": "sticker",
-     "img": "icons/earbuds_watch_ok.png",
+     "img": "icons/earbuds_watch.png",
      "at": 18.52,
      "until": 99,
-     "x": 690,
-     "y": 1250,
-     "size": 480,
+     "x": 720,
+     "y": 1200,
+     "size": 420,
      "rot": -2,
      "anim": "pop",
      "edge": 11,
+     "tag": "ARUS RENDAH",
      "good": true
     },
     {
@@ -370,7 +372,7 @@
      "at": 20.1,
      "until": 99,
      "x": 300,
-     "y": 1260,
+     "y": 1300,
      "size": 110
     }
    ]

@@ -1,0 +1,496 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Addmath Express, Add Maths, video penerangan, skema jawapan bertulis.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADD MATHS...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang tersangkut soalan Add Maths",
+     "key": "PUKUL 11 MALAM",
+     "at": 0.0,
+     "until": 3.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi 5 minit lepas tu",
+     "key": "DAH FAHAM?",
+     "at": 3.64,
+     "until": 6.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/berfikir.png",
+       0.05
+      ],
+      [
+       "adikbiru/gembira.png",
+       4.12
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/jam.png",
+     "at": 2.7,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "11 MALAM"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 6.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 5.68,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia terus buka",
+     "key": "VIDEO CIKGU TERANGKAN",
+     "at": 6.18,
+     "until": 9.34,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "guna",
+     "key": "PHONE JE",
+     "at": 9.34,
+     "until": 10.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.68,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/idea.png",
+       5.68
+      ],
+      [
+       "adikbiru/setuju.png",
+       9.34
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "phone.jpg",
+     "at": 7.56,
+     "until": 10.48,
+     "x": 790,
+     "y": 1090,
+     "w": 480,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 10.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 9.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "pelajar lain?",
+     "key": "TERSANGKUT",
+     "at": 10.48,
+     "until": 12.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tunggu esok",
+     "key": "TANYA CIKGU",
+     "at": 12.36,
+     "until": 13.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "esok cikgu",
+     "key": "TAK SEMPAT",
+     "at": 13.94,
+     "until": 15.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "soalan tu terus",
+     "key": "DIBIARKAN",
+     "at": 15.38,
+     "until": 17.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 9.98,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/stres.png",
+       9.98
+      ],
+      [
+       "adikbiru/berfikir.png",
+       12.36
+      ],
+      [
+       "adikbiru/sedih.png",
+       13.94
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 11.0,
+     "until": 12.36,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 12.9,
+     "until": 15.38,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ESOK"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 14.5,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "DIBIARKAN!",
+     "at": 16.0,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 17.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADDMATH EXPRESS",
+     "at": 16.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Addmath Express ada video penerangan untuk",
+     "key": "SETIAP SOALAN",
+     "at": 17.22,
+     "until": 20.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku4.jpg",
+     "at": 17.27,
+     "until": 20.9,
+     "x": 310,
+     "y": 1110,
+     "w": 410,
+     "rot": -3,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "buku5.jpg",
+     "at": 17.6,
+     "until": 20.9,
+     "x": 770,
+     "y": 1130,
+     "w": 410,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 20.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma buka video terus dari buku guna phone,",
+     "key": "TANPA PASSWORD",
+     "at": 20.9,
+     "until": 25.34,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 20.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/setuju.png",
+       20.92
+      ],
+      [
+       "adikbiru/gembira.png",
+       24.16
+      ]
+     ],
+     "enter": "slide",
+     "until": 25.34
+    },
+    {
+     "kind": "card",
+     "img": "phone.jpg",
+     "at": 21.7,
+     "until": 25.34,
+     "x": 790,
+     "y": 1090,
+     "w": 480,
+     "rot": -3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.34,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 24.84,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "siap skema jawapan bertulis,",
+     "key": "JALAN KERJA PENUH",
+     "at": 25.34,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "skema.jpg",
+     "at": 25.39,
+     "until": 30.0,
+     "x": 540,
+     "y": 1130,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 28.4,
+     "until": 30.0,
+     "x": 860,
+     "y": 1560,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 29.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "macam ada",
+     "key": "CIKGU PERIBADI",
+     "at": 30.0,
+     "until": 31.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bila-bila masa",
+     "key": "ANAK PERLUKAN",
+     "at": 31.36,
+     "until": 33.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 30.02,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/raikan.png",
+       30.02
+      ],
+      [
+       "adikbiru/sapa.png",
+       33.32
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 30.6,
+     "until": 33.32,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CIKGU PERIBADI",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 33.32,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku4.jpg",
+     "at": 33.42,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 260,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 33.6,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

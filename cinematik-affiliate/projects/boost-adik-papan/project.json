@@ -1,0 +1,442 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Matematik SPM Final Boost, soalan berpotensi tinggi, Cikgu Yasir, mak ayah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cuba bayangkan anak keluar",
+     "key": "DEWAN MATEMATIK SPM",
+     "at": 0.0,
+     "until": 3.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "terus",
+     "key": "SENYUM TENGOK MAK AYAH",
+     "at": 3.64,
+     "until": 5.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       0.05
+      ],
+      [
+       "adik/raikan.png",
+       4.12
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 2.3,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DEWAN SPM"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "itu tanda dia dah bersedia dengan",
+     "key": "SOALAN YANG BETUL",
+     "at": 5.38,
+     "until": 8.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.88,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/idea.png",
+       4.88
+      ],
+      [
+       "adik/gembira.png",
+       7.48
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/latihan.png",
+     "at": 6.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 250,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN BETUL",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 8.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK LAIN...",
+     "at": 7.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak lain? beli",
+     "key": "BUKU BANYAK",
+     "at": 8.48,
+     "until": 10.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "buat semua,",
+     "key": "PENAT",
+     "at": 10.68,
+     "until": 12.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "tapi soalan yang penting",
+     "key": "TAK CUKUP DIULANG",
+     "at": 12.56,
+     "until": 15.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 7.98,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       7.98
+      ],
+      [
+       "adik/stres.png",
+       11.14
+      ],
+      [
+       "adik/sedih.png",
+       13.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/buku_spm.png",
+     "at": 9.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 270,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BANYAK BUKU"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 13.0,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK CUKUP ULANG!",
+     "at": 14.3,
+     "x": 720,
+     "y": 1440,
+     "rot": -7,
+     "size": 44
+    }
+   ]
+  },
+  {
+   "start": 15.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 15.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "lebih 200 muka surat",
+     "key": "SOALAN BERPOTENSI TINGGI",
+     "at": 15.64,
+     "until": 20.78,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 15.69,
+     "until": 20.78,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "dikarang Cikgu Yasir,",
+     "key": "GURU CEMERLANG MATEMATIK",
+     "at": 20.78,
+     "until": 23.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 20.83,
+     "until": 23.62,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 23.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 23.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma",
+     "key": "ULANG LATIHAN",
+     "at": 23.62,
+     "until": 25.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "jawapan lengkap ada di belakang",
+     "key": "SETIAP TOPIK",
+     "at": 25.3,
+     "until": 27.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 23.64,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       23.64
+      ],
+      [
+       "adik/gembira.png",
+       25.3
+      ]
+     ],
+     "enter": "slide",
+     "until": 27.9
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/latihan.png",
+     "at": 24.36,
+     "until": 27.9,
+     "x": 790,
+     "y": 1060,
+     "size": 250,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ULANG"
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.8,
+     "until": 27.9,
+     "x": 870,
+     "y": 1480,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 27.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "senyum anak keluar dewan,",
+     "key": "ITU YANG MAK AYAH NAK TENGOK",
+     "at": 27.9,
+     "until": 31.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.92,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       27.92
+      ],
+      [
+       "adik/sapa.png",
+       31.48
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 29.2,
+     "until": 31.48,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SENYUM!",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 31.48,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 31.58,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.75,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

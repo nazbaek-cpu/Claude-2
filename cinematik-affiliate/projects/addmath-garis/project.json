@@ -1,0 +1,483 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Add Maths, Form 4.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADD MATHS FORM 4...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar Form 4 yang Add Maths dia",
+     "key": "BOLEH BUAT SENDIRI",
+     "at": 0.0,
+     "until": 3.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tanpa tengok",
+     "key": "CONTOH CIKGU?",
+     "at": 3.02,
+     "until": 5.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       0.0
+      ],
+      [
+       "abang/fokus.png",
+       3.02
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Abacus",
+     "at": 1.7,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ADD MATHS"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia dah latih",
+     "key": "TOPIK DEMI TOPIK",
+     "at": 5.0,
+     "until": 7.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       4.5
+      ],
+      [
+       "abang/senarai.png",
+       6.34
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 6.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TOPIK DEMI TOPIK",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 7.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 6.82,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dalam kelas",
+     "key": "ANGGUK FAHAM",
+     "at": 7.32,
+     "until": 9.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "balik rumah buka soalan,",
+     "key": "SATU LANGKAH PUN",
+     "at": 9.96,
+     "until": 12.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "tak tahu",
+     "key": "NAK MULA",
+     "at": 12.58,
+     "until": 13.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 6.82,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       6.82
+      ],
+      [
+       "abang/berfikir.png",
+       9.96
+      ],
+      [
+       "abang/stres.png",
+       12.42
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 8.3,
+     "until": 9.96,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DALAM KELAS"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kerja_rumah.png",
+     "at": 10.5,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 11.9,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK TAHU MULA!",
+     "at": 12.6,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "LATIHAN TOPIKAL ADD MATHS",
+     "at": 13.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Latihan Topikal Matematik Tambahan",
+     "key": "TINGKATAN 4",
+     "at": 13.5,
+     "until": 16.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 13.55,
+     "until": 16.46,
+     "x": 540,
+     "y": 1110,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.46,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 15.96,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma habiskan satu topik, baru",
+     "key": "PINDAH TOPIK LAIN",
+     "at": 16.46,
+     "until": 20.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 16.48,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       16.48
+      ],
+      [
+       "abang/gembira.png",
+       18.74
+      ]
+     ],
+     "enter": "slide",
+     "until": 20.06
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Check mark button",
+     "at": 17.9,
+     "until": 18.74,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TOPIK 1"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Right arrow",
+     "at": 18.74,
+     "until": 20.06,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TOPIK 2"
+    }
+   ]
+  },
+  {
+   "start": 20.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 19.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Fungsi sampai Nombor Indeks, ikut",
+     "key": "SUSUNAN BUKU TEKS",
+     "at": 20.06,
+     "until": 23.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "topik.jpg",
+     "at": 20.11,
+     "until": 21.76,
+     "x": 540,
+     "y": 1110,
+     "w": 760,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "soalan.jpg",
+     "at": 21.76,
+     "until": 23.38,
+     "x": 540,
+     "y": 1110,
+     "w": 780,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.7,
+     "until": 23.38,
+     "x": 900,
+     "y": 1480,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 23.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 22.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila dah buat sendiri berulang kali, faham dia",
+     "key": "BETUL-BETUL MELEKAT",
+     "at": 23.38,
+     "until": 27.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 25.5,
+     "until": 27.82,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "FAHAM!",
+     "good": true
+    },
+    {
+     "kind": "doodle",
+     "at": 23.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       23.4
+      ],
+      [
+       "abang/sapa.png",
+       27.82
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.82,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 27.92,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 260,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.1,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

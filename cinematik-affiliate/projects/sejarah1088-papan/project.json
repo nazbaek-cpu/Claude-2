@@ -1,0 +1,510 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, rujukan muka surat buku teks, jawapan dengan penerangan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang",
+     "key": "SALAH JAWAB SEJARAH",
+     "at": 0.0,
+     "until": 2.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi",
+     "key": "MAKIN PANDAI?",
+     "at": 2.62,
+     "until": 4.04,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.05
+      ],
+      [
+       "abang/yakin.png",
+       3.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 1.36,
+     "until": 3.0,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SALAH"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 3.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MAKIN PANDAI",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.04,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.54,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "setiap kali salah, dia tahu terus nak baca balik",
+     "key": "MUKA SURAT MANA",
+     "at": 4.04,
+     "until": 8.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.54,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.54
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "rujukan.jpg",
+     "at": 6.95,
+     "until": 8.22,
+     "x": 805,
+     "y": 1120,
+     "w": 470,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 8.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 7.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "salah,",
+     "key": "TENGOK JAWAPAN",
+     "at": 8.22,
+     "until": 10.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "lepas tu",
+     "key": "LUPA",
+     "at": 10.96,
+     "until": 12.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "kesilapan sama berulang masa",
+     "key": "PEPERIKSAAN",
+     "at": 12.3,
+     "until": 15.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 7.72,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       7.72
+      ],
+      [
+       "abang/terkejut.png",
+       11.4
+      ],
+      [
+       "abang/stres.png",
+       12.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 9.4,
+     "until": 10.96,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JAWAPAN"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 11.5,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 13.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PEPERIKSAAN"
+    },
+    {
+     "kind": "stamp",
+     "text": "SALAH LAGI!",
+     "at": 14.2,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 15.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "1088 SOALAN OBJEKTIF SEJARAH",
+     "at": 15.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "1088 soalan objektif",
+     "key": "SEJARAH",
+     "at": 15.62,
+     "until": 17.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 15.67,
+     "until": 17.98,
+     "x": 540,
+     "y": 1110,
+     "w": 540,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "setiap soalan ada rujukan",
+     "key": "MUKA SURAT BUKU TEKS",
+     "at": 17.98,
+     "until": 21.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "rujukan.jpg",
+     "at": 18.03,
+     "until": 21.26,
+     "x": 540,
+     "y": 1070,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 19.9,
+     "until": 21.26,
+     "x": 940,
+     "y": 1300,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 21.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 20.76,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma jawab, semak, buka buku teks",
+     "key": "DEKAT MUKA SURAT TU",
+     "at": 21.26,
+     "until": 25.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 21.28,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/senarai.png",
+       21.28
+      ],
+      [
+       "abang/fokus.png",
+       23.22
+      ]
+     ],
+     "enter": "slide",
+     "until": 25.2
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 21.9,
+     "until": 23.22,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JAWAB & SEMAK"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 23.22,
+     "until": 25.2,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BUKU TEKS",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 25.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 24.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "siap jawapan lengkap",
+     "key": "DENGAN PENERANGAN",
+     "at": 25.2,
+     "until": 27.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "soalan.jpg",
+     "at": 25.25,
+     "until": 27.42,
+     "x": 540,
+     "y": 1120,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.5,
+     "until": 27.42,
+     "x": 860,
+     "y": 1530,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 26.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "setiap kesilapan jadi satu fakta yang",
+     "key": "TAKKAN DIA LUPA",
+     "at": 27.42,
+     "until": 31.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.44,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       27.44
+      ],
+      [
+       "abang/sapa.png",
+       31.54
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 28.9,
+     "until": 31.54,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "FAKTA",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 31.54,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 31.64,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 290,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.8,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

@@ -1,0 +1,432 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Matematik SPM Final Boost, soalan berpotensi tinggi, subtopik penting SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang tak sempat habiskan",
+     "key": "SEMUA BAB MATEMATIK",
+     "at": 0.0,
+     "until": 3.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi masuk dewan",
+     "key": "TETAP YAKIN?",
+     "at": 3.5,
+     "until": 5.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.05
+      ],
+      [
+       "kira/bangga.png",
+       3.94
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/buku_spm.png",
+     "at": 1.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 270,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEMUA BAB"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.46,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.96,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia tahu",
+     "key": "BAB MANA PALING PENTING",
+     "at": 5.46,
+     "until": 8.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.96,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       4.96
+      ],
+      [
+       "kira/menerang.png",
+       6.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Bullseye",
+     "at": 6.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PALING PENTING"
+    }
+   ]
+  },
+  {
+   "start": 8.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 7.86,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "calon lain, cuba",
+     "key": "HABISKAN SEMUA",
+     "at": 8.36,
+     "until": 10.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "satu pun",
+     "key": "TAK MENDALAM",
+     "at": 10.84,
+     "until": 12.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "akhirnya topik yang keluar, dia cuma tahu",
+     "key": "SEPARUH",
+     "at": 12.3,
+     "until": 15.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 7.86,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       7.86
+      ],
+      [
+       "kira/stres.png",
+       10.84
+      ],
+      [
+       "kira/sedih.png",
+       13.3
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/buku_spm.png",
+     "at": 9.3,
+     "until": 12.3,
+     "x": 790,
+     "y": 1060,
+     "size": 270,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEMUA BAB"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 11.7,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "SEPARUH JE!",
+     "at": 14.0,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 15.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 14.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Matematik SPM Final Boost fokus",
+     "key": "SOALAN BERPOTENSI TINGGI",
+     "at": 15.3,
+     "until": 19.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 15.35,
+     "until": 19.08,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "semua subtopik penting SPM",
+     "key": "DALAM SATU BUKU",
+     "at": 19.08,
+     "until": 22.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 19.13,
+     "until": 22.2,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 21.0,
+     "until": 22.2,
+     "x": 900,
+     "y": 1390,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 22.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 21.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ulang yang penting sampai",
+     "key": "BETUL-BETUL MAHIR",
+     "at": 22.2,
+     "until": 25.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 22.22,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       22.22
+      ],
+      [
+       "kira/gembira.png",
+       24.14
+      ]
+     ],
+     "enter": "slide",
+     "until": 25.28
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/latihan.png",
+     "at": 23.0,
+     "until": 25.28,
+     "x": 790,
+     "y": 1060,
+     "size": 250,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ULANG",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 25.28,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 24.78,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bukan latih banyak, tapi",
+     "key": "LATIH YANG BETUL",
+     "at": 25.28,
+     "until": 27.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 25.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       25.3
+      ],
+      [
+       "kira/sapa.png",
+       27.92
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 26.3,
+     "until": 27.92,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BETUL!",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.92,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 28.02,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.2,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

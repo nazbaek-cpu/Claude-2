@@ -1,0 +1,545 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Matematik SPM Final Boost, bengkel kalkulator, rakaman, calon SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DUA CALON...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada dua calon guna",
+     "key": "KALKULATOR YANG SAMA",
+     "at": 0.0,
+     "until": 2.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       0.05
+      ],
+      [
+       "kira/bangga.png",
+       3.56
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.35,
+     "x": 810,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       0.35
+      ],
+      [
+       "adik/terkejut.png",
+       3.56
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/kalkulator.png",
+     "at": 1.5,
+     "until": 99,
+     "x": 540,
+     "y": 1380,
+     "size": 240,
+     "rot": 0,
+     "anim": "drop",
+     "edge": 11,
+     "tag": "SAMA"
+    },
+    {
+     "kind": "say",
+     "text": "tapi seorang siap kertas",
+     "key": "LAGI AWAL?",
+     "at": 2.58,
+     "until": 5.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 4.0,
+     "until": 99,
+     "x": 810,
+     "y": 760,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.02,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.52,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia tahu",
+     "key": "TEKNIK GUNA KALKULATOR",
+     "at": 5.02,
+     "until": 7.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.52,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       4.52
+      ],
+      [
+       "kira/menerang.png",
+       6.66
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/kalkulator.png",
+     "at": 6.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TEKNIK",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 7.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 7.18,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "calon lain, kira manual",
+     "key": "LANGKAH DEMI LANGKAH",
+     "at": 7.68,
+     "until": 10.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "masa",
+     "key": "HABIS",
+     "at": 10.94,
+     "until": 11.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "soalan terakhir",
+     "key": "TAK SEMPAT SENTUH",
+     "at": 11.92,
+     "until": 14.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 7.18,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       7.18
+      ],
+      [
+       "adik/stres.png",
+       10.94
+      ],
+      [
+       "adik/sedih.png",
+       12.3
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/formula.png",
+     "at": 8.6,
+     "until": 10.94,
+     "x": 790,
+     "y": 1060,
+     "size": 320,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KIRA MANUAL"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/jam.png",
+     "at": 10.94,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MASA HABIS"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK SEMPAT!",
+     "at": 12.94,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.02,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MATEMATIK SPM FINAL BOOST",
+     "at": 13.52,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Matematik SPM Final Boost ada",
+     "key": "BENGKEL KALKULATOR",
+     "at": 14.02,
+     "until": 16.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 14.07,
+     "until": 16.96,
+     "x": 540,
+     "y": 1120,
+     "w": 470,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "dalam bentuk",
+     "key": "RAKAMAN",
+     "at": 16.96,
+     "until": 18.34,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 17.01,
+     "until": 18.34,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.34,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 17.84,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma tengok, ikut, terus guna dalam",
+     "key": "LATIHAN",
+     "at": 18.34,
+     "until": 21.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 18.36,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       18.36
+      ],
+      [
+       "kira/gembira.png",
+       20.14
+      ]
+     ],
+     "enter": "slide",
+     "until": 21.64
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/laptop.png",
+     "at": 19.0,
+     "until": 20.14,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TENGOK"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/latihan.png",
+     "at": 20.14,
+     "until": 21.64,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "LATIHAN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 21.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 21.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "soalan terpilih, semua",
+     "key": "SUBTOPIK PENTING SPM",
+     "at": 21.64,
+     "until": 24.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ciri.jpg",
+     "at": 21.69,
+     "until": 26.12,
+     "x": 540,
+     "y": 1060,
+     "w": 900,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 23.8,
+     "until": 24.72,
+     "x": 900,
+     "y": 1390,
+     "size": 100
+    },
+    {
+     "kind": "say",
+     "text": "siap",
+     "key": "JAWAPAN LENGKAP",
+     "at": 24.72,
+     "until": 26.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.3,
+     "until": 26.12,
+     "x": 900,
+     "y": 1390,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 26.12,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 25.62,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kalkulator yang sama, tapi masa dan markah",
+     "key": "JAUH BEZA",
+     "at": 26.12,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 26.14,
+     "x": 270,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       26.14
+      ],
+      [
+       "kira/sapa.png",
+       30.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "doodle",
+     "at": 26.4,
+     "x": 810,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       26.4
+      ]
+     ],
+     "until": 30.0
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/kalkulator.png",
+     "at": 27.6,
+     "until": 30.0,
+     "x": 540,
+     "y": 1380,
+     "size": 230,
+     "rot": 0,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JAUH BEZA",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 30.0,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "buku.jpg",
+     "at": 30.1,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 250,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 30.3,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

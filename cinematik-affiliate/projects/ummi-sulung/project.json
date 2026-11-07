@@ -1,0 +1,542 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Kenapa Ummi Selalu Marah, kakak sulung.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK SULUNG...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kakak",
+     "key": "LAGI?",
+     "at": 0.0,
+     "until": 1.01,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "kenapa mesti",
+     "key": "KAKAK?",
+     "at": 1.01,
+     "until": 2.77,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/sedih.png",
+       0.05
+      ],
+      [
+       "kira/stres.png",
+       1.75
+      ]
+     ],
+     "enter": "slide"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.77,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SETIAP HARI...",
+     "at": 2.27,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "adik pecahkan barang,",
+     "key": "KAKAK KENA MARAH",
+     "at": 2.77,
+     "until": 5.87,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "adik bergaduh,",
+     "key": "KAKAK KENA MARAH",
+     "at": 5.87,
+     "until": 9.59,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "rumah bersepah,",
+     "key": "KAKAK JUGA KENA KEMAS",
+     "at": 9.59,
+     "until": 13.41,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.27,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       2.27
+      ],
+      [
+       "kira/sedih.png",
+       4.53
+      ],
+      [
+       "kira/stres.png",
+       7.25
+      ],
+      [
+       "kira/sedih.png",
+       11.21
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "adik/muka/ketawa.png",
+     "at": 3.0,
+     "until": 5.87,
+     "x": 790,
+     "y": 1000,
+     "size": 300,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ADIK"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/marah.png",
+     "at": 4.53,
+     "until": 5.87,
+     "x": 790,
+     "y": 1420,
+     "size": 260,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "adik/muka/marah.png",
+     "at": 5.87,
+     "until": 9.59,
+     "x": 790,
+     "y": 1000,
+     "size": 300,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ADIK GADUH"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/marah.png",
+     "at": 7.25,
+     "until": 9.59,
+     "x": 790,
+     "y": 1420,
+     "size": 260,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 9.8,
+     "until": 13.41,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BERSEPAH"
+    }
+   ]
+  },
+  {
+   "start": 13.41,
+   "items": [
+    {
+     "kind": "label",
+     "text": "LAMA-LAMA...",
+     "at": 12.91,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kakak rasa dia cuma ada untuk",
+     "key": "DIPERSALAHKAN",
+     "at": 13.41,
+     "until": 17.73,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 12.91,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/sedih.png",
+       12.91
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Broken heart",
+     "at": 14.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TAK DIHARGAI"
+    },
+    {
+     "kind": "stamp",
+     "text": "SALAH KAKAK!",
+     "at": 16.67,
+     "x": 540,
+     "y": 1480,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 17.73,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 17.23,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ummi pun",
+     "key": "BUKAN SENGAJA",
+     "at": 17.73,
+     "until": 20.39,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "ummi baru balik kerja,",
+     "key": "PENAT SANGAT",
+     "at": 20.39,
+     "until": 23.21,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/risau.png",
+     "at": 17.8,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 400,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "UMMI"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/sedih.png",
+     "at": 20.39,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 400,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PENAT"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Briefcase",
+     "at": 20.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BALIK KERJA"
+    }
+   ]
+  },
+  {
+   "start": 23.21,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KENAPA UMMI SELALU MARAH?",
+     "at": 22.71,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buku ni ceritakan kisah",
+     "key": "KAKAK ZAHRA",
+     "at": 23.21,
+     "until": 27.85,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 23.26,
+     "until": 27.85,
+     "x": 540,
+     "y": 1120,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "yang hadap",
+     "key": "BENDA SAMA",
+     "at": 27.85,
+     "until": 29.55,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "isi.jpg",
+     "at": 27.9,
+     "until": 29.55,
+     "x": 540,
+     "y": 1110,
+     "w": 820,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 29.55,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BILA BACA SAMA-SAMA...",
+     "at": 29.05,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak faham",
+     "key": "PENAT UMMI",
+     "at": 29.55,
+     "until": 31.37,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "ummi pula nampak",
+     "key": "HATI ANAK SULUNG",
+     "at": 31.37,
+     "until": 34.29,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 29.57,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       29.57
+      ],
+      [
+       "kira/gembira.png",
+       31.37
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/gembira.png",
+     "at": 31.6,
+     "until": 99,
+     "x": 790,
+     "y": 1000,
+     "size": 340,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "UMMI"
+    }
+   ]
+  },
+  {
+   "start": 34.29,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 33.79,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kakak bukan untuk",
+     "key": "DIPERSALAHKAN",
+     "at": 34.29,
+     "until": 36.85,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "kakak untuk",
+     "key": "DIHARGAI",
+     "at": 36.85,
+     "until": 38.83,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 34.31,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       34.31
+      ],
+      [
+       "kira/sapa.png",
+       38.83
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Red heart",
+     "at": 37.0,
+     "until": 38.83,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DIHARGAI",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 38.83,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 38.93,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 290,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 39.1,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

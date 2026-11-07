@@ -1,0 +1,460 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Buku Teks Padat Infografik Sejarah, calon SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MALAM SEBELUM SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa malam sebelum",
+     "key": "PEPERIKSAAN SEJARAH",
+     "at": 0.0,
+     "until": 2.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "ada calon yang",
+     "key": "DAH TIDUR AWAL",
+     "at": 2.24,
+     "until": 4.02,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi",
+     "key": "TETAP YAKIN?",
+     "at": 4.02,
+     "until": 5.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/setuju.png",
+       0.05
+      ],
+      [
+       "adikbiru/gembira.png",
+       4.36
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Sleeping face",
+     "at": 3.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TIDUR AWAL"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.52,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 5.02,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab ulang kaji dia cuma perlukan",
+     "key": "SATU BUKU NIPIS",
+     "at": 5.52,
+     "until": 9.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.02,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/idea.png",
+       5.02
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 7.7,
+     "until": 9.06,
+     "x": 790,
+     "y": 1080,
+     "w": 430,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 9.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 8.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "selak buku teks tebal sampai",
+     "key": "TENGAH MALAM",
+     "at": 9.06,
+     "until": 13.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "satu bab pun",
+     "key": "TAK SEMPAT HABIS",
+     "at": 13.1,
+     "until": 14.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "esok masuk dewan",
+     "key": "MAMAI",
+     "at": 14.9,
+     "until": 17.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 8.56,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/berfikir.png",
+       8.56
+      ],
+      [
+       "adikbiru/stres.png",
+       13.1
+      ],
+      [
+       "adikbiru/sedih.png",
+       15.54
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 10.2,
+     "until": 11.8,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BUKU TEBAL"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Alarm clock",
+     "at": 11.8,
+     "until": 13.1,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TENGAH MALAM"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 13.9,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "MAMAI!",
+     "at": 15.9,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 17.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BUKU TEKS PADAT INFOGRAFIK",
+     "at": 16.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Buku Teks Padat",
+     "key": "INFOGRAFIK SEJARAH",
+     "at": 17.3,
+     "until": 19.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "ringkaskan buku teks jadi",
+     "key": "INFOGRAFIK",
+     "at": 19.56,
+     "until": 22.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 17.35,
+     "until": 19.56,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "kedaulatan.jpg",
+     "at": 19.56,
+     "until": 22.14,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.14,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 21.64,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma selak, tengok gambar rajah,",
+     "key": "FAKTA TERUS MASUK",
+     "at": 22.14,
+     "until": 26.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sosial.jpg",
+     "at": 22.19,
+     "until": 26.42,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 26.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 25.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tarikh dan peristiwa penting",
+     "key": "DISUSUN IKUT BAB",
+     "at": 26.42,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 26.47,
+     "until": 30.0,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 29.0,
+     "until": 30.0,
+     "x": 920,
+     "y": 1380,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 29.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ulang kaji akhir jadi pantas,",
+     "key": "TIDUR PUN CUKUP",
+     "at": 30.0,
+     "until": 32.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 30.02,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/raikan.png",
+       30.02
+      ],
+      [
+       "adikbiru/sapa.png",
+       32.92
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Sleeping face",
+     "at": 31.4,
+     "until": 32.92,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CUKUP TIDUR"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 32.92,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 33.02,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 320,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 33.2,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,472 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Buku Teks Padat Infografik Sejarah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang",
+     "key": "TUTUP BUKU SEJARAH",
+     "at": 0.0,
+     "until": 2.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi boleh terangkan balik",
+     "key": "SATU BAB",
+     "at": 2.4,
+     "until": 4.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "macam",
+     "key": "BACA DARI KERTAS?",
+     "at": 4.28,
+     "until": 5.74,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.05
+      ],
+      [
+       "kira/menerang.png",
+       2.72
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 1.2,
+     "until": 2.72,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TUTUP BUKU"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 3.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TERANGKAN",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.74,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 5.24,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia ingat guna",
+     "key": "GAMBAR",
+     "at": 5.74,
+     "until": 7.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bukan guna",
+     "key": "AYAT",
+     "at": 7.84,
+     "until": 9.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.24,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       5.24
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Framed picture",
+     "at": 6.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "GAMBAR",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 9.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 8.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca perenggan panjang",
+     "key": "BERULANG KALI",
+     "at": 9.0,
+     "until": 12.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tutup buku je,",
+     "key": "SEMUA AYAT BERCAMPUR",
+     "at": 12.48,
+     "until": 15.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 8.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       8.5
+      ],
+      [
+       "kira/stres.png",
+       12.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 10.4,
+     "until": 12.48,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PERENGGAN PANJANG"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 13.2,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "BERCAMPUR!",
+     "at": 14.0,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 15.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BUKU TEKS PADAT INFOGRAFIK",
+     "at": 14.68,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Buku Teks Padat",
+     "key": "INFOGRAFIK SEJARAH",
+     "at": 15.18,
+     "until": 17.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 15.23,
+     "until": 17.46,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "tukar setiap bab jadi",
+     "key": "RAJAH, CARTA & WARNA",
+     "at": 17.46,
+     "until": 20.78,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kedaulatan.jpg",
+     "at": 17.51,
+     "until": 20.78,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.78,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 20.28,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma tengok",
+     "key": "SUSUNAN INFOGRAFIK",
+     "at": 20.78,
+     "until": 23.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bayang balik",
+     "key": "DALAM KEPALA",
+     "at": 23.22,
+     "until": 24.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "sosial.jpg",
+     "at": 20.83,
+     "until": 24.48,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 24.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 23.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Tingkatan 4 dan Tingkatan 5,",
+     "key": "IKUT BUKU TEKS",
+     "at": 24.48,
+     "until": 27.78,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 24.53,
+     "until": 27.78,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.6,
+     "until": 27.78,
+     "x": 920,
+     "y": 1380,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 27.78,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 27.28,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila otak simpan gambar, fakta sejarah",
+     "key": "SUSAH NAK HILANG",
+     "at": 27.78,
+     "until": 31.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 27.8,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       27.8
+      ],
+      [
+       "kira/sapa.png",
+       31.4
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 29.4,
+     "until": 31.4,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MELEKAT",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 31.4,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 31.5,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 320,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.7,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

@@ -1,6 +1,6 @@
-# Template minimalis (tadabbur)
+# Template arab
 
-Panggil: **"guna template minimalis"**. Dianalisis dari video rujukan tadabbur 1 min 51 s ("aku hidup untuk apa?",
+Panggil: **"guna template arab"**. Dianalisis dari video rujukan tadabbur 1 min 51 s ("aku hidup untuk apa?",
 Surah Al-Mu'minun 23:115), 576x1024, 30 fps. Rujukan untuk corak dan rentak sahaja: kita tidak guna semula video,
 watak atau aset pencipta asal. Semua grafik dilukis sendiri.
 

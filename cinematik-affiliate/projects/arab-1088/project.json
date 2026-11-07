@@ -1,0 +1,185 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah Tingkatan 3, UPSA, UASA, Google Form, jawapan lengkap dengan penerangan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.84,
+   "line": "Kenapa ada pelajar Tingkatan 3 yang Sejarah dia senang je?",
+   "keys": [
+    "Tingkatan 3",
+    "senang je?"
+   ],
+   "illus": {
+    "kind": "ask",
+    "smile_at": 2.66
+   }
+  },
+  {
+   "start": 3.84,
+   "end": 6.62,
+   "line": "Sebab dia dah mula latih dari Tingkatan 1.",
+   "keys": [
+    "Tingkatan 1."
+   ],
+   "card": {
+    "kind": "key",
+    "word": "MULA AWAL",
+    "sub": "latih dari Tingkatan 1",
+    "y": 380
+   },
+   "illus": {
+    "kind": "stairs",
+    "climb_at": 0.6,
+    "beat": 0.75,
+    "y": 1010
+   }
+  },
+  {
+   "start": 6.62,
+   "end": 10.68,
+   "line": "Pelajar lain? Tunggu dah dekat peperiksaan baru nak kejar.",
+   "keys": [
+    "kejar."
+   ],
+   "illus": {
+    "kind": "hourglass"
+   },
+   "label": "pelajar lain",
+   "label_y": 420
+  },
+  {
+   "start": 10.68,
+   "end": 14.54,
+   "line": "3 tahun punya fakta, nak hafal dalam sebulan.",
+   "keys": [
+    "3 tahun",
+    "sebulan."
+   ],
+   "illus": {
+    "kind": "books",
+    "cal_at": 13.2
+   }
+  },
+  {
+   "start": 14.54,
+   "end": 19.76,
+   "line": "1088 Soalan Objektif Sejarah ada untuk Tingkatan 1, 2 dan 3.",
+   "keys": [
+    "1088",
+    "1, 2 dan 3."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 640,
+    "max_h": 820,
+    "y": 640
+   },
+   "pills": [
+    [
+     "Tingkatan 1",
+     17.36
+    ],
+    [
+     "Tingkatan 2",
+     18.36
+    ],
+    [
+     "Tingkatan 3",
+     19.04
+    ]
+   ],
+   "pills_y": 1170
+  },
+  {
+   "start": 19.76,
+   "end": 23.78,
+   "line": "Anak cuma ikut buku tingkatan dia, satu bab demi satu bab.",
+   "keys": [
+    "satu",
+    "bab",
+    "demi"
+   ],
+   "illus": {
+    "kind": "path",
+    "nodes": 8
+   }
+  },
+  {
+   "start": 23.78,
+   "end": 26.98,
+   "line": "Ikut bab buku teks, siap UPSA dan UASA.",
+   "keys": [
+    "UPSA",
+    "UASA."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kandungan.jpg",
+    "w": 560,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "UPSA",
+     25.74
+    ],
+    [
+     "UASA",
+     26.52
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 26.98,
+   "end": 31.34,
+   "line": "Mula awal, asas kukuh, Sejarah takkan jadi beban.",
+   "keys": [
+    "Mula awal,",
+    "kukuh,",
+    "beban."
+   ],
+   "illus": {
+    "kind": "glow",
+    "words": [
+     [
+      "mula awal",
+      27.0
+     ],
+     [
+      "asas kukuh",
+      28.2
+     ]
+    ]
+   }
+  },
+  {
+   "start": 31.34,
+   "end": 33.1,
+   "line": "Tekan link dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 420,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020
+   }
+  }
+ ],
+ "cta": {
+  "at": 31.6,
+  "text": "Tekan link dekat bawah"
+ }
+}

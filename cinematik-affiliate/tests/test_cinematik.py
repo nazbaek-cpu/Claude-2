@@ -433,3 +433,19 @@ def test_fx_phone_mockup_and_orbit(tmp_path):
     assert len(fx.orbit_passes(cfg["fx"][1])) >= 1
     ev = [k for _, k in sfx.events({"fx": cfg["fx"], "segments": [], "subs": [], "duration": 5})]
     assert ev.count("whoosh") == 2 and "pop" in ev and "swish" in ev
+
+
+def test_arab_frame_renders(tmp_path):
+    """template arab: a frame with a key card, an illustration and a subtitle card renders at 1080x1920"""
+    import arab
+    cfg = {"bg": "putih", "scenes": [
+        {"start": 0.0, "end": 3.0, "line": "Mula awal, asas kukuh.", "keys": ["kukuh."],
+         "card": {"kind": "key", "word": "MULA AWAL", "sub": "latih dari awal"}, "illus": {"kind": "stairs"}},
+        {"start": 3.0, "end": 6.0, "line": "Satu bab demi satu bab.", "keys": ["bab"], "illus": {"kind": "path"}}],
+        "cta": {"at": 5.0}}
+    words = [{"w": "Mula", "s": 0.1, "e": 0.4}, {"w": "awal,", "s": 0.5, "e": 0.9}, {"w": "Satu", "s": 3.2, "e": 3.5}]
+    bg = arab.background("putih")
+    for t in (0.2, 1.5, 4.0, 5.5):
+        im = arab.frame(cfg, str(tmp_path), bg, words, t)
+        assert im.size == (1080, 1920)
+    assert len(arab.sfx_track(cfg, 6.0)) > 0

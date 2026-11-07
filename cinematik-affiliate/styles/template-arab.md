@@ -70,3 +70,22 @@ Untuk video jualan: tukar CTA kepada produk (buku), letak gambar buku dalam kad 
   sebelum render. Jangan menjana teks Arab dari ingatan.
 - Satu ilustrasi pada satu masa; ruang kosong ialah sebahagian gaya.
 - Tiada watak kartun berwarna-warni atau sticker tebal (itu template kertas).
+
+## Cara bina (kod)
+
+Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` dengan `"type": "arab"`:
+
+```json
+{"type": "arab", "source": "input/vo.mp4", "bg": "putih",
+ "scenes": [{"start": 0.0, "end": 3.8, "line": "ayat VO penuh", "keys": ["kata kunci"],
+             "illus": {"kind": "ask|stairs|hourglass|books|path|glow|wave"},
+             "card": {"kind": "photo", "img": "cover.jpg"} ,
+             "pills": [["UPSA", 25.7]], "label": "sumber"}],
+ "cta": {"at": 31.6, "text": "Tekan link dekat bawah"}}
+```
+
+- `card` `"kind": "key"` ialah kad KATA KUNCI (`word`, `sub`); `"photo"` ialah gambar produk dalam kad putih.
+- `bg`: `putih` (putih kertas) atau `krim` (macam rujukan).
+- `python arab.py projects/<nama>` untuk video, `python arab.py projects/<nama> 1.5 4 8` untuk lembaran stills.
+- VO tidak dinormalkan dalam renderer: naikkan gain semasa encode akhir sampai lebih kurang −10 LUFS.
+- Contoh: `projects/arab-1088/` (1088 Soalan Objektif Sejarah, latar putih).

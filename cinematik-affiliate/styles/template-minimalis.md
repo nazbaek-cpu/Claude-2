@@ -1,0 +1,72 @@
+# Template minimalis (tadabbur)
+
+Panggil: **"guna template minimalis"**. Dianalisis dari video rujukan tadabbur 1 min 51 s ("aku hidup untuk apa?",
+Surah Al-Mu'minun 23:115), 576x1024, 30 fps. Rujukan untuk corak dan rentak sahaja: kita tidak guna semula video,
+watak atau aset pencipta asal. Semua grafik dilukis sendiri.
+
+## Rupa
+
+- **Latar:** krim polos (lebih kurang #F3EBDD) dengan bingkai garis halus dan titik oren kecil di atas dan bawah tengah.
+  Tiada tekstur kayu atau kertas; banyak ruang kosong.
+- **Palet:** biru gelap (watak, ikon), oren (aksen, kata kunci), biru muda (tangga, cahaya), coklat (podium), merah
+  bata kecil (hati, pinggan). Tiga hingga empat warna sahaja.
+- **Watak:** figura ringkas (stick figure) berkepala bulat dan berkopiah, badan jubah satu warna. Tiada muka terperinci.
+  Warna badan bertukar ikut maksud (biru = biasa, oren = beramal / berjaya).
+- **Ikon:** rata (flat), garis nipis, tiada outline sticker putih: matahari, bulan, beg kerja, pinggan, telefon,
+  syiling RM, hati, buku, jam pasir, kompas, tanda soal.
+- **Kad ayat Arab:** kad putih bucu bulat di atas tengah, tulisan Arab besar, kata kunci Arab berwarna oren, rujukan
+  kecil di bucu (contoh "Al-Mu'minun · 23:115").
+- **Kad "KUNCI ARAB":** kad kecil berbingkai gelap: label oren kecil, satu perkataan Arab besar, maksud ringkas di bawah.
+- **Label sumber:** pil putih kecil di atas ilustrasi ("Ibnu Kathir", "As-Sa'di", "at-Tirmizi · hasan sahih").
+- **Sari kata:** kad putih lebar di bawah tengah (y lebih kurang 1450 pada 1080x1920), satu ayat VO. Perkataan
+  muncul ikut suara: yang belum disebut kelabu pudar, yang disebut gelap, kata kunci oren. Fon tulisan tangan bulat.
+- **Petunjuk babak:** dua titik kecil (oren + kelabu) di atas kad Arab.
+
+## Gerakan
+
+- Satu idea, satu ilustrasi kecil di tengah atas, bergerak perlahan dan berterusan (tiada potongan kasar):
+  - rutin harian: watak di tengah, ikon berpusing dalam bulatan putus-putus, label "↻ ulang"
+  - soalan: tanda soal timbul di atas kepala, kemudian gelembung fikiran
+  - "sia-sia": daun gugur melayang perlahan
+  - pilihan jalan: lengkung bertitik dari watak ke cahaya oren ("kembali kepada Allah"), jalan bercabang
+  - tujuan: watak bercahaya dengan garis sinar
+  - ujian amalan: tangga biru muda, watak oren naik ke puncak, bintang
+  - umur: jam pasir, pasir oren turun
+  - soalan akhirat: buku Ilmu, syiling Harta, watak Tubuh keluar satu demi satu dengan tanda soal
+  - kisah tokoh: watak dengan kompas / di podium dengan gelombang suara
+- Peralihan: pudar silang lembut (lebih kurang 0.4 s); kad Arab turun perlahan dari atas; tiada whip atau zoom.
+- Bunyi: muzik latar lembut, bunyi "ting" halus bila kad Arab atau kata kunci muncul. Bukan whoosh kuat.
+
+## Struktur (lebih kurang 100 s, 30 ayat pendek)
+
+| Bahagian | Contoh rujukan | Visual |
+|---|---|---|
+| Hook rutin | "Bangun, kerja, makan, tidur. Esok, ulang lagi." | ikon berpusing keliling watak |
+| Soalan peribadi | "Sebenarnya, aku hidup untuk apa?" | tanda soal, gelembung fikiran |
+| Ayat utama | Surah + nombor ayat, bacaan maksud | kad Arab |
+| Kata kunci | "Kata kuncinya: 'abathan'" | kad KUNCI ARAB |
+| Tafsir 2 hingga 3 ulama | Ibnu Kathir, As-Sa'di, Ibnu 'Asyur | label sumber + ilustrasi |
+| Ayat sokongan | Az-Zariyat 56, Al-Mulk 2 | kad Arab + ilustrasi |
+| Hadis | at-Tirmizi, empat soalan | jam pasir, ikon ilmu / harta / tubuh |
+| Kisah / kajian | Viktor Frankl, Umar bin Abdul Aziz | watak + kompas / podium |
+| Aplikasi | "Kerja jadi ibadah, rumah jadi amal, penat jadi pahala." | ikon bertukar |
+| Soalan penutup | "Esok bila bangun, tanya diri: hari ini aku hidup untuk apa?" | kembali ke babak pertama |
+| Doa + CTA | "Moga Allah jadikan setiap hari kita bermakna. Kongsikan kepada yang tersayang." | watak bercahaya |
+
+Untuk video jualan: tukar CTA kepada produk (buku), letak gambar buku dalam kad putih yang sama gaya, dan butang
+"Tekan link dekat bawah" berwarna oren.
+
+## Kenapa berkesan
+
+1. Hook relatable tanpa produk: rutin yang semua orang lalui, terus disusuli soalan besar.
+2. Kredibiliti berlapis: ayat, kemudian tafsir, hadis, sejarah, sains. Setiap sumber dinamakan di skrin.
+3. Visual tenang dan konsisten: penonton fokus pada ayat, bukan kesan.
+4. Sari kata ikut suara memberi rasa "dibacakan", sesuai untuk tazkirah.
+5. Penutup sambung balik ke hook (rutin yang sama, kini bermakna) dan CTA kongsi.
+
+## Peraturan
+
+- Ayat Al-Quran dan hadis mesti disalin dari sumber yang sah dan disemak (teks Arab, nombor ayat, darjat hadis)
+  sebelum render. Jangan menjana teks Arab dari ingatan.
+- Satu ilustrasi pada satu masa; ruang kosong ialah sebahagian gaya.
+- Tiada watak kartun berwarna-warni atau sticker tebal (itu template kertas).

@@ -1,0 +1,440 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "BTP Infografik Sejarah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada calon yang tak pernah",
+     "key": "TERTUKAR NAMA TOKOH",
+     "at": 0.0,
+     "until": 3.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.05
+      ],
+      [
+       "abang/yakin.png",
+       2.32
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 1.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TOKOH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.58,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.08,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab setiap tokoh ada",
+     "key": "GAMBARAN DALAM KEPALA",
+     "at": 3.58,
+     "until": 7.16,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.08,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       3.08
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Framed picture",
+     "at": 5.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "GAMBARAN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 7.16,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN...",
+     "at": 6.66,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "nama tokoh banyak,",
+     "key": "PERISTIWA BERLAPIS",
+     "at": 7.16,
+     "until": 11.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "masuk dewan, semua jadi",
+     "key": "KELIRU",
+     "at": 11.08,
+     "until": 13.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.66,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       6.66
+      ],
+      [
+       "abang/stres.png",
+       11.08
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 8.6,
+     "until": 11.08,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BANYAK NAMA"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 11.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "KELIRU!",
+     "at": 12.3,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BTP INFOGRAFIK SEJARAH",
+     "at": 12.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "BTP Infografik Sejarah",
+     "key": "TOKOH, PERISTIWA, TARIKH",
+     "at": 13.3,
+     "until": 17.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "semua dalam",
+     "key": "SATU VISUAL",
+     "at": 17.72,
+     "until": 19.12,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 13.35,
+     "until": 15.72,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "luar.jpg",
+     "at": 15.72,
+     "until": 19.12,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.12,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 18.62,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma tengok, otak",
+     "key": "TERUS KAITKAN",
+     "at": 19.12,
+     "until": 21.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 19.14,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/menerang.png",
+       19.14
+      ],
+      [
+       "abang/fokus.png",
+       20.24
+      ]
+     ],
+     "enter": "slide",
+     "until": 21.82
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 20.4,
+     "until": 21.82,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KAITKAN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 21.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 21.32,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "isi padat dari buku teks",
+     "key": "TINGKATAN 4 DAN 5",
+     "at": 21.82,
+     "until": 24.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 21.87,
+     "until": 24.98,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.0,
+     "until": 24.98,
+     "x": 920,
+     "y": 1380,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 24.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 24.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila ada gambaran, maklumat",
+     "key": "TAK BERCAMPUR",
+     "at": 24.98,
+     "until": 27.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 26.2,
+     "until": 27.8,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JELAS",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.8,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 27.900000000000002,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 320,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.1,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 25.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       25.0
+      ],
+      [
+       "abang/sapa.png",
+       27.8
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/papan.jpg"
+}

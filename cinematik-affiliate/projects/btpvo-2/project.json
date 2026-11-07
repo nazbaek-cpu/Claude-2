@@ -1,0 +1,462 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "BTP Infografik Sejarah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang nota sejarah dia",
+     "key": "NAMPAK KEMAS",
+     "at": 0.0,
+     "until": 3.04,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "macam",
+     "key": "NOTA CIKGU?",
+     "at": 3.04,
+     "until": 4.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.05
+      ],
+      [
+       "kira/bangga.png",
+       2.44
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 1.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "NOTA KEMAS",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.82,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia guna nota yang",
+     "key": "DAH SIAP TERSUSUN",
+     "at": 4.32,
+     "until": 7.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.82,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/idea.png",
+       3.82
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 5.9,
+     "until": 7.14,
+     "x": 790,
+     "y": 1080,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.14,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 6.64,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "habis berjam-jam",
+     "key": "SALIN NOTA",
+     "at": 7.14,
+     "until": 10.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "cantik, tapi masa untuk",
+     "key": "FAHAM TAK CUKUP",
+     "at": 10.62,
+     "until": 14.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.64,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/stres.png",
+       6.64
+      ],
+      [
+       "kira/sedih.png",
+       12.34
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pen.png",
+     "at": 8.6,
+     "until": 10.62,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SALIN"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hourglass not done",
+     "at": 10.62,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MASA HABIS"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK SEMPAT FAHAM!",
+     "at": 12.9,
+     "x": 700,
+     "y": 1440,
+     "rot": -7,
+     "size": 42
+    }
+   ]
+  },
+  {
+   "start": 14.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BTP INFOGRAFIK SEJARAH",
+     "at": 13.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "BTP Infografik Sejarah dah siap susun",
+     "key": "ISI BUKU TEKS",
+     "at": 14.06,
+     "until": 17.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "jadi",
+     "key": "INFOGRAFIK",
+     "at": 17.82,
+     "until": 19.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 14.11,
+     "until": 16.2,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "sosial.jpg",
+     "at": 16.2,
+     "until": 19.08,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 18.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma fokus",
+     "key": "FAHAM DAN INGAT",
+     "at": 19.08,
+     "until": 21.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bukan",
+     "key": "MENYALIN",
+     "at": 21.36,
+     "until": 22.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 19.1,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       19.1
+      ],
+      [
+       "kira/gembira.png",
+       20.86
+      ]
+     ],
+     "enter": "slide",
+     "until": 22.56
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 20.2,
+     "until": 22.56,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "FAHAM",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 22.56,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.06,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ikut bab,",
+     "key": "TINGKATAN 4 DAN 5",
+     "at": 22.56,
+     "until": 25.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kandungan.jpg",
+     "at": 22.61,
+     "until": 25.2,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.2,
+     "until": 25.2,
+     "x": 920,
+     "y": 1380,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 25.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 24.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masa menyalin, tukar jadi",
+     "key": "MASA MENGINGAT",
+     "at": 25.2,
+     "until": 27.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Brain",
+     "at": 26.3,
+     "until": 27.92,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "INGAT",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 27.92,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 28.020000000000003,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 320,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.220000000000002,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 25.22,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/bangga.png",
+       25.22
+      ],
+      [
+       "kira/sapa.png",
+       27.92
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

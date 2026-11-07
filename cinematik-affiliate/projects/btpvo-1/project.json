@@ -1,0 +1,474 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "BTP Infografik Sejarah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang",
+     "key": "AKTIF SUKAN",
+     "at": 0.0,
+     "until": 1.76,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi markah sejarah dia",
+     "key": "TETAP TINGGI?",
+     "at": 1.76,
+     "until": 4.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/berlari.png",
+       0.05
+      ],
+      [
+       "adikbiru/raikan.png",
+       3.12
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Soccer ball",
+     "at": 0.9,
+     "until": 3.12,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "AKTIF SUKAN"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 3.12,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TETAP TINGGI",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 3.86,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebab dia ulang kaji",
+     "key": "DI CELAH-CELAH MASA",
+     "at": 4.36,
+     "until": 6.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.86,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/idea.png",
+       3.86
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Stopwatch",
+     "at": 5.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CELAH MASA",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 6.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 6.44,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tunggu",
+     "key": "MASA LAPANG YANG PANJANG",
+     "at": 6.94,
+     "until": 10.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "masa tu",
+     "key": "TAK PERNAH DATANG",
+     "at": 10.26,
+     "until": 12.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.44,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/berfikir.png",
+       6.44
+      ],
+      [
+       "adikbiru/sedih.png",
+       10.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Hourglass not done",
+     "at": 8.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TUNGGU"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 10.9,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK DATANG!",
+     "at": 11.3,
+     "x": 760,
+     "y": 1440,
+     "rot": -7,
+     "size": 48
+    }
+   ]
+  },
+  {
+   "start": 12.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BTP INFOGRAFIK SEJARAH",
+     "at": 11.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "BTP Infografik Sejarah",
+     "key": "SEBESAR TAPAK TANGAN",
+     "at": 12.38,
+     "until": 15.78,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 12.43,
+     "until": 17.06,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "say",
+     "text": "masuk",
+     "key": "POKET SELUAR",
+     "at": 15.78,
+     "until": 17.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    }
+   ]
+  },
+  {
+   "start": 17.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 16.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma baca",
+     "key": "5 MINIT",
+     "at": 17.06,
+     "until": 18.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "masa rehat",
+     "key": "LATIHAN",
+     "at": 18.92,
+     "until": 20.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 17.08,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/setuju.png",
+       17.08
+      ],
+      [
+       "adikbiru/gembira.png",
+       18.92
+      ]
+     ],
+     "enter": "slide",
+     "until": 20.32
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Stopwatch",
+     "at": 17.9,
+     "until": 18.92,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "5 MINIT"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Soccer ball",
+     "at": 18.92,
+     "until": 20.32,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "REHAT LATIHAN"
+    }
+   ]
+  },
+  {
+   "start": 20.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 19.82,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "infografik berwarna, isi padat dari",
+     "key": "BUKU TEKS",
+     "at": 20.32,
+     "until": 23.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kedaulatan.jpg",
+     "at": 20.37,
+     "until": 23.6,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 22.6,
+     "until": 23.6,
+     "x": 940,
+     "y": 1360,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 23.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 23.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sibuk bukan lagi alasan untuk",
+     "key": "TAK ULANG KAJI",
+     "at": 23.6,
+     "until": 26.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Flexed biceps",
+     "at": 24.8,
+     "until": 26.54,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TETAP BOLEH",
+     "good": true
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 26.54,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 26.64,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 320,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 26.84,
+     "y": 1690
+    },
+    {
+     "kind": "doodle",
+     "at": 23.62,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/gembira.png",
+       23.62
+      ],
+      [
+       "adikbiru/sapa.png",
+       26.54
+      ]
+     ],
+     "enter": "slide"
+    }
+   ]
+  }
+ ]
+}

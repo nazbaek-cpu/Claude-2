@@ -84,6 +84,10 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
  "cta": {"at": 31.6, "text": "Tekan link dekat bawah"}}
 ```
 
+- Watak: `"illus": {"char": "kira/gembira", "char_at": [[12.6, "kira/stres"]], "char_scale": 1.3}` guna watak
+  yang disimpan (`kira/`, `abang/`, `adikbiru/`, `ortu/pasangan`) di tempat figura lukisan. Tanpa `char`, figura lukisan.
+- Ikon: `"icons": [{"img": "icons/kuiz.png", "x": 830, "y": 1030, "at": 1.9, "size": 170, "tag": "UJIAN", "rot": 6}]`
+  (ikon sekolah dalam `icons/`, ikon matematik dalam `mat/`), muncul dengan bunyi pop lembut.
 - `card` `"kind": "key"` ialah kad KATA KUNCI (`word`, `sub`); `"photo"` ialah gambar produk dalam kad putih.
 - `bg`: `putih` (putih kertas) atau `krim` (macam rujukan).
 - `python arab.py projects/<nama>` untuk video, `python arab.py projects/<nama> 1.5 4 8` untuk lembaran stills.

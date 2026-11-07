@@ -14,8 +14,25 @@
    ],
    "illus": {
     "kind": "ask",
-    "smile_at": 2.66
-   }
+    "smile_at": 2.66,
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      2.66,
+      "abang/gembira"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 830,
+     "y": 1030,
+     "at": 1.94,
+     "size": 170,
+     "tag": "SEJARAH"
+    }
+   ]
   },
   {
    "start": 3.84,
@@ -34,7 +51,9 @@
     "kind": "stairs",
     "climb_at": 0.6,
     "beat": 0.75,
-    "y": 1010
+    "y": 1010,
+    "char": "kira/gembira",
+    "char_scale": 1.35
    }
   },
   {
@@ -45,10 +64,21 @@
     "kejar."
    ],
    "illus": {
-    "kind": "hourglass"
+    "kind": "hourglass",
+    "char": "adikbiru/stres"
    },
    "label": "pelajar lain",
-   "label_y": 420
+   "label_y": 420,
+   "icons": [
+    {
+     "img": "icons/jadual_waktu.png",
+     "x": 860,
+     "y": 1230,
+     "at": 8.8,
+     "size": 150,
+     "tag": "PEPERIKSAAN"
+    }
+   ]
   },
   {
    "start": 10.68,
@@ -60,7 +90,14 @@
    ],
    "illus": {
     "kind": "books",
-    "cal_at": 13.2
+    "cal_at": 13.2,
+    "char": "abang/terkejut",
+    "char_at": [
+     [
+      12.6,
+      "abang/stres"
+     ]
+    ]
    }
   },
   {
@@ -92,7 +129,17 @@
      19.04
     ]
    ],
-   "pills_y": 1170
+   "pills_y": 1170,
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 900,
+     "y": 300,
+     "at": 15.2,
+     "size": 150,
+     "rot": 8
+    }
+   ]
   },
   {
    "start": 19.76,
@@ -105,8 +152,20 @@
    ],
    "illus": {
     "kind": "path",
-    "nodes": 8
-   }
+    "nodes": 8,
+    "char": "adikbiru/berlari",
+    "char_scale": 1.35
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 840,
+     "y": 560,
+     "at": 20.4,
+     "size": 150,
+     "tag": "IKUT BAB"
+    }
+   ]
   },
   {
    "start": 23.78,
@@ -133,7 +192,16 @@
      26.52
     ]
    ],
-   "pills_y": 1110
+   "pills_y": 1110,
+   "icons": [
+    {
+     "img": "icons/sijil.png",
+     "x": 880,
+     "y": 1210,
+     "at": 26.6,
+     "size": 140
+    }
+   ]
   },
   {
    "start": 26.98,
@@ -155,8 +223,27 @@
       "asas kukuh",
       28.2
      ]
-    ]
-   }
+    ],
+    "char": "ortu/pasangan"
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 210,
+     "y": 640,
+     "at": 28.2,
+     "size": 150,
+     "rot": -8
+    },
+    {
+     "img": "icons/sijil.png",
+     "x": 870,
+     "y": 640,
+     "at": 29.3,
+     "size": 150,
+     "rot": 8
+    }
+   ]
   },
   {
    "start": 31.34,
@@ -174,7 +261,9 @@
    },
    "illus": {
     "kind": "wave",
-    "y": 1020
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
    }
   }
  ],

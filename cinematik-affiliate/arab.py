@@ -90,6 +90,24 @@ def figure(color=NAVY, pose="down", mood="smile", size=300, t=0.0, cap=True):
     else: d.line((cx - 8 * u, my + 4 * u, cx + 8 * u, my + 4 * u), fill=INK, width=int(3 * u))
     return im.resize((w // S, h // S), Image.LANCZOS)
 
+# ---------- saved characters (Kak Kira, Abang Bajet, Adik, parents) instead of the drawn figure ----------
+PRJ = [""]
+_chars = {}
+def char(path, size):
+    """input/<path>.png scaled so it reads at the same size as a drawn figure of `size`"""
+    key = (path, size)
+    if key not in _chars:
+        im = Image.open(os.path.join(PRJ[0], "input", path + ".png")).convert("RGBA"); h = int(size * 1.15)
+        _chars[key] = im.resize((max(1, int(im.width * h / im.height)), h), Image.LANCZOS)
+    return _chars[key]
+
+def who(I, t, color, pose, mood, size, key="char"):
+    """the scene's character at time t: I[key] is "folder/pose", I[key + "_at"] = [[time, "folder/pose"], ...] swaps it"""
+    c = I.get(key)
+    for at, p in I.get(key + "_at", []):
+        if t >= at: c = p
+    return char(c, int(size * I.get("char_scale", 1))) if c else figure(color, pose, mood, size, t)
+
 # ---------- small flat props ----------
 def qmark(size, color=ORANGE):
     im = Image.new("RGBA", (size, size), (0, 0, 0, 0)); f = SANS(int(size * 0.9), 800)
@@ -143,7 +161,7 @@ def illus(base, sc, t):
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); I = sc["illus"]
     if k == "ask":
         mood = "smile" if lt > I.get("smile_at", 99) - sc["start"] else "plain"
-        put(layer, figure(I.get("color", NAVY), I.get("pose", "think"), mood, 420, t), W / 2, cy + 40 + bob)
+        put(layer, who(I, t, I.get("color", NAVY), I.get("pose", "think"), mood, 420), W / 2, cy + 40 + bob)
         for i, (dx, dy, s) in enumerate([(-150, -250, 110), (0, -320, 150), (150, -250, 110)]):
             q = ease(ramp(lt, 0.4 + i * 0.25, 0.35))
             put(layer, qmark(s), W / 2 + dx, cy + dy + math.sin(t * 3 + i) * 6, q, 0.6 + 0.4 * q)
@@ -159,15 +177,15 @@ def illus(base, sc, t):
         frac = ease_io(((lt - I.get("climb_at", 0.4)) / I.get("beat", 0.9)) % 1) if lt > I.get("climb_at", 0.4) and k_ < n - 1 else 0
         k_ = min(k_ + frac, n - 1) if I.get("climb", True) else I.get("at_step", 0)
         fx_ = x0 + k_ * sw + sw / 2; fy = base_y - (math.floor(k_) + 1) * sh - (frac * sh if k_ < n - 1 else 0) - 125
-        put(layer, figure(ORANGE, I.get("pose", "down"), "smile", 230, t), fx_, fy - abs(math.sin(frac * math.pi)) * 25)
+        put(layer, who(I, t, ORANGE, I.get("pose", "down"), "smile", 230), fx_, fy - (I.get("char_scale", 1) - 1) * 135 - abs(math.sin(frac * math.pi)) * 25)
         if k_ >= n - 1: put(layer, star(36), x0 + n * sw - 40, base_y - n * sh - 250 + bob, ease(ramp(lt, 2.0, 0.4)))
     elif k == "hourglass":
         p = ramp(lt, 0.2, (sc["end"] - sc["start"]) * 0.95)
         put(layer, hourglass(440, p), W / 2 + 170, cy)
         run = math.sin(t * 9) * 8
-        put(layer, figure(NAVY, "point", "worry", 330, t), W / 2 - 200 + run * 0.3, cy + 50 + abs(run))
+        put(layer, who(I, t, NAVY, "point", "worry", 330), W / 2 - 200 + run * 0.3, cy + 50 + abs(run))
     elif k == "books":
-        put(layer, figure(NAVY, "up", "worry", 320, t), W / 2, cy + 190)
+        put(layer, who(I, t, NAVY, "up", "worry", 320), W / 2, cy + 190)
         for i, lab in enumerate(I.get("labels", ["Tingkatan 1", "Tingkatan 2", "Tingkatan 3"])):
             q = ease(ramp(lt, 0.3 + i * 0.45, 0.4)); y = cy - 40 - i * 112 - (1 - q) * 380
             put(layer, book_icon(400, lab, [NAVY, (64, 92, 150), ORANGE][i]), W / 2 + (i - 1) * 12, y, q)
@@ -188,15 +206,15 @@ def illus(base, sc, t):
             d.ellipse((x - r, y - r, x + r, y + r), fill=ORANGE if on else (255, 255, 255), outline=ORANGE, width=4)
             d.text((x, y), str(i + 1), font=SANS(30, 800), fill=(255, 255, 255) if on else ORANGE, anchor="mm")
         i0 = int(prog); fr = prog - i0; xa, ya = pts[i0]; xb, yb = pts[min(i0 + 1, n - 1)]
-        put(layer, figure(ORANGE, "down", "smile", 240, t), xa + (xb - xa) * fr, ya + (yb - ya) * fr - 160 - abs(math.sin(fr * math.pi)) * 18)
+        put(layer, who(I, t, ORANGE, "down", "smile", 240), xa + (xb - xa) * fr, ya + (yb - ya) * fr - 160 - (I.get("char_scale", 1) - 1) * 140 - abs(math.sin(fr * math.pi)) * 18)
     elif k == "glow":
         put(layer, rays(320, t), W / 2, cy - 10, ease(ramp(lt, 0.2, 0.6)))
-        put(layer, figure(ORANGE, I.get("pose", "up"), "smile", 420, t), W / 2, cy + bob)
+        put(layer, who(I, t, ORANGE, I.get("pose", "up"), "smile", 420), W / 2, cy + bob)
         for i, w_ in enumerate(I.get("words", [])):
             q = ease(ramp(t, w_[1], 0.35))
             put(layer, pill(w_[0], 40, fg=NAVY, dot=ORANGE), W / 2 + (i - (len(I["words"]) - 1) / 2) * 320, cy + 360, q)
     elif k == "wave":
-        put(layer, figure(NAVY, "wave", "smile", 300, t), W / 2 - 230, cy + 60 + bob)
+        put(layer, who(I, t, NAVY, "wave", "smile", 300), W / 2 - 230, cy + 60 + bob)
     base.alpha_composite(Image.blend(Image.new("RGBA", (W, H), (0, 0, 0, 0)), layer, 1.0) if a >= 1 else fade(layer, a))
 
 def fade(img, a):
@@ -224,6 +242,20 @@ def top_card(sc, prj):
         d.text((w / 2, 240), c.get("sub", ""), font=f3, fill=INK, anchor="mm")
         out = shadowed(box, 12, 45, 6)
     _cache[key] = out; return out
+
+def icon(ic):
+    """a flat icon from input/ (school / math icon sheets), optional paper pill tag above it"""
+    key = json.dumps(ic, sort_keys=True)
+    if key not in _cache:
+        im = Image.open(os.path.join(PRJ[0], "input", ic["img"])).convert("RGBA"); s_ = ic.get("size", 200)
+        im.thumbnail((s_, s_), Image.LANCZOS)
+        if ic.get("rot"): im = im.rotate(ic["rot"], resample=Image.BICUBIC, expand=True)
+        out = im
+        if ic.get("tag"):
+            tg = pill(ic["tag"], 30); out = Image.new("RGBA", (max(im.width, tg.width), im.height + tg.height - 10), (0, 0, 0, 0))
+            out.alpha_composite(tg, ((out.width - tg.width) // 2, 0)); out.alpha_composite(im, ((out.width - im.width) // 2, tg.height - 10))
+        _cache[key] = out
+    return _cache[key]
 
 def scene_dots(base, i, n, a):
     d = ImageDraw.Draw(base); x0 = W / 2 - (n - 1) * 11
@@ -284,6 +316,9 @@ def frame(cfg, prj, bg, words, t):
             q = ease(ramp(t, at, 0.3)) * a_out
             put(im, pill(txt, 40, fg=NAVY, dot=ORANGE), W / 2 + (j - (len(sc["pills"]) - 1) / 2) * 260, sc.get("pills_y", 1300), q)
         if sc.get("illus"): illus(im, sc, t)
+        for ic in sc.get("icons", []):
+            q = ease(ramp(t, ic.get("at", sc["start"]), 0.35)) * a_out * (1 - ease(ramp(t, ic.get("until", 1e9) - 0.25, 0.25)))
+            if q > 0: put(im, icon(ic), ic["x"], ic["y"] + math.sin(t * 2 + ic["x"]) * 6 - 30 * (1 - q), q, 0.7 + 0.3 * q)
         sub_card(im, sc, tokens(sc, words), t, a)
     cta_button(im, cfg, t)
     return im.convert("RGB")
@@ -309,6 +344,7 @@ def sfx_track(cfg, dur):
         if sc.get("card"): ev.append((sc["start"] + 0.15, chime, -27))
         for _, at in sc.get("pills", []): ev.append((at, soft_pop, -25))
         il = sc.get("illus") or {}
+        for ic in sc.get("icons", []): ev.append((ic.get("at", sc["start"]), soft_pop, -25))
         if il.get("kind") == "ask": ev += [(sc["start"] + 0.4 + k * 0.25, soft_pop, -28) for k in range(3)]
         if il.get("kind") == "books": ev += [(sc["start"] + 0.3 + k * 0.45 + 0.3, soft_pop, -25) for k in range(3)]
         if il.get("kind") == "stairs": ev += [(sc["start"] + il.get("climb_at", 0.4) + k * il.get("beat", 0.9), soft_pop, -27) for k in range(il.get("steps", 3) - 1)]
@@ -318,7 +354,7 @@ def sfx_track(cfg, dur):
     return np.clip(tr, -1, 1)
 
 def main():
-    prj = sys.argv[1]; cfg = json.load(open(os.path.join(prj, "project.json")))
+    prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)

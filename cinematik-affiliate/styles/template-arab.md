@@ -88,6 +88,9 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
   yang disimpan (`kira/`, `abang/`, `adikbiru/`, `ortu/pasangan`) di tempat figura lukisan. Tanpa `char`, figura lukisan.
 - Ikon: `"icons": [{"img": "icons/kuiz.png", "x": 830, "y": 1030, "at": 1.9, "size": 170, "tag": "UJIAN", "rot": 6}]`
   (ikon sekolah dalam `icons/`, ikon matematik dalam `mat/`), muncul dengan bunyi pop lembut.
+- Sari kata keluar **seketul-seketul** (besar, `sub_size` 84): letak `|` dalam `line` di tempat ketul baru bermula,
+  contoh `"Kenapa ada pelajar | Tingkatan 3 | yang Sejarah dia | senang je?"`. Tanpa `|`, dipecah di koma / noktah atau
+  setiap 4 perkataan (`chunk_words`). `"chunk": false` tunjuk ayat penuh sekali gus.
 - `card` `"kind": "key"` ialah kad KATA KUNCI (`word`, `sub`); `"photo"` ialah gambar produk dalam kad putih.
 - `bg`: `putih` (putih kertas) atau `krim` (macam rujukan).
 - `python arab.py projects/<nama>` untuk video, `python arab.py projects/<nama> 1.5 4 8` untuk lembaran stills.

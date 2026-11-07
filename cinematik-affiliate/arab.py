@@ -266,32 +266,63 @@ def scene_dots(base, i, n, a):
 
 # ---------- subtitle card ----------
 def tokens(sc, words):
-    toks = sc["line"].split(); spoken = [w for w in words if sc["start"] - 0.05 <= w["s"] < sc["end"] - 0.02]
-    if not spoken: return [(tk, sc["start"]) for tk in toks]
-    out = []
-    for i, tk in enumerate(toks):   # map tokens onto spoken word times (proportional when counts differ)
-        j = min(len(spoken) - 1, int(i * len(spoken) / len(toks)))
-        out.append((tk, spoken[j]["s"]))
+    """(token, time) for the scene's line; a "|" in the line marks where a new piece starts (kept as ("|", t))"""
+    raw = sc["line"].split(); toks = [tk for tk in raw if tk != "|"]
+    spoken = [w for w in words if sc["start"] - 0.05 <= w["s"] < sc["end"] - 0.02]
+    times = [sc["start"]] * len(toks)
+    if spoken:   # map tokens onto spoken word times (proportional when counts differ)
+        times = [spoken[min(len(spoken) - 1, int(i * len(spoken) / len(toks)))]["s"] for i in range(len(toks))]
+    out, k = [], 0
+    for tk in raw:
+        if tk == "|": out.append(("|", times[min(k, len(toks) - 1)]))
+        else: out.append((tk, times[k])); k += 1
+    return out
+
+def chunks(toks, size=4):
+    """split a line into short pieces: at commas / full stops, or every `size` words"""
+    out, cur = [], []
+    if any(tk == "|" for tk, _ in toks):   # the writer chose the pieces
+        for tk, ts in toks:
+            if tk == "|":
+                if cur: out.append(cur); cur = []
+            else: cur.append((tk, ts))
+        return out + ([cur] if cur else [])
+    for tk, ts in toks:
+        cur.append((tk, ts))
+        if tk[-1:] in ",.?!" or len(cur) >= size: out.append(cur); cur = []
+    if cur:
+        if out and len(cur) == 1: out[-1] += cur      # never leave one word on its own
+        else: out.append(cur)
     return out
 
 def sub_card(base, sc, toks, t, a):
-    f = HAND(54); maxw = 860; keys = set(k.lower() for k in sc.get("keys", []))
+    """one piece of the line at a time, big, popping in as it is spoken; key words orange"""
     keyset = set()
-    for k in keys: keyset.update(w.strip(".,?!") for w in k.split())
+    for k in sc.get("keys", []): keyset.update(w.lower().strip(".,?!\"") for w in k.split())
+    if sc.get("chunk", True) is False:
+        pcs, cur_i = [[x for x in toks if x[0] != "|"]], 0
+    else:
+        pcs = chunks(toks, sc.get("chunk_words", 4)); cur_i = 0
+        for k, pc in enumerate(pcs):
+            if t >= pc[0][1] - 0.08: cur_i = k
+    pc = pcs[cur_i]; t0 = max(sc["start"], pc[0][1] - 0.08)
+    size = sc.get("sub_size", 84); f = HAND(size); maxw = 880
     lines, cur, cw = [], [], 0
-    for tk, ts in toks:
+    for tk, ts in pc:
         tw = f.getlength(tk + " ")
         if cur and cw + tw > maxw: lines.append(cur); cur, cw = [], 0
         cur.append((tk, ts)); cw += tw
     if cur: lines.append(cur)
-    lh = 70; ch = lh * len(lines) + 70; card = card_box(maxw + 90, ch, 24); d = ImageDraw.Draw(card)
+    lh = int(size * 1.22); wmax = max(sum(f.getlength(tk + " ") for tk, _ in ln) for ln in lines)
+    card = card_box(int(min(maxw, wmax) + 110), lh * len(lines) + 64, 28); d = ImageDraw.Draw(card)
     for li, ln in enumerate(lines):
-        tot = sum(f.getlength(tk + " ") for tk, _ in ln) - f.getlength(" "); x = (card.width - tot) / 2; y = 35 + li * lh + lh / 2
+        tot = sum(f.getlength(tk + " ") for tk, _ in ln) - f.getlength(" "); x = (card.width - tot) / 2; y = 32 + li * lh + lh / 2
         for tk, ts in ln:
             k = tk.lower().strip(".,?!\"") in keyset; on = t >= ts - 0.05
-            col = (ORANGE if on else (240, 200, 160)) if k else (INK if on else FAINT)
+            col = (ORANGE if on else (240, 200, 160)) if k else (INK if on else (150, 146, 140))
             d.text((x, y), tk, font=f, fill=col, anchor="lm"); x += f.getlength(tk + " ")
-    put(base, shadowed(card, 14, 40, 6), W / 2, 1500, a)
+    q = ease(ramp(t, t0, 0.22))                 # each piece pops in
+    put(base, shadowed(card, 14, 40, 6), W / 2, 1490 + 26 * (1 - q), a * q, 0.88 + 0.12 * q)
 
 def cta_button(base, cfg, t):
     c = cfg.get("cta")
@@ -345,6 +376,7 @@ def sfx_track(cfg, dur):
         for _, at in sc.get("pills", []): ev.append((at, soft_pop, -25))
         il = sc.get("illus") or {}
         for ic in sc.get("icons", []): ev.append((ic.get("at", sc["start"]), soft_pop, -25))
+        if sc.get("_piece_times"): ev += [(pt, soft_pop, -31) for pt in sc["_piece_times"]]
         if il.get("kind") == "ask": ev += [(sc["start"] + 0.4 + k * 0.25, soft_pop, -28) for k in range(3)]
         if il.get("kind") == "books": ev += [(sc["start"] + 0.3 + k * 0.45 + 0.3, soft_pop, -25) for k in range(3)]
         if il.get("kind") == "stairs": ev += [(sc["start"] + il.get("climb_at", 0.4) + k * il.get("beat", 0.9), soft_pop, -27) for k in range(il.get("steps", 3) - 1)]
@@ -365,6 +397,9 @@ def main():
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")
         for k, im in enumerate(ims): sheet.paste(im, ((k % cols) * 360, (k // cols) * 640))
         out = os.path.join(prj, "build", "stills.jpg"); sheet.save(out, quality=88); print(out); return
+    for sc in cfg["scenes"]:
+        if sc.get("chunk", True) is not False:
+            sc["_piece_times"] = [pc[0][1] for pc in chunks(tokens(sc, words), sc.get("chunk_words", 4))[1:]]
     os.makedirs(os.path.join(prj, "build"), exist_ok=True); os.makedirs(os.path.join(prj, "out"), exist_ok=True)
     sfx = os.path.join(prj, "build", "sfx.wav")
     with wave.open(sfx, "wb") as w:

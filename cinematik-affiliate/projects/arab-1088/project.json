@@ -7,7 +7,7 @@
   {
    "start": 0.0,
    "end": 3.84,
-   "line": "Kenapa ada pelajar Tingkatan 3 yang Sejarah dia senang je?",
+   "line": "Kenapa ada pelajar | Tingkatan 3 | yang Sejarah dia | senang je?",
    "keys": [
     "Tingkatan 3",
     "senang je?"
@@ -37,7 +37,7 @@
   {
    "start": 3.84,
    "end": 6.62,
-   "line": "Sebab dia dah mula latih dari Tingkatan 1.",
+   "line": "Sebab dia | dah mula latih | dari Tingkatan 1.",
    "keys": [
     "Tingkatan 1."
    ],
@@ -59,7 +59,7 @@
   {
    "start": 6.62,
    "end": 10.68,
-   "line": "Pelajar lain? Tunggu dah dekat peperiksaan baru nak kejar.",
+   "line": "Pelajar lain? | Tunggu dah dekat peperiksaan | baru nak kejar.",
    "keys": [
     "kejar."
    ],
@@ -83,7 +83,7 @@
   {
    "start": 10.68,
    "end": 14.54,
-   "line": "3 tahun punya fakta, nak hafal dalam sebulan.",
+   "line": "3 tahun punya fakta, | nak hafal | dalam sebulan.",
    "keys": [
     "3 tahun",
     "sebulan."
@@ -103,7 +103,7 @@
   {
    "start": 14.54,
    "end": 19.76,
-   "line": "1088 Soalan Objektif Sejarah ada untuk Tingkatan 1, 2 dan 3.",
+   "line": "1088 Soalan Objektif Sejarah | ada untuk | Tingkatan 1, 2 dan 3.",
    "keys": [
     "1088",
     "1, 2 dan 3."
@@ -144,7 +144,7 @@
   {
    "start": 19.76,
    "end": 23.78,
-   "line": "Anak cuma ikut buku tingkatan dia, satu bab demi satu bab.",
+   "line": "Anak cuma ikut | buku tingkatan dia, | satu bab | demi satu bab.",
    "keys": [
     "satu",
     "bab",
@@ -170,7 +170,7 @@
   {
    "start": 23.78,
    "end": 26.98,
-   "line": "Ikut bab buku teks, siap UPSA dan UASA.",
+   "line": "Ikut bab buku teks, | siap UPSA | dan UASA.",
    "keys": [
     "UPSA",
     "UASA."
@@ -206,7 +206,7 @@
   {
    "start": 26.98,
    "end": 31.34,
-   "line": "Mula awal, asas kukuh, Sejarah takkan jadi beban.",
+   "line": "Mula awal, | asas kukuh, | Sejarah | takkan jadi beban.",
    "keys": [
     "Mula awal,",
     "kukuh,",
@@ -248,7 +248,7 @@
   {
    "start": 31.34,
    "end": 33.1,
-   "line": "Tekan link dekat bawah.",
+   "line": "Tekan link | dekat bawah.",
    "keys": [
     "link"
    ],

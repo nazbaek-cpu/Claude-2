@@ -1,0 +1,470 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Kenapa Ummi Selalu Marah, ummi, anak.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SUARA HATI ANAK...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ummi",
+     "key": "TAK SAYANG AKU KE?",
+     "at": 0.0,
+     "until": 1.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "asyik",
+     "key": "MARAH JE",
+     "at": 1.28,
+     "until": 3.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/sedih.png",
+       0.05
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/marah.png",
+     "at": 1.5,
+     "until": 99,
+     "x": 790,
+     "y": 1000,
+     "size": 380,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "UMMI"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAMAI ANAK...",
+     "at": 2.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ramai anak simpan soalan ni",
+     "key": "DALAM HATI",
+     "at": 3.08,
+     "until": 5.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tak",
+     "key": "BERANI TANYA",
+     "at": 5.48,
+     "until": 6.76,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.58,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       2.58
+      ],
+      [
+       "adik/stres.png",
+       5.48
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Red heart",
+     "at": 3.9,
+     "until": 5.48,
+     "x": 790,
+     "y": 1060,
+     "size": 180,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DALAM HATI"
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Face with hand over mouth",
+     "at": 5.48,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DIAM"
+    }
+   ]
+  },
+  {
+   "start": 6.76,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UMMI PULA...",
+     "at": 6.26,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ummi pula ingat",
+     "key": "ANAK DAH FAHAM",
+     "at": 6.76,
+     "until": 9.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/gembira.png",
+     "at": 7.0,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "UMMI"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.9,
+     "x": 790,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/sedih.png",
+       6.9
+      ]
+     ]
+    },
+    {
+     "kind": "say",
+     "text": "akhirnya",
+     "key": "DUA-DUA TERLUKA",
+     "at": 9.52,
+     "until": 11.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "tapi",
+     "key": "TAK ADA SIAPA CAKAP",
+     "at": 11.46,
+     "until": 13.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 10.4,
+     "until": 99,
+     "x": 790,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "DIAM JE...",
+     "at": 12.2,
+     "x": 540,
+     "y": 1480,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 13.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KENAPA UMMI SELALU MARAH?",
+     "at": 13.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buku ni buka cerita yang anak",
+     "key": "TAK BERANI TANYA",
+     "at": 13.64,
+     "until": 18.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 13.69,
+     "until": 16.2,
+     "x": 540,
+     "y": 1120,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "komik_set.jpg",
+     "at": 16.2,
+     "until": 18.2,
+     "x": 540,
+     "y": 1100,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK BELAJAR...",
+     "at": 17.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "marah ummi tu tanda ummi",
+     "key": "RISAU, BUKAN BENCI",
+     "at": 18.2,
+     "until": 22.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 18.22,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/idea.png",
+       18.22
+      ],
+      [
+       "adik/setuju.png",
+       20.48
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/risau.png",
+     "at": 20.0,
+     "until": 99,
+     "x": 790,
+     "y": 1000,
+     "size": 340,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "RISAU"
+    }
+   ]
+  },
+  {
+   "start": 22.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "UMMI PULA...",
+     "at": 22.32,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ummi nampak apa yang anak rasa",
+     "key": "SELAMA NI",
+     "at": 22.82,
+     "until": 25.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/sedih.png",
+     "at": 22.9,
+     "until": 99,
+     "x": 300,
+     "y": 1000,
+     "size": 380,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11
+    },
+    {
+     "kind": "doodle",
+     "at": 23.0,
+     "x": 790,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/sedih.png",
+       23.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 25.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 25.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu buku,",
+     "key": "DUA HATI JADI DEKAT",
+     "at": 25.98,
+     "until": 28.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 26.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       26.0
+      ],
+      [
+       "adik/sapa.png",
+       28.82
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "ortu/mak/gembira.png",
+     "at": 26.9,
+     "until": 28.82,
+     "x": 790,
+     "y": 1000,
+     "size": 340,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "DEKAT"
+    },
+    {
+     "kind": "say",
+     "text": "tekan",
+     "key": "LINK DI BAWAH",
+     "at": 28.82,
+     "until": 99,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 28.92,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 290,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.1,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

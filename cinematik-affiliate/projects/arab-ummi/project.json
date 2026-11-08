@@ -28,7 +28,41 @@
      ]
     ],
     "char_scale": 1.15
-   }
+   },
+   "icons": [
+    {
+     "img": "rumah/sinki.png",
+     "x": 180,
+     "y": 1170,
+     "at": 1.16,
+     "size": 170,
+     "tag": "BASUH"
+    },
+    {
+     "img": "rumah/bakul_baju.png",
+     "x": 900,
+     "y": 1170,
+     "at": 1.7,
+     "size": 170,
+     "tag": "LIPAT BAJU"
+    },
+    {
+     "img": "rumah/kuali.png",
+     "x": 180,
+     "y": 420,
+     "at": 2.42,
+     "size": 160,
+     "tag": "MASAK"
+    },
+    {
+     "img": "rumah/selimut.png",
+     "x": 900,
+     "y": 420,
+     "at": 2.78,
+     "size": 150,
+     "tag": "KEMAS"
+    }
+   ]
   },
   {
    "start": 4.24,
@@ -122,13 +156,22 @@
    },
    "icons": [
     {
-     "img": "icons/rak_buku.png",
+     "img": "rumah/tv.png",
+     "x": 300,
+     "y": 310,
+     "at": 7.6,
+     "until": 9.66,
+     "size": 190,
+     "tag": "ADIK MAIN"
+    },
+    {
+     "img": "rumah/bakul_baju.png",
      "x": 800,
-     "y": 300,
+     "y": 310,
      "at": 9.0,
      "until": 9.66,
-     "size": 150,
-     "tag": "KEMAS"
+     "size": 170,
+     "tag": "KAKAK KEMAS"
     },
     {
      "img": "ortu/mak/marah.png",
@@ -168,20 +211,36 @@
    },
    "icons": [
     {
+     "img": "rumah/bakul_baju.png",
+     "x": 220,
+     "y": 520,
+     "at": 13.64,
+     "size": 160,
+     "tag": "BASUH"
+    },
+    {
+     "img": "rumah/rak_pinggan.png",
+     "x": 860,
+     "y": 520,
+     "at": 13.9,
+     "size": 160,
+     "tag": "PINGGAN"
+    },
+    {
+     "img": "rumah/kuali.png",
+     "x": 220,
+     "y": 1160,
+     "at": 14.2,
+     "size": 160,
+     "tag": "MASAK"
+    },
+    {
      "img": "icons/jadual_waktu.png",
-     "x": 830,
-     "y": 1130,
+     "x": 860,
+     "y": 1160,
      "at": 14.82,
      "size": 160,
      "tag": "BAHAGI KERJA"
-    },
-    {
-     "img": "icons/fail.png",
-     "x": 250,
-     "y": 1130,
-     "at": 14.2,
-     "size": 150,
-     "tag": "KERJA"
     }
    ]
   },
@@ -297,10 +356,38 @@
     {
      "img": "icons/kerja_kumpulan.png",
      "x": 540,
-     "y": 290,
+     "y": 250,
      "at": 31.38,
-     "size": 200,
+     "size": 180,
      "tag": "SAMA-SAMA"
+    },
+    {
+     "img": "rumah/bakul_baju.png",
+     "x": 170,
+     "y": 450,
+     "at": 28.5,
+     "size": 130
+    },
+    {
+     "img": "rumah/kuali.png",
+     "x": 450,
+     "y": 420,
+     "at": 29.8,
+     "size": 130
+    },
+    {
+     "img": "rumah/rak_pinggan.png",
+     "x": 720,
+     "y": 520,
+     "at": 30.9,
+     "size": 120
+    },
+    {
+     "img": "rumah/selimut.png",
+     "x": 920,
+     "y": 520,
+     "at": 31.1,
+     "size": 120
     }
    ]
   },
@@ -326,7 +413,24 @@
       35.3
      ]
     ]
-   }
+   },
+   "icons": [
+    {
+     "img": "rumah/katil.png",
+     "x": 860,
+     "y": 470,
+     "at": 34.2,
+     "size": 180,
+     "tag": "REHAT"
+    },
+    {
+     "img": "rumah/pokok.png",
+     "x": 210,
+     "y": 470,
+     "at": 34.8,
+     "size": 150
+    }
+   ]
   },
   {
    "start": 36.82,

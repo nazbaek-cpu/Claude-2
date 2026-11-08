@@ -1,0 +1,357 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "Kenapa Ummi Selalu Marah, Bestnya Parenting, Wawa Shauqi, ummi, kakak sulung, Zahra, adik, Zayn, Ziyad, komik, penat.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.24,
+   "line": "Kenapa dalam rumah | semua kerja | jatuh atas bahu | kakak?",
+   "keys": [
+    "semua",
+    "kerja",
+    "kakak?"
+   ],
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Kemas rumah",
+     "Jaga adik",
+     "Basuh pinggan"
+    ],
+    "char": "kira/terkejut",
+    "char_at": [
+     [
+      2.42,
+      "kira/stres"
+     ]
+    ],
+    "char_scale": 1.15
+   }
+  },
+  {
+   "start": 4.24,
+   "end": 7.44,
+   "line": "Sebab kakak | paling besar, | kakak paling | boleh harap.",
+   "keys": [
+    "besar,",
+    "harap."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "ANAK SULUNG",
+    "word": "PALING DIHARAP",
+    "size": 80,
+    "sub": "sebab dia paling besar",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adik/gembira",
+      "x": 250,
+      "size": 312,
+      "at": 4.5
+     },
+     {
+      "char": "kira/bangga",
+      "x": 540,
+      "size": 494,
+      "at": 4.3
+     },
+     {
+      "char": "adikbiru/gembira",
+      "x": 830,
+      "size": 312,
+      "at": 4.7
+     }
+    ]
+   }
+  },
+  {
+   "start": 7.44,
+   "end": 12.44,
+   "line": "Adik-adik main, | kakak kemas. | Adik-adik gaduh, | kakak kena marah.",
+   "keys": [
+    "kemas.",
+    "marah."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/raikan",
+      "char_at": [
+       [
+        9.66,
+        "adik/stres"
+       ]
+      ],
+      "x": 200,
+      "size": 338,
+      "at": 7.5
+     },
+     {
+      "char": "adikbiru/gembira",
+      "char_at": [
+       [
+        9.66,
+        "adikbiru/terkejut"
+       ]
+      ],
+      "x": 430,
+      "size": 338,
+      "at": 7.7
+     },
+     {
+      "char": "kira/menerang",
+      "char_at": [
+       [
+        10.98,
+        "kira/sedih"
+       ]
+      ],
+      "x": 810,
+      "size": 442,
+      "at": 8.64
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 800,
+     "y": 300,
+     "at": 9.0,
+     "until": 9.66,
+     "size": 150,
+     "tag": "KEMAS"
+    },
+    {
+     "img": "ortu/mak/marah.png",
+     "x": 800,
+     "y": 300,
+     "at": 11.68,
+     "size": 200,
+     "tag": "UMMI"
+    }
+   ]
+  },
+  {
+   "start": 12.44,
+   "end": 16.32,
+   "line": "Ummi pula | dah terlalu penat | nak bahagi kerja | sama rata.",
+   "keys": [
+    "penat",
+    "sama",
+    "rata."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/risau",
+      "char_at": [
+       [
+        13.64,
+        "ortu/mak/sedih"
+       ]
+      ],
+      "x": 540,
+      "size": 360,
+      "at": 12.5
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/jadual_waktu.png",
+     "x": 830,
+     "y": 1130,
+     "at": 14.82,
+     "size": 160,
+     "tag": "BAHAGI KERJA"
+    },
+    {
+     "img": "icons/fail.png",
+     "x": 250,
+     "y": 1130,
+     "at": 14.2,
+     "size": 150,
+     "tag": "KERJA"
+    }
+   ]
+  },
+  {
+   "start": 16.32,
+   "end": 20.94,
+   "line": "Lama-lama | kakak rasa | dia bukan anak, | dia pembantu.",
+   "keys": [
+    "bukan",
+    "anak,",
+    "pembantu."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SUARA HATI KAKAK",
+    "word": "PEMBANTU?",
+    "size": 96,
+    "sub": "bukan anak",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/sedih",
+      "x": 540,
+      "size": 480,
+      "at": 16.4
+     }
+    ]
+   }
+  },
+  {
+   "start": 20.94,
+   "end": 24.04,
+   "line": "Buku | Kenapa Ummi Selalu Marah | ajar semua anak",
+   "keys": [
+    "Kenapa",
+    "Ummi",
+    "Selalu",
+    "Marah"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 680
+   }
+  },
+  {
+   "start": 24.04,
+   "end": 27.68,
+   "line": "rumah ni | tanggungjawab | bersama.",
+   "keys": [
+    "tanggungjawab",
+    "bersama."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "komik_set.jpg",
+    "w": 900,
+    "max_h": 700,
+    "y": 660
+   },
+   "pills": [
+    [
+     "tanggungjawab bersama",
+     26.1
+    ]
+   ],
+   "pills_y": 1140
+  },
+  {
+   "start": 27.68,
+   "end": 32.34,
+   "line": "Bukan kakak je, | bukan Ummi je, | semua | kena tolong.",
+   "keys": [
+    "semua",
+    "tolong."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/gembira",
+      "x": 170,
+      "size": 377,
+      "at": 28.0
+     },
+     {
+      "char": "ortu/pasangan",
+      "x": 450,
+      "size": 429,
+      "at": 29.3
+     },
+     {
+      "char": "adik/setuju",
+      "x": 720,
+      "size": 312,
+      "at": 30.66
+     },
+     {
+      "char": "adikbiru/setuju",
+      "x": 920,
+      "size": 312,
+      "at": 30.9
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/kerja_kumpulan.png",
+     "x": 540,
+     "y": 290,
+     "at": 31.38,
+     "size": 200,
+     "tag": "SAMA-SAMA"
+    }
+   ]
+  },
+  {
+   "start": 32.34,
+   "end": 36.82,
+   "line": "Bila kerja dibahagi, | kakak dapat rasa | jadi anak | semula.",
+   "keys": [
+    "anak",
+    "semula."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "kira/ketawa",
+    "char_scale": 1.25,
+    "words": [
+     [
+      "kerja dibahagi",
+      33.0
+     ],
+     [
+      "jadi anak semula",
+      35.3
+     ]
+    ]
+   }
+  },
+  {
+   "start": 36.82,
+   "end": 38.6,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 420,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ],
+ "cta": {
+  "at": 37.1,
+  "text": "Tekan link dekat bawah"
+ }
+}

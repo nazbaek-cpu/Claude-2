@@ -86,6 +86,8 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
 
 - Watak: `"illus": {"char": "kira/gembira", "char_at": [[12.6, "kira/stres"]], "char_scale": 1.3}` guna watak
   yang disimpan (`kira/`, `abang/`, `adikbiru/`, `ortu/pasangan`) di tempat figura lukisan. Tanpa `char`, figura lukisan.
+- Beberapa watak sekali: `"illus": {"kind": "cast", "cast": [{"char": "kira/stres", "x": 300, "size": 340, "at": 8.6,
+  "char_at": [[11.0, "kira/sedih"]]}, ...]}` (kaki di satu garisan lantai). Contoh: `projects/arab-ummi/`.
 - Ikon: `"icons": [{"img": "icons/kuiz.png", "x": 830, "y": 1030, "at": 1.9, "size": 170, "tag": "UJIAN", "rot": 6}]`
   (ikon sekolah dalam `icons/`, ikon matematik dalam `mat/`), muncul dengan bunyi pop lembut.
 - Sari kata keluar **seketul-seketul** (besar, `sub_size` 84): letak `|` dalam `line` di tempat ketul baru bermula,

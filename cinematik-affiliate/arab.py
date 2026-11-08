@@ -213,6 +213,13 @@ def illus(base, sc, t):
         for i, w_ in enumerate(I.get("words", [])):
             q = ease(ramp(t, w_[1], 0.35))
             put(layer, pill(w_[0], 40, fg=NAVY, dot=ORANGE), W / 2 + (i - (len(I["words"]) - 1) / 2) * 320, cy + 360, q)
+    elif k == "cast":   # several characters on one floor line: {"cast": [{"char": "kira/stres", "x": 300, "at": 1.0, "size": 300}]}
+        for m in I["cast"]:
+            q = ease(ramp(t, m.get("at", sc["start"]), 0.35))
+            if q <= 0: continue
+            im = who(m, t, NAVY, "down", "smile", m.get("size", 300))
+            fy = cy + m.get("dy", 0) + 140 - im.height / 2      # feet on a shared floor line
+            put(layer, im, m["x"], fy + math.sin(t * 2.2 + m["x"]) * 4 + 30 * (1 - q), q)
     elif k == "wave":
         put(layer, who(I, t, NAVY, "wave", "smile", 300), W / 2 - 230, cy + 60 + bob)
     base.alpha_composite(Image.blend(Image.new("RGBA", (W, H), (0, 0, 0, 0)), layer, 1.0) if a >= 1 else fade(layer, a))

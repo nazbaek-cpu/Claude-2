@@ -1,0 +1,266 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, guru cemerlang Matematik, soalan berpotensi tinggi, subtopik penting SPM, jawapan lengkap, bengkel kalkulator, rakaman, calon SPM, mak ayah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.16,
+   "line": "Kenapa ada calon SPM | yang letak pensel | 20 minit awal | masa kertas Matematik, | tapi muka dia tenang?",
+   "keys": [
+    "20",
+    "minit",
+    "awal",
+    "tenang?"
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "abang/fokus",
+    "char_at": [
+     [
+      4.68,
+      "abang/yakin"
+     ]
+    ],
+    "char_scale": 1.05
+   },
+   "icons": [
+    {
+     "img": "icons/pensel.png",
+     "x": 200,
+     "y": 1150,
+     "at": 1.88,
+     "size": 170,
+     "tag": "LETAK PENSEL"
+    },
+    {
+     "img": "mat/jam.png",
+     "x": 880,
+     "y": 1150,
+     "at": 2.3,
+     "size": 190,
+     "tag": "20 MINIT AWAL"
+    }
+   ]
+  },
+  {
+   "start": 6.16,
+   "end": 9.14,
+   "line": "Sebab semua soalan tu | dah pernah | dia latih.",
+   "keys": [
+    "pernah",
+    "latih."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "DAH BIASA",
+    "size": 96,
+    "sub": "semua soalan pernah dilatih",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "abang/idea",
+      "x": 380,
+      "size": 400,
+      "at": 6.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.26,
+     "size": 220,
+     "tag": "DAH LATIH"
+    }
+   ]
+  },
+  {
+   "start": 9.14,
+   "end": 16.3,
+   "line": "Calon lain? | Tekun buat | semua latihan, | tapi soalan yang | betul-betul keluar, | cuma sempat cuba | sekali dua.",
+   "keys": [
+    "semua",
+    "latihan,",
+    "sekali",
+    "dua."
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "hourglass",
+    "char": "adikbiru/berfikir",
+    "char_at": [
+     [
+      12.04,
+      "adikbiru/terkejut"
+     ],
+     [
+      14.1,
+      "adikbiru/stres"
+     ]
+    ],
+    "char_scale": 1.3
+   },
+   "icons": [
+    {
+     "img": "mat/buku_spm.png",
+     "x": 830,
+     "y": 1215,
+     "at": 10.9,
+     "until": 12.5,
+     "size": 200,
+     "tag": "SEMUA LATIHAN"
+    },
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 830,
+     "y": 1215,
+     "at": 12.5,
+     "size": 180,
+     "tag": "SOALAN SEBENAR"
+    }
+   ]
+  },
+  {
+   "start": 16.3,
+   "end": 20.26,
+   "line": "Matematik SPM Final Boost | kumpul soalan | berpotensi tinggi,",
+   "keys": [
+    "berpotensi",
+    "tinggi,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 520,
+    "max_h": 820,
+    "y": 660
+   }
+  },
+  {
+   "start": 20.26,
+   "end": 22.98,
+   "line": "meliputi semua | subtopik penting SPM.",
+   "keys": [
+    "subtopik",
+    "penting"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ciri.jpg",
+    "w": 900,
+    "max_h": 620,
+    "y": 640
+   }
+  },
+  {
+   "start": 22.98,
+   "end": 28.02,
+   "line": "Anak cuma ulang | soalan dalam buku ni, | semak jawapan lengkap | di belakang setiap topik.",
+   "keys": [
+    "ulang",
+    "semak",
+    "lengkap"
+   ],
+   "illus": {
+    "kind": "path",
+    "nodes": 8,
+    "char": "adikbiru/berlari",
+    "char_scale": 1.35
+   },
+   "icons": [
+    {
+     "img": "icons/kuiz.png",
+     "x": 840,
+     "y": 520,
+     "at": 25.32,
+     "size": 170,
+     "tag": "SEMAK JAWAPAN"
+    },
+    {
+     "img": "mat/latihan.png",
+     "x": 240,
+     "y": 520,
+     "at": 23.76,
+     "size": 170,
+     "tag": "ULANG"
+    }
+   ]
+  },
+  {
+   "start": 28.02,
+   "end": 33.3,
+   "line": "Bila soalan dalam dewan | rasa macam ulangan, | masa pun cukup, | hati pun tenang.",
+   "keys": [
+    "ulangan,",
+    "cukup,",
+    "tenang."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/gembira",
+    "char_scale": 1.1,
+    "words": [
+     [
+      "masa cukup",
+      30.68
+     ],
+     [
+      "hati tenang",
+      32.0
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/jam.png",
+     "x": 200,
+     "y": 480,
+     "at": 30.68,
+     "size": 170
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 480,
+     "at": 32.0,
+     "size": 160
+    }
+   ]
+  },
+  {
+   "start": 33.3,
+   "end": 35.0,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 380,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "abang/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ],
+ "cta": {
+  "at": 33.6,
+  "text": "Tekan link dekat bawah"
+ }
+}

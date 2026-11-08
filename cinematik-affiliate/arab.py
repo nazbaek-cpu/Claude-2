@@ -35,10 +35,17 @@ def ease_io(x): x = min(max(x, 0.0), 1.0); return x * x * (3 - 2 * x)
 def ramp(t, a, d): return min(max((t - a) / d, 0.0), 1.0) if d > 0 else float(t >= a)
 
 # ---------- paper ----------
-def background(kind):
-    c = BG.get(kind, BG["putih"]); rng = np.random.default_rng(2)
-    a = np.full((H, W, 3), c, np.float32) + rng.normal(0, 1.4, (H, W, 1))
-    im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA"); d = ImageDraw.Draw(im)
+def background(kind, image=None):
+    """plain paper (putih / krim), or a picture (e.g. a green chalkboard) cover-fitted to 9:16"""
+    if image:
+        src = Image.open(image).convert("RGB"); k = max(W / src.width, H / src.height)
+        src = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
+        im = src.crop(((src.width - W) // 2, (src.height - H) // 2, (src.width - W) // 2 + W, (src.height - H) // 2 + H)).convert("RGBA")
+    else:
+        c = BG.get(kind, BG["putih"]); rng = np.random.default_rng(2)
+        a = np.full((H, W, 3), c, np.float32) + rng.normal(0, 1.4, (H, W, 1))
+        im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA")
+    d = ImageDraw.Draw(im)
     d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(226, 220, 208), width=2)   # thin frame
     for y in (26, H - 27): d.ellipse((W / 2 - 7, y - 7, W / 2 + 7, y + 7), fill=ORANGE)    # orange dots, top and bottom
     return im
@@ -398,7 +405,7 @@ def main():
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
     only = [float(x) for x in sys.argv[2:]]   # stills: python arab.py prj 1.0 5.0 ...
-    bg = background(cfg.get("bg", "putih"))
+    bg = background(cfg.get("bg", "putih"), os.path.join(prj, cfg["bg_image"]) if cfg.get("bg_image") else None)
     if only:
         ims = [frame(cfg, prj, bg, words, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

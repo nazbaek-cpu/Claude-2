@@ -1,0 +1,126 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP, Buku Teks Padat, infografik, calon SPM 2027, Tingkatan 3, Tingkatan 4, Tingkatan 5, Sejarah, Matematik, Kimia, Fizik, Matematik Tambahan.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.1,
+   "end": 3.25,
+   "title": {
+    "kicker": "CALON SPM 2027",
+    "lines": [
+     "BTP,",
+     "Buku Teks Padat"
+    ],
+    "accent": [
+     "BTP,"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 3.3,
+   "end": 10.4,
+   "kicker": "PENUH DENGAN",
+   "head": "Infografik.",
+   "pills": [
+    [
+     "Gambar",
+     6.06
+    ],
+    [
+     "Berwarna",
+     6.72
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 10.48,
+   "end": 11.6,
+   "kicker": "SENANG",
+   "head": "Nak ingat."
+  },
+  {
+   "start": 11.68,
+   "end": 19.4,
+   "kicker": "MULA SEKARANG",
+   "head": "Hafal tarikh penting.",
+   "pills": [
+    [
+     "Tarikh",
+     16.72
+    ],
+    [
+     "Peristiwa",
+     17.7
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 19.5,
+   "end": 24.1,
+   "kicker": "CALON SPM 2027",
+   "head": "Sangat membantu."
+  },
+  {
+   "start": 24.16,
+   "end": 26.55,
+   "kicker": "ADA",
+   "head": "Tingkatan 4 & 5."
+  },
+  {
+   "start": 26.6,
+   "end": 33.35,
+   "kicker": "SUBJEK LAIN",
+   "head": "Pun ada.",
+   "pills": [
+    [
+     "Matematik",
+     29.76
+    ],
+    [
+     "Kimia",
+     30.42
+    ],
+    [
+     "Fizik",
+     31.04
+    ],
+    [
+     "Add Maths",
+     32.38
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 33.4,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

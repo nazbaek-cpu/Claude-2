@@ -99,6 +99,7 @@ def figure(color=NAVY, pose="down", mood="smile", size=300, t=0.0, cap=True):
 
 # ---------- saved characters (Kak Kira, Abang Bajet, Adik, parents) instead of the drawn figure ----------
 PRJ = [""]
+DARK = [False]   # true when the page sits on a picture background (chalkboard)
 _chars = {}
 def char(path, size):
     """input/<path>.png scaled so it reads at the same size as a drawn figure of `size`"""
@@ -263,6 +264,9 @@ def icon(ic):
     if key not in _cache:
         im = Image.open(os.path.join(PRJ[0], "input", ic["img"])).convert("RGBA"); s_ = ic.get("size", 200)
         im.thumbnail((s_, s_), Image.LANCZOS)
+        if ic.get("tile", DARK[0]):   # on a dark picture background, sit the icon on a white rounded tile
+            pad = 18; tile = card_box(im.width + pad * 2, im.height + pad * 2, 26)
+            tile.alpha_composite(im, (pad, pad)); im = shadowed(tile, 10, 50, 5)
         if ic.get("rot"): im = im.rotate(ic["rot"], resample=Image.BICUBIC, expand=True)
         out = im
         if ic.get("tag"):
@@ -401,6 +405,7 @@ def sfx_track(cfg, dur):
 
 def main():
     prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
+    DARK[0] = bool(cfg.get("bg_image"))
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)

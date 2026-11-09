@@ -88,6 +88,7 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
   yang disimpan (`kira/`, `abang/`, `adikbiru/`, `ortu/pasangan`) di tempat figura lukisan. Tanpa `char`, figura lukisan.
 - Beberapa watak sekali: `"illus": {"kind": "cast", "cast": [{"char": "kira/stres", "x": 300, "size": 340, "at": 8.6,
   "char_at": [[11.0, "kira/sedih"]]}, ...]}` (kaki di satu garisan lantai). Contoh: `projects/arab-ummi/`.
+- Atas latar gambar (papan hijau), ikon automatik duduk atas jubin putih supaya jelas (`"tile": false` untuk tutup).
 - Ikon: `"icons": [{"img": "icons/kuiz.png", "x": 830, "y": 1030, "at": 1.9, "size": 170, "tag": "UJIAN", "rot": 6}]`
   (ikon sekolah dalam `icons/`, ikon matematik dalam `mat/`), muncul dengan bunyi pop lembut.
 - Sari kata keluar **seketul-seketul** (besar, `sub_size` 84): letak `|` dalam `line` di tempat ketul baru bermula,

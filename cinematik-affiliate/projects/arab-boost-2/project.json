@@ -1,0 +1,260 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, guru cemerlang Matematik, soalan berpotensi tinggi, subtopik penting SPM, jawapan lengkap, bengkel kalkulator, rakaman, calon SPM, mak ayah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.96,
+   "line": "Kenapa bila keluar | dewan Matematik, | kawan-kawan semua | mengeluh susah, | tapi ada seorang ni | kata, biasa je.",
+   "keys": [
+    "mengeluh",
+    "susah,",
+    "biasa",
+    "je."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikbiru/stres",
+      "x": 200,
+      "size": 330,
+      "at": 1.9
+     },
+     {
+      "char": "kira/stres",
+      "x": 450,
+      "size": 400,
+      "at": 2.3
+     },
+     {
+      "char": "abang/yakin",
+      "x": 820,
+      "size": 440,
+      "at": 4.16
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 540,
+     "y": 330,
+     "at": 0.9,
+     "size": 180,
+     "tag": "DEWAN MATEMATIK"
+    }
+   ]
+  },
+  {
+   "start": 6.96,
+   "end": 10.3,
+   "line": "Sebab dia dah jumpa | soalan macam tu | berkali-kali.",
+   "keys": [
+    "berkali-kali."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "DAH BIASA",
+    "size": 96,
+    "sub": "jumpa soalan sama berkali-kali",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "abang/idea",
+      "x": 380,
+      "size": 400,
+      "at": 7.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 9.0,
+     "size": 220,
+     "tag": "BERKALI-KALI"
+    }
+   ]
+  },
+  {
+   "start": 10.3,
+   "end": 17.22,
+   "line": "Calon lain? | Ulang kaji | ikut buku teks | dari bab satu, | tak sempat sampai | topik yang paling | selalu keluar.",
+   "keys": [
+    "bab",
+    "satu,",
+    "tak",
+    "sempat"
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "hourglass",
+    "char": "adikbiru/berfikir",
+    "char_at": [
+     [
+      14.0,
+      "adikbiru/stres"
+     ]
+    ],
+    "char_scale": 1.3
+   },
+   "icons": [
+    {
+     "img": "mat/buku_spm.png",
+     "x": 830,
+     "y": 1215,
+     "at": 12.6,
+     "size": 190,
+     "tag": "BAB SATU"
+    }
+   ]
+  },
+  {
+   "start": 17.22,
+   "end": 22.04,
+   "line": "Matematik SPM Final Boost | terus fokus | pada topik yang | selalu masuk SPM.",
+   "keys": [
+    "fokus",
+    "selalu",
+    "masuk"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 520,
+    "max_h": 820,
+    "y": 660
+   }
+  },
+  {
+   "start": 22.04,
+   "end": 25.02,
+   "line": "Soalan terpilih | disusun | ikut subtopik.",
+   "keys": [
+    "terpilih",
+    "subtopik."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ciri.jpg",
+    "w": 900,
+    "max_h": 620,
+    "y": 640
+   }
+  },
+  {
+   "start": 25.02,
+   "end": 28.58,
+   "line": "Anak cuma buat, | semak jawapan | di belakang | setiap topik.",
+   "keys": [
+    "buat,",
+    "semak"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 360,
+      "size": 440,
+      "at": 25.05
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 820,
+     "y": 620,
+     "at": 25.7,
+     "size": 190,
+     "tag": "BUAT"
+    },
+    {
+     "img": "icons/kuiz.png",
+     "x": 820,
+     "y": 1000,
+     "at": 26.16,
+     "size": 190,
+     "tag": "SEMAK JAWAPAN"
+    }
+   ]
+  },
+  {
+   "start": 28.58,
+   "end": 32.54,
+   "line": "Soalan yang | orang lain rasa susah, | dia rasa | biasa.",
+   "keys": [
+    "susah,",
+    "biasa."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/gembira",
+    "char_scale": 1.1,
+    "words": [
+     [
+      "orang lain: susah",
+      29.9
+     ],
+     [
+      "dia: biasa",
+      31.52
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 200,
+     "y": 480,
+     "at": 31.52,
+     "size": 170
+    },
+    {
+     "img": "mat/kalkulator.png",
+     "x": 880,
+     "y": 480,
+     "at": 29.0,
+     "size": 170
+    }
+   ]
+  },
+  {
+   "start": 32.54,
+   "end": 34.2,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 380,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "abang/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ],
+ "cta": {
+  "at": 32.8,
+  "text": "Tekan link dekat bawah"
+ }
+}

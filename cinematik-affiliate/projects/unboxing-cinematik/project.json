@@ -20,12 +20,12 @@
  "grade": "bright",
  "beauty": {
   "lip_rgb": [
-   188,
-   86,
-   96
+   182,
+   96,
+   100
   ],
-  "lip_amount": 0.8,
-  "lip_light": 1.05
+  "lip_amount": 0.7,
+  "lip_light": 1.03
  },
  "behind": false,
  "top_offset": -190,

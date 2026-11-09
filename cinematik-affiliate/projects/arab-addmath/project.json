@@ -1,7 +1,6 @@
 {
  "type": "arab",
  "source": "input/vo.mp4",
- "bg_image": "input/kayu.jpg",
  "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Add Maths, Form 4, Fungsi, Fungsi Kuadratik, Indeks, Surd, Logaritma, Janjang, Vektor, Nombor Indeks, dwibahasa, jalan kerja, Sirpuloh.",
  "scenes": [
   {
@@ -252,5 +251,6 @@
  "cta": {
   "at": 33.8,
   "text": "Tekan link dekat bawah"
- }
+ },
+ "bg": "addmath"
 }

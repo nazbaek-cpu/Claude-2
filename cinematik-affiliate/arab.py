@@ -37,8 +37,12 @@ def ramp(t, a, d): return min(max((t - a) / d, 0.0), 1.0) if d > 0 else float(t 
 # ---------- paper ----------
 def background(kind, image=None):
     """plain paper (putih / krim), or a picture (e.g. a green chalkboard) cover-fitted to 9:16"""
+    if kind == "addmath" and not image:   # "background addmath": the light solid-wood boards the user picked
+        import explainer
+        w = explainer.solid_wood()
+        image = w if isinstance(w, Image.Image) else Image.fromarray(np.clip(w, 0, 255).astype(np.uint8))
     if image:
-        src = Image.open(image).convert("RGB"); k = max(W / src.width, H / src.height)
+        src = (image if isinstance(image, Image.Image) else Image.open(image)).convert("RGB"); k = max(W / src.width, H / src.height)
         src = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
         im = src.crop(((src.width - W) // 2, (src.height - H) // 2, (src.width - W) // 2 + W, (src.height - H) // 2 + H)).convert("RGBA")
     else:
@@ -405,7 +409,7 @@ def sfx_track(cfg, dur):
 
 def main():
     prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
-    DARK[0] = bool(cfg.get("bg_image"))
+    DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") == "addmath"
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)

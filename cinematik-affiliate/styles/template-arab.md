@@ -95,7 +95,7 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
   contoh `"Kenapa ada pelajar | Tingkatan 3 | yang Sejarah dia | senang je?"`. Tanpa `|`, dipecah di koma / noktah atau
   setiap 4 perkataan (`chunk_words`). `"chunk": false` tunjuk ayat penuh sekali gus.
 - `card` `"kind": "key"` ialah kad KATA KUNCI (`word`, `sub`); `"photo"` ialah gambar produk dalam kad putih.
-- `bg`: `putih` (putih kertas) atau `krim` (macam rujukan); `"bg_image": "input/papan.jpg"` guna gambar sendiri (contoh papan hijau, `projects/arab-boost/`).
+- `bg`: `putih` (putih kertas), `krim` (macam rujukan), atau **`addmath`** ("background addmath": papan kayu solid warna cerah, pilihan pengguna; contoh `projects/arab-addmath/`); `"bg_image": "input/papan.jpg"` guna gambar sendiri (contoh papan hijau, `projects/arab-boost/`).
 - `python arab.py projects/<nama>` untuk video, `python arab.py projects/<nama> 1.5 4 8` untuk lembaran stills.
 - VO tidak dinormalkan dalam renderer: naikkan gain semasa encode akhir sampai lebih kurang −10 LUFS.
 - Contoh: `projects/arab-1088/` (1088 Soalan Objektif Sejarah, latar putih).

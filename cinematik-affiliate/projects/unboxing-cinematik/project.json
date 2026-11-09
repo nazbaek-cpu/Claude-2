@@ -1,0 +1,156 @@
+{
+ "source": "input/src.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Raisya Cookies, tart Nutella, kukis, unboxing, repeat, partition, bubble wrap, choco chip, raya, stok.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "hold": [
+   [
+    81.0,
+    85.5
+   ],
+   [
+    116.2,
+    122.6
+   ]
+  ]
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   188,
+   86,
+   96
+  ],
+  "lip_amount": 0.8,
+  "lip_light": 1.05
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 1.1,
+   "end": 8.0,
+   "title": {
+    "kicker": "RAISYA COOKIES",
+    "lines": [
+     "Kali ketiga",
+     "repeat beli!"
+    ],
+    "accent": [
+     "repeat",
+     "beli!"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 8.1,
+   "end": 12.3,
+   "kicker": "SETIAP KALI BELI",
+   "head": "Terus 2 kotak."
+  },
+  {
+   "start": 12.4,
+   "end": 25.0,
+   "kicker": "RASA DIA",
+   "head": "Craving betul.",
+   "pills": [
+    [
+     "Sedap",
+     13.4
+    ],
+    [
+     "Kena tekak",
+     20.6
+    ]
+   ]
+  },
+  {
+   "start": 33.4,
+   "end": 42.5,
+   "kicker": "RAISYA COOKIES",
+   "head": "Repeat berkali-kali."
+  },
+  {
+   "start": 46.1,
+   "end": 58.8,
+   "kicker": "KAMI BELI",
+   "head": "Dua balang."
+  },
+  {
+   "start": 58.9,
+   "end": 69.4,
+   "kicker": "PALING BAGUS",
+   "head": "Tak relai.",
+   "pills": [
+    [
+     "Tak pecah",
+     66.3
+    ],
+    [
+     "Sampai elok",
+     68.6
+    ]
+   ]
+  },
+  {
+   "start": 73.5,
+   "end": 80.4,
+   "kicker": "PACKAGING",
+   "head": "Sangat mampat."
+  },
+  {
+   "start": 86.3,
+   "end": 100.0,
+   "kicker": "SIAP ADA",
+   "head": "Partition."
+  },
+  {
+   "start": 100.0,
+   "end": 104.6,
+   "kicker": "DITAMBAH",
+   "head": "Bubble wrap."
+  },
+  {
+   "start": 104.7,
+   "end": 111.3,
+   "kicker": "SATU BALANG",
+   "head": "20 biji lebih."
+  },
+  {
+   "start": 111.4,
+   "end": 115.9,
+   "kicker": "UNTUK RAYA",
+   "head": "Memang sedap."
+  },
+  {
+   "start": 131.5,
+   "end": 145.0,
+   "kicker": "ADA CHOCO CHIP",
+   "head": "Crunchy-crunchy.",
+   "pills": [
+    [
+     "Tart Nutella",
+     138.0
+    ],
+    [
+     "Choco chip",
+     140.3
+    ]
+   ]
+  },
+  {
+   "start": 155.8,
+   "end": null,
+   "cta": true,
+   "head": "Stok cepat habis."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

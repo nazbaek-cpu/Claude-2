@@ -1,0 +1,256 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/kayu.jpg",
+ "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Add Maths, Form 4, Fungsi, Fungsi Kuadratik, Indeks, Surd, Logaritma, Janjang, Vektor, Nombor Indeks, dwibahasa, jalan kerja, Sirpuloh.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.46,
+   "line": "Mak ayah, | kenapa ada anak | yang hampir nak gugur | Add Maths, | tapi akhirnya | lulus SPM?",
+   "keys": [
+    "gugur",
+    "lulus",
+    "SPM?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 420,
+      "at": 0.1
+     },
+     {
+      "char": "adikbiru/stres",
+      "char_at": [
+       [
+        3.58,
+        "adikbiru/raikan"
+       ]
+      ],
+      "x": 790,
+      "size": 360,
+      "at": 1.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 790,
+     "y": 330,
+     "at": 2.3,
+     "until": 3.6,
+     "size": 160,
+     "tag": "HAMPIR GAGAL"
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 790,
+     "y": 330,
+     "at": 4.42,
+     "size": 160,
+     "tag": "LULUS SPM"
+    }
+   ]
+  },
+  {
+   "start": 5.46,
+   "end": 10.02,
+   "line": "Sebab dia berhenti | cuba faham semua, | dan fokus | topik yang penting | dulu.",
+   "keys": [
+    "fokus",
+    "penting"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "FOKUS DULU",
+    "size": 92,
+    "sub": "topik penting untuk lulus",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikbiru/idea",
+      "x": 380,
+      "size": 380,
+      "at": 5.5
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/formula.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.1,
+     "size": 220,
+     "tag": "TOPIK PENTING"
+    }
+   ]
+  },
+  {
+   "start": 10.02,
+   "end": 16.58,
+   "line": "Anak lain? | Rasa semua bab | susah. | Akhirnya putus asa, | Add Maths | dibiarkan kosong.",
+   "keys": [
+    "susah.",
+    "putus",
+    "asa,",
+    "kosong."
+   ],
+   "label": "anak lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Fungsi",
+     "Logaritma",
+     "Vektor"
+    ],
+    "char": "abang/terkejut",
+    "char_at": [
+     [
+      12.9,
+      "abang/stres"
+     ]
+    ],
+    "char_scale": 1.1
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 860,
+     "y": 1200,
+     "at": 15.18,
+     "size": 170,
+     "tag": "KOSONG"
+    }
+   ]
+  },
+  {
+   "start": 16.58,
+   "end": 20.68,
+   "line": "Addmath Express | memang direka untuk | topik penting | lulus SPM.",
+   "keys": [
+    "topik",
+    "penting",
+    "lulus"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku4.jpg",
+    "w": 540,
+    "max_h": 820,
+    "y": 660
+   }
+  },
+  {
+   "start": 20.68,
+   "end": 25.36,
+   "line": "Anak cuma ikut | nota ringkas, | latihan berfokus | dan video mengajar.",
+   "keys": [
+    "nota",
+    "ringkas,",
+    "video"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "phone.jpg",
+    "w": 760,
+    "max_h": 520,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Nota",
+     22.06
+    ],
+    [
+     "Latihan",
+     22.7
+    ],
+    [
+     "Video",
+     24.24
+    ]
+   ],
+   "pills_y": 930
+  },
+  {
+   "start": 25.36,
+   "end": 29.78,
+   "line": "Disemak oleh | pemeriksa kertas SPM, | Form 4 | dan Form 5.",
+   "keys": [
+    "pemeriksa",
+    "Form",
+    "4",
+    "5."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku5.jpg",
+    "w": 540,
+    "max_h": 820,
+    "y": 660
+   }
+  },
+  {
+   "start": 29.78,
+   "end": 33.54,
+   "line": "Sebelum anak | berputus asa, | bagi dia jalan | yang lebih mudah.",
+   "keys": [
+    "berputus",
+    "asa,",
+    "mudah."
+   ],
+   "illus": {
+    "kind": "path",
+    "nodes": 6,
+    "char": "adikbiru/berlari",
+    "char_scale": 1.35
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 480,
+     "at": 32.9,
+     "size": 170,
+     "tag": "LULUS"
+    }
+   ]
+  },
+  {
+   "start": 33.54,
+   "end": 35.16,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku4.jpg",
+    "w": 380,
+    "max_h": 540,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "ortu/pasangan",
+    "char_scale": 1.15
+   }
+  }
+ ],
+ "cta": {
+  "at": 33.8,
+  "text": "Tekan link dekat bawah"
+ }
+}

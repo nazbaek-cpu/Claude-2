@@ -1,1 +1,331 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "putih", "whisper_prompt": "Kenapa Ummi Selalu Marah, Bestnya Parenting, Kombo Mahmudah, Wawa Shauqi, ummi, kakak, Zahra, Zayn, Ziyad, Maksu, kampung, komik, penat, stres.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "Kenapa Ummi Selalu Marah, Bestnya Parenting, Kombo Mahmudah, Wawa Shauqi, ummi, kakak, Zahra, Zayn, Ziyad, Maksu, kampung, komik, penat, stres.",
+ "cta": {
+  "at": 31.7,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.42,
+   "line": "Dalam satu rumah, | ada dua orang | yang paling penat.",
+   "keys": [
+    "dua",
+    "penat."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/risau",
+      "x": 320,
+      "size": 300,
+      "at": 0.2
+     },
+     {
+      "char": "kira/stres",
+      "x": 770,
+      "size": 440,
+      "at": 1.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "rumah/scene_tamu.png",
+     "x": 540,
+     "y": 330,
+     "at": 0.3,
+     "size": 260,
+     "tag": "SATU RUMAH"
+    }
+   ]
+  },
+  {
+   "start": 3.42,
+   "end": 7.4,
+   "line": "Ummi | yang uruskan semua | dari pagi | sampai malam.",
+   "keys": [
+    "semua",
+    "pagi",
+    "malam."
+   ],
+   "illus": {
+    "kind": "hourglass",
+    "char": "ortu/mak/risau",
+    "char_at": [
+     [
+      6.32,
+      "ortu/mak/sedih"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "rumah/kuali.png",
+     "x": 190,
+     "y": 400,
+     "at": 4.52,
+     "size": 160,
+     "tag": "MASAK"
+    },
+    {
+     "img": "rumah/bakul_baju.png",
+     "x": 540,
+     "y": 360,
+     "at": 4.94,
+     "size": 160,
+     "tag": "BASUH"
+    },
+    {
+     "img": "rumah/sinki.png",
+     "x": 890,
+     "y": 400,
+     "at": 5.74,
+     "size": 160,
+     "tag": "PINGGAN"
+    }
+   ]
+  },
+  {
+   "start": 7.4,
+   "end": 10.74,
+   "line": "Dan kakak sulung | yang jadi | Ummi kedua | untuk adik-adik.",
+   "keys": [
+    "kakak",
+    "Ummi",
+    "kedua"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KAKAK SULUNG",
+    "word": "UMMI KEDUA",
+    "size": 88,
+    "sub": "untuk adik-adik",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 540,
+      "size": 470,
+      "at": 7.5
+     },
+     {
+      "char": "adik/gembira",
+      "x": 210,
+      "size": 300,
+      "at": 9.9
+     },
+     {
+      "char": "adikbiru/gembira",
+      "x": 870,
+      "size": 300,
+      "at": 10.05
+     }
+    ]
+   }
+  },
+  {
+   "start": 10.74,
+   "end": 14.98,
+   "line": "Tapi bila | penat bertembung, | dua-dua | saling terluka.",
+   "keys": [
+    "penat",
+    "bertembung,",
+    "terluka."
+   ],
+   "pills": [
+    [
+     "penat + penat",
+     12.44
+    ]
+   ],
+   "pills_y": 470,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/marah",
+      "char_at": [
+       [
+        13.92,
+        "ortu/mak/sedih"
+       ]
+      ],
+      "x": 310,
+      "size": 300,
+      "at": 10.8
+     },
+     {
+      "char": "kira/stres",
+      "char_at": [
+       [
+        13.92,
+        "kira/sedih"
+       ]
+      ],
+      "x": 780,
+      "size": 440,
+      "at": 11.3
+     }
+    ]
+   }
+  },
+  {
+   "start": 14.98,
+   "end": 17.98,
+   "line": "Ummi marah, | kakak rasa | tak dihargai.",
+   "keys": [
+    "marah,",
+    "tak",
+    "dihargai."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SUARA HATI KAKAK",
+    "word": "TAK DIHARGAI",
+    "size": 84,
+    "sub": "kakak pun penat",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "ortu/mak/marah",
+      "x": 300,
+      "size": 290,
+      "at": 15.0
+     },
+     {
+      "char": "kira/sedih",
+      "x": 780,
+      "size": 420,
+      "at": 16.06
+     }
+    ]
+   }
+  },
+  {
+   "start": 17.98,
+   "end": 23.02,
+   "line": "Buku | Kenapa Ummi Selalu Marah | satukan dua hati | yang sama-sama | penat ni.",
+   "keys": [
+    "Kenapa",
+    "Ummi",
+    "Selalu",
+    "Marah",
+    "satukan",
+    "hati"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 680
+   }
+  },
+  {
+   "start": 23.02,
+   "end": 27.04,
+   "line": "Anak faham | pengorbanan Ummi, | Ummi faham | pengorbanan kakak.",
+   "keys": [
+    "faham",
+    "pengorbanan"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "komik.jpg",
+    "w": 900,
+    "max_h": 660,
+    "y": 600
+   },
+   "pills": [
+    [
+     "saling faham pengorbanan",
+     24.6
+    ]
+   ],
+   "pills_y": 1080
+  },
+  {
+   "start": 27.04,
+   "end": 31.68,
+   "line": "Bila sama-sama faham, | rumah jadi | tempat rehat, | bukan medan perang.",
+   "keys": [
+    "rehat,",
+    "bukan",
+    "perang."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/ketawa",
+      "x": 170,
+      "size": 380,
+      "at": 27.1
+     },
+     {
+      "char": "ortu/pasangan",
+      "x": 450,
+      "size": 430,
+      "at": 27.6
+     },
+     {
+      "char": "adik/raikan",
+      "x": 720,
+      "size": 310,
+      "at": 28.1
+     },
+     {
+      "char": "adikbiru/gembira",
+      "x": 920,
+      "size": 310,
+      "at": 28.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "rumah/scene_tamu.png",
+     "x": 540,
+     "y": 320,
+     "at": 29.48,
+     "size": 240,
+     "tag": "TEMPAT REHAT"
+    }
+   ]
+  },
+  {
+   "start": 31.68,
+   "end": 33.41,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 420,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

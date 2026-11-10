@@ -1,0 +1,424 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Addmath Express, Add Maths, video mengajar, skema.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADD MATHS...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada pelajar yang baca contoh Add Maths",
+     "key": "SEKALI JE",
+     "at": 0.0,
+     "until": 3.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "terus boleh",
+     "key": "BUAT SENDIRI?",
+     "at": 3.3,
+     "until": 4.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/fokus.png",
+       0.05
+      ],
+      [
+       "abang/yakin.png",
+       3.3
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/formula.png",
+     "at": 1.84,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 300,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CONTOH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAHSIANYA:",
+     "at": 4.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dia tak baca je, dia",
+     "key": "TENGOK CIKGU BUAT",
+     "at": 4.9,
+     "until": 8.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/idea.png",
+       4.4
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "img": "phone.jpg",
+     "at": 6.66,
+     "until": 8.22,
+     "x": 790,
+     "y": 1090,
+     "w": 480,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 8.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PELAJAR LAIN...",
+     "at": 7.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca jalan kerja dalam buku, tapi",
+     "key": "TAK FAHAM",
+     "at": 8.22,
+     "until": 12.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "kenapa langkah tu",
+     "key": "DATANG DARI MANA",
+     "at": 12.42,
+     "until": 14.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 7.72,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/berfikir.png",
+       7.72
+      ],
+      [
+       "adikbiru/stres.png",
+       11.74
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "mat/persamaan.png",
+     "at": 9.4,
+     "until": 12.42,
+     "x": 790,
+     "y": 1060,
+     "size": 280,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JALAN KERJA"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 12.6,
+     "until": 99,
+     "x": 300,
+     "y": 760,
+     "size": 90
+    },
+    {
+     "kind": "stamp",
+     "text": "KELIRU!",
+     "at": 13.4,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 14.56,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADDMATH EXPRESS",
+     "at": 14.06,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Addmath Express ada video mengajar untuk",
+     "key": "SETIAP SOALAN",
+     "at": 14.56,
+     "until": 18.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "buku4.jpg",
+     "at": 14.61,
+     "until": 18.32,
+     "x": 310,
+     "y": 1110,
+     "w": 410,
+     "rot": -3,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "buku5.jpg",
+     "at": 14.9,
+     "until": 18.32,
+     "x": 770,
+     "y": 1130,
+     "w": 410,
+     "rot": 3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 17.82,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buka terus dari buku guna phone,",
+     "key": "TANPA PASSWORD",
+     "at": 18.32,
+     "until": 22.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 18.34,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adikbiru/setuju.png",
+       18.34
+      ],
+      [
+       "adikbiru/gembira.png",
+       21.2
+      ]
+     ],
+     "enter": "slide",
+     "until": 22.52
+    },
+    {
+     "kind": "card",
+     "img": "phone.jpg",
+     "at": 18.9,
+     "until": 22.52,
+     "x": 790,
+     "y": 1090,
+     "w": 480,
+     "rot": -3,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.52,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 22.02,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tengok, pause, cuba sendiri,",
+     "key": "SEMAK SKEMA",
+     "at": 22.52,
+     "until": 26.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "skema.jpg",
+     "at": 22.57,
+     "until": 26.24,
+     "x": 540,
+     "y": 1130,
+     "w": 500,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.4,
+     "until": 26.24,
+     "x": 860,
+     "y": 1560,
+     "size": 100
+    }
+   ]
+  },
+  {
+   "start": 26.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 25.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila nampak cara buat, Add Maths dah tak rasa",
+     "key": "MUSTAHIL",
+     "at": 26.24,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 26.26,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       26.26
+      ],
+      [
+       "abang/sapa.png",
+       29.62
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 27.6,
+     "until": 29.62,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BOLEH!",
+     "good": true
+    },
+    {
+     "kind": "card",
+     "img": "buku4.jpg",
+     "at": 29.7,
+     "until": 99,
+     "x": 800,
+     "y": 1080,
+     "w": 260,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 29.8,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/garis.jpg"
+}

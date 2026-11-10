@@ -1,0 +1,126 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP Infografik Sejarah",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.3,
+   "end": 10.8,
+   "title": {
+    "kicker": "BTP INFOGRAFIK SEJARAH",
+    "lines": [
+     "Yang penting",
+     "sahaja."
+    ],
+    "accent": [
+     "penting"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 10.9,
+   "end": 14.1,
+   "kicker": "SIAP DENGAN",
+   "head": "Infografik."
+  },
+  {
+   "start": 14.2,
+   "end": 18.2,
+   "kicker": "ANAK BOLEH",
+   "head": "Senang ingat.",
+   "pills": [
+    [
+     "Senang ingat",
+     16.5
+    ],
+    [
+     "Senang bawa",
+     17.6
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 18.3,
+   "end": 22.7,
+   "kicker": "SEMUA ADA",
+   "head": "Tarikh & peristiwa.",
+   "pills": [
+    [
+     "Tarikh",
+     20.0
+    ],
+    [
+     "Peristiwa",
+     20.8
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 22.8,
+   "end": 25.3,
+   "kicker": "ADA",
+   "head": "Tingkatan 4 & 5."
+  },
+  {
+   "start": 25.4,
+   "end": 34.7,
+   "kicker": "IBU AYAH CALON SPM",
+   "head": "Bantu anak ingat."
+  },
+  {
+   "start": 34.8,
+   "end": 43.6,
+   "kicker": "SUBJEK LAIN",
+   "head": "Pun ada.",
+   "pills": [
+    [
+     "Fizik",
+     36.6
+    ],
+    [
+     "Kimia",
+     37.4
+    ],
+    [
+     "Matematik",
+     37.9
+    ],
+    [
+     "Add Maths",
+     38.4
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 43.7,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

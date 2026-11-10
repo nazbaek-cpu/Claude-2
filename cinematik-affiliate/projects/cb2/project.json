@@ -1,0 +1,98 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP Infografik Sejarah",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.4,
+   "title": {
+    "kicker": "CALON SPM 2027",
+    "lines": [
+     "Hafal buku teks,",
+     "cepat lupa."
+    ],
+    "accent": [
+     "cepat",
+     "lupa."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.5,
+   "end": 14.1,
+   "kicker": "POIN TERLALU BANYAK",
+   "head": "Lama-lama hilang."
+  },
+  {
+   "start": 14.2,
+   "end": 22.3,
+   "kicker": "CARA SENANG",
+   "head": "Nota berwarna."
+  },
+  {
+   "start": 22.4,
+   "end": 28.1,
+   "kicker": "ADA",
+   "head": "Infografik.",
+   "pills": [
+    [
+     "Tarikh",
+     24.9
+    ],
+    [
+     "Peristiwa",
+     26.1
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 28.2,
+   "end": 36.7,
+   "kicker": "SEBESAR TAPAK TANGAN",
+   "head": "Nota padat.",
+   "pills": [
+    [
+     "Senang bawa",
+     35.0
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 36.8,
+   "end": 41.3,
+   "kicker": "SATU BAB DEMI",
+   "head": "Satu bab."
+  },
+  {
+   "start": 41.4,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

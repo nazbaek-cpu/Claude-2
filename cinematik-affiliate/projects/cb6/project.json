@@ -1,0 +1,80 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "28 Hari Persediaan MPT4",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.2,
+   "end": 5.3,
+   "title": {
+    "kicker": "MPT4 MATEMATIK",
+    "lines": [
+     "Senang",
+     "ke susah."
+    ],
+    "accent": [
+     "susah."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 5.4,
+   "end": 10.9,
+   "kicker": "BUKU 28 HARI",
+   "head": "Persediaan MPT4."
+  },
+  {
+   "start": 11.1,
+   "end": 15.3,
+   "kicker": "TAHUN DEPAN",
+   "head": "Masuk Tahun 4."
+  },
+  {
+   "start": 15.4,
+   "end": 24.6,
+   "kicker": "LANGKAH DEMI LANGKAH",
+   "head": "Belajar & latihan."
+  },
+  {
+   "start": 24.7,
+   "end": 30.5,
+   "kicker": "ANAK BUKAN TAK PANDAI",
+   "head": "Cuma tak tahu.",
+   "pills": [
+    [
+     "Step by step",
+     29.6
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 30.6,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

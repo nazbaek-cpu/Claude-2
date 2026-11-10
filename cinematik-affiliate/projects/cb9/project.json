@@ -1,0 +1,88 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "MPT4 Matematik, modul",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.1,
+   "end": 13.8,
+   "title": {
+    "kicker": "ANAK TAHUN 4?",
+    "lines": [
+     "Test Matematik",
+     "dengan MPT4"
+    ],
+    "accent": [
+     "MPT4"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 13.9,
+   "end": 24.9,
+   "kicker": "MPT4 TUNJUK",
+   "head": "Faham atau hafal?"
+  },
+  {
+   "start": 25.4,
+   "end": 40.2,
+   "kicker": "BUKU NI BAGI",
+   "head": "Soalan analisis."
+  },
+  {
+   "start": 40.3,
+   "end": 53.9,
+   "kicker": "SET MODUL",
+   "head": "Tahun 4.",
+   "pills": [
+    [
+     "Modul 1",
+     47.8
+    ],
+    [
+     "Modul 2",
+     46.8
+    ],
+    [
+     "Modul 4",
+     51.0
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 54.1,
+   "end": 63.1,
+   "kicker": "TAHUN DEPAN",
+   "head": "Wajib ambil MPT4."
+  },
+  {
+   "start": 63.2,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

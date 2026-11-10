@@ -1,0 +1,67 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "MPT4 Matematik",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 10.6,
+   "title": {
+    "kicker": "MAK AYAH ANAK TAHUN 4",
+    "lines": [
+     "Persediaan",
+     "MPT4 Matematik"
+    ],
+    "accent": [
+     "MPT4"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 10.7,
+   "end": 25.2,
+   "kicker": "MPT4 UJI",
+   "head": "Betul-betul faham?"
+  },
+  {
+   "start": 25.3,
+   "end": 32.5,
+   "kicker": "ADA SEKALI",
+   "head": "Set modul."
+  },
+  {
+   "start": 32.6,
+   "end": 37.3,
+   "kicker": "28 HARI",
+   "head": "Latih tubi."
+  },
+  {
+   "start": 37.4,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

@@ -1,0 +1,79 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, UPSA, UASA",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.8,
+   "end": 4.8,
+   "title": {
+    "kicker": "NAK HAFAL SEJARAH?",
+    "lines": [
+     "Tak perlu",
+     "buku teks tebal."
+    ],
+    "accent": [
+     "tebal."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.9,
+   "end": 12.9,
+   "kicker": "BUAT BANYAK",
+   "head": "Soalan objektif."
+  },
+  {
+   "start": 13.0,
+   "end": 18.1,
+   "kicker": "BILA DAH SALAH",
+   "head": "Tak ulang lagi."
+  },
+  {
+   "start": 18.2,
+   "end": 26.2,
+   "kicker": "INGAT",
+   "head": "Tempoh yang lama."
+  },
+  {
+   "start": 26.3,
+   "end": 31.3,
+   "kicker": "BUKU NI ADA",
+   "head": "1088 soalan."
+  },
+  {
+   "start": 31.4,
+   "end": 34.3,
+   "kicker": "SIAP COVER",
+   "head": "UPSA & UASA."
+  },
+  {
+   "start": 34.4,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

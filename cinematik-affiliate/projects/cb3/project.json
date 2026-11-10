@@ -1,0 +1,85 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Terapi KBAT Sejarah, rumus P.E.S.",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22,
+  "hold": [
+   [
+    18.5,
+    21.5
+   ]
+  ]
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.5,
+   "end": 7.4,
+   "title": {
+    "kicker": "CALON SPM",
+    "lines": [
+     "Jawab KBAT",
+     "Sejarah?"
+    ],
+    "accent": [
+     "KBAT"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 7.5,
+   "end": 11.1,
+   "kicker": "DALAM BUKU NI",
+   "head": "Rumus P.E.S."
+  },
+  {
+   "start": 11.2,
+   "end": 25.1,
+   "kicker": "ADA RANGKA",
+   "head": "Struktur kotak."
+  },
+  {
+   "start": 25.2,
+   "end": 33.7,
+   "kicker": "ISI KOTAK",
+   "head": "Terus boleh jawab."
+  },
+  {
+   "start": 33.8,
+   "end": 39.3,
+   "kicker": "SIAP DENGAN",
+   "head": "Video penerangan."
+  },
+  {
+   "start": 39.4,
+   "end": 46.4,
+   "kicker": "PERSEDIAAN",
+   "head": "SPM 2027."
+  },
+  {
+   "start": 46.5,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

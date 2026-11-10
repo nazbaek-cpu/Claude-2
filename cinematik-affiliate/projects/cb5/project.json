@@ -1,0 +1,78 @@
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "Terapi KBAT Sejarah",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.1,
+   "end": 9.9,
+   "title": {
+    "kicker": "TERAPI KBAT SEJARAH",
+    "lines": [
+     "Cara jawab",
+     "soalan KBAT."
+    ],
+    "accent": [
+     "KBAT."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 10.7,
+   "end": 19.8,
+   "kicker": "CALON SPM 2027",
+   "head": "Bersedia sekarang."
+  },
+  {
+   "start": 19.9,
+   "end": 26.0,
+   "kicker": "ADA MACAM-MACAM",
+   "head": "Contoh soalan.",
+   "pills": [
+    [
+     "Lirik",
+     21.4
+    ],
+    [
+     "Poster",
+     22.6
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 26.1,
+   "end": 35.4,
+   "kicker": "JANGAN TUNGGU",
+   "head": "Sampai SPM berlalu."
+  },
+  {
+   "start": 35.5,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

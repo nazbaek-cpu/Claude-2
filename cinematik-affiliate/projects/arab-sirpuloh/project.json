@@ -1,0 +1,273 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Add Maths, Form 4, Fungsi, Fungsi Kuadratik, Indeks, Surd, Logaritma, Janjang, Vektor, Nombor Indeks, dwibahasa, DLP, tuisyen, kokurikulum, Sirpuloh.",
+ "cta": {
+  "at": 31.8,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.3,
+   "line": "Mak ayah, | kenapa ada anak | yang tak pergi tuisyen | Add Maths, | tapi tetap boleh | kejar kelas?",
+   "keys": [
+    "tuisyen",
+    "kejar",
+    "kelas?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 420,
+      "at": 0.1
+     },
+     {
+      "char": "adikbiru/berfikir",
+      "char_at": [
+       [
+        3.58,
+        "adikbiru/gembira"
+       ]
+      ],
+      "x": 790,
+      "size": 360,
+      "at": 1.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/cikgu_mengajar.png",
+     "x": 790,
+     "y": 330,
+     "at": 2.1,
+     "until": 3.5,
+     "size": 160,
+     "tag": "TANPA TUISYEN"
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 790,
+     "y": 330,
+     "at": 4.46,
+     "size": 160,
+     "tag": "KEJAR KELAS"
+    }
+   ]
+  },
+  {
+   "start": 5.3,
+   "end": 7.78,
+   "line": "Sebab | latihan dia | cukup di rumah.",
+   "keys": [
+    "latihan",
+    "rumah."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "LATIHAN",
+    "size": 92,
+    "sub": "cukup di rumah",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikbiru/idea",
+      "x": 380,
+      "size": 380,
+      "at": 5.4
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 6.5,
+     "size": 220,
+     "tag": "DI RUMAH"
+    }
+   ]
+  },
+  {
+   "start": 7.78,
+   "end": 15.46,
+   "line": "Anak lain? | Mak ayah bayar tuisyen | beratus sebulan, | tapi kat rumah | anak tak buat latihan. | Ilmu tak melekat.",
+   "keys": [
+    "beratus",
+    "sebulan,",
+    "tak",
+    "melekat."
+   ],
+   "label": "anak lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 290,
+      "size": 400,
+      "at": 8.7
+     },
+     {
+      "char": "adikhp/game",
+      "x": 790,
+      "size": 360,
+      "at": 11.3
+     }
+    ]
+   },
+   "pills": [
+    [
+     "RM beratus sebulan",
+     10.14
+    ]
+   ],
+   "pills_y": 470,
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 545,
+     "y": 640,
+     "at": 13.7,
+     "size": 160,
+     "tag": "TAK MELEKAT"
+    }
+   ]
+  },
+  {
+   "start": 15.46,
+   "end": 18.5,
+   "line": "Latihan Topikal | Matematik Tambahan | Tingkatan 4.",
+   "keys": [
+    "Topikal",
+    "Tambahan",
+    "4."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 660
+   }
+  },
+  {
+   "start": 18.5,
+   "end": 21.88,
+   "line": "Anak cuma ulang latih | setiap topik | yang cikgu dah ajar.",
+   "keys": [
+    "ulang",
+    "topik"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "topik.jpg",
+    "w": 760,
+    "max_h": 760,
+    "y": 620
+   }
+  },
+  {
+   "start": 21.88,
+   "end": 27.24,
+   "line": "Soalan dwibahasa, | BM dan English, | sesuai kelas DLP | dan kelas biasa.",
+   "keys": [
+    "dwibahasa,",
+    "BM",
+    "English,",
+    "DLP"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "soalan.jpg",
+    "w": 760,
+    "max_h": 640,
+    "y": 560
+   },
+   "pills": [
+    [
+     "BM",
+     23.34
+    ],
+    [
+     "English",
+     24.14
+    ],
+    [
+     "DLP",
+     25.72
+    ],
+    [
+     "Kelas biasa",
+     26.58
+    ]
+   ],
+   "pills_y": 960
+  },
+  {
+   "start": 27.24,
+   "end": 31.74,
+   "line": "Sebelum bayar | tuisyen mahal, | cuba bagi anak | latihan yang betul | dulu.",
+   "keys": [
+    "mahal,",
+    "betul"
+   ],
+   "illus": {
+    "kind": "stairs",
+    "steps": 3,
+    "labels": [
+     "Topik",
+     "Latih",
+     "Faham"
+    ],
+    "climb_at": 1.6,
+    "beat": 0.9,
+    "char": "adikbiru/berlari",
+    "char_scale": 1.35
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 430,
+     "at": 30.6,
+     "size": 160,
+     "tag": "YAKIN"
+    }
+   ]
+  },
+  {
+   "start": 31.74,
+   "end": 33.31,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "buku.jpg",
+    "w": 380,
+    "max_h": 540,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "ortu/pasangan",
+    "char_scale": 1.15
+   }
+  }
+ ]
+}

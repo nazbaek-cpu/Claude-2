@@ -1,7 +1,7 @@
 {
  "source": "input/src1080.mp4",
  "preset": "product",
- "hflip": false,
+ "hflip": true,
  "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, e-buku, tema, DSKP, versi yang telah dikemaskini",
  "speed": {
   "tempo": 1.12,

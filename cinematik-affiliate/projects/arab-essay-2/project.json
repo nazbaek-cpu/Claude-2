@@ -1,1 +1,237 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication. Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, e-buku.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, e-buku.",
+ "cta": {
+  "at": 28.38,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.42,
+   "line": "Kenapa ada karangan | yang tak salah langsung | tapi markah | tetap biasa-biasa?",
+   "keys": [
+    "tak",
+    "salah",
+    "biasa-biasa?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/berfikir",
+      "x": 540,
+      "size": 440,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 260,
+     "y": 380,
+     "at": 1.38,
+     "size": 170,
+     "tag": "TAK SALAH"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 820,
+     "y": 380,
+     "at": 3.6,
+     "size": 170,
+     "tag": "MARKAH BIASA"
+    }
+   ]
+  },
+  {
+   "start": 4.42,
+   "end": 10.26,
+   "line": "Sebab pemeriksa | nak lebih dari betul. | Dia cari | unsur KBAT | dan ungkapan | yang menarik.",
+   "keys": [
+    "lebih",
+    "KBAT",
+    "ungkapan",
+    "menarik."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PEMERIKSA CARI",
+    "word": "KBAT + UNGKAPAN",
+    "size": 76,
+    "sub": "bukan sekadar betul",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/idea",
+      "x": 380,
+      "size": 400,
+      "at": 4.5
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/cikgu_mengajar.png",
+     "x": 800,
+     "y": 980,
+     "at": 5.1,
+     "size": 220,
+     "tag": "PEMERIKSA"
+    }
+   ]
+  },
+  {
+   "start": 10.26,
+   "end": 16.08,
+   "line": "Pelajar lain? | Ayat sama, | idea sama, | macam seribu karangan lain | atas meja pemeriksa.",
+   "keys": [
+    "sama,",
+    "seribu"
+   ],
+   "label": "pelajar lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Ayat sama",
+     "Idea sama",
+     "Biasa"
+    ],
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      13.7,
+      "abang/stres"
+     ]
+    ],
+    "char_scale": 1.1
+   }
+  },
+  {
+   "start": 16.08,
+   "end": 18.74,
+   "line": "Buku Bahasa Melayu SPM, | Kertas 1.",
+   "keys": [
+    "Bahasa",
+    "Melayu",
+    "Kertas"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 18.74,
+   "end": 23.28,
+   "line": "Kau cuma ambil | ungkapan menarik | dan unsur KBAT | dari contoh karangan.",
+   "keys": [
+    "ungkapan",
+    "KBAT",
+    "contoh"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Ungkapan",
+     20.12
+    ],
+    [
+     "KBAT",
+     21.3
+    ],
+    [
+     "Contoh",
+     22.24
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 23.28,
+   "end": 25.7,
+   "line": "Petua dan nasihat | terus dari penulis.",
+   "keys": [
+    "Petua",
+    "nasihat",
+    "penulis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1070,
+    "cast": [
+     {
+      "char": "kira/gembira",
+      "x": 540,
+      "size": 400,
+      "at": 23.3
+     }
+    ]
+   }
+  },
+  {
+   "start": 25.7,
+   "end": 28.38,
+   "line": "Karangan kau | terus nampak lain | dari yang lain.",
+   "keys": [
+    "lain",
+    "lain."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "kira/bangga",
+    "words": [
+     [
+      "Lain dari yang lain",
+      27.36
+     ]
+    ]
+   }
+  },
+  {
+   "start": 28.38,
+   "end": 29.65,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

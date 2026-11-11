@@ -1,1 +1,271 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication. Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, e-buku.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, e-buku.",
+ "cta": {
+  "at": 27.94,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.54,
+   "line": "Mak ayah, | kenapa anak | dah baca banyak | contoh karangan | tapi markah | tak naik?",
+   "keys": [
+    "banyak",
+    "contoh",
+    "tak",
+    "naik?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 420,
+      "at": 0.1
+     },
+     {
+      "char": "adikbiru/berfikir",
+      "char_at": [
+       [
+        3.36,
+        "adikbiru/sedih"
+       ]
+      ],
+      "x": 790,
+      "size": 360,
+      "at": 1.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 790,
+     "y": 330,
+     "at": 2.12,
+     "size": 160,
+     "tag": "BANYAK CONTOH",
+     "until": 3.3
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 790,
+     "y": 330,
+     "at": 3.94,
+     "size": 160,
+     "tag": "TAK NAIK"
+    }
+   ]
+  },
+  {
+   "start": 4.54,
+   "end": 9.24,
+   "line": "Sebab dia | hafal karangan, | tapi tak tahu | kenapa karangan tu | dapat markah tinggi.",
+   "keys": [
+    "hafal",
+    "kenapa",
+    "tinggi."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PUNCANYA",
+    "word": "HAFAL JE",
+    "size": 100,
+    "sub": "tak tahu kenapa dapat markah",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikbiru/berfikir",
+      "x": 380,
+      "size": 400,
+      "at": 4.6
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.12,
+     "size": 220,
+     "tag": "KENAPA A?"
+    }
+   ]
+  },
+  {
+   "start": 9.24,
+   "end": 14.24,
+   "line": "Anak lain? | Salin ayat orang, | bila soalan | berubah sikit, | terus tak boleh guna.",
+   "keys": [
+    "Salin",
+    "berubah",
+    "tak",
+    "guna."
+   ],
+   "label": "anak lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "ask",
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      13.04,
+      "abang/stres"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 860,
+     "y": 1150,
+     "at": 12.1,
+     "size": 170,
+     "tag": "SOALAN BERUBAH"
+    }
+   ]
+  },
+  {
+   "start": 14.24,
+   "end": 18.2,
+   "line": "Buku Bahasa Melayu | SPM Kertas 1 ni | ada analisis komplit.",
+   "keys": [
+    "analisis",
+    "komplit."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   },
+   "pills": [
+    [
+     "Analisis komplit",
+     17.56
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 18.2,
+   "end": 22.3,
+   "line": "Anak cuma | baca contoh, | lepas tu baca | kenapa ia dapat markah.",
+   "keys": [
+    "contoh,",
+    "kenapa",
+    "markah."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ringkasan.jpg",
+    "w": 660,
+    "max_h": 780,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Kenapa dapat markah",
+     21.5
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 22.3,
+   "end": 25.0,
+   "line": "Tip dan teknik | menjawab | dari penulis sendiri.",
+   "keys": [
+    "Tip",
+    "teknik",
+    "penulis"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Tip",
+     22.3
+    ],
+    [
+     "Teknik",
+     22.92
+    ],
+    [
+     "Penulis",
+     24.06
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 25.0,
+   "end": 27.94,
+   "line": "Bila anak | faham caranya, | dia boleh | tulis sendiri.",
+   "keys": [
+    "faham",
+    "tulis",
+    "sendiri."
+   ],
+   "illus": {
+    "kind": "stairs",
+    "steps": 3,
+    "labels": [
+     "Baca",
+     "Faham",
+     "Tulis"
+    ],
+    "climb_at": 0.6,
+    "beat": 0.75,
+    "char": "adikbiru/gembira",
+    "char_scale": 1.3
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 430,
+     "at": 27.06,
+     "size": 160,
+     "tag": "TULIS SENDIRI"
+    }
+   ]
+  },
+  {
+   "start": 27.94,
+   "end": 30.59,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "ortu/pasangan",
+    "char_scale": 1.0
+   }
+  }
+ ]
+}

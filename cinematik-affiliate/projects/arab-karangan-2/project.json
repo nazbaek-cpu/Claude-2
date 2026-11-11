@@ -1,1 +1,277 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, pemeriksa.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, pemeriksa.",
+ "cta": {
+  "at": 32.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.76,
+   "line": "Kenapa ada calon SPM | yang skor tinggi | BM Kertas 1, | padahal tulis | dua karangan je?",
+   "keys": [
+    "skor",
+    "tinggi",
+    "dua",
+    "karangan"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/bangga",
+      "x": 540,
+      "size": 440,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 820,
+     "y": 380,
+     "at": 1.62,
+     "size": 170,
+     "tag": "SKOR TINGGI"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 260,
+     "y": 380,
+     "at": 4.72,
+     "size": 170,
+     "tag": "2 KARANGAN JE"
+    }
+   ]
+  },
+  {
+   "start": 5.76,
+   "end": 10.2,
+   "line": "Sebab dia tahu, | Bahagian B seorang | dah bawa | 70 markah.",
+   "keys": [
+    "Bahagian",
+    "B",
+    "70",
+    "markah."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "BAHAGIAN B",
+    "word": "70 MARKAH",
+    "size": 100,
+    "sub": "karangan umum",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/idea",
+      "x": 380,
+      "size": 420,
+      "at": 5.9
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.94,
+     "size": 200,
+     "tag": "70 / 100"
+    }
+   ]
+  },
+  {
+   "start": 10.2,
+   "end": 16.02,
+   "line": "Calon lain? | Tulis panjang-panjang, | tapi isi | tak kena, | markah tersekat | dekat tengah.",
+   "keys": [
+    "panjang-panjang,",
+    "tak",
+    "kena,",
+    "tersekat"
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "char_at": [
+       [
+        13.6,
+        "abang/terkejut"
+       ],
+       [
+        14.8,
+        "abang/stres"
+       ]
+      ],
+      "x": 540,
+      "size": 440,
+      "at": 10.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 220,
+     "y": 470,
+     "at": 11.74,
+     "size": 160,
+     "tag": "PANJANG"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 860,
+     "y": 470,
+     "at": 14.8,
+     "size": 160,
+     "tag": "TERSEKAT"
+    }
+   ]
+  },
+  {
+   "start": 16.02,
+   "end": 18.88,
+   "line": "Buku Bahasa Melayu SPM, | Kertas 1.",
+   "keys": [
+    "Bahasa",
+    "Melayu",
+    "Kertas"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 18.88,
+   "end": 23.14,
+   "line": "Kau cuma belajar | teknik jawab, | ikut analisis komplit | setiap karangan.",
+   "keys": [
+    "teknik",
+    "analisis",
+    "komplit"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ringkasan.jpg",
+    "w": 660,
+    "max_h": 780,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Analisis komplit",
+     21.66
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 23.14,
+   "end": 28.34,
+   "line": "Bahagian A, | 30 markah. | Bahagian B, | 70 markah. | Semua | dah dipecahkan.",
+   "keys": [
+    "30",
+    "70",
+    "dipecahkan."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "markah.jpg",
+    "w": 900,
+    "max_h": 380,
+    "y": 520
+   },
+   "pills": [
+    [
+     "A: 30 + B: 70 = 100 markah",
+     26.24
+    ]
+   ],
+   "pills_y": 860,
+   "illus": {
+    "kind": "cast",
+    "y": 1130,
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 540,
+      "size": 330,
+      "at": 23.2
+     }
+    ]
+   }
+  },
+  {
+   "start": 28.34,
+   "end": 32.0,
+   "line": "Faham | cara markah dikira? | Karangan kau | terus naik kelas.",
+   "keys": [
+    "markah",
+    "dikira?",
+    "naik",
+    "kelas."
+   ],
+   "illus": {
+    "kind": "stairs",
+    "steps": 3,
+    "labels": [
+     "Faham",
+     "Tulis",
+     "Naik"
+    ],
+    "climb_at": 1.0,
+    "beat": 0.8,
+    "char": "kira/gembira",
+    "char_scale": 1.3
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 430,
+     "at": 31.3,
+     "size": 160,
+     "tag": "NAIK KELAS"
+    }
+   ]
+  },
+  {
+   "start": 32.0,
+   "end": 33.65,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

@@ -88,6 +88,14 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
   yang disimpan (`kira/`, `abang/`, `adikbiru/`, `ortu/pasangan`) di tempat figura lukisan. Tanpa `char`, figura lukisan.
 - Beberapa watak sekali: `"illus": {"kind": "cast", "cast": [{"char": "kira/stres", "x": 300, "size": 340, "at": 8.6,
   "char_at": [[11.0, "kira/sedih"]]}, ...]}` (kaki di satu garisan lantai). Contoh: `projects/arab-ummi/`.
+- **Stickman** ("guna stickman"): 40 pose orang lidi disimpan dalam repo, `assets/stickman/<pose>.png`, jadi tak
+  perlu salin ke `input/`. Panggil terus: `"char": "stickman/berfikir"` atau dalam `cast`. Atas latar gelap (papan
+  hijau, kayu) stickman dapat bingkai putih automatik supaya garis hitam jelas. Contoh: `projects/arab-btp-stick/`.
+  Pose: `berdiri, melambai, tunjuk_sisi, tunjuk_bawah, tunjuk_atas, ok, dua_thumbs, isyarat_bagus, salam, berfikir,
+  terkejut, takjub, gembira, ketawa, sedih, menangis, marah, stres, pening, kecewa, duduk_santai, duduk_kerusi,
+  guna_laptop, guna_telefon, baca_buku, menulis, belajar, bekerja, makan, minum, beg_galas, bagasi, travel, naik_motor,
+  berlari, bersenam, angkat_barang, troli, memasak, promosi`.
+- Fail dalam `input/` projek didahulukan; kalau tiada, `arab.py` cari dalam `assets/` repo (watak dan ikon).
 - Atas latar gambar (papan hijau), ikon automatik duduk atas jubin putih supaya jelas (`"tile": false` untuk tutup).
 - Ikon: `"icons": [{"img": "icons/kuiz.png", "x": 830, "y": 1030, "at": 1.9, "size": 170, "tag": "UJIAN", "rot": 6}]`
   (ikon sekolah dalam `icons/`, ikon matematik dalam `mat/`), muncul dengan bunyi pop lembut.

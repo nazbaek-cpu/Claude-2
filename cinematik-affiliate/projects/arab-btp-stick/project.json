@@ -1,1 +1,288 @@
-{"type": "arab", "source": "input/vo.mp4", "bg_image": "input/papan.jpg", "whisper_prompt": "BTP Infografik Sejarah, Buku Teks Padat, Tingkatan 4, Tingkatan 5, infografik, nota berwarna, tarikh, peristiwa, Nilam Publication.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "BTP Infografik Sejarah, Buku Teks Padat, Tingkatan 4, Tingkatan 5, infografik, Fizik, Kimia, Matematik, Add Maths, Nilam Publication.",
+ "cta": {
+  "at": 29.14,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.56,
+   "line": "Kenapa ada calon | aliran sains | yang A Sejarah, | walaupun masa dia habis | dekat Fizik dan Kimia?",
+   "keys": [
+    "sains",
+    "A",
+    "Fizik",
+    "Kimia?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/belajar",
+      "char_at": [
+       [
+        1.84,
+        "stickman/dua_thumbs"
+       ],
+       [
+        3.24,
+        "stickman/belajar"
+       ]
+      ],
+      "x": 540,
+      "size": 380,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 230,
+     "y": 400,
+     "at": 1.84,
+     "size": 170,
+     "tag": "A SEJARAH"
+    },
+    {
+     "img": "icons/eksperimen.png",
+     "x": 850,
+     "y": 400,
+     "at": 4.38,
+     "size": 170,
+     "tag": "FIZIK & KIMIA"
+    }
+   ]
+  },
+  {
+   "start": 5.56,
+   "end": 7.9,
+   "line": "Sebab Sejarah dia | tak ambil masa banyak.",
+   "keys": [
+    "tak",
+    "ambil",
+    "masa"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "SEKEJAP JE",
+    "size": 96,
+    "sub": "Sejarah tak ambil masa",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "stickman/ok",
+      "x": 380,
+      "size": 360,
+      "at": 5.6
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/jam.png",
+     "x": 800,
+     "y": 980,
+     "at": 6.84,
+     "size": 200,
+     "tag": "MASA SIKIT"
+    }
+   ]
+  },
+  {
+   "start": 7.9,
+   "end": 13.68,
+   "line": "Calon lain? | Tinggal Sejarah | sampai minggu terakhir, | baru buka buku teks, | terus panik.",
+   "keys": [
+    "Tinggal",
+    "terakhir,",
+    "panik."
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/duduk_santai",
+      "char_at": [
+       [
+        11.16,
+        "stickman/terkejut"
+       ],
+       [
+        12.52,
+        "stickman/stres"
+       ]
+      ],
+      "x": 380,
+      "size": 400,
+      "at": 8.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/jadual_waktu.png",
+     "x": 820,
+     "y": 560,
+     "at": 10.06,
+     "size": 170,
+     "tag": "MINGGU TERAKHIR",
+     "until": 11.5
+    },
+    {
+     "img": "icons/rak_buku.png",
+     "x": 820,
+     "y": 560,
+     "at": 11.86,
+     "size": 170,
+     "tag": "BUKU TEKS TEBAL"
+    }
+   ]
+  },
+  {
+   "start": 13.68,
+   "end": 17.76,
+   "line": "BTP Infografik Sejarah, | isi padat, | cepat ulang kaji.",
+   "keys": [
+    "Infografik",
+    "padat,",
+    "cepat"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 860,
+    "max_h": 640,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Isi padat, cepat ulang kaji",
+     16.1
+    ]
+   ],
+   "pills_y": 1010
+  },
+  {
+   "start": 17.76,
+   "end": 21.18,
+   "line": "Anak cuma baca | sikit setiap hari, | tak ganggu | subjek lain.",
+   "keys": [
+    "sikit",
+    "setiap",
+    "hari,",
+    "tak",
+    "ganggu"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "flip.jpg",
+    "w": 520,
+    "max_h": 640,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1080,
+    "cast": [
+     {
+      "char": "stickman/baca_buku",
+      "x": 540,
+      "size": 320,
+      "at": 17.8
+     }
+    ]
+   }
+  },
+  {
+   "start": 21.18,
+   "end": 26.42,
+   "line": "Ada juga BTP | Fizik, Kimia, | Matematik dan Add Maths | dalam siri yang sama.",
+   "keys": [
+    "Fizik,",
+    "Kimia,",
+    "Matematik",
+    "Add",
+    "Maths"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "siri.jpg",
+    "w": 900,
+    "max_h": 620,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Fizik",
+     22.34
+    ],
+    [
+     "Kimia",
+     22.98
+    ],
+    [
+     "Matematik",
+     23.6
+    ],
+    [
+     "Add Maths",
+     24.5
+    ]
+   ],
+   "pills_y": 1010
+  },
+  {
+   "start": 26.42,
+   "end": 29.14,
+   "line": "Semua subjek | dapat masa, | tak ada yang tertinggal.",
+   "keys": [
+    "Semua",
+    "masa,",
+    "tertinggal."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/gembira",
+    "words": [
+     [
+      "Semua subjek dapat masa",
+      27.46
+     ]
+    ]
+   }
+  },
+  {
+   "start": 29.14,
+   "end": 30.85,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 640,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

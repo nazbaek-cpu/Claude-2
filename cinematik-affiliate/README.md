@@ -146,7 +146,7 @@ A segment's `pills_y` moves its pills (e.g. to the top, clear of a book held low
 - [`styles/animasi-kartun.md`](styles/animasi-kartun.md): "animasi kartun", a flat cartoon explainer on ruled cream paper (mascot, flat props, tape labels, data bar charts) with its script formula.
 - [`styles/16-efek.md`](styles/16-efek.md): "16 efek", a talking-head reel that shows one camera effect a second (headline wall, paper cut, before/after wipe, depth text…) under an on-screen progress checklist, then a keyword-comment CTA.
 - [`styles/nota-16-effect.md`](styles/nota-16-effect.md): "Nota 16 EFFECT", the tested recipe for a product talking head in that style: flip, grade and lipstick settings, which effect goes with which kind of line, layout rules and an `fx` template.
-- [`styles/template-arab.md`](styles/template-arab.md): "template arab", a calm tadabbur explainer on plain cream: flat stick figure, one slow illustration at a time, Arabic verse cards with an orange key word, source pills, word-by-word subtitle card.
+- [`styles/template-arab.md`](styles/template-arab.md): "template arab", a calm tadabbur explainer on plain cream: flat stick figure, one slow illustration at a time, Arabic verse cards with an orange key word, source pills, word-by-word subtitle card. Stickman poses ("guna stickman") ship in `assets/stickman/` and are called as `"char": "stickman/<pose>"`.
 
 ## Quick start
 

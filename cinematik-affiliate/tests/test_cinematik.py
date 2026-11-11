@@ -449,3 +449,14 @@ def test_arab_frame_renders(tmp_path):
         im = arab.frame(cfg, str(tmp_path), bg, words, t)
         assert im.size == (1080, 1920)
     assert len(arab.sfx_track(cfg, 6.0)) > 0
+
+
+def test_arab_stickman_from_repo_assets(tmp_path):
+    """"stickman/<pose>" loads from the repo's assets/ (no copy in the project's input/), with a white rim on dark pages"""
+    import arab
+    arab.PRJ[0] = str(tmp_path); arab._chars.clear()
+    arab.DARK[0] = False; plain = arab.char("stickman/berfikir", 300)
+    arab._chars.clear(); arab.DARK[0] = True; rimmed = arab.char("stickman/berfikir", 300)
+    arab.DARK[0] = False; arab._chars.clear()
+    assert plain.height == int(300 * 1.15)
+    assert rimmed.width > plain.width and rimmed.height > plain.height

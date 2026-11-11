@@ -1,1 +1,284 @@
-{"type": "arab", "source": "input/vo.mp4", "bg_image": "input/papan.jpg", "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, pemeriksa.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, pemeriksa.",
+ "cta": {
+  "at": 30.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.9,
+   "line": "Mak ayah, | tahu tak? | A dalam subjek lain | pun tak guna | kalau BM gagal.",
+   "keys": [
+    "tak",
+    "guna",
+    "BM",
+    "gagal."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 420,
+      "at": 0.1
+     },
+     {
+      "char": "adikbiru/gembira",
+      "char_at": [
+       [
+        3.78,
+        "adikbiru/terkejut"
+       ]
+      ],
+      "x": 790,
+      "size": 360,
+      "at": 1.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 790,
+     "y": 330,
+     "at": 1.32,
+     "until": 3.6,
+     "size": 160,
+     "tag": "A SUBJEK LAIN"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 790,
+     "y": 330,
+     "at": 4.04,
+     "size": 160,
+     "tag": "BM GAGAL"
+    }
+   ]
+  },
+  {
+   "start": 4.9,
+   "end": 9.06,
+   "line": "Sebab tanpa | lulus Bahasa Melayu, | anak tak dapat | sijil SPM.",
+   "keys": [
+    "lulus",
+    "tak",
+    "sijil"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SYARAT WAJIB",
+    "word": "LULUS BM",
+    "size": 100,
+    "sub": "untuk dapat sijil SPM",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikbiru/sedih",
+      "x": 380,
+      "size": 400,
+      "at": 5.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/sijil.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.08,
+     "size": 220,
+     "tag": "SIJIL SPM"
+    }
+   ]
+  },
+  {
+   "start": 9.06,
+   "end": 15.76,
+   "line": "Anak lain? | Fokus Sains, | Matematik, | BM dibiarkan. | Ingat senang, | sebab bahasa sendiri.",
+   "keys": [
+    "Sains,",
+    "Matematik,",
+    "dibiarkan.",
+    "senang,"
+   ],
+   "label": "anak lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Sains",
+     "Matematik",
+     "BM?"
+    ],
+    "char": "abang/yakin",
+    "char_at": [
+     [
+      13.32,
+      "abang/gembira"
+     ]
+    ],
+    "char_scale": 1.1
+   }
+  },
+  {
+   "start": 15.76,
+   "end": 18.2,
+   "line": "Buku Bahasa Melayu | SPM Kertas 1 ni,",
+   "keys": [
+    "Bahasa",
+    "Melayu",
+    "Kertas"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 18.2,
+   "end": 22.74,
+   "line": "anak cuma ikut | tip, nota | dan contoh karangan | dengan jawapan lengkap.",
+   "keys": [
+    "tip,",
+    "nota",
+    "contoh",
+    "jawapan",
+    "lengkap."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "tema1.jpg",
+    "w": 660,
+    "max_h": 780,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Tip",
+     19.42
+    ],
+    [
+     "Nota",
+     19.78
+    ],
+    [
+     "Contoh",
+     20.6
+    ],
+    [
+     "Jawapan",
+     21.72
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 22.74,
+   "end": 26.62,
+   "line": "Kedua-dua bahagian | Kertas 1 ada, | Bahagian A | dan Bahagian B.",
+   "keys": [
+    "Kedua-dua",
+    "A",
+    "B."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "markah.jpg",
+    "w": 900,
+    "max_h": 380,
+    "y": 520
+   },
+   "pills": [
+    [
+     "A: 30 + B: 70 = 100 markah",
+     25.86
+    ]
+   ],
+   "pills_y": 860,
+   "illus": {
+    "kind": "cast",
+    "y": 1130,
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 540,
+      "size": 330,
+      "at": 22.8
+     }
+    ]
+   }
+  },
+  {
+   "start": 26.62,
+   "end": 30.0,
+   "line": "Jangan biar | satu subjek | tentukan | sijil anak.",
+   "keys": [
+    "Jangan",
+    "satu",
+    "subjek",
+    "sijil"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 330,
+      "size": 420,
+      "at": 26.7
+     },
+     {
+      "char": "adikbiru/raikan",
+      "x": 790,
+      "size": 360,
+      "at": 27.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/sijil.png",
+     "x": 790,
+     "y": 330,
+     "at": 29.04,
+     "size": 170,
+     "tag": "SIJIL SPM"
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 31.48,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

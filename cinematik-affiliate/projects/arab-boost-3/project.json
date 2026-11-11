@@ -1,1 +1,275 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "Matematik SPM Final Boost, Fly High, Cikgu Yasir, guru cemerlang Matematik, soalan terpilih, subtopik, jawapan lengkap, bengkel kalkulator, 200 muka surat.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Matematik SPM Final Boost, Fly High, Cikgu Yasir, guru cemerlang Matematik, soalan terpilih, subtopik, jawapan lengkap, bengkel kalkulator, 200 muka surat.",
+ "cta": {
+  "at": 28.04,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.96,
+   "line": "Kenapa ada calon | yang Matematik | stuck dekat B, | tiba-tiba | SPM dapat A?",
+   "keys": [
+    "stuck",
+    "B,",
+    "A?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikbiru/berfikir",
+      "char_at": [
+       [
+        3.98,
+        "adikbiru/raikan"
+       ]
+      ],
+      "x": 540,
+      "size": 420,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/kuiz.png",
+     "x": 250,
+     "y": 400,
+     "at": 1.62,
+     "size": 170,
+     "tag": "STUCK DI B"
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 830,
+     "y": 400,
+     "at": 4.0,
+     "size": 170,
+     "tag": "SPM DAPAT A"
+    }
+   ]
+  },
+  {
+   "start": 4.96,
+   "end": 8.0,
+   "line": "Sebab dia tutup | markah yang | selalu tercicir.",
+   "keys": [
+    "tutup",
+    "tercicir."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "MARKAH TERCICIR",
+    "size": 76,
+    "sub": "dia tutup satu-satu",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikbiru/idea",
+      "x": 380,
+      "size": 400,
+      "at": 5.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 6.08,
+     "size": 220,
+     "tag": "TUTUP LUBANG"
+    }
+   ]
+  },
+  {
+   "start": 8.0,
+   "end": 14.56,
+   "line": "Calon lain? | Rasa dah pandai, | tapi setiap ujian | hilang 2-3 markah | dekat soalan yang sama.",
+   "keys": [
+    "pandai,",
+    "hilang",
+    "2-3",
+    "sama."
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "char_at": [
+       [
+        11.54,
+        "abang/terkejut"
+       ],
+       [
+        13.16,
+        "abang/stres"
+       ]
+      ],
+      "x": 380,
+      "size": 440,
+      "at": 8.1
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 820,
+     "y": 560,
+     "at": 11.14,
+     "size": 170,
+     "tag": "SETIAP UJIAN",
+     "until": 12.2
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 820,
+     "y": 560,
+     "at": 12.2,
+     "size": 170,
+     "tag": "-2, -3 MARKAH"
+    }
+   ]
+  },
+  {
+   "start": 14.56,
+   "end": 18.32,
+   "line": "Matematik SPM Final Boost | bagi soalan | berpotensi tinggi,",
+   "keys": [
+    "Final",
+    "Boost",
+    "berpotensi",
+    "tinggi,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 860,
+    "y": 650
+   },
+   "pills": [
+    [
+     "Soalan berpotensi tinggi",
+     17.22
+    ]
+   ],
+   "pills_y": 1140
+  },
+  {
+   "start": 18.32,
+   "end": 21.24,
+   "line": "siap jawapan lengkap | dengan jalan kerja | yang jelas.",
+   "keys": [
+    "jawapan",
+    "lengkap",
+    "jalan",
+    "kerja",
+    "jelas."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ciri.jpg",
+    "w": 860,
+    "max_h": 600,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Jalan kerja jelas",
+     20.26
+    ]
+   ],
+   "pills_y": 960
+  },
+  {
+   "start": 21.24,
+   "end": 24.52,
+   "line": "Anak cuma semak | di mana dia | selalu silap. | Betulkan.",
+   "keys": [
+    "semak",
+    "silap.",
+    "Betulkan."
+   ],
+   "illus": {
+    "kind": "stairs",
+    "steps": 3,
+    "labels": [
+     "Semak",
+     "Cari silap",
+     "Betulkan"
+    ],
+    "climb_at": 0.5,
+    "beat": 0.9,
+    "char": "adikbiru/gembira",
+    "char_scale": 1.3
+   }
+  },
+  {
+   "start": 24.52,
+   "end": 28.04,
+   "line": "Beza B dan A, | cuma beberapa markah | yang tercicir.",
+   "keys": [
+    "B",
+    "A,",
+    "beberapa",
+    "tercicir."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adikbiru/raikan",
+    "words": [
+     [
+      "Dari B ke A",
+      25.56
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 860,
+     "y": 460,
+     "at": 25.56,
+     "size": 170,
+     "tag": "GRED A"
+    }
+   ]
+  },
+  {
+   "start": 28.04,
+   "end": 29.65,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 380,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "adikbiru/sapa",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

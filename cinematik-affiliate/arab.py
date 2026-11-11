@@ -105,12 +105,28 @@ def figure(color=NAVY, pose="down", mood="smile", size=300, t=0.0, cap=True):
 PRJ = [""]
 DARK = [False]   # true when the page sits on a picture background (chalkboard)
 _chars = {}
+ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+
+def asset(rel):
+    """input/<rel> of the project, else the repo's shared assets/<rel> (e.g. "stickman/berfikir.png")"""
+    p = os.path.join(PRJ[0], "input", rel)
+    return p if os.path.exists(p) else os.path.join(ASSETS, rel)
+
+def outlined(im, r=7):
+    """a white sticker rim around a line drawing, so black lines still read on a dark (chalkboard) page"""
+    pad = r + 2; big = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0)); big.alpha_composite(im, (pad, pad))
+    a = big.split()[3].point(lambda v: 255 if v > 40 else 0).filter(ImageFilter.MaxFilter(2 * r + 1)).filter(ImageFilter.GaussianBlur(1))
+    rim = Image.new("RGBA", big.size, (255, 255, 255, 0)); rim.putalpha(a); rim.alpha_composite(big); return rim
+
 def char(path, size):
-    """input/<path>.png scaled so it reads at the same size as a drawn figure of `size`"""
+    """<path>.png (project input/, else repo assets/) scaled so it reads at the same size as a drawn figure of `size`;
+    stickman poses get a white sticker rim on dark backgrounds"""
     key = (path, size)
     if key not in _chars:
-        im = Image.open(os.path.join(PRJ[0], "input", path + ".png")).convert("RGBA"); h = int(size * 1.15)
-        _chars[key] = im.resize((max(1, int(im.width * h / im.height)), h), Image.LANCZOS)
+        im = Image.open(asset(path + ".png")).convert("RGBA"); h = int(size * 1.15)
+        im = im.resize((max(1, int(im.width * h / im.height)), h), Image.LANCZOS)
+        if DARK[0] and path.startswith("stickman/"): im = outlined(im, max(4, h // 60))
+        _chars[key] = im
     return _chars[key]
 
 def who(I, t, color, pose, mood, size, key="char"):
@@ -266,7 +282,7 @@ def icon(ic):
     """a flat icon from input/ (school / math icon sheets), optional paper pill tag above it"""
     key = json.dumps(ic, sort_keys=True)
     if key not in _cache:
-        im = Image.open(os.path.join(PRJ[0], "input", ic["img"])).convert("RGBA"); s_ = ic.get("size", 200)
+        im = Image.open(asset(ic["img"])).convert("RGBA"); s_ = ic.get("size", 200)
         im.thumbnail((s_, s_), Image.LANCZOS)
         if ic.get("tile", DARK[0]):   # on a dark picture background, sit the icon on a white rounded tile
             pad = 18; tile = card_box(im.width + pad * 2, im.height + pad * 2, 26)

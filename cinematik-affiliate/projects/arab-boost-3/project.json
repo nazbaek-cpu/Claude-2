@@ -1,7 +1,7 @@
 {
  "type": "arab",
  "source": "input/vo.mp4",
- "bg": "addmath",
+ "bg_image": "input/papan.jpg",
  "whisper_prompt": "Matematik SPM Final Boost, Fly High, Cikgu Yasir, guru cemerlang Matematik, soalan terpilih, subtopik, jawapan lengkap, bengkel kalkulator, 200 muka surat.",
  "cta": {
   "at": 28.04,

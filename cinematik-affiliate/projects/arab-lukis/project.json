@@ -1,1 +1,245 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "Bestnya Melukis Karakter, Irfan Foner, pelukis komik, anak suka melukis, step by step, 30 topik, 30 aktiviti, 64 halaman berwarna, chibi, ekspresi, karakter.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "Bestnya Melukis Karakter, Irfan Foner, pelukis komik, anak suka melukis, step by step, 30 topik, 30 aktiviti, 64 halaman berwarna, chibi, ekspresi, karakter.",
+ "cta": {
+  "at": 20.94,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.24,
+   "line": "Jangan marah anak | yang suka conteng | belakang buku sekolah.",
+   "keys": [
+    "Jangan",
+    "marah",
+    "conteng"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/stres",
+      "x": 540,
+      "size": 400,
+      "at": 0.4
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "ortu/mak/marah.png",
+     "x": 250,
+     "y": 400,
+     "at": 0.1,
+     "size": 200,
+     "tag": "MAK MARAH"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 830,
+     "y": 400,
+     "at": 1.36,
+     "size": 170,
+     "tag": "CONTENG BUKU"
+    }
+   ]
+  },
+  {
+   "start": 3.24,
+   "end": 6.38,
+   "line": "Conteng tu tanda | dia ada bakat | yang belum diasah.",
+   "keys": [
+    "bakat",
+    "diasah."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SEBENARNYA",
+    "word": "BAKAT",
+    "size": 110,
+    "sub": "yang belum diasah",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adik/idea",
+      "x": 380,
+      "size": 380,
+      "at": 3.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/pensel_warna.png",
+     "x": 800,
+     "y": 980,
+     "at": 4.74,
+     "size": 220,
+     "tag": "BAKAT"
+    }
+   ]
+  },
+  {
+   "start": 6.38,
+   "end": 9.72,
+   "line": "Buku Bestnya | Melukis Karakter | oleh Irfan Foner,",
+   "keys": [
+    "Melukis",
+    "Karakter",
+    "Irfan",
+    "Foner,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 900,
+    "max_h": 620,
+    "y": 560
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1080,
+    "cast": [
+     {
+      "char": "adik/terkejut",
+      "x": 540,
+      "size": 320,
+      "at": 6.5
+     }
+    ]
+   }
+  },
+  {
+   "start": 9.72,
+   "end": 14.88,
+   "line": "pelukis komik | 15 tahun pengalaman, | ajar anak step by step | cara melukis yang betul.",
+   "keys": [
+    "komik",
+    "15",
+    "tahun",
+    "step",
+    "betul."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "irfan.jpg",
+    "w": 900,
+    "max_h": 660,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Pelukis komik",
+     10.24
+    ],
+    [
+     "15 tahun",
+     10.8
+    ],
+    [
+     "Step by step",
+     12.66
+    ]
+   ],
+   "pills_y": 1010
+  },
+  {
+   "start": 14.88,
+   "end": 18.9,
+   "line": "30 topik, | dari lukis kepala | sampai cipta | karakter sendiri.",
+   "keys": [
+    "30",
+    "topik,",
+    "kepala",
+    "karakter",
+    "sendiri."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kandungan.jpg",
+    "w": 700,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "30 topik",
+     15.44
+    ],
+    [
+     "Kepala",
+     16.66
+    ],
+    [
+     "Karakter sendiri",
+     18.0
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 18.9,
+   "end": 20.94,
+   "line": "Daripada conteng, | jadi karya.",
+   "keys": [
+    "conteng,",
+    "karya."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 420,
+      "at": 18.95
+     },
+     {
+      "char": "adik/raikan",
+      "x": 770,
+      "size": 380,
+      "at": 19.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/sijil.png",
+     "x": 770,
+     "y": 330,
+     "at": 20.02,
+     "size": 160,
+     "tag": "KARYA"
+    }
+   ]
+  },
+  {
+   "start": 20.94,
+   "end": 22.6,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 640,
+    "max_h": 440,
+    "y": 520
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "adik/sapa",
+    "char_scale": 1.1
+   }
+  }
+ ]
+}

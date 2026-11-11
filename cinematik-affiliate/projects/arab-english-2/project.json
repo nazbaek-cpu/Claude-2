@@ -1,1 +1,265 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, narrative, e-book, Model Tests, Paper 2, clone questions, 150 essays, Nilam Publication.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, narrative, e-book, Model Tests, Paper 2, clone questions, 150 essays, Nilam Publication.",
+ "cta": {
+  "at": 32.5,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.04,
+   "line": "Kenapa ada calon | yang faham English | tapi markah writing | tetap rendah?",
+   "keys": [
+    "faham",
+    "English",
+    "rendah?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/berfikir",
+      "x": 540,
+      "size": 440,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/angkat_tangan.png",
+     "x": 260,
+     "y": 380,
+     "at": 0.98,
+     "size": 170,
+     "tag": "FAHAM ENGLISH"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 820,
+     "y": 380,
+     "at": 2.7,
+     "size": 170,
+     "tag": "WRITING RENDAH"
+    }
+   ]
+  },
+  {
+   "start": 4.04,
+   "end": 9.77,
+   "line": "Sebab | faham dan tulis | tu dua benda lain. | Writing | perlukan struktur.",
+   "keys": [
+    "dua",
+    "lain.",
+    "struktur."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "STRUKTUR",
+    "size": 100,
+    "sub": "faham lain, tulis lain",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/idea",
+      "x": 380,
+      "size": 420,
+      "at": 4.1
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.58,
+     "size": 220,
+     "tag": "IKUT STRUKTUR"
+    }
+   ]
+  },
+  {
+   "start": 9.77,
+   "end": 15.94,
+   "line": "Calon lain? | Ada idea | dalam kepala, | tapi bila tulis, | ayat berterabur, | tak tahu nak susun.",
+   "keys": [
+    "idea",
+    "berterabur,",
+    "susun."
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "ask",
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      13.86,
+      "abang/stres"
+     ]
+    ],
+    "char_scale": 1.0
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 1150,
+     "at": 13.86,
+     "size": 170,
+     "tag": "BERTERABUR"
+    }
+   ]
+  },
+  {
+   "start": 15.94,
+   "end": 19.7,
+   "line": "Buku | 120 SPM English | Model Essays.",
+   "keys": [
+    "120",
+    "English",
+    "Model",
+    "Essays."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 580,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 19.7,
+   "end": 23.32,
+   "line": "Kau cuma tengok | struktur setiap contoh, | ikut langkah dia.",
+   "keys": [
+    "struktur",
+    "langkah"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "essay.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Intro",
+     20.8
+    ],
+    [
+     "Body",
+     21.58
+    ],
+    [
+     "Conclusion",
+     22.62
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 23.32,
+   "end": 28.68,
+   "line": "Email, essay, | article, report, | review, narrative, | semua ada.",
+   "keys": [
+    "Email,",
+    "essay,",
+    "article,",
+    "report,",
+    "review,",
+    "narrative,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "overview.jpg",
+    "w": 660,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Email",
+     23.32
+    ],
+    [
+     "Essay",
+     24.18
+    ],
+    [
+     "Report",
+     25.7
+    ],
+    [
+     "Review",
+     26.46
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 28.68,
+   "end": 32.44,
+   "line": "Bila ada struktur, | idea kau | terus jadi karangan.",
+   "keys": [
+    "struktur,",
+    "karangan."
+   ],
+   "illus": {
+    "kind": "stairs",
+    "steps": 3,
+    "labels": [
+     "Idea",
+     "Susun",
+     "Tulis"
+    ],
+    "climb_at": 0.9,
+    "beat": 0.8,
+    "char": "kira/gembira",
+    "char_scale": 1.3
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 880,
+     "y": 430,
+     "at": 31.7,
+     "size": 160,
+     "tag": "JADI KARANGAN"
+    }
+   ]
+  },
+  {
+   "start": 32.44,
+   "end": 33.96,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

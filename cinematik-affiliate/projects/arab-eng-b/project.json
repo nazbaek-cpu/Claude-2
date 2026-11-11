@@ -1,1 +1,254 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication, karangan.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication, karangan.",
+ "cta": {
+  "at": 28.52,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.62,
+   "line": "Kenapa ada pelajar | yang jarang cakap English | di rumah, | tapi ayat dia | tetap lancar?",
+   "keys": [
+    "jarang",
+    "English",
+    "lancar?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/pasangan",
+      "x": 300,
+      "size": 400,
+      "at": 0.1
+     },
+     {
+      "char": "kira/berfikir",
+      "char_at": [
+       [
+        3.56,
+        "kira/menerang"
+       ]
+      ],
+      "x": 790,
+      "size": 420,
+      "at": 0.8
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/senyap.png",
+     "x": 790,
+     "y": 330,
+     "at": 1.54,
+     "size": 160,
+     "tag": "JARANG CAKAP",
+     "until": 2.6
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 790,
+     "y": 330,
+     "at": 3.96,
+     "size": 160,
+     "tag": "AYAT LANCAR"
+    }
+   ]
+  },
+  {
+   "start": 4.62,
+   "end": 7.58,
+   "line": "Sebab dia | banyak dengar | dan baca | ayat yang betul.",
+   "keys": [
+    "dengar",
+    "baca",
+    "betul."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "DENGAR + BACA",
+    "size": 84,
+    "sub": "ayat yang betul",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "adikhp/muzik",
+      "x": 380,
+      "size": 400,
+      "at": 4.7
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 800,
+     "y": 980,
+     "at": 6.18,
+     "size": 200,
+     "tag": "BACA"
+    }
+   ]
+  },
+  {
+   "start": 7.58,
+   "end": 13.72,
+   "line": "Pelajar lain? | Tak ada orang | nak bercakap English. | Tulis ikut terjemahan | dari BM, | ayat jadi pelik.",
+   "keys": [
+    "Tak",
+    "terjemahan",
+    "pelik."
+   ],
+   "label": "pelajar lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "ask",
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      12.82,
+      "abang/terkejut"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 1150,
+     "at": 11.18,
+     "size": 170,
+     "tag": "TERJEMAH BM"
+    }
+   ]
+  },
+  {
+   "start": 13.72,
+   "end": 17.42,
+   "line": "Buku 120 SPM English | Model Essays.",
+   "keys": [
+    "120",
+    "English",
+    "Model",
+    "Essays."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 580,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 17.42,
+   "end": 22.36,
+   "line": "Ada audio | untuk karangan terpilih, | video tip dari penulis | untuk setiap genre.",
+   "keys": [
+    "audio",
+    "video",
+    "genre."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ciri.jpg",
+    "w": 620,
+    "max_h": 820,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Audio",
+     17.98
+    ],
+    [
+     "Video tip",
+     19.68
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 22.36,
+   "end": 26.0,
+   "line": "Anak cuma dengar, | baca, | lepas tu | tiru gaya ayat.",
+   "keys": [
+    "dengar,",
+    "baca,",
+    "tiru"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "essay.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Dengar",
+     23.08
+    ],
+    [
+     "Baca",
+     23.64
+    ],
+    [
+     "Tiru",
+     24.94
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 26.0,
+   "end": 28.52,
+   "line": "Lama-lama, | ayat English dia | jadi semula jadi.",
+   "keys": [
+    "semula",
+    "jadi."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "kira/bangga",
+    "words": [
+     [
+      "Semula jadi",
+      27.88
+     ]
+    ]
+   }
+  },
+  {
+   "start": 28.52,
+   "end": 30.43,
+   "line": "Jadi, tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

@@ -1,1 +1,258 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "addmath", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication, karangan.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication, karangan.",
+ "cta": {
+  "at": 27.68,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.52,
+   "line": "Kenapa ada pelajar | yang sanggup baca | buku karangan English | lama-lama?",
+   "keys": [
+    "sanggup",
+    "English",
+    "lama-lama?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/gembira",
+      "x": 540,
+      "size": 440,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 820,
+     "y": 380,
+     "at": 1.58,
+     "size": 170,
+     "tag": "BACA LAMA"
+    }
+   ]
+  },
+  {
+   "start": 3.52,
+   "end": 7.96,
+   "line": "Sebab buku ni | penuh warna, | bukan hitam putih | yang memenatkan mata.",
+   "keys": [
+    "penuh",
+    "warna,",
+    "hitam",
+    "putih"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "PENUH WARNA",
+    "size": 92,
+    "sub": "bukan hitam putih",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/ketawa",
+      "x": 380,
+      "size": 400,
+      "at": 3.6
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/pensel_warna.png",
+     "x": 800,
+     "y": 980,
+     "at": 5.0,
+     "size": 220,
+     "tag": "FULL COLOUR"
+    }
+   ]
+  },
+  {
+   "start": 7.96,
+   "end": 13.08,
+   "line": "Pelajar lain? | Buka buku essay tebal, | dua muka surat | dah mengantuk, | terus tutup.",
+   "keys": [
+    "tebal,",
+    "mengantuk,",
+    "tutup."
+   ],
+   "label": "pelajar lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/berfikir",
+      "char_at": [
+       [
+        11.56,
+        "abang/stres"
+       ]
+      ],
+      "x": 380,
+      "size": 440,
+      "at": 8.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 820,
+     "y": 560,
+     "at": 9.78,
+     "size": 170,
+     "tag": "ESSAY TEBAL",
+     "until": 11.4
+    },
+    {
+     "img": "icons/tidur_kelas.png",
+     "x": 820,
+     "y": 560,
+     "at": 11.56,
+     "size": 170,
+     "tag": "MENGANTUK"
+    }
+   ]
+  },
+  {
+   "start": 13.08,
+   "end": 17.38,
+   "line": "Buku 120 SPM English | Model Essays, | full colour.",
+   "keys": [
+    "120",
+    "English",
+    "full",
+    "colour."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 580,
+    "max_h": 840,
+    "y": 640
+   },
+   "pills": [
+    [
+     "Full colour",
+     16.48
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 17.38,
+   "end": 20.84,
+   "line": "Kau cuma baca | satu karangan sehari, | ada latihan sekali.",
+   "keys": [
+    "satu",
+    "sehari,",
+    "latihan"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "essay.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "1 karangan sehari",
+     18.98
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 20.84,
+   "end": 24.32,
+   "line": "Ikut CEFR, | sama macam | format SPM sekarang.",
+   "keys": [
+    "CEFR,",
+    "format",
+    "SPM"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "overview.jpg",
+    "w": 660,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "CEFR",
+     21.42
+    ],
+    [
+     "Format SPM",
+     23.36
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 24.32,
+   "end": 27.68,
+   "line": "Bila buku | seronok dibaca, | belajar pun | jadi ringan.",
+   "keys": [
+    "seronok",
+    "ringan."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "review1.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1070,
+    "cast": [
+     {
+      "char": "kira/ketawa",
+      "x": 540,
+      "size": 400,
+      "at": 24.4
+     }
+    ]
+   }
+  },
+  {
+   "start": 27.68,
+   "end": 29.31,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

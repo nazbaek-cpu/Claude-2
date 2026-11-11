@@ -1,7 +1,7 @@
 {
  "type": "arab",
  "source": "input/vo.mp4",
- "bg": "addmath",
+ "bg_image": "input/papan.jpg",
  "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, e-book, Model Tests, Paper 2, Nilam Publication, karangan.",
  "cta": {
   "at": 28.52,

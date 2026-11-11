@@ -1,1 +1,131 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, e-buku, tema, DSKP, versi yang telah dikemaskini", "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, e-buku, tema, DSKP, versi yang telah dikemaskini",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.6,
+   "title": {
+    "kicker": "CALON SPM 2027",
+    "lines": [
+     "Teknik buat",
+     "karangan BM."
+    ],
+    "accent": [
+     "karangan",
+     "BM."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.7,
+   "end": 9.4,
+   "kicker": "KARANGAN CONTOH",
+   "head": "Teknik penulisan."
+  },
+  {
+   "start": 9.42,
+   "end": 16.0,
+   "kicker": "FORMAT TERBARU",
+   "head": "Ramai cikgu tulis."
+  },
+  {
+   "start": 16.06,
+   "end": 21.97,
+   "kicker": "DALAM BUKU NI",
+   "head": "Kertas 1 SPM.",
+   "pills": [
+    [
+     "Bahagian A",
+     19.0
+    ],
+    [
+     "Bahagian B",
+     20.1
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 22.0,
+   "end": 28.93,
+   "kicker": "IBU AYAH",
+   "head": "Satu buku cukup.",
+   "pills": [
+    [
+     "Banyak format",
+     27.6
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 28.96,
+   "end": 35.39,
+   "kicker": "SENANG ANAK FAHAM",
+   "head": "Buat karangan."
+  },
+  {
+   "start": 35.42,
+   "end": 37.85,
+   "kicker": "DAPATKAN",
+   "head": "Link di bawah."
+  },
+  {
+   "start": 37.88,
+   "end": 42.91,
+   "kicker": "SIAP BAGI",
+   "head": "Tips & contoh.",
+   "pills": [
+    [
+     "Tips",
+     38.4
+    ],
+    [
+     "Cara",
+     39.4
+    ],
+    [
+     "Contoh",
+     41.0
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 42.94,
+   "end": 46.67,
+   "kicker": "VERSI",
+   "head": "Dikemaskini."
+  },
+  {
+   "start": 46.7,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

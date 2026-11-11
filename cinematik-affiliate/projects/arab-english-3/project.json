@@ -1,1 +1,281 @@
-{"type": "arab", "source": "input/vo.mp4", "bg_image": "input/papan.jpg", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, narrative, e-book, Model Tests, Paper 2, clone questions, 150 essays, Nilam Publication.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, story, narrative, e-book, Model Tests, Paper 2, clone questions, 150 essays, Nilam Publication.",
+ "cta": {
+  "at": 34.1,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.82,
+   "line": "Kenapa ada calon | yang tulis panjang, | English pun okey, | tapi markah | kena potong?",
+   "keys": [
+    "panjang,",
+    "okey,",
+    "potong?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/berfikir",
+      "char_at": [
+       [
+        4.18,
+        "kira/terkejut"
+       ]
+      ],
+      "x": 540,
+      "size": 440,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 260,
+     "y": 380,
+     "at": 1.3,
+     "size": 170,
+     "tag": "TULIS PANJANG"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 820,
+     "y": 380,
+     "at": 4.3,
+     "size": 170,
+     "tag": "KENA POTONG"
+    }
+   ]
+  },
+  {
+   "start": 4.82,
+   "end": 11.92,
+   "line": "Sebab dia tulis | email macam essay, | tulis report | macam cerita. | Setiap jenis karangan | ada format sendiri.",
+   "keys": [
+    "email",
+    "essay,",
+    "report",
+    "cerita.",
+    "format"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PUNCANYA",
+    "word": "SALAH FORMAT",
+    "size": 88,
+    "sub": "setiap jenis ada format sendiri",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "char_at": [
+       [
+        9.04,
+        "abang/terkejut"
+       ]
+      ],
+      "x": 360,
+      "size": 420,
+      "at": 4.9
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/fail.png",
+     "x": 800,
+     "y": 940,
+     "at": 5.88,
+     "until": 7.5,
+     "size": 200,
+     "tag": "EMAIL JADI ESSAY"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 800,
+     "y": 940,
+     "at": 7.6,
+     "size": 200,
+     "tag": "REPORT JADI CERITA"
+    }
+   ]
+  },
+  {
+   "start": 11.92,
+   "end": 17.42,
+   "line": "Calon lain? | Satu gaya | untuk semua soalan, | tak sedar | markah hilang | sebab format.",
+   "keys": [
+    "Satu",
+    "gaya",
+    "hilang",
+    "format."
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Email",
+     "Essay",
+     "Report"
+    ],
+    "char": "abang/berfikir",
+    "char_at": [
+     [
+      16.16,
+      "abang/stres"
+     ]
+    ],
+    "char_scale": 1.1
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 860,
+     "y": 1200,
+     "at": 16.16,
+     "size": 170,
+     "tag": "MARKAH HILANG"
+    }
+   ]
+  },
+  {
+   "start": 17.42,
+   "end": 22.0,
+   "line": "Buku 120 SPM English | Model Essays | ada tiga bahagian.",
+   "keys": [
+    "120",
+    "English",
+    "tiga"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 580,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 22.0,
+   "end": 28.66,
+   "line": "Part 1, email. | Part 2, essay. | Part 3, article, | report, review | dan narrative.",
+   "keys": [
+    "email.",
+    "essay.",
+    "article,",
+    "report,",
+    "review",
+    "narrative."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "overview.jpg",
+    "w": 660,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Email",
+     22.96
+    ],
+    [
+     "Essay",
+     24.42
+    ],
+    [
+     "Report",
+     26.72
+    ],
+    [
+     "Story",
+     28.26
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 28.66,
+   "end": 31.54,
+   "line": "Kau cuma ikut contoh, | ikut jenis soalan.",
+   "keys": [
+    "contoh,",
+    "jenis"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "report.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Ikut jenis soalan",
+     31.1
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 31.54,
+   "end": 34.08,
+   "line": "Format betul, | markah | tak terlepas.",
+   "keys": [
+    "betul,",
+    "terlepas."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "review1.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1070,
+    "cast": [
+     {
+      "char": "kira/ketawa",
+      "x": 540,
+      "size": 400,
+      "at": 31.6
+     }
+    ]
+   }
+  },
+  {
+   "start": 34.08,
+   "end": 35.79,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

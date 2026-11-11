@@ -1,1 +1,299 @@
-{"type": "arab", "source": "input/vo.mp4", "bg_image": "input/garis.jpg", "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, Nilam Publication.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/garis.jpg",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, KSSM, Kertas 1, Bahagian A, Bahagian B, karangan bahan rangsangan, karangan umum, 18 tema, DSKP, KBAT, ungkapan, e-buku, Nilam Publication.",
+ "cta": {
+  "at": 29.4,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.84,
+   "line": "Kenapa buku BM ni | ramai calon SPM | cari?",
+   "keys": [
+    "BM",
+    "calon",
+    "SPM"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1070,
+    "cast": [
+     {
+      "char": "kira/berfikir",
+      "x": 540,
+      "size": 380,
+      "at": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "start": 2.84,
+   "end": 6.98,
+   "line": "Sebab satu buku, | dapat sekali | e-buku interaktif | percuma.",
+   "keys": [
+    "e-buku",
+    "interaktif",
+    "percuma."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "BONUS",
+    "word": "E-BUKU PERCUMA",
+    "size": 80,
+    "sub": "interaktif",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/gembira",
+      "x": 380,
+      "size": 400,
+      "at": 3.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/laptop.png",
+     "x": 800,
+     "y": 980,
+     "at": 5.24,
+     "size": 220,
+     "tag": "E-BUKU"
+    }
+   ]
+  },
+  {
+   "start": 6.98,
+   "end": 11.48,
+   "line": "20 buah karangan, | 10 bahan rangsangan, | 10 karangan umum.",
+   "keys": [
+    "20",
+    "10",
+    "rangsangan,",
+    "umum."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "DALAM E-BUKU",
+    "word": "20 KARANGAN",
+    "size": 92,
+    "sub": "contoh penuh",
+    "y": 400
+   },
+   "illus": {
+    "kind": "glow",
+    "y": 900,
+    "char": "kira/bangga",
+    "char_scale": 1.0,
+    "words": [
+     [
+      "10 rangsangan",
+      9.46
+     ],
+     [
+      "10 umum",
+      10.94
+     ]
+    ]
+   }
+  },
+  {
+   "start": 11.48,
+   "end": 14.66,
+   "line": "Siap dengan | video tip | dan analisis | dari penulis.",
+   "keys": [
+    "video",
+    "analisis",
+    "penulis."
+   ],
+   "pills": [
+    [
+     "Video tip",
+     12.62
+    ],
+    [
+     "Analisis",
+     13.12
+    ]
+   ],
+   "pills_y": 470,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/idea",
+      "x": 330,
+      "size": 420,
+      "at": 11.5
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/cikgu_mengajar.png",
+     "x": 780,
+     "y": 840,
+     "at": 12.62,
+     "size": 240,
+     "tag": "DARI PENULIS"
+    }
+   ]
+  },
+  {
+   "start": 14.66,
+   "end": 20.16,
+   "line": "Calon lain? | Beli banyak buku | berasingan. | Akhirnya | tak habis baca | satu pun.",
+   "keys": [
+    "banyak",
+    "berasingan.",
+    "tak",
+    "habis"
+   ],
+   "label": "calon lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Buku 1",
+     "Buku 2",
+     "Buku 3"
+    ],
+    "char": "abang/terkejut",
+    "char_at": [
+     [
+      17.66,
+      "abang/stres"
+     ]
+    ],
+    "char_scale": 1.1
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 860,
+     "y": 1200,
+     "at": 18.62,
+     "size": 170,
+     "tag": "TAK HABIS"
+    }
+   ]
+  },
+  {
+   "start": 20.16,
+   "end": 22.88,
+   "line": "Buku Bahasa Melayu SPM, | Kertas 1.",
+   "keys": [
+    "Bahasa",
+    "Melayu",
+    "Kertas"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 22.88,
+   "end": 26.02,
+   "line": "Kau cuma baca, | tengok video, | cuba tulis.",
+   "keys": [
+    "baca,",
+    "video,",
+    "tulis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "tema1.jpg",
+    "w": 660,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Baca",
+     23.5
+    ],
+    [
+     "Tengok video",
+     24.08
+    ],
+    [
+     "Tulis",
+     25.04
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 26.02,
+   "end": 29.36,
+   "line": "Nota, tip, | jawapan lengkap, | semua dalam satu.",
+   "keys": [
+    "jawapan",
+    "lengkap,",
+    "satu."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ringkasan.jpg",
+    "w": 660,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Nota",
+     26.02
+    ],
+    [
+     "Tip",
+     26.84
+    ],
+    [
+     "Jawapan lengkap",
+     27.8
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 29.36,
+   "end": 31.16,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

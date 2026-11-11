@@ -1,1 +1,281 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "putih", "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, narrative, e-book, Kertas Model SPM, Paper 2, Jenny Ho, Rozita Mohd Rashid, Nilam Publication.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, email, essay, article, report, review, narrative, e-book, Kertas Model SPM, Paper 2, Jenny Ho, Rozita Mohd Rashid, Nilam Publication.",
+ "cta": {
+  "at": 32.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.8,
+   "line": "Mak Ayah, | kenapa ada anak | yang dulu takut English | tapi sekarang | berani tulis | karangan sendiri?",
+   "keys": [
+    "takut",
+    "English",
+    "berani",
+    "sendiri?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/ingin_tahu",
+      "x": 300,
+      "size": 300,
+      "at": 0.1
+     },
+     {
+      "char": "kira/terkejut",
+      "char_at": [
+       [
+        3.42,
+        "kira/bangga"
+       ]
+      ],
+      "x": 770,
+      "size": 440,
+      "at": 1.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 770,
+     "y": 330,
+     "at": 2.14,
+     "until": 3.4,
+     "size": 160,
+     "tag": "TAKUT ENGLISH"
+    },
+    {
+     "img": "icons/markah_a.png",
+     "x": 770,
+     "y": 330,
+     "at": 4.44,
+     "size": 160,
+     "tag": "BERANI TULIS"
+    }
+   ]
+  },
+  {
+   "start": 5.8,
+   "end": 9.56,
+   "line": "Sebab dia | belajar dari contoh | dulu, | baru tulis.",
+   "keys": [
+    "contoh",
+    "dulu,",
+    "tulis."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIANYA",
+    "word": "CONTOH DULU",
+    "size": 88,
+    "sub": "baru tulis",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 960,
+    "cast": [
+     {
+      "char": "kira/idea",
+      "x": 380,
+      "size": 420,
+      "at": 5.9
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "mat/latihan.png",
+     "x": 800,
+     "y": 980,
+     "at": 8.08,
+     "size": 220,
+     "tag": "TULIS"
+    }
+   ]
+  },
+  {
+   "start": 9.56,
+   "end": 16.96,
+   "line": "Anak lain? | Tengok soalan | karangan English, | tak tahu nak mula | ayat pertama. | Akhirnya, | kertas tinggal | separuh kosong.",
+   "keys": [
+    "tak",
+    "tahu",
+    "mula",
+    "separuh",
+    "kosong."
+   ],
+   "label": "anak lain",
+   "label_y": 330,
+   "illus": {
+    "kind": "ask",
+    "char": "kira/berfikir",
+    "char_at": [
+     [
+      14.3,
+      "kira/stres"
+     ]
+    ],
+    "char_scale": 1.0
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 860,
+     "y": 1150,
+     "at": 10.94,
+     "size": 170,
+     "tag": "SOALAN ENGLISH"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 220,
+     "y": 1150,
+     "at": 15.86,
+     "size": 170,
+     "tag": "SEPARUH KOSONG"
+    }
+   ]
+  },
+  {
+   "start": 16.96,
+   "end": 21.24,
+   "line": "Buku | 120 SPM English | Model Essays.",
+   "keys": [
+    "120",
+    "English",
+    "Model",
+    "Essays."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 580,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 21.24,
+   "end": 25.8,
+   "line": "Anak cuma | baca contoh karangan, | ikut struktur, | lepas tu | cuba tulis.",
+   "keys": [
+    "baca",
+    "struktur,",
+    "tulis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "essay.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Baca",
+     21.76
+    ],
+    [
+     "Struktur",
+     23.66
+    ],
+    [
+     "Tulis",
+     25.42
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 25.8,
+   "end": 28.72,
+   "line": "Ada tip | dan nota | untuk setiap karangan.",
+   "keys": [
+    "tip",
+    "nota",
+    "setiap"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "report.jpg",
+    "w": 640,
+    "max_h": 800,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Tip",
+     26.4
+    ],
+    [
+     "Nota",
+     26.88
+    ],
+    [
+     "Vocab",
+     27.5
+    ]
+   ],
+   "pills_y": 1130
+  },
+  {
+   "start": 28.72,
+   "end": 31.96,
+   "line": "Bila dah nampak | contoh yang betul, | anak | tak takut lagi.",
+   "keys": [
+    "betul,",
+    "tak",
+    "takut",
+    "lagi."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "review1.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "illus": {
+    "kind": "cast",
+    "y": 1070,
+    "cast": [
+     {
+      "char": "kira/ketawa",
+      "x": 540,
+      "size": 400,
+      "at": 28.8
+     }
+    ]
+   }
+  },
+  {
+   "start": 31.96,
+   "end": 33.72,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "kira/sapa",
+    "char_scale": 1.3
+   }
+  }
+ ]
+}

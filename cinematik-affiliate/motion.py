@@ -49,10 +49,10 @@ def page(dots_gap=28, glow=True):
     im = im.convert("RGBA")
     if glow:
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); g = ImageDraw.Draw(lay); a = ACC[0]
-        for cx, cy, rr, op in [(130, 260, 300, 46), (980, 1650, 340, 40)]:
+        for cx, cy, rr, op in [(130, 260, 300, 22), (980, 1650, 340, 20)]:
             g.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=a + (op,))
         lay = lay.filter(ImageFilter.GaussianBlur(120)); im.alpha_composite(lay)
-        ring = Image.new("RGBA", (W, H), (0, 0, 0, 0)); g = ImageDraw.Draw(ring); pale = a + (34,)
+        ring = Image.new("RGBA", (W, H), (0, 0, 0, 0)); g = ImageDraw.Draw(ring); pale = a + (20,)
         g.ellipse((-520, -380, 260, 400), outline=pale, width=70)
         g.ellipse((760, 1380, 1560, 2180), outline=pale, width=70)
         im.alpha_composite(ring)
@@ -92,9 +92,9 @@ def glyph(word, big, color):
     key = (word, big, color)
     if key not in _glyph:
         f = SANS(BIG if big else SMALL, 800 if big else 700)
-        l, t, r, b = f.getbbox(word); w, h = r - l + 8, b - t + 8
+        asc, desc = f.getmetrics(); l, _, r, _ = f.getbbox(word); t = 0; w, h = r - l + 8, asc + desc + 8   # same box per size: one baseline
         if big:   # accent gradient with a soft coloured glow
-            m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4 - t), word, font=f, fill=255)
+            m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4), word, font=f, fill=255)
             grad = Image.new("RGBA", (w, h)); a1, a2 = np.array(ACC[0]), np.array(ACC[1])
             ys = np.linspace(0, 1, h)[:, None, None]; arr = (a1 * (1 - ys * 0.55) + a2 * ys * 0.55).repeat(w, 1)
             grad = Image.fromarray(np.dstack([arr, np.full((h, w, 1), 255)]).astype(np.uint8), "RGBA"); grad.putalpha(m)
@@ -103,15 +103,24 @@ def glyph(word, big, color):
             gl.putalpha(gm.filter(ImageFilter.GaussianBlur(14)).point(lambda v: v * 70 // 255)); im.alpha_composite(gl)
             im.alpha_composite(grad, (pad, pad)); _glyph[key] = (im, pad, w, h)
         else:
-            im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(im).text((4 - l, 4 - t), word, font=f, fill=color)
+            im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ImageDraw.Draw(im).text((4 - l, 4), word, font=f, fill=color)
             _glyph[key] = (im, 0, w, h)
     return _glyph[key]
 
 def draw_text(base, sc, words, t, alpha):
     toks = [w for line in sc["lines"] for w in parse(line)]; times = sc.setdefault("_wt", word_times(sc, words))
     k = 0; y = sc.get("text_y", 230); x0 = sc.get("text_x", 90); align = sc.get("align", "left"); gap = 18
+    rows = []   # each author line, wrapped so no row runs off the page
     for line in sc["lines"]:
-        ws = parse(line); gs = [glyph(w, b, INK) for w, b in ws]
+        row = []
+        for wd, big in parse(line):
+            g = glyph(wd, big, INK)
+            if row and sum(r[2][2] for r in row) + gap * len(row) + g[2] > W - 2 * x0:
+                rows.append(row); row = []
+            row.append((wd, big, g))
+        rows.append(row)
+    for row in rows:
+        ws = [(r[0], r[1]) for r in row]; gs = [r[2] for r in row]
         lh = max(g[3] for g in gs); total = sum(g[2] for g in gs) + gap * (len(gs) - 1)
         x = (W - total) / 2 if align == "center" else x0
         for (wd, big), g in zip(ws, gs):
@@ -123,7 +132,7 @@ def draw_text(base, sc, words, t, alpha):
                 if q < 0.98: frame = im.filter(ImageFilter.GaussianBlur((1 - q) * 9))
                 a = q * alpha
                 if a < 1: frame = frame.copy(); frame.putalpha(frame.split()[3].point(lambda v: int(v * a)))
-                base.alpha_composite(frame, (int(x - pad), int(y + lh - h - pad + dy)))
+                base.alpha_composite(frame, (int(x - pad), int(y + (lh - h) * 0.82 - pad + dy)))
             x += w + gap
         y += lh + 10
     return y
@@ -134,7 +143,8 @@ _img = {}
 def picture(name, w, h, mode="cover"):
     key = (name, w, h, mode)
     if key not in _img:
-        src = Image.open(arab.asset(name)).convert("RGB")
+        src = Image.open(arab.asset(name)).convert("RGBA"); flat = Image.new("RGBA", src.size, (255, 255, 255, 255))
+        flat.alpha_composite(src); src = flat.convert("RGB")   # transparent icons / stickman sit on white
         if mode == "cover":
             k = max(w / src.width, h / src.height); src = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
             src = src.crop(((src.width - w) // 2, 0, (src.width - w) // 2 + w, h))
@@ -149,7 +159,7 @@ def phone(img, step=None):
     if key not in _img:
         fw, fh = 470, 940; im = Image.new("RGBA", (fw + 60, fh + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         d.rounded_rectangle((30, 30, 30 + fw, 30 + fh), 70, fill=(24, 24, 28)); d.rounded_rectangle((44, 44, 16 + fw, 16 + fh), 58, fill=(250, 250, 250))
-        scr = picture(img, fw - 40, fh - 120, "fit"); sx = 30 + (fw - scr.width) // 2; sy = 30 + 90 + (fh - 120 - scr.height) // 2
+        scr = picture(img, fw - 40, fh - 120, "fit"); sx = 30 + (fw - scr.width) // 2; sy = 30 + 100 + min(40, (fh - 120 - scr.height) // 6)
         im.paste(scr, (sx, sy)); d.rounded_rectangle((30 + fw / 2 - 70, 58, 30 + fw / 2 + 70, 92), 17, fill=(24, 24, 28))   # notch
         d.text((92, 74), "9:41", font=SANS(26, 700), fill=INK, anchor="lm")
         if step:

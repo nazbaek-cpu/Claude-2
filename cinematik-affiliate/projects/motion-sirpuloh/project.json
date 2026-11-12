@@ -1,1 +1,232 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Sirpuloh, Add Maths, Fungsi, Fungsi Kuadratik, Indeks, Surd, Logaritma, Janjang, Vektor, dwibahasa.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  226,
+  32,
+  138
+ ],
+ "accent2": [
+  250,
+  186,
+  40
+ ],
+ "whisper_prompt": "Latihan Topikal Matematik Tambahan Tingkatan 4, Sirpuloh, Add Maths, Fungsi, Fungsi Kuadratik, Indeks, Surd, Logaritma, Janjang, Vektor, dwibahasa.",
+ "cta": {
+  "at": 33.02,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.76,
+   "lines": [
+    "Kenapa ada pelajar",
+    "yang ujian pertama",
+    "*Add Maths*",
+    "terus *gagal,*",
+    "padahal Matematik dulu *A?*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1320,
+     "tiles": [
+      {
+       "img": "icons/markah_rendah.png",
+       "label": "Add Maths",
+       "at": 2.72
+      },
+      {
+       "img": "icons/markah_a.png",
+       "label": "Matematik",
+       "at": 4.98
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.76,
+   "end": 11.8,
+   "lines": [
+    "Sebab *Add Maths*",
+    "bukan Matematik biasa.",
+    "Dia perlu",
+    "*latihan* banyak,",
+    "bukan baca je."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1320,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/latihan.png",
+       "label": "Latihan",
+       "at": 9.34
+      },
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "Baca je",
+       "at": 10.36
+      }
+     ]
+    },
+    {
+     "kind": "ban",
+     "x": 705,
+     "y": 1285,
+     "size": 270,
+     "at": 10.9
+    }
+   ]
+  },
+  {
+   "start": 11.8,
+   "end": 18.42,
+   "lines": [
+    "Pelajar lain?",
+    "Ingat boleh guna",
+    "*cara lama.*",
+    "Tengok kertas ujian,",
+    "*separuh soalan*",
+    "tak pernah jumpa."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1380,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/peperiksaan.png",
+       "label": "Kertas ujian",
+       "at": 15.28
+      },
+      {
+       "img": "stickman/pening.png",
+       "label": "Tak pernah jumpa",
+       "at": 16.06
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 18.42,
+   "end": 21.8,
+   "lines": [
+    "*Latihan Topikal*",
+    "Matematik Tambahan",
+    "Tingkatan 4."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "cover.jpg",
+     "at": 18.6,
+     "step": 1,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 21.8,
+   "end": 25.04,
+   "lines": [
+    "Anak cuma latih soalan",
+    "*ikut topik*",
+    "sampai *biasa.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "topik.jpg",
+     "at": 22.0,
+     "step": 2,
+     "y": 1290
+    }
+   ]
+  },
+  {
+   "start": 25.04,
+   "end": 29.46,
+   "lines": [
+    "Fungsi, Indeks, Surd,",
+    "Logaritma, Janjang,",
+    "*semua ada.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Topik dalam buku",
+     "at": 25.1,
+     "y": 1240,
+     "rows": [
+      [
+       "Fungsi",
+       25.04
+      ],
+      [
+       "Indeks",
+       25.78
+      ],
+      [
+       "Surd",
+       26.58
+      ],
+      [
+       "Logaritma",
+       27.16
+      ],
+      [
+       "Janjang",
+       28.02
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 29.46,
+   "end": 33.02,
+   "lines": [
+    "Bila dah biasa jumpa soalan,",
+    "ujian",
+    "*tak menakutkan*",
+    "lagi."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "soalan.jpg",
+     "at": 29.6,
+     "step": 3,
+     "y": 1290
+    }
+   ]
+  },
+  {
+   "start": 33.02,
+   "end": 34.59,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 33.1,
+     "w": 460,
+     "max_h": 640,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

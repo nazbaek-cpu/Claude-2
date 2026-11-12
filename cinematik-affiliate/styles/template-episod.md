@@ -15,6 +15,9 @@ video siri parenting ("jangan label anak") untuk corak dan rentak sahaja; watak 
 - **Watak (`char`):** watak simpanan atau `stickman/<pose>` berdiri atas lantai, tag nama putih ("Abang, 16"),
   `char_at` tukar pose, `grey` = selang masa watak jadi kelabu (putus asa), `mark` "!!" atau "?" di atas kepala.
 
+- **Watak Bapa** (umur 38) dalam repo, `assets/bapa/<pose>.png`, panggil `"char": "bapa/senyum"`: senyum, thumbs_up, ok,
+  berfikir, terkejut, ketawa, pening, menguap, kira_bil, telefon, laptop, menulis, minum, makan, memasak, siram_pokok,
+  vakum, cuci_kereta, travel, kamera, basikal, senaman, peluk_anak, doa. Separuh badan: guna saiz lebih kurang 330.
 - **Latar putih bertitik:** `"bg": "dots"` guna kertas titik template motion (tanpa cahaya), tajuk jadi gelap,
   tag nama berbingkai. Contoh: `projects/episod-english-1/`.
 

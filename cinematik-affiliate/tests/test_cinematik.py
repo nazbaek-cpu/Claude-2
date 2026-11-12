@@ -479,3 +479,25 @@ def test_motion_frame_renders_with_wipe(tmp_path):
     for t in (0.5, 1.5, 2.15, 3.8):
         assert motion.frame(cfg, pg, words, t).size == (1080, 1920)
     assert motion.parse("yang *Add Maths* dia") == [("yang", False), ("Add", True), ("Maths", True), ("dia", False)]
+
+
+def test_bukti_frame_renders(tmp_path):
+    """template bukti: clipping with highlights, tag, chart, stamp, circle and a one-word caption render at 1080x1920"""
+    import bukti
+    from PIL import Image
+    (tmp_path / "input").mkdir(); Image.new("RGB", (400, 300), (230, 230, 240)).save(tmp_path / "input" / "page.jpg")
+    bukti.arab.PRJ[0] = str(tmp_path)
+    cfg = {"scenes": [
+        {"start": 0.0, "end": 2.0, "items": [
+            {"kind": "clip", "img": "page.jpg", "x": 540, "y": 600, "w": 700, "at": 0.1, "marks": [[0.1, 0.2, 0.9, 0.3, 0.5], [0.1, 0.5, 0.4, 0.6, 0.6, "red"]]},
+            {"kind": "tag", "text": "70 markah", "x": 300, "y": 1000, "at": 0.4},
+            {"kind": "stamp", "text": "LULUS", "x": 600, "y": 900, "at": 1.0},
+            {"kind": "circle", "x": 500, "y": 600, "r": 80, "at": 0.8}]},
+        {"start": 2.0, "end": 4.0, "items": [
+            {"kind": "chart", "x": 540, "y": 800, "title": "Markah", "levels": ["A", "B", "C", "D"], "points": [["U1", "D", 2.2], ["U2", "A", 2.8]]},
+            {"kind": "source", "text": "sumber", "at": 2.1}]}],
+        "cta": {"at": 3.5}}
+    words = [{"w": "Markah", "s": 0.2, "e": 0.6}, {"w": "naik.", "s": 2.3, "e": 2.7}]
+    pg = bukti.paper()
+    for t in (0.3, 1.2, 2.1, 3.0, 3.8):
+        assert bukti.frame(cfg, pg, words, t).size == (1080, 1920)

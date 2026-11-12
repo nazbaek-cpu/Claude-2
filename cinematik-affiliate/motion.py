@@ -197,7 +197,7 @@ def dashed(s=210):
         q = [at(a0 + (a1 - a0) * j / 6) for j in range(7)]; d.line(q, fill=c, width=4)
     return im
 
-def checklist(title, rows, t):
+def checklist(title, rows, t, bad=False):
     w = 860; rh = 92; h = 120 + rh * len(rows); im = card_box(w, h, 34); d = ImageDraw.Draw(im)
     d.text((48, 64), title, font=SANS(40, 800), fill=ACC[0], anchor="lm")
     for i, (txt, at) in enumerate(rows):
@@ -206,7 +206,10 @@ def checklist(title, rows, t):
         col = tuple(int(160 + (INK[j] - 160) * q) for j in range(3))
         d.text((88, y), txt, font=SANS(38, 700), fill=col, anchor="lm")
         cx = w - 90
-        if on:
+        if on and bad:   # a red cross: the item is a problem, not a feature
+            rr = 22 * (0.6 + 0.4 * q); d.ellipse((cx - rr, y - rr, cx + rr, y + rr), fill=(222, 56, 56))
+            d.line([(cx - 9, y - 9), (cx + 9, y + 9)], fill="white", width=5); d.line([(cx - 9, y + 9), (cx + 9, y - 9)], fill="white", width=5)
+        elif on:
             rr = 22 * (0.6 + 0.4 * q); d.ellipse((cx - rr, y - rr, cx + rr, y + rr), fill=(46, 170, 90))
             d.line([(cx - 10, y), (cx - 3, y + 8), (cx + 11, y - 9)], fill="white", width=5)
         else:
@@ -250,7 +253,7 @@ def draw_items(base, sc, t, alpha):
             im = sc.setdefault("_card_" + it["img"], shadowed(_framed(it["img"], it.get("w", 760), it.get("max_h", 900)), 22, 80, 12))
             put(base, im, it.get("x", W / 2), it.get("y", 1200) + math.sin(t * 1.6) * 4, min(1, q * 2) * alpha, s)
         elif k == "icons":
-            ts = it["tiles"]; gapx = it.get("gap", 330); x0 = W / 2 - gapx * (len(ts) - 1) / 2; y = it.get("y", 1150)
+            ts = it["tiles"]; gapx = it.get("gap", 330); x0 = it.get("x", W / 2) - gapx * (len(ts) - 1) / 2; y = it.get("y", 1150)
             for j, tl in enumerate(ts):
                 x = x0 + j * gapx; q = ramp(t, tl.get("at", at), 0.35)
                 if q < 1: put(base, dashed(), x, y - 35, alpha * (1 - q))
@@ -259,7 +262,7 @@ def draw_items(base, sc, t, alpha):
                     pf = SANS(70, 800); pl = Image.new("RGBA", (80, 80), (0, 0, 0, 0)); ImageDraw.Draw(pl).text((40, 40), "+", font=pf, fill=ACC[0], anchor="mm")
                     put(base, pl, x - gapx / 2, y - 35, q * alpha)
         elif k == "checklist":
-            q = ease(ramp(t, at, 0.45)); im = checklist(it.get("title", ""), it["rows"], t)
+            q = ease(ramp(t, at, 0.45)); im = checklist(it.get("title", ""), it["rows"], t, it.get("bad", False))
             put(base, im, W / 2, it.get("y", 1180) + (1 - q) * 120, q * alpha)
         elif k == "char":   # a big stickman / character with no tile: pops in, bobs, swaps pose on "char_at"
             q = ramp(t, at, 0.35); c = it["char"]

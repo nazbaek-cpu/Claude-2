@@ -1,1 +1,250 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, article, report, review, story, e-book, Kertas Model SPM, Paper 2, internet, format SPM, Nilam Publication.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  232,
+  96,
+  34
+ ],
+ "accent2": [
+  250,
+  170,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, article, report, review, story, e-book, Kertas Model SPM, Paper 2, internet, format SPM, Nilam Publication.",
+ "cta": {
+  "at": 31.24,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.94,
+   "lines": [
+    "Anak kau tengah cari",
+    "contoh *essay English*",
+    "dekat *internet?*",
+    "*Hati-hati,*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/guna_telefon",
+     "char_at": [
+      [
+       2.86,
+       "stickman/terkejut"
+      ]
+     ],
+     "at": 0.3,
+     "size": 560,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 3.94,
+   "end": 7.2,
+   "lines": [
+    "separuh contoh tu",
+    "*bukan format*",
+    "*SPM* sekarang."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/tunjuk_bawah",
+     "at": 4.0,
+     "size": 470,
+     "x": 300,
+     "y": 1330
+    },
+    {
+     "kind": "ban",
+     "x": 760,
+     "y": 1200,
+     "size": 300,
+     "at": 5.28
+    }
+   ]
+  },
+  {
+   "start": 7.2,
+   "end": 12.92,
+   "lines": [
+    "Ada yang *format lama,*",
+    "tak ikut *CEFR,*",
+    "*salah* tatabahasa."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Contoh essay internet",
+     "at": 7.3,
+     "y": 1430,
+     "rows": [
+      [
+       "Format lama",
+       8.04
+      ],
+      [
+       "Tak ikut CEFR",
+       9.7
+      ],
+      [
+       "Salah tatabahasa",
+       12.0
+      ]
+     ],
+     "bad": true
+    }
+   ]
+  },
+  {
+   "start": 12.92,
+   "end": 18.9,
+   "lines": [
+    "Anak *hafal,* anak *tiru,*",
+    "masuk dewan,",
+    "markah *dipotong*",
+    "tanpa tahu kenapa."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "char_at": [
+      [
+       15.88,
+       "stickman/menangis"
+      ],
+      [
+       17.32,
+       "stickman/pening"
+      ]
+     ],
+     "at": 13.0,
+     "size": 480,
+     "x": 380,
+     "y": 1440
+    },
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "gap": 560,
+     "x": 800,
+     "tiles": [
+      {
+       "img": "icons/markah_rendah.png",
+       "label": "-markah",
+       "at": 16.46
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 18.9,
+   "end": 22.5,
+   "lines": [
+    "Buku *120 SPM English*",
+    "*Model Essays.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "cover.jpg",
+     "at": 19.0,
+     "step": 1,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 22.5,
+   "end": 27.82,
+   "lines": [
+    "*120 contoh* ikut format terkini,",
+    "tambah *30 lagi*",
+    "dalam e-book percuma,"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "essay.jpg",
+     "at": 22.6,
+     "step": 2,
+     "y": 1290
+    },
+    {
+     "kind": "char",
+     "char": "stickman/takjub",
+     "at": 25.38,
+     "size": 330,
+     "x": 870,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "start": 27.82,
+   "end": 31.24,
+   "lines": [
+    "siap *struktur,*",
+    "*tip* dan *Kertas Model*",
+    "Paper 2."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Dalam buku ni",
+     "at": 27.9,
+     "y": 1250,
+     "rows": [
+      [
+       "Struktur karangan",
+       28.4
+      ],
+      [
+       "Tip & nota",
+       29.0
+      ],
+      [
+       "Kertas Model Paper 2",
+       29.66
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 31.24,
+   "end": 32.84,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 31.3,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 31.4,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

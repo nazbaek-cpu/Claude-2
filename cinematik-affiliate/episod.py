@@ -37,12 +37,19 @@ from arab import SANS, card_box, ease, put, ramp, shadowed
 W, H, FPS = 1080, 1920, 30
 FLOOR = 1380
 TONE = {"red": (255, 112, 96), "yellow": (255, 205, 64), "green": (110, 214, 140), "white": (255, 255, 255)}
+TONE_LIGHT = {"red": (222, 58, 48), "yellow": (232, 140, 10), "green": (34, 156, 76), "white": (40, 40, 50)}
+LIGHT = [False]   # "bg": "dots" -> white dotted page, dark type
 INK = (24, 28, 44)
 HAND = lambda s: arab.font("PatrickHand-Regular.ttf", s)
 
 
 # ---------- stage ----------
-def stage():
+def stage(kind="navy"):
+    if kind == "dots":   # the white dot-grid page of template motion, plain (no glow)
+        import motion
+        im = motion.page(28, glow=False); d = ImageDraw.Draw(im)
+        d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(214, 214, 220), width=2)
+        d.line((40, FLOOR, W - 40, FLOOR), fill=(190, 190, 200), width=3); return im
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     top, bot = np.array([26, 46, 110], np.float32), np.array([8, 14, 44], np.float32)
     u = (yy / H)[..., None]; a = top * (1 - u) + bot * u
@@ -67,7 +74,7 @@ def title_img(text, tone):
     """big white scene title; *words* take the tone colour; wraps to the page width"""
     key = ("title", text, tone)
     if key not in _c:
-        f = SANS(82, 800); col = TONE.get(tone, TONE["yellow"]); toks, hot = [], False
+        f = SANS(82, 800); col = (TONE_LIGHT if LIGHT[0] else TONE).get(tone, TONE["yellow"]); base_col = INK if LIGHT[0] else (255, 255, 255); toks, hot = [], False
         for w in text.split():
             core = w.rstrip(".,!?\"':;"); s = w.lstrip("\"'").startswith("*"); e = core.endswith("*") and (len(core.strip("\"'")) > 1 or not s); ww = w.replace("*", "")
             if s: hot = True
@@ -81,13 +88,14 @@ def title_img(text, tone):
         for i, r in enumerate(rows):
             tw = sum(f.getlength(x) for x, _ in r) + sp * (len(r) - 1); x = (W - tw) / 2
             for w, h_ in r:
-                d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else (255, 255, 255)); x += f.getlength(w) + sp
+                d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else base_col); x += f.getlength(w) + sp
         _c[key] = im
     return _c[key]
 
 def name_tag(text):
     if ("tag", text) not in _c:
-        f = SANS(28, 700); w = int(f.getlength(text)) + 28; im = card_box(w, 44, 8, fill=(255, 255, 255, 255))
+        f = SANS(28, 700); w = int(f.getlength(text)) + 28
+        im = card_box(w, 44, 8, fill=(255, 255, 255, 255), outline=(190, 190, 200) if LIGHT[0] else None, width=2 if LIGHT[0] else 0)
         ImageDraw.Draw(im).text((w / 2, 22), text, font=f, fill=INK, anchor="mm"); _c[("tag", text)] = im
     return _c[("tag", text)]
 
@@ -105,6 +113,10 @@ def char_img(path, size, grey):
         im = Image.open(arab.asset(path + ".png")).convert("RGBA"); k = size / im.height
         im = im.resize((max(1, int(im.width * k)), size), Image.LANCZOS)
         if path.startswith("stickman/"): im = arab.outlined(im, 6)
+        if LIGHT[0]:   # a soft shadow keeps white sticker rims readable on the white page
+            pad = 24; sh = Image.new("RGBA", (im.width + pad * 2, im.height + pad * 2), (0, 0, 0, 0)); m = Image.new("L", sh.size, 0)
+            m.paste(im.split()[3], (pad, pad + 6)); sh.putalpha(m.filter(ImageFilter.GaussianBlur(10)).point(lambda v: v * 60 // 255))
+            sh.alpha_composite(im, (pad, pad)); im = sh
         _c[key] = im
     im = _c[key]
     if grey > 0:   # drain the colour (and dim) when the character gives up
@@ -180,7 +192,7 @@ def tick_img(n):
     if ("tick", n) not in _c:
         im = Image.new("RGBA", (120, 170), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         d.ellipse((6, 6, 114, 114), fill=(52, 168, 90)); d.line([(32, 62), (52, 82), (88, 40)], fill="white", width=12, joint="curve")
-        d.text((60, 148), str(n), font=SANS(40, 800), fill=(240, 240, 240), anchor="mm"); _c[("tick", n)] = im
+        d.text((60, 148), str(n), font=SANS(40, 800), fill=INK if LIGHT[0] else (240, 240, 240), anchor="mm"); _c[("tick", n)] = im
     return _c[("tick", n)]
 
 def photo_img(name, w):
@@ -197,12 +209,19 @@ def comment_img(text):
         _c[("cm", text)] = shadowed(im, 12, 80, 8)
     return _c[("cm", text)]
 
+def prop_img(name, w):
+    key = ("prop", name, w)
+    if key not in _c:
+        im = Image.open(arab.asset(name if name.endswith(".png") else name + ".png")).convert("RGBA"); k = w / im.width
+        _c[key] = im.resize((w, max(1, int(im.height * k))), Image.LANCZOS)
+    return _c[key]
+
 def bubble_img(text, tail="left"):
     key = ("bub", text, tail)
     if key not in _c:
         lines = text.split("|"); f = SANS(40, 700); lh = 54; w = int(max(f.getlength(l) for l in lines)) + 70; h = lh * len(lines) + 50
         im = Image.new("RGBA", (w + 10, h + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-        d.rounded_rectangle((5, 5, w + 5, h + 5), 26, fill=(255, 255, 255))
+        d.rounded_rectangle((5, 5, w + 5, h + 5), 26, fill=(255, 255, 255), outline=(200, 200, 210) if LIGHT[0] else None, width=3)
         tx = 70 if tail == "left" else w - 70
         d.polygon([(tx - 22, h), (tx + 22, h), (tx + (-30 if tail == "left" else 30), h + 50)], fill=(255, 255, 255))
         for i, l in enumerate(lines): d.text((40, 30 + i * lh + lh / 2), l, font=f, fill=INK, anchor="lm")
@@ -248,6 +267,10 @@ def draw_items(base, sc, t, a):
                 pm = ramp(t, it.get("mark_at", at), 0.25); put(base, mark_img(it["mark"]), x + im.width * 0.35, y - im.height / 2 - 80 + math.sin(t * 6) * 4, a, 0.6 + 0.4 * pop(pm))
         elif k == "paper": put(base, paper_img(it, t), it.get("x", 330), it.get("y", 980) + (1 - e) * 40, qa)
         elif k == "door": put(base, door_img(), it.get("x", 700), FLOOR - 210, qa)
+        elif k == "prop":   # furniture / a saved icon: stands on the floor ("floor": true) or hangs at y
+            im = prop_img(it["img"], it.get("w", 300)); x = it.get("x", W / 2)
+            y = FLOOR - im.height / 2 + it.get("sink", 8) if it.get("floor", True) else it.get("y", 800)
+            put(base, im, x, y + (1 - e) * 24, qa)
         elif k == "desk":
             im = desk_img(it.get("lamp", False), it.get("cups", 0), ramp(t, it.get("lamp_at", at + 0.3), 0.6)); put(base, im, it.get("x", 560), FLOOR - 260 + 2, qa)
         elif k == "moon": put(base, moon_img(), it.get("x", 880), it.get("y", 700), qa)
@@ -278,11 +301,11 @@ def render_scene(cfg, page, i, t):
         q = ease(ramp(t, sc["start"] + 0.1, 0.4)); im = title_img(sc["title"], sc.get("tone", "yellow"))
         put(base, im, W / 2, 400 + im.height / 2 + (1 - q) * 20, q)
     if sc.get("flash"):
-        f = HAND(44); lay = Image.new("RGBA", (500, 70), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((0, 35), sc["flash"], font=f, fill=(200, 206, 230), anchor="lm")
+        f = HAND(44); lay = Image.new("RGBA", (500, 70), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((0, 35), sc["flash"], font=f, fill=(110, 110, 130) if LIGHT[0] else (200, 206, 230), anchor="lm")
         put(base, lay, 330, 640, ease(ramp(t, sc["start"] + 0.3, 0.4)) * 0.9)
     draw_items(base, sc, t, 1.0)
     if cfg.get("follow") and i == len(cfg["scenes"]) - 1:
-        f = SANS(36, 700); lay = Image.new("RGBA", (800, 70), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((400, 35), cfg["follow"], font=f, fill=(220, 226, 245), anchor="mm")
+        f = SANS(36, 700); lay = Image.new("RGBA", (800, 70), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((400, 35), cfg["follow"], font=f, fill=(80, 80, 96) if LIGHT[0] else (220, 226, 245), anchor="mm")
         put(base, lay, W / 2, FLOOR + 80, ease(ramp(t, sc["start"] + 0.6, 0.5)))
     c = cfg.get("cta")
     if c and t >= c["at"]:
@@ -318,6 +341,7 @@ def sfx_track(cfg, dur):
             at = it.get("at", sc["start"])
             if it["kind"] == "ticks": ev += [(tt, ding(), -22) for tt in it["at"]]; continue
             if it["kind"] in ("words", "moon", "hearts"): continue
+            if it["kind"] == "prop" and it.get("quiet", False): continue
             ev.append((at, arab.soft_pop(), -25))
             if it.get("mark"): ev.append((it.get("mark_at", at), arab.soft_pop(), -22))
             if it.get("strike_at") is not None: ev.append((it["strike_at"], scribble(), -22))
@@ -332,7 +356,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    page = stage(); only = [float(x) for x in sys.argv[2:]]
+    LIGHT[0] = cfg.get("bg") == "dots"; page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

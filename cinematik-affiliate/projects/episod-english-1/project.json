@@ -1,6 +1,7 @@
 {
  "type": "episod",
  "source": "input/vo.mp4",
+ "bg": "dots",
  "episode": "EPISOD 1 · JANGAN LABEL ANAK",
  "whisper_prompt": "120 SPM English Model Essays, karangan English, abang, ayah, kakak, Form 4, contoh, label, gurauan, essay, komen.",
  "follow": "Ikut untuk episod seterusnya",
@@ -16,6 +17,15 @@
    "tone": "red",
    "items": [
     {
+     "kind": "prop",
+     "img": "perabot/jam_dinding",
+     "x": 890,
+     "at": 0.1,
+     "w": 130,
+     "floor": false,
+     "y": 720
+    },
+    {
      "kind": "paper",
      "head": "KERTAS KARANGAN",
      "name": "Nama: Abang · 4 Bestari",
@@ -29,11 +39,11 @@
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
+     "char": "bapa/terkejut",
      "x": 830,
-     "size": 400,
      "at": 0.4,
-     "name": "Ayah & Mak",
+     "size": 330,
+     "name": "Ayah",
      "mark": "!!",
      "mark_at": 1.96
     }
@@ -46,22 +56,27 @@
    "tone": "yellow",
    "items": [
     {
+     "kind": "prop",
+     "img": "perabot/rak_buku",
+     "x": 560,
+     "at": 5.1,
+     "w": 300
+    },
+    {
      "kind": "char",
      "char": "abang/berfikir",
-     "x": 300,
-     "size": 380,
+     "x": 230,
      "at": 5.1,
+     "size": 380,
      "name": "Abang, 16"
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 800,
-     "size": 400,
-     "at": 5.1,
-     "name": "Ayah & Mak",
-     "mark": "?",
-     "mark_at": 5.5
+     "char": "bapa/berfikir",
+     "x": 870,
+     "at": 5.15,
+     "size": 330,
+     "name": "Ayah"
     }
    ]
   },
@@ -73,32 +88,40 @@
    "flash": "imbas kembali",
    "items": [
     {
-     "kind": "desk",
+     "kind": "prop",
+     "img": "perabot/sofa",
      "x": 560,
-     "at": 7.3,
-     "cups": 2
+     "at": 7.2,
+     "w": 560
+    },
+    {
+     "kind": "prop",
+     "img": "perabot/pokok",
+     "x": 980,
+     "at": 7.4,
+     "w": 150
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
+     "char": "bapa/ketawa",
      "x": 230,
-     "size": 400,
      "at": 7.4,
+     "size": 330,
      "name": "Ayah"
     },
     {
      "kind": "char",
      "char": "stickman/berdiri",
-     "x": 900,
-     "size": 330,
+     "x": 850,
      "at": 9.42,
+     "size": 340,
      "name": "Kawan ayah"
     },
     {
      "kind": "bubble",
      "text": "Kakak dia okey English.|Abang ni memang lemah,|macam ayah dulu.",
      "x": 520,
-     "y": 830,
+     "y": 820,
      "at": 10.46,
      "tail": "left"
     }
@@ -111,23 +134,25 @@
    "tone": "red",
    "items": [
     {
-     "kind": "door",
-     "x": 640,
-     "at": 14.7
+     "kind": "prop",
+     "img": "perabot/almari",
+     "x": 400,
+     "at": 14.7,
+     "w": 300
     },
     {
      "kind": "char",
      "char": "abang/terkejut",
+     "x": 760,
+     "at": 14.75,
+     "size": 380,
+     "name": "Abang, 16",
      "char_at": [
       [
        15.76,
        "abang/stres"
       ]
      ],
-     "x": 860,
-     "size": 380,
-     "at": 14.75,
-     "name": "Abang, 16",
      "grey": [
       [
        16.92,
@@ -139,7 +164,7 @@
      "kind": "bubble",
      "text": "...macam ayah dulu.",
      "x": 380,
-     "y": 880,
+     "y": 760,
      "at": 14.9,
      "tail": "right"
     }
@@ -152,11 +177,18 @@
    "tone": "yellow",
    "items": [
     {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 230,
+     "at": 17.9,
+     "w": 330
+    },
+    {
      "kind": "char",
      "char": "abang/stres",
-     "x": 300,
-     "size": 380,
+     "x": 520,
      "at": 17.9,
+     "size": 380,
      "name": "Abang, 16",
      "grey": [
       [
@@ -168,18 +200,24 @@
     {
      "kind": "bubble",
      "text": "Kita kan memang|lemah English.",
-     "x": 420,
+     "x": 560,
      "y": 860,
      "at": 19.34,
      "tail": "left"
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 820,
-     "size": 400,
+     "char": "bapa/terkejut",
+     "x": 870,
      "at": 18.0,
-     "name": "Ayah & Mak",
+     "size": 330,
+     "name": "Ayah",
+     "char_at": [
+      [
+       21.82,
+       "bapa/pening"
+      ]
+     ],
      "mark": "!!",
      "mark_at": 20.8
     }
@@ -192,11 +230,26 @@
    "tone": "red",
    "items": [
     {
+     "kind": "prop",
+     "img": "perabot/lampu_lantai",
+     "x": 960,
+     "at": 22.85,
+     "w": 150
+    },
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "x": 230,
+     "at": 22.9,
+     "size": 330,
+     "name": "Ayah"
+    },
+    {
      "kind": "char",
      "char": "abang/stres",
      "x": 640,
-     "size": 400,
      "at": 22.85,
+     "size": 400,
      "name": "Abang, 16",
      "grey": [
       [
@@ -204,14 +257,6 @@
        99
       ]
      ]
-    },
-    {
-     "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 230,
-     "size": 380,
-     "at": 22.9,
-     "name": "Ayah & Mak"
     },
     {
      "kind": "words",
@@ -230,32 +275,35 @@
    "tone": "yellow",
    "items": [
     {
-     "kind": "moon",
+     "kind": "prop",
+     "img": "perabot/langsir",
      "x": 880,
-     "y": 720,
-     "at": 26.0
+     "at": 25.95,
+     "w": 230,
+     "floor": false,
+     "y": 760
     },
     {
-     "kind": "desk",
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
      "x": 560,
      "at": 26.0,
-     "lamp": true,
-     "lamp_at": 26.6
+     "w": 360
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 210,
-     "size": 400,
+     "char": "bapa/senyum",
+     "x": 200,
      "at": 26.84,
+     "size": 330,
      "name": "Ayah"
     },
     {
      "kind": "char",
      "char": "abang/berfikir",
      "x": 900,
-     "size": 360,
      "at": 26.2,
+     "size": 360,
      "name": "Abang, 16"
     },
     {
@@ -263,7 +311,7 @@
      "img": "cover.jpg",
      "x": 540,
      "y": 900,
-     "w": 260,
+     "w": 240,
      "at": 27.6
     }
    ]
@@ -275,38 +323,41 @@
    "tone": "green",
    "items": [
     {
-     "kind": "moon",
+     "kind": "prop",
+     "img": "perabot/langsir",
      "x": 880,
-     "y": 720,
-     "at": 31.7
+     "at": 31.7,
+     "w": 230,
+     "floor": false,
+     "y": 760
     },
     {
-     "kind": "desk",
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
      "x": 560,
      "at": 31.7,
-     "lamp": true,
-     "lamp_at": 31.7
+     "w": 360
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 210,
-     "size": 400,
+     "char": "bapa/thumbs_up",
+     "x": 200,
      "at": 31.7,
+     "size": 330,
      "name": "Ayah"
     },
     {
      "kind": "char",
      "char": "abang/fokus",
      "x": 900,
-     "size": 360,
      "at": 31.7,
+     "size": 360,
      "name": "Abang, 16"
     },
     {
      "kind": "ticks",
      "x": 400,
-     "y": 960,
+     "y": 940,
      "gap": 140,
      "at": [
       32.36,
@@ -322,6 +373,15 @@
    "title": "Abang *BOLEH*",
    "tone": "green",
    "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/rak_dinding",
+     "x": 820,
+     "at": 34.85,
+     "w": 260,
+     "floor": false,
+     "y": 760
+    },
     {
      "kind": "paper",
      "head": "KERTAS KARANGAN",
@@ -340,16 +400,16 @@
     {
      "kind": "char",
      "char": "abang/yakin",
+     "x": 870,
+     "at": 35.0,
+     "size": 400,
+     "name": "Abang, 16",
      "char_at": [
       [
        37.96,
        "abang/gembira"
       ]
-     ],
-     "x": 870,
-     "size": 400,
-     "at": 35.0,
-     "name": "Abang, 16"
+     ]
     }
    ]
   },
@@ -360,33 +420,32 @@
    "tone": "yellow",
    "items": [
     {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 600,
+     "at": 40.0,
+     "w": 600
+    },
+    {
      "kind": "char",
      "char": "kira/gembira",
-     "x": 210,
-     "size": 400,
+     "x": 180,
      "at": 40.0,
+     "size": 400,
      "name": "Kakak, 18"
     },
     {
      "kind": "char",
-     "char": "ortu/pasangan",
-     "x": 540,
-     "size": 420,
+     "char": "bapa/peluk_anak",
+     "x": 640,
      "at": 40.1,
-     "name": "Ayah & Mak"
-    },
-    {
-     "kind": "char",
-     "char": "abang/gembira",
-     "x": 870,
      "size": 400,
-     "at": 40.2,
-     "name": "Abang, 16"
+     "name": "Ayah & Abang"
     },
     {
      "kind": "hearts",
-     "x": 540,
-     "y": 880,
+     "x": 640,
+     "y": 1000,
      "at": 40.5
     },
     {

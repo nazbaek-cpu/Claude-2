@@ -460,3 +460,22 @@ def test_arab_stickman_from_repo_assets(tmp_path):
     arab.DARK[0] = False; arab._chars.clear()
     assert plain.height == int(300 * 1.15)
     assert rimmed.width > plain.width and rimmed.height > plain.height
+
+
+def test_motion_frame_renders_with_wipe(tmp_path):
+    """template motion: kinetic words, a phone and a checklist render, and the frame mid-wipe is a full 1080x1920"""
+    import motion
+    from PIL import Image
+    (tmp_path / "input").mkdir(); Image.new("RGB", (300, 400), (200, 40, 120)).save(tmp_path / "input" / "cover.jpg")
+    motion.PRJ[0] = str(tmp_path); motion.arab.PRJ[0] = str(tmp_path)
+    cfg = {"scenes": [
+        {"start": 0.0, "end": 2.0, "lines": ["Kenapa ada *pelajar*", "yang laju?"],
+         "items": [{"kind": "phone", "img": "cover.jpg", "at": 0.3, "step": 1}]},
+        {"start": 2.0, "end": 4.0, "lines": ["*Semua ada.*"],
+         "items": [{"kind": "checklist", "title": "Topik", "rows": [["Fungsi", 2.2], ["Indeks", 2.6]]}]}],
+        "cta": {"at": 3.5}}
+    words = [{"w": "Kenapa", "s": 0.1, "e": 0.3}, {"w": "pelajar", "s": 0.6, "e": 0.9}, {"w": "Semua", "s": 2.1, "e": 2.4}]
+    pg = motion.page(28)
+    for t in (0.5, 1.5, 2.15, 3.8):
+        assert motion.frame(cfg, pg, words, t).size == (1080, 1920)
+    assert motion.parse("yang *Add Maths* dia") == [("yang", False), ("Add", True), ("Maths", True), ("dia", False)]

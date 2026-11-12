@@ -1,1 +1,355 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, essay, email, report, review, article, story, Part 1, Part 2, Part 3, introduction, body, conclusion, vocab enhancer, tips, e-book, Kertas Model, Paper 2, CEFR.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  232,
+  96,
+  34
+ ],
+ "accent2": [
+  250,
+  170,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, essay, email, report, review, article, story, introduction, body, conclusion, vocab enhancer, tips, e-book.",
+ "cta": {
+  "at": 57.64,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.86,
+   "lines": [
+    "\"Essay kau",
+    "*pendek* sangat,",
+    "*60 patah* perkataan je.\"",
+    "Cikgu cakap depan kelas."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 0.3,
+     "size": 520,
+     "x": 540,
+     "y": 1330,
+     "char_at": [
+      [
+       3.2,
+       "stickman/sedih"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4.86,
+   "end": 8.68,
+   "lines": [
+    "Padahal dia antara",
+    "yang paling *petah*",
+    "*bercakap English.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/melambai",
+     "at": 4.9,
+     "size": 500,
+     "x": 380,
+     "y": 1330
+    },
+    {
+     "kind": "icons",
+     "x": 820,
+     "y": 1150,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/angkat_tangan.png",
+       "label": "Fluent!",
+       "at": 7.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 8.68,
+   "end": 16.82,
+   "lines": [
+    "Masalahnya, bila tulis,",
+    "idea *habis*",
+    "dalam dua perenggan."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Bila tulis essay",
+     "at": 9.3,
+     "y": 1400,
+     "bad": true,
+     "rows": [
+      [
+       "Tak tahu nak huraikan",
+       12.98
+      ],
+      [
+       "Tak tahu tambah contoh",
+       14.36
+      ],
+      [
+       "Tak tahu nak tutup",
+       15.94
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 9.0,
+     "size": 300,
+     "x": 880,
+     "y": 900
+    }
+   ]
+  },
+  {
+   "start": 16.82,
+   "end": 23.98,
+   "lines": [
+    "Dan setiap minggu,",
+    "bentuk soalan",
+    "*bertukar.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1060,
+     "gap": 300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "Email",
+       "at": 19.54
+      },
+      {
+       "img": "icons/kerja_rumah.png",
+       "label": "Essay",
+       "at": 20.36
+      },
+      {
+       "img": "icons/fail.png",
+       "label": "Report",
+       "at": 21.06
+      }
+     ]
+    },
+    {
+     "kind": "icons",
+     "y": 1420,
+     "gap": 300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/markah_a.png",
+       "label": "Review",
+       "at": 21.76
+      },
+      {
+       "img": "icons/papan_tulis.png",
+       "label": "Article",
+       "at": 22.44
+      },
+      {
+       "img": "icons/rak_buku.png",
+       "label": "Story",
+       "at": 23.18
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 23.98,
+   "end": 26.52,
+   "lines": [
+    "Makin dia cuba,",
+    "makin rasa",
+    "*tak reti.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/pening",
+     "at": 24.0,
+     "size": 540,
+     "x": 540,
+     "y": 1330,
+     "char_at": [
+      [
+       25.86,
+       "stickman/menangis"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 26.52,
+   "end": 30.18,
+   "lines": [
+    "Lepas tu, dia jumpa",
+    "cara orang yang dapat",
+    "*markah tinggi* tulis."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/takjub",
+     "at": 27.58,
+     "size": 520,
+     "x": 540,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 30.18,
+   "end": 33.54,
+   "lines": [
+    "*120 SPM English*",
+    "*Model Essays.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "cover.jpg",
+     "at": 30.3,
+     "step": 1,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 33.54,
+   "end": 41.84,
+   "lines": [
+    "Setiap isi *dihuraikan,*",
+    "siap contoh dan",
+    "*penanda wacana.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "essay.jpg",
+     "at": 33.6,
+     "w": 560,
+     "max_h": 380,
+     "y": 1150
+    },
+    {
+     "kind": "checklist",
+     "title": "Penanda wacana",
+     "at": 38.2,
+     "y": 1610,
+     "rows": [
+      [
+       "Firstly",
+       38.4
+      ],
+      [
+       "Next",
+       39.14
+      ],
+      [
+       "Besides",
+       39.96
+      ],
+      [
+       "In conclusion",
+       40.8
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 41.84,
+   "end": 48.96,
+   "lines": [
+    "*Tip* tunjuk apa nak tulis,",
+    "*Vocab enhancer*",
+    "buat ayat *matang.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "report.jpg",
+     "at": 41.9,
+     "w": 560,
+     "max_h": 660,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 48.96,
+   "end": 57.64,
+   "lines": [
+    "*150 contoh,*",
+    "cukup untuk setiap bentuk soalan.",
+    "Dari 60 patah perkataan,",
+    "kini capai *150.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "parts.jpg",
+     "at": 49.0,
+     "w": 940,
+     "max_h": 480,
+     "y": 1180
+    },
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 54.92,
+     "size": 340,
+     "x": 540,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 57.64,
+   "end": 59.33,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 57.7,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 57.8,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

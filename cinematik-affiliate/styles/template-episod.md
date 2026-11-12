@@ -15,6 +15,9 @@ video siri parenting ("jangan label anak") untuk corak dan rentak sahaja; watak 
 - **Watak (`char`):** watak simpanan atau `stickman/<pose>` berdiri atas lantai, tag nama putih ("Abang, 16"),
   `char_at` tukar pose, `grey` = selang masa watak jadi kelabu (putus asa), `mark` "!!" atau "?" di atas kepala.
 
+- **Latar putih bertitik:** `"bg": "dots"` guna kertas titik template motion (tanpa cahaya), tajuk jadi gelap,
+  tag nama berbingkai. Contoh: `projects/episod-english-1/`.
+
 ## Prop
 
 - `paper`: kertas / buku latihan kuning dengan tulisan tangan; `strike_at` pangkah merah kiri ke kanan,
@@ -24,6 +27,11 @@ video siri parenting ("jangan label anak") untuk corak dan rentak sahaja; watak 
 - `ticks`: ✓ hijau bernombor 1-2-3 muncul ikut masa (`at` = senarai masa).
 - `words`: perkataan label terapung samar di sekeliling watak ("lemah... lemah...").
 - `photo`: gambar produk dalam kad putih (contoh kulit buku atas meja).
+- `prop`: perabot / ikon simpanan atas lantai (`"floor": false` + `y` untuk benda tergantung seperti langsir, jam).
+  37 perabot dalam repo, `assets/perabot/<nama>.png`: sofa, kerusi_sofa, meja_kopi, kabinet_tv, rak_buku,
+  kabinet_lampu, meja_makan, almari, almari_baju, laci, meja_solek, katil, lampu_tidur, meja_belajar, dapur,
+  peti_sejuk, rak_dapur, rak_kasut, rak_simpanan, bakul_baju, ampaian, kotak_simpanan, karpet, kusyen, langsir, bidai,
+  lampu_lantai, pokok, jam_dinding, cermin, aircond, kipas, kipas_siling, lampu_siling, bingkai, bingkai_kecil, rak_dinding.
 - `hearts`, `comment` ("Komen: SETUJU"), `follow` ("Ikut untuk episod seterusnya"), `cta` (butang kuning).
 
 ## Gerakan dan bunyi

@@ -214,6 +214,17 @@ def checklist(title, rows, t):
         d.rounded_rectangle((60, y - 13, 72, y + 13), 4, fill=ACC[0] if on else (220, 220, 224))
     return shadowed(im, 22, 70, 12)
 
+def figure_img(path, size):
+    """a stickman pose (assets/stickman/<pose>.png) or saved character, scaled to `size` px tall, soft floor shadow"""
+    key = ("fig", path, size)
+    if key not in _img:
+        im = Image.open(arab.asset(path + ".png")).convert("RGBA"); k = size / im.height
+        im = im.resize((max(1, int(im.width * k)), size), Image.LANCZOS)
+        out = Image.new("RGBA", (im.width + 60, size + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(out)
+        sh = Image.new("RGBA", out.size, (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse((out.width / 2 - im.width * 0.38, size + 4, out.width / 2 + im.width * 0.38, size + 30), fill=(0, 0, 0, 45))
+        out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6))); out.alpha_composite(im, (30, 10)); _img[key] = out
+    return _img[key]
+
 def ban(size):
     im = Image.new("RGBA", (size, size), (0, 0, 0, 0)); d = ImageDraw.Draw(im); w = size // 11
     d.ellipse((w, w, size - w, size - w), outline=(226, 54, 54), width=w)
@@ -250,6 +261,12 @@ def draw_items(base, sc, t, alpha):
         elif k == "checklist":
             q = ease(ramp(t, at, 0.45)); im = checklist(it.get("title", ""), it["rows"], t)
             put(base, im, W / 2, it.get("y", 1180) + (1 - q) * 120, q * alpha)
+        elif k == "char":   # a big stickman / character with no tile: pops in, bobs, swaps pose on "char_at"
+            q = ramp(t, at, 0.35); c = it["char"]
+            for when, pose in it.get("char_at", []):
+                if t >= when: c = pose
+            im = figure_img(c, it.get("size", 420))
+            put(base, im, it.get("x", W / 2), it.get("y", 1250) + math.sin(t * 2.4) * 6, min(1, q * 2) * alpha, 0.55 + 0.45 * pop(q))
         elif k == "ban":
             q = ramp(t, at, 0.35); put(base, ban(it.get("size", 300)), it.get("x", W / 2), it.get("y", 1200), min(1, q * 2) * alpha, 0.6 + 0.4 * pop(q))
     for j, (sx, sy, ss) in enumerate(sc.get("sparkles", [(150, 900, 34), (930, 820, 26), (880, 1580, 30)])):
@@ -318,6 +335,7 @@ def sfx_track(cfg, dur):
             if it["kind"] == "phone": ev.append((at, arab.breeze(), -26)); ev.append((at + 0.45, arab.soft_pop(), -22))
             elif it["kind"] == "icons": ev += [(tl.get("at", at), arab.soft_pop(), -22) for tl in it["tiles"]]
             elif it["kind"] == "checklist": ev.append((at, arab.soft_pop(), -24)); ev += [(r[1], tick(), -20) for r in it["rows"]]
+            elif it["kind"] == "char": ev.append((at, arab.soft_pop(), -21)); ev += [(w, arab.soft_pop(), -26) for w, _ in it.get("char_at", [])]
             else: ev.append((at, arab.soft_pop(), -22))
         for wt, (wd, big) in zip(word_times(sc, WORDS[0]), [w for line in sc["lines"] for w in parse(line)]):
             if big: ev.append((wt, arab.soft_pop(), -30))

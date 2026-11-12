@@ -1,1 +1,422 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, kombinasi bahan rangsangan, karangan umum, berformat, tidak berformat, surat, laporan, ucapan, rencana, 18 tema, DSKP, KBAT, e-buku.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  22,
+  86,
+  214
+ ],
+ "accent2": [
+  60,
+  150,
+  255
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, berformat, surat, laporan, ucapan, 18 tema, DSKP, KBAT, e-buku.",
+ "cta": {
+  "at": 68.88,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.84,
+   "lines": [
+    "\"Karangan kau ni",
+    "macam karangan",
+    "*budak sekolah rendah.\"*",
+    "Cikgu cakap depan kelas."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 0.3,
+     "size": 500,
+     "x": 540,
+     "y": 1380,
+     "char_at": [
+      [
+       2.92,
+       "stickman/sedih"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4.84,
+   "end": 9.14,
+   "lines": [
+    "Padahal dia paling",
+    "*petah berhujah*",
+    "dalam kelas BM."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/tunjuk_atas",
+     "at": 4.9,
+     "size": 500,
+     "x": 380,
+     "y": 1330
+    },
+    {
+     "kind": "icons",
+     "x": 820,
+     "y": 1150,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/angkat_tangan.png",
+       "label": "Petah!",
+       "at": 7.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 9.14,
+   "end": 17.62,
+   "lines": [
+    "Masalahnya, bila tulis,",
+    "idea *habis*",
+    "dalam dua perenggan."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Bila tulis karangan",
+     "at": 9.8,
+     "y": 1400,
+     "bad": true,
+     "rows": [
+      [
+       "Tak tahu nak huraikan",
+       13.72
+      ],
+      [
+       "Tak tahu bagi contoh",
+       15.14
+      ],
+      [
+       "Tak tahu nak tutup",
+       16.6
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 9.5,
+     "size": 300,
+     "x": 880,
+     "y": 900
+    }
+   ]
+  },
+  {
+   "start": 17.62,
+   "end": 30.0,
+   "lines": [
+    "Bentuk soalan pula",
+    "*berbeza-beza.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 860,
+     "gap": 360,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/kuiz.png",
+       "label": "Bahagian A",
+       "at": 21.36
+      },
+      {
+       "img": "icons/kerja_rumah.png",
+       "label": "Bahagian B",
+       "at": 23.82
+      }
+     ]
+    },
+    {
+     "kind": "icons",
+     "y": 1210,
+     "gap": 300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/fail.png",
+       "label": "Surat",
+       "at": 26.38
+      },
+      {
+       "img": "icons/jadual_waktu.png",
+       "label": "Laporan",
+       "at": 27.1
+      },
+      {
+       "img": "icons/pengumuman.png",
+       "label": "Ucapan",
+       "at": 27.86
+      }
+     ]
+    },
+    {
+     "kind": "icons",
+     "y": 1560,
+     "gap": 300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "Tak berformat",
+       "at": 29.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 36.58,
+   "lines": [
+    "Bahagian B je bawa *70 markah,*",
+    "tapi kena tulis",
+    "*350-500* patah perkataan."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "markah.jpg",
+     "at": 30.1,
+     "w": 900,
+     "max_h": 300,
+     "y": 1320
+    }
+   ]
+  },
+  {
+   "start": 36.58,
+   "end": 39.32,
+   "lines": [
+    "Makin dia cuba,",
+    "makin rasa",
+    "*tak reti.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/pening",
+     "at": 36.6,
+     "size": 540,
+     "x": 540,
+     "y": 1330,
+     "char_at": [
+      [
+       38.48,
+       "stickman/menangis"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 39.32,
+   "end": 43.12,
+   "lines": [
+    "Lepas tu, dia jumpa",
+    "cara orang yang dapat",
+    "*markah tinggi* menulis."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/takjub",
+     "at": 40.18,
+     "size": 520,
+     "x": 540,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 43.12,
+   "end": 45.44,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "cover.jpg",
+     "at": 43.2,
+     "step": 1,
+     "y": 1280
+    }
+   ]
+  },
+  {
+   "start": 45.44,
+   "end": 49.34,
+   "lines": [
+    "Setiap karangan",
+    "ada *analisis,*",
+    "kenapa ia dapat *markah tinggi.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "review.jpg",
+     "at": 45.5,
+     "w": 860,
+     "max_h": 440,
+     "y": 1220
+    }
+   ]
+  },
+  {
+   "start": 49.34,
+   "end": 55.2,
+   "lines": [
+    "Siap *tip, nota* dan petua,",
+    "*ungkapan menarik*",
+    "dan unsur *KBAT.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Dalam setiap karangan",
+     "at": 49.4,
+     "y": 1380,
+     "rows": [
+      [
+       "Tip",
+       49.8
+      ],
+      [
+       "Nota",
+       50.3
+      ],
+      [
+       "Petua penulis",
+       50.98
+      ],
+      [
+       "Ungkapan menarik",
+       51.96
+      ],
+      [
+       "Unsur KBAT",
+       53.12
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 55.2,
+   "end": 60.0,
+   "lines": [
+    "*18 tema* ikut DSKP,",
+    "cukup untuk setiap soalan",
+    "yang mungkin keluar."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "tema1.jpg",
+     "at": 55.3,
+     "step": 2,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 60.0,
+   "end": 64.58,
+   "lines": [
+    "Tambah *e-buku percuma,*",
+    "10 bahan rangsangan,",
+    "10 karangan umum."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1150,
+     "gap": 380,
+     "tiles": [
+      {
+       "img": "mat/laptop.png",
+       "label": "10 rangsangan",
+       "at": 61.28
+      },
+      {
+       "img": "mat/laptop.png",
+       "label": "10 umum",
+       "at": 63.18
+      }
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/takjub",
+     "at": 60.2,
+     "size": 300,
+     "x": 540,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 64.58,
+   "end": 68.88,
+   "lines": [
+    "Dari *2 perenggan,*",
+    "sekarang dia tahu cara tulis",
+    "*500 patah perkataan.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 64.7,
+     "size": 500,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 68.88,
+   "end": 70.43,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 68.9,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 69.0,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

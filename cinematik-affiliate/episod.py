@@ -69,7 +69,7 @@ def title_img(text, tone):
     if key not in _c:
         f = SANS(82, 800); col = TONE.get(tone, TONE["yellow"]); toks, hot = [], False
         for w in text.split():
-            s = w.startswith("*"); e = w.endswith("*") and (len(w) > 1 or not s); ww = w.strip("*")
+            core = w.rstrip(".,!?\"':;"); s = w.lstrip("\"'").startswith("*"); e = core.endswith("*") and (len(core.strip("\"'")) > 1 or not s); ww = w.replace("*", "")
             if s: hot = True
             if ww: toks.append((ww, hot))
             if e: hot = False
@@ -137,7 +137,7 @@ def paper_img(it, t):
             if q > 0: d.line((x0, y, x1, y + 2), fill=(226, 50, 50), width=6)
     ra = it.get("rewrite_at")
     if it.get("rewrite") and ra is not None and t >= ra:   # green hand-writing that writes itself in
-        p = ramp(t, ra, 0.9); fg = HAND(it.get("text_size", 54) - 6); txt = it["rewrite"]; y = y0 + len(lines) * lh + 4
+        p = ramp(t, ra, 0.9); fg = HAND(it.get("rewrite_size", it.get("text_size", 54) - 6)); txt = it["rewrite"]; y = y0 + len(lines) * lh + 4
         lay = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(lay).text((56, y), txt, font=fg, fill=(30, 150, 70))
         m = Image.new("L", im.size, 0); ImageDraw.Draw(m).rectangle((0, 0, 56 + fg.getlength(txt) * p, im.height), fill=255)
         im.paste(lay, (0, 0), Image.composite(lay, Image.new("RGBA", im.size, (0, 0, 0, 0)), m))
@@ -197,6 +197,27 @@ def comment_img(text):
         _c[("cm", text)] = shadowed(im, 12, 80, 8)
     return _c[("cm", text)]
 
+def bubble_img(text, tail="left"):
+    key = ("bub", text, tail)
+    if key not in _c:
+        lines = text.split("|"); f = SANS(40, 700); lh = 54; w = int(max(f.getlength(l) for l in lines)) + 70; h = lh * len(lines) + 50
+        im = Image.new("RGBA", (w + 10, h + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        d.rounded_rectangle((5, 5, w + 5, h + 5), 26, fill=(255, 255, 255))
+        tx = 70 if tail == "left" else w - 70
+        d.polygon([(tx - 22, h), (tx + 22, h), (tx + (-30 if tail == "left" else 30), h + 50)], fill=(255, 255, 255))
+        for i, l in enumerate(lines): d.text((40, 30 + i * lh + lh / 2), l, font=f, fill=INK, anchor="lm")
+        _c[key] = shadowed(im, 12, 90, 8)
+    return _c[key]
+
+def heart_img(s=64, col=(226, 100, 120)):
+    if "heart" not in _c:
+        S = 4; im = Image.new("RGBA", (s * S, s * S), (0, 0, 0, 0)); d = ImageDraw.Draw(im); r = s * S * 0.27
+        d.ellipse((s * S * 0.5 - 2 * r, s * S * 0.1, s * S * 0.5, s * S * 0.1 + 2 * r), fill=col)
+        d.ellipse((s * S * 0.5, s * S * 0.1, s * S * 0.5 + 2 * r, s * S * 0.1 + 2 * r), fill=col)
+        d.polygon([(s * S * 0.5 - 2 * r + 4, s * S * 0.1 + r * 1.25), (s * S * 0.5 + 2 * r - 4, s * S * 0.1 + r * 1.25), (s * S * 0.5, s * S * 0.92)], fill=col)
+        _c["heart"] = im.resize((s, s), Image.LANCZOS)
+    return _c["heart"]
+
 def pop(q):
     if q <= 0: return 0.0
     if q >= 1: return 1.0
@@ -237,11 +258,12 @@ def draw_items(base, sc, t, a):
                 ph = t * 0.6 + j * 1.3; x = it.get("x", 700) + math.cos(ph) * (150 + j * 20); y = it.get("y", 1150) + math.sin(ph * 1.3) * (110 + j * 12)
                 lay = Image.new("RGBA", (260, 90), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((130, 45), it["text"], font=f, fill=(230, 110, 100, 255), anchor="mm")
                 put(base, lay, x, y, qa * (0.35 + 0.25 * math.sin(ph * 2)))
+        elif k == "bubble":   # a white speech bubble with a quote, tail pointing to the speaker
+            put(base, bubble_img(it["text"], it.get("tail", "left")), it.get("x", 600), it.get("y", 900) + (1 - e) * 20, qa, 0.8 + 0.2 * pop(q))
         elif k == "comment": put(base, comment_img(it["text"]), W / 2, it.get("y", 760), qa, 0.6 + 0.4 * pop(q))
         elif k == "hearts":
             for j, (dx, dy) in enumerate([(-170, -40), (160, -10)]):
-                f = SANS(70, 800); lay = Image.new("RGBA", (100, 100), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((50, 50), "♥", font=f, fill=(226, 100, 120), anchor="mm")
-                put(base, lay, it.get("x", 540) + dx, it.get("y", 900) + dy - (t % 2) * 10, qa * 0.85)
+                put(base, heart_img(), it.get("x", 540) + dx, it.get("y", 900) + dy - math.sin(t * 2 + j) * 8, qa * 0.85)
 
 def scene_at(cfg, t):
     i = 0
@@ -295,7 +317,7 @@ def sfx_track(cfg, dur):
         for it in sc.get("items", []):
             at = it.get("at", sc["start"])
             if it["kind"] == "ticks": ev += [(tt, ding(), -22) for tt in it["at"]]; continue
-            if it["kind"] in ("words", "moon"): continue
+            if it["kind"] in ("words", "moon", "hearts"): continue
             ev.append((at, arab.soft_pop(), -25))
             if it.get("mark"): ev.append((it.get("mark_at", at), arab.soft_pop(), -22))
             if it.get("strike_at") is not None: ev.append((it["strike_at"], scribble(), -22))

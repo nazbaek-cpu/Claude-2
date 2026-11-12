@@ -1,1 +1,401 @@
-{"type": "episod", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, karangan English, abang, ayah, kakak, Form 4, contoh, label, gurauan, essay, komen.", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "episode": "EPISOD 1 · JANGAN LABEL ANAK",
+ "whisper_prompt": "120 SPM English Model Essays, karangan English, abang, ayah, kakak, Form 4, contoh, label, gurauan, essay, komen.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 44.6,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.08,
+   "title": "\"Saya *TAK PANDAI* English\"",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS KARANGAN",
+     "name": "Nama: Abang · 4 Bestari",
+     "text": "Saya memang|tak pandai English.",
+     "w": 640,
+     "h": 390,
+     "rewrite_size": 44,
+     "x": 330,
+     "y": 1000,
+     "at": 0.15
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 830,
+     "size": 400,
+     "at": 0.4,
+     "name": "Ayah & Mak",
+     "mark": "!!",
+     "mark_at": 1.96
+    }
+   ]
+  },
+  {
+   "start": 5.08,
+   "end": 7.12,
+   "title": "*SIAPA* ajar dia?",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 300,
+     "size": 380,
+     "at": 5.1,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 800,
+     "size": 400,
+     "at": 5.1,
+     "name": "Ayah & Mak",
+     "mark": "?",
+     "mark_at": 5.5
+    }
+   ]
+  },
+  {
+   "start": 7.12,
+   "end": 14.68,
+   "title": "Minggu *LEPAS*",
+   "tone": "yellow",
+   "flash": "imbas kembali",
+   "items": [
+    {
+     "kind": "desk",
+     "x": 560,
+     "at": 7.3,
+     "cups": 2
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 230,
+     "size": 400,
+     "at": 7.4,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "stickman/berdiri",
+     "x": 900,
+     "size": 330,
+     "at": 9.42,
+     "name": "Kawan ayah"
+    },
+    {
+     "kind": "bubble",
+     "text": "Kakak dia okey English.|Abang ni memang lemah,|macam ayah dulu.",
+     "x": 520,
+     "y": 830,
+     "at": 10.46,
+     "tail": "left"
+    }
+   ]
+  },
+  {
+   "start": 14.68,
+   "end": 17.88,
+   "title": "Dia *BERHENTI* cuba",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "door",
+     "x": 640,
+     "at": 14.7
+    },
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "char_at": [
+      [
+       15.76,
+       "abang/stres"
+      ]
+     ],
+     "x": 860,
+     "size": 380,
+     "at": 14.75,
+     "name": "Abang, 16",
+     "grey": [
+      [
+       16.92,
+       99
+      ]
+     ]
+    },
+    {
+     "kind": "bubble",
+     "text": "...macam ayah dulu.",
+     "x": 380,
+     "y": 880,
+     "at": 14.9,
+     "tail": "right"
+    }
+   ]
+  },
+  {
+   "start": 17.88,
+   "end": 22.82,
+   "title": "\"Buat *APA* tulis, ayah?\"",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 300,
+     "size": 380,
+     "at": 17.9,
+     "name": "Abang, 16",
+     "grey": [
+      [
+       17.0,
+       99
+      ]
+     ]
+    },
+    {
+     "kind": "bubble",
+     "text": "Kita kan memang|lemah English.",
+     "x": 420,
+     "y": 860,
+     "at": 19.34,
+     "tail": "left"
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 820,
+     "size": 400,
+     "at": 18.0,
+     "name": "Ayah & Mak",
+     "mark": "!!",
+     "mark_at": 20.8
+    }
+   ]
+  },
+  {
+   "start": 22.82,
+   "end": 25.94,
+   "title": "Dia *PERCAYA*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 640,
+     "size": 400,
+     "at": 22.85,
+     "name": "Abang, 16",
+     "grey": [
+      [
+       22.0,
+       99
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 230,
+     "size": 380,
+     "at": 22.9,
+     "name": "Ayah & Mak"
+    },
+    {
+     "kind": "words",
+     "text": "lemah",
+     "x": 660,
+     "y": 1060,
+     "at": 23.2,
+     "n": 5
+    }
+   ]
+  },
+  {
+   "start": 25.94,
+   "end": 31.72,
+   "title": "Malam *TU*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "moon",
+     "x": 880,
+     "y": 720,
+     "at": 26.0
+    },
+    {
+     "kind": "desk",
+     "x": 560,
+     "at": 26.0,
+     "lamp": true,
+     "lamp_at": 26.6
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 210,
+     "size": 400,
+     "at": 26.84,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 900,
+     "size": 360,
+     "at": 26.2,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "photo",
+     "img": "cover.jpg",
+     "x": 540,
+     "y": 900,
+     "w": 260,
+     "at": 27.6
+    }
+   ]
+  },
+  {
+   "start": 31.72,
+   "end": 34.84,
+   "title": "Satu, dua, *TIGA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "moon",
+     "x": 880,
+     "y": 720,
+     "at": 31.7
+    },
+    {
+     "kind": "desk",
+     "x": 560,
+     "at": 31.7,
+     "lamp": true,
+     "lamp_at": 31.7
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 210,
+     "size": 400,
+     "at": 31.7,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 900,
+     "size": 360,
+     "at": 31.7,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "ticks",
+     "x": 400,
+     "y": 960,
+     "gap": 140,
+     "at": [
+      32.36,
+      33.18,
+      34.28
+     ]
+    }
+   ]
+  },
+  {
+   "start": 34.84,
+   "end": 39.92,
+   "title": "Abang *BOLEH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS KARANGAN",
+     "name": "Nama: Abang · 4 Bestari",
+     "text": "Saya memang|tak pandai English.",
+     "w": 640,
+     "h": 390,
+     "rewrite_size": 44,
+     "x": 360,
+     "y": 1000,
+     "at": 34.85,
+     "strike_at": 36.78,
+     "rewrite": "Saya boleh tulis English.",
+     "rewrite_at": 37.96
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "char_at": [
+      [
+       37.96,
+       "abang/gembira"
+      ]
+     ],
+     "x": 870,
+     "size": 400,
+     "at": 35.0,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 39.92,
+   "end": 46.68,
+   "title": "Tunjuk *CONTOH*, bukan label",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "kira/gembira",
+     "x": 210,
+     "size": 400,
+     "at": 40.0,
+     "name": "Kakak, 18"
+    },
+    {
+     "kind": "char",
+     "char": "ortu/pasangan",
+     "x": 540,
+     "size": 420,
+     "at": 40.1,
+     "name": "Ayah & Mak"
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 870,
+     "size": 400,
+     "at": 40.2,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 880,
+     "at": 40.5
+    },
+    {
+     "kind": "comment",
+     "text": "SETUJU",
+     "y": 760,
+     "at": 42.92
+    }
+   ]
+  }
+ ]
+}

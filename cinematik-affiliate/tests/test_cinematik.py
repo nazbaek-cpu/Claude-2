@@ -501,3 +501,23 @@ def test_bukti_frame_renders(tmp_path):
     pg = bukti.paper()
     for t in (0.3, 1.2, 2.1, 3.0, 3.8):
         assert bukti.frame(cfg, pg, words, t).size == (1080, 1920)
+
+
+def test_episod_frame_renders(tmp_path):
+    """template episod: title markup, paper strike + rewrite, ticks, bubble and the fade between scenes render"""
+    import episod
+    from PIL import Image
+    (tmp_path / "input").mkdir(); Image.new("RGB", (300, 400), (240, 200, 60)).save(tmp_path / "input" / "cover.jpg")
+    episod.arab.PRJ[0] = str(tmp_path); episod.arab.DARK[0] = True
+    assert episod.title_img("Tunjuk *CONTOH*, bukan label", "yellow").size[0] == 1080
+    cfg = {"episode": "EPISOD 1 · UJI", "follow": "Ikut", "cta": {"at": 3.5},
+           "scenes": [{"start": 0.0, "end": 2.0, "title": "\"Saya *TAK PANDAI*\"", "tone": "red", "items": [
+               {"kind": "paper", "text": "Saya|tak pandai.", "at": 0.1, "strike_at": 1.0, "rewrite": "Saya boleh.", "rewrite_at": 1.4},
+               {"kind": "char", "char": "stickman/sedih", "x": 800, "at": 0.2, "name": "Abang, 16", "grey": [[0.5, 9]], "mark": "!!"}]},
+                      {"start": 2.0, "end": 4.0, "title": "Satu, dua, *TIGA*", "tone": "green", "items": [
+               {"kind": "desk", "lamp": True, "at": 2.0}, {"kind": "ticks", "at": [2.2, 2.5, 2.8]},
+               {"kind": "bubble", "text": "Boleh!", "at": 2.1}, {"kind": "photo", "img": "cover.jpg", "at": 2.3},
+               {"kind": "hearts", "at": 2.4}, {"kind": "comment", "text": "SETUJU", "at": 3.0}]}]}
+    pg = episod.stage()
+    for t in (0.3, 1.6, 2.1, 2.9, 3.8):
+        assert episod.frame(cfg, pg, t).size == (1080, 1920)

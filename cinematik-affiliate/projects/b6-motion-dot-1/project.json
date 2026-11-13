@@ -1,1 +1,199 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "SPM, Karangan Contoh dan Teknik Penulisan, 120 SPM English Model Essays, BTP Infografik Sejarah, Matematik SPM Final Boost, KBAT, essay, karangan, Bahagian A, Bahagian B, e-buku, Nilam.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  22,
+  86,
+  214
+ ],
+ "accent2": [
+  60,
+  150,
+  255
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, cikgu, Guru Cemerlang, 18 tema, DSKP.",
+ "cta": {
+  "at": 25.42,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.54,
+   "lines": [
+    "*Cikgu,*",
+    "berapa banyak karangan",
+    "cikgu tanda minggu ni,",
+    "dengan *kesilapan yang sama?*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/menulis",
+     "at": 0.3,
+     "size": 360,
+     "x": 540,
+     "y": 1250
+    },
+    {
+     "kind": "icons",
+     "y": 1620,
+     "gap": 200,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "",
+       "at": 1.22
+      },
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "",
+       "at": 1.5
+      },
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "",
+       "at": 1.8
+      },
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "",
+       "at": 2.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.54,
+   "end": 9.68,
+   "lines": [
+    "Kesilapan",
+    "*berulang-ulang.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Setiap minggu",
+     "at": 5.6,
+     "y": 1250,
+     "bad": true,
+     "rows": [
+      [
+       "Pendahuluan sama",
+       5.54
+      ],
+      [
+       "Isi tak berhuraian",
+       6.86
+      ],
+      [
+       "Penutup tergantung",
+       8.28
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 9.68,
+   "end": 15.68,
+   "lines": [
+    "Dah tegur dalam kelas,",
+    "minggu depan *jadi lagi.*",
+    "Masa kelas *tak cukup*",
+    "nak tunjuk contoh satu-satu."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "at": 9.7,
+     "size": 420,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       12.64,
+       "bapa/berfikir"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15.68,
+   "end": 19.62,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan,",
+    "ditulis Guru Cemerlang."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 15.7,
+     "step": 1,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 19.62,
+   "end": 25.42,
+   "lines": [
+    "*18 tema* ikut DSKP,",
+    "contoh dengan *analisis,*",
+    "murid rujuk sendiri."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_tema1.jpg",
+     "at": 19.7,
+     "step": 2,
+     "y": 1400,
+     "x": 360
+    },
+    {
+     "kind": "char",
+     "char": "bapa/thumbs_up",
+     "at": 24.12,
+     "size": 320,
+     "x": 850,
+     "y": 1520
+    }
+   ]
+  },
+  {
+   "start": 25.42,
+   "end": 27.01,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 25.5,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 25.6,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

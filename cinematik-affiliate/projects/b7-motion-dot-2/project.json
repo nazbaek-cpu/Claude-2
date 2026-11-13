@@ -1,1 +1,239 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  232,
+  96,
+  34
+ ],
+ "accent2": [
+  250,
+  170,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, e-book, audio, video.",
+ "cta": {
+  "at": 41.34,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.02,
+   "lines": [
+    "Mak ayah pernah dengar",
+    "anak cakap,",
+    "\"Cikgu suruh banyak baca",
+    "*contoh essay?\"*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/telefon",
+     "at": 0.2,
+     "size": 340,
+     "x": 320,
+     "y": 1360
+    },
+    {
+     "kind": "char",
+     "char": "adik/sapa",
+     "at": 1.1,
+     "size": 380,
+     "x": 780,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 4.02,
+   "end": 11.98,
+   "lines": [
+    "Tapi contoh tu",
+    "*nak cari dekat mana?*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cari contoh essay",
+     "at": 6.6,
+     "y": 1300,
+     "bad": true,
+     "rows": [
+      [
+       "Buku lama: format bertukar",
+       8.1
+      ],
+      [
+       "Internet: betul atau salah?",
+       10.08
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "bapa/berfikir",
+     "at": 4.1,
+     "size": 300,
+     "x": 860,
+     "y": 1700
+    }
+   ]
+  },
+  {
+   "start": 11.98,
+   "end": 14.22,
+   "lines": [
+    "Anak akhirnya",
+    "*tak baca apa-apa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "adikhp/game",
+     "at": 12.0,
+     "size": 460,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 14.22,
+   "end": 20.82,
+   "lines": [
+    "Writing paper ni",
+    "*25%* daripada gred English SPM.",
+    "Bukan bahagian kecil",
+    "untuk *dibiarkan.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_overview.jpg",
+     "at": 14.3,
+     "w": 500,
+     "max_h": 680,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 20.82,
+   "end": 27.0,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays,",
+    "ikut CEFR dan format SPM terkini."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 20.9,
+     "step": 1,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 27.0,
+   "end": 31.34,
+   "lines": [
+    "Pembeli sendiri tulis,",
+    "*disyorkan cikgu English*",
+    "mereka."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_review2.jpg",
+     "at": 27.1,
+     "w": 800,
+     "max_h": 560,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 31.34,
+   "end": 38.82,
+   "lines": [
+    "*120 contoh* dalam buku,",
+    "*30 lagi* dalam e-book percuma."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Dalam buku ni",
+     "at": 31.4,
+     "y": 1280,
+     "rows": [
+      [
+       "120 contoh essay",
+       31.92
+      ],
+      [
+       "+30 dalam e-book",
+       33.48
+      ],
+      [
+       "Tip & nota",
+       36.36
+      ],
+      [
+       "Audio & video",
+       37.46
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 38.82,
+   "end": 41.34,
+   "lines": [
+    "Contoh yang betul",
+    "terus ada *dekat rumah.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/peluk_anak",
+     "at": 38.9,
+     "size": 480,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 41.34,
+   "end": 42.92,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 41.4,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 41.5,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

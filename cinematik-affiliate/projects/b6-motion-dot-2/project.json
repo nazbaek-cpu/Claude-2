@@ -1,1 +1,204 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "SPM, Karangan Contoh dan Teknik Penulisan, 120 SPM English Model Essays, BTP Infografik Sejarah, Matematik SPM Final Boost, KBAT, essay, karangan, Bahagian A, Bahagian B, e-buku, Nilam.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  22,
+  86,
+  214
+ ],
+ "accent2": [
+  60,
+  150,
+  255
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, peribahasa, bagai aur dengan tebing, ungkapan.",
+ "cta": {
+  "at": 23.64,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 1.78,
+   "lines": [
+    "\"*Bagai aur*",
+    "*dengan tebing.\"*"
+   ],
+   "align": "center",
+   "text_y": 420,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/takjub",
+     "at": 0.3,
+     "size": 520,
+     "x": 540,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 1.78,
+   "end": 6.86,
+   "lines": [
+    "Ramai calon *selit peribahasa*",
+    "dalam karangan, sebab dengar",
+    "boleh *tambah markah.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "at": 1.9,
+     "size": 460,
+     "x": 380,
+     "y": 1380
+    },
+    {
+     "kind": "icons",
+     "x": 820,
+     "y": 1160,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/markah_a.png",
+       "label": "+ markah?",
+       "at": 6.02
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6.86,
+   "end": 13.2,
+   "lines": [
+    "Tapi guna di *tempat yang salah,*",
+    "pemeriksa terus tahu,",
+    "ini cuma *tampal,* bukan faham."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/berfikir",
+     "at": 9.02,
+     "size": 380,
+     "x": 360,
+     "y": 1400
+    },
+    {
+     "kind": "ban",
+     "x": 800,
+     "y": 1250,
+     "size": 280,
+     "at": 11.02
+    }
+   ]
+  },
+  {
+   "start": 13.2,
+   "end": 16.34,
+   "lines": [
+    "Niat nak tambah markah,",
+    "akhirnya nampak",
+    "*janggal.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/kecewa",
+     "at": 13.3,
+     "size": 500,
+     "x": 540,
+     "y": 1330,
+     "char_at": [
+      [
+       15.2,
+       "stickman/pening"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 16.34,
+   "end": 21.42,
+   "lines": [
+    "*Karangan Contoh*",
+    "tunjuk peribahasa",
+    "dalam ayat sebenar."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 16.4,
+     "step": 1,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 21.42,
+   "end": 23.64,
+   "lines": [
+    "*Tempat yang betul,*",
+    "*cara yang betul.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Peribahasa & ungkapan",
+     "at": 21.45,
+     "y": 1200,
+     "rows": [
+      [
+       "Tempat yang betul",
+       22.08
+      ],
+      [
+       "Cara yang betul",
+       23.2
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 22.9,
+     "size": 340,
+     "x": 540,
+     "y": 1620
+    }
+   ]
+  },
+  {
+   "start": 23.64,
+   "end": 25.31,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 23.7,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 23.8,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

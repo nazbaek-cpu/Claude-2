@@ -75,8 +75,9 @@ def parse(line):
     """'yang *Add Maths* dia' -> [('yang', False), ('Add', True), ('Maths', True), ('dia', False)]"""
     out, big = [], False
     for tok in line.split():
-        start = tok.startswith("*"); end = tok.endswith("*") and (len(tok) > 1 or not start)
-        word = tok.strip("*")
+        lead = tok.lstrip("\"'(");  trail = tok.rstrip("\"'.,!?:;)")   # quotes / punctuation may sit outside the *...*
+        start = lead.startswith("*"); end = trail.endswith("*") and (len(trail.strip("\"'(*")) > 0 or not start)
+        word = tok.replace("*", "")
         if start: big = True
         if word: out.append((word, big))
         if end: big = False

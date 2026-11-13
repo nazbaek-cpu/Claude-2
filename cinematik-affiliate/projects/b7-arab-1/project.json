@@ -1,1 +1,282 @@
-{"type": "arab", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, vocab enhancer, tips, e-book, Kertas Model, Paper 2.",
+ "cta": {
+  "at": 55.02,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.58,
+   "line": "Mak ayah pelik tak? | Anak boleh tengok movie English | tanpa sari kata. | Bercakap dengan kawan online | pun English.",
+   "keys": [
+    "movie",
+    "English",
+    "online"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/berfikir",
+      "x": 300,
+      "size": 330,
+      "at": 0.1
+     },
+     {
+      "char": "adikhp/video",
+      "x": 790,
+      "size": 380,
+      "at": 1.04,
+      "char_at": [
+       [
+        4.12,
+        "adikhp/chatting"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/angkat_tangan.png",
+     "x": 790,
+     "y": 330,
+     "at": 4.8,
+     "size": 150,
+     "tag": "FASIH"
+    }
+   ]
+  },
+  {
+   "start": 6.58,
+   "end": 11.94,
+   "line": "Tapi markah writing dia | tak pernah | lepas separuh. | Puncanya | bukan bahasa.",
+   "keys": [
+    "writing",
+    "separuh.",
+    "bukan",
+    "bahasa."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PUNCANYA",
+    "word": "BUKAN BAHASA",
+    "size": 84,
+    "sub": "tapi bentuk karangan",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sedih",
+      "x": 380,
+      "size": 380,
+      "at": 6.6
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 800,
+     "y": 980,
+     "at": 9.0,
+     "size": 200,
+     "tag": "< SEPARUH"
+    }
+   ]
+  },
+  {
+   "start": 11.94,
+   "end": 21.76,
+   "line": "Anak tak pernah diajar | bentuk karangan SPM. | Email ada format. | Report ada tajuk dan cadangan. | Review ada penilaian. | Story ada plot.",
+   "keys": [
+    "Email",
+    "Report",
+    "Review",
+    "Story",
+    "format."
+   ],
+   "label": "bentuk karangan",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Email",
+     "Report",
+     "Review"
+    ],
+    "char": "adik/berfikir",
+    "char_scale": 1.0
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 860,
+     "y": 1200,
+     "at": 20.26,
+     "size": 170,
+     "tag": "STORY"
+    }
+   ]
+  },
+  {
+   "start": 21.76,
+   "end": 32.02,
+   "line": "Anak tulis semua | ikut gaya bercakap, | pemeriksa tolak markah | setiap kali format salah. | Kalau dibiarkan, | kesilapan yang sama | berulang.",
+   "keys": [
+    "bercakap,",
+    "tolak",
+    "salah.",
+    "berulang."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/stres",
+      "x": 360,
+      "size": 380,
+      "at": 21.8
+     },
+     {
+      "char": "bapa/pening",
+      "x": 780,
+      "size": 330,
+      "at": 27.36
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 360,
+     "y": 380,
+     "at": 25.38,
+     "size": 160,
+     "tag": "MARKAH DITOLAK"
+    }
+   ]
+  },
+  {
+   "start": 32.02,
+   "end": 37.66,
+   "line": "120 SPM English Model Essays | susun ikut | 3 bahagian kertas SPM.",
+   "keys": [
+    "120",
+    "English",
+    "3",
+    "bahagian"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_parts.jpg",
+    "w": 900,
+    "max_h": 560,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Part 1",
+     35.78
+    ],
+    [
+     "Part 2",
+     36.0
+    ],
+    [
+     "Part 3",
+     36.3
+    ]
+   ],
+   "pills_y": 900
+  },
+  {
+   "start": 37.66,
+   "end": 46.64,
+   "line": "Setiap soalan | ada contoh jawapan lengkap, | struktur ditanda warna, | tips dan nota, | vocab enhancer, | siap audio.",
+   "keys": [
+    "contoh",
+    "jawapan",
+    "struktur",
+    "tips",
+    "vocab",
+    "audio"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_essay.jpg",
+    "w": 620,
+    "max_h": 820,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Struktur",
+     40.24
+    ],
+    [
+     "Tips",
+     41.82
+    ],
+    [
+     "Vocab",
+     43.08
+    ],
+    [
+     "Audio",
+     44.9
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 46.64,
+   "end": 55.02,
+   "line": "Anak cuma baca satu contoh, | faham struktur, | tulis semula. | Kemahiran bercakap dia | tak hilang. | Cuma sekarang, | dia tahu cara tulis.",
+   "keys": [
+    "satu",
+    "contoh,",
+    "struktur,",
+    "tulis"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/peluk_anak",
+      "x": 540,
+      "size": 440,
+      "at": 46.7
+     }
+    ]
+   }
+  },
+  {
+   "start": 55.02,
+   "end": 56.76,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

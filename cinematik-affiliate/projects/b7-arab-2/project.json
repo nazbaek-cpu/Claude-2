@@ -1,1 +1,287 @@
-{"type": "arab", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, vocab enhancer, tips, e-book, Kertas Model, Paper 2.",
+ "cta": {
+  "at": 65.1,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.52,
+   "line": "Pernah tak? | Kau tahu jawapan dia, | boleh terangkan | dekat kawan.",
+   "keys": [
+    "tahu",
+    "terangkan"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sapa",
+      "x": 360,
+      "size": 380,
+      "at": 0.1,
+      "char_at": [
+       [
+        1.98,
+        "adik/idea"
+       ]
+      ]
+     },
+     {
+      "char": "adikbiru/setuju",
+      "x": 780,
+      "size": 360,
+      "at": 1.98
+     }
+    ]
+   }
+  },
+  {
+   "start": 3.52,
+   "end": 7.9,
+   "line": "Tapi bila kena tulis | 150 patah perkataan, | terus blank.",
+   "keys": [
+    "150",
+    "blank."
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "adik/terkejut",
+    "char_at": [
+     [
+      6.94,
+      "adik/stres"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 1150,
+     "at": 6.94,
+     "size": 170,
+     "tag": "BLANK"
+    }
+   ]
+  },
+  {
+   "start": 7.9,
+   "end": 13.24,
+   "line": "Bukan sebab | English kau lemah. | Bercakap dan menulis | tu dua kemahiran lain.",
+   "keys": [
+    "Bukan",
+    "lemah.",
+    "dua",
+    "kemahiran"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SEBENARNYA",
+    "word": "2 KEMAHIRAN",
+    "size": 92,
+    "sub": "bercakap lain, menulis lain",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/berfikir",
+      "x": 380,
+      "size": 380,
+      "at": 8.0
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 800,
+     "y": 980,
+     "at": 11.16,
+     "size": 200,
+     "tag": "MENULIS"
+    }
+   ]
+  },
+  {
+   "start": 13.24,
+   "end": 24.56,
+   "line": "Bila bercakap, | ayat boleh lompat-lompat. | Bila menulis, | pemeriksa nak struktur. | Pendahuluan, isi, | huraian, penutup.",
+   "keys": [
+    "lompat-lompat.",
+    "struktur.",
+    "Pendahuluan,",
+    "penutup."
+   ],
+   "illus": {
+    "kind": "path",
+    "nodes": 4,
+    "char": "stickman/berlari",
+    "char_scale": 1.2
+   }
+  },
+  {
+   "start": 24.56,
+   "end": 41.86,
+   "line": "SPM bagi | bentuk soalan berbeza. | Email 80 patah perkataan. | Essay 125 hingga 150. | Report, review, article, story, | 200 hingga 250. | Satu cara tulis untuk semua, | markah tercicir.",
+   "keys": [
+    "Email",
+    "Essay",
+    "Report,",
+    "200",
+    "250.",
+    "tercicir."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_parts.jpg",
+    "w": 900,
+    "max_h": 560,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Email 80",
+     28.86
+    ],
+    [
+     "Essay 150",
+     31.18
+    ],
+    [
+     "Part 3: 250",
+     36.32
+    ]
+   ],
+   "pills_y": 900
+  },
+  {
+   "start": 41.86,
+   "end": 46.98,
+   "line": "120 SPM English Model Essays | tunjuk cara susun | untuk setiap bentuk.",
+   "keys": [
+    "120",
+    "English",
+    "susun"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 46.98,
+   "end": 54.92,
+   "line": "Setiap contoh ada label | introduction, body, conclusion, | tip langkah demi langkah | dan senarai vocab.",
+   "keys": [
+    "introduction,",
+    "body,",
+    "conclusion,",
+    "tip",
+    "vocab"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_essay.jpg",
+    "w": 620,
+    "max_h": 820,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Intro",
+     48.5
+    ],
+    [
+     "Body",
+     49.34
+    ],
+    [
+     "Conclusion",
+     49.98
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 54.92,
+   "end": 62.12,
+   "line": "Tambah 30 lagi contoh | dalam e-book percuma, | dan 2 set Kertas Model | Paper 2.",
+   "keys": [
+    "30",
+    "e-book",
+    "percuma,",
+    "2",
+    "Kertas",
+    "Model"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_report.jpg",
+    "w": 600,
+    "max_h": 800,
+    "y": 620
+   },
+   "pills": [
+    [
+     "+30 e-book",
+     55.68
+    ],
+    [
+     "2 Kertas Model",
+     58.34
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 62.12,
+   "end": 65.1,
+   "line": "Idea kau dah ada. | Sekarang | tinggal susun.",
+   "keys": [
+    "ada.",
+    "susun."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/dua_thumbs",
+    "words": [
+     [
+      "Tinggal susun",
+      64.66
+     ]
+    ]
+   }
+  },
+  {
+   "start": 65.1,
+   "end": 66.69,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

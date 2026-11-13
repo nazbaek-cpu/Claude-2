@@ -1,1 +1,317 @@
-{"type": "arab", "source": "input/vo.mp4", "whisper_prompt": "SPM, Karangan Contoh dan Teknik Penulisan, 120 SPM English Model Essays, BTP Infografik Sejarah, Matematik SPM Final Boost, KBAT, essay, karangan, Bahagian A, Bahagian B, e-buku, Nilam.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, surat rasmi, laporan, ucapan, rencana, 18 tema, DSKP, KBAT, e-buku.",
+ "cta": {
+  "at": 53.86,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.3,
+   "line": "\"Anak saya ni, | kalau bercakap, petah. | Tapi markah karangan BM dia, | tak pernah | lepas separuh.\"",
+   "keys": [
+    "petah.",
+    "tak",
+    "pernah",
+    "separuh.\""
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/senyum",
+      "x": 300,
+      "size": 330,
+      "at": 0.1,
+      "char_at": [
+       [
+        2.74,
+        "bapa/pening"
+       ]
+      ]
+     },
+     {
+      "char": "adik/sapa",
+      "x": 790,
+      "size": 360,
+      "at": 0.6,
+      "char_at": [
+       [
+        3.34,
+        "adik/sedih"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 790,
+     "y": 330,
+     "at": 4.76,
+     "size": 160,
+     "tag": "< SEPARUH"
+    }
+   ]
+  },
+  {
+   "start": 6.3,
+   "end": 12.52,
+   "line": "Mak ayah, | pernah rasa macam ni? | Anak tahu apa nak cakap, | tapi bila tulis, | idea tersekat.",
+   "keys": [
+    "cakap,",
+    "tulis,",
+    "tersekat."
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "adik/berfikir",
+    "char_at": [
+     [
+      11.38,
+      "adik/stres"
+     ]
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 1150,
+     "at": 10.82,
+     "size": 170,
+     "tag": "IDEA TERSEKAT"
+    }
+   ]
+  },
+  {
+   "start": 12.52,
+   "end": 17.24,
+   "line": "Isi ada, | tapi tak berhurai. | Ayat ada, | tapi macam bercakap.",
+   "keys": [
+    "tak",
+    "berhurai.",
+    "bercakap."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "MASALAHNYA",
+    "word": "TAK BERHURAI",
+    "size": 84,
+    "sub": "ayat macam bercakap",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sedih",
+      "x": 380,
+      "size": 380,
+      "at": 12.6
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 800,
+     "y": 980,
+     "at": 14.12,
+     "size": 200,
+     "tag": "TAK BERHURAI"
+    }
+   ]
+  },
+  {
+   "start": 17.24,
+   "end": 25.22,
+   "line": "Format pula banyak. | Surat rasmi, laporan, | ucapan, rencana. | Satu format salah, | markah terus jatuh.",
+   "keys": [
+    "Surat",
+    "laporan,",
+    "ucapan,",
+    "rencana.",
+    "jatuh."
+   ],
+   "label": "format",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Surat rasmi",
+     "Laporan",
+     "Ucapan"
+    ],
+    "char": "stickman/pening",
+    "char_scale": 1.0
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 860,
+     "y": 1200,
+     "at": 24.48,
+     "size": 170,
+     "tag": "MARKAH JATUH"
+    }
+   ]
+  },
+  {
+   "start": 25.22,
+   "end": 32.18,
+   "line": "Kertas 1, | 2 jam, 100 markah, | 70 daripadanya | dari satu karangan je.",
+   "keys": [
+    "2",
+    "jam,",
+    "100",
+    "70"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_markah.jpg",
+    "w": 900,
+    "max_h": 320,
+    "y": 560
+   },
+   "pills": [
+    [
+     "A: 30 + B: 70 = 100 markah",
+     28.76
+    ]
+   ],
+   "pills_y": 860
+  },
+  {
+   "start": 32.18,
+   "end": 36.88,
+   "line": "Karangan Contoh dan Teknik Penulisan | tunjuk anak | cara orang markah tinggi | menulis.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Teknik",
+    "Penulisan",
+    "tinggi"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 36.88,
+   "end": 42.84,
+   "line": "Setiap contoh | ada analisis komplit, | tip penulis, | ungkapan menarik | dan unsur KBAT.",
+   "keys": [
+    "analisis",
+    "komplit,",
+    "tip",
+    "ungkapan",
+    "KBAT."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "pills": [
+    [
+     "Analisis",
+     38.12
+    ],
+    [
+     "Tip",
+     39.24
+    ],
+    [
+     "Ungkapan",
+     40.22
+    ],
+    [
+     "KBAT",
+     41.3
+    ]
+   ],
+   "pills_y": 860
+  },
+  {
+   "start": 42.84,
+   "end": 49.78,
+   "line": "Bahagian A dan B, | 18 tema ikut DSKP. | Siap e-buku | 20 karangan percuma | dengan video tip.",
+   "keys": [
+    "18",
+    "tema",
+    "e-buku",
+    "20",
+    "percuma"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "18 tema",
+     44.62
+    ],
+    [
+     "E-buku 20",
+     47.24
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 49.78,
+   "end": 53.86,
+   "line": "Anak tak perlu | tukar cara dia bercakap. | Dia cuma perlu tahu | cara menulis.",
+   "keys": [
+    "menulis."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/peluk_anak",
+      "x": 540,
+      "size": 440,
+      "at": 49.8
+     }
+    ]
+   }
+  },
+  {
+   "start": 53.86,
+   "end": 55.64,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

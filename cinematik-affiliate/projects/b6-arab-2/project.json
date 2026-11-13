@@ -1,1 +1,275 @@
-{"type": "arab", "source": "input/vo.mp4", "whisper_prompt": "SPM, Karangan Contoh dan Teknik Penulisan, 120 SPM English Model Essays, BTP Infografik Sejarah, Matematik SPM Final Boost, KBAT, essay, karangan, Bahagian A, Bahagian B, e-buku, Nilam.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahasa Melayu SPM, Kertas 1, Bahagian A, Bahagian B, surat rasmi, laporan, ucapan, rencana, 18 tema, DSKP, KBAT, e-buku.",
+ "cta": {
+  "at": 40.18,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.34,
+   "line": "Kau pandai berhujah, | tapi karangan BM kau | pendek.",
+   "keys": [
+    "berhujah,",
+    "pendek."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/tunjuk_atas",
+      "x": 540,
+      "size": 420,
+      "at": 0.1,
+      "char_at": [
+       [
+        2.7,
+        "stickman/terkejut"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/angkat_tangan.png",
+     "x": 230,
+     "y": 400,
+     "at": 0.44,
+     "size": 170,
+     "tag": "PETAH"
+    },
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 850,
+     "y": 400,
+     "at": 2.7,
+     "size": 170,
+     "tag": "PENDEK"
+    }
+   ]
+  },
+  {
+   "start": 3.34,
+   "end": 7.9,
+   "line": "Masalah kau | bukan idea, | masalah kau | tak tahu susun.",
+   "keys": [
+    "bukan",
+    "idea,",
+    "susun."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "MASALAHNYA",
+    "word": "TAK TAHU SUSUN",
+    "size": 80,
+    "sub": "bukan tak ada idea",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/berfikir",
+      "x": 380,
+      "size": 380,
+      "at": 3.4
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 800,
+     "y": 980,
+     "at": 6.84,
+     "size": 200,
+     "tag": "SUSUN"
+    }
+   ]
+  },
+  {
+   "start": 7.9,
+   "end": 11.52,
+   "line": "Pendahuluan, isi, | huraian, contoh, | penutup.",
+   "keys": [
+    "Pendahuluan,",
+    "isi,",
+    "huraian,",
+    "contoh,",
+    "penutup."
+   ],
+   "illus": {
+    "kind": "path",
+    "nodes": 5,
+    "char": "stickman/berlari",
+    "char_scale": 1.2
+   }
+  },
+  {
+   "start": 11.52,
+   "end": 16.1,
+   "line": "Lepas tu kena ikut format, | surat, laporan, | ucapan, rencana.",
+   "keys": [
+    "format,",
+    "surat,",
+    "laporan,",
+    "ucapan,",
+    "rencana."
+   ],
+   "label": "format",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Surat",
+     "Laporan",
+     "Ucapan"
+    ],
+    "char": "stickman/pening",
+    "char_scale": 1.0
+   }
+  },
+  {
+   "start": 16.1,
+   "end": 21.34,
+   "line": "Bahagian B je | 70 markah, | 350 hingga 500 | patah perkataan.",
+   "keys": [
+    "70",
+    "350",
+    "500"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_markah.jpg",
+    "w": 900,
+    "max_h": 320,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Bahagian B: 70 markah",
+     17.44
+    ]
+   ],
+   "pills_y": 860
+  },
+  {
+   "start": 21.34,
+   "end": 26.94,
+   "line": "Karangan Contoh dan Teknik Penulisan. | Contoh karangan | untuk 18 tema | ikut DSKP,",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Teknik",
+    "Penulisan.",
+    "18"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 26.94,
+   "end": 30.78,
+   "line": "setiap satu | siap analisis | kenapa ia dapat | markah tinggi.",
+   "keys": [
+    "analisis",
+    "markah",
+    "tinggi."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   }
+  },
+  {
+   "start": 30.78,
+   "end": 37.58,
+   "line": "Tip, nota, petua | dan ungkapan | yang boleh terus guna. | Plus e-buku | 20 karangan percuma.",
+   "keys": [
+    "Tip,",
+    "nota,",
+    "petua",
+    "e-buku",
+    "20"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Tip",
+     30.78
+    ],
+    [
+     "Nota",
+     31.5
+    ],
+    [
+     "Petua",
+     32.16
+    ],
+    [
+     "E-buku 20",
+     35.82
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 37.58,
+   "end": 40.18,
+   "line": "Idea kau dah ada, | sekarang | tinggal susun.",
+   "keys": [
+    "ada,",
+    "susun."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/dua_thumbs",
+    "words": [
+     [
+      "Tinggal susun",
+      39.72
+     ]
+    ]
+   }
+  },
+  {
+   "start": 40.18,
+   "end": 41.8,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

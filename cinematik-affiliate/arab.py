@@ -37,6 +37,14 @@ def ramp(t, a, d): return min(max((t - a) / d, 0.0), 1.0) if d > 0 else float(t 
 # ---------- paper ----------
 def background(kind, image=None):
     """plain paper (putih / krim), or a picture (e.g. a green chalkboard) cover-fitted to 9:16"""
+    if kind == "dots" and not image:   # white page with a fine grey dot grid (same as template motion), thin frame
+        im = Image.new("RGB", (W, H), (254, 254, 253)); d = ImageDraw.Draw(im); g = 28; r = 2.3
+        for y in np.arange(g / 2, H, g):
+            for x in np.arange(g / 2, W, g): d.ellipse((x - r, y - r, x + r, y + r), fill=(176, 176, 178))
+        im = im.convert("RGBA"); d = ImageDraw.Draw(im)
+        d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(214, 214, 220), width=2)
+        for y in (26, H - 27): d.ellipse((W / 2 - 7, y - 7, W / 2 + 7, y + 7), fill=ORANGE)
+        return im
     if kind == "addmath" and not image:   # "background addmath": the light solid-wood boards the user picked
         import explainer
         w = explainer.solid_wood()

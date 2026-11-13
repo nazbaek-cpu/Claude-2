@@ -34,6 +34,8 @@ from arab import SANS, card_box, ease, put, ramp, shadowed
 
 W, H, FPS = 1080, 1920, 30
 INK = (28, 28, 34)
+TXT = [INK]          # sentence / label colour: dark on paper, white on a dark picture page
+DARKPAGE = [False]
 PRJ = [""]
 ACC = [(226, 32, 138), (255, 178, 64)]
 
@@ -114,7 +116,7 @@ def draw_text(base, sc, words, t, alpha):
     for line in sc["lines"]:
         row = []
         for wd, big in parse(line):
-            g = glyph(wd, big, INK)
+            g = glyph(wd, big, TXT[0])
             if row and sum(r[2][2] for r in row) + gap * len(row) + g[2] > W - 2 * x0:
                 rows.append(row); row = []
             row.append((wd, big, g))
@@ -173,7 +175,7 @@ def tile(img, label):
         s = 210; im = card_box(s, s, 44); pic = picture(img, s - 40, s - 40, "fit")
         im.paste(pic, ((s - pic.width) // 2, (s - pic.height) // 2))
         sh = shadowed(im, 14, 70, 8); out = Image.new("RGBA", (sh.width, sh.height + 70), (0, 0, 0, 0)); out.alpha_composite(sh)
-        ImageDraw.Draw(out).text((sh.width / 2, sh.height + 20), label, font=SANS(36, 700), fill=INK, anchor="mm")
+        ImageDraw.Draw(out).text((sh.width / 2, sh.height + 20), label, font=SANS(36, 700), fill=TXT[0], anchor="mm")
         _img[key] = out
     return _img[key]
 
@@ -223,6 +225,7 @@ def figure_img(path, size):
     if key not in _img:
         im = Image.open(arab.asset(path + ".png")).convert("RGBA"); k = size / im.height
         im = im.resize((max(1, int(im.width * k)), size), Image.LANCZOS)
+        if DARKPAGE[0] and path.startswith("stickman/"): im = arab.outlined(im, max(5, size // 60))
         out = Image.new("RGBA", (im.width + 60, size + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(out)
         sh = Image.new("RGBA", out.size, (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse((out.width / 2 - im.width * 0.38, size + 4, out.width / 2 + im.width * 0.38, size + 30), fill=(0, 0, 0, 45))
         out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6))); out.alpha_composite(im, (30, 10)); _img[key] = out
@@ -355,7 +358,10 @@ def main():
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words; WORDS[0] = words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    page_im = page(cfg.get("dots_gap", 28))
+    if cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
+        page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
+    else:
+        page_im = page(cfg.get("dots_gap", 28))
     only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page_im, words, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols

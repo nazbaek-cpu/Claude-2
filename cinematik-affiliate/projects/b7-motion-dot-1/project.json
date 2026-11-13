@@ -1,1 +1,241 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  232,
+  96,
+  34
+ ],
+ "accent2": [
+  250,
+  170,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, Kertas Model, Paper 2, dewan, struktur.",
+ "cta": {
+  "at": 39.88,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.16,
+   "lines": [
+    "Jam dalam dewan tunjuk",
+    "*15 minit* lagi.",
+    "Kau baru habis *Part 2.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "x": 760,
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/jam.png",
+       "label": "15 minit",
+       "at": 1.42
+      }
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 2.6,
+     "size": 420,
+     "x": 330,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 4.16,
+   "end": 8.7,
+   "lines": [
+    "*Part 3,* 250 patah perkataan,",
+    "*belum mula* pun."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menangis",
+     "at": 7.44,
+     "size": 500,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 8.7,
+   "end": 19.26,
+   "lines": [
+    "Calon yang *tak pernah*",
+    "*latih ikut masa.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Kertas 2",
+     "at": 12.0,
+     "y": 1220,
+     "rows": [
+      [
+       "1 jam 30 minit",
+       12.06
+      ],
+      [
+       "3 soalan",
+       13.34
+      ],
+      [
+       "60 markah",
+       14.36
+      ]
+     ]
+    },
+    {
+     "kind": "checklist",
+     "title": "Tak biasa",
+     "at": 15.5,
+     "y": 1620,
+     "bad": true,
+     "rows": [
+      [
+       "Part 1 je makan 30 minit",
+       17.84
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19.26,
+   "end": 24.96,
+   "lines": [
+    "Penyelesaiannya *bukan tulis laju.*",
+    "Tapi dah *tahu struktur*",
+    "sebelum masuk dewan."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/tunjuk_atas",
+     "at": 21.8,
+     "size": 480,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 24.96,
+   "end": 31.32,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays:",
+    "rangka sama setiap bentuk."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 25.0,
+     "step": 1,
+     "y": 1360,
+     "x": 360
+    },
+    {
+     "kind": "card",
+     "img": "en_essay.jpg",
+     "at": 29.44,
+     "w": 380,
+     "max_h": 520,
+     "y": 1380,
+     "x": 810
+    }
+   ]
+  },
+  {
+   "start": 31.32,
+   "end": 36.68,
+   "lines": [
+    "Siap *2 set Kertas Model*",
+    "Paper 2, latih",
+    "*ikut masa.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "gap": 340,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/peperiksaan.png",
+       "label": "Set 1",
+       "at": 31.96
+      },
+      {
+       "img": "icons/peperiksaan.png",
+       "label": "Set 2",
+       "at": 32.3
+      },
+      {
+       "img": "mat/jam.png",
+       "label": "Ikut masa",
+       "at": 34.98
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 36.68,
+   "end": 39.88,
+   "lines": [
+    "Bila struktur dah dalam kepala,",
+    "*masa pun cukup.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 36.7,
+     "size": 480,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 39.88,
+   "end": 41.48,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 39.9,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 40.0,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

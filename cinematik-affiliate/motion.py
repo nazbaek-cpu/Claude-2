@@ -290,7 +290,8 @@ def cta(base, cfg, t):
     if not c or t < c["at"]: return
     q = ramp(t, c["at"], 0.4); f = SANS(48, 800); txt = c.get("text", "Tekan link dekat bawah")
     w = int(f.getlength(txt)) + 110; im = card_box(w, 110, 55, fill=ACC[0] + (255,)); d = ImageDraw.Draw(im)
-    d.text((w / 2, 55), txt, font=f, fill="white", anchor="mm")
+    lum = 0.299 * ACC[0][0] + 0.587 * ACC[0][1] + 0.114 * ACC[0][2]   # dark text on a light accent (yellow), white otherwise
+    d.text((w / 2, 55), txt, font=f, fill=INK if lum > 170 else "white", anchor="mm")
     put(base, shadowed(im, 16, 80, 8), W / 2, 1700 + math.sin(t * 5) * 6, min(1, q * 2), 0.7 + 0.3 * pop(q))
 
 

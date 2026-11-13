@@ -1,1 +1,207 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "SPM, Karangan Contoh dan Teknik Penulisan, 120 SPM English Model Essays, BTP Infografik Sejarah, Matematik SPM Final Boost, KBAT, essay, karangan, Bahagian A, Bahagian B, e-buku, Nilam.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  176,
+  60
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, karangan, pendahuluan, penutup, analisis.",
+ "cta": {
+  "at": 23.94,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.66,
+   "lines": [
+    "Mak ayah, pernah tak",
+    "anak *berhujah* dengan kita",
+    "sejam, *tak kalah* langsung?"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "at": 0.3,
+     "size": 400,
+     "x": 320,
+     "y": 1300
+    },
+    {
+     "kind": "char",
+     "char": "adik/raikan",
+     "at": 1.58,
+     "size": 420,
+     "x": 780,
+     "y": 1320
+    }
+   ]
+  },
+  {
+   "start": 4.66,
+   "end": 11.1,
+   "lines": [
+    "Tapi bila suruh tulis",
+    "karangan *350 patah* perkataan,",
+    "duduk depan kertas,",
+    "*kosong.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "adik/sedih",
+     "at": 4.7,
+     "size": 440,
+     "x": 360,
+     "y": 1400
+    },
+    {
+     "kind": "icons",
+     "x": 800,
+     "y": 1200,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "Kertas kosong",
+       "at": 9.48
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 11.1,
+   "end": 16.36,
+   "lines": [
+    "Dia bukan *tak ada idea,*",
+    "dia cuma tak tahu",
+    "macam mana nak *susun.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Idea ada, tapi...",
+     "at": 11.2,
+     "y": 1380,
+     "bad": true,
+     "rows": [
+      [
+       "Tak tahu susun",
+       14.44
+      ],
+      [
+       "Tak jadi karangan",
+       15.28
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "adik/berfikir",
+     "at": 11.3,
+     "size": 300,
+     "x": 880,
+     "y": 900
+    }
+   ]
+  },
+  {
+   "start": 16.36,
+   "end": 19.8,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan",
+    "tunjuk cara *susun,*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 16.4,
+     "step": 1,
+     "y": 1370
+    }
+   ]
+  },
+  {
+   "start": 19.8,
+   "end": 23.94,
+   "lines": [
+    "dari *pendahuluan*",
+    "sampai *penutup,*",
+    "dengan *analisis* setiap karangan."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cara susun",
+     "at": 19.85,
+     "y": 1240,
+     "rows": [
+      [
+       "Pendahuluan",
+       20.12
+      ],
+      [
+       "Isi & huraian",
+       20.6
+      ],
+      [
+       "Penutup",
+       21.08
+      ],
+      [
+       "Analisis setiap karangan",
+       22.18
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "adik/gembira",
+     "at": 22.4,
+     "size": 300,
+     "x": 880,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 23.94,
+   "end": 25.63,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 24.0,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 24.1,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

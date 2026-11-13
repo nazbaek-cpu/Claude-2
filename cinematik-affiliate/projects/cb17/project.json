@@ -1,1 +1,85 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "stoking, stokin, betis panjang, jahitan kemas, muslimah, 3 pasang",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.5,
+   "end": 5.82,
+   "title": {
+    "kicker": "STOKIN BERKUALITI",
+    "lines": [
+     "3 pasang,",
+     "satu harga."
+    ],
+    "accent": [
+     "3",
+     "pasang,"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 5.85,
+   "end": 12.48,
+   "kicker": "DI PASAR RAYA",
+   "head": "Satu pasang je."
+  },
+  {
+   "start": 12.51,
+   "end": 15.52,
+   "kicker": "DEKAT SINI",
+   "head": "Dapat 3 pasang.",
+   "pills": [
+    [
+     "3 pasang",
+     14.21
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 15.55,
+   "end": 18.1,
+   "kicker": "PANJANG",
+   "head": "Sampai betis."
+  },
+  {
+   "start": 18.13,
+   "end": 22.26,
+   "kicker": "KUALITI",
+   "head": "Puas hati."
+  },
+  {
+   "start": 22.29,
+   "end": 26.18,
+   "kicker": "MATERIAL SELESA",
+   "head": "Pakai lama pun.",
+   "pills": [
+    [
+     "Kain selesa",
+     22.5
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 26.21,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

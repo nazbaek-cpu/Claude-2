@@ -1,1 +1,263 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  176,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, grammar, vocab enhancer, audio.",
+ "cta": {
+  "at": 44.46,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.64,
+   "lines": [
+    "Kau tulis essay English",
+    "macam ni.",
+    "Fikir dalam *BM,*",
+    "*terjemah* dalam kepala,",
+    "baru tulis."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 0.3,
+     "size": 460,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       3.1,
+       "stickman/pening"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.64,
+   "end": 9.44,
+   "lines": [
+    "Hasilnya?",
+    "\"I *very like* sports",
+    "because it can",
+    "*make healthy.\"*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "at": 5.7,
+     "size": 420,
+     "x": 380,
+     "y": 1440
+    },
+    {
+     "kind": "ban",
+     "x": 800,
+     "y": 1300,
+     "size": 260,
+     "at": 8.74
+    }
+   ]
+  },
+  {
+   "start": 9.44,
+   "end": 17.32,
+   "lines": [
+    "Ayat betul dalam BM,",
+    "tapi *pelik* dalam English.",
+    "Pemeriksa terus nampak."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Bila terjemah",
+     "at": 9.5,
+     "y": 1400,
+     "bad": true,
+     "rows": [
+      [
+       "Ayat pelik",
+       11.48
+      ],
+      [
+       "Grammar lari",
+       14.9
+      ],
+      [
+       "Markah bahasa jatuh",
+       15.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 17.32,
+   "end": 24.92,
+   "lines": [
+    "Lagi teruk, *masa habis,*",
+    "setiap ayat kena terjemah.",
+    "*1 jam 30 minit*",
+    "untuk 3 soalan, tak cukup."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/jam.png",
+       "label": "1 jam 30 min",
+       "at": 21.56
+      }
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/stres",
+     "at": 22.6,
+     "size": 360,
+     "x": 850,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 24.92,
+   "end": 29.12,
+   "lines": [
+    "Cara nak *berhenti terjemah?*",
+    "Biasakan otak dengan",
+    "*ayat English yang betul.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/tunjuk_atas",
+     "at": 25.0,
+     "size": 480,
+     "x": 540,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 29.12,
+   "end": 34.58,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays:",
+    "contoh setiap bentuk soalan."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 29.2,
+     "step": 1,
+     "y": 1360
+    }
+   ]
+  },
+  {
+   "start": 34.58,
+   "end": 40.02,
+   "lines": [
+    "Ayat penting *ditanda,*",
+    "*vocab enhancer,*",
+    "siap *audio.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_essay.jpg",
+     "at": 34.6,
+     "w": 560,
+     "max_h": 640,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 40.02,
+   "end": 44.46,
+   "lines": [
+    "*Baca, dengar, ulang,*",
+    "lama-lama kau terus",
+    "*fikir dalam English.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Setiap hari",
+     "at": 40.05,
+     "y": 1300,
+     "rows": [
+      [
+       "Baca",
+       40.02
+      ],
+      [
+       "Dengar",
+       40.82
+      ],
+      [
+       "Ulang",
+       41.5
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 43.36,
+     "size": 320,
+     "x": 860,
+     "y": 1660
+    }
+   ]
+  },
+  {
+   "start": 44.46,
+   "end": 46.11,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 44.5,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 44.6,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

@@ -1,1 +1,89 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": false,
+ "whisper_prompt": "stoking, stokin, betis panjang, jahitan kemas, muslimah, 3 pasang",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 5.85,
+   "title": {
+    "kicker": "STOKING MURAH",
+    "lines": [
+     "Siap",
+     "3 pasang."
+    ],
+    "accent": [
+     "3",
+     "pasang."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 5.88,
+   "end": 10.07,
+   "kicker": "SAMPAI KE",
+   "head": "Betis panjang."
+  },
+  {
+   "start": 10.1,
+   "end": 14.15,
+   "kicker": "KUALITI",
+   "head": "Jahitan kemas.",
+   "pills": [
+    [
+     "Jahitan kemas",
+     13.12
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 14.18,
+   "end": 16.11,
+   "kicker": "PAKAI LAMA",
+   "head": "Tetap selesa."
+  },
+  {
+   "start": 16.14,
+   "end": 18.79,
+   "kicker": "BOLEH PAKAI",
+   "head": "Hari-hari."
+  },
+  {
+   "start": 18.82,
+   "end": 23.25,
+   "kicker": "SESUAI UNTUK",
+   "head": "Muslimah & kerja.",
+   "pills": [
+    [
+     "Lelaki",
+     21.68
+    ],
+    [
+     "Wanita",
+     22.5
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 23.28,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

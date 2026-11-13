@@ -1,1 +1,125 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": true, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP Infografik Sejarah, buku teks padat, SPM 2027, mind map, infografik, tarikh, peristiwa",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.29,
+   "title": {
+    "kicker": "CALON SPM 2027",
+    "lines": [
+     "Hafal Sejarah",
+     "masa singkat?"
+    ],
+    "accent": [
+     "singkat?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 7.32,
+   "end": 15.21,
+   "kicker": "MULA SEKARANG",
+   "head": "Buat mind map."
+  },
+  {
+   "start": 15.24,
+   "end": 21.19,
+   "kicker": "SENANG INGAT",
+   "head": "Peristiwa & tarikh.",
+   "pills": [
+    [
+     "Peristiwa",
+     17.38
+    ],
+    [
+     "Tarikh",
+     18.5
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 21.22,
+   "end": 24.69,
+   "kicker": "ADA SATU SOLUSI",
+   "head": "Tak payah buat."
+  },
+  {
+   "start": 24.72,
+   "end": 29.75,
+   "kicker": "DARI",
+   "head": "Buku teks padat."
+  },
+  {
+   "start": 29.78,
+   "end": 34.77,
+   "kicker": "ISI PENTING",
+   "head": "Dalam infografik."
+  },
+  {
+   "start": 34.8,
+   "end": 38.83,
+   "kicker": "NOTEPAD KECIL",
+   "head": "Senang bawa."
+  },
+  {
+   "start": 38.86,
+   "end": 42.97,
+   "kicker": "SIAP ADA",
+   "head": "Tarikh & peristiwa.",
+   "pills": [
+    [
+     "Tarikh penting",
+     38.86
+    ],
+    [
+     "Peristiwa penting",
+     41.82
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 43.0,
+   "end": 49.61,
+   "kicker": "IBU AYAH",
+   "head": "Anak fokus topik."
+  },
+  {
+   "start": 49.64,
+   "end": 52.43,
+   "kicker": "ISI PENTING",
+   "head": "Dari buku teks."
+  },
+  {
+   "start": 52.46,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

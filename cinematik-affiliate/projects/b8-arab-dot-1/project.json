@@ -1,1 +1,239 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "dots", "whisper_prompt": "120 SPM English Model Essays, Karangan Contoh dan Teknik Penulisan, ChatGPT, Nowadays, email, essay, Bahagian A, bahan rangsangan, karangan berformat, surat rasmi, laporan, ucapan.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Bahagian A, bahan rangsangan, graf, petikan, e-buku.",
+ "cta": {
+  "at": 39.94,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.14,
+   "line": "Bahagian A, | soalan bagi bahan rangsangan. | Graf, petikan, | maklumat.",
+   "keys": [
+    "Bahagian",
+    "A,",
+    "bahan",
+    "rangsangan."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_markah.jpg",
+    "w": 860,
+    "max_h": 300,
+    "y": 470
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/berfikir",
+      "x": 540,
+      "size": 380,
+      "at": 0.3
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 5.14,
+   "end": 10.82,
+   "line": "Ramai calon | buat benda yang sama. | Salin isi dari bahan, | susun jadi ayat, siap.",
+   "keys": [
+    "Salin",
+    "isi",
+    "siap."
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "stickman/menulis"
+   },
+   "icons": [
+    {
+     "img": "icons/klip_kertas.png",
+     "x": 860,
+     "y": 1150,
+     "at": 7.4,
+     "size": 170,
+     "tag": "SALIN"
+    }
+   ]
+  },
+  {
+   "start": 10.82,
+   "end": 18.34,
+   "line": "Nampak macam dah jawab, | tapi pemeriksa nak | lebih dari salin. | Isi kena dihuraikan, | ada contoh, ada kesan.",
+   "keys": [
+    "lebih",
+    "salin.",
+    "dihuraikan,",
+    "contoh,",
+    "kesan."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PEMERIKSA NAK",
+    "word": "HURAIAN",
+    "size": 100,
+    "sub": "contoh dan kesan",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/berfikir",
+      "x": 380,
+      "size": 330,
+      "at": 12.9
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 800,
+     "y": 980,
+     "at": 14.32,
+     "size": 200,
+     "tag": "SALIN JE"
+    }
+   ]
+  },
+  {
+   "start": 18.34,
+   "end": 25.24,
+   "line": "Kalau sekadar salin, | karangan jadi senarai, | bukan karangan. | Bahagian A, 30 markah, | wajib jawab.",
+   "keys": [
+    "senarai,",
+    "bukan",
+    "30",
+    "wajib"
+   ],
+   "label": "bahagian A",
+   "label_y": 330,
+   "illus": {
+    "kind": "books",
+    "labels": [
+     "Isi 1",
+     "Isi 2",
+     "Isi 3"
+    ],
+    "char": "adik/stres",
+    "char_scale": 1.0
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 860,
+     "y": 1200,
+     "at": 22.34,
+     "size": 170,
+     "tag": "30 MARKAH"
+    }
+   ]
+  },
+  {
+   "start": 25.24,
+   "end": 31.3,
+   "line": "Karangan Contoh dan Teknik Penulisan | tunjuk cara olah | bahan rangsangan | jadi karangan berhurai.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "olah",
+    "berhurai."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 31.3,
+   "end": 34.54,
+   "line": "Siap analisis | kenapa contoh tu | dapat markah tinggi.",
+   "keys": [
+    "analisis",
+    "markah",
+    "tinggi."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   }
+  },
+  {
+   "start": 34.54,
+   "end": 38.0,
+   "line": "Tambah e-buku percuma, | 10 karangan | bahan rangsangan.",
+   "keys": [
+    "e-buku",
+    "percuma,",
+    "10"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "E-buku: 10 bahan rangsangan",
+     36.08
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 38.0,
+   "end": 39.94,
+   "line": "Jangan salin. | Olah.",
+   "keys": [
+    "Jangan",
+    "Olah."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/dua_thumbs",
+    "words": [
+     [
+      "Olah",
+      39.22
+     ]
+    ]
+   }
+  },
+  {
+   "start": 39.94,
+   "end": 41.56,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

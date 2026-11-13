@@ -1,1 +1,270 @@
-{"type": "arab", "source": "input/vo.mp4", "bg": "dots", "whisper_prompt": "120 SPM English Model Essays, Karangan Contoh dan Teknik Penulisan, ChatGPT, Nowadays, email, essay, Bahagian A, bahan rangsangan, karangan berformat, surat rasmi, laporan, ucapan.", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "whisper_prompt": "120 SPM English Model Essays, Nowadays, In my opinion, As we all know, introduction, email, essay, report, review, article, story.",
+ "cta": {
+  "at": 41.34,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.88,
+   "line": "\"Nowadays, | technology is very important | in our life.\"",
+   "keys": [
+    "\"Nowadays,",
+    "important"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/menulis",
+      "x": 540,
+      "size": 420,
+      "at": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "start": 3.88,
+   "end": 10.24,
+   "line": "Kalau essay kau | mula macam ni, | kau tak seorang. | Separuh dewan SPM | tulis ayat pembuka yang sama.",
+   "keys": [
+    "tak",
+    "seorang.",
+    "sama."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/menulis",
+      "x": 220,
+      "size": 300,
+      "at": 4.0
+     },
+     {
+      "char": "stickman/menulis",
+      "x": 540,
+      "size": 300,
+      "at": 6.98
+     },
+     {
+      "char": "stickman/menulis",
+      "x": 860,
+      "size": 300,
+      "at": 7.6
+     }
+    ]
+   }
+  },
+  {
+   "start": 10.24,
+   "end": 13.94,
+   "line": "\"Nowadays.\" | \"In my opinion.\" | \"As we all know.\"",
+   "keys": [
+    "\"Nowadays.\"",
+    "\"In",
+    "opinion.\"",
+    "\"As",
+    "know.\""
+   ],
+   "card": {
+    "kind": "key",
+    "label": "AYAT KLISE",
+    "word": "NOWADAYS...",
+    "size": 92,
+    "sub": "in my opinion, as we all know",
+    "y": 400
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/menguap",
+      "x": 540,
+      "size": 360,
+      "at": 10.3
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 13.94,
+   "end": 19.9,
+   "line": "Pemeriksa dah baca | ayat ni beratus kali. | Perenggan pertama kau | terus nampak sama | macam orang lain.",
+   "keys": [
+    "beratus",
+    "kali.",
+    "sama"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/menulis",
+      "x": 540,
+      "size": 360,
+      "at": 14.0,
+      "char_at": [
+       [
+        16.48,
+        "bapa/pening"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 420,
+     "at": 15.4,
+     "size": 160,
+     "tag": "SAMA"
+    }
+   ]
+  },
+  {
+   "start": 19.9,
+   "end": 22.72,
+   "line": "Masalahnya, | kau tak tahu | cara lain nak mula.",
+   "keys": [
+    "tak",
+    "tahu",
+    "mula."
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "stickman/berfikir"
+   }
+  },
+  {
+   "start": 22.72,
+   "end": 28.54,
+   "line": "120 SPM English Model Essays | tunjuk macam-macam cara | buka essay, | ikut jenis soalan.",
+   "keys": [
+    "120",
+    "English",
+    "buka",
+    "essay,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 660
+   }
+  },
+  {
+   "start": 28.54,
+   "end": 33.28,
+   "line": "Email, essay, | report, review, | article, story.",
+   "keys": [
+    "Email,",
+    "essay,",
+    "report,",
+    "review,",
+    "article,",
+    "story."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_parts.jpg",
+    "w": 900,
+    "max_h": 560,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Email",
+     28.54
+    ],
+    [
+     "Essay",
+     29.46
+    ],
+    [
+     "Part 3",
+     30.2
+    ]
+   ],
+   "pills_y": 900
+  },
+  {
+   "start": 33.28,
+   "end": 37.66,
+   "line": "Setiap introduction | ditanda, | siap tip apa nak tulis | dalam ayat pertama.",
+   "keys": [
+    "introduction",
+    "ditanda,",
+    "tip",
+    "pertama."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_essay.jpg",
+    "w": 620,
+    "max_h": 820,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Introduction",
+     33.92
+    ],
+    [
+     "Tip",
+     35.56
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 37.66,
+   "end": 41.34,
+   "line": "Mula lain dari yang lain, | pemeriksa terus baca | dengan serius.",
+   "keys": [
+    "lain",
+    "serius."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/dua_thumbs",
+    "words": [
+     [
+      "Lain dari yang lain",
+      38.9
+     ]
+    ]
+   }
+  },
+  {
+   "start": 41.34,
+   "end": 42.92,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

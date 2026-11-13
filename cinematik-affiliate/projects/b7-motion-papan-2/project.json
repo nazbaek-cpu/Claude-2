@@ -1,1 +1,253 @@
-{"type": "motion", "source": "input/vo.mp4", "whisper_prompt": "120 SPM English Model Essays, CEFR, essay, email, report, review, article, story, Part 1, Part 2, Part 3, vocab enhancer, tips, e-book, Kertas Model, Paper 2, Google Translate, grammar.", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  176,
+  60
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, Part 1, Part 2, Part 3, report, review, article, story.",
+ "cta": {
+  "at": 48.1,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 8.58,
+   "lines": [
+    "*Part 1,* email 80 patah perkataan.",
+    "Okey lagi.",
+    "*Part 2,* essay 150.",
+    "Boleh lah."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Kertas 2",
+     "at": 0.1,
+     "y": 1300,
+     "rows": [
+      [
+       "Part 1: Email",
+       3.02
+      ],
+      [
+       "Part 2: Essay",
+       7.7
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/ok",
+     "at": 3.0,
+     "size": 300,
+     "x": 860,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 8.58,
+   "end": 16.78,
+   "lines": [
+    "Tapi *Part 3?*",
+    "*200 hingga 250* patah perkataan.",
+    "Report, review, article",
+    "atau story."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "gap": 240,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/fail.png",
+       "label": "Report",
+       "at": 13.6
+      },
+      {
+       "img": "icons/markah_a.png",
+       "label": "Review",
+       "at": 14.56
+      },
+      {
+       "img": "icons/papan_tulis.png",
+       "label": "Article",
+       "at": 15.24
+      },
+      {
+       "img": "icons/rak_buku.png",
+       "label": "Story",
+       "at": 16.1
+      }
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 9.5,
+     "size": 300,
+     "x": 540,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 16.78,
+   "end": 21.76,
+   "lines": [
+    "Ramai calon pilih",
+    "yang *paling senang.*",
+    "Tapi tak tahu pun",
+    "*beza format* setiap satu."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 16.8,
+     "size": 480,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 21.76,
+   "end": 31.4,
+   "lines": [
+    "Setiap satu ada",
+    "*format sendiri.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Format Part 3",
+     "at": 21.8,
+     "y": 1080,
+     "rows": [
+      [
+       "Report: tajuk & cadangan",
+       21.76
+      ],
+      [
+       "Review: penilaian",
+       24.26
+      ],
+      [
+       "Story: plot",
+       26.24
+      ]
+     ]
+    },
+    {
+     "kind": "checklist",
+     "title": "Salah format",
+     "at": 27.7,
+     "y": 1520,
+     "bad": true,
+     "rows": [
+      [
+       "Markah hilang",
+       29.54
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 31.4,
+   "end": 37.16,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays:",
+    "contoh 4 bentuk Part 3."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 31.5,
+     "step": 1,
+     "y": 1360
+    }
+   ]
+  },
+  {
+   "start": 37.16,
+   "end": 44.34,
+   "lines": [
+    "Setiap contoh *ditanda,*",
+    "Introduction, Main, Conclusion,",
+    "siap *tip* setiap bahagian."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_report.jpg",
+     "at": 37.2,
+     "w": 520,
+     "max_h": 680,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 44.34,
+   "end": 48.1,
+   "lines": [
+    "Masuk dewan nanti,",
+    "pilih yang mana pun,",
+    "kau dah *tahu caranya.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 44.4,
+     "size": 480,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 48.1,
+   "end": 49.63,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 48.15,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 48.2,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

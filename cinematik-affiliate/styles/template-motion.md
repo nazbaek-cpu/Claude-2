@@ -8,6 +8,11 @@ corak sahaja. Semua grafik dilukis sendiri; tiada aset, nama atau jenama pencipt
 
 - **Latar:** kertas putih dengan grid titik kelabu halus (macam kertas dot grid pengguna), dua cahaya lembut warna
   aksen di bucu, lengkung cincin pucat di tepi, dan bintang empat bucu kecil yang berkelip.
+- **Latar biru tua neon:** `"theme": "neon"` (panggil "background biru tua, tulisan neon"). Halaman biru tua gradient
+  dengan grid titik biru samar, cahaya `accent` di bucu atas dan `accent2` di bucu bawah, bingkai nipis bercahaya.
+  Kata kunci jadi tiub neon: teras pucat dengan halo warna `accent`, dan berkelip-kelip masa menyala. Ayat kecil putih
+  dengan haze biru. Stickman dapat bingkai putih. Contoh: `projects/b9-motion-neon-1/` (cyan `[0, 229, 255]` + pink
+  `[255, 64, 200]`).
 - **Warna aksen** ikut buku: `accent` (utama) dan `accent2` (hujung gradient). Contoh Sirpuloh: magenta `[226, 32, 138]`
   ke kuning `[250, 186, 40]`.
 - **Tulisan:** Plus Jakarta Sans tebal. Ayat biasa kecil dan gelap; **kata kunci 2x lebih besar, gradient warna aksen

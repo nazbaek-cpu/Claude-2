@@ -1,0 +1,224 @@
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, KBAT, peribahasa, 18 tema, DSKP, kehendak soalan.",
+ "cta": {
+  "at": 34.66,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.02,
+   "lines": [
+    "Karangan *panjang,*",
+    "ayat *cantik,*",
+    "ada *peribahasa,*",
+    "ada unsur *KBAT,*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "at": 0.2,
+     "size": 520,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 5.02,
+   "end": 8.0,
+   "lines": [
+    "tapi markah",
+    "*tetap rendah.*",
+    "Kenapa?"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/kecewa",
+     "at": 5.1,
+     "size": 520,
+     "x": 540,
+     "y": 1380,
+     "char_at": [
+      [
+       7.16,
+       "stickman/berfikir"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 8.0,
+   "end": 10.12,
+   "lines": [
+    "Sebab dia jawab",
+    "*soalan lain.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 8.1,
+     "size": 520,
+     "x": 540,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 10.12,
+   "end": 16.5,
+   "lines": [
+    "Soalan minta *A,*",
+    "dia tulis *B.*"
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Terpesong dari soalan",
+     "at": 10.2,
+     "y": 1180,
+     "bad": true,
+     "rows": [
+      [
+       "Minta langkah, tulis kepentingan",
+       11.66
+      ],
+      [
+       "Minta ibu bapa, tulis kerajaan",
+       14.86
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 16.5,
+   "end": 21.94,
+   "lines": [
+    "Bila *terpesong,*",
+    "sebagus mana pun ayat,",
+    "isi *tak dikira.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/sedih",
+     "at": 16.6,
+     "size": 460,
+     "x": 400,
+     "y": 1380
+    },
+    {
+     "kind": "ban",
+     "at": 20.46,
+     "size": 260,
+     "x": 790,
+     "y": 1180
+    }
+   ]
+  },
+  {
+   "start": 21.94,
+   "end": 27.5,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan,",
+    "*18 tema* ikut DSKP."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 22.0,
+     "step": 1,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 27.5,
+   "end": 32.1,
+   "lines": [
+    "Setiap satu siap *analisis*",
+    "kenapa isi *tepat*",
+    "dengan soalan."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_tema1.jpg",
+     "at": 27.6,
+     "step": 2,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 32.1,
+   "end": 34.66,
+   "lines": [
+    "Baca *soalan* dulu,",
+    "baru *tulis.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/isyarat_bagus",
+     "at": 32.2,
+     "size": 540,
+     "x": 540,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 34.66,
+   "end": 36.28,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 34.7,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 34.8,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

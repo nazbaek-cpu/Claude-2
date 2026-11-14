@@ -481,6 +481,23 @@ def test_motion_frame_renders_with_wipe(tmp_path):
     assert motion.parse("yang *Add Maths* dia") == [("yang", False), ("Add", True), ("Maths", True), ("dia", False)]
 
 
+def test_motion_neon_theme_renders(tmp_path):
+    """template motion, neon theme: navy page, glowing key words (also mid-flicker) render at 1080x1920"""
+    import motion
+    motion.PRJ[0] = str(tmp_path); motion.arab.PRJ[0] = str(tmp_path)
+    motion.NEON[0] = True; motion.DARKPAGE[0] = True; motion._glyph.clear()
+    try:
+        pg = motion.neon_page()
+        assert max(pg.convert("RGB").getpixel((540, 900))) < 90          # dark navy, not the white paper
+        cfg = {"scenes": [{"start": 0.0, "end": 2.0, "lines": ["Karangan *panjang,*"],
+                           "items": [{"kind": "checklist", "title": "Terpesong", "rows": [["Minta A, tulis B", 0.5]], "bad": True}]}]}
+        words = [{"w": "Karangan", "s": 0.1, "e": 0.4}, {"w": "panjang", "s": 0.5, "e": 0.9}]
+        for t in (0.57, 1.5):
+            assert motion.frame(cfg, pg, words, t).size == (1080, 1920)
+    finally:
+        motion.NEON[0] = False; motion.DARKPAGE[0] = False; motion._glyph.clear()
+
+
 def test_bukti_frame_renders(tmp_path):
     """template bukti: clipping with highlights, tag, chart, stamp, circle and a one-word caption render at 1080x1920"""
     import bukti

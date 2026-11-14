@@ -1,0 +1,242 @@
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, ChatGPT, essay, homework, Dewan SPM, vocab enhancer.",
+ "cta": {
+  "at": 38.72,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.24,
+   "lines": [
+    "Sekarang, semua *essay*",
+    "siap dalam *10 saat.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cara sekarang",
+     "at": 2.6,
+     "y": 1250,
+     "rows": [
+      [
+       "Type soalan",
+       2.82
+      ],
+      [
+       "ChatGPT tulis",
+       3.82
+      ],
+      [
+       "Salin",
+       4.98
+      ],
+      [
+       "Hantar",
+       5.62
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6.24,
+   "end": 9.9,
+   "lines": [
+    "Homework, *settle.*",
+    "Tapi satu benda",
+    "kau *lupa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/ketawa",
+     "at": 6.3,
+     "size": 520,
+     "x": 540,
+     "y": 1380,
+     "char_at": [
+      [
+       7.68,
+       "stickman/berfikir"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 9.9,
+   "end": 15.72,
+   "lines": [
+    "Dalam Dewan SPM,",
+    "*tak ada* ChatGPT.",
+    "Cuma kau, kertas",
+    "dan *1 jam setengah.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/terkejut",
+     "at": 10.0,
+     "size": 460,
+     "x": 380,
+     "y": 1450
+    },
+    {
+     "kind": "ban",
+     "at": 11.36,
+     "size": 260,
+     "x": 800,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 15.72,
+   "end": 21.64,
+   "lines": [
+    "Tak pernah *tulis sendiri,*",
+    "otak tak tahu *susun.*",
+    "Pegang pen,",
+    "idea *tak keluar.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/pening",
+     "at": 15.8,
+     "size": 500,
+     "x": 540,
+     "y": 1450,
+     "char_at": [
+      [
+       19.08,
+       "stickman/stres"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 21.64,
+   "end": 27.18,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays,",
+    "bukan untuk *disalin,*",
+    "tapi *dipelajari.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 21.7,
+     "step": 1,
+     "y": 1490
+    }
+   ]
+  },
+  {
+   "start": 27.18,
+   "end": 32.5,
+   "lines": [
+    "Struktur *ditanda,*",
+    "*step by step,*",
+    "*vocab* enhancer."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_essay.jpg",
+     "at": 27.25,
+     "step": 2,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 32.5,
+   "end": 35.44,
+   "lines": [
+    "Baca cara dia *susun,*",
+    "lepas tu *tulis sendiri.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/baca_buku",
+     "at": 32.6,
+     "size": 520,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       33.96,
+       "stickman/menulis"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 35.44,
+   "end": 38.72,
+   "lines": [
+    "Bila dah *biasa,*",
+    "dalam dewan kau",
+    "*tak perlukan sesiapa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 35.5,
+     "size": 520,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 38.72,
+   "end": 40.28,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 38.75,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 38.85,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

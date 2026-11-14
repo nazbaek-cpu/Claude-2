@@ -1,0 +1,272 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "neon",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "headline": {
+  "text": "CALON SPM",
+  "until": 5.0,
+  "y": 260
+ },
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, peribahasa, bagai aur dengan tebing, melentur buluh biarlah dari rebungnya, Guru Cemerlang.",
+ "cta": {
+  "at": 37.28,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.68,
+   "line": "\"Bagai aur | dengan tebing.\" | \"Melentur buluh, | biarlah dari rebungnya.\"",
+   "keys": [
+    "\"Bagai",
+    "aur",
+    "tebing.\"",
+    "\"Melentur",
+    "buluh,",
+    "rebungnya.\""
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/menulis",
+      "x": 540,
+      "size": 420,
+      "at": 0.2
+     }
+    ],
+    "y": 900
+   }
+  },
+  {
+   "start": 4.68,
+   "end": 10.42,
+   "line": "Kalau setiap karangan kau | mesti ada dua peribahasa ni, | tak kira tema apa, | kau tak seorang.",
+   "keys": [
+    "dua",
+    "peribahasa",
+    "seorang."
+   ],
+   "label": "setiap karangan",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/menulis",
+      "x": 540,
+      "size": 400,
+      "at": 4.7,
+      "char_at": [
+       [
+        9.08,
+        "stickman/ketawa"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "start": 10.42,
+   "end": 15.92,
+   "line": "Satu dewan | tulis benda yang sama. | Lagi teruk, | peribahasa ditampal | tak kena dengan isi.",
+   "keys": [
+    "sama.",
+    "ditampal",
+    "tak",
+    "kena"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/menulis",
+      "x": 220,
+      "size": 300,
+      "at": 10.45
+     },
+     {
+      "char": "stickman/menulis",
+      "x": 540,
+      "size": 300,
+      "at": 10.8
+     },
+     {
+      "char": "stickman/menulis",
+      "x": 860,
+      "size": 300,
+      "at": 11.15
+     }
+    ]
+   }
+  },
+  {
+   "start": 15.92,
+   "end": 19.44,
+   "line": "Tema alam sekitar, | tiba-tiba | melentur buluh.",
+   "keys": [
+    "alam",
+    "sekitar,",
+    "melentur",
+    "buluh."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "TEMA",
+    "word": "ALAM SEKITAR",
+    "size": 92,
+    "sub": "...tiba-tiba melentur buluh?",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/terkejut",
+      "x": 540,
+      "size": 380,
+      "at": 17.32
+     }
+    ],
+    "y": 980
+   }
+  },
+  {
+   "start": 19.44,
+   "end": 24.18,
+   "line": "Peribahasa yang tak kena, | tak menambah markah. | Pemeriksa nampak | ia ditampal.",
+   "keys": [
+    "tak",
+    "menambah",
+    "ditampal."
+   ],
+   "label": "pemeriksa",
+   "label_y": 330,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/menulis",
+      "x": 380,
+      "size": 340,
+      "at": 19.5,
+      "char_at": [
+       [
+        22.08,
+        "bapa/berfikir"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 820,
+     "y": 960,
+     "at": 20.9,
+     "size": 200,
+     "tag": "TAK TAMBAH MARKAH"
+    }
+   ]
+  },
+  {
+   "start": 24.18,
+   "end": 28.06,
+   "line": "Karangan Contoh | dan Teknik Penulisan, | ditulis Guru Cemerlang.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Guru",
+    "Cemerlang."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 640
+   }
+  },
+  {
+   "start": 28.06,
+   "end": 32.44,
+   "line": "Setiap contoh siap analisis, | tip penulis | dan ungkapan menarik.",
+   "keys": [
+    "analisis,",
+    "tip",
+    "ungkapan",
+    "menarik."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   },
+   "pills": [
+    [
+     "Tip penulis",
+     30.42
+    ],
+    [
+     "Ungkapan menarik",
+     31.3
+    ]
+   ],
+   "pills_y": 900
+  },
+  {
+   "start": 32.44,
+   "end": 37.28,
+   "line": "Kau nampak macam mana ungkapan | diletak di tempat yang betul. | Bukan banyak, | tepat.",
+   "keys": [
+    "betul.",
+    "tepat."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/dua_thumbs",
+    "words": [
+     [
+      "Tepat",
+      36.4
+     ]
+    ]
+   }
+  },
+  {
+   "start": 37.28,
+   "end": 38.92,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

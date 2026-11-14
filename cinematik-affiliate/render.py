@@ -27,7 +27,7 @@ KICK_Y, HEAD_Y, PILL_Y, SUB_Y, CTA_Y = 425, 525, 1165, 1300, 335
 # opening title card: left-aligned editorial block, Plus Jakarta Sans, one accent colour
 def jakarta(weight, size):
     f = ImageFont.truetype(os.path.join(HERE, "fonts", "PlusJakartaSans.ttf"), size); f.set_variation_by_name(weight); return f
-TK_FONT = jakarta("Bold", 30)
+TK_FONT = jakarta("Light", 32)    # title kicker ("CALON SPM ..."): thin, not bold
 TL_FONT = jakarta("ExtraBold", 132)
 GOLD = (233, 185, 73)
 TITLE_X, TITLE_LINE_H = 70, 132

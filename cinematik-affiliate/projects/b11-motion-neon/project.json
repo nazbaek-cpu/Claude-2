@@ -1,1 +1,260 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "headline": {
+  "text": "CALON SPM",
+  "until": 5.0,
+  "y": 250
+ },
+ "whisper_prompt": "120 SPM English Model Essays, open the light, I'm very boring, my mother very garang, vocab enhancer, grammar, essay.",
+ "cta": {
+  "at": 39.06,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.8,
+   "lines": [
+    "\"Open the *light.*\"",
+    "\"I'm very *boring.*\"",
+    "\"My mother very *garang.*\""
+   ],
+   "align": "center",
+   "text_y": 430,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "at": 0.2,
+     "size": 460,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 4.8,
+   "end": 10.5,
+   "lines": [
+    "Ayat English lahir dari",
+    "*terjemah BM* dalam kepala?",
+    "Pemeriksa nampak dari",
+    "*ayat pertama.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/menulis",
+     "at": 8.4,
+     "size": 380,
+     "x": 540,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 10.5,
+   "end": 15.42,
+   "lines": [
+    "Fikir dalam *BM,*",
+    "susun ikut *BM,*",
+    "tukar perkataan *satu-satu.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cara terjemah",
+     "at": 10.55,
+     "y": 1250,
+     "bad": true,
+     "rows": [
+      [
+       "Fikir dalam BM",
+       10.5
+      ],
+      [
+       "Susun ikut BM",
+       11.98
+      ],
+      [
+       "Tukar perkataan satu-satu",
+       13.3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15.42,
+   "end": 19.04,
+   "lines": [
+    "Dalam kepala, *betul.*",
+    "Atas kertas, *pelik.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 15.5,
+     "size": 500,
+     "x": 540,
+     "y": 1350,
+     "char_at": [
+      [
+       17.18,
+       "stickman/terkejut"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19.04,
+   "end": 23.78,
+   "lines": [
+    "Latihan grammar *berpuluh,*",
+    "tapi essay bukan",
+    "*isi tempat kosong.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/kerja_rumah.png",
+       "label": "Grammar",
+       "at": 19.1
+      }
+     ]
+    },
+    {
+     "kind": "ban",
+     "at": 21.04,
+     "size": 300,
+     "y": 1215
+    }
+   ]
+  },
+  {
+   "start": 23.78,
+   "end": 26.52,
+   "lines": [
+    "Kena biasa dengan",
+    "*ayat English sebenar.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/baca_buku",
+     "at": 23.85,
+     "size": 500,
+     "x": 540,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 26.52,
+   "end": 30.96,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays,",
+    "contoh *essay penuh.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 26.6,
+     "step": 1,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 30.96,
+   "end": 35.38,
+   "lines": [
+    "Struktur *ditanda,*",
+    "*vocab enhancer,*",
+    "frasa terus guna."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_essay.jpg",
+     "at": 31.0,
+     "step": 2,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 35.38,
+   "end": 39.06,
+   "lines": [
+    "Baca *cukup banyak,*",
+    "mata kau tahu",
+    "ayat mana *pelik.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/baca_buku",
+     "at": 35.45,
+     "size": 480,
+     "x": 540,
+     "y": 1350,
+     "char_at": [
+      [
+       36.76,
+       "stickman/isyarat_bagus"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 39.06,
+   "end": 40.67,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 39.1,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 39.2,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

@@ -1,1 +1,213 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, Kertas 2, Part 1, Part 2, Part 3, patah perkataan, email, essay, grammar.",
+ "cta": {
+  "at": 45.78,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.08,
+   "lines": [
+    "Soalan minta",
+    "*125-150* patah perkataan.",
+    "Kau tulis *300.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/menulis",
+     "at": 0.2,
+     "size": 500,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 6.08,
+   "end": 11.24,
+   "lines": [
+    "Rasa *rajin.*",
+    "Rasa mesti dapat",
+    "markah *lebih.*",
+    "Tapi jadi *sebaliknya.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/gembira",
+     "at": 6.1,
+     "size": 480,
+     "x": 540,
+     "y": 1450,
+     "char_at": [
+      [
+       9.1,
+       "stickman/terkejut"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 11.24,
+   "end": 19.0,
+   "lines": [
+    "Masa habis di *Part 2,*",
+    "*Part 3* tergesa-gesa."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Akibatnya",
+     "at": 11.3,
+     "y": 1150,
+     "bad": true,
+     "rows": [
+      [
+       "Masa habis di Part 2",
+       11.24
+      ],
+      [
+       "Part 3 tulis tergesa-gesa",
+       15.02
+      ],
+      [
+       "Lagi panjang, lagi silap grammar",
+       17.38
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19.0,
+   "end": 30.9,
+   "lines": [
+    "Setiap bahagian ada",
+    "*had patah perkataan.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Kertas 2 English",
+     "at": 19.1,
+     "y": 1100,
+     "rows": [
+      [
+       "Part 1, email: lebih kurang 80",
+       22.76
+      ],
+      [
+       "Part 2, essay: 125-150",
+       24.68
+      ],
+      [
+       "Part 3: 200-250",
+       27.16
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 30.9,
+   "end": 35.8,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays,",
+    "contoh *cukup panjang.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 30.95,
+     "step": 1,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 35.8,
+   "end": 42.56,
+   "lines": [
+    "Setiap contoh siap",
+    "*kiraan perkataan*",
+    "di hujung."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_essay.jpg",
+     "at": 35.85,
+     "step": 2,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 42.56,
+   "end": 45.78,
+   "lines": [
+    "Tulis *cukup,*",
+    "tulis *tepat,*",
+    "masa pun *cukup.*"
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 42.6,
+     "size": 500,
+     "x": 540,
+     "y": 1350
+    }
+   ]
+  },
+  {
+   "start": 45.78,
+   "end": 47.307007,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 45.8,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 45.9,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

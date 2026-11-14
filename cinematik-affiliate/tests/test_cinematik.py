@@ -538,3 +538,24 @@ def test_episod_frame_renders(tmp_path):
     pg = episod.stage()
     for t in (0.3, 1.6, 2.1, 2.9, 3.8):
         assert episod.frame(cfg, pg, t).size == (1080, 1920)
+
+
+def test_neon_options_in_arab_and_episod(tmp_path):
+    """"bg": "neon" in arab (glowing subtitle words, no card) and "neon": true in episod (navy page, glowing titles)"""
+    import arab, episod
+    arab.PRJ[0] = str(tmp_path); episod.arab.PRJ[0] = str(tmp_path)
+    arab.NEON[0] = True; arab.DARK[0] = True; episod.NEON[0] = True; episod._c.clear()
+    try:
+        bg = arab.background("neon")
+        assert max(bg.convert("RGB").getpixel((540, 900))) < 90
+        sc = {"start": 0.0, "end": 2.0, "line": "Karangan dia | panjang sekali.", "keys": ["panjang"]}
+        words = [{"w": "Karangan", "s": 0.1, "e": 0.4}, {"w": "dia", "s": 0.5, "e": 0.6}, {"w": "panjang", "s": 0.9, "e": 1.2}]
+        assert arab.frame({"scenes": [sc], "cta": {"at": 1.5}}, str(tmp_path), bg, words, 1.6).size == (1080, 1920)
+        pg = episod.stage()
+        assert max(pg.convert("RGB").getpixel((540, 900))) < 90
+        ti = episod.title_img("Nada *SALAH*", "red")
+        assert ti.size[0] == 1080 and ti.size[1] > 120   # padded for the glow
+        cfg = {"scenes": [{"start": 0.0, "end": 2.0, "title": "Nada *SALAH*", "tone": "red", "items": []}]}
+        assert episod.frame(cfg, pg, 0.8).size == (1080, 1920)
+    finally:
+        arab.NEON[0] = False; arab.DARK[0] = False; episod.NEON[0] = False; episod._c.clear(); arab._cache.clear()

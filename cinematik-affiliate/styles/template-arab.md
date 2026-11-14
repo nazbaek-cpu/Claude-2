@@ -22,6 +22,13 @@ watak atau aset pencipta asal. Semua grafik dilukis sendiri.
   muncul ikut suara: yang belum disebut kelabu pudar, yang disebut gelap, kata kunci oren. Fon tulisan tangan bulat.
 - **Petunjuk babak:** dua titik kecil (oren + kelabu) di atas kad Arab.
 
+
+## Latar biru tua neon
+
+`"bg": "neon"` (panggil "background biru tua, tulisan neon"): halaman biru tua template motion (grid titik biru samar,
+cahaya `accent` / `accent2` di bucu). Sari kata tiada kad putih: tulisan tebal putih menyala bila disebut, kata kunci
+dalam warna `accent` dengan halo neon. Stickman dan ikon dapat bingkai / jubin putih. Butang CTA warna `accent`.
+Contoh: `projects/b10-neon-1/` (cyan `[0, 229, 255]` + pink `[255, 64, 200]`).
 ## Gerakan
 
 - Satu idea, satu ilustrasi kecil di tengah atas, bergerak perlahan dan berterusan (tiada potongan kasar):

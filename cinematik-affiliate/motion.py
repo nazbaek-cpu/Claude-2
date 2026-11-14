@@ -36,6 +36,7 @@ W, H, FPS = 1080, 1920, 30
 INK = (28, 28, 34)
 TXT = [INK]          # sentence / label colour: dark on paper, white on a dark picture page
 DARKPAGE = [False]
+NEON = [False]       # "theme": "neon": navy page, glowing neon-tube key words
 PRJ = [""]
 ACC = [(226, 32, 138), (255, 178, 64)]
 
@@ -59,6 +60,35 @@ def page(dots_gap=28, glow=True):
         g.ellipse((760, 1380, 1560, 2180), outline=pale, width=70)
         im.alpha_composite(ring)
     return im
+
+
+def neon_page(dots_gap=36):
+    """deep navy page: radial gradient, faint blue dot grid, soft accent glows in two corners, thin glowing frame"""
+    yy, xx = np.mgrid[0:H, 0:W]; r = np.sqrt(((xx - W * 0.5) / W) ** 2 + ((yy - H * 0.42) / H) ** 2) / 0.62
+    r = np.clip(r, 0, 1)[..., None]; c0, c1 = np.array([18, 30, 78]), np.array([5, 9, 30])
+    im = Image.fromarray((c0 * (1 - r) + c1 * r).astype(np.uint8), "RGB"); d = ImageDraw.Draw(im); rr = 2.0
+    for y in np.arange(dots_gap / 2, H, dots_gap):
+        for x in np.arange(dots_gap / 2, W, dots_gap):
+            d.ellipse((x - rr, y - rr, x + rr, y + rr), fill=(38, 56, 112))
+    im = im.convert("RGBA"); lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); g = ImageDraw.Draw(lay)
+    for (cx, cy, rad, op), col in [((120, 240, 320, 46), ACC[0]), ((990, 1680, 360, 46), ACC[1])]:
+        g.ellipse((cx - rad, cy - rad, cx + rad, cy + rad), fill=col + (op,))
+    im.alpha_composite(lay.filter(ImageFilter.GaussianBlur(130)))
+    fr = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(fr).rounded_rectangle((30, 30, W - 31, H - 31), 34, outline=ACC[0] + (150,), width=3)
+    glow = fr.filter(ImageFilter.GaussianBlur(9)); im.alpha_composite(glow); im.alpha_composite(glow)
+    fr.putalpha(fr.split()[3].point(lambda v: v * 0.55)); im.alpha_composite(fr)
+    return im
+
+
+def neon_glyph(m, w, h, color):
+    """a lit neon tube: pale core + tight and wide coloured halos"""
+    pad = 60; size = (w + pad * 2, h + pad * 2); gm = Image.new("L", size, 0); gm.paste(m, (pad, pad))
+    im = Image.new("RGBA", size, (0, 0, 0, 0))
+    for blur, k in [(38, 150), (16, 230), (5, 255)]:
+        lay = Image.new("RGBA", size, color + (0,)); lay.putalpha(gm.filter(ImageFilter.GaussianBlur(blur)).point(lambda v: min(255, v * k // 160)))
+        im.alpha_composite(lay)
+    core = tuple(int(255 * 0.72 + c * 0.28) for c in color); cl = Image.new("RGBA", size, core + (0,)); cl.putalpha(gm); im.alpha_composite(cl)
+    return im, pad
 
 
 def sparkle(size, color, a=1.0):
@@ -96,7 +126,14 @@ def glyph(word, big, color):
     if key not in _glyph:
         f = SANS(BIG if big else SMALL, 800 if big else 700)
         asc, desc = f.getmetrics(); l, _, r, _ = f.getbbox(word); t = 0; w, h = r - l + 8, asc + desc + 8   # same box per size: one baseline
-        if big:   # accent gradient with a soft coloured glow
+        if NEON[0]:
+            m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4), word, font=f, fill=255)
+            im, pad = neon_glyph(m, w, h, ACC[0] if big else (150, 190, 255))
+            if not big:   # small words: crisp white on a faint blue haze
+                im = im.copy(); im.putalpha(im.split()[3].point(lambda v: v * 0.55)); wl = Image.new("RGBA", im.size, color + (0,))
+                wm = Image.new("L", im.size, 0); wm.paste(m, (pad, pad)); wl.putalpha(wm); im.alpha_composite(wl)
+            _glyph[key] = (im, pad, w, h)
+        elif big:   # accent gradient with a soft coloured glow
             m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4), word, font=f, fill=255)
             grad = Image.new("RGBA", (w, h)); a1, a2 = np.array(ACC[0]), np.array(ACC[1])
             ys = np.linspace(0, 1, h)[:, None, None]; arr = (a1 * (1 - ys * 0.55) + a2 * ys * 0.55).repeat(w, 1)
@@ -134,6 +171,8 @@ def draw_text(base, sc, words, t, alpha):
                 frame = im
                 if q < 0.98: frame = im.filter(ImageFilter.GaussianBlur((1 - q) * 9))
                 a = q * alpha
+                if NEON[0] and big and 0 <= t - at < 0.42:   # the tube flickers on
+                    a *= (1, 0.25, 0.9, 0.4, 1, 0.75, 1)[int((t - at) / 0.06)]
                 if a < 1: frame = frame.copy(); frame.putalpha(frame.split()[3].point(lambda v: int(v * a)))
                 base.alpha_composite(frame, (int(x - pad), int(y + (lh - h) * 0.82 - pad + dy)))
             x += w + gap
@@ -202,7 +241,7 @@ def dashed(s=210):
 
 def checklist(title, rows, t, bad=False):
     w = 860; rh = 92; h = 120 + rh * len(rows); im = card_box(w, h, 34); d = ImageDraw.Draw(im)
-    d.text((48, 64), title, font=SANS(40, 800), fill=ACC[0], anchor="lm")
+    d.text((48, 64), title, font=SANS(40, 800), fill=(24, 44, 120) if NEON[0] else ACC[0], anchor="lm")
     for i, (txt, at) in enumerate(rows):
         y = 140 + i * rh; on = t >= at; q = ease(ramp(t, at, 0.25))
         d.rounded_rectangle((40, y - 34, w - 40, y + 34), 18, fill=(248, 246, 247))
@@ -292,7 +331,7 @@ def cta(base, cfg, t):
     q = ramp(t, c["at"], 0.4); f = SANS(48, 800); txt = c.get("text", "Tekan link dekat bawah")
     w = int(f.getlength(txt)) + 110; im = card_box(w, 110, 55, fill=ACC[0] + (255,)); d = ImageDraw.Draw(im)
     lum = 0.299 * ACC[0][0] + 0.587 * ACC[0][1] + 0.114 * ACC[0][2]   # dark text on a light accent (yellow), white otherwise
-    d.text((w / 2, 55), txt, font=f, fill=INK if lum > 170 else "white", anchor="mm")
+    d.text((w / 2, 55), txt, font=f, fill=INK if lum > 150 else "white", anchor="mm")
     put(base, shadowed(im, 16, 80, 8), W / 2, 1700 + math.sin(t * 5) * 6, min(1, q * 2), 0.7 + 0.3 * pop(q))
 
 
@@ -360,7 +399,9 @@ def main():
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words; WORDS[0] = words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    if cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
+    if cfg.get("theme") == "neon":   # navy page, neon key words, white sentence text
+        NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36))
+    elif cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
         page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
     else:
         page_im = page(cfg.get("dots_gap", 28))

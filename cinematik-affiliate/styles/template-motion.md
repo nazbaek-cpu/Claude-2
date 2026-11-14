@@ -13,6 +13,9 @@ corak sahaja. Semua grafik dilukis sendiri; tiada aset, nama atau jenama pencipt
   Kata kunci jadi tiub neon: teras pucat dengan halo warna `accent`, dan berkelip-kelip masa menyala. Ayat kecil putih
   dengan haze biru. Stickman dapat bingkai putih. Contoh: `projects/b9-motion-neon-1/` (cyan `[0, 229, 255]` + pink
   `[255, 64, 200]`).
+- **Headline pembuka:** `"headline": {"text": "CALON SPM", "until": 5.0, "y": 250}` tulisan neon besar berjarak di atas,
+  berkelip masuk dan kekal sampai `until` saat. Babak pertama mula `text_y` lebih kurang 430 supaya tak bertindih.
+  Template arab pun terima `headline` yang sama. Contoh: `projects/b11-motion-neon/`, `projects/b11-arab-neon/`.
 - **Warna aksen** ikut buku: `accent` (utama) dan `accent2` (hujung gradient). Contoh Sirpuloh: magenta `[226, 32, 138]`
   ke kuning `[250, 186, 40]`.
 - **Tulisan:** Plus Jakarta Sans tebal. Ayat biasa kecil dan gelap; **kata kunci 2x lebih besar, gradient warna aksen

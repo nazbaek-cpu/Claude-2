@@ -1,1 +1,122 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": true, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "BTP Infografik Sejarah, buku teks padat, SPM, kimia, fizik, matematik, matematik tambahan",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.4,
+   "end": 5.07,
+   "title": {
+    "kicker": "SEJARAH SPM",
+    "lines": [
+     "Buku teks tebal",
+     "jadi nipis."
+    ],
+    "accent": [
+     "nipis."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 5.1,
+   "end": 10.61,
+   "kicker": "AMBIL",
+   "head": "Isi penting."
+  },
+  {
+   "start": 10.64,
+   "end": 20.67,
+   "kicker": "SIAP",
+   "head": "Infografik menarik.",
+   "pills": [
+    [
+     "Isi penting",
+     13.28
+    ],
+    [
+     "Peristiwa",
+     15.76
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 20.7,
+   "end": 28.69,
+   "kicker": "ANAK MUDAH",
+   "head": "Ingat & faham.",
+   "pills": [
+    [
+     "Ingat lama",
+     25.18
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 28.72,
+   "end": 33.25,
+   "kicker": "MUAT",
+   "head": "Dalam poket."
+  },
+  {
+   "start": 33.28,
+   "end": 35.27,
+   "kicker": "DAPATKAN",
+   "head": "Link di bawah."
+  },
+  {
+   "start": 35.3,
+   "end": 41.5,
+   "kicker": "SUBJEK LAIN",
+   "head": "Pun ada.",
+   "pills": [
+    [
+     "Kimia",
+     36.54
+    ],
+    [
+     "Fizik",
+     37.68
+    ],
+    [
+     "Matematik",
+     38.26
+    ],
+    [
+     "Add Maths",
+     39.0
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 41.5,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

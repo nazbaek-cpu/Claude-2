@@ -39,6 +39,7 @@ FLOOR = 1380
 TONE = {"red": (255, 112, 96), "yellow": (255, 205, 64), "green": (110, 214, 140), "white": (255, 255, 255)}
 TONE_LIGHT = {"red": (222, 58, 48), "yellow": (232, 140, 10), "green": (34, 156, 76), "white": (40, 40, 50)}
 LIGHT = [False]   # "bg": "dots" -> white dotted page, dark type
+NEON = [False]    # "neon": true -> titles glow like neon signs (key words in the tone colour)
 INK = (24, 28, 44)
 HAND = lambda s: arab.font("PatrickHand-Regular.ttf", s)
 
@@ -85,10 +86,20 @@ def title_img(text, tone):
             if row and sum(f.getlength(x) for x, _ in row) + sp * len(row) + f.getlength(w) > W - 140: rows.append(row); row = []
             row.append((w, h_))
         rows.append(row); lh = 100; im = Image.new("RGBA", (W, lh * len(rows) + 20), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        g = Image.new("RGBA", im.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(g)
         for i, r in enumerate(rows):
             tw = sum(f.getlength(x) for x, _ in r) + sp * (len(r) - 1); x = (W - tw) / 2
             for w, h_ in r:
-                d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else base_col); x += f.getlength(w) + sp
+                if NEON[0] and not LIGHT[0]:   # pale tube core, coloured halo
+                    d.text((x, 10 + i * lh), w, font=f, fill=tuple(int(255 * 0.7 + c * 0.3) for c in col) if h_ else (246, 248, 255))
+                    dg.text((x, 10 + i * lh), w, font=f, fill=col + (255,) if h_ else (90, 130, 255, 140))
+                else:
+                    d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else base_col)
+                x += f.getlength(w) + sp
+        if NEON[0] and not LIGHT[0]:
+            out = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            for r_ in (20, 6): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r_)))
+            out.alpha_composite(im); im = out
         _c[key] = im
     return _c[key]
 
@@ -356,7 +367,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    LIGHT[0] = cfg.get("bg") == "dots"; page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
+    LIGHT[0] = cfg.get("bg") == "dots"; NEON[0] = bool(cfg.get("neon")); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

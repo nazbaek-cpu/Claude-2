@@ -1,0 +1,240 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "neon",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, karangan berformat, surat rasmi, laporan, ucapan, kata alu-aluan, perkara.",
+ "cta": {
+  "at": 33.74,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.88,
+   "line": "Mak ayah, | karangan berformat ni | nampak senang. | Surat rasmi, laporan, ucapan, | ikut je format kan?",
+   "keys": [
+    "berformat",
+    "senang."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/ok",
+      "x": 540,
+      "size": 400,
+      "at": 0.2
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/fail.png",
+     "x": 220,
+     "y": 420,
+     "at": 2.6,
+     "size": 170,
+     "tag": "SURAT RASMI"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 540,
+     "y": 380,
+     "at": 3.82,
+     "size": 170,
+     "tag": "LAPORAN"
+    },
+    {
+     "img": "icons/pengumuman.png",
+     "x": 860,
+     "y": 420,
+     "at": 4.64,
+     "size": 170,
+     "tag": "UCAPAN"
+    }
+   ]
+  },
+  {
+   "start": 6.88,
+   "end": 14.7,
+   "line": "Tapi ramai anak tak tahu, | setiap format ada bahagian | yang wajib ada. | Tertinggal satu, | markah format terus hilang.",
+   "keys": [
+    "wajib",
+    "hilang."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SETIAP FORMAT",
+    "word": "BAHAGIAN WAJIB",
+    "size": 84,
+    "sub": "tertinggal satu, markah hilang",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/terkejut",
+      "x": 540,
+      "size": 380,
+      "at": 11.76
+     }
+    ],
+    "y": 980
+   }
+  },
+  {
+   "start": 14.7,
+   "end": 19.64,
+   "line": "Ucapan tanpa kata alu-aluan, | laporan tanpa tajuk, | surat tanpa perkara.",
+   "keys": [
+    "alu-aluan,",
+    "tajuk,",
+    "perkara."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/pening",
+      "x": 540,
+      "size": 380,
+      "at": 14.8
+     }
+    ],
+    "y": 1010
+   },
+   "icons": [
+    {
+     "img": "icons/pengumuman.png",
+     "x": 220,
+     "y": 440,
+     "at": 14.7,
+     "size": 170,
+     "tag": "TIADA ALU-ALUAN"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 540,
+     "y": 400,
+     "at": 16.78,
+     "size": 170,
+     "tag": "TIADA TAJUK"
+    },
+    {
+     "img": "icons/fail.png",
+     "x": 860,
+     "y": 440,
+     "at": 18.28,
+     "size": 170,
+     "tag": "TIADA PERKARA"
+    }
+   ]
+  },
+  {
+   "start": 19.64,
+   "end": 22.96,
+   "line": "Isi bagus pun, | markah dah terpotong | dari awal.",
+   "keys": [
+    "terpotong"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/sedih",
+      "x": 380,
+      "size": 400,
+      "at": 19.7
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 800,
+     "y": 960,
+     "at": 20.98,
+     "size": 210,
+     "tag": "MARKAH FORMAT"
+    }
+   ]
+  },
+  {
+   "start": 22.96,
+   "end": 27.9,
+   "line": "Karangan Contoh dan Teknik Penulisan | ada contoh karangan | berformat | dan tidak berformat.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "berformat"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 640
+   }
+  },
+  {
+   "start": 27.9,
+   "end": 33.74,
+   "line": "Tip dan nota penulis | untuk setiap satu. | Anak cuma ikut contoh, | format terus betul.",
+   "keys": [
+    "Tip",
+    "nota",
+    "betul."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Tip penulis",
+     27.9
+    ],
+    [
+     "Nota penulis",
+     28.6
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 33.74,
+   "end": 36.0,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

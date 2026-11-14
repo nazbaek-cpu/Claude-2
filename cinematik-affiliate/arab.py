@@ -45,6 +45,10 @@ def background(kind, image=None):
         d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(214, 214, 220), width=2)
         for y in (26, H - 27): d.ellipse((W / 2 - 7, y - 7, W / 2 + 7, y + 7), fill=ORANGE)
         return im
+    if kind == "neon" and not image:   # navy page with a faint blue dot grid and accent glows (template motion's)
+        import motion
+        motion.ACC[0], motion.ACC[1] = NEON_C
+        return motion.neon_page()
     if kind == "addmath" and not image:   # "background addmath": the light solid-wood boards the user picked
         import explainer
         w = explainer.solid_wood()
@@ -112,6 +116,8 @@ def figure(color=NAVY, pose="down", mood="smile", size=300, t=0.0, cap=True):
 # ---------- saved characters (Kak Kira, Abang Bajet, Adik, parents) instead of the drawn figure ----------
 PRJ = [""]
 DARK = [False]   # true when the page sits on a picture background (chalkboard)
+NEON = [False]   # "bg": "neon": navy page (template motion's), glowing subtitle words instead of the white card
+NEON_C = [(0, 229, 255), (255, 64, 200)]
 _chars = {}
 ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
@@ -306,7 +312,7 @@ def icon(ic):
 def scene_dots(base, i, n, a):
     d = ImageDraw.Draw(base); x0 = W / 2 - (n - 1) * 11
     for k in range(n):
-        col = ORANGE if k == i else (214, 208, 196)
+        col = (NEON_C[0] if NEON[0] else ORANGE) if k == i else ((60, 80, 140) if NEON[0] else (214, 208, 196))
         c = Image.new("RGBA", (16, 16), (0, 0, 0, 0)); ImageDraw.Draw(c).ellipse((0, 0, 15, 15), fill=col)
         put(base, c, x0 + k * 22, 160, a)
 
@@ -352,7 +358,7 @@ def sub_card(base, sc, toks, t, a):
         for k, pc in enumerate(pcs):
             if t >= pc[0][1] - 0.08: cur_i = k
     pc = pcs[cur_i]; t0 = max(sc["start"], pc[0][1] - 0.08)
-    size = sc.get("sub_size", 84); f = HAND(size); maxw = 880
+    size = sc.get("sub_size", 84); f = SANS(int(size * 0.86), 800) if NEON[0] else HAND(size); maxw = 880
     lines, cur, cw = [], [], 0
     for tk, ts in pc:
         tw = f.getlength(tk + " ")
@@ -360,6 +366,24 @@ def sub_card(base, sc, toks, t, a):
         cur.append((tk, ts)); cw += tw
     if cur: lines.append(cur)
     lh = int(size * 1.22); wmax = max(sum(f.getlength(tk + " ") for tk, _ in ln) for ln in lines)
+    if NEON[0]:   # no card: words light up like neon as they are spoken, key words in the accent colour
+        pad = 60; cw_, ch_ = int(min(maxw, wmax) + 110), lh * len(lines) + 64
+        core = Image.new("RGBA", (cw_ + pad * 2, ch_ + pad * 2), (0, 0, 0, 0)); glow = core.copy()
+        dc, dg = ImageDraw.Draw(core), ImageDraw.Draw(glow); acc = NEON_C[0]
+        for li, ln in enumerate(lines):
+            tot = sum(f.getlength(tk + " ") for tk, _ in ln) - f.getlength(" "); x = pad + (cw_ - tot) / 2; y = pad + 32 + li * lh + lh / 2
+            for tk, ts in ln:
+                k = tk.lower().strip(".,?!\"") in keyset; on = t >= ts - 0.05
+                if k: col = tuple(int(255 * 0.7 + c * 0.3) for c in acc) if on else tuple(int(c * 0.35) + 20 for c in acc)
+                else: col = (246, 248, 255) if on else (112, 122, 160)
+                dc.text((x, y), tk, font=f, fill=col, anchor="lm")
+                if on: dg.text((x, y), tk, font=f, fill=acc + (255,) if k else (110, 150, 255, 210), anchor="lm")
+                x += f.getlength(tk + " ")
+        out = Image.new("RGBA", core.size, (0, 0, 0, 0))
+        for r in (26, 26, 9, 3): out.alpha_composite(glow.filter(ImageFilter.GaussianBlur(r)))
+        out.alpha_composite(core)
+        q = ease(ramp(t, t0, 0.22))
+        put(base, out, W / 2, 1490 + 26 * (1 - q), a * q, 0.88 + 0.12 * q); return
     card = card_box(int(min(maxw, wmax) + 110), lh * len(lines) + 64, 28); d = ImageDraw.Draw(card)
     for li, ln in enumerate(lines):
         tot = sum(f.getlength(tk + " ") for tk, _ in ln) - f.getlength(" "); x = (card.width - tot) / 2; y = 32 + li * lh + lh / 2
@@ -374,7 +398,8 @@ def cta_button(base, cfg, t):
     c = cfg.get("cta")
     if not c or t < c["at"]: return
     q = ease(ramp(t, c["at"], 0.4)); f = SANS(44, 800); tw = f.getlength(c.get("text", "Tekan link dekat bawah"))
-    b = card_box(int(tw + 110), 100, 50, fill=ORANGE + (255,)); ImageDraw.Draw(b).text((b.width / 2, 50), c.get("text", "Tekan link dekat bawah"), font=f, fill=(255, 255, 255), anchor="mm")
+    b = card_box(int(tw + 110), 100, 50, fill=(NEON_C[0] if NEON[0] else ORANGE) + (255,))
+    ImageDraw.Draw(b).text((b.width / 2, 50), c.get("text", "Tekan link dekat bawah"), font=f, fill=INK if NEON[0] else (255, 255, 255), anchor="mm")
     put(base, shadowed(b, 12, 50, 6), W / 2, 1745 - 30 * (1 - q) + math.sin(t * 4) * 3 * q, q)
 
 # ---------- frame ----------
@@ -433,7 +458,10 @@ def sfx_track(cfg, dur):
 
 def main():
     prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
-    DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") == "addmath"
+    NEON[0] = cfg.get("bg") == "neon"
+    if cfg.get("accent"): NEON_C[0] = tuple(cfg["accent"])
+    if cfg.get("accent2"): NEON_C[1] = tuple(cfg["accent2"])
+    DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") in ("addmath", "neon")
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)

@@ -1,1 +1,353 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "neon": true,
+ "episode": "EPISOD 2 · EMAIL PART 1",
+ "whisper_prompt": "120 SPM English Model Essays, Part 1, Kertas 2, email, Dear Sir, I am writing to inform you, pemeriksa, nada.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 36.52,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.06,
+   "title": "Part 1: *EMAIL* pendek",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 280,
+     "at": 0.1,
+     "w": 340
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 820,
+     "at": 0.3,
+     "size": 460,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 · ENGLISH",
+     "name": "Part 1",
+     "text": "Email pendek,|80 patah perkataan.",
+     "w": 560,
+     "h": 330,
+     "x": 330,
+     "y": 880,
+     "at": 3.06
+    }
+   ]
+  },
+  {
+   "start": 6.06,
+   "end": 10.1,
+   "title": "Nampak *SENANG* kan?",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 560,
+     "at": 6.1,
+     "w": 540
+    },
+    {
+     "kind": "char",
+     "char": "bapa/senyum",
+     "x": 230,
+     "at": 6.1,
+     "size": 330,
+     "name": "Ayah",
+     "char_at": [
+      [
+       7.28,
+       "bapa/terkejut"
+      ]
+     ],
+     "mark": "!!",
+     "mark_at": 7.28
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 850,
+     "at": 6.2,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 10.1,
+   "end": 14.62,
+   "title": "Balas email *KAWAN*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 560,
+     "at": 10.1,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 870,
+     "at": 10.2,
+     "size": 460,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 · PART 1",
+     "name": "Email kepada kawan",
+     "text": "Dear Sir,|I am writing to|inform you...",
+     "w": 620,
+     "h": 430,
+     "rewrite_size": 44,
+     "x": 370,
+     "y": 800,
+     "at": 12.08
+    }
+   ]
+  },
+  {
+   "start": 14.62,
+   "end": 17.64,
+   "title": "\"Dear *SIR*...\"",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 · PART 1",
+     "name": "Email kepada kawan",
+     "text": "Dear Sir,|I am writing to|inform you...",
+     "w": 620,
+     "h": 430,
+     "rewrite_size": 44,
+     "x": 420,
+     "y": 880,
+     "at": 14.62
+    },
+    {
+     "kind": "char",
+     "char": "abang/menerang",
+     "x": 900,
+     "at": 14.7,
+     "size": 420,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 17.64,
+   "end": 20.04,
+   "title": "Nada *SALAH*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 · PART 1",
+     "name": "Email kepada kawan",
+     "text": "Dear Sir,|I am writing to|inform you...",
+     "w": 620,
+     "h": 430,
+     "rewrite_size": 44,
+     "x": 360,
+     "y": 900,
+     "at": 17.64,
+     "strike_at": 17.9
+    },
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "x": 850,
+     "at": 17.7,
+     "size": 330,
+     "name": "Ayah",
+     "mark": "!!",
+     "mark_at": 18.5
+    }
+   ]
+  },
+  {
+   "start": 20.04,
+   "end": 23.7,
+   "title": "Soalan paling mudah, markah *TERCICIR*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/lampu_lantai",
+     "x": 960,
+     "at": 20.05,
+     "w": 150
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 560,
+     "at": 20.1,
+     "size": 400,
+     "name": "Abang, 17",
+     "grey": [
+      [
+       21.2,
+       99
+      ]
+     ]
+    },
+    {
+     "kind": "words",
+     "text": "markah",
+     "x": 800,
+     "y": 1050,
+     "at": 21.0,
+     "n": 3
+    }
+   ]
+  },
+  {
+   "start": 23.7,
+   "end": 30.82,
+   "title": "Email ikut *PENERIMA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 560,
+     "at": 23.7,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "bapa/senyum",
+     "x": 200,
+     "at": 24.0,
+     "size": 330,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 900,
+     "at": 23.8,
+     "size": 360,
+     "name": "Abang, 17",
+     "char_at": [
+      [
+       27.92,
+       "abang/idea"
+      ]
+     ]
+    },
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 560,
+     "y": 880,
+     "w": 340,
+     "at": 24.2
+    }
+   ]
+  },
+  {
+   "start": 30.82,
+   "end": 33.46,
+   "title": "Siap *TIP* & nota",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 · PART 1",
+     "name": "Email kepada kawan",
+     "text": "Dear Sir,|I am writing to|inform you...",
+     "w": 620,
+     "h": 430,
+     "rewrite_size": 44,
+     "x": 360,
+     "y": 980,
+     "at": 30.82,
+     "strike_at": 30.9,
+     "rewrite": "Hi! Guess what...",
+     "rewrite_at": 31.6
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 870,
+     "at": 30.9,
+     "size": 380,
+     "name": "Abang, 17",
+     "char_at": [
+      [
+       32.4,
+       "abang/gembira"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 33.46,
+   "end": 36.52,
+   "title": "Paling mudah, paling *SELAMAT*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 600,
+     "at": 33.5,
+     "w": 580
+    },
+    {
+     "kind": "char",
+     "char": "bapa/thumbs_up",
+     "x": 230,
+     "at": 33.5,
+     "size": 330,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 870,
+     "at": 33.6,
+     "size": 460,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 560,
+     "y": 1000,
+     "at": 34.0
+    }
+   ]
+  },
+  {
+   "start": 36.52,
+   "end": 38.11,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 36.55
+    }
+   ]
+  }
+ ]
+}

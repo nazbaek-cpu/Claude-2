@@ -51,6 +51,10 @@ def stage(kind="navy"):
         im = motion.page(28, glow=False); d = ImageDraw.Draw(im)
         d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(214, 214, 220), width=2)
         d.line((40, FLOOR, W - 40, FLOOR), fill=(190, 190, 200), width=3); return im
+    if NEON[0]:   # the darker navy page of template motion's neon theme, with the floor line
+        import motion
+        motion.ACC[0], motion.ACC[1] = (0, 229, 255), (255, 64, 200)
+        im = motion.neon_page(); ImageDraw.Draw(im).line((40, FLOOR, W - 40, FLOOR), fill=(70, 110, 200), width=3); return im
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     top, bot = np.array([26, 46, 110], np.float32), np.array([8, 14, 44], np.float32)
     u = (yy / H)[..., None]; a = top * (1 - u) + bot * u
@@ -85,20 +89,21 @@ def title_img(text, tone):
         for w, h_ in toks:
             if row and sum(f.getlength(x) for x, _ in row) + sp * len(row) + f.getlength(w) > W - 140: rows.append(row); row = []
             row.append((w, h_))
-        rows.append(row); lh = 100; im = Image.new("RGBA", (W, lh * len(rows) + 20), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        neon = NEON[0] and not LIGHT[0]; top = 40 if neon else 10   # room above for the glow
+        rows.append(row); lh = 100; im = Image.new("RGBA", (W, lh * len(rows) + 20 + (top - 10) * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         g = Image.new("RGBA", im.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(g)
         for i, r in enumerate(rows):
             tw = sum(f.getlength(x) for x, _ in r) + sp * (len(r) - 1); x = (W - tw) / 2
             for w, h_ in r:
-                if NEON[0] and not LIGHT[0]:   # pale tube core, coloured halo
-                    d.text((x, 10 + i * lh), w, font=f, fill=tuple(int(255 * 0.7 + c * 0.3) for c in col) if h_ else (246, 248, 255))
-                    dg.text((x, 10 + i * lh), w, font=f, fill=col + (255,) if h_ else (90, 130, 255, 140))
+                if neon:   # pale tube core, coloured halo
+                    d.text((x, top + i * lh), w, font=f, fill=tuple(int(255 * 0.7 + c * 0.3) for c in col) if h_ else (246, 248, 255))
+                    dg.text((x, top + i * lh), w, font=f, fill=col + (255,) if h_ else (110, 150, 255, 200))
                 else:
                     d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else base_col)
                 x += f.getlength(w) + sp
-        if NEON[0] and not LIGHT[0]:
+        if neon:
             out = Image.new("RGBA", im.size, (0, 0, 0, 0))
-            for r_ in (20, 6): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r_)))
+            for r_ in (24, 24, 8, 3): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r_)))
             out.alpha_composite(im); im = out
         _c[key] = im
     return _c[key]

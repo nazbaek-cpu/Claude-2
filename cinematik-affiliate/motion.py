@@ -335,6 +335,28 @@ def cta(base, cfg, t):
     put(base, shadowed(im, 16, 80, 8), W / 2, 1700 + math.sin(t * 5) * 6, min(1, q * 2), 0.7 + 0.3 * pop(q))
 
 
+# ---------- headline: a big neon line at the top for the first seconds ("headline": {"text": "CALON SPM", "until": 5}) ----------
+_hl = {}
+def headline_img(text, color, size=112):
+    key = (text, color, size)
+    if key not in _hl:
+        f = SANS(size, 800); track = size * 0.06; asc, desc = f.getmetrics()
+        w = int(sum(f.getlength(c) for c in text) + track * (len(text) - 1)) + 8; h = asc + desc + 8
+        m = Image.new("L", (w, h), 0); d = ImageDraw.Draw(m); x = 4
+        for c in text: d.text((x, 4), c, font=f, fill=255); x += f.getlength(c) + track   # tracked capitals
+        _hl[key] = neon_glyph(m, w, h, color)[0]
+    return _hl[key]
+
+def draw_headline(base, cfg, t):
+    hl = cfg.get("headline")
+    if not hl: return
+    t0, t1 = hl.get("at", 0.0), hl.get("until", 5.0)
+    if not t0 <= t < t1: return
+    a = ease(ramp(t, t0, 0.2)) * (1 - ease(ramp(t, t1 - 0.35, 0.35)))
+    if t - t0 < 0.42: a *= (1, 0.25, 0.9, 0.4, 1, 0.75, 1)[int((t - t0) / 0.06)]   # flickers on like a tube
+    put(base, headline_img(hl["text"], tuple(hl.get("color", ACC[0])), hl.get("size", 112)), W / 2, hl.get("y", 250), a)
+
+
 # ---------- frame with slanted wipe between scenes ----------
 WIPE = 0.42
 def scene_at(cfg, t):
@@ -350,6 +372,11 @@ def render_scene(cfg, page_im, words, i, t):
     return base
 
 def frame(cfg, page_im, words, t):
+    im = _frame(cfg, page_im, words, t)
+    if not cfg.get("headline"): return im
+    im = im.convert("RGBA"); draw_headline(im, cfg, t); return im.convert("RGB")
+
+def _frame(cfg, page_im, words, t):
     scs = cfg["scenes"]; i = scene_at(cfg, t); new = render_scene(cfg, page_im, words, i, t)
     b = scs[i]["start"]
     if i == 0 or t > b + WIPE: return new.convert("RGB")

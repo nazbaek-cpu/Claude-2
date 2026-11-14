@@ -422,6 +422,9 @@ def frame(cfg, prj, bg, words, t):
             q = ease(ramp(t, ic.get("at", sc["start"]), 0.35)) * a_out * (1 - ease(ramp(t, ic.get("until", 1e9) - 0.25, 0.25)))
             if q > 0: put(im, icon(ic), ic["x"], ic["y"] + math.sin(t * 2 + ic["x"]) * 6 - 30 * (1 - q), q, 0.7 + 0.3 * q)
         sub_card(im, sc, tokens(sc, words), t, a)
+    if cfg.get("headline"):   # big neon line at the top for the first seconds (template motion's)
+        import motion
+        motion.draw_headline(im, cfg, t)
     cta_button(im, cfg, t)
     return im.convert("RGB")
 

@@ -297,7 +297,7 @@ def icon(ic):
     key = json.dumps(ic, sort_keys=True)
     if key not in _cache:
         im = Image.open(asset(ic["img"])).convert("RGBA"); s_ = ic.get("size", 200)
-        im.thumbnail((s_, s_), Image.LANCZOS)
+        k = s_ / max(im.size); im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)   # up or down to `size`
         if ic.get("tile", DARK[0]):   # on a dark picture background, sit the icon on a white rounded tile
             pad = 18; tile = card_box(im.width + pad * 2, im.height + pad * 2, 26)
             tile.alpha_composite(im, (pad, pad)); im = shadowed(tile, 10, 50, 5)

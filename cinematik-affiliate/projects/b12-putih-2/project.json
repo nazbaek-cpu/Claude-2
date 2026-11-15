@@ -1,1 +1,330 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, WhatsApp, bahasa pasar, singkatan, la, kot, je, 18 tema, DSKP, ungkapan menarik.",
+ "cta": {
+  "at": 43.2,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.04,
+   "line": "\"Kita tak boleh buang sampah | merata-rata sebab nanti | alam sekitar rosaklah.\"",
+   "keys": [
+    "rosaklah.\""
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/chatting",
+      "x": 540,
+      "size": 638,
+      "at": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "start": 5.04,
+   "end": 9.66,
+   "line": "Ini bukan mesej WhatsApp. | Ini ayat dalam | karangan SPM.",
+   "keys": [
+    "bukan",
+    "karangan",
+    "SPM."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "INI AYAT DALAM",
+    "word": "KARANGAN SPM",
+    "size": 92,
+    "sub": "bukan mesej WhatsApp",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/terkejut",
+      "x": 380,
+      "size": 551,
+      "at": 5.1
+     }
+    ],
+    "y": 1000
+   },
+   "icons": [
+    {
+     "img": "ortu/mak/terkejut.png",
+     "x": 800,
+     "y": 1020,
+     "at": 6.52,
+     "size": 270,
+     "tag": "MAK"
+    }
+   ]
+  },
+  {
+   "start": 9.66,
+   "end": 15.32,
+   "line": "Hari-hari menaip singkatan, | bahasa pasar, | la, kot, je.",
+   "keys": [
+    "singkatan,",
+    "pasar,",
+    "la,",
+    "kot,",
+    "je."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/chatting",
+      "x": 540,
+      "size": 609,
+      "at": 9.7
+     }
+    ]
+   },
+   "pills": [
+    [
+     "la",
+     12.96
+    ],
+    [
+     "kot",
+     13.7
+    ],
+    [
+     "je",
+     14.28
+    ]
+   ],
+   "pills_y": 1290
+  },
+  {
+   "start": 15.32,
+   "end": 18.22,
+   "line": "Bila masuk dewan, | tangan menulis | macam menaip.",
+   "keys": [
+    "menulis",
+    "menaip."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/berfikir",
+      "x": 380,
+      "size": 580,
+      "at": 15.4
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 800,
+     "y": 900,
+     "at": 15.4,
+     "size": 283,
+     "tag": "DEWAN SPM"
+    }
+   ]
+  },
+  {
+   "start": 18.22,
+   "end": 24.48,
+   "line": "Isi ada. | Idea ada. | Tapi bahasa jatuh, | markah pun ikut jatuh.",
+   "keys": [
+    "jatuh,",
+    "jatuh."
+   ],
+   "pills": [
+    [
+     "Isi ada",
+     18.22
+    ],
+    [
+     "Idea ada",
+     19.6
+    ]
+   ],
+   "pills_y": 380,
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sedih",
+      "x": 380,
+      "size": 580,
+      "at": 20.7
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/markah_rendah.png",
+     "x": 800,
+     "y": 900,
+     "at": 20.7,
+     "size": 283,
+     "tag": "MARKAH BAHASA"
+    }
+   ]
+  },
+  {
+   "start": 24.48,
+   "end": 29.24,
+   "line": "Dan anak tak perasan, | sebab bagi dia, | itulah cara biasa | dia menulis.",
+   "keys": [
+    "tak",
+    "perasan,",
+    "biasa"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/gembira",
+      "x": 540,
+      "size": 609,
+      "at": 24.5
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "ortu/mak/risau.png",
+     "x": 230,
+     "y": 420,
+     "at": 24.6,
+     "size": 270,
+     "tag": "MAK"
+    },
+    {
+     "img": "ortu/ayah/berfikir.png",
+     "x": 850,
+     "y": 420,
+     "at": 25.2,
+     "size": 270,
+     "tag": "AYAH"
+    }
+   ]
+  },
+  {
+   "start": 29.24,
+   "end": 35.74,
+   "line": "Karangan Contoh dan Teknik Penulisan. | Ada contoh karangan | untuk 18 tema ikut DSKP,",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "18",
+    "tema"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 640
+   },
+   "pills": [
+    [
+     "18 tema",
+     31.78
+    ],
+    [
+     "Ikut DSKP",
+     34.32
+    ]
+   ],
+   "pills_y": 1150
+  },
+  {
+   "start": 35.74,
+   "end": 38.42,
+   "line": "siap ungkapan menarik | dan nota penulis.",
+   "keys": [
+    "ungkapan",
+    "menarik",
+    "nota"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Ungkapan menarik & nota penulis",
+     35.8
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 38.42,
+   "end": 43.2,
+   "line": "Baca selalu. | Mata biasa dengan | bahasa karangan. | Tangan pun ikut.",
+   "keys": [
+    "selalu.",
+    "Tangan",
+    "ikut."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/idea",
+      "x": 380,
+      "size": 580,
+      "at": 38.5,
+      "char_at": [
+       [
+        42.08,
+        "adik/raikan"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 800,
+     "y": 900,
+     "at": 39.76,
+     "size": 270,
+     "tag": "BAHASA KARANGAN"
+    }
+   ]
+  },
+  {
+   "start": 43.2,
+   "end": 44.93,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

@@ -16,6 +16,7 @@ corak sahaja. Semua grafik dilukis sendiri; tiada aset, nama atau jenama pencipt
 - **Headline pembuka:** `"headline": {"text": "CALON SPM", "until": 5.0, "y": 250}` tulisan neon besar berjarak di atas,
   berkelip masuk dan kekal sampai `until` saat. Babak pertama mula `text_y` lebih kurang 430 supaya tak bertindih.
   Template arab pun terima `headline` yang sama. Contoh: `projects/b11-motion-neon/`, `projects/b11-arab-neon/`.
+- **Putih kosong:** `"bg": "putih"` halaman putih tanpa titik (cahaya aksen di bucu kekal). Contoh: `projects/b12-putih-1/`.
 - **Warna aksen** ikut buku: `accent` (utama) dan `accent2` (hujung gradient). Contoh Sirpuloh: magenta `[226, 32, 138]`
   ke kuning `[250, 186, 40]`.
 - **Tulisan:** Plus Jakarta Sans tebal. Ayat biasa kecil dan gelap; **kata kunci 2x lebih besar, gradient warna aksen

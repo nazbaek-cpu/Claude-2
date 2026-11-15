@@ -20,6 +20,7 @@ video siri parenting ("jangan label anak") untuk corak dan rentak sahaja; watak 
   vakum, cuci_kereta, travel, kamera, basikal, senaman, peluk_anak, doa. Separuh badan: guna saiz lebih kurang 330.
 - **Neon:** `"neon": true` guna halaman biru tua template motion (lebih gelap) dengan garis lantai, dan tajuk babak
   bercahaya macam papan tanda neon: teras pucat, halo warna `tone`. Contoh: `projects/b10-neon-2/`.
+- **Latar putih kosong:** `"bg": "putih"` sama macam `dots` tapi tanpa titik. Contoh: `projects/b12-putih-3/`.
 - **Latar putih bertitik:** `"bg": "dots"` guna kertas titik template motion (tanpa cahaya), tajuk jadi gelap,
   tag nama berbingkai. Contoh: `projects/episod-english-1/`.
 

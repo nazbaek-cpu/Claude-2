@@ -46,7 +46,7 @@ def page(dots_gap=28, glow=True):
     """white page with a fine grey dot grid (like the user's grid paper), soft accent glows and pale rings at the edges"""
     im = Image.new("RGB", (W, H), (254, 254, 253)); d = ImageDraw.Draw(im)
     r = 2.3
-    for y in np.arange(dots_gap / 2, H, dots_gap):
+    for y in (np.arange(dots_gap / 2, H, dots_gap) if dots_gap else []):   # dots_gap 0: plain white ("bg": "putih")
         for x in np.arange(dots_gap / 2, W, dots_gap):
             d.ellipse((x - r, y - r, x + r, y + r), fill=(176, 176, 178))
     im = im.convert("RGBA")
@@ -431,7 +431,7 @@ def main():
     elif cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
         page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
     else:
-        page_im = page(cfg.get("dots_gap", 28))
+        page_im = page(0 if cfg.get("bg") == "putih" else cfg.get("dots_gap", 28))
     only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page_im, words, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols

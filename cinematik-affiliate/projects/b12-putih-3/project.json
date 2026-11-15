@@ -1,0 +1,377 @@
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "episode": "EPISOD 3 · SEMUA A, KECUALI ENGLISH",
+ "whisper_prompt": "120 SPM English Model Essays, tuisyen, grammar, essay, tenses, perenggan, email, artikel, report, review, story.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 48.66,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.64,
+   "title": "Result anak *SEMUA CANTIK*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "SLIP KEPUTUSAN",
+     "name": "Abang · Tingkatan 5",
+     "text": "Sejarah ...... A|Sains ...... A|Matematik ...... A",
+     "w": 560,
+     "h": 420,
+     "text_size": 50,
+     "x": 330,
+     "y": 880,
+     "at": 0.6
+    },
+    {
+     "kind": "char",
+     "char": "bapa/senyum",
+     "x": 850,
+     "at": 0.3,
+     "size": 360,
+     "name": "Ayah"
+    }
+   ]
+  },
+  {
+   "start": 6.64,
+   "end": 9.28,
+   "title": "Sampai *ENGLISH*...",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "SLIP KEPUTUSAN",
+     "name": "Abang · Tingkatan 5",
+     "text": "Sejarah ...... A|Sains ...... A|Matematik ...... A|English ...... ?",
+     "w": 560,
+     "h": 420,
+     "text_size": 50,
+     "x": 330,
+     "y": 880,
+     "at": 6.64
+    },
+    {
+     "kind": "char",
+     "char": "bapa/terkejut",
+     "x": 850,
+     "at": 6.7,
+     "size": 360,
+     "name": "Ayah",
+     "mark": "!!",
+     "mark_at": 7.9
+    }
+   ]
+  },
+  {
+   "start": 9.28,
+   "end": 12.36,
+   "title": "Tuisyen dah, buku *GRAMMAR* dah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/rak_buku",
+     "x": 560,
+     "at": 9.3,
+     "w": 280
+    },
+    {
+     "kind": "char",
+     "char": "bapa/kira_bil",
+     "x": 220,
+     "at": 9.3,
+     "size": 360,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/senarai",
+     "x": 880,
+     "at": 10.7,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 12.36,
+   "end": 15.61,
+   "title": "Markah essay *TETAP SAMA*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 560,
+     "at": 12.4,
+     "w": 340
+    },
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "x": 210,
+     "at": 12.4,
+     "size": 360,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 880,
+     "at": 12.5,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 15.61,
+   "end": 19.5,
+   "title": "Tak pernah tengok *ESSAY YANG BAIK*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 360,
+     "at": 15.65,
+     "w": 340
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 800,
+     "at": 15.7,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 19.5,
+   "end": 25.02,
+   "title": "Tahu *TENSES*, tapi...",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 820,
+     "at": 19.55,
+     "size": 460,
+     "name": "Abang, 17",
+     "char_at": [
+      [
+       22.84,
+       "abang/stres"
+      ]
+     ]
+    },
+    {
+     "kind": "bubble",
+     "text": "Nak mula macam mana?|Nak susun perenggan?|Nak tutup macam mana?",
+     "x": 430,
+     "y": 860,
+     "at": 21.1,
+     "tail": "right"
+    }
+   ]
+  },
+  {
+   "start": 25.02,
+   "end": 29.5,
+   "title": "Macam masak, tak pernah *RASA*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "rumah/dapur_gas",
+     "x": 560,
+     "at": 25.05,
+     "w": 300
+    },
+    {
+     "kind": "prop",
+     "img": "rumah/kuali",
+     "x": 560,
+     "at": 25.6,
+     "w": 200,
+     "floor": false,
+     "y": 1150
+    },
+    {
+     "kind": "char",
+     "char": "bapa/memasak",
+     "x": 220,
+     "at": 25.1,
+     "size": 360,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 880,
+     "at": 25.3,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 29.5,
+   "end": 35.42,
+   "title": "Contoh *SETIAP JENIS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 560,
+     "at": 29.5,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "bapa/senyum",
+     "x": 200,
+     "at": 29.6,
+     "size": 360,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/idea",
+     "x": 900,
+     "at": 29.6,
+     "size": 460,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 560,
+     "y": 860,
+     "w": 340,
+     "at": 29.8
+    }
+   ]
+  },
+  {
+   "start": 35.42,
+   "end": 40.58,
+   "title": "Semua *KERTAS 2*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KERTAS 2 ENGLISH",
+     "name": "Ada contoh untuk:",
+     "text": "Email · Essay|Article · Report|Review · Story",
+     "w": 600,
+     "h": 420,
+     "text_size": 50,
+     "x": 360,
+     "y": 880,
+     "at": 35.45
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 880,
+     "at": 35.5,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 40.58,
+   "end": 44.16,
+   "title": "Struktur ditanda, *TIP* step by step",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_essay.jpg",
+     "x": 400,
+     "y": 960,
+     "w": 440,
+     "at": 40.6
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 870,
+     "at": 40.65,
+     "size": 460,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 44.16,
+   "end": 48.66,
+   "title": "Tengok dulu, *BARU TULIS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 600,
+     "at": 44.2,
+     "w": 560
+    },
+    {
+     "kind": "char",
+     "char": "bapa/thumbs_up",
+     "x": 220,
+     "at": 44.2,
+     "size": 360,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 880,
+     "at": 44.25,
+     "size": 460,
+     "name": "Abang, 17",
+     "char_at": [
+      [
+       47.12,
+       "abang/gembira"
+      ]
+     ]
+    },
+    {
+     "kind": "hearts",
+     "x": 560,
+     "y": 1000,
+     "at": 47.2
+    }
+   ]
+  },
+  {
+   "start": 48.66,
+   "end": 50.36,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 48.7
+    }
+   ]
+  }
+ ]
+}

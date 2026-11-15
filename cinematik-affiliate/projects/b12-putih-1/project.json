@@ -1,1 +1,253 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "bg": "putih",
+ "source": "input/vo.mp4",
+ "accent": [
+  22,
+  86,
+  214
+ ],
+ "accent2": [
+  60,
+  150,
+  255
+ ],
+ "whisper_prompt": "120 SPM English Model Essays, tingkatan 4, tingkatan 5, writing SPM, email, essay, report, review, article, story.",
+ "cta": {
+  "at": 38.48,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.65,
+   "lines": [
+    "Kau *form 4?*",
+    "Ramai fikir writing SPM",
+    "boleh tunggu *form 5.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/sapa",
+     "at": 0.2,
+     "size": 620,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       2.46,
+       "abang/yakin"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.65,
+   "end": 13.32,
+   "lines": [
+    "Bila sampai *form 5,*",
+    "semua subjek *serentak.*",
+    "English *paling last.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1260,
+     "gap": 240,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/kalkulator.png",
+       "label": "Add Maths",
+       "at": 7.94
+      },
+      {
+       "img": "icons/eksperimen.png",
+       "label": "Sains",
+       "at": 8.6
+      },
+      {
+       "img": "icons/glob.png",
+       "label": "Sejarah",
+       "at": 9.3
+      },
+      {
+       "img": "mat/buku_spm.png",
+       "label": "English",
+       "at": 10.74
+      }
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "at": 9.0,
+     "size": 360,
+     "x": 540,
+     "y": 1660
+    }
+   ]
+  },
+  {
+   "start": 13.32,
+   "end": 17.96,
+   "lines": [
+    "Akhirnya masuk SPM",
+    "dengan cara tulis",
+    "macam *form 3.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "at": 13.4,
+     "size": 600,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 17.96,
+   "end": 22.88,
+   "lines": [
+    "Writing ni *kemahiran,*",
+    "*bukan hafalan.*",
+    "Dia perlukan *masa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "kira/menerang",
+     "at": 18.0,
+     "size": 560,
+     "x": 360,
+     "y": 1380
+    },
+    {
+     "kind": "icons",
+     "x": 820,
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/jam.png",
+       "label": "Masa",
+       "at": 21.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 22.88,
+   "end": 28.86,
+   "lines": [
+    "*120 SPM English*",
+    "Model Essays,",
+    "satu *contoh* sehari,",
+    "ikut format SPM."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 22.95,
+     "step": 1,
+     "y": 1540
+    }
+   ]
+  },
+  {
+   "start": 28.86,
+   "end": 34.26,
+   "lines": [
+    "Dari email",
+    "sampai *story.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Semua bentuk soalan",
+     "at": 28.9,
+     "y": 1150,
+     "rows": [
+      [
+       "Email",
+       28.86
+      ],
+      [
+       "Essay",
+       30.04
+      ],
+      [
+       "Report",
+       30.78
+      ],
+      [
+       "Review",
+       31.46
+      ],
+      [
+       "Article",
+       32.1
+      ],
+      [
+       "Story",
+       33.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 34.26,
+   "end": 38.48,
+   "lines": [
+    "Mula *sekarang,*",
+    "setahun lagi kau dah biasa",
+    "dengan semua *soalan.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "at": 34.3,
+     "size": 600,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 38.48,
+   "end": 40.2,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 38.5,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "kira/gembira",
+     "at": 38.6,
+     "size": 360,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

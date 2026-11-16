@@ -1,1 +1,275 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "episode": "EPISOD 4 · TENGOK VS BUAT",
+ "whisper_prompt": "Matematik SPM Final Boost, soalan terpilih, subtopik, jawapan lengkap, bengkel kalkulator, rakaman, 200 muka surat, replay, pause.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 42.44,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.44,
+   "title": "Tengok video, *SEMUA SENANG*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "rumah/katil",
+     "x": 330,
+     "at": 0.1,
+     "w": 440
+    },
+    {
+     "kind": "char",
+     "char": "adikhp/video",
+     "x": 820,
+     "at": 0.2,
+     "size": 620,
+     "name": "Adik, 17"
+    }
+   ]
+  },
+  {
+   "start": 4.44,
+   "end": 7.34,
+   "title": "Angguk, faham, *NEXT*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "rumah/katil",
+     "x": 330,
+     "at": 4.45,
+     "w": 440
+    },
+    {
+     "kind": "prop",
+     "img": "rumah/lampu_tidur",
+     "x": 90,
+     "at": 4.5,
+     "w": 130
+    },
+    {
+     "kind": "char",
+     "char": "adikhp/video",
+     "x": 820,
+     "at": 4.5,
+     "size": 620,
+     "name": "Adik, 17",
+     "char_at": [
+      [
+       5.94,
+       "adikhp/gembira"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7.34,
+   "end": 12.06,
+   "title": "Esoknya, *KERTAS KOSONG*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 300,
+     "at": 7.35,
+     "w": 340
+    },
+    {
+     "kind": "paper",
+     "head": "LATIHAN MATEMATIK",
+     "name": "Soalan 1",
+     "text": "Jawapan:||",
+     "w": 520,
+     "h": 340,
+     "x": 380,
+     "y": 820,
+     "at": 9.14
+    },
+    {
+     "kind": "char",
+     "char": "adik/stres",
+     "x": 830,
+     "at": 7.4,
+     "size": 620,
+     "name": "Adik, 17"
+    }
+   ]
+  },
+  {
+   "start": 12.06,
+   "end": 15.8,
+   "title": "Tengok *TAK SAMA* dengan buat",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 300,
+     "at": 12.1,
+     "w": 340
+    },
+    {
+     "kind": "char",
+     "char": "adik/berfikir",
+     "x": 820,
+     "at": 12.1,
+     "size": 620,
+     "name": "Adik, 17"
+    }
+   ]
+  },
+  {
+   "start": 15.8,
+   "end": 19.98,
+   "title": "Dalam dewan, *TAK ADA REPLAY*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "icons/peperiksaan",
+     "x": 300,
+     "at": 15.85,
+     "w": 260
+    },
+    {
+     "kind": "char",
+     "char": "adik/terkejut",
+     "x": 800,
+     "at": 15.9,
+     "size": 620,
+     "name": "Adik, 17"
+    }
+   ]
+  },
+  {
+   "start": 19.98,
+   "end": 27.38,
+   "title": "Kali ni, *KAU PEGANG PEN*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_cover.jpg",
+     "x": 360,
+     "y": 1010,
+     "w": 330,
+     "at": 20.05
+    },
+    {
+     "kind": "char",
+     "char": "adik/idea",
+     "x": 830,
+     "at": 20.2,
+     "size": 620,
+     "name": "Adik, 17",
+     "char_at": [
+      [
+       26.32,
+       "adik/setuju"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 27.38,
+   "end": 36.4,
+   "title": "Siap *BENGKEL KALKULATOR*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_ciri.jpg",
+     "x": 540,
+     "y": 980,
+     "w": 700,
+     "at": 27.45
+    }
+   ]
+  },
+  {
+   "start": 36.4,
+   "end": 40.24,
+   "title": "Lebih *200* muka surat",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 300,
+     "at": 36.45,
+     "w": 340
+    },
+    {
+     "kind": "photo",
+     "img": "boost_cover.jpg",
+     "x": 300,
+     "y": 860,
+     "w": 260,
+     "at": 36.6
+    },
+    {
+     "kind": "char",
+     "char": "adik/gembira",
+     "x": 820,
+     "at": 36.5,
+     "size": 620,
+     "name": "Adik, 17"
+    }
+   ]
+  },
+  {
+   "start": 40.24,
+   "end": 42.44,
+   "title": "Kurang tengok. *LEBIH BUAT.*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 380,
+     "at": 40.25,
+     "w": 520
+    },
+    {
+     "kind": "char",
+     "char": "adik/raikan",
+     "x": 860,
+     "at": 40.3,
+     "size": 620,
+     "name": "Adik, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 1000,
+     "at": 40.6
+    }
+   ]
+  },
+  {
+   "start": 42.44,
+   "end": 44.12,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 42.5
+    }
+   ]
+  }
+ ]
+}

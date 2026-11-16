@@ -1,1 +1,267 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "neon": true,
+ "neon_base": "emerald",
+ "episode": "EPISOD 5 · \"CUAI JE\"",
+ "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, guru cemerlang Matematik, cuai, tabiat, gred, subtopik, jawapan lengkap, tergelincir.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 45.52,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.1,
+   "title": "Tolak jadi *TAMBAH*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "UJIAN MATEMATIK",
+     "name": "Soalan minta jawapan dalam meter",
+     "text": "x + 4 = 10,  x = 14|-3 × 2 = 6|Jawapan: 250 cm",
+     "w": 600,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 46,
+     "x": 360,
+     "y": 900,
+     "at": 0.1
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 860,
+     "at": 0.3,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 6.1,
+   "end": 10.14,
+   "title": "\"Aku faham, *CUAI JE*\"",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 300,
+     "at": 6.1,
+     "w": 460
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 840,
+     "at": 6.2,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "bubble",
+     "text": "Aku faham,|cuai je.",
+     "x": 470,
+     "y": 860,
+     "at": 7.88,
+     "tail": "right"
+    }
+   ]
+  },
+  {
+   "start": 10.14,
+   "end": 16.14,
+   "title": "Bukan nasib. *TABIAT.*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "x": 560,
+     "at": 10.2,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "words",
+     "text": "cuai",
+     "x": 560,
+     "y": 1050,
+     "at": 12.54,
+     "n": 4
+    }
+   ]
+  },
+  {
+   "start": 16.14,
+   "end": 21.0,
+   "title": "Satu gred *HILANG*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "MARKAH TERCICIR",
+     "name": "Setiap ujian",
+     "text": "-2 markah|-3 markah|Gred turun",
+     "w": 520,
+     "h": 400,
+     "text_size": 54,
+     "x": 340,
+     "y": 900,
+     "at": 16.2
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 850,
+     "at": 16.3,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 21.0,
+   "end": 25.26,
+   "title": "Biasakan tangan dengan *GAYA SPM*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 320,
+     "at": 21.05,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 840,
+     "at": 21.1,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 25.26,
+   "end": 30.6,
+   "title": "*FINAL BOOST*, Cikgu Yasir",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_cover.jpg",
+     "x": 360,
+     "y": 1010,
+     "w": 330,
+     "at": 25.3
+    },
+    {
+     "kind": "char",
+     "char": "abang/idea",
+     "x": 840,
+     "at": 25.4,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 30.6,
+   "end": 36.62,
+   "title": "Soalan terpilih, *JAWAPAN LENGKAP*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_ciri.jpg",
+     "x": 540,
+     "y": 1000,
+     "w": 700,
+     "at": 30.65
+    }
+   ]
+  },
+  {
+   "start": 36.62,
+   "end": 42.08,
+   "title": "Semak, nampak di mana *SILAP*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "UJIAN MATEMATIK",
+     "name": "Soalan minta jawapan dalam meter",
+     "text": "x + 4 = 10,  x = 14|-3 × 2 = 6|Jawapan: 250 cm",
+     "w": 600,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 46,
+     "x": 360,
+     "y": 900,
+     "at": 36.65,
+     "strike_at": 37.34,
+     "rewrite": "x = 6,   -3 × 2 = -6,   2.5 m",
+     "rewrite_at": 39.14
+    },
+    {
+     "kind": "char",
+     "char": "abang/senarai",
+     "x": 860,
+     "at": 36.7,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 42.08,
+   "end": 45.52,
+   "title": "Latih sampai *TAK CUAI*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 320,
+     "at": 42.1,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 840,
+     "at": 42.15,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 560,
+     "y": 980,
+     "at": 43.3
+    }
+   ]
+  },
+  {
+   "start": 45.52,
+   "end": 47.15,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "boost_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 45.55
+    }
+   ]
+  }
+ ]
+}

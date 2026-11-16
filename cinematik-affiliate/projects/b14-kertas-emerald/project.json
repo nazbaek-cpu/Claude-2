@@ -1,1 +1,823 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "bg_image": "input/emerald.jpg",
+ "whisper_prompt": "Terapi KBAT Sejarah SPM. Soalan KBAT, Rangka Struktur Kotak, rumus P.E.S., fakta, petikan, poster, lirik lagu, puisi, graf.",
+ "captions": {
+  "style": "words",
+  "y": 1470,
+  "size": 54,
+  "max_words": 4,
+  "words": [
+   [
+    "Tulis",
+    0.0,
+    0.36
+   ],
+   [
+    "sampai",
+    0.36,
+    0.54
+   ],
+   [
+    "satu",
+    0.54,
+    0.8
+   ],
+   [
+    "muka",
+    0.8,
+    1.06
+   ],
+   [
+    "surat,",
+    1.06,
+    1.62
+   ],
+   [
+    "markah",
+    1.66,
+    2.28
+   ],
+   [
+    "KBAT",
+    2.28,
+    2.68
+   ],
+   [
+    "tetap",
+    2.68,
+    3.04
+   ],
+   [
+    "sikit.",
+    3.04,
+    3.3
+   ],
+   [
+    "Masalahnya",
+    3.76,
+    4.6
+   ],
+   [
+    "bukan",
+    4.6,
+    4.8
+   ],
+   [
+    "panjang.",
+    4.8,
+    5.56
+   ],
+   [
+    "Masalahnya",
+    5.92,
+    6.76
+   ],
+   [
+    "tak",
+    6.76,
+    7.06
+   ],
+   [
+    "ada",
+    7.06,
+    7.22
+   ],
+   [
+    "struktur.",
+    7.22,
+    7.66
+   ],
+   [
+    "Terapi",
+    8.12,
+    8.8
+   ],
+   [
+    "KBAT",
+    8.8,
+    9.24
+   ],
+   [
+    "Sejarah",
+    9.24,
+    9.74
+   ],
+   [
+    "SPM",
+    9.74,
+    10.34
+   ],
+   [
+    "bagi",
+    10.34,
+    10.74
+   ],
+   [
+    "rumus",
+    10.74,
+    11.06
+   ],
+   [
+    "PES",
+    11.06,
+    11.66
+   ],
+   [
+    "tambah",
+    11.66,
+    12.42
+   ],
+   [
+    "teknik",
+    12.42,
+    12.86
+   ],
+   [
+    "rangka",
+    12.86,
+    13.28
+   ],
+   [
+    "struktur",
+    13.28,
+    13.7
+   ],
+   [
+    "kotak.",
+    13.7,
+    14.18
+   ],
+   [
+    "Anak",
+    14.4,
+    15.0
+   ],
+   [
+    "cuma",
+    15.0,
+    15.14
+   ],
+   [
+    "isi",
+    15.14,
+    15.5
+   ],
+   [
+    "kotak",
+    15.5,
+    15.88
+   ],
+   [
+    "ikut",
+    15.88,
+    16.16
+   ],
+   [
+    "langkah,",
+    16.16,
+    16.56
+   ],
+   [
+    "jawapan",
+    16.64,
+    17.32
+   ],
+   [
+    "terus",
+    17.32,
+    17.76
+   ],
+   [
+    "tersusun.",
+    17.76,
+    18.36
+   ],
+   [
+    "Soalan",
+    18.54,
+    19.34
+   ],
+   [
+    "KBAT",
+    19.34,
+    20.02
+   ],
+   [
+    "berformat",
+    20.02,
+    20.92
+   ],
+   [
+    "SPM.",
+    20.92,
+    21.66
+   ],
+   [
+    "Fakta,",
+    21.74,
+    22.38
+   ],
+   [
+    "petikan,",
+    22.64,
+    23.2
+   ],
+   [
+    "poster,",
+    23.46,
+    23.88
+   ],
+   [
+    "lirik",
+    24.2,
+    24.68
+   ],
+   [
+    "lagu,",
+    24.68,
+    25.12
+   ],
+   [
+    "puisi",
+    25.12,
+    25.72
+   ],
+   [
+    "dan",
+    25.72,
+    25.96
+   ],
+   [
+    "graf.",
+    25.96,
+    26.38
+   ],
+   [
+    "Rumus",
+    26.56,
+    27.28
+   ],
+   [
+    "mudah,",
+    27.28,
+    27.76
+   ],
+   [
+    "panduan",
+    27.78,
+    28.32
+   ],
+   [
+    "langkah",
+    28.32,
+    28.86
+   ],
+   [
+    "demi",
+    28.86,
+    29.08
+   ],
+   [
+    "langkah.",
+    29.08,
+    29.62
+   ],
+   [
+    "Video",
+    30.0,
+    30.28
+   ],
+   [
+    "penerangan",
+    30.28,
+    30.9
+   ],
+   [
+    "setiap",
+    30.9,
+    31.56
+   ],
+   [
+    "jenis",
+    31.56,
+    31.86
+   ],
+   [
+    "KBAT.",
+    31.86,
+    32.26
+   ],
+   [
+    "Skema",
+    32.3,
+    33.04
+   ],
+   [
+    "jawapan",
+    33.04,
+    33.48
+   ],
+   [
+    "lengkap.",
+    33.48,
+    33.96
+   ],
+   [
+    "Bukan",
+    34.02,
+    34.66
+   ],
+   [
+    "tulis",
+    34.66,
+    34.94
+   ],
+   [
+    "banyak,",
+    34.94,
+    35.18
+   ],
+   [
+    "tulis",
+    35.42,
+    36.08
+   ],
+   [
+    "tepat.",
+    36.08,
+    36.6
+   ],
+   [
+    "Tekan",
+    36.74,
+    37.4
+   ],
+   [
+    "link",
+    37.4,
+    37.56
+   ],
+   [
+    "dekat",
+    37.56,
+    37.8
+   ],
+   [
+    "bawah.",
+    37.8,
+    38.26
+   ],
+   [
+    "Hashtag",
+    38.3,
+    39.1
+   ]
+  ]
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "in": "cut",
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Tulis sampai *satu muka surat,*",
+       0.0
+      ],
+      [
+       "markah KBAT *tetap sikit.*",
+       1.66
+      ]
+     ],
+     "at": 0.0,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 0.4,
+     "until": 99,
+     "x": 860,
+     "y": 1090,
+     "size": 190,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "1 MUKA SURAT"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 2.3,
+     "until": 99,
+     "x": 420,
+     "y": 830,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 3.76,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MASALAHNYA:",
+     "at": 3.26,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Bukan *panjang.*",
+       3.76
+      ],
+      [
+       "Tapi *tak ada struktur.*",
+       5.92
+      ]
+     ],
+     "at": 3.76,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 3.3,
+     "x": 340,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       3.3
+      ],
+      [
+       "kira/stres.png",
+       5.92
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 4.3,
+     "until": 99,
+     "x": 860,
+     "y": 1110,
+     "size": 190,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "MARKAH SIKIT"
+    },
+    {
+     "kind": "stamp",
+     "text": "TAK BERSTRUKTUR",
+     "at": 6.6,
+     "x": 700,
+     "y": 1340,
+     "rot": -7,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "start": 8.12,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERAPI KBAT SEJARAH",
+     "at": 7.62,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Terapi KBAT Sejarah SPM*",
+       8.12
+      ],
+      [
+       "bagi rumus *P.E.S.* +",
+       9.74
+      ],
+      [
+       "*Rangka Struktur Kotak*",
+       11.06
+      ]
+     ],
+     "at": 8.12,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "cover.jpg",
+     "at": 8.25,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 14.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 13.9,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Anak *isi kotak ikut langkah,*",
+       14.4
+      ],
+      [
+       "jawapan terus *tersusun.*",
+       16.64
+      ]
+     ],
+     "at": 14.4,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "card",
+     "img": "jenis_kbat.jpg",
+     "at": 14.55,
+     "until": 99,
+     "x": 540,
+     "y": 1030,
+     "w": 700,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.54,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SOALAN KBAT SPM:",
+     "at": 18.04,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Soalan KBAT *berformat SPM:*",
+       18.54
+      ],
+      [
+       "*fakta, petikan, poster,*",
+       21.74
+      ],
+      [
+       "*lirik lagu, puisi & graf*",
+       24.2
+      ]
+     ],
+     "at": 18.54,
+     "until": 99,
+     "y": 600,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 18.6,
+     "x": 300,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/menerang.png",
+       18.6
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 21.74,
+     "until": 99,
+     "x": 800,
+     "y": 1060,
+     "size": 190,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 10,
+     "tag": "PETIKAN"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/papan_tulis.png",
+     "at": 23.46,
+     "until": 99,
+     "x": 820,
+     "y": 1290,
+     "size": 190,
+     "rot": -5,
+     "anim": "drop",
+     "edge": 10,
+     "tag": "POSTER"
+    }
+   ]
+  },
+  {
+   "start": 26.56,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 26.06,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "card",
+     "img": "satu_buku.jpg",
+     "at": 26.65,
+     "until": 99,
+     "x": 540,
+     "y": 690,
+     "w": 700,
+     "rot": -0.5,
+     "sticker": true
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "*Rumus mudah,* langkah demi langkah",
+       26.56
+      ],
+      [
+       "*Video penerangan* setiap KBAT",
+       30.0
+      ],
+      [
+       "*Skema jawapan* lengkap",
+       32.3
+      ]
+     ],
+     "at": 26.56,
+     "until": 99,
+     "y": 1230,
+     "w": 900,
+     "x": 600
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.9,
+     "until": 99,
+     "x": 110,
+     "y": 1150,
+     "size": 66
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 30.9,
+     "until": 99,
+     "x": 110,
+     "y": 1226,
+     "size": 66
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 33.0,
+     "until": 99,
+     "x": 110,
+     "y": 1302,
+     "size": 66
+    }
+   ]
+  },
+  {
+   "start": 34.02,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 33.52,
+     "y": 235,
+     "size": 68,
+     "rot": -1.5
+    },
+    {
+     "kind": "note",
+     "lines": [
+      [
+       "Bukan *tulis banyak,*",
+       34.02
+      ],
+      [
+       "*tulis tepat.*",
+       35.42
+      ]
+     ],
+     "at": 34.02,
+     "until": 99,
+     "y": 540,
+     "w": 960,
+     "x": 540
+    },
+    {
+     "kind": "doodle",
+     "at": 34.05,
+     "x": 420,
+     "y": 1130,
+     "h": 460,
+     "poses": [
+      [
+       "kira/gembira.png",
+       34.05
+      ],
+      [
+       "kira/sapa.png",
+       36.74
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "combo.jpg",
+     "at": 35.6,
+     "until": 99,
+     "x": 820,
+     "y": 1090,
+     "w": 420,
+     "rot": 2,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 36.74,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

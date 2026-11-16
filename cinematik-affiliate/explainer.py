@@ -53,6 +53,7 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # glow, key words neon yellow; torn labels, stamps and stickers as usual
           "kertas-neon": {"INK": (246, 250, 244), "ACC": (255, 226, 60), "K_GOLD": (255, 226, 60), "K_GREEN": (120, 255, 170),
                           "K_DARK": (44, 42, 40), "CTA_TEXT": (28, 30, 28), "PROP_EDGE": (255, 255, 252), "NEON_TEXT": True,
+                          "CAP_FILL": (255, 255, 255), "CAP_EDGE": (8, 58, 42), "HALO": (90, 255, 180),
                           "BADGE_BG": (255, 226, 60), "BADGE_FG": (28, 30, 28)},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}

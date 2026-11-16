@@ -11,3 +11,9 @@ Panggil: **"guna template kertas"**. Contoh: `projects/melukis-kayu-2/`. Kod pem
 - **CTA:** watak menyapa + gambar kecil + butang "Tekan link dekat bawah".
 
 Struktur (video 120k views): soalan anak berjaya → "RAHSIANYA:" → "ANAK LAIN..." + cop → produk → "SIAP DENGAN:" + ✓ → "INGAT!" + CTA.
+
+## Hijau emerald, tulisan neon
+
+`"theme": "kertas-neon"` dengan `"bg_image": "input/emerald.jpg"` (halaman `motion.neon_page(base="emerald")`, aksen kuning):
+tiada kad nota putih, tulisan tangan putih bercahaya pudina terus atas halaman, kata kunci neon kuning bergaris bawah,
+sari kata putih dengan halo pudina. Label kertas koyak, cop dan sticker kekal. Contoh: `projects/b14-kertas-emerald/`.

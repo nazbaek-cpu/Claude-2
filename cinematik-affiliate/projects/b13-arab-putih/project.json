@@ -1,7 +1,18 @@
 {
  "type": "arab",
  "source": "input/vo.mp4",
- "bg": "putih",
+ "bg": "neon",
+ "neon_base": "emerald",
+ "accent": [
+  255,
+  226,
+  60
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
  "whisper_prompt": "Matematik SPM Final Boost, Cikgu Yasir, guru cemerlang Matematik, soalan terpilih, subtopik, jawapan lengkap, jalan kerja.",
  "cta": {
   "at": 45.18,

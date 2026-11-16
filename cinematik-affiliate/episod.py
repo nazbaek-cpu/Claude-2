@@ -40,6 +40,7 @@ TONE = {"red": (255, 112, 96), "yellow": (255, 205, 64), "green": (110, 214, 140
 TONE_LIGHT = {"red": (222, 58, 48), "yellow": (232, 140, 10), "green": (34, 156, 76), "white": (40, 40, 50)}
 LIGHT = [False]   # "bg": "dots" -> white dotted page, dark type
 NEON = [False]    # "neon": true -> titles glow like neon signs (key words in the tone colour)
+NEON_BASE = ["navy"]   # "neon_base": "emerald" -> deep emerald green page
 INK = (24, 28, 44)
 HAND = lambda s: arab.font("PatrickHand-Regular.ttf", s)
 
@@ -53,8 +54,9 @@ def stage(kind="navy"):
         d.line((40, FLOOR, W - 40, FLOOR), fill=(190, 190, 200), width=3); return im
     if NEON[0]:   # the darker navy page of template motion's neon theme, with the floor line
         import motion
-        motion.ACC[0], motion.ACC[1] = (0, 229, 255), (255, 64, 200)
-        im = motion.neon_page(); ImageDraw.Draw(im).line((40, FLOOR, W - 40, FLOOR), fill=(70, 110, 200), width=3); return im
+        motion.ACC[0], motion.ACC[1] = ((255, 226, 60) if NEON_BASE[0] == "emerald" else (0, 229, 255)), (255, 64, 200)
+        im = motion.neon_page(base=NEON_BASE[0])
+        ImageDraw.Draw(im).line((40, FLOOR, W - 40, FLOOR), fill=(90, 200, 150) if NEON_BASE[0] == "emerald" else (70, 110, 200), width=3); return im
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     top, bot = np.array([26, 46, 110], np.float32), np.array([8, 14, 44], np.float32)
     u = (yy / H)[..., None]; a = top * (1 - u) + bot * u
@@ -97,7 +99,7 @@ def title_img(text, tone):
             for w, h_ in r:
                 if neon:   # pale tube core, coloured halo
                     d.text((x, top + i * lh), w, font=f, fill=tuple(int(255 * 0.7 + c * 0.3) for c in col) if h_ else (246, 248, 255))
-                    dg.text((x, top + i * lh), w, font=f, fill=col + (255,) if h_ else (110, 150, 255, 200))
+                    dg.text((x, top + i * lh), w, font=f, fill=col + (255,) if h_ else ((110, 255, 190, 200) if NEON_BASE[0] == "emerald" else (110, 150, 255, 200)))
                 else:
                     d.text((x, 10 + i * lh), w, font=f, fill=col if h_ else base_col)
                 x += f.getlength(w) + sp
@@ -372,7 +374,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    LIGHT[0] = cfg.get("bg") in ("dots", "putih"); NEON[0] = bool(cfg.get("neon")); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
+    LIGHT[0] = cfg.get("bg") in ("dots", "putih"); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

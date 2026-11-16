@@ -48,7 +48,7 @@ def background(kind, image=None):
     if kind == "neon" and not image:   # navy page with a faint blue dot grid and accent glows (template motion's)
         import motion
         motion.ACC[0], motion.ACC[1] = NEON_C
-        return motion.neon_page()
+        return motion.neon_page(base=NEON_BASE[0])
     if kind == "addmath" and not image:   # "background addmath": the light solid-wood boards the user picked
         import explainer
         w = explainer.solid_wood()
@@ -118,6 +118,7 @@ PRJ = [""]
 DARK = [False]   # true when the page sits on a picture background (chalkboard)
 NEON = [False]   # "bg": "neon": navy page (template motion's), glowing subtitle words instead of the white card
 NEON_C = [(0, 229, 255), (255, 64, 200)]
+NEON_BASE = ["navy"]   # "neon_base": "emerald" -> deep emerald green page instead of navy
 _chars = {}
 ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
@@ -375,9 +376,10 @@ def sub_card(base, sc, toks, t, a):
             for tk, ts in ln:
                 k = tk.lower().strip(".,?!\"") in keyset; on = t >= ts - 0.05
                 if k: col = tuple(int(255 * 0.7 + c * 0.3) for c in acc) if on else tuple(int(c * 0.35) + 20 for c in acc)
-                else: col = (246, 248, 255) if on else (112, 122, 160)
+                else: col = (246, 248, 255) if on else ((110, 160, 140) if NEON_BASE[0] == "emerald" else (112, 122, 160))
                 dc.text((x, y), tk, font=f, fill=col, anchor="lm")
-                if on: dg.text((x, y), tk, font=f, fill=acc + (255,) if k else (110, 150, 255, 210), anchor="lm")
+                hz = (110, 255, 190, 210) if NEON_BASE[0] == "emerald" else (110, 150, 255, 210)
+                if on: dg.text((x, y), tk, font=f, fill=acc + (255,) if k else hz, anchor="lm")
                 x += f.getlength(tk + " ")
         out = Image.new("RGBA", core.size, (0, 0, 0, 0))
         for r in (26, 26, 9, 3): out.alpha_composite(glow.filter(ImageFilter.GaussianBlur(r)))
@@ -461,7 +463,7 @@ def sfx_track(cfg, dur):
 
 def main():
     prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
-    NEON[0] = cfg.get("bg") == "neon"
+    NEON[0] = cfg.get("bg") == "neon"; NEON_BASE[0] = cfg.get("neon_base", "navy")
     if cfg.get("accent"): NEON_C[0] = tuple(cfg["accent"])
     if cfg.get("accent2"): NEON_C[1] = tuple(cfg["accent2"])
     DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") in ("addmath", "neon")

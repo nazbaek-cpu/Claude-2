@@ -1,7 +1,8 @@
 {
  "type": "episod",
  "source": "input/vo.mp4",
- "bg": "putih",
+ "neon": true,
+ "neon_base": "emerald",
  "episode": "EPISOD 4 · TENGOK VS BUAT",
  "whisper_prompt": "Matematik SPM Final Boost, soalan terpilih, subtopik, jawapan lengkap, bengkel kalkulator, rakaman, 200 muka surat, replay, pause.",
  "follow": "Ikut untuk episod seterusnya",
@@ -133,11 +134,12 @@
    "tone": "red",
    "items": [
     {
-     "kind": "prop",
-     "img": "icons/peperiksaan",
+     "kind": "photo",
+     "img": "icons/peperiksaan.png",
      "x": 300,
-     "at": 15.85,
-     "w": 260
+     "y": 1180,
+     "w": 240,
+     "at": 15.85
     },
     {
      "kind": "char",
@@ -153,7 +155,7 @@
    "start": 19.98,
    "end": 27.38,
    "title": "Kali ni, *KAU PEGANG PEN*",
-   "tone": "green",
+   "tone": "yellow",
    "items": [
     {
      "kind": "photo",
@@ -183,7 +185,7 @@
    "start": 27.38,
    "end": 36.4,
    "title": "Siap *BENGKEL KALKULATOR*",
-   "tone": "green",
+   "tone": "yellow",
    "items": [
     {
      "kind": "photo",
@@ -199,7 +201,7 @@
    "start": 36.4,
    "end": 40.24,
    "title": "Lebih *200* muka surat",
-   "tone": "green",
+   "tone": "yellow",
    "items": [
     {
      "kind": "prop",
@@ -230,7 +232,7 @@
    "start": 40.24,
    "end": 42.44,
    "title": "Kurang tengok. *LEBIH BUAT.*",
-   "tone": "green",
+   "tone": "yellow",
    "items": [
     {
      "kind": "prop",

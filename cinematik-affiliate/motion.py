@@ -62,16 +62,24 @@ def page(dots_gap=28, glow=True):
     return im
 
 
-def neon_page(dots_gap=36):
-    """deep navy page: radial gradient, faint blue dot grid, soft accent glows in two corners, thin glowing frame"""
+CUR_BASE = ["navy"]
+def haze():
+    """the soft glow colour behind small white words: blue on navy, mint on emerald"""
+    return (150, 255, 210) if CUR_BASE[0] == "emerald" else (150, 190, 255)
+NEON_BASE = {"navy": ((18, 30, 78), (5, 9, 30), (38, 56, 112)),          # centre, edge, dot colour
+             "emerald": ((14, 104, 76), (2, 38, 28), (36, 132, 100))}
+def neon_page(dots_gap=36, base="navy"):
+    """deep navy (or emerald) page: radial gradient, faint dot grid, soft accent glows in two corners, thin glowing frame"""
+    cc, ce, cd = NEON_BASE.get(base, NEON_BASE["navy"]); CUR_BASE[0] = base
     yy, xx = np.mgrid[0:H, 0:W]; r = np.sqrt(((xx - W * 0.5) / W) ** 2 + ((yy - H * 0.42) / H) ** 2) / 0.62
-    r = np.clip(r, 0, 1)[..., None]; c0, c1 = np.array([18, 30, 78]), np.array([5, 9, 30])
+    r = np.clip(r, 0, 1)[..., None]; c0, c1 = np.array(cc), np.array(ce)
     im = Image.fromarray((c0 * (1 - r) + c1 * r).astype(np.uint8), "RGB"); d = ImageDraw.Draw(im); rr = 2.0
     for y in np.arange(dots_gap / 2, H, dots_gap):
         for x in np.arange(dots_gap / 2, W, dots_gap):
-            d.ellipse((x - rr, y - rr, x + rr, y + rr), fill=(38, 56, 112))
+            d.ellipse((x - rr, y - rr, x + rr, y + rr), fill=cd)
     im = im.convert("RGBA"); lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); g = ImageDraw.Draw(lay)
-    for (cx, cy, rad, op), col in [((120, 240, 320, 46), ACC[0]), ((990, 1680, 360, 46), ACC[1])]:
+    second = (60, 255, 170) if base == "emerald" else ACC[1]   # pink turns muddy on green: mint glow there
+    for (cx, cy, rad, op), col in [((120, 240, 320, 46), ACC[0]), ((990, 1680, 360, 46), second)]:
         g.ellipse((cx - rad, cy - rad, cx + rad, cy + rad), fill=col + (op,))
     im.alpha_composite(lay.filter(ImageFilter.GaussianBlur(130)))
     fr = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(fr).rounded_rectangle((30, 30, W - 31, H - 31), 34, outline=ACC[0] + (150,), width=3)
@@ -128,7 +136,7 @@ def glyph(word, big, color):
         asc, desc = f.getmetrics(); l, _, r, _ = f.getbbox(word); t = 0; w, h = r - l + 8, asc + desc + 8   # same box per size: one baseline
         if NEON[0]:
             m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4), word, font=f, fill=255)
-            im, pad = neon_glyph(m, w, h, ACC[0] if big else (150, 190, 255))
+            im, pad = neon_glyph(m, w, h, ACC[0] if big else haze())
             if not big:   # small words: crisp white on a faint blue haze
                 im = im.copy(); im.putalpha(im.split()[3].point(lambda v: v * 0.55)); wl = Image.new("RGBA", im.size, color + (0,))
                 wm = Image.new("L", im.size, 0); wm.paste(m, (pad, pad)); wl.putalpha(wm); im.alpha_composite(wl)
@@ -427,7 +435,7 @@ def main():
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
     if cfg.get("theme") == "neon":   # navy page, neon key words, white sentence text
-        NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36))
+        NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36), cfg.get("neon_base", "navy"))
     elif cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
         page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
     else:

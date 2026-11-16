@@ -49,11 +49,17 @@ THEMES = {"navy": {"DARK": (20, 52, 132), "DARK_BOT": (4, 16, 52), "ACC": (255, 
           # the same template on solid wood boards instead of the sheet of paper
           "kertas-kayu": {"KAYU": True, "PEACH_TOP": (128, 84, 52), "INK": (44, 42, 40), "ACC": (196, 52, 46), "K_GREEN": (60, 170, 96),
                           "K_GOLD": (214, 56, 48), "K_DARK": (44, 42, 40), "CTA_TEXT": (255, 255, 255), "PROP_EDGE": (255, 255, 252)},
+          # "kertas" on a deep emerald page (bg_image) with neon writing: no white note card, white handwriting with a mint
+          # glow, key words neon yellow; torn labels, stamps and stickers as usual
+          "kertas-neon": {"INK": (246, 250, 244), "ACC": (255, 226, 60), "K_GOLD": (255, 226, 60), "K_GREEN": (120, 255, 170),
+                          "K_DARK": (44, 42, 40), "CTA_TEXT": (28, 30, 28), "PROP_EDGE": (255, 255, 252), "NEON_TEXT": True,
+                          "BADGE_BG": (255, 226, 60), "BADGE_FG": (28, 30, 28)},
           "mat": {"MAT": True, "PEACH_TOP": (30, 102, 76), "INK": (250, 248, 240), "ACC": (246, 196, 60), "CTA_TEXT": (28, 30, 28),
                   "BADGE_BG": (246, 196, 60), "BADGE_FG": (28, 30, 28), "TORN": True, "PROP_EDGE": (255, 255, 252)}}
 RULED, GRID, TINT_PROPS, RULE_LINE, PROP_EDGE = False, 0, False, (233, 225, 212), None
 MAT, MEJA, TORN, BADGE_BG, BADGE_FG = False, False, False, None, (255, 255, 255)
 KAYU, TEXT_SHADOW, KERTAS = False, False, False
+NEON_TEXT, GLOW_PLAIN = False, (110, 255, 190)   # "kertas-neon": glowing writing (key words glow in K_GOLD / K_GREEN)
 BG_IMAGE = None                                # "bg_image" in project.json: a picture behind every light scene
 K_DARK, K_GREEN, K_GOLD, K_TAPE = (16, 56, 46), (27, 106, 70), (175, 121, 33), (233, 201, 128)   # "kartun" palette
 cache = {}
@@ -172,6 +178,13 @@ def text_img(txt, fnt, fill, track=0):
         d.text((pad, pad), txt, font=fnt, fill=fill + (255,))
     cache[key] = img
     return img
+
+def neon_glow(img, glow):
+    """img (text) over its own coloured halo: `glow` is a same-size RGBA layer of the letters in their glow colours"""
+    pad = 50; out = Image.new("RGBA", (img.width + pad * 2, img.height + pad * 2), (0, 0, 0, 0))
+    g = Image.new("RGBA", out.size, (0, 0, 0, 0)); g.alpha_composite(glow, (pad, pad))
+    for r in (24, 24, 8, 3): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r)))
+    out.alpha_composite(img, (pad, pad)); return out
 
 def soft_shadow(img, alpha=110, blur=10, dy=6):
     """img over a soft drop shadow (not cached here: callers cache what they reuse)"""
@@ -408,7 +421,8 @@ def say(frame, t, it, sc):
         if not txt: continue
         while size > 40 and font(kind, size).getlength(txt) > 1000: size -= 4
         img = text_img(txt, font(kind, size), fill); h_ = img.height
-        if TEXT_SHADOW: img = soft_shadow(img, 170, 7, 4)   # light letters on a busy background
+        if NEON_TEXT: img = neon_glow(img, text_img(txt, font(kind, size), fill if fill != INK else GLOW_PLAIN))
+        elif TEXT_SHADOW: img = soft_shadow(img, 170, 7, 4)   # light letters on a busy background
         blend(frame, anim(img, a, 1.0), W / 2, y + h_ / 2); y += h_ * 0.9
 
 def tape(frame, t, it, sc):
@@ -1133,12 +1147,14 @@ def note(frame, t, it, sc):
     the card pops in at "at", every line writes itself word by word"""
     if t < it["at"] or t >= it.get("until", 1e9): return
     size = it.get("size", 62); f = font("hand", size); w = it.get("w", 960); lh = int(size * 1.35)
-    key = ("note", w, len(it["lines"]), size, it.get("rot", -0.6))
+    key = ("note", w, len(it["lines"]), size, it.get("rot", -0.6), NEON_TEXT)
     if key not in cache:
         card_ = Image.new("RGBA", (w, lh * len(it["lines"]) + 70), (0, 0, 0, 0))
-        ImageDraw.Draw(card_).rounded_rectangle((0, 0, card_.width - 1, card_.height - 1), 18, fill=(252, 251, 248, 255))
+        if not NEON_TEXT:   # neon: the writing sits straight on the page
+            ImageDraw.Draw(card_).rounded_rectangle((0, 0, card_.width - 1, card_.height - 1), 18, fill=(252, 251, 248, 255))
         cache[key] = card_
     img = cache[key].copy(); d = ImageDraw.Draw(img)
+    glow = Image.new("RGBA", img.size, (0, 0, 0, 0)) if NEON_TEXT else None; dg = ImageDraw.Draw(glow) if glow else None
     for li, (txt, at) in enumerate(it["lines"]):
         words = txt.split(" "); plain = [w_.replace("*", "") for w_ in words]; total = f.getlength(" ".join(plain))
         x = w / 2 - total / 2; y = 35 + li * lh; inside = False
@@ -1148,11 +1164,14 @@ def note(frame, t, it, sc):
             if wa > 0:
                 col = (K_GOLD if red else INK) + (int(255 * wa),)
                 d.text((x, y), pw, font=f, fill=col)
+                if dg: dg.text((x, y), pw, font=f, fill=(K_GOLD if red else GLOW_PLAIN) + (int(255 * wa),))
                 if red:   # the underline draws itself under the red word
                     u = ease_out(ramp(t, at + 0.07 * wi + 0.15, 0.3)); ww = f.getlength(pw + " " if inside else pw)   # one line under a phrase
-                    if u > 0: d.line([(x, y + size * 1.08), (x + ww * u, y + size * 1.1 + 2)], fill=K_GOLD + (255,), width=5)
+                    if u > 0:
+                        d.line([(x, y + size * 1.08), (x + ww * u, y + size * 1.1 + 2)], fill=K_GOLD + (255,), width=5)
+                        if dg: dg.line([(x, y + size * 1.08), (x + ww * u, y + size * 1.1 + 2)], fill=K_GOLD + (255,), width=5)
             x += f.getlength(pw + " ")
-    img = soft_shadow(img, 80, 12, 8).rotate(it.get("rot", -0.6), Image.BICUBIC, expand=True)
+    img = (neon_glow(img, glow) if glow else soft_shadow(img, 80, 12, 8)).rotate(it.get("rot", -0.6), Image.BICUBIC, expand=True)
     p = ramp(t, it["at"], 0.3); a = ease_out(p * 2) * (1 - ramp(t, it.get("until", 1e9) - 0.25, 0.25)); s_ = 0.85 + 0.15 * ease_back(p, 2.0)
     img = img.resize((max(1, int(img.width * s_)), max(1, int(img.height * s_))), Image.BICUBIC)
     blend(frame, anim(img, a, 1.0), it.get("x", W / 2), it.get("y", 520))

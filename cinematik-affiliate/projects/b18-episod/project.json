@@ -1,0 +1,287 @@
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "neon": true,
+ "neon_base": "emerald",
+ "episode": "EPISOD 6 · ADD MATHS ADA HURUF?",
+ "whisper_prompt": "Latihan Topikal Lengkap Matematik Tambahan Tingkatan 4, Add Maths, Form 4, log, punca kuasa, fungsi, indeks, surd, logaritma, nombor indeks, dwibahasa.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 50.0,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.47,
+   "title": "Dulu Matematik *PENUH NOMBOR*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "MATEMATIK",
+     "name": "",
+     "text": "12 + 35 = 47|8 × 6 = 48",
+     "w": 560,
+     "h": 400,
+     "text_size": 54,
+     "x": 350,
+     "y": 950,
+     "at": 0.1
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 860,
+     "at": 0.2,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 3.47,
+   "end": 10.44,
+   "title": "Form 4: *HURUF LAGI BANYAK*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "ADD MATHS",
+     "name": "",
+     "text": "f(x) = 2x + 3|log 8 = x|x + y = 10",
+     "w": 560,
+     "h": 400,
+     "text_size": 54,
+     "x": 350,
+     "y": 950,
+     "at": 3.5
+    },
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "x": 860,
+     "at": 3.55,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 10.44,
+   "end": 16.6,
+   "title": "\"Senang je *NI*\"",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "icons/cikgu_mengajar.png",
+     "x": 280,
+     "y": 1170,
+     "w": 260,
+     "at": 10.5
+    },
+    {
+     "kind": "bubble",
+     "text": "Senang je ni!",
+     "x": 420,
+     "y": 860,
+     "at": 11.52,
+     "tail": "left"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 860,
+     "at": 10.6,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 16.6,
+   "end": 21.04,
+   "title": "\"Aku memang *TAK BOLEH*\"",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 560,
+     "at": 16.65,
+     "size": 600,
+     "name": "Abang, 16",
+     "grey": [
+      [
+       19.3,
+       99
+      ]
+     ]
+    },
+    {
+     "kind": "words",
+     "text": "tak boleh",
+     "x": 560,
+     "y": 1080,
+     "at": 17.5,
+     "n": 4
+    }
+   ]
+  },
+  {
+   "start": 21.04,
+   "end": 25.28,
+   "title": "Bukan tak boleh. *BELUM BIASA.*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 560,
+     "at": 21.1,
+     "size": 600,
+     "name": "Abang, 16",
+     "char_at": [
+      [
+       23.3,
+       "abang/idea"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 25.28,
+   "end": 31.68,
+   "title": "Jumpa dalam *SOALAN*, bukan nota",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 320,
+     "at": 25.3,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 860,
+     "at": 25.35,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 31.68,
+   "end": 38.08,
+   "title": "Latihan Topikal *LENGKAP*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "sp_cover.jpg",
+     "x": 360,
+     "y": 1020,
+     "w": 330,
+     "at": 31.75
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 850,
+     "at": 31.8,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 38.08,
+   "end": 42.7,
+   "title": "*10 TOPIK* ikut buku teks",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "sp_topik.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 560,
+     "at": 38.1
+    }
+   ]
+  },
+  {
+   "start": 42.7,
+   "end": 46.32,
+   "title": "Soalan pendek, *DWIBAHASA*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "sp_soalan.jpg",
+     "x": 400,
+     "y": 1020,
+     "w": 540,
+     "at": 42.75
+    },
+    {
+     "kind": "char",
+     "char": "abang/menerang",
+     "x": 880,
+     "at": 42.8,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 46.32,
+   "end": 50.0,
+   "title": "Huruf jadi *KAWAN*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 380,
+     "at": 46.35,
+     "w": 520
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 860,
+     "at": 46.4,
+     "size": 600,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "hearts",
+     "x": 600,
+     "y": 1000,
+     "at": 47.0
+    }
+   ]
+  },
+  {
+   "start": 50.0,
+   "end": 51.72,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "sp_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 50.05
+    }
+   ]
+  }
+ ]
+}

@@ -1,1 +1,221 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "episode": "EPISOD 7 · BETUL KE AYAT NI?",
+ "whisper_prompt": "120 SPM English Model Essays, mak ayah, essay, struktur ditanda, tip langkah demi langkah.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 26.16,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.56,
+   "title": "\"Betul ke ayat *ENGLISH* ni?\"",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "ESSAY ENGLISH",
+     "name": "Abang · Tingkatan 4",
+     "text": "My holiday was|very fun and|I very happy.",
+     "w": 560,
+     "h": 430,
+     "text_size": 52,
+     "rewrite_size": 46,
+     "x": 380,
+     "y": 950,
+     "at": 0.1
+    },
+    {
+     "kind": "char",
+     "char": "bapa/berfikir",
+     "x": 870,
+     "at": 0.3,
+     "size": 380,
+     "name": "Ayah"
+    }
+   ]
+  },
+  {
+   "start": 3.56,
+   "end": 8.34,
+   "title": "Ayah pun *TAK PASTI*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "char",
+     "char": "bapa/pening",
+     "x": 290,
+     "at": 3.6,
+     "size": 380,
+     "name": "Ayah",
+     "char_at": [
+      [
+       5.84,
+       "bapa/senyum"
+      ]
+     ]
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 860,
+     "at": 3.7,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 8.34,
+   "end": 11.88,
+   "title": "Perlukan *CONTOH* yang betul",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 330,
+     "at": 8.4,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/idea",
+     "x": 860,
+     "at": 8.45,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 11.88,
+   "end": 14.9,
+   "title": "120 SPM English *MODEL ESSAYS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 360,
+     "y": 1010,
+     "w": 340,
+     "at": 11.95
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 860,
+     "at": 12.0,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 14.9,
+   "end": 17.46,
+   "title": "Struktur *DITANDA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_essay.jpg",
+     "x": 540,
+     "y": 1040,
+     "w": 560,
+     "at": 14.95
+    }
+   ]
+  },
+  {
+   "start": 17.46,
+   "end": 22.62,
+   "title": "Rujuk & *BANDINGKAN*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "ESSAY ENGLISH",
+     "name": "Abang · Tingkatan 4",
+     "text": "My holiday was|very fun and|I very happy.",
+     "w": 560,
+     "h": 430,
+     "text_size": 52,
+     "rewrite_size": 46,
+     "x": 380,
+     "y": 950,
+     "at": 17.5,
+     "strike_at": 18.6,
+     "rewrite": "I was very happy.",
+     "rewrite_at": 19.5
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 860,
+     "at": 17.55,
+     "size": 600,
+     "name": "Abang, 16"
+    }
+   ]
+  },
+  {
+   "start": 22.62,
+   "end": 26.16,
+   "title": "Ayah tak perlu *FASIH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/sofa",
+     "x": 560,
+     "at": 22.65,
+     "w": 540
+    },
+    {
+     "kind": "char",
+     "char": "bapa/thumbs_up",
+     "x": 270,
+     "at": 22.7,
+     "size": 380,
+     "name": "Ayah"
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 870,
+     "at": 22.75,
+     "size": 600,
+     "name": "Abang, 16"
+    },
+    {
+     "kind": "hearts",
+     "x": 560,
+     "y": 1000,
+     "at": 23.4
+    }
+   ]
+  },
+  {
+   "start": 26.16,
+   "end": 27.64,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 26.2
+    }
+   ]
+  }
+ ]
+}

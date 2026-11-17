@@ -1,1 +1,483 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "BTP Infografik Sejarah, esei Sejarah, isi, perenggan, mind map, carta, Tingkatan 4 dan 5.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "soalan esei Sejarah keluar,",
+     "key": "KAU TAHU CERITANYA",
+     "at": 0.0,
+     "until": 3.8,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 0.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ESEI SEJARAH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.8,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 3.3,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila nak tulis isi 1, 2, 3, 4...",
+     "key": "KEPALA KOSONG",
+     "at": 3.8,
+     "until": 10.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       3.3
+      ],
+      [
+       "kira/stres.png",
+       8.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 5.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ISI 1, 2, 3, 4"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 8.6,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 10.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "AKHIRNYA...",
+     "at": 9.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tulis berpusing-pusing,",
+     "key": "SATU ISI DIULANG",
+     "at": 10.38,
+     "until": 15.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "penat menulis, tapi",
+     "key": "MARKAH TAK NAIK",
+     "at": 15.42,
+     "until": 18.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 9.9,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/stres.png",
+       9.9
+      ],
+      [
+       "kira/sedih.png",
+       16.78
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 16.78,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MARKAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "BERPUSING!",
+     "at": 12.9,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 18.46,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 17.96,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "yang dikira isinya,",
+     "key": "BUKAN PANJANGNYA",
+     "at": 18.46,
+     "until": 22.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 18.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       18.0
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 19.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "ISI",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 22.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MASALAHNYA:",
+     "at": 22.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bukan kau tak baca, tapi baca",
+     "key": "PERENGGAN PANJANG",
+     "at": 22.5,
+     "until": 27.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "say",
+     "text": "jadi isi",
+     "key": "TAK TERSUSUN",
+     "at": 27.2,
+     "until": 30.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 22.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       22.0
+      ],
+      [
+       "kira/terkejut.png",
+       27.2
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 24.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BUKU TEKS TEBAL"
+    }
+   ]
+  },
+  {
+   "start": 30.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BTP INFOGRAFIK SEJARAH",
+     "at": 29.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "isi & peristiwa penting buku teks jadi",
+     "key": "INFOGRAFIK BERWARNA",
+     "at": 30.42,
+     "until": 37.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "siap",
+     "key": "MIND MAP & CARTA",
+     "at": 37.96,
+     "until": 39.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 30.5,
+     "until": 35.8,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "btp_kedaulatan.jpg",
+     "at": 35.8,
+     "until": 99,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 39.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 39.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "isi dah tersusun,",
+     "key": "SENANG INGAT SATU-SATU",
+     "at": 39.62,
+     "until": 42.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "tingkatan 4 & 5, kecil,",
+     "key": "MUAT DALAM POKET",
+     "at": 42.94,
+     "until": 46.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "btp_sosial.jpg",
+     "at": 39.7,
+     "until": 42.94,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 42.94,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": 2,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 46.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 46.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ingat isi,",
+     "key": "BARU BOLEH TULIS ISI",
+     "at": 46.5,
+     "until": 51.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 46.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       46.0
+      ],
+      [
+       "kira/sapa.png",
+       49.22
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 47.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 49.22,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

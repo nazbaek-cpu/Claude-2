@@ -1,1 +1,99 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "MPT4, 28 Hari Persediaan MPT4, Matematik Tahun 4, Simulasi MPT4, cuti sekolah, ibu ayah, give up",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.27,
+   "end": 6.0,
+   "title": {
+    "kicker": "IBU AYAH ANAK TAHUN 3",
+    "lines": [
+     "Tahun depan",
+     "masuk tahun 4?"
+    ],
+    "accent": [
+     "tahun",
+     "4?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 6.03,
+   "end": 10.4,
+   "kicker": "JANGAN TERKEJUT",
+   "head": "Soalan MPT4."
+  },
+  {
+   "start": 10.43,
+   "end": 14.5,
+   "kicker": "TAK BELAJAR",
+   "head": "Tahun 1, 2 & 3."
+  },
+  {
+   "start": 14.53,
+   "end": 17.3,
+   "kicker": "CUTI SEKOLAH",
+   "head": "Yang panjang."
+  },
+  {
+   "start": 17.33,
+   "end": 23.98,
+   "kicker": "BAGI DIA",
+   "head": "Latihan 28 hari.",
+   "pills": [
+    [
+     "Modul MPT4",
+     20.59
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 24.01,
+   "end": 29.78,
+   "kicker": "SUPAYA ANAK",
+   "head": "Tak terkejut."
+  },
+  {
+   "start": 29.81,
+   "end": 33.38,
+   "kicker": "IBU AYAH",
+   "head": "Sedia sekarang."
+  },
+  {
+   "start": 33.41,
+   "end": 42.6,
+   "kicker": "BIAR DIA",
+   "head": "Tak cepat give up."
+  },
+  {
+   "start": 42.63,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

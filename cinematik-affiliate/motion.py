@@ -249,7 +249,8 @@ def dashed(s=210):
 
 def checklist(title, rows, t, bad=False):
     w = 860; rh = 92; h = 120 + rh * len(rows); im = card_box(w, h, 34); d = ImageDraw.Draw(im)
-    d.text((48, 64), title, font=SANS(40, 800), fill=(24, 44, 120) if NEON[0] else ACC[0], anchor="lm")
+    light = 0.299 * ACC[0][0] + 0.587 * ACC[0][1] + 0.114 * ACC[0][2] > 170   # a pale accent (chalk yellow, cyan) can't be read on the white card
+    d.text((48, 64), title, font=SANS(40, 800), fill=(24, 44, 120) if NEON[0] or light else ACC[0], anchor="lm")
     for i, (txt, at) in enumerate(rows):
         y = 140 + i * rh; on = t >= at; q = ease(ramp(t, at, 0.25))
         d.rounded_rectangle((40, y - 34, w - 40, y + 34), 18, fill=(248, 246, 247))

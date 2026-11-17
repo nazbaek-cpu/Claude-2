@@ -1,1 +1,196 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "BTP Infografik Sejarah, cikgu Sejarah, recap, mind map, carta, peristiwa penting, buku teks.",
+ "cta": {
+  "at": 24.6,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.18,
+   "lines": [
+    "Cikgu *Sejarah,*",
+    "5 minit pertama kelas,",
+    "murid *belum fokus.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "icons/cikgu_mengajar",
+     "at": 0.2,
+     "size": 520,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 4.18,
+   "end": 7.52,
+   "lines": [
+    "Guna *5 minit* tu",
+    "untuk *recap* bab semalam."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/jam.png",
+       "label": "5 minit",
+       "at": 4.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7.52,
+   "end": 12.12,
+   "lines": [
+    "*BTP Infografik*",
+    "Sejarah, setiap bab",
+    "dalam *satu infografik.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "btp_cover.jpg",
+     "at": 7.6,
+     "step": 1,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "start": 12.12,
+   "end": 15.38,
+   "lines": [
+    "Cikgu cuma *tunjuk,*",
+    "murid cuba *ingat semula.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_kedaulatan.jpg",
+     "at": 12.2,
+     "w": 860,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 15.38,
+   "end": 19.3,
+   "lines": [
+    "Siap dalam *setiap bab:*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "BTP Infografik Sejarah",
+     "at": 15.4,
+     "y": 1150,
+     "rows": [
+      [
+       "Mind map",
+       15.38
+      ],
+      [
+       "Carta",
+       16.22
+      ],
+      [
+       "Peristiwa penting",
+       17.02
+      ],
+      [
+       "Ikut buku teks",
+       18.1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19.3,
+   "end": 22.36,
+   "lines": [
+    "Murid pun boleh *beli satu,*",
+    "ulang sendiri *di rumah.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "btp_sosial.jpg",
+     "at": 19.4,
+     "step": 2,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "start": 22.36,
+   "end": 24.6,
+   "lines": [
+    "Recap *pendek,*",
+    "ingatan *panjang.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/dua_thumbs",
+     "at": 22.4,
+     "size": 520,
+     "x": 540,
+     "y": 1320
+    }
+   ]
+  },
+  {
+   "start": 24.6,
+   "end": 26.12,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 24.65,
+     "w": 480,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 24.7,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

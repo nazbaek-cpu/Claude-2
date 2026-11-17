@@ -1,0 +1,426 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, Tingkatan 1, 2 dan 3, UPSA, UASA, kod QR, Google Form, pengawas, 10 minit.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DALAM DEWAN...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "objektif Sejarah. soalan 1, soalan 2,",
+     "key": "FAHAM, FAHAM",
+     "at": 0.0,
+     "until": 5.78,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.05,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/berfikir.png",
+       0.0
+      ],
+      [
+       "kira/gembira.png",
+       3.32
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 0.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "OBJEKTIF SEJARAH"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 5.78,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TIBA-TIBA...",
+     "at": 5.28,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "pengawas cakap,",
+     "key": "TINGGAL 10 MINIT!",
+     "at": 5.78,
+     "until": 8.88,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "soalan",
+     "key": "MASIH BANYAK",
+     "at": 8.88,
+     "until": 10.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 5.3,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/terkejut.png",
+       5.3
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "emoji": "Alarm clock",
+     "at": 6.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 200,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "10 MINIT"
+    }
+   ]
+  },
+  {
+   "start": 10.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "AKHIRNYA...",
+     "at": 9.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "yang last-last tu,",
+     "key": "TERUS TEMBAK",
+     "at": 10.48,
+     "until": 13.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "bukan tak tahu, tapi",
+     "key": "TAK BIASA JAWAB LAJU",
+     "at": 13.06,
+     "until": 16.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 10.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/stres.png",
+       10.0
+      ],
+      [
+       "kira/sedih.png",
+       14.6
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 10.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 5,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "TEKA JE"
+    },
+    {
+     "kind": "stamp",
+     "text": "TEMBAK!",
+     "at": 11.6,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 13.6,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 16.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT!",
+     "at": 16.46,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "laju datang dari latihan,",
+     "key": "BUKAN BACA NOTA",
+     "at": 16.96,
+     "until": 20.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 16.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/menerang.png",
+       16.5
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 18.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BACA NOTA JE?"
+    }
+   ]
+  },
+  {
+   "start": 20.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "1088 SOALAN OBJEKTIF SEJARAH",
+     "at": 19.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Tingkatan 1, 2 & 3,",
+     "key": "IKUT BAB BUKU TEKS",
+     "at": 20.24,
+     "until": 28.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "siap set",
+     "key": "UPSA & UASA",
+     "at": 28.82,
+     "until": 31.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "s1088_cover.jpg",
+     "at": 20.3,
+     "until": 28.82,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "s1088_kandungan.jpg",
+     "at": 28.82,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 620,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 31.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP DENGAN:",
+     "at": 30.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "setiap bab ada kod QR Google Form,",
+     "key": "MARKAH KELUAR TERUS",
+     "at": 31.08,
+     "until": 36.46,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "siap jawapan lengkap",
+     "key": "DENGAN PENERANGAN",
+     "at": 36.46,
+     "until": 38.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "s1088_soalan.jpg",
+     "at": 31.15,
+     "until": 99,
+     "x": 540,
+     "y": 1120,
+     "w": 760,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 38.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BILA DAH BIASA...",
+     "at": 38.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "10 minit terakhir tu",
+     "key": "CUKUP UNTUK SEMAK",
+     "at": 38.98,
+     "until": 44.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 38.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "kira/gembira.png",
+       38.5
+      ],
+      [
+       "kira/sapa.png",
+       42.5
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "s1088_cover.jpg",
+     "at": 39.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 40.6,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 42.5,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

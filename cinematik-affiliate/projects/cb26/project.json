@@ -1,1 +1,87 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "MPT4, 28 Hari Persediaan MPT4, Matematik Tahun 4, modul, cuti sekolah",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.37,
+   "end": 4.84,
+   "title": {
+    "kicker": "IBU AYAH ANAK TAHUN 3",
+    "lines": [
+     "Tahun depan",
+     "masuk tahun 4."
+    ],
+    "accent": [
+     "tahun",
+     "4."
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 4.87,
+   "end": 9.0,
+   "kicker": "SOALAN YANG AKAN",
+   "head": "Diuji dalam MPT4."
+  },
+  {
+   "start": 9.03,
+   "end": 14.9,
+   "kicker": "DALAM BUKU NI",
+   "head": "Siap persediaan."
+  },
+  {
+   "start": 14.93,
+   "end": 19.44,
+   "kicker": "CUTI SEKOLAH NI",
+   "head": "Latihan 28 hari."
+  },
+  {
+   "start": 19.47,
+   "end": 25.72,
+   "kicker": "BUAT SIKIT-SIKIT",
+   "head": "Cover semua modul.",
+   "pills": [
+    [
+     "28 hari",
+     21.25
+    ]
+   ],
+   "pills_y": 150
+  },
+  {
+   "start": 25.75,
+   "end": 30.44,
+   "kicker": "PERSEDIAAN",
+   "head": "MPT4 tahun depan."
+  },
+  {
+   "start": 30.47,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

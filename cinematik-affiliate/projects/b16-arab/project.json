@@ -1,0 +1,306 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "1088 Soalan Objektif Sejarah, Tingkatan 1, 2 dan 3, kod QR, Google Form, jawapan lengkap dengan penerangan, rujukan muka surat buku teks, cuti sekolah.",
+ "cta": {
+  "at": 41.76,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.32,
+   "line": "Mak ayah, | cuti sekolah dah mula.",
+   "keys": [
+    "cuti",
+    "sekolah"
+   ],
+   "icons": [
+    {
+     "img": "ortu/mak/gembira.png",
+     "x": 270,
+     "y": 470,
+     "at": 0.1,
+     "size": 256,
+     "tag": "MAK"
+    },
+    {
+     "img": "ortu/ayah/gembira.png",
+     "x": 810,
+     "y": 470,
+     "at": 0.4,
+     "size": 256,
+     "tag": "AYAH"
+    }
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/raikan",
+      "x": 540,
+      "size": 551,
+      "at": 0.6
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 2.32,
+   "end": 6.6,
+   "line": "Dua bulan anak main game, | tengok video, | tidur lambat.",
+   "keys": [
+    "game,",
+    "video,",
+    "lambat."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/game",
+      "x": 380,
+      "size": 609,
+      "at": 2.35,
+      "char_at": [
+       [
+        4.42,
+        "adikhp/video"
+       ]
+      ]
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "rumah/tv.png",
+     "x": 820,
+     "y": 520,
+     "at": 4.42,
+     "size": 256,
+     "tag": "VIDEO"
+    },
+    {
+     "img": "rumah/lampu_tidur.png",
+     "x": 820,
+     "y": 1000,
+     "at": 5.44,
+     "size": 216,
+     "tag": "TIDUR LAMBAT"
+    }
+   ]
+  },
+  {
+   "start": 6.6,
+   "end": 11.52,
+   "line": "Buka sekolah nanti, | cikgu tanya bab tahun lepas, | anak dah tak ingat apa-apa.",
+   "keys": [
+    "tak",
+    "ingat",
+    "apa-apa."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/terkejut",
+      "x": 680,
+      "size": 580,
+      "at": 9.74
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "icons/cikgu_mengajar.png",
+     "x": 260,
+     "y": 560,
+     "at": 8.02,
+     "size": 270,
+     "tag": "CIKGU TANYA"
+    }
+   ]
+  },
+  {
+   "start": 11.52,
+   "end": 15.4,
+   "line": "Fakta yang dihafal setahun, | hilang dalam dua bulan.",
+   "keys": [
+    "setahun,",
+    "hilang",
+    "dua",
+    "bulan."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "LEPAS CUTI",
+    "word": "FAKTA HILANG",
+    "size": 96,
+    "sub": "setahun hafal, dua bulan hilang",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sedih",
+      "x": 540,
+      "size": 551,
+      "at": 11.6
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 15.4,
+   "end": 19.6,
+   "line": "Tak perlu suruh dia | belajar berjam-jam. | Cukup satu bab sehari.",
+   "keys": [
+    "satu",
+    "bab",
+    "sehari."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adik/idea",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "1 bab sehari",
+      17.7
+     ]
+    ]
+   }
+  },
+  {
+   "start": 19.6,
+   "end": 25.1,
+   "line": "1088 Soalan Objektif Sejarah, | Tingkatan 1, 2 dan 3.",
+   "keys": [
+    "1088",
+    "Objektif",
+    "Sejarah,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "s1088_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 640
+   },
+   "pills": [
+    [
+     "Tingkatan 1, 2 & 3",
+     22.66
+    ]
+   ],
+   "pills_y": 1150
+  },
+  {
+   "start": 25.1,
+   "end": 32.46,
+   "line": "Setiap bab ada kod QR. | Anak imbas, | jawab dalam phone, | markah keluar terus. | Macam main kuiz.",
+   "keys": [
+    "QR.",
+    "imbas,",
+    "phone,",
+    "markah",
+    "kuiz."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "s1088_soalan.jpg",
+    "w": 700,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Google Form setiap bab",
+     25.2
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 32.46,
+   "end": 38.26,
+   "line": "Salah? | Jawapan lengkap dengan penerangan | dah ada, | siap rujukan muka surat | buku teks.",
+   "keys": [
+    "Jawapan",
+    "lengkap",
+    "penerangan",
+    "rujukan"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "s1088_cover.jpg",
+    "w": 520,
+    "max_h": 800,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Rujukan muka surat buku teks",
+     35.86
+    ]
+   ],
+   "pills_y": 1150
+  },
+  {
+   "start": 38.26,
+   "end": 41.76,
+   "line": "Cuti tetap cuti, | tapi fakta tak hilang.",
+   "keys": [
+    "cuti,",
+    "tak",
+    "hilang."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/raikan",
+      "x": 380,
+      "size": 580,
+      "at": 38.3
+     }
+    ]
+   },
+   "icons": [
+    {
+     "img": "ortu/mak/bangga.png",
+     "x": 820,
+     "y": 900,
+     "at": 39.68,
+     "size": 270,
+     "tag": "MAK"
+    }
+   ]
+  },
+  {
+   "start": 41.76,
+   "end": 43.39,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "s1088_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

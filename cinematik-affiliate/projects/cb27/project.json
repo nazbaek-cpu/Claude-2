@@ -1,1 +1,85 @@
-{"source": "input/src1080.mp4", "preset": "product", "hflip": false, "segments": [], "subs": [], "fx": []}
+{
+ "source": "input/src1080.mp4",
+ "preset": "product",
+ "hflip": true,
+ "whisper_prompt": "MPT4, 28 Hari Persediaan MPT4, Matematik Tahun 4, DSKP KSSR, ujian, kefahaman",
+ "speed": {
+  "tempo": 1.12,
+  "max_pause": 0.22
+ },
+ "grade": "bright",
+ "beauty": {
+  "lip_rgb": [
+   182,
+   96,
+   100
+  ],
+  "lip_amount": 0.7,
+  "lip_light": 1.03
+ },
+ "behind": false,
+ "top_offset": -190,
+ "title_pos": "top",
+ "cta": "Tekan link di bawah",
+ "segments": [
+  {
+   "start": 0.66,
+   "end": 7.89,
+   "title": {
+    "kicker": "IBU AYAH ANAK TAHUN 3",
+    "lines": [
+     "Anak faham",
+     "Matematik?"
+    ],
+    "accent": [
+     "Matematik?"
+    ],
+    "size": 96
+   }
+  },
+  {
+   "start": 7.92,
+   "end": 10.47,
+   "kicker": "UJI DENGAN",
+   "head": "Ujian MPT4."
+  },
+  {
+   "start": 10.5,
+   "end": 20.86,
+   "kicker": "DALAM BUKU NI",
+   "head": "Soalan macam MPT4."
+  },
+  {
+   "start": 20.89,
+   "end": 25.72,
+   "kicker": "BERDASARKAN",
+   "head": "DSKP KSSR."
+  },
+  {
+   "start": 25.75,
+   "end": 30.32,
+   "kicker": "DALAM BUKU NI",
+   "head": "28 hari latihan."
+  },
+  {
+   "start": 30.35,
+   "end": 37.06,
+   "kicker": "UJI ANAK",
+   "head": "Faham atau tidak."
+  },
+  {
+   "start": 37.09,
+   "end": 41.88,
+   "kicker": "PERSEDIAAN",
+   "head": "Masuk tahun 4."
+  },
+  {
+   "start": 41.91,
+   "end": null,
+   "cta": true,
+   "head": "Dapatkan sekarang."
+  }
+ ],
+ "subs": [],
+ "fx": []
+}

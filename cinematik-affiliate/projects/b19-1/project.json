@@ -1,0 +1,201 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Guru Cemerlang, cikgu BM, huraian, 18 tema, DSKP, analisis.",
+ "cta": {
+  "at": 26.44,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.4,
+   "line": "Cikgu BM, | setiap minggu | tanda 40 karangan.",
+   "keys": [
+    "40",
+    "karangan."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "icons/cikgu_mengajar",
+      "x": 540,
+      "size": 493,
+      "at": 0.2
+     }
+    ],
+    "y": 820
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 250,
+     "y": 1200,
+     "at": 1.2,
+     "size": 162
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 540,
+     "y": 1180,
+     "at": 1.6,
+     "size": 162,
+     "tag": "40 KARANGAN"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 830,
+     "y": 1200,
+     "at": 2.0,
+     "size": 162
+    }
+   ]
+  },
+  {
+   "start": 3.4,
+   "end": 7.68,
+   "line": "Setiap minggu, | tulis komen yang sama: | \"Huraian tak cukup.\"",
+   "keys": [
+    "sama:",
+    "\"Huraian",
+    "cukup.\""
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KOMEN CIKGU",
+    "word": "HURAIAN TAK CUKUP",
+    "size": 80,
+    "sub": "minggu lepas, minggu ni, minggu depan",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/pening",
+      "x": 540,
+      "size": 551,
+      "at": 3.5
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 7.68,
+   "end": 10.96,
+   "line": "Kenapa tak bagi murid tengok sendiri | rupa huraian yang cukup?",
+   "keys": [
+    "tengok",
+    "sendiri"
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "kira/berfikir",
+    "char_scale": 1.3
+   }
+  },
+  {
+   "start": 10.96,
+   "end": 15.18,
+   "line": "Karangan Contoh dan Teknik Penulisan, | ditulis Guru Cemerlang.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Guru",
+    "Cemerlang."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 840,
+    "y": 640
+   }
+  },
+  {
+   "start": 15.18,
+   "end": 19.72,
+   "line": "18 tema ikut DSKP. | Setiap contoh siap analisis.",
+   "keys": [
+    "18",
+    "tema",
+    "analisis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "18 tema ikut DSKP",
+     15.2
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 19.72,
+   "end": 24.06,
+   "line": "Cikgu cuma rujuk contoh, | murid nampak sendiri | rupa huraian yang lengkap.",
+   "keys": [
+    "rujuk",
+    "contoh,",
+    "lengkap."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 520
+   }
+  },
+  {
+   "start": 24.06,
+   "end": 26.44,
+   "line": "Komen berkurang, | kualiti bertambah.",
+   "keys": [
+    "berkurang,",
+    "bertambah."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "kira/gembira",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Kualiti naik",
+      25.12
+     ]
+    ]
+   }
+  },
+  {
+   "start": 26.44,
+   "end": 28.03,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

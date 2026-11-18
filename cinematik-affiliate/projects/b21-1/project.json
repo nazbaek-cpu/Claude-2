@@ -1,1 +1,251 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "Budak asrama, lampu tutup pukul 11, prep malam, salin nota, BTP Infografik Sejarah, poket baju, selak.",
+ "cta": {
+  "at": 24.48,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.56,
+   "line": "Budak asrama, | lampu tutup pukul 11. | Prep malam 2 jam.",
+   "keys": [
+    "asrama,",
+    "11.",
+    "2",
+    "jam."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/fokus",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/lampu_tidur.png",
+     "x": 270,
+     "y": 470,
+     "at": 0.9,
+     "size": 216,
+     "tag": "LAMPU TUTUP 11"
+    },
+    {
+     "img": "mat/jam.png",
+     "x": 810,
+     "y": 470,
+     "at": 2.5,
+     "size": 216,
+     "tag": "PREP 2 JAM"
+    }
+   ]
+  },
+  {
+   "start": 4.56,
+   "end": 6.56,
+   "line": "Separuhnya, | habis salin nota.",
+   "keys": [
+    "Separuhnya,",
+    "salin",
+    "nota."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PREP MALAM",
+    "word": "SALIN NOTA",
+    "size": 100,
+    "sub": "separuh masa habis",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/stres",
+      "x": 540,
+      "size": 551,
+      "at": 4.6
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 6.56,
+   "end": 10.14,
+   "line": "Kenapa ada pelajar asrama | yang sempat ulang | 2 bab 1 malam?",
+   "keys": [
+    "2",
+    "bab",
+    "1",
+    "malam?"
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "abang/berfikir",
+    "char_scale": 1.3
+   }
+  },
+  {
+   "start": 10.14,
+   "end": 12.1,
+   "line": "Sebab nota dia | dah siap padat.",
+   "keys": [
+    "siap",
+    "padat."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "kira/menerang",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Nota siap",
+      10.6
+     ]
+    ]
+   }
+  },
+  {
+   "start": 12.1,
+   "end": 16.66,
+   "line": "BTP Infografik Sejarah. | Kecil, masuk poket baju.",
+   "keys": [
+    "BTP",
+    "Infografik",
+    "poket",
+    "baju."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 600,
+    "max_h": 760,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Masuk poket baju",
+     14.76
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 16.66,
+   "end": 19.92,
+   "line": "Anak cuma selak | masa prep, masa rehat, | sebelum tidur.",
+   "keys": [
+    "selak",
+    "prep,",
+    "rehat,",
+    "tidur."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/fokus",
+      "x": 540,
+      "size": 435,
+      "at": 16.7
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/meja_kerusi.png",
+     "x": 220,
+     "y": 470,
+     "at": 16.7,
+     "size": 229,
+     "tag": "PREP"
+    },
+    {
+     "img": "icons/waktu_rehat.png",
+     "x": 540,
+     "y": 420,
+     "at": 18.38,
+     "size": 229,
+     "tag": "REHAT"
+    },
+    {
+     "img": "rumah/katil.png",
+     "x": 860,
+     "y": 470,
+     "at": 19.0,
+     "size": 229,
+     "tag": "SEBELUM TIDUR"
+    }
+   ]
+  },
+  {
+   "start": 19.92,
+   "end": 22.8,
+   "line": "Isi penting buku teks | dalam infografik berwarna.",
+   "keys": [
+    "Isi",
+    "penting",
+    "berwarna."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_kedaulatan.jpg",
+    "w": 880,
+    "max_h": 560,
+    "y": 620
+   }
+  },
+  {
+   "start": 22.8,
+   "end": 24.48,
+   "line": "Prep yang sama, | hasil yang lain.",
+   "keys": [
+    "sama,",
+    "lain."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/yakin",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Hasil lain",
+      23.62
+     ]
+    ]
+   }
+  },
+  {
+   "start": 24.48,
+   "end": 26.23,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 440,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

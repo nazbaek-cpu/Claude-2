@@ -23,6 +23,11 @@ watak atau aset pencipta asal. Semua grafik dilukis sendiri.
 - **Petunjuk babak:** dua titik kecil (oren + kelabu) di atas kad Arab.
 
 
+## Latar putih tekstur tingkap
+
+`"bg": "tingkap"` (panggil "background putih yang texture tingkap"): halaman putih dengan bayang lembut bingkai tingkap dan
+daun (cahaya sama macam template kertas), sedikit hangat. Teks, kad dan ikon kekal gaya putih biasa.
+
 ## Latar biru tua neon
 
 `"bg": "neon"` (panggil "background biru tua, tulisan neon"): halaman biru tua template motion (grid titik biru samar,

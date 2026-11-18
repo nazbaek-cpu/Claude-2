@@ -559,3 +559,11 @@ def test_neon_options_in_arab_and_episod(tmp_path):
         assert episod.frame(cfg, pg, 0.8).size == (1080, 1920)
     finally:
         arab.NEON[0] = False; arab.DARK[0] = False; episod.NEON[0] = False; episod._c.clear(); arab._cache.clear()
+
+
+def test_arab_tingkap_background():
+    """"bg": "tingkap" is a white page with soft window-frame shadows: light overall, but not one flat colour"""
+    import arab
+    bg = arab.background("tingkap").convert("L")
+    px = [bg.getpixel((x, y)) for x in range(80, 1000, 120) for y in range(120, 1800, 160)]
+    assert min(px) > 200 and max(px) - min(px) > 12

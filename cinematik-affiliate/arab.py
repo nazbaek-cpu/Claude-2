@@ -5,7 +5,7 @@ Soft fades between scenes, quiet sounds on every entrance.
 
     python arab.py projects/<name>          -> projects/<name>/out/final.mp4
 
-project.json: {"type": "arab", "source": "input/vo.mp4", "bg": "putih" | "krim",
+project.json: {"type": "arab", "source": "input/vo.mp4", "bg": "putih" | "krim" | "tingkap" | "dots" | "neon",
   "scenes": [{"start": 0.0, "end": 3.8, "line": "Kenapa ada pelajar ...?", "keys": ["senang"],
               "illus": {"kind": "ask"}, "card": {"kind": "photo", "img": "cover.jpg"} | {"kind": "key", ...},
               "pills": [["UPSA", 25.7]], "label": "Ibnu Kathir"}, ...],
@@ -49,6 +49,23 @@ def background(kind, image=None):
         import motion
         motion.ACC[0], motion.ACC[1] = NEON_C
         return motion.neon_page(base=NEON_BASE[0])
+    if kind == "tingkap" and not image:   # white page lit through a window: soft frame-bar and leaf shadows (template kertas's light)
+        import cv2
+        rng = np.random.default_rng(3)
+        a = np.full((H, W, 3), (253, 252, 249), np.float32) + cv2.GaussianBlur(rng.normal(0, 2.0, (H, W)).astype(np.float32), (0, 0), 1.2)[..., None]
+        light = np.full((H, W), 255, np.uint8)
+        def bar(p0, p1, w): cv2.line(light, p0, p1, 150, w, cv2.LINE_AA)
+        bar((-300, 1700), (1500, 200), 70); bar((-300, 2150), (1500, 650), 70)   # window frame
+        bar((150, -200), (900, 2000), 56); bar((760, -200), (1500, 1600), 56)
+        for cx, cy, a_, b_, ang in ((870, 420, 90, 32, 30), (950, 340, 76, 28, -20), (800, 300, 70, 26, 70), (1010, 470, 80, 30, 10),
+                                     (880, 540, 64, 22, -50), (180, 1500, 80, 28, 40), (260, 1590, 70, 24, -30)):
+            cv2.ellipse(light, (cx, cy), (a_, b_), ang, 0, 360, 160, -1, cv2.LINE_AA)
+        light = cv2.GaussianBlur(light.astype(np.float32), (0, 0), 20) / 255
+        a = a * (0.86 + 0.14 * light[..., None]) * np.array([1.0, 0.995, 0.985], np.float32)   # shade slightly warm
+        im = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA"); d = ImageDraw.Draw(im)
+        d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(226, 220, 208), width=2)
+        for y in (26, H - 27): d.ellipse((W / 2 - 7, y - 7, W / 2 + 7, y + 7), fill=ORANGE)
+        return im
     if kind == "addmath" and not image:   # "background addmath": the light solid-wood boards the user picked
         import explainer
         w = explainer.solid_wood()

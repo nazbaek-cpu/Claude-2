@@ -1,0 +1,202 @@
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "Mak ayah, slip markah Sejarah, soalan fakta, KBAT, Terapi KBAT Sejarah SPM, rumus P.E.S., Rangka Struktur Kotak, skema jawapan.",
+ "cta": {
+  "at": 27.14,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.74,
+   "lines": [
+    "Mak ayah, pernah tengok",
+    "*slip markah* Sejarah anak?"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/fail.png",
+       "label": "Slip markah",
+       "at": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 2.74,
+   "end": 6.82,
+   "lines": [
+    "Soalan fakta *hampir penuh.*",
+    "Soalan KBAT, *kosong.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/markah_a.png",
+       "label": "Fakta",
+       "at": 2.8
+      },
+      {
+       "img": "icons/markah_rendah.png",
+       "label": "KBAT",
+       "at": 4.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6.82,
+   "end": 11.92,
+   "lines": [
+    "Bukan anak *tak belajar.*",
+    "Dia belajar *hafal,*",
+    "KBAT pula minta dia *berfikir.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "at": 6.9,
+     "size": 520,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       9.8,
+       "abang/berfikir"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 11.92,
+   "end": 18.06,
+   "lines": [
+    "*Terapi KBAT* Sejarah SPM",
+    "ajar rumus *P.E.S.*",
+    "dan Rangka Struktur *Kotak.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "kbat_cover.jpg",
+     "at": 12.0,
+     "step": 1,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 18.06,
+   "end": 20.3,
+   "lines": [
+    "Anak cuma *isi kotak*",
+    "ikut langkah."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_jenis.jpg",
+     "at": 18.1,
+     "w": 820,
+     "y": 1200
+    }
+   ]
+  },
+  {
+   "start": 20.3,
+   "end": 24.02,
+   "lines": [
+    "Soalan format *SPM,*",
+    "siap *skema lengkap.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_satu_buku.jpg",
+     "at": 20.35,
+     "w": 820,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 24.02,
+   "end": 27.14,
+   "lines": [
+    "Hafalan dia dah *kuat.*",
+    "Tinggal *satu langkah* lagi."
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 24.1,
+     "size": 540,
+     "x": 540,
+     "y": 1380,
+     "char_at": [
+      [
+       25.42,
+       "abang/gembira"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 27.14,
+   "end": 28.68,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 27.2,
+     "w": 480,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 27.25,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

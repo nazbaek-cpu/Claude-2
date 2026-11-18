@@ -1,0 +1,271 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "whisper_prompt": "Mak ayah, BTP Infografik Sejarah, muat dalam poket, ulang kaji, Tingkatan 4 dan 5.",
+ "cta": {
+  "at": 24.52,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.5,
+   "line": "Mak ayah, perjalanan ke sekolah | setiap pagi, berapa minit?",
+   "keys": [
+    "sekolah",
+    "berapa",
+    "minit?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/ingin_tahu",
+      "x": 330,
+      "size": 435,
+      "at": 0.2
+     },
+     {
+      "char": "ortu/ayah/ingin_tahu",
+      "x": 750,
+      "size": 435,
+      "at": 0.5
+     }
+    ],
+    "y": 900
+   },
+   "icons": [
+    {
+     "img": "mat/jam.png",
+     "x": 540,
+     "y": 470,
+     "at": 1.6,
+     "size": 202,
+     "tag": "SETIAP PAGI"
+    }
+   ]
+  },
+  {
+   "start": 3.5,
+   "end": 6.72,
+   "line": "15 minit tu boleh jadi | masa ulang kaji.",
+   "keys": [
+    "15",
+    "minit",
+    "ulang",
+    "kaji."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "PERJALANAN KE SEKOLAH",
+    "word": "15 MINIT",
+    "size": 110,
+    "sub": "= masa ulang kaji",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/idea",
+      "x": 540,
+      "size": 551,
+      "at": 3.6
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 6.72,
+   "end": 10.3,
+   "line": "BTP Infografik Sejarah. | Kecil, muat dalam poket.",
+   "keys": [
+    "BTP",
+    "Infografik",
+    "poket."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 600,
+    "max_h": 760,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Muat dalam poket",
+     8.64
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 10.3,
+   "end": 14.46,
+   "line": "Mak ayah pegang buku, | tanya anak satu soalan | dari infografik.",
+   "keys": [
+    "pegang",
+    "buku,",
+    "soalan"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_sosial.jpg",
+    "w": 480,
+    "max_h": 470,
+    "y": 430
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "bapa/senyum",
+      "x": 340,
+      "size": 333,
+      "at": 10.4
+     },
+     {
+      "char": "abang/berfikir",
+      "x": 800,
+      "size": 435,
+      "at": 11.8
+     }
+    ],
+    "y": 1080
+   }
+  },
+  {
+   "start": 14.46,
+   "end": 16.86,
+   "line": "Anak cuma jawab, | tengok, | ingat.",
+   "keys": [
+    "jawab,",
+    "tengok,",
+    "ingat."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "x": 540,
+      "size": 435,
+      "at": 14.5
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/angkat_tangan.png",
+     "x": 220,
+     "y": 470,
+     "at": 14.5,
+     "size": 229,
+     "tag": "JAWAB"
+    },
+    {
+     "img": "adikhp/teliti.png",
+     "x": 540,
+     "y": 420,
+     "at": 15.62,
+     "size": 229,
+     "tag": "TENGOK"
+    },
+    {
+     "img": "kira/idea.png",
+     "x": 860,
+     "y": 470,
+     "at": 16.28,
+     "size": 229,
+     "tag": "INGAT"
+    }
+   ]
+  },
+  {
+   "start": 16.86,
+   "end": 21.18,
+   "line": "Isi penting buku teks, | ikut bab, | Tingkatan 4 dan 5.",
+   "keys": [
+    "Isi",
+    "penting",
+    "bab,",
+    "4",
+    "5."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_kandungan.jpg",
+    "w": 680,
+    "max_h": 620,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Ikut bab",
+     18.64
+    ],
+    [
+     "Tingkatan 4 & 5",
+     19.44
+    ]
+   ],
+   "pills_y": 1080
+  },
+  {
+   "start": 21.18,
+   "end": 24.52,
+   "line": "Tak perlu duduk depan meja | berjam-jam untuk ulang kaji.",
+   "keys": [
+    "Tak",
+    "perlu",
+    "berjam-jam"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/duduk_santai",
+      "x": 540,
+      "size": 580,
+      "at": 21.3
+     }
+    ],
+    "y": 950
+   },
+   "icons": [
+    {
+     "img": "mat/jam.png",
+     "x": 820,
+     "y": 520,
+     "at": 22.2,
+     "size": 175,
+     "tag": "15 MINIT CUKUP"
+    }
+   ]
+  },
+  {
+   "start": 24.52,
+   "end": 26.2,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 440,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

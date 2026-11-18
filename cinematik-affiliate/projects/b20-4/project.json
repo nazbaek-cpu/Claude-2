@@ -1,0 +1,231 @@
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "episode": "EPISOD 8 · SPOT TEMA",
+ "whisper_prompt": "spot tema, hafal karangan, dewan, Karangan Contoh dan Teknik Penulisan, 18 tema ikut DSKP, analisis, tip penulis.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 25.9,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.68,
+   "title": "Spot *3 TEMA* je",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "SPOT KARANGAN",
+     "name": "Abang · calon SPM",
+     "text": "1. Teknologi|2. Alam sekitar|3. Kesihatan",
+     "w": 560,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 46,
+     "x": 380,
+     "y": 950,
+     "at": 0.1
+    },
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 870,
+     "at": 0.3,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 3.68,
+   "end": 7.5,
+   "title": "Tema keluar... *LAIN!*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "SPOT KARANGAN",
+     "name": "Abang · calon SPM",
+     "text": "1. Teknologi|2. Alam sekitar|3. Kesihatan",
+     "w": 560,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 46,
+     "x": 380,
+     "y": 950,
+     "at": 3.7,
+     "strike_at": 4.8,
+     "rewrite": "Tema lain keluar!",
+     "rewrite_at": 5.6
+    },
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "x": 870,
+     "at": 3.75,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 7.5,
+   "end": 10.58,
+   "title": "Kenapa dia *TAK KISAH?*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 270,
+     "at": 7.55,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "char",
+     "char": "kira/bangga",
+     "x": 810,
+     "at": 7.9,
+     "size": 600,
+     "name": "Kawan sekelas"
+    }
+   ]
+  },
+  {
+   "start": 10.58,
+   "end": 13.7,
+   "title": "Dah baca *SEMUA TEMA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/rak_buku",
+     "x": 300,
+     "at": 10.6,
+     "w": 380
+    },
+    {
+     "kind": "char",
+     "char": "kira/menerang",
+     "x": 810,
+     "at": 10.65,
+     "size": 600,
+     "name": "Kawan sekelas"
+    }
+   ]
+  },
+  {
+   "start": 13.7,
+   "end": 15.78,
+   "title": "Karangan *CONTOH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 400,
+     "at": 13.75
+    }
+   ]
+  },
+  {
+   "start": 15.78,
+   "end": 19.18,
+   "title": "*18 TEMA* ikut DSKP",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_format.jpg",
+     "x": 540,
+     "y": 1060,
+     "w": 880,
+     "at": 15.82
+    }
+   ]
+  },
+  {
+   "start": 19.18,
+   "end": 21.68,
+   "title": "*SATU TEMA* sehari",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 330,
+     "at": 19.2,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 860,
+     "at": 19.25,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 21.68,
+   "end": 24.04,
+   "title": "Siap *ANALISIS* & tip",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_review.jpg",
+     "x": 540,
+     "y": 1040,
+     "w": 880,
+     "at": 21.72
+    }
+   ]
+  },
+  {
+   "start": 24.04,
+   "end": 25.9,
+   "title": "Jangan spot. *BERSEDIA.*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 540,
+     "at": 24.08,
+     "size": 640,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 900,
+     "at": 24.6
+    }
+   ]
+  },
+  {
+   "start": 25.9,
+   "end": 27.64,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 25.95
+    }
+   ]
+  }
+ ]
+}

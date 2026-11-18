@@ -199,16 +199,16 @@
     "kind": "cast",
     "cast": [
      {
-      "char": "kira/berfikir",
-      "x": 300,
-      "size": 435,
-      "at": 22.9
-     },
-     {
       "char": "abang/yakin",
       "x": 790,
       "size": 435,
-      "at": 23.9
+      "at": 21.85
+     },
+     {
+      "char": "kira/berfikir",
+      "x": 300,
+      "size": 435,
+      "at": 23.1
      }
     ],
     "y": 1080

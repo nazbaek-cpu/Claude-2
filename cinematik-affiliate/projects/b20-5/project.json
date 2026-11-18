@@ -1,0 +1,231 @@
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "emerald",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  226,
+  60
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Malayan Union 1946 hingga 1948, Persekutuan Tanah Melayu 1948 hingga 1957, BTP Infografik Sejarah, mind map, carta.",
+ "cta": {
+  "at": 33.46,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.96,
+   "lines": [
+    "*Malayan Union,*",
+    "*1946* ke *1948?*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 0.2,
+     "size": 520,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 4.96,
+   "end": 11.08,
+   "lines": [
+    "*Persekutuan*",
+    "Tanah Melayu,",
+    "*1948* ke *1957?*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 5.0,
+     "size": 520,
+     "x": 540,
+     "y": 1420,
+     "char_at": [
+      [
+       8.6,
+       "abang/stres"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 11.08,
+   "end": 15.84,
+   "lines": [
+    "Kalau tarikh dalam kepala",
+    "selalu *bertukar tempat,*",
+    "kau *tak seorang.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1320,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/jadual_waktu.png",
+       "label": "1946?",
+       "at": 11.2
+      },
+      {
+       "img": "icons/jadual_waktu.png",
+       "label": "1948?",
+       "at": 12.2
+      },
+      {
+       "img": "icons/jadual_waktu.png",
+       "label": "1957?",
+       "at": 13.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 15.84,
+   "end": 21.14,
+   "lines": [
+    "*Kenapa?*",
+    "Kau baca tarikh dalam",
+    "*ayat panjang,*",
+    "bukan nampak *susunannya.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/pening",
+     "at": 15.9,
+     "size": 440,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 21.14,
+   "end": 24.78,
+   "lines": [
+    "*BTP Infografik* Sejarah",
+    "susun *peristiwa penting*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "btp_cover.jpg",
+     "at": 21.2,
+     "step": 1,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 24.78,
+   "end": 27.4,
+   "lines": [
+    "jadi infografik *berwarna,*",
+    "*mind map* dan *carta.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "BTP Infografik Sejarah",
+     "at": 24.8,
+     "y": 1200,
+     "rows": [
+      [
+       "Infografik berwarna",
+       24.85
+      ],
+      [
+       "Mind map",
+       26.2
+      ],
+      [
+       "Carta",
+       26.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 27.4,
+   "end": 30.92,
+   "lines": [
+    "Anak cuma tengok *satu muka,*",
+    "terus nampak *urutan.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_kedaulatan.jpg",
+     "at": 27.45,
+     "w": 860,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 30.92,
+   "end": 33.46,
+   "lines": [
+    "Tarikh yang *nampak,*",
+    "lebih *senang diingat.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "at": 31.0,
+     "size": 540,
+     "x": 540,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 33.46,
+   "end": 35.08,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 33.5,
+     "w": 480,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 33.55,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

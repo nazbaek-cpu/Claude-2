@@ -1,1 +1,239 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "Calon SPM 2027, cuti sekolah, buku teks, KBAT, Terapi KBAT Sejarah SPM, rumus P.E.S., Rangka Struktur Kotak, video penerangan, skema jawapan.",
+ "cta": {
+  "at": 24.68,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.12,
+   "line": "Calon SPM 2027, | cuti sekolah dah mula.",
+   "keys": [
+    "SPM",
+    "2027,",
+    "cuti"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/gembira",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/beg_sekolah.png",
+     "x": 540,
+     "y": 450,
+     "at": 2.4,
+     "size": 256,
+     "tag": "CUTI SEKOLAH"
+    }
+   ]
+  },
+  {
+   "start": 4.12,
+   "end": 7.08,
+   "line": "Kau tak perlu habiskan | satu buku teks masa cuti.",
+   "keys": [
+    "tak",
+    "perlu",
+    "buku",
+    "teks"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/berfikir",
+      "x": 540,
+      "size": 435,
+      "at": 4.15
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 540,
+     "y": 450,
+     "at": 5.0,
+     "size": 256,
+     "tag": "SATU BUKU TEKS?"
+    }
+   ]
+  },
+  {
+   "start": 7.08,
+   "end": 10.88,
+   "line": "Cukup kuasai satu benda: | cara jawab KBAT.",
+   "keys": [
+    "satu",
+    "benda:",
+    "KBAT."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "CUKUP KUASAI",
+    "word": "CARA JAWAB KBAT",
+    "size": 80,
+    "sub": "satu benda je",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/idea",
+      "x": 540,
+      "size": 551,
+      "at": 7.1
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 10.88,
+   "end": 16.64,
+   "line": "Terapi KBAT Sejarah SPM | ajar rumus P.E.S. | dan Rangka Struktur Kotak.",
+   "keys": [
+    "Terapi",
+    "KBAT",
+    "P.E.S.",
+    "Kotak."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 600,
+    "max_h": 760,
+    "y": 620
+   },
+   "pills": [
+    [
+     "P.E.S. + Rangka Struktur Kotak",
+     13.46
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 16.64,
+   "end": 19.66,
+   "line": "Kau cuma latih sikit setiap hari, | ikut video penerangan.",
+   "keys": [
+    "sikit",
+    "setiap",
+    "hari,",
+    "video",
+    "penerangan."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_satu_buku.jpg",
+    "w": 880,
+    "max_h": 620,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Video penerangan",
+     18.4
+    ]
+   ],
+   "pills_y": 1080
+  },
+  {
+   "start": 19.66,
+   "end": 21.76,
+   "line": "Siap skema jawapan | untuk semak sendiri.",
+   "keys": [
+    "skema",
+    "semak",
+    "sendiri."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/fokus",
+      "x": 540,
+      "size": 435,
+      "at": 19.7
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 540,
+     "y": 450,
+     "at": 20.2,
+     "size": 256,
+     "tag": "SEMAK SENDIRI"
+    }
+   ]
+  },
+  {
+   "start": 21.76,
+   "end": 24.68,
+   "line": "Masuk sekolah nanti, | kawan baru belajar, | kau dah biasa.",
+   "keys": [
+    "baru",
+    "belajar,",
+    "biasa."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/berfikir",
+      "x": 300,
+      "size": 435,
+      "at": 22.9
+     },
+     {
+      "char": "abang/yakin",
+      "x": 790,
+      "size": 435,
+      "at": 23.9
+     }
+    ],
+    "y": 1080
+   }
+  },
+  {
+   "start": 24.68,
+   "end": 25.99,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 420,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

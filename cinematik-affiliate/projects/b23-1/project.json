@@ -1,1 +1,195 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Add Maths, skip level, Fungsi, Fungsi Kuadratik, Indeks, Logaritma, Latihan Topikal Lengkap Matematik Tambahan Tingkatan 4, dwibahasa.",
+ "cta": {
+  "at": 23.86,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.32,
+   "lines": [
+    "*Add Maths* ni",
+    "macam *main game.*",
+    "Tak boleh *skip level.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "adikhp/game.png",
+       "label": "Level 1",
+       "at": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.32,
+   "end": 6.96,
+   "lines": [
+    "*Fungsi* tak kukuh,",
+    "*Fungsi Kuadratik*",
+    "terasa susah."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/formula.png",
+       "label": "Fungsi",
+       "at": 3.4
+      },
+      {
+       "img": "mat/persamaan.png",
+       "label": "F. Kuadratik",
+       "at": 4.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6.96,
+   "end": 10.28,
+   "lines": [
+    "*Indeks* tak faham,",
+    "*Logaritma*",
+    "jadi gelap."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "at": 7.0,
+     "size": 500,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 10.28,
+   "end": 12.78,
+   "lines": [
+    "*Latihan Topikal*",
+    "*Lengkap* Matematik",
+    "Tambahan Tingkatan 4"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "sp_cover.jpg",
+     "at": 10.33,
+     "step": 1,
+     "y": 1600
+    }
+   ]
+  },
+  {
+   "start": 12.78,
+   "end": 17.42,
+   "lines": [
+    "susun *10 topik*",
+    "ikut buku teks,",
+    "*satu demi satu.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "sp_topik.jpg",
+     "at": 12.82,
+     "w": 640,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 17.42,
+   "end": 20.94,
+   "lines": [
+    "Soalan *pendek,*",
+    "*dwibahasa,*",
+    "BM dan English."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "sp_soalan.jpg",
+     "at": 17.46,
+     "w": 900,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 20.94,
+   "end": 23.86,
+   "lines": [
+    "Habis *satu level,*",
+    "baru naik",
+    "*level seterusnya.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 21.0,
+     "size": 540,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 23.86,
+   "end": 25.47,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "sp_cover.jpg",
+     "at": 23.9,
+     "w": 400,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 23.93,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

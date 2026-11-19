@@ -1,1 +1,240 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "whisper_prompt": "Mak ayah, Tahun 4, MPT4, 28 Hari Persediaan MPT4 Matematik, latihan sikit setiap hari, simulasi MPT4, rekod pencapaian.",
+ "cta": {
+  "at": 26.82,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.86,
+   "line": "Mak ayah, anak naik | Tahun 4 tahun depan?",
+   "keys": [
+    "Tahun",
+    "4"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/gembira",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/beg_sekolah.png",
+     "x": 540,
+     "y": 450,
+     "at": 1.0,
+     "size": 243,
+     "tag": "TAHUN 4"
+    }
+   ]
+  },
+  {
+   "start": 2.86,
+   "end": 7.02,
+   "line": "Ada satu ujian yang ramai mak ayah | baru tahu bila dah dekat:",
+   "keys": [
+    "ujian",
+    "baru",
+    "tahu",
+    "dekat:"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/terkejut",
+      "x": 330,
+      "size": 362,
+      "at": 2.9
+     },
+     {
+      "char": "ortu/ayah/terkejut",
+      "x": 750,
+      "size": 362,
+      "at": 4.4
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 7.02,
+   "end": 8.34,
+   "line": "MPT4.",
+   "keys": [
+    "MPT4."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "UJIAN TAHUN 4",
+    "word": "MPT4",
+    "size": 150,
+    "sub": "Matematik",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/terkejut",
+      "x": 540,
+      "size": 551,
+      "at": 7.05
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 8.34,
+   "end": 12.44,
+   "line": "Masa tu baru nak cari latihan, | anak pula dah penat.",
+   "keys": [
+    "cari",
+    "latihan,",
+    "penat."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/stres",
+      "x": 540,
+      "size": 435,
+      "at": 8.4
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/kerja_rumah.png",
+     "x": 540,
+     "y": 450,
+     "at": 9.0,
+     "size": 243,
+     "tag": "LATIHAN SAAT AKHIR"
+    }
+   ]
+  },
+  {
+   "start": 12.44,
+   "end": 17.66,
+   "line": "28 Hari Persediaan MPT4 Matematik | bagi latihan sikit setiap hari,",
+   "keys": [
+    "28",
+    "Hari",
+    "sikit",
+    "setiap",
+    "hari,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "mpt4_empat.jpg",
+    "w": 560,
+    "max_h": 760,
+    "y": 620
+   },
+   "pills": [
+    [
+     "1 latihan sehari",
+     15.0
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 17.66,
+   "end": 19.28,
+   "line": "dari senang | ke susah.",
+   "keys": [
+    "senang",
+    "susah."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "mpt4_modul1.jpg",
+    "w": 520,
+    "max_h": 760,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Latihan berperingkat",
+     17.7
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 19.28,
+   "end": 24.36,
+   "line": "Siap simulasi MPT4 dan rekod pencapaian, | mak ayah nampak kemajuan anak.",
+   "keys": [
+    "simulasi",
+    "rekod",
+    "pencapaian,",
+    "kemajuan"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "mpt4_kandungan.jpg",
+    "w": 560,
+    "max_h": 780,
+    "y": 620
+   }
+  },
+  {
+   "start": 24.36,
+   "end": 26.82,
+   "line": "Mula awal, | anak masuk tenang.",
+   "keys": [
+    "awal,",
+    "tenang."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adik/raikan",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Masuk tenang",
+      25.4
+     ]
+    ]
+   }
+  },
+  {
+   "start": 26.82,
+   "end": 28.53,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "mpt4_empat.jpg",
+    "w": 400,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

@@ -1,1 +1,231 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "pada pendapat anda, saya setuju, Terapi KBAT Sejarah SPM, rumus P.E.S., pendapat, alasan, contoh, video penerangan.",
+ "cta": {
+  "at": 31.08,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.36,
+   "lines": [
+    "Soalan: *\"Pada pendapat anda...\"*",
+    "Kau jawab: *\"Saya setuju.\"*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 0.2,
+     "size": 520,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 4.36,
+   "end": 8.84,
+   "lines": [
+    "Habis. *Satu ayat*",
+    "untuk soalan yang",
+    "*markahnya banyak.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/kuiz.png",
+       "label": "1 ayat",
+       "at": 4.5
+      },
+      {
+       "img": "icons/markah_rendah.png",
+       "label": "Markah?",
+       "at": 7.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 8.84,
+   "end": 13.44,
+   "lines": [
+    "*Masalahnya,*",
+    "kau tahu nak *setuju,*",
+    "tapi tak tahu nak",
+    "*huraikan kenapa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 8.9,
+     "size": 500,
+     "x": 540,
+     "y": 1450,
+     "char_at": [
+      [
+       11.06,
+       "abang/stres"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 13.44,
+   "end": 17.02,
+   "lines": [
+    "*Terapi KBAT*",
+    "Sejarah SPM",
+    "bagi rumus *P.E.S.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "kbat_cover.jpg",
+     "at": 13.5,
+     "step": 1,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 17.02,
+   "end": 20.7,
+   "lines": [
+    "untuk susun *pendapat,*",
+    "*alasan* dan *contoh.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Rumus P.E.S.",
+     "at": 17.05,
+     "y": 1200,
+     "rows": [
+      [
+       "Pendapat",
+       17.1
+      ],
+      [
+       "Alasan",
+       19.08
+      ],
+      [
+       "Contoh",
+       19.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 20.7,
+   "end": 23.88,
+   "lines": [
+    "Anak cuma *ikut kotak,*",
+    "langkah demi langkah."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_jenis.jpg",
+     "at": 20.75,
+     "w": 820,
+     "y": 1220
+    }
+   ]
+  },
+  {
+   "start": 23.88,
+   "end": 27.54,
+   "lines": [
+    "Siap *video penerangan*",
+    "untuk setiap jenis *KBAT.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_satu_buku.jpg",
+     "at": 23.92,
+     "w": 800,
+     "y": 1320
+    }
+   ]
+  },
+  {
+   "start": 27.54,
+   "end": 31.08,
+   "lines": [
+    "Pendapat kau *dah ada.*",
+    "Sekarang, belajar",
+    "*cara tulis.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/idea",
+     "at": 27.6,
+     "size": 520,
+     "x": 540,
+     "y": 1400,
+     "char_at": [
+      [
+       29.12,
+       "abang/yakin"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 31.08,
+   "end": 32.52,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 31.12,
+     "w": 480,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 31.15,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

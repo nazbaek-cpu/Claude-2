@@ -1,1 +1,192 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  16,
+  160,
+  140
+ ],
+ "accent2": [
+  120,
+  214,
+  196
+ ],
+ "whisper_prompt": "mendakan putih, larutan berlebihan, ujian ion, sebatian, Nota Ringkas Kimia SPM, peta minda.",
+ "cta": {
+  "at": 28.9,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.2,
+   "lines": [
+    "*Mendakan putih,*",
+    "yang mana satu?"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/eksperimen.png",
+       "label": "Ujian ion",
+       "at": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.2,
+   "end": 7.3,
+   "lines": [
+    "Larut dalam larutan",
+    "*berlebihan,*",
+    "atau *tak larut?*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 3.25,
+     "size": 480,
+     "x": 540,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 7.3,
+   "end": 12.9,
+   "lines": [
+    "Baca soalan *ujian ion,*",
+    "semua sebatian",
+    "*rasa sama,*",
+    "kau tak seorang."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "at": 7.35,
+     "size": 460,
+     "x": 540,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 12.9,
+   "end": 18.8,
+   "lines": [
+    "Calon yang ingat",
+    "*sekali tengok?*",
+    "Dia ingat ikut *warna,*",
+    "bukan ikut ayat."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 12.95,
+     "size": 460,
+     "x": 540,
+     "y": 1480,
+     "char_at": [
+      [
+       15.34,
+       "abang/idea"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 18.8,
+   "end": 23.16,
+   "lines": [
+    "*Nota Ringkas Kimia*",
+    "susun nota sebatian",
+    "ikut *warnanya,*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "kim_cover.jpg",
+     "at": 18.85,
+     "step": 1,
+     "y": 1600
+    }
+   ]
+  },
+  {
+   "start": 23.16,
+   "end": 27.28,
+   "lines": [
+    "dalam *peta minda.*",
+    "Tengok warna,",
+    "*terus teringat.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kim_warna.jpg",
+     "at": 23.2,
+     "w": 760,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 27.28,
+   "end": 28.9,
+   "lines": [
+    "Hafal jadi",
+    "*lebih ringan.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "at": 27.32,
+     "size": 520,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 28.9,
+   "end": 30.67,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kim_cover.jpg",
+     "at": 28.94,
+     "w": 520,
+     "max_h": 560,
+     "y": 1040
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 28.97,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

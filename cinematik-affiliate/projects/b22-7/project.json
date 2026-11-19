@@ -1,1 +1,234 @@
-{"type": "arab", "source": "input/vo.mp4", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  112,
+  52
+ ],
+ "accent2": [
+  255,
+  196,
+  120
+ ],
+ "whisper_prompt": "Mandarin, Tamil, bahasa ibunda, BM, karangan, kaku, terjemah, Karangan Contoh dan Teknik Penulisan, 18 tema, ungkapan menarik.",
+ "cta": {
+  "at": 28.38,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.84,
+   "lines": [
+    "Di rumah cakap *Mandarin,*",
+    "*Tamil* atau bahasa ibunda lain."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "rumah/scene_tamu.png",
+       "label": "Di rumah",
+       "at": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.84,
+   "end": 5.9,
+   "lines": [
+    "*BM* cuma guna",
+    "di *sekolah.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/loceng_sekolah.png",
+       "label": "Sekolah",
+       "at": 4.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.9,
+   "end": 9.82,
+   "lines": [
+    "Bila tulis karangan,",
+    "ayat jadi *kaku,*",
+    "macam *terjemah.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/pening",
+     "at": 6.0,
+     "size": 480,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 9.82,
+   "end": 13.7,
+   "lines": [
+    "*Bukan salah kau.*",
+    "Kau cuma kurang",
+    "*contoh bahasa* yang betul."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/berfikir",
+     "at": 9.9,
+     "size": 480,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 13.7,
+   "end": 16.2,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 13.75,
+     "step": 1,
+     "y": 1520
+    }
+   ]
+  },
+  {
+   "start": 16.2,
+   "end": 18.66,
+   "lines": [
+    "Contoh karangan",
+    "untuk *18 tema.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_format.jpg",
+     "at": 16.25,
+     "w": 900,
+     "y": 1180
+    }
+   ]
+  },
+  {
+   "start": 18.66,
+   "end": 22.8,
+   "lines": [
+    "Anak cuma *baca,*",
+    "*tandakan* ungkapan menarik,",
+    "*guna semula.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cara guna",
+     "at": 18.7,
+     "y": 1250,
+     "rows": [
+      [
+       "Baca contoh",
+       18.7
+      ],
+      [
+       "Tanda ungkapan menarik",
+       20.1
+      ],
+      [
+       "Guna semula",
+       21.8
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 22.8,
+   "end": 25.18,
+   "lines": [
+    "Siap *analisis*",
+    "dan *tip penulis.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_review.jpg",
+     "at": 22.85,
+     "w": 900,
+     "y": 1150
+    }
+   ]
+  },
+  {
+   "start": 25.18,
+   "end": 28.38,
+   "lines": [
+    "Bahasa datang dari",
+    "*banyak membaca*",
+    "contoh yang baik."
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "char",
+     "char": "stickman/gembira",
+     "at": 25.25,
+     "size": 480,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 28.38,
+   "end": 30.04,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 28.42,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 28.45,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

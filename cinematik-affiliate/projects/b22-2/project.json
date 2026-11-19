@@ -1,1 +1,266 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "Mandarin, Tamil, bahasa ibunda, BM, karangan, kaku, terjemah, Karangan Contoh dan Teknik Penulisan, 18 tema, ungkapan menarik.",
+ "cta": {
+  "at": 28.38,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.84,
+   "line": "Di rumah cakap Mandarin, | Tamil atau bahasa ibunda lain.",
+   "keys": [
+    "Mandarin,",
+    "Tamil",
+    "ibunda"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/gembira",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/scene_tamu.png",
+     "x": 540,
+     "y": 450,
+     "at": 0.3,
+     "size": 270,
+     "tag": "DI RUMAH"
+    }
+   ]
+  },
+  {
+   "start": 3.84,
+   "end": 5.9,
+   "line": "BM cuma guna | di sekolah.",
+   "keys": [
+    "BM",
+    "sekolah."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/berdiri",
+      "x": 540,
+      "size": 435,
+      "at": 3.9
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/loceng_sekolah.png",
+     "x": 540,
+     "y": 450,
+     "at": 4.2,
+     "size": 256,
+     "tag": "BM DI SEKOLAH"
+    }
+   ]
+  },
+  {
+   "start": 5.9,
+   "end": 9.82,
+   "line": "Bila tulis karangan, | ayat jadi kaku, | macam terjemah.",
+   "keys": [
+    "karangan,",
+    "kaku,",
+    "terjemah."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KARANGAN BM",
+    "word": "AYAT KAKU",
+    "size": 100,
+    "sub": "macam terjemah",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/pening",
+      "x": 540,
+      "size": 551,
+      "at": 6.0
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 9.82,
+   "end": 13.7,
+   "line": "Bukan salah kau. | Kau cuma kurang | contoh bahasa yang betul.",
+   "keys": [
+    "Bukan",
+    "salah",
+    "contoh"
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "stickman/berfikir",
+    "char_scale": 1.2
+   }
+  },
+  {
+   "start": 13.7,
+   "end": 16.2,
+   "line": "Karangan Contoh | dan Teknik Penulisan.",
+   "keys": [
+    "Karangan",
+    "Contoh"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 620
+   }
+  },
+  {
+   "start": 16.2,
+   "end": 18.66,
+   "line": "Contoh karangan | untuk 18 tema.",
+   "keys": [
+    "18",
+    "tema."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_format.jpg",
+    "w": 860,
+    "max_h": 560,
+    "y": 600
+   },
+   "pills": [
+    [
+     "18 tema ikut DSKP",
+     16.3
+    ]
+   ],
+   "pills_y": 900
+  },
+  {
+   "start": 18.66,
+   "end": 22.8,
+   "line": "Anak cuma baca. | Tandakan ungkapan menarik. | Guna semula.",
+   "keys": [
+    "baca.",
+    "ungkapan",
+    "menarik.",
+    "semula."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "stickman/baca_buku",
+      "x": 540,
+      "size": 435,
+      "at": 18.7
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 220,
+     "y": 470,
+     "at": 18.7,
+     "size": 216,
+     "tag": "BACA"
+    },
+    {
+     "img": "icons/highlighter.png",
+     "x": 540,
+     "y": 420,
+     "at": 20.1,
+     "size": 216,
+     "tag": "TANDA"
+    },
+    {
+     "img": "icons/pen.png",
+     "x": 860,
+     "y": 470,
+     "at": 21.8,
+     "size": 216,
+     "tag": "GUNA SEMULA"
+    }
+   ]
+  },
+  {
+   "start": 22.8,
+   "end": 25.18,
+   "line": "Siap analisis | dan tip penulis.",
+   "keys": [
+    "analisis",
+    "tip"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 560
+   }
+  },
+  {
+   "start": 25.18,
+   "end": 28.38,
+   "line": "Bahasa datang dari banyak membaca | contoh yang baik.",
+   "keys": [
+    "Bahasa",
+    "membaca",
+    "baik."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "stickman/gembira",
+    "char_scale": 1.2,
+    "words": [
+     [
+      "Banyak baca",
+      25.6
+     ]
+    ]
+   }
+  },
+  {
+   "start": 28.38,
+   "end": 30.04,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

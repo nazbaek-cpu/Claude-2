@@ -1,1 +1,182 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "kalkulator, Matematik SPM Final Boost, Cikgu Yasir, Guru Cemerlang Matematik, bengkel kalkulator, rakaman, subtopik penting.",
+ "cta": {
+  "at": 25.52,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.32,
+   "lines": [
+    "*Kalkulator* kau,",
+    "setakat ni guna untuk",
+    "*tambah, tolak, darab* je?"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1320,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "mat/kalkulator.png",
+       "label": "+  -  x",
+       "at": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4.32,
+   "end": 9.32,
+   "lines": [
+    "Calon yang *laju* jawab",
+    "Matematik SPM tahu",
+    "*teknik kalkulator*",
+    "yang kau belum guna."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/idea",
+     "at": 4.4,
+     "size": 480,
+     "x": 540,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 9.32,
+   "end": 13.96,
+   "lines": [
+    "*Matematik SPM*",
+    "*Final Boost*",
+    "oleh Cikgu Yasir,",
+    "Guru Cemerlang Matematik."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "boost_cover.jpg",
+     "at": 9.38,
+     "step": 1,
+     "y": 1650
+    }
+   ]
+  },
+  {
+   "start": 13.96,
+   "end": 16.76,
+   "lines": [
+    "siap *bengkel kalkulator*",
+    "dalam bentuk *rakaman.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "boost_ciri.jpg",
+     "at": 14.0,
+     "w": 820,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 16.76,
+   "end": 21.8,
+   "lines": [
+    "Soalan *terpilih,*",
+    "subtopik *penting,*",
+    "*jawapan lengkap*",
+    "selepas setiap topik."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Matematik SPM Final Boost",
+     "at": 16.8,
+     "y": 1330,
+     "rows": [
+      [
+       "Soalan terpilih",
+       16.8
+      ],
+      [
+       "Subtopik penting",
+       18.0
+      ],
+      [
+       "Jawapan lengkap setiap topik",
+       19.6
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 21.8,
+   "end": 25.52,
+   "lines": [
+    "Masa dalam dewan *terhad.*",
+    "Guna kalkulator",
+    "*dengan betul.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 21.85,
+     "size": 520,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 25.52,
+   "end": 27.17,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "boost_cover.jpg",
+     "at": 25.56,
+     "w": 420,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 25.6,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

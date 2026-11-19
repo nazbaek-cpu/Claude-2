@@ -1,1 +1,241 @@
-{"type": "arab", "source": "input/vo.mp4", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "neon",
+ "neon_base": "emerald",
+ "accent": [
+  255,
+  226,
+  60
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Kertas 2 Sejarah bahagian B, soalan 7, 8 dan 9, sukatan Tingkatan 5, Analisis dan Ramalan SPM Sejarah, strategi, data.",
+ "cta": {
+  "at": 26.96,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.38,
+   "line": "Kertas 2 Sejarah, | bahagian B, | 5 soalan.",
+   "keys": [
+    "Kertas",
+    "2",
+    "B,",
+    "5"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/fokus",
+      "x": 540,
+      "size": 420,
+      "at": 0.2
+     }
+    ],
+    "y": 900
+   },
+   "icons": [
+    {
+     "img": "icons/peperiksaan.png",
+     "x": 540,
+     "y": 1270,
+     "at": 1.9,
+     "size": 200,
+     "tag": "BAHAGIAN B"
+    }
+   ]
+  },
+  {
+   "start": 3.38,
+   "end": 7.94,
+   "line": "Tahu tak, 3 daripadanya, | soalan 7, 8 dan 9,",
+   "keys": [
+    "3",
+    "7,",
+    "8",
+    "9,"
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KERTAS 2 · BAHAGIAN B",
+    "word": "SOALAN 7, 8, 9",
+    "size": 92,
+    "sub": "3 daripada 5 soalan",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/berfikir",
+      "x": 540,
+      "size": 380,
+      "at": 3.45
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 7.94,
+   "end": 10.56,
+   "line": "lazimnya berkaitan | sukatan Tingkatan 5.",
+   "keys": [
+    "sukatan",
+    "Tingkatan",
+    "5."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/idea",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Tingkatan 5",
+      8.6
+     ]
+    ]
+   }
+  },
+  {
+   "start": 10.56,
+   "end": 15.7,
+   "line": "Ramai calon ulang kaji | Tingkatan 4 dan 5 sama rata, | tanpa strategi.",
+   "keys": [
+    "sama",
+    "rata,",
+    "tanpa",
+    "strategi."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/stres",
+      "x": 540,
+      "size": 420,
+      "at": 10.6
+     }
+    ],
+    "y": 900
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 300,
+     "y": 1180,
+     "at": 11.5,
+     "size": 170,
+     "tag": "T4"
+    },
+    {
+     "img": "icons/rak_buku.png",
+     "x": 780,
+     "y": 1180,
+     "at": 12.7,
+     "size": 170,
+     "tag": "T5"
+    }
+   ]
+  },
+  {
+   "start": 15.7,
+   "end": 19.12,
+   "line": "Analisis & Ramalan SPM Sejarah | bagi tips macam ni,",
+   "keys": [
+    "Analisis",
+    "Ramalan",
+    "tips"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 640,
+    "max_h": 640,
+    "y": 620
+   }
+  },
+  {
+   "start": 19.12,
+   "end": 21.4,
+   "line": "berdasarkan analisis | soalan sebenar.",
+   "keys": [
+    "analisis",
+    "sebenar."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_tips.jpg",
+    "w": 760,
+    "max_h": 640,
+    "y": 600
+   }
+  },
+  {
+   "start": 21.4,
+   "end": 23.96,
+   "line": "Anak cuma susun strategi | ikut data.",
+   "keys": [
+    "susun",
+    "strategi",
+    "data."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_sejarah.jpg",
+    "w": 520,
+    "max_h": 720,
+    "y": 620
+   }
+  },
+  {
+   "start": 23.96,
+   "end": 26.96,
+   "line": "Ulang kaji yang sama, | hasil yang lebih tepat.",
+   "keys": [
+    "sama,",
+    "lebih",
+    "tepat."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/yakin",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Lebih tepat",
+      25.3
+     ]
+    ]
+   }
+  },
+  {
+   "start": 26.96,
+   "end": 28.53,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 460,
+    "max_h": 520,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

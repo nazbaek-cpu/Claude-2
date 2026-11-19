@@ -1,1 +1,324 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Kertas 2 Sejarah bahagian B, soalan 7, 8 dan 9, sukatan Tingkatan 5, Analisis dan Ramalan SPM Sejarah, strategi, data.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KERTAS 2 SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bahagian B,",
+     "key": "5 SOALAN",
+     "at": 0.0,
+     "until": 3.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/fokus.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 0.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BAHAGIAN B"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAHU TAK...",
+     "at": 2.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "3 daripadanya, soalan 7, 8 dan 9,",
+     "key": "LAZIMNYA SUKATAN T5",
+     "at": 3.38,
+     "until": 10.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.88,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       2.88
+      ],
+      [
+       "abang/idea.png",
+       7.94
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/jadual_waktu.png",
+     "at": 4.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN 7, 8, 9",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 10.56,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 10.06,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ramai ulang kaji T4 dan T5",
+     "key": "SAMA RATA",
+     "at": 10.56,
+     "until": 15.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 10.06,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/stres.png",
+       10.06
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/rak_buku.png",
+     "at": 11.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "T4 = T5?"
+    },
+    {
+     "kind": "stamp",
+     "text": "TANPA STRATEGI!",
+     "at": 14.16,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 15.7,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM",
+     "at": 15.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bagi tips macam ni, ikut",
+     "key": "SOALAN SEBENAR",
+     "at": 15.7,
+     "until": 21.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 15.75,
+     "until": 19.1,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_tips.jpg",
+     "at": 19.1,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 21.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 20.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma",
+     "key": "SUSUN STRATEGI IKUT DATA",
+     "at": 21.4,
+     "until": 23.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_sejarah.jpg",
+     "at": 21.45,
+     "until": 99,
+     "x": 540,
+     "y": 1120,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 23.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 23.46,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ulang kaji yang sama,",
+     "key": "HASIL LEBIH TEPAT",
+     "at": 23.96,
+     "until": 28.53,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 23.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       23.5
+      ],
+      [
+       "abang/sapa.png",
+       26.96
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 24.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.8,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 26.96,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

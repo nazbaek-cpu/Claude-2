@@ -1,1 +1,182 @@
-{"type": "arab", "source": "input/vo.mp4", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "episode": "EPISOD 10 · DIA DAH JANGKA?",
+ "whisper_prompt": "ulang kaji ikut data, Analisis dan Ramalan SPM, soalan percubaan semua negeri, soalan SPM sebenar 2021 hingga 2025, topik kerap diuji.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 28.96,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.06,
+   "title": "Macam dia dah *JANGKA?*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 270,
+     "at": 0.2,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "char",
+     "char": "kira/bangga",
+     "x": 810,
+     "at": 1.0,
+     "size": 600,
+     "name": "Kawan sekelas"
+    }
+   ]
+  },
+  {
+   "start": 5.06,
+   "end": 8.56,
+   "title": "Ulang kaji *IKUT DATA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "CARA KAWAN",
+     "name": "Kawan sekelas · calon SPM",
+     "text": "Ikut data,|bukan ikut rasa.",
+     "w": 560,
+     "h": 400,
+     "text_size": 50,
+     "x": 380,
+     "y": 950,
+     "at": 5.1
+    },
+    {
+     "kind": "char",
+     "char": "kira/menerang",
+     "x": 860,
+     "at": 5.15,
+     "size": 600,
+     "name": "Kawan sekelas"
+    }
+   ]
+  },
+  {
+   "start": 8.56,
+   "end": 14.18,
+   "title": "Baca *SEMUA BAB* sama rata",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/rak_buku",
+     "x": 300,
+     "at": 8.6,
+     "w": 380
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 860,
+     "at": 8.65,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 14.18,
+   "end": 19.12,
+   "title": "Analisis & *RAMALAN SPM*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 560,
+     "at": 14.22
+    }
+   ]
+  },
+  {
+   "start": 19.12,
+   "end": 22.88,
+   "title": "SPM sebenar *2021-2025*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_sejarah.jpg",
+     "x": 540,
+     "y": 1040,
+     "w": 470,
+     "at": 19.16
+    }
+   ]
+  },
+  {
+   "start": 22.88,
+   "end": 25.68,
+   "title": "Fokus topik *KERAP DIUJI*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 330,
+     "at": 22.9,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 860,
+     "at": 22.95,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 25.68,
+   "end": 28.96,
+   "title": "Anda *FOKUS* ulang kaji",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "x": 540,
+     "at": 25.72,
+     "size": 640,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 900,
+     "at": 27.3
+    }
+   ]
+  },
+  {
+   "start": 28.96,
+   "end": 30.75,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 460,
+     "at": 29.0
+    }
+   ]
+  }
+ ]
+}

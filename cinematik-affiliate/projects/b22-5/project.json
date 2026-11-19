@@ -1,1 +1,213 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "addmath",
+ "whisper_prompt": "ulang kaji ikut data, Analisis dan Ramalan SPM, soalan percubaan semua negeri, soalan SPM sebenar 2021 hingga 2025, topik kerap diuji.",
+ "cta": {
+  "at": 28.96,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.06,
+   "line": "Kenapa ada calon yang ulang kaji tak banyak, | tapi soalan yang keluar | macam dia dah jangka?",
+   "keys": [
+    "tak",
+    "banyak,",
+    "jangka?"
+   ],
+   "illus": {
+    "kind": "ask",
+    "char": "abang/berfikir",
+    "char_scale": 1.3
+   }
+  },
+  {
+   "start": 5.06,
+   "end": 8.56,
+   "line": "Sebab dia ulang kaji ikut data, | bukan ikut rasa.",
+   "keys": [
+    "data,",
+    "rasa."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "ULANG KAJI",
+    "word": "IKUT DATA",
+    "size": 104,
+    "sub": "bukan ikut rasa",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "x": 540,
+      "size": 551,
+      "at": 5.1
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 8.56,
+   "end": 14.18,
+   "line": "Calon lain? | Baca semua bab sama rata. | Yang kerap keluar, tak cukup latih.",
+   "keys": [
+    "sama",
+    "rata.",
+    "kerap",
+    "tak",
+    "cukup"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/stres",
+      "x": 540,
+      "size": 435,
+      "at": 8.6
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/rak_buku.png",
+     "x": 260,
+     "y": 470,
+     "at": 9.6,
+     "size": 216,
+     "tag": "SEMUA BAB"
+    },
+    {
+     "img": "icons/kuiz.png",
+     "x": 820,
+     "y": 470,
+     "at": 11.7,
+     "size": 216,
+     "tag": "KERAP KELUAR?"
+    }
+   ]
+  },
+  {
+   "start": 14.18,
+   "end": 19.12,
+   "line": "Analisis & Ramalan SPM | bandingkan soalan percubaan | semua negeri",
+   "keys": [
+    "Analisis",
+    "Ramalan",
+    "percubaan",
+    "negeri"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 660,
+    "max_h": 660,
+    "y": 600
+   }
+  },
+  {
+   "start": 19.12,
+   "end": 22.88,
+   "line": "dan soalan SPM sebenar | 2021 hingga 2025.",
+   "keys": [
+    "sebenar",
+    "2021",
+    "2025."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_sejarah.jpg",
+    "w": 520,
+    "max_h": 720,
+    "y": 600
+   },
+   "pills": [
+    [
+     "SPM sebenar 2021 - 2025",
+     19.2
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 22.88,
+   "end": 25.68,
+   "line": "Anak cuma fokus | topik yang kerap diuji.",
+   "keys": [
+    "fokus",
+    "kerap",
+    "diuji."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/fokus",
+      "x": 540,
+      "size": 435,
+      "at": 22.9
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/markah_a.png",
+     "x": 540,
+     "y": 450,
+     "at": 23.4,
+     "size": 256,
+     "tag": "TOPIK KERAP DIUJI"
+    }
+   ]
+  },
+  {
+   "start": 25.68,
+   "end": 28.96,
+   "line": "Kami dah analisis. | Anda fokus ulang kaji.",
+   "keys": [
+    "analisis.",
+    "fokus"
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/gembira",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Fokus ulang kaji",
+      27.3
+     ]
+    ]
+   }
+  },
+  {
+   "start": 28.96,
+   "end": 30.75,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 460,
+    "max_h": 520,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

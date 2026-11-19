@@ -1,1 +1,338 @@
-{"type": "arab", "source": "input/vo.mp4", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "penutup karangan, peribahasa, bagai aur dengan tebing, robot, Karangan Contoh Infografik, senarai peribahasa, daftar kata, rangka.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "PENUTUP KARANGAN...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cikgu suruh masukkan",
+     "key": "PERIBAHASA",
+     "at": 0.0,
+     "until": 2.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/cikgu_mengajar.png",
+     "at": 0.2,
+     "until": 99,
+     "x": 290,
+     "y": 1090,
+     "size": 280,
+     "rot": -3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "CIKGU"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 1.4,
+     "until": 99,
+     "x": 790,
+     "y": 1090,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PENUTUP"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 2.46,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kau cuma ingat satu,",
+     "key": "BAGAI AUR DENGAN TEBING",
+     "at": 2.96,
+     "until": 6.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.46,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       2.46
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 3.4,
+     "until": 99,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 6.54,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAJUK ROBOT?",
+     "at": 6.04,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "untuk tajuk robot pun",
+     "key": "GUNA YANG SAMA",
+     "at": 6.54,
+     "until": 9.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.04,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/terkejut.png",
+       6.04
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pen.png",
+     "at": 6.9,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "PERIBAHASA SAMA"
+    },
+    {
+     "kind": "stamp",
+     "text": "DITAMPAL!",
+     "at": 7.9,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 9.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KARANGAN CONTOH INFOGRAFIK",
+     "at": 8.68,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ada senarai",
+     "key": "PERIBAHASA & DAFTAR KATA",
+     "at": 9.18,
+     "until": 13.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 9.25,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 13.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SETIAP RANGKA TAJUK...",
+     "at": 13.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dah cadangkan peribahasa untuk",
+     "key": "PENUTUP",
+     "at": 13.5,
+     "until": 17.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_penutup.jpg",
+     "at": 13.55,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 17.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 17.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma pilih yang",
+     "key": "KENA DENGAN TEMA",
+     "at": 17.64,
+     "until": 20.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 17.7,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 880,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 19.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "peribahasa yang tepat,",
+     "key": "BUKAN DITAMPAL",
+     "at": 20.2,
+     "until": 24.53,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 19.7,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       19.7
+      ],
+      [
+       "abang/sapa.png",
+       22.88
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 20.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 21.0,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 22.88,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

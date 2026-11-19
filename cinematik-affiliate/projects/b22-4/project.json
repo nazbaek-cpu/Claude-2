@@ -1,1 +1,180 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "emerald",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  226,
+  60
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "penutup karangan, peribahasa, bagai aur dengan tebing, robot, Karangan Contoh Infografik, senarai peribahasa, daftar kata, rangka.",
+ "cta": {
+  "at": 22.88,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.96,
+   "lines": [
+    "*Penutup* karangan,",
+    "cikgu suruh masukkan",
+    "*peribahasa.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "icons/cikgu_mengajar",
+     "at": 0.2,
+     "size": 500,
+     "x": 540,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 2.96,
+   "end": 6.54,
+   "lines": [
+    "Kau cuma ingat *satu:*",
+    "*\"Bagai aur*",
+    "*dengan tebing.\"*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 3.0,
+     "size": 500,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 6.54,
+   "end": 9.18,
+   "lines": [
+    "Untuk tajuk *robot* pun",
+    "kau guna *yang sama.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/terkejut",
+     "at": 6.6,
+     "size": 500,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 9.18,
+   "end": 13.5,
+   "lines": [
+    "*Karangan Contoh*",
+    "Infografik ada senarai",
+    "*peribahasa* & daftar kata."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "kci_cover.jpg",
+     "at": 9.25,
+     "step": 1,
+     "y": 1660
+    }
+   ]
+  },
+  {
+   "start": 13.5,
+   "end": 17.64,
+   "lines": [
+    "Setiap rangka tajuk",
+    "dah *cadangkan peribahasa*",
+    "untuk *penutup.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_penutup.jpg",
+     "at": 13.55,
+     "w": 620,
+     "y": 1290
+    }
+   ]
+  },
+  {
+   "start": 17.64,
+   "end": 20.2,
+   "lines": [
+    "Anak cuma *pilih*",
+    "yang kena dengan *tema.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 17.7,
+     "w": 920,
+     "y": 1180
+    }
+   ]
+  },
+  {
+   "start": 20.2,
+   "end": 22.88,
+   "lines": [
+    "Peribahasa yang *tepat,*",
+    "bukan yang *ditampal.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 20.25,
+     "size": 540,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 22.88,
+   "end": 24.53,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 22.92,
+     "w": 520,
+     "max_h": 560,
+     "y": 1040
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 22.95,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

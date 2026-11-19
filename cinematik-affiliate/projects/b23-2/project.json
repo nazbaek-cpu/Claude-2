@@ -1,1 +1,243 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "Mak ayah, Add Maths, Addmath Express, video penerangan, setiap soalan, phone, tanpa password, skema jawapan bertulis, jalan kerja penuh.",
+ "cta": {
+  "at": 25.04,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.5,
+   "line": "Mak ayah, anak tanya | soalan Add Maths,",
+   "keys": [
+    "Add",
+    "Maths,"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/ingin_tahu",
+      "x": 300,
+      "size": 362,
+      "at": 0.2
+     },
+     {
+      "char": "abang/berfikir",
+      "x": 790,
+      "size": 435,
+      "at": 0.8
+     }
+    ],
+    "y": 1080
+   }
+  },
+  {
+   "start": 2.5,
+   "end": 5.66,
+   "line": "kita tengok soalan tu, | kita pun dah lupa semua.",
+   "keys": [
+    "lupa",
+    "semua."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "SOALAN ADD MATHS",
+    "word": "DAH LUPA",
+    "size": 104,
+    "sub": "kita pun blank",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/terkejut",
+      "x": 330,
+      "size": 348,
+      "at": 2.6
+     },
+     {
+      "char": "ortu/ayah/risau",
+      "x": 750,
+      "size": 348,
+      "at": 3.2
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 5.66,
+   "end": 9.14,
+   "line": "Tak apa, | bukan semua mak ayah | boleh ajar Add Maths.",
+   "keys": [
+    "Tak",
+    "apa,",
+    "ajar"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/gembira",
+      "x": 330,
+      "size": 362,
+      "at": 5.7
+     },
+     {
+      "char": "ortu/ayah/gembira",
+      "x": 750,
+      "size": 362,
+      "at": 6.0
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 9.14,
+   "end": 12.42,
+   "line": "Yang anak perlukan, | ada orang tunjuk cara buat.",
+   "keys": [
+    "tunjuk",
+    "cara",
+    "buat."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/idea",
+      "x": 540,
+      "size": 435,
+      "at": 9.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/cikgu_mengajar.png",
+     "x": 540,
+     "y": 450,
+     "at": 10.6,
+     "size": 256,
+     "tag": "TUNJUK CARA"
+    }
+   ]
+  },
+  {
+   "start": 12.42,
+   "end": 16.12,
+   "line": "Addmath Express ada video penerangan | untuk setiap soalan.",
+   "keys": [
+    "Addmath",
+    "Express",
+    "video",
+    "setiap"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ax_buku4.jpg",
+    "w": 520,
+    "max_h": 760,
+    "y": 620
+   }
+  },
+  {
+   "start": 16.12,
+   "end": 19.94,
+   "line": "Anak buka terus dari buku, | guna phone, | tanpa password.",
+   "keys": [
+    "phone,",
+    "tanpa",
+    "password."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ax_phone.jpg",
+    "w": 880,
+    "max_h": 520,
+    "y": 560
+   },
+   "pills": [
+    [
+     "Tanpa password",
+     18.78
+    ]
+   ],
+   "pills_y": 1000
+  },
+  {
+   "start": 19.94,
+   "end": 23.08,
+   "line": "Siap skema jawapan bertulis, | jalan kerja penuh.",
+   "keys": [
+    "skema",
+    "jalan",
+    "kerja",
+    "penuh."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ax_skema.jpg",
+    "w": 560,
+    "max_h": 800,
+    "y": 620
+   }
+  },
+  {
+   "start": 23.08,
+   "end": 25.04,
+   "line": "Mak ayah | tak perlu jadi cikgu.",
+   "keys": [
+    "tak",
+    "perlu",
+    "cikgu."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/bangga",
+      "x": 330,
+      "size": 362,
+      "at": 23.1
+     },
+     {
+      "char": "ortu/ayah/bangga",
+      "x": 750,
+      "size": 362,
+      "at": 23.3
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 25.04,
+   "end": 26.67,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ax_buku4.jpg",
+    "w": 380,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

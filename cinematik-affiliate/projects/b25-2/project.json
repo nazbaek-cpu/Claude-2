@@ -1,1 +1,272 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "Mak ayah, drama English, subtitle, essay, 120 SPM English Model Essays, format SPM, struktur, vocab.",
+ "cta": {
+  "at": 29.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.34,
+   "line": "Mak ayah, anak tengok | drama English setiap malam.",
+   "keys": [
+    "drama",
+    "English"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/video",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/tv.png",
+     "x": 540,
+     "y": 450,
+     "at": 1.0,
+     "size": 256,
+     "tag": "DRAMA ENGLISH"
+    }
+   ]
+  },
+  {
+   "start": 3.34,
+   "end": 5.62,
+   "line": "Faham semua | tanpa subtitle.",
+   "keys": [
+    "Faham",
+    "tanpa",
+    "subtitle."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adikhp/gembira",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Tanpa subtitle",
+      3.9
+     ]
+    ]
+   }
+  },
+  {
+   "start": 5.62,
+   "end": 8.74,
+   "line": "Tapi bila tulis essay, | markah tetap sama.",
+   "keys": [
+    "essay,",
+    "tetap",
+    "sama."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "ESSAY ENGLISH",
+    "word": "MARKAH SAMA",
+    "size": 100,
+    "sub": "walaupun faham drama",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adikhp/chatting",
+      "x": 540,
+      "size": 493,
+      "at": 5.7
+     }
+    ],
+    "y": 1060
+   }
+  },
+  {
+   "start": 8.74,
+   "end": 11.8,
+   "line": "Sebab dengar dan tulis | kemahiran yang lain.",
+   "keys": [
+    "dengar",
+    "tulis",
+    "lain."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 540,
+      "size": 435,
+      "at": 8.8
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/tv.png",
+     "x": 260,
+     "y": 470,
+     "at": 8.8,
+     "size": 216,
+     "tag": "DENGAR"
+    },
+    {
+     "img": "icons/pen.png",
+     "x": 820,
+     "y": 470,
+     "at": 9.6,
+     "size": 216,
+     "tag": "TULIS"
+    }
+   ]
+  },
+  {
+   "start": 11.8,
+   "end": 15.1,
+   "line": "Menulis perlukan contoh tulisan, | bukan tontonan.",
+   "keys": [
+    "contoh",
+    "tulisan,",
+    "tontonan."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "MENULIS PERLUKAN",
+    "word": "CONTOH TULISAN",
+    "size": 86,
+    "sub": "bukan tontonan",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "kira/menerang",
+      "x": 540,
+      "size": 551,
+      "at": 11.85
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 15.1,
+   "end": 18.72,
+   "line": "Dia perlu tengok macam mana idea | disusun atas kertas.",
+   "keys": [
+    "idea",
+    "disusun",
+    "kertas."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_report.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Introduction · Main · Conclusion",
+     16.0
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 18.72,
+   "end": 23.44,
+   "line": "120 SPM English Model Essays, | contoh essay format SPM.",
+   "keys": [
+    "120",
+    "Model",
+    "Essays,",
+    "format",
+    "SPM."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 520,
+    "max_h": 760,
+    "y": 620
+   }
+  },
+  {
+   "start": 23.44,
+   "end": 26.86,
+   "line": "Anak cuma baca, | tiru struktur, | ambil vocab.",
+   "keys": [
+    "baca,",
+    "struktur,",
+    "vocab."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_essay.jpg",
+    "w": 620,
+    "max_h": 780,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Vocab enhancer",
+     25.94
+    ]
+   ],
+   "pills_y": 1110
+  },
+  {
+   "start": 26.86,
+   "end": 29.0,
+   "line": "Dari faham, | jadi boleh tulis.",
+   "keys": [
+    "faham,",
+    "tulis."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adikhp/gembira",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Boleh tulis",
+      27.9
+     ]
+    ]
+   }
+  },
+  {
+   "start": 29.0,
+   "end": 30.59,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 400,
+    "max_h": 560,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

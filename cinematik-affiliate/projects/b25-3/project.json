@@ -1,1 +1,196 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "bg": "putih",
+ "source": "input/vo.mp4",
+ "accent": [
+  232,
+  96,
+  76
+ ],
+ "accent2": [
+  250,
+  178,
+  150
+ ],
+ "whisper_prompt": "Mak ayah, karangan, Karangan Contoh dan Teknik Penulisan, Guru Cemerlang, analisis, cemerlang, penyemak.",
+ "cta": {
+  "at": 21.5,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 1.98,
+   "lines": [
+    "Mak ayah,",
+    "anak tunjuk *karangan* dia."
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1250,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/buku_tulis.png",
+       "label": "Karangan anak",
+       "at": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 1.98,
+   "end": 6.72,
+   "lines": [
+    "Nak cakap *bagus,*",
+    "tak pasti.",
+    "Nak *tegur,*",
+    "tak tahu *apa yang salah.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1350,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "ortu/mak/berfikir.png",
+       "label": "Bagus?",
+       "at": 2.0
+      },
+      {
+       "img": "ortu/ayah/risau.png",
+       "label": "Salah?",
+       "at": 4.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 6.72,
+   "end": 10.8,
+   "lines": [
+    "*Karangan Contoh*",
+    "dan Teknik Penulisan,",
+    "ditulis *Guru Cemerlang.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "bm_cover.jpg",
+     "at": 6.78,
+     "step": 1,
+     "y": 1600
+    }
+   ]
+  },
+  {
+   "start": 10.8,
+   "end": 14.86,
+   "lines": [
+    "Setiap contoh *siap analisis:*",
+    "apa yang buat karangan",
+    "tu *cemerlang?*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_review.jpg",
+     "at": 10.85,
+     "w": 900,
+     "y": 1250
+    }
+   ]
+  },
+  {
+   "start": 14.86,
+   "end": 19.66,
+   "lines": [
+    "Mak ayah cuma *bandingkan*",
+    "karangan anak dengan *contoh.*",
+    "Terus nampak *apa yang kurang.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Cara mak ayah semak",
+     "at": 14.9,
+     "y": 1430,
+     "rows": [
+      [
+       "Baca contoh",
+       14.9
+      ],
+      [
+       "Banding karangan anak",
+       16.7
+      ],
+      [
+       "Nampak apa yang kurang",
+       17.96
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 19.66,
+   "end": 21.5,
+   "lines": [
+    "Mak ayah pun boleh",
+    "jadi *penyemak.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "ortu/mak/bangga",
+     "at": 19.7,
+     "size": 420,
+     "x": 330,
+     "y": 1300
+    },
+    {
+     "kind": "char",
+     "char": "ortu/ayah/bangga",
+     "at": 19.9,
+     "size": 420,
+     "x": 750,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 21.5,
+   "end": 22.99,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 21.54,
+     "w": 440,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 21.57,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

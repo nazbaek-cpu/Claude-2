@@ -1,1 +1,376 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Terapi KBAT Sejarah SPM, isi, fakta, markah KBAT, rumus P.E.S., Rangka Struktur Kotak, video penerangan, skema jawapan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "JAWAPAN KBAT...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "isi kau betul, fakta kau",
+     "key": "TEPAT",
+     "at": 0.0,
+     "until": 2.52,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/kuiz.png",
+     "at": 0.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "JAWAPAN KBAT",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.52,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 2.02,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "markah KBAT dapat",
+     "key": "SEPARUH JE",
+     "at": 2.52,
+     "until": 5.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.02,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/terkejut.png",
+       2.02
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 3.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "MARKAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "SEPARUH!",
+     "at": 4.4,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 5.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA...",
+     "at": 5.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "fakta ditulis, tapi tak",
+     "key": "KAIT DENGAN SOALAN",
+     "at": 5.98,
+     "until": 9.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.48,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       5.48
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 6.4,
+     "until": 99,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 9.4,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAMAI CALON...",
+     "at": 8.9,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "jatuh dekat sini,",
+     "key": "TANPA SEDAR",
+     "at": 9.4,
+     "until": 12.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 8.9,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/stres.png",
+       8.9
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 9.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN KBAT"
+    }
+   ]
+  },
+  {
+   "start": 12.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERAPI KBAT SEJARAH",
+     "at": 11.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "rumus P.E.S. supaya setiap fakta ada",
+     "key": "KAITAN & ALASAN",
+     "at": 12.48,
+     "until": 19.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 12.55,
+     "until": 15.8,
+     "x": 540,
+     "y": 1110,
+     "w": 620,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "kbat_jenis.jpg",
+     "at": 15.8,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 18.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma ikut",
+     "key": "RANGKA STRUKTUR KOTAK",
+     "at": 19.38,
+     "until": 21.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "siap video penerangan &",
+     "key": "SKEMA LENGKAP",
+     "at": 21.84,
+     "until": 24.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kbat_satu_buku.jpg",
+     "at": 19.45,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 760,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 24.86,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 24.36,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "fakta yang sama,",
+     "key": "MARKAH YANG LAIN",
+     "at": 24.86,
+     "until": 28.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 24.4,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       24.4
+      ],
+      [
+       "abang/sapa.png",
+       27.18
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 25.2,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 25.6,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 27.18,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

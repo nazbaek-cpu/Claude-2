@@ -1,1 +1,198 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "kelas tambahan Sejarah, mengantuk, perenggan panjang, buku teks, BTP Infografik Sejarah, Tingkatan 4 dan 5.",
+ "cta": {
+  "at": 26.3,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.94,
+   "lines": [
+    "Kenapa ada *kelas tambahan*",
+    "Sejarah yang murid",
+    "*tak mengantuk* langsung?"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1350,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/kerja_kumpulan.png",
+       "label": "Kelas malam",
+       "at": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 3.94,
+   "end": 7.82,
+   "lines": [
+    "Sebab murid *tak dipaksa*",
+    "baca *perenggan panjang*",
+    "waktu malam."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 4.0,
+     "size": 480,
+     "x": 540,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 7.82,
+   "end": 13.06,
+   "lines": [
+    "Kelas lain?",
+    "Buka buku teks,",
+    "baca *beramai-ramai,*",
+    "separuh kelas *dah lena.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "icons/tidur_kelas",
+     "at": 7.9,
+     "size": 480,
+     "x": 540,
+     "y": 1470
+    }
+   ]
+  },
+  {
+   "start": 13.06,
+   "end": 17.86,
+   "lines": [
+    "*BTP Infografik* Sejarah.",
+    "Isi penting dalam",
+    "*infografik berwarna.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "btp_cover.jpg",
+     "at": 13.1,
+     "step": 1,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 17.86,
+   "end": 20.62,
+   "lines": [
+    "Murid cuma *tengok,*",
+    "*bincang,* *jawab.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Kelas malam yang hidup",
+     "at": 17.9,
+     "y": 1300,
+     "rows": [
+      [
+       "Tengok infografik",
+       17.9
+      ],
+      [
+       "Bincang",
+       19.16
+      ],
+      [
+       "Jawab",
+       19.96
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 20.62,
+   "end": 23.74,
+   "lines": [
+    "Ikut *bab buku teks,*",
+    "*Tingkatan 4 dan 5.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_kandungan.jpg",
+     "at": 20.66,
+     "w": 820,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 23.74,
+   "end": 26.3,
+   "lines": [
+    "Malam yang sama,",
+    "kelas yang",
+    "*lebih hidup.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "char",
+     "char": "icons/tepuk_tangan",
+     "at": 23.8,
+     "size": 460,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 26.3,
+   "end": 27.95,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 26.34,
+     "w": 460,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 26.37,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

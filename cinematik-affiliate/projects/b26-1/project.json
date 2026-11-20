@@ -1,1 +1,198 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "kelas intensif, topik kerap diuji, soalan rawak, Analisis dan Ramalan SPM, soalan percubaan, SPM sebenar, tutor.",
+ "cta": {
+  "at": 24.9,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.1,
+   "lines": [
+    "Kenapa ada *kelas intensif*",
+    "yang murid dia nampak",
+    "*lebih yakin* masuk dewan?"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1350,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/kerja_kumpulan.png",
+       "label": "Kelas intensif",
+       "at": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4.1,
+   "end": 7.88,
+   "lines": [
+    "Sebab latihan dia",
+    "*fokus* pada topik",
+    "yang *kerap diuji.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "icons/cikgu_mengajar",
+     "at": 4.15,
+     "size": 480,
+     "x": 540,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 7.88,
+   "end": 12.8,
+   "lines": [
+    "Kelas lain?",
+    "Buat *soalan rawak,*",
+    "satu demi satu,",
+    "*tanpa arah.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "at": 7.95,
+     "size": 460,
+     "x": 540,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 12.8,
+   "end": 16.0,
+   "lines": [
+    "*Analisis & Ramalan*",
+    "*SPM,*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "ram_cover.jpg",
+     "at": 12.85,
+     "step": 1,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 16.0,
+   "end": 19.62,
+   "lines": [
+    "Ramalan ikut analisis",
+    "*percubaan* dan",
+    "*SPM sebenar.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_sejarah.jpg",
+     "at": 16.05,
+     "w": 500,
+     "max_h": 680,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 19.62,
+   "end": 22.42,
+   "lines": [
+    "Tutor cuma *susun kelas*",
+    "ikut *topik fokus.*"
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Kelas ikut topik fokus",
+     "at": 19.65,
+     "y": 1300,
+     "rows": [
+      [
+       "Topik kerap diuji",
+       19.7
+      ],
+      [
+       "Soalan ramalan",
+       20.6
+      ],
+      [
+       "Latihan terarah",
+       21.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 22.42,
+   "end": 24.9,
+   "lines": [
+    "Latihan yang *terarah,*",
+    "bukan *rawak.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 22.46,
+     "size": 520,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 24.9,
+   "end": 26.67,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 24.94,
+     "w": 520,
+     "max_h": 560,
+     "y": 1040
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 24.97,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

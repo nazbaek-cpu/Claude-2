@@ -1,1 +1,156 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "episode": "EPISOD 13 · 2 MINGGU LAGI",
+ "whisper_prompt": "Percubaan SPM, 10 bab Sejarah, buku teks, panik, BTP Infografik Sejarah, isi penting, infografik, bab demi bab.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 27.74,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.28,
+   "title": "Percubaan *2 MINGGU* lagi",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/terkejut_kertas.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 5.28,
+   "end": 9.88,
+   "title": "1 bab *BERPULUH* muka surat",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/stres.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 5.32
+    }
+   ]
+  },
+  {
+   "start": 9.88,
+   "end": 13.94,
+   "title": "Sempat ulang *SEMUA BAB?*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/berfikir.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 9.92
+    }
+   ]
+  },
+  {
+   "start": 13.94,
+   "end": 16.44,
+   "title": "Baca *ISI PENTING* je",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/idea.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 13.98
+    }
+   ]
+  },
+  {
+   "start": 16.44,
+   "end": 21.8,
+   "title": "BTP Infografik *SEJARAH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_cover.jpg",
+     "x": 300,
+     "y": 1040,
+     "w": 460,
+     "at": 16.5
+    },
+    {
+     "kind": "photo",
+     "img": "btp_kedaulatan.jpg",
+     "x": 785,
+     "y": 1060,
+     "w": 470,
+     "at": 18.64
+    }
+   ]
+  },
+  {
+   "start": 21.8,
+   "end": 24.68,
+   "title": "Bab demi bab, *LAJU*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_kandungan.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 760,
+     "at": 21.84
+    }
+   ]
+  },
+  {
+   "start": 24.68,
+   "end": 27.74,
+   "title": "Semua bab *TERSENTUH*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/gembira.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 24.72
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 25.8
+    }
+   ]
+  },
+  {
+   "start": 27.74,
+   "end": 29.31,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 520,
+     "at": 27.78
+    }
+   ]
+  }
+ ]
+}

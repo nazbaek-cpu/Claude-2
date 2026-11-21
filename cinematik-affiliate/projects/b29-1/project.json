@@ -1,1 +1,229 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "whisper_prompt": "anak baca komik, karangan, Karangan Contoh Infografik, ilustrasi, rangka berwarna, isi, huraian, contoh, peta.",
+ "cta": {
+  "at": 25.42,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.38,
+   "line": "Anak boleh baca komik | berjam-jam,",
+   "keys": [
+    "komik",
+    "berjam-jam,"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/gembira",
+      "x": 540,
+      "size": 435,
+      "at": 0.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/rak_buku.png",
+     "x": 540,
+     "y": 450,
+     "at": 0.6,
+     "size": 256,
+     "tag": "KOMIK"
+    }
+   ]
+  },
+  {
+   "start": 2.38,
+   "end": 6.06,
+   "line": "tapi bila suruh tulis karangan, | terus hilang semangat.",
+   "keys": [
+    "karangan,",
+    "hilang",
+    "semangat."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "BILA SURUH TULIS",
+    "word": "KARANGAN",
+    "size": 110,
+    "sub": "terus hilang semangat",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/sedih",
+      "x": 540,
+      "size": 551,
+      "at": 2.45
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 6.06,
+   "end": 8.92,
+   "line": "Mungkin dia belajar lebih baik | melalui gambar.",
+   "keys": [
+    "lebih",
+    "baik",
+    "gambar."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adik/idea",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Belajar ikut gambar",
+      7.0
+     ]
+    ]
+   }
+  },
+  {
+   "start": 8.92,
+   "end": 14.92,
+   "line": "Karangan Contoh Infografik, | setiap tajuk ada ilustrasi | dan rangka berwarna.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Infografik,",
+    "ilustrasi",
+    "berwarna."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 640,
+    "max_h": 640,
+    "y": 600
+   }
+  },
+  {
+   "start": 14.92,
+   "end": 19.18,
+   "line": "Isi, huraian, contoh, | semua tersusun macam peta.",
+   "keys": [
+    "Isi,",
+    "huraian,",
+    "contoh,",
+    "peta."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_robot.jpg",
+    "w": 880,
+    "max_h": 520,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Isi · Huraian · Contoh",
+     14.95
+    ]
+   ],
+   "pills_y": 1000
+  },
+  {
+   "start": 19.18,
+   "end": 22.84,
+   "line": "Anak tengok gambar, | faham struktur, | baru menulis.",
+   "keys": [
+    "gambar,",
+    "struktur,",
+    "menulis."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "adik/setuju",
+      "x": 540,
+      "size": 435,
+      "at": 19.2
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/krayon.png",
+     "x": 220,
+     "y": 470,
+     "at": 19.2,
+     "size": 216,
+     "tag": "TENGOK"
+    },
+    {
+     "img": "icons/papan_tulis.png",
+     "x": 540,
+     "y": 420,
+     "at": 20.6,
+     "size": 216,
+     "tag": "FAHAM"
+    },
+    {
+     "img": "icons/pensel.png",
+     "x": 860,
+     "y": 470,
+     "at": 21.78,
+     "size": 216,
+     "tag": "TULIS"
+    }
+   ]
+  },
+  {
+   "start": 22.84,
+   "end": 25.42,
+   "line": "Ikut cara dia belajar, | bukan paksa.",
+   "keys": [
+    "cara",
+    "dia",
+    "bukan",
+    "paksa."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adik/raikan",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Ikut cara dia",
+      23.4
+     ]
+    ]
+   }
+  },
+  {
+   "start": 25.42,
+   "end": 27.17,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 460,
+    "max_h": 460,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

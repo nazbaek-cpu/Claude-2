@@ -1,1 +1,170 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "emerald",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  226,
+  60
+ ],
+ "accent2": [
+  255,
+  64,
+  200
+ ],
+ "whisper_prompt": "Malam sebelum peperiksaan, grup Telegram, spot soalan, Analisis dan Ramalan SPM, sumber negeri dan tahun, soalan percubaan, SPM sebenar 2021 hingga 2025.",
+ "cta": {
+  "at": 28.64,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.44,
+   "lines": [
+    "*Malam sebelum* peperiksaan,",
+    "grup Telegram penuh",
+    "dengan *spot soalan.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1330,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "adikhp/chatting.png",
+       "label": "Spot soalan",
+       "at": 1.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 4.44,
+   "end": 8.04,
+   "lines": [
+    "Siapa buat?",
+    "Dari mana?",
+    "*Tak ada siapa tahu.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 4.5,
+     "size": 460,
+     "x": 540,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 8.04,
+   "end": 14.4,
+   "lines": [
+    "Kenapa ada calon yang",
+    "*tak layan* spot macam tu?",
+    "Sebab dia ada analisis",
+    "yang *ada sumber.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/yakin",
+     "at": 8.1,
+     "size": 440,
+     "x": 540,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "start": 14.4,
+   "end": 19.96,
+   "lines": [
+    "*Analisis & Ramalan SPM,*",
+    "setiap soalan disertakan",
+    "*sumber negeri dan tahun.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "ram_cover.jpg",
+     "at": 14.45,
+     "step": 1,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 19.96,
+   "end": 25.6,
+   "lines": [
+    "Berdasarkan *soalan percubaan*",
+    "dan SPM sebenar",
+    "*2021 hingga 2025.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_sejarah.jpg",
+     "at": 20.0,
+     "w": 500,
+     "max_h": 640,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 25.6,
+   "end": 28.64,
+   "lines": [
+    "Ramalan yang *ada data,*",
+    "bukan *khabar angin.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "at": 25.65,
+     "size": 520,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 28.64,
+   "end": 30.51,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 28.68,
+     "w": 520,
+     "max_h": 560,
+     "y": 1040
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 28.71,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

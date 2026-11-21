@@ -1,1 +1,303 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Karangan Contoh dan Teknik Penulisan, Karangan Contoh Infografik Tingkatan 1, 2 dan 3, Nilam, rangka infografik, audio QR, rubrik UASA.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ABANG / KAKAK SPM...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "guna Karangan Contoh dan",
+     "key": "TEKNIK PENULISAN",
+     "at": 0.0,
+     "until": 4.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 1.0,
+     "until": 4.26,
+     "x": 790,
+     "y": 1060,
+     "w": 360,
+     "rot": 3,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ADIK T1, T2, T3?",
+     "at": 3.76,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "macam mana?",
+     "key": "ADA VERSI UNTUK DIA",
+     "at": 4.26,
+     "until": 9.06,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.76,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/berfikir.png",
+       3.76
+      ],
+      [
+       "adik/idea.png",
+       7.3
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 4.8,
+     "until": 7.3,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 9.06,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KARANGAN CONTOH INFOGRAFIK",
+     "at": 8.56,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Tingkatan 1, 2 dan 3,",
+     "key": "SIRI YANG SAMA",
+     "at": 9.06,
+     "until": 15.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 9.12,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 15.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DALAM BUKU:",
+     "at": 14.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "rangka berwarna, karangan lengkap,",
+     "key": "AUDIO QR & RUBRIK UASA",
+     "at": 15.1,
+     "until": 20.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 15.16,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 880,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MULA ASAS SEKARANG:",
+     "at": 19.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masuk Tingkatan 4 nanti,",
+     "key": "DAH BIASA MENULIS",
+     "at": 20.48,
+     "until": 25.44,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 19.98,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/setuju.png",
+       19.98
+      ],
+      [
+       "adik/gembira.png",
+       22.54
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/pensel.png",
+     "at": 21.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BIASA MENULIS",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 25.44,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SATU KELUARGA:",
+     "at": 24.94,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu keluarga,",
+     "key": "SATU SIRI",
+     "at": 25.44,
+     "until": 29.15,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 24.94,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "adik/raikan.png",
+       24.94
+      ],
+      [
+       "adik/sapa.png",
+       27.52
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 25.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 26.2,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 27.52,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

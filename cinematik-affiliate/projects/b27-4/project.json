@@ -1,1 +1,344 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kayu",
+ "whisper_prompt": "Mak ayah, Sejarah wajib lulus, sijil SPM, KBAT, Terapi KBAT Sejarah SPM, rumus P.E.S., Rangka Struktur Kotak, video penerangan, skema jawapan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Sejarah wajib lulus untuk dapat",
+     "key": "SIJIL SPM",
+     "at": 0.0,
+     "until": 4.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/sijil.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "size": 280,
+     "rot": -2,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SIJIL SPM",
+     "good": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 3.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "subjek lain skor, tapi kalau Sejarah gagal,",
+     "key": "SIJIL TAK KELUAR",
+     "at": 4.08,
+     "until": 9.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 3.58,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       3.58
+      ],
+      [
+       "abang/terkejut.png",
+       6.04
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 4.4,
+     "until": 99,
+     "x": 790,
+     "y": 900,
+     "size": 170,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SUBJEK LAIN",
+     "good": true
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 6.3,
+     "until": 99,
+     "x": 790,
+     "y": 1250,
+     "size": 170,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SEJARAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "SIJIL TAK KELUAR!",
+     "at": 8.1,
+     "x": 560,
+     "y": 1520,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 9.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "YANG SELALU TERCICIR...",
+     "at": 8.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "markah",
+     "key": "KBAT",
+     "at": 9.3,
+     "until": 12.86,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 8.8,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/stres.png",
+       8.8
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 9.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN KBAT"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 10.4,
+     "until": 99,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 12.86,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TERAPI KBAT SEJARAH SPM",
+     "at": 12.36,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cara jawab KBAT guna rumus P.E.S. &",
+     "key": "RANGKA STRUKTUR KOTAK",
+     "at": 12.86,
+     "until": 19.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 12.92,
+     "until": 16.2,
+     "x": 540,
+     "y": 1110,
+     "w": 620,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "kbat_jenis.jpg",
+     "at": 16.2,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.56,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.06,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma",
+     "key": "ISI KOTAK IKUT LANGKAH",
+     "at": 19.56,
+     "until": 21.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "soalan format SPM, video &",
+     "key": "SKEMA LENGKAP",
+     "at": 21.82,
+     "until": 26.24,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "kbat_satu_buku.jpg",
+     "at": 19.62,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 760,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 26.24,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT:",
+     "at": 25.74,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "jangan biar satu subjek",
+     "key": "TAHAN SEMUA",
+     "at": 26.24,
+     "until": 30.35,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 25.8,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       25.8
+      ],
+      [
+       "abang/sapa.png",
+       28.38
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "kbat_cover.jpg",
+     "at": 26.6,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 27.0,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.38,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

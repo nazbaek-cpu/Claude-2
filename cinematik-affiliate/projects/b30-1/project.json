@@ -1,1 +1,183 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "calon siap karangan awal, baca semula, pendahuluan, Karangan Contoh dan Teknik Penulisan, setiap tema, struktur, tip dan nota penulis.",
+ "cta": {
+  "at": 25.74,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.06,
+   "line": "Kenapa ada calon yang siap karangan awal, | sempat baca semula?",
+   "keys": [
+    "siap",
+    "awal,",
+    "baca",
+    "semula?"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/menulis_fokus.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 4.06,
+   "end": 6.88,
+   "line": "Sebab dia tak buang masa | dekat pendahuluan.",
+   "keys": [
+    "tak",
+    "buang",
+    "masa",
+    "pendahuluan."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "RAHSIA DIA",
+    "word": "PENDAHULUAN LAJU",
+    "size": 80,
+    "sub": "tak buang masa",
+    "y": 420
+   },
+   "icons": [
+    {
+     "img": "macho/yakin_beg.png",
+     "x": 540,
+     "y": 1000,
+     "at": 4.2,
+     "size": 594,
+     "tile": true
+    }
+   ]
+  },
+  {
+   "start": 6.88,
+   "end": 10.3,
+   "line": "Calon lain? | 15 minit fikir ayat pertama,",
+   "keys": [
+    "15",
+    "minit",
+    "ayat",
+    "pertama,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/berfikir.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 10.3,
+   "end": 12.86,
+   "line": "isi terakhir ditulis | tergesa-gesa.",
+   "keys": [
+    "terakhir",
+    "tergesa-gesa."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/stres.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 12.86,
+   "end": 18.12,
+   "line": "Karangan Contoh dan Teknik Penulisan | tunjuk cara mula karangan | untuk setiap tema.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "cara",
+    "mula",
+    "tema."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 620
+   }
+  },
+  {
+   "start": 18.12,
+   "end": 21.5,
+   "line": "Anak cuma tiru struktur, | guna idea sendiri.",
+   "keys": [
+    "tiru",
+    "struktur,",
+    "idea",
+    "sendiri."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_tema1.jpg",
+    "w": 620,
+    "max_h": 760,
+    "y": 600
+   }
+  },
+  {
+   "start": 21.5,
+   "end": 23.6,
+   "line": "Siap tip dan nota penulis.",
+   "keys": [
+    "tip",
+    "nota"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 880,
+    "max_h": 480,
+    "y": 560
+   }
+  },
+  {
+   "start": 23.6,
+   "end": 25.74,
+   "line": "Mula laju, | habis tenang.",
+   "keys": [
+    "laju,",
+    "tenang."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 25.74,
+   "end": 27.48,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

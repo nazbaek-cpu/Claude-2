@@ -1,1 +1,198 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "calon tidur cukup, ulang kaji Sejarah, pukul 2 pagi, buku teks, BTP Infografik Sejarah, isi penting, peristiwa penting.",
+ "cta": {
+  "at": 26.52,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.76,
+   "line": "Kenapa ada calon yang tidur cukup, | tapi ulang kaji Sejarah dia lebih banyak | dari kawan yang tidur pukul 2 pagi?",
+   "keys": [
+    "tidur",
+    "cukup,",
+    "lebih",
+    "banyak",
+    "2",
+    "pagi?"
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "abang/yakin",
+      "x": 300,
+      "size": 435,
+      "at": 0.2
+     },
+     {
+      "char": "adik/stres",
+      "x": 790,
+      "size": 435,
+      "at": 3.9
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "rumah/katil.png",
+     "x": 300,
+     "y": 470,
+     "at": 0.8,
+     "size": 202,
+     "tag": "TIDUR CUKUP"
+    },
+    {
+     "img": "mat/jam.png",
+     "x": 790,
+     "y": 470,
+     "at": 4.4,
+     "size": 202,
+     "tag": "PUKUL 2 PAGI"
+    }
+   ]
+  },
+  {
+   "start": 6.76,
+   "end": 9.52,
+   "line": "Sebab dia tak baca | benda yang tak perlu.",
+   "keys": [
+    "tak",
+    "perlu."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/idea",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Baca yang perlu",
+      7.4
+     ]
+    ]
+   }
+  },
+  {
+   "start": 9.52,
+   "end": 15.56,
+   "line": "Calon lain? | Baca buku teks dari muka pertama, | berjam-jam, mengantuk.",
+   "keys": [
+    "muka",
+    "pertama,",
+    "berjam-jam,",
+    "mengantuk."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "BUKU TEKS",
+    "word": "DARI MUKA 1",
+    "size": 104,
+    "sub": "berjam-jam... mengantuk",
+    "y": 420
+   },
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "icons/tidur_kelas",
+      "x": 540,
+      "size": 551,
+      "at": 9.6
+     }
+    ],
+    "y": 1000
+   }
+  },
+  {
+   "start": 15.56,
+   "end": 20.76,
+   "line": "BTP Infografik Sejarah, | isi penting dan peristiwa penting | dah ditapis.",
+   "keys": [
+    "BTP",
+    "Infografik",
+    "isi",
+    "peristiwa",
+    "ditapis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 600,
+    "max_h": 760,
+    "y": 620
+   }
+  },
+  {
+   "start": 20.76,
+   "end": 24.54,
+   "line": "Anak cuma baca yang perlu | dalam infografik berwarna.",
+   "keys": [
+    "baca",
+    "perlu",
+    "berwarna."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_kedaulatan.jpg",
+    "w": 880,
+    "max_h": 560,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Infografik berwarna",
+     22.9
+    ]
+   ],
+   "pills_y": 1000
+  },
+  {
+   "start": 24.54,
+   "end": 26.52,
+   "line": "Kurang jam, | lebih faham.",
+   "keys": [
+    "Kurang",
+    "jam,",
+    "lebih",
+    "faham."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "abang/gembira",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Lebih faham",
+      25.54
+     ]
+    ]
+   }
+  },
+  {
+   "start": 26.52,
+   "end": 28.29,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "btp_cover.jpg",
+    "w": 440,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

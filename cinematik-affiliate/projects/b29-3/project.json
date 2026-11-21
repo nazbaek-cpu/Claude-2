@@ -1,1 +1,377 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "ulang kaji, bab kegemaran, bab lemah, SPM, Analisis dan Ramalan SPM, topik, corak soalan berulang, trend, fokus, latihan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "JUJUR...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bab mana kau",
+     "key": "SELALU ULANG KAJI?",
+     "at": 0.0,
+     "until": 2.62,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 0.8,
+     "until": 99,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.62,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BAB KEGEMARAN...",
+     "at": 2.12,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bab yang kau suka,",
+     "key": "BAB YANG KAU DAH PANDAI",
+     "at": 2.62,
+     "until": 5.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 2.12,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       2.12
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_a.png",
+     "at": 3.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BAB KEGEMARAN",
+     "good": true
+    }
+   ]
+  },
+  {
+   "start": 5.66,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BAB LEMAH?",
+     "at": 5.16,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bab yang kau lemah,",
+     "key": "KAU LANGKAU",
+     "at": 5.66,
+     "until": 8.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 5.16,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/stres.png",
+       5.16
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/markah_rendah.png",
+     "at": 6.0,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "BAB LEMAH"
+    },
+    {
+     "kind": "stamp",
+     "text": "LANGKAU!",
+     "at": 7.0,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 8.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MASALAHNYA...",
+     "at": 7.86,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "SPM tak tanya",
+     "key": "BAB KEGEMARAN KAU",
+     "at": 8.36,
+     "until": 11.94,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 7.86,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/terkejut.png",
+       7.86
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/peperiksaan.png",
+     "at": 8.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "SOALAN SPM"
+    }
+   ]
+  },
+  {
+   "start": 11.94,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM",
+     "at": 11.44,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenal pasti topik dan",
+     "key": "CORAK SOALAN BERULANG",
+     "at": 11.94,
+     "until": 17.14,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 12.0,
+     "until": 14.6,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_tips.jpg",
+     "at": 14.6,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 17.14,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 16.64,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ikut senarai topik yang",
+     "key": "PERLU LEBIH FOKUS",
+     "at": 17.14,
+     "until": 20.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "analisis, trend, fokus,",
+     "key": "LATIHAN",
+     "at": 20.48,
+     "until": 24.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "ram_sejarah.jpg",
+     "at": 17.2,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 520,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 24.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 23.5,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ulang kaji yang terarah,",
+     "key": "BUKAN IKUT SELERA",
+     "at": 24.0,
+     "until": 28.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 23.5,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/yakin.png",
+       23.5
+      ],
+      [
+       "abang/sapa.png",
+       26.96
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 24.4,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 440,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 24.8,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 26.96,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

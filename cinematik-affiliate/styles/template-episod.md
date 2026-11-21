@@ -58,3 +58,5 @@ Petikan label → "SIAPA ajar dia?" → imbas kembali "Minggu LEPAS" → "Dia BE
 Renderer: `episod.py`; contoh penuh `projects/episod-english-1/` (120 SPM English Model Essays).
 `python episod.py projects/<nama>` untuk video, `python episod.py projects/<nama> 2 5.5 11` untuk stills.
 VO tidak dinormalkan dalam renderer: naikkan gain semasa encode akhir sampai lebih kurang −10 LUFS.
+
+Tajuk neon guna gaya **neon tiub**: lihat `styles/neon-tiub.md`. Gaya lama: `"neon_style": "tebal"`.

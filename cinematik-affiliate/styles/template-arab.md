@@ -119,3 +119,5 @@ Renderer: `arab.py` (frame dilukis dengan PIL, tiada aset luar). `project.json` 
 - `python arab.py projects/<nama>` untuk video, `python arab.py projects/<nama> 1.5 4 8` untuk lembaran stills.
 - VO tidak dinormalkan dalam renderer: naikkan gain semasa encode akhir sampai lebih kurang −10 LUFS.
 - Contoh: `projects/arab-1088/` (1088 Soalan Objektif Sejarah, latar putih).
+
+Sari kata neon guna gaya **neon tiub**: lihat `styles/neon-tiub.md`. Gaya lama: `"neon_style": "tebal"`.

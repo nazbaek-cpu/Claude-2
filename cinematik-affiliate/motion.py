@@ -30,6 +30,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 import arab
+import neon_tiub
 from arab import SANS, card_box, ease, put, ramp, shadowed
 
 W, H, FPS = 1080, 1920, 30
@@ -134,7 +135,13 @@ def glyph(word, big, color):
     if key not in _glyph:
         f = SANS(BIG if big else SMALL, 800 if big else 700)
         asc, desc = f.getmetrics(); l, _, r, _ = f.getbbox(word); t = 0; w, h = r - l + 8, asc + desc + 8   # same box per size: one baseline
-        if NEON[0]:
+        if NEON[0] and neon_tiub.STYLE[0] == "tiub":   # thin glass-tube letters (styles/neon-tiub.md)
+            sz = BIG if big else SMALL; ft = neon_tiub.font(sz, 300 if big else 380)
+            l2, _, r2, _ = ft.getbbox(word); w = r2 - l2 + 8; h = asc + desc + 8
+            m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l2, 4), word, font=ft, fill=255)
+            im, pad = neon_tiub.light(neon_tiub.even(m, sz), ACC[0] if big else haze(), sz)
+            _glyph[key] = (im, pad, w, h)
+        elif NEON[0]:
             m = Image.new("L", (w, h), 0); ImageDraw.Draw(m).text((4 - l, 4), word, font=f, fill=255)
             im, pad = neon_glyph(m, w, h, ACC[0] if big else haze())
             if not big:   # small words: crisp white on a faint blue haze
@@ -349,6 +356,8 @@ _hl = {}
 def headline_img(text, color, size=112):
     key = (text, color, size)
     if key not in _hl:
+        if neon_tiub.STYLE[0] == "tiub":
+            _hl[key] = neon_tiub.word(text, size, color, track=0.12)[0]; return _hl[key]
         f = SANS(size, 800); track = size * 0.06; asc, desc = f.getmetrics()
         w = int(sum(f.getlength(c) for c in text) + track * (len(text) - 1)) + 8; h = asc + desc + 8
         m = Image.new("L", (w, h), 0); d = ImageDraw.Draw(m); x = 4
@@ -436,7 +445,7 @@ def main():
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
     if cfg.get("theme") == "neon":   # navy page, neon key words, white sentence text
-        NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36), cfg.get("neon_base", "navy"))
+        neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36), cfg.get("neon_base", "navy"))
     elif cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
         page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
     else:

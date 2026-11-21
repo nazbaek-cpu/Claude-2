@@ -1,3 +1,4 @@
+from PIL import Image, ImageDraw
 import json, os, sys
 import numpy as np, pytest
 
@@ -567,3 +568,18 @@ def test_arab_tingkap_background():
     bg = arab.background("tingkap").convert("L")
     px = [bg.getpixel((x, y)) for x in range(80, 1000, 120) for y in range(120, 1800, 160)]
     assert min(px) > 200 and max(px) - min(px) > 12
+
+
+def test_neon_tiub_tube_look():
+    """neon tiub: thin even strokes with a pale core and a coloured halo that spills well past the letters"""
+    import neon_tiub, numpy as np
+    im, pad = neon_tiub.word("NEON", 120, (255, 40, 160))
+    a = np.asarray(im).astype(int)
+    assert im.mode == "RGBA" and pad > 40
+    glow = a[..., 3] > 10; core = a[..., 3] > 240
+    assert glow.sum() > 6 * core.sum()                     # the halo covers far more than the thin tube itself
+    assert np.percentile(a[core][:, 1], 90) > 150          # the middle of the tube is a pale tint (green lifts from 40), edges keep the colour
+    lay = Image.new("RGBA", (200, 80), (0, 0, 0, 0)); ImageDraw.Draw(lay).text((20, 20), "ab", fill=(0, 229, 255, 255))
+    b = np.asarray(neon_tiub.bloom(lay, 60)).astype(int)
+    halo = b[(b[..., 3] > 20) & (b[..., 3] < 200)][:, :3]
+    assert halo[:, 2].mean() > 150 and halo[:, 0].mean() < 120   # halo keeps its cyan colour (premultiplied blur, no black fringe)

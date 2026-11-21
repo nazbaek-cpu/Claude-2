@@ -57,3 +57,5 @@ Renderer: `motion.py`. `project.json` dengan `"type": "motion"`:
 - `python motion.py projects/<nama>` untuk video, `python motion.py projects/<nama> 2 5.5 11` untuk lembaran stills.
 - VO tidak dinormalkan dalam renderer: naikkan gain semasa encode akhir sampai lebih kurang −10 LUFS.
 - Contoh: `projects/motion-sirpuloh/` (Latihan Topikal Add Maths T4).
+
+Tulisan neon guna gaya **neon tiub** (huruf garisan nipis macam tiub kaca): lihat `styles/neon-tiub.md`. Gaya lama: `"neon_style": "tebal"`.

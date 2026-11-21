@@ -14,6 +14,7 @@ Times are VO seconds; word timings come from build/words.json (transcribe.py).
 """
 import json, math, os, subprocess, sys, wave
 import numpy as np
+import neon_tiub
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -376,7 +377,9 @@ def sub_card(base, sc, toks, t, a):
         for k, pc in enumerate(pcs):
             if t >= pc[0][1] - 0.08: cur_i = k
     pc = pcs[cur_i]; t0 = max(sc["start"], pc[0][1] - 0.08)
-    size = sc.get("sub_size", 84); f = SANS(int(size * 0.86), 800) if NEON[0] else HAND(size); maxw = 880
+    size = sc.get("sub_size", 84); maxw = 880
+    tiub = NEON[0] and neon_tiub.STYLE[0] == "tiub"
+    f = neon_tiub.font(int(size * 0.84), 340) if tiub else SANS(int(size * 0.86), 800) if NEON[0] else HAND(size)
     lines, cur, cw = [], [], 0
     for tk, ts in pc:
         tw = f.getlength(tk + " ")
@@ -399,7 +402,10 @@ def sub_card(base, sc, toks, t, a):
                 if on: dg.text((x, y), tk, font=f, fill=acc + (255,) if k else hz, anchor="lm")
                 x += f.getlength(tk + " ")
         out = Image.new("RGBA", core.size, (0, 0, 0, 0))
-        for r in (26, 26, 9, 3): out.alpha_composite(glow.filter(ImageFilter.GaussianBlur(r)))
+        if tiub:   # thin glass tubes: wide faint spill, medium halo, tight bright halo, then the pale core
+            out = neon_tiub.bloom(glow, size, (0.85, 1.5, 2.8))
+        else:
+            for r in (26, 26, 9, 3): out.alpha_composite(glow.filter(ImageFilter.GaussianBlur(r)))
         out.alpha_composite(core)
         q = ease(ramp(t, t0, 0.22))
         put(base, out, W / 2, 1490 + 26 * (1 - q), a * q, 0.88 + 0.12 * q); return
@@ -480,7 +486,7 @@ def sfx_track(cfg, dur):
 
 def main():
     prj = sys.argv[1]; PRJ[0] = prj; cfg = json.load(open(os.path.join(prj, "project.json")))
-    NEON[0] = cfg.get("bg") == "neon"; NEON_BASE[0] = cfg.get("neon_base", "navy")
+    NEON[0] = cfg.get("bg") == "neon"; NEON_BASE[0] = cfg.get("neon_base", "navy"); neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub")
     if cfg.get("accent"): NEON_C[0] = tuple(cfg["accent"])
     if cfg.get("accent2"): NEON_C[1] = tuple(cfg["accent2"])
     DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") in ("addmath", "neon")

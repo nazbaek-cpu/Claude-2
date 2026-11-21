@@ -81,7 +81,8 @@ def title_img(text, tone):
     """big white scene title; *words* take the tone colour; wraps to the page width"""
     key = ("title", text, tone)
     if key not in _c:
-        f = SANS(82, 800); col = (TONE_LIGHT if LIGHT[0] else TONE).get(tone, TONE["yellow"]); base_col = INK if LIGHT[0] else (255, 255, 255); toks, hot = [], False
+        tiub = NEON[0] and not LIGHT[0] and arab.neon_tiub.STYLE[0] == "tiub"
+        f = arab.neon_tiub.font(80, 320) if tiub else SANS(82, 800); col = (TONE_LIGHT if LIGHT[0] else TONE).get(tone, TONE["yellow"]); base_col = INK if LIGHT[0] else (255, 255, 255); toks, hot = [], False
         for w in text.split():
             core = w.rstrip(".,!?\"':;"); s = w.lstrip("\"'").startswith("*"); e = core.endswith("*") and (len(core.strip("\"'")) > 1 or not s); ww = w.replace("*", "")
             if s: hot = True
@@ -91,7 +92,7 @@ def title_img(text, tone):
         for w, h_ in toks:
             if row and sum(f.getlength(x) for x, _ in row) + sp * len(row) + f.getlength(w) > W - 140: rows.append(row); row = []
             row.append((w, h_))
-        neon = NEON[0] and not LIGHT[0]; top = 40 if neon else 10   # room above for the glow
+        neon = NEON[0] and not LIGHT[0]; top = 56 if neon else 10   # room above for the glow
         rows.append(row); lh = 100; im = Image.new("RGBA", (W, lh * len(rows) + 20 + (top - 10) * 2), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         g = Image.new("RGBA", im.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(g)
         for i, r in enumerate(rows):
@@ -105,7 +106,9 @@ def title_img(text, tone):
                 x += f.getlength(w) + sp
         if neon:
             out = Image.new("RGBA", im.size, (0, 0, 0, 0))
-            for r_ in (24, 24, 8, 3): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r_)))
+            if tiub: out = arab.neon_tiub.bloom(g, 80, (0.85, 1.5, 2.8))   # thin glass tubes (styles/neon-tiub.md)
+            else:
+                for r_ in (24, 24, 8, 3): out.alpha_composite(g.filter(ImageFilter.GaussianBlur(r_)))
             out.alpha_composite(im); im = out
         _c[key] = im
     return _c[key]
@@ -374,7 +377,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    LIGHT[0] = cfg.get("bg") in ("dots", "putih"); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
+    LIGHT[0] = cfg.get("bg") in ("dots", "putih"); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); arab.neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

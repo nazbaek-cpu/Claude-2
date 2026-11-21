@@ -1,1 +1,203 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "tingkap",
+ "whisper_prompt": "Mak ayah, buku karangan, Tingkatan 1, 2 dan 3, Karangan Contoh Infografik, 150 muka surat, 18 tema ikut DSKP, audio QR, peribahasa, rubrik pemarkahan UASA.",
+ "cta": {
+  "at": 30.1,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.94,
+   "line": "Mak ayah, setiap tahun | beli buku karangan baru.",
+   "keys": [
+    "setiap",
+    "tahun",
+    "baru."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/mak/berfikir",
+      "x": 330,
+      "size": 362,
+      "at": 0.2
+     },
+     {
+      "char": "ortu/ayah/risau",
+      "x": 750,
+      "size": 362,
+      "at": 0.8
+     }
+    ],
+    "y": 1050
+   }
+  },
+  {
+   "start": 2.94,
+   "end": 9.44,
+   "line": "Tingkatan 1, beli. | Tingkatan 2, beli lagi. | Tingkatan 3, beli lagi.",
+   "keys": [
+    "1,",
+    "2,",
+    "3,",
+    "lagi."
+   ],
+   "illus": {
+    "kind": "cast",
+    "cast": [
+     {
+      "char": "ortu/ayah/terkejut",
+      "x": 540,
+      "size": 377,
+      "at": 3.0
+     }
+    ],
+    "y": 1080
+   },
+   "icons": [
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 220,
+     "y": 470,
+     "at": 2.94,
+     "size": 202,
+     "tag": "T1"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 540,
+     "y": 420,
+     "at": 4.8,
+     "size": 202,
+     "tag": "T2"
+    },
+    {
+     "img": "icons/buku_tulis.png",
+     "x": 860,
+     "y": 470,
+     "at": 7.1,
+     "size": 202,
+     "tag": "T3"
+    }
+   ]
+  },
+  {
+   "start": 9.44,
+   "end": 14.98,
+   "line": "Karangan Contoh Infografik | untuk Tingkatan 1, 2 dan 3 | sekaligus.",
+   "keys": [
+    "Karangan",
+    "Infografik",
+    "1,",
+    "2",
+    "3",
+    "sekaligus."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 660,
+    "max_h": 660,
+    "y": 600
+   }
+  },
+  {
+   "start": 14.98,
+   "end": 19.24,
+   "line": "150 muka surat, | 18 tema ikut DSKP.",
+   "keys": [
+    "150",
+    "18",
+    "tema"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_kandungan.jpg",
+    "w": 640,
+    "max_h": 640,
+    "y": 600
+   },
+   "pills": [
+    [
+     "18 tema ikut DSKP",
+     16.84
+    ]
+   ],
+   "pills_y": 1050
+  },
+  {
+   "start": 19.24,
+   "end": 26.14,
+   "line": "Rangka infografik, karangan lengkap, | audio QR, senarai peribahasa | dan rubrik pemarkahan UASA.",
+   "keys": [
+    "Rangka",
+    "infografik,",
+    "audio",
+    "QR,",
+    "peribahasa",
+    "UASA."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_robot.jpg",
+    "w": 880,
+    "max_h": 520,
+    "y": 600
+   },
+   "pills": [
+    [
+     "Audio QR · Rubrik UASA",
+     21.9
+    ]
+   ],
+   "pills_y": 1000
+  },
+  {
+   "start": 26.14,
+   "end": 30.1,
+   "line": "Anak guna dari Tingkatan 1 | sampai UASA Tingkatan 3.",
+   "keys": [
+    "Tingkatan",
+    "1",
+    "UASA",
+    "3."
+   ],
+   "illus": {
+    "kind": "glow",
+    "char": "adik/raikan",
+    "char_scale": 1.3,
+    "words": [
+     [
+      "Satu buku, 3 tahun",
+      27.0
+     ]
+    ]
+   }
+  },
+  {
+   "start": 30.1,
+   "end": 31.87,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 460,
+    "max_h": 460,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

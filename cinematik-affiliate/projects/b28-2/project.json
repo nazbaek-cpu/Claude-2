@@ -1,1 +1,199 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "putih",
+ "episode": "EPISOD 11 · TERSEKAT B",
+ "whisper_prompt": "calon SPM, semua subjek A, BM, karangan baik, karangan cemerlang, Karangan Contoh dan Teknik Penulisan, analisis, ungkapan, KBAT, huraian, Guru Cemerlang.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 31.18,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.38,
+   "title": "Semua A, *BM PUN A*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "char",
+     "char": "kira/bangga",
+     "x": 270,
+     "at": 0.2,
+     "size": 600,
+     "name": "Kawan sekelas"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 810,
+     "at": 3.8,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 6.38,
+   "end": 10.32,
+   "title": "Baik vs *CEMERLANG*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "char",
+     "char": "kira/menerang",
+     "x": 270,
+     "at": 6.4,
+     "size": 600,
+     "name": "Kawan sekelas"
+    },
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "x": 810,
+     "at": 6.5,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 10.32,
+   "end": 14.4,
+   "title": "Tulis betul, tapi *TAK CUKUP*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KARANGAN BM",
+     "name": "Abang · Kertas 1",
+     "text": "Isi betul.|Ayat betul.|Tapi... B lagi.",
+     "w": 560,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 44,
+     "x": 380,
+     "y": 950,
+     "at": 10.35
+    },
+    {
+     "kind": "char",
+     "char": "abang/stres",
+     "x": 870,
+     "at": 10.4,
+     "size": 600,
+     "name": "Abang, 17"
+    }
+   ]
+  },
+  {
+   "start": 14.4,
+   "end": 19.32,
+   "title": "Setiap contoh *SIAP ANALISIS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 290,
+     "y": 1020,
+     "w": 340,
+     "at": 14.45
+    },
+    {
+     "kind": "photo",
+     "img": "bm_review.jpg",
+     "x": 770,
+     "y": 1100,
+     "w": 460,
+     "at": 16.9
+    }
+   ]
+  },
+  {
+   "start": 19.32,
+   "end": 25.56,
+   "title": "Ungkapan, *KBAT*, huraian",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "prop",
+     "img": "perabot/meja_belajar",
+     "x": 330,
+     "at": 19.36,
+     "w": 360
+    },
+    {
+     "kind": "char",
+     "char": "abang/fokus",
+     "x": 860,
+     "at": 19.4,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "words",
+     "text": "+ markah",
+     "x": 700,
+     "y": 1150,
+     "at": 22.58
+    }
+   ]
+  },
+  {
+   "start": 25.56,
+   "end": 31.18,
+   "title": "Dari B ke *A*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KARANGAN BM",
+     "name": "Abang · Kertas 1",
+     "text": "Isi betul.|Ayat betul.|Tapi... B lagi.",
+     "w": 560,
+     "h": 430,
+     "text_size": 50,
+     "rewrite_size": 44,
+     "x": 380,
+     "y": 950,
+     "at": 25.6,
+     "strike_at": 27.24,
+     "rewrite": "Markah: A",
+     "rewrite_at": 28.44
+    },
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "x": 870,
+     "at": 25.65,
+     "size": 600,
+     "name": "Abang, 17"
+    },
+    {
+     "kind": "hearts",
+     "x": 870,
+     "y": 820,
+     "at": 28.8
+    }
+   ]
+  },
+  {
+   "start": 31.18,
+   "end": 32.68,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 420,
+     "at": 31.22
+    }
+   ]
+  }
+ ]
+}

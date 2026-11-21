@@ -1,1 +1,171 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "graf, kertas Sejarah, fakta dan tarikh, Terapi KBAT Sejarah SPM, soalan KBAT berformat SPM, petikan, poster, lirik lagu, puisi, rumus.",
+ "cta": {
+  "at": 30.16,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.16,
+   "line": "Kenapa ada calon yang tak terkejut | bila jumpa graf | dalam kertas Sejarah?",
+   "keys": [
+    "tak",
+    "terkejut",
+    "graf"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/senyum_beg.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 4.16,
+   "end": 5.98,
+   "line": "Sebab dia | dah biasa.",
+   "keys": [
+    "dah",
+    "biasa."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 5.98,
+   "end": 9.66,
+   "line": "Calon lain? Ingat Sejarah | cuma fakta dan tarikh.",
+   "keys": [
+    "fakta",
+    "tarikh."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/baca_buku.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 9.66,
+   "end": 12.58,
+   "line": "Bila graf keluar, | terus langkau soalan tu.",
+   "keys": [
+    "graf",
+    "langkau"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/terkejut_kertas.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 12.58,
+   "end": 17.32,
+   "line": "Terapi KBAT Sejarah SPM, | ada soalan KBAT | berformat SPM.",
+   "keys": [
+    "Terapi",
+    "KBAT",
+    "berformat",
+    "SPM."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 800,
+    "max_h": 820,
+    "y": 820
+   }
+  },
+  {
+   "start": 17.32,
+   "end": 22.58,
+   "line": "Fakta, petikan, poster, | lirik lagu, puisi dan graf.",
+   "keys": [
+    "Fakta,",
+    "petikan,",
+    "poster,",
+    "lirik",
+    "puisi",
+    "graf."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_jenis.jpg",
+    "w": 960,
+    "max_h": 820,
+    "y": 820
+   }
+  },
+  {
+   "start": 22.58,
+   "end": 25.86,
+   "line": "Anak cuma latih setiap jenis, | ikut rumus yang sama.",
+   "keys": [
+    "setiap",
+    "jenis,",
+    "rumus"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_satu_buku.jpg",
+    "w": 960,
+    "max_h": 820,
+    "y": 820
+   }
+  },
+  {
+   "start": 25.86,
+   "end": 30.16,
+   "line": "Bila semua bentuk dah pernah jumpa, | tak ada soalan yang mengejutkan.",
+   "keys": [
+    "semua",
+    "bentuk",
+    "tak",
+    "mengejutkan."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/yakin_beg.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 30.16,
+   "end": 31.87,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 460,
+    "max_h": 520,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

@@ -1,1 +1,213 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  70,
+  110,
+  230
+ ],
+ "accent2": [
+  160,
+  186,
+  250
+ ],
+ "whisper_prompt": "Mak ayah, calon SPM, Sejarah, Kimia, Fizik, Add Maths, buku teks, BTP Infografik, Matematik, jadual.",
+ "cta": {
+  "at": 26.96,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.28,
+   "lines": [
+    "Mak ayah, anak calon SPM",
+    "ambil *Sejarah, Kimia,*",
+    "*Fizik, Add Maths.*"
+   ],
+   "items": [
+    {
+     "kind": "icons",
+     "y": 1300,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/glob.png",
+       "label": "Sejarah",
+       "at": 2.4
+      },
+      {
+       "img": "icons/eksperimen.png",
+       "label": "Kimia",
+       "at": 3.0
+      }
+     ]
+    },
+    {
+     "kind": "icons",
+     "y": 1600,
+     "plus": false,
+     "tiles": [
+      {
+       "img": "icons/mikroskop.png",
+       "label": "Fizik",
+       "at": 3.7
+      },
+      {
+       "img": "mat/kalkulator.png",
+       "label": "Add Maths",
+       "at": 4.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": 5.28,
+   "end": 8.46,
+   "lines": [
+    "Setiap subjek ada",
+    "*buku teks tebal*",
+    "sendiri."
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "adik/stres",
+     "at": 5.35,
+     "size": 460,
+     "x": 540,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 8.46,
+   "end": 13.86,
+   "lines": [
+    "Kenapa ada calon yang",
+    "*sempat ulang semua?*",
+    "Sebab nota dia semua",
+    "dalam *bentuk yang sama.*"
+   ],
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/berfikir",
+     "at": 8.5,
+     "size": 440,
+     "x": 540,
+     "y": 1500,
+     "char_at": [
+      [
+       10.9,
+       "abang/idea"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 13.86,
+   "end": 20.72,
+   "lines": [
+    "*Padat.*",
+    "*BTP Infografik* ada siri",
+    "Sejarah, Kimia, Fizik,",
+    "Matematik dan Add Maths."
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "btp_cover.jpg",
+     "at": 14.7,
+     "step": 1,
+     "y": 1640
+    }
+   ]
+  },
+  {
+   "start": 20.72,
+   "end": 25.16,
+   "lines": [
+    "Anak cuma ulang subjek",
+    "*ikut jadual.*",
+    "*Satu buku kecil* setiap subjek."
+   ],
+   "items": [
+    {
+     "kind": "checklist",
+     "title": "Jadual ulang kaji",
+     "at": 20.75,
+     "y": 1330,
+     "rows": [
+      [
+       "Isnin: Sejarah",
+       20.8
+      ],
+      [
+       "Selasa: Kimia",
+       21.6
+      ],
+      [
+       "Rabu: Fizik",
+       22.4
+      ],
+      [
+       "Khamis: Add Maths",
+       23.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "start": 25.16,
+   "end": 26.96,
+   "lines": [
+    "Semua subjek",
+    "*dapat masa.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "char",
+     "char": "abang/gembira",
+     "at": 25.2,
+     "size": 520,
+     "x": 540,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 26.96,
+   "end": 28.6,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 27.0,
+     "w": 480,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 27.03,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

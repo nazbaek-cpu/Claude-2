@@ -1,1 +1,340 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "Mak ayah, karangan, alasan, kertas kosong, Karangan Contoh dan Teknik Penulisan, struktur, berformat, tidak berformat.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sebut je tulis karangan, anak terus",
+     "key": "BANYAK ALASAN",
+     "at": 0.0,
+     "until": 4.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 0.0,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/stres.png",
+       0.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/buku_tulis.png",
+     "at": 0.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": 4,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KARANGAN"
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.54,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA...",
+     "at": 4.04,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dia tak tahu nak",
+     "key": "MULA DARI MANA",
+     "at": 4.54,
+     "until": 6.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 4.04,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/berfikir.png",
+       4.04
+      ]
+     ]
+    },
+    {
+     "kind": "marks",
+     "type": "q",
+     "at": 5.0,
+     "until": 99,
+     "x": 790,
+     "y": 800,
+     "size": 90
+    }
+   ]
+  },
+  {
+   "start": 6.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "YANG MENAKUTKAN...",
+     "at": 6.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bukan soalan, tapi",
+     "key": "KERTAS KOSONG",
+     "at": 6.98,
+     "until": 9.74,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 6.48,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/terkejut.png",
+       6.48
+      ]
+     ]
+    },
+    {
+     "kind": "sticker",
+     "img": "icons/fail.png",
+     "at": 7.3,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "size": 210,
+     "rot": -3,
+     "anim": "pop",
+     "edge": 11,
+     "tag": "KERTAS KOSONG"
+    },
+    {
+     "kind": "stamp",
+     "text": "KOSONG!",
+     "at": 8.2,
+     "x": 760,
+     "y": 1400,
+     "rot": -7,
+     "size": 54
+    }
+   ]
+  },
+  {
+   "start": 9.74,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KARANGAN CONTOH & TEKNIK PENULISAN",
+     "at": 9.24,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bagi anak contoh untuk",
+     "key": "DICONTOHI",
+     "at": 9.74,
+     "until": 14.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 9.8,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 14.58,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 14.08,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca dulu, lepas tu tulis ikut",
+     "key": "STRUKTUR YANG SAMA",
+     "at": 14.58,
+     "until": 18.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "bm_tema2.jpg",
+     "at": 14.64,
+     "until": 99,
+     "x": 540,
+     "y": 1180,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEMUA ADA:",
+     "at": 18.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "karangan berformat &",
+     "key": "TIDAK BERFORMAT",
+     "at": 18.9,
+     "until": 22.36,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "bm_format.jpg",
+     "at": 18.95,
+     "until": 99,
+     "x": 540,
+     "y": 1080,
+     "w": 900,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.36,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 21.86,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bila ada contoh, kertas kosong",
+     "key": "TAK MENAKUTKAN LAGI",
+     "at": 22.36,
+     "until": 27.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "doodle",
+     "at": 21.9,
+     "x": 290,
+     "y": 1120,
+     "h": 640,
+     "poses": [
+      [
+       "abang/gembira.png",
+       21.9
+      ],
+      [
+       "abang/sapa.png",
+       26.0
+      ]
+     ],
+     "enter": "slide"
+    },
+    {
+     "kind": "card",
+     "img": "bm_cover.jpg",
+     "at": 22.8,
+     "until": 99,
+     "x": 790,
+     "y": 1060,
+     "w": 420,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "marks",
+     "type": "tick",
+     "at": 23.2,
+     "until": 99,
+     "x": 290,
+     "y": 760,
+     "size": 80
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 26.0,
+     "y": 1690
+    }
+   ]
+  }
+ ]
+}

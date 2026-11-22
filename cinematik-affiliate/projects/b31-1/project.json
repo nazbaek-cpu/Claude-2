@@ -1,1 +1,140 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "grey",
+ "episode": "EPISOD 14 · TAK SUKA MEMBACA",
+ "whisper_prompt": "Mak ayah, anak tak suka membaca, buku teks, gambar dan carta, BTP Infografik Sejarah, warna, ikon, mind map.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 24.52,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.74,
+   "title": "Anak *TAK SUKA* membaca",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/tidur.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 5.74,
+   "end": 9.98,
+   "title": "Tapi gambar... *LAMA-LAMA*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/main_phone.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 5.78
+    }
+   ]
+  },
+  {
+   "start": 9.98,
+   "end": 15.92,
+   "title": "BTP Infografik *SEJARAH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_cover.jpg",
+     "x": 300,
+     "y": 1040,
+     "w": 460,
+     "at": 10.02
+    },
+    {
+     "kind": "photo",
+     "img": "btp_luar.jpg",
+     "x": 785,
+     "y": 1060,
+     "w": 440,
+     "at": 11.42
+    }
+   ]
+  },
+  {
+   "start": 15.92,
+   "end": 19.24,
+   "title": "Baca sikit, *FAHAM BANYAK*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/baca_sejarah.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 15.96
+    }
+   ]
+  },
+  {
+   "start": 19.24,
+   "end": 21.54,
+   "title": "Isi penting *IKUT BAB*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_kandungan.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 760,
+     "at": 19.28
+    }
+   ]
+  },
+  {
+   "start": 21.54,
+   "end": 24.52,
+   "title": "Anak pun *MULA BUKA*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/thumbs_up.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 21.58
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 23.1
+    }
+   ]
+  },
+  {
+   "start": 24.52,
+   "end": 26.28,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "btp_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 520,
+     "at": 24.56
+    }
+   ]
+  }
+ ]
+}

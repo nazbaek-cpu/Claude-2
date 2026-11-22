@@ -1,1 +1,274 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "whisper_prompt": "Cikgu, latihan, soalan percubaan semua negeri, SPM sebenar, Analisis dan Ramalan SPM, 2021 hingga 2025, sumber negeri dan tahun, format setara SPM.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CIKGU...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "nak bagi murid latihan",
+     "key": "YANG TEPAT?",
+     "at": 0.0,
+     "until": 2.58,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/laptop_cermin_mata.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.58,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KENA KUMPUL...",
+     "at": 2.08,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "percubaan semua negeri, banding",
+     "key": "SPM SEBENAR",
+     "at": 2.58,
+     "until": 7.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/buku_subjek.png",
+     "at": 2.62,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ITU KERJA...",
+     "at": 6.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "yang makan masa",
+     "key": "BERMINGGU-MINGGU",
+     "at": 7.48,
+     "until": 9.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/penat_gosok_mata.png",
+     "at": 7.52,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 9.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM",
+     "at": 9.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dah buat untuk cikgu,",
+     "key": "2021 HINGGA 2025",
+     "at": 9.98,
+     "until": 16.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 10.04,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SETIAP SOALAN:",
+     "at": 15.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "sumber negeri & tahun,",
+     "key": "FORMAT SETARA SPM",
+     "at": 16.48,
+     "until": 21.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_sumber.jpg",
+     "at": 16.52,
+     "until": 99,
+     "x": 540,
+     "y": 1120,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 21.7,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 21.2,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "guna sebagai bahan",
+     "key": "LATIHAN TAMBAHAN",
+     "at": 21.7,
+     "until": 25.28,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/highlight.png",
+     "at": 21.74,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.28,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 24.78,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masa analisis,",
+     "key": "JADI MASA MENGAJAR",
+     "at": 25.28,
+     "until": 29.65,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/thumbs_up.png",
+     "at": 25.32,
+     "until": 99,
+     "x": 300,
+     "y": 1080,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 25.8,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 400,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 27.94,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "hitam"
+}

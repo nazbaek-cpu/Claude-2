@@ -1,1 +1,151 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "hitam",
+ "whisper_prompt": "Add Maths, topik, SPM, Analisis dan Ramalan SPM Matematik Tambahan, topik kerap diuji, Kalkulus, Taburan Kebarangkalian, Fungsi Trigonometri, Sukatan Membulat, Hukum Linear.",
+ "cta": {
+  "at": 30.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.88,
+   "line": "Add Maths ada berbelas topik. | SPM makin dekat. | Mula yang mana?",
+   "keys": [
+    "berbelas",
+    "topik.",
+    "Mula",
+    "mana?"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel/keliru.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 4.88,
+   "end": 8.76,
+   "line": "Kenapa ada calon yang tahu terus | topik mana nak latih dulu?",
+   "keys": [
+    "tahu",
+    "terus",
+    "dulu?"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel/berfikir.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 8.76,
+   "end": 10.96,
+   "line": "Sebab dia | tengok analisis.",
+   "keys": [
+    "tengok",
+    "analisis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 10.96,
+   "end": 16.68,
+   "line": "Analisis & Ramalan SPM Matematik Tambahan | kenal pasti topik | yang kerap diuji.",
+   "keys": [
+    "Analisis",
+    "Ramalan",
+    "Matematik",
+    "Tambahan",
+    "kerap",
+    "diuji."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_am.jpg",
+    "w": 560,
+    "max_h": 820,
+    "y": 860
+   }
+  },
+  {
+   "start": 16.68,
+   "end": 23.1,
+   "line": "Kalkulus, taburan kebarangkalian, | fungsi trigonometri, | sukatan membulat, hukum linear.",
+   "keys": [
+    "Kalkulus,",
+    "kebarangkalian,",
+    "trigonometri,",
+    "membulat,",
+    "linear."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_am_topik.jpg",
+    "w": 940,
+    "max_h": 560,
+    "y": 860
+   }
+  },
+  {
+   "start": 23.1,
+   "end": 26.8,
+   "line": "Anak cuma latih topik yang paling | banyak sumbang markah dulu.",
+   "keys": [
+    "latih",
+    "sumbang",
+    "markah"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel/belajar_malam.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 26.8,
+   "end": 30.0,
+   "line": "Masa terhad, | guna untuk yang paling penting.",
+   "keys": [
+    "terhad,",
+    "paling",
+    "penting."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel/dapat_a.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 30.0,
+   "end": 31.48,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 700,
+    "max_h": 760,
+    "y": 860
+   }
+  }
+ ]
+}

@@ -1,1 +1,148 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "hitam",
+ "episode": "EPISOD 15 · SEMUA AYAT NAMPAK SAMA",
+ "whisper_prompt": "ayat topik, ayat huraian, ayat contoh, ayat penegas, Karangan Contoh Infografik Tingkatan 1, 2 dan 3, rangka infografik, pendahuluan, isi penting, penutup.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 31.22,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.61,
+   "title": "Topik, huraian, *CONTOH*, penegas",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_duo/menerang.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 5.61,
+   "end": 9.92,
+   "title": "Semua nampak *SAMA*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_duo/berfikir.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 5.65
+    }
+   ]
+  },
+  {
+   "start": 9.92,
+   "end": 13.34,
+   "title": "Kenapa dia *TERUS FAHAM?*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_duo/belajar_bersama.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 9.96
+    }
+   ]
+  },
+  {
+   "start": 13.34,
+   "end": 17.94,
+   "title": "Contoh *DITANDA WARNA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kci_robot.jpg",
+     "x": 540,
+     "y": 1040,
+     "w": 900,
+     "at": 13.38
+    }
+   ]
+  },
+  {
+   "start": 17.94,
+   "end": 24.76,
+   "title": "Karangan Contoh *INFOGRAFIK*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kci_cover.jpg",
+     "x": 540,
+     "y": 1000,
+     "w": 640,
+     "at": 17.98
+    }
+   ]
+  },
+  {
+   "start": 24.76,
+   "end": 28.86,
+   "title": "Pendahuluan, isi, *PENUTUP*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kci_penutup.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 520,
+     "at": 24.8
+    }
+   ]
+  },
+  {
+   "start": 28.86,
+   "end": 31.22,
+   "title": "Bila nampak, *BARU FAHAM*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_duo/gembira.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 28.9
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 29.8
+    }
+   ]
+  },
+  {
+   "start": 31.22,
+   "end": 32.84,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kci_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 560,
+     "at": 31.26
+    }
+   ]
+  }
+ ]
+}

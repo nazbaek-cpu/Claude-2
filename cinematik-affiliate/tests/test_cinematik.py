@@ -583,3 +583,12 @@ def test_neon_tiub_tube_look():
     b = np.asarray(neon_tiub.bloom(lay, 60)).astype(int)
     halo = b[(b[..., 3] > 20) & (b[..., 3] < 200)][:, :3]
     assert halo[:, 2].mean() > 150 and halo[:, 0].mean() < 120   # halo keeps its cyan colour (premultiplied blur, no black fringe)
+
+
+def test_latar_grey_dots_hitam():
+    """latar.py: grey is a light page, dots is white with darker dots, hitam is near-black with lighter dots"""
+    import latar, episod
+    g = np.asarray(latar.make("grey", 200, 300)).astype(int); assert 180 < g.mean() < 230
+    d = np.asarray(latar.make("dots", 200, 300).convert("L")).astype(int); assert d.max() > 245 and d.min() < 200
+    h = np.asarray(latar.make("hitam", 200, 300).convert("L")).astype(int); assert h.mean() < 45 and h.max() > 50
+    assert episod.stage("hitam").size == (1080, 1920) and episod.stage("grey").size == (1080, 1920)

@@ -59,10 +59,12 @@ def scene(start, items, cut=False):
     if cut: sc["in"] = "cut"
     return sc
 
-def config(scenes, whisper_prompt="", theme="kayu"):
-    return {"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": True, "theme": theme,
-            "whisper_prompt": whisper_prompt, "scenes": scenes}
+def config(scenes, whisper_prompt="", theme="kayu", bg=None):
+    cfg = {"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": True, "theme": theme,
+           "whisper_prompt": whisper_prompt, "scenes": scenes}
+    if bg: cfg["bg"] = bg   # "grey" | "dots" | "hitam" (latar.py); "hitam" wants theme "kertas-neon"
+    return cfg
 
-def write(prj, scenes, whisper_prompt="", theme="kayu"):
+def write(prj, scenes, whisper_prompt="", theme="kayu", bg=None):
     with open(os.path.join(prj, "project.json"), "w") as f:
-        json.dump(config(scenes, whisper_prompt, theme), f, indent=1, ensure_ascii=False)
+        json.dump(config(scenes, whisper_prompt, theme, bg), f, indent=1, ensure_ascii=False)

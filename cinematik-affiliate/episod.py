@@ -47,6 +47,11 @@ HAND = lambda s: arab.font("PatrickHand-Regular.ttf", s)
 
 # ---------- stage ----------
 def stage(kind="navy"):
+    if kind in ("grey", "hitam"):   # plain grey page / black page with a dot grid (latar.py)
+        import latar
+        im = latar.make(kind, W, H).convert("RGBA"); d = ImageDraw.Draw(im); dark = kind == "hitam"
+        d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(70, 72, 82) if dark else (178, 180, 188), width=2)
+        d.line((40, FLOOR, W - 40, FLOOR), fill=(84, 86, 98) if dark else (160, 162, 172), width=3); return im
     if kind in ("dots", "putih"):   # the white page of template motion, dotted or plain white (no glow)
         import motion
         im = motion.page(28 if kind == "dots" else 0, glow=False); d = ImageDraw.Draw(im)
@@ -377,7 +382,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    LIGHT[0] = cfg.get("bg") in ("dots", "putih"); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); arab.neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
+    LIGHT[0] = cfg.get("bg") in ("dots", "putih", "grey"); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); arab.neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

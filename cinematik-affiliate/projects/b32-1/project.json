@@ -1,1 +1,156 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "grey",
+ "whisper_prompt": "Mak ayah, Bahasa Melayu wajib lulus, sijil SPM, kertas BM, karangan, Karangan Contoh dan Teknik Penulisan, Bahagian A dan B, 18 tema ikut DSKP.",
+ "cta": {
+  "at": 27.1,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.44,
+   "line": "Mak ayah, Bahasa Melayu | wajib lulus untuk dapat sijil SPM.",
+   "keys": [
+    "Bahasa",
+    "Melayu",
+    "wajib",
+    "lulus"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_p/baca_bm.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 4.44,
+   "end": 8.4,
+   "line": "Dan dalam kertas BM, | karangan bawa markah yang besar.",
+   "keys": [
+    "karangan",
+    "markah",
+    "besar."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_p/menulis.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 8.4,
+   "end": 11.48,
+   "line": "Anak yang lemah karangan, | risikonya besar.",
+   "keys": [
+    "lemah",
+    "karangan,",
+    "risikonya"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_p/stres.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 11.48,
+   "end": 17.66,
+   "line": "Karangan Contoh dan Teknik Penulisan, | Bahagian A dan B, | 18 tema ikut DSKP.",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "A",
+    "B,",
+    "18",
+    "tema"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 600,
+    "max_h": 840,
+    "y": 860
+   }
+  },
+  {
+   "start": 17.66,
+   "end": 21.94,
+   "line": "Anak cuma baca satu contoh, | faham analisis, cuba tulis.",
+   "keys": [
+    "satu",
+    "contoh,",
+    "analisis,",
+    "tulis."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_p/headphone_menulis.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 21.94,
+   "end": 24.6,
+   "line": "Siap tip penulis | dan ungkapan menarik.",
+   "keys": [
+    "tip",
+    "ungkapan",
+    "menarik."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_review.jpg",
+    "w": 920,
+    "max_h": 560,
+    "y": 860
+   }
+  },
+  {
+   "start": 24.6,
+   "end": 27.1,
+   "line": "Lulus dengan selesa, | bukan nyaris.",
+   "keys": [
+    "selesa,",
+    "nyaris."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_p/dapat_a.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 27.1,
+   "end": 28.76,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "bm_cover.jpg",
+    "w": 420,
+    "max_h": 600,
+    "y": 600
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1060,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

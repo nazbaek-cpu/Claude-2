@@ -1,1 +1,148 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg_image": "input/renyuk.jpg",
+ "episode": "EPISOD 18 · RAJIN TAPI TAK BERARAH",
+ "whisper_prompt": "Mak ayah, larut malam, ulang kaji, Analisis dan Ramalan SPM, topik kerap diuji, trend soalan, SPM dan percubaan 2021 hingga 2025.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 29.44,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.36,
+   "title": "Belajar *SAMPAI LARUT MALAM*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/belajar_malam.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 4.36,
+   "end": 8.46,
+   "title": "Ulang kaji apa? *TAK PASTI*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/keliru.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 4.4
+    }
+   ]
+  },
+  {
+   "start": 8.46,
+   "end": 11.78,
+   "title": "Rajin tanpa arah, *PENAT*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/penat.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 8.5
+    }
+   ]
+  },
+  {
+   "start": 11.78,
+   "end": 17.42,
+   "title": "Analisis & *RAMALAN SPM*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_cover.jpg",
+     "x": 540,
+     "y": 1020,
+     "w": 640,
+     "at": 11.82
+    }
+   ]
+  },
+  {
+   "start": 17.42,
+   "end": 21.68,
+   "title": "SPM & percubaan *2021-2025*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_sejarah.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 480,
+     "at": 17.46
+    }
+   ]
+  },
+  {
+   "start": 21.68,
+   "end": 26.2,
+   "title": "Analisis, trend, *FOKUS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_tips.jpg",
+     "x": 540,
+     "y": 1040,
+     "w": 720,
+     "at": 21.72
+    }
+   ]
+  },
+  {
+   "start": 26.2,
+   "end": 29.44,
+   "title": "Rajin sama, kini *TERARAH*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/dapat_a.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 26.24
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 27.4
+    }
+   ]
+  },
+  {
+   "start": 29.44,
+   "end": 31.09,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ram_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 560,
+     "at": 29.48
+    }
+   ]
+  }
+ ]
+}

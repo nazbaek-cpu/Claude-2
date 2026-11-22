@@ -1,1 +1,171 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "hitam",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  40,
+  160
+ ],
+ "accent2": [
+  0,
+  229,
+  255
+ ],
+ "whisper_prompt": "buku karangan contoh, muka surat penuh tulisan, perenggan, mengantuk, Karangan Contoh Infografik, rangka, ilustrasi, karangan lengkap.",
+ "cta": {
+  "at": 26.08,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.84,
+   "lines": [
+    "Buku karangan",
+    "contoh biasa.",
+    "Muka surat",
+    "*penuh tulisan.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/baca_buku.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 3.84,
+   "end": 6.7,
+   "lines": [
+    "Baca satu perenggan,",
+    "*dah ngantuk.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/tidur.png",
+     "at": 3.88,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 6.7,
+   "end": 9.84,
+   "lines": [
+    "Kenapa ada pelajar",
+    "yang *suka buka*",
+    "buku karangan dia?"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/berfikir.png",
+     "at": 6.74,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 9.84,
+   "end": 13.18,
+   "lines": [
+    "Sebab buku dia",
+    "penuh *warna*",
+    "dan *gambar.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/gembira.png",
+     "at": 9.88,
+     "w": 900,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 13.18,
+   "end": 19.28,
+   "lines": [
+    "*Karangan Contoh*",
+    "*Infografik:* rangka",
+    "setiap tajuk,",
+    "siap *ilustrasi.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 13.22,
+     "w": 920,
+     "y": 1600
+    }
+   ]
+  },
+  {
+   "start": 19.28,
+   "end": 23.24,
+   "lines": [
+    "Tengok *rangka* dulu,",
+    "lepas tu baca",
+    "*karangan lengkap.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/menulis_fokus.png",
+     "at": 19.32,
+     "w": 900,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 23.24,
+   "end": 26.08,
+   "lines": [
+    "Belajar menulis",
+    "*tak semestinya*",
+    "*membosankan.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/thumbs_up.png",
+     "at": 23.28,
+     "w": 900,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 26.08,
+   "end": 27.64,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 26.12,
+     "w": 640,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

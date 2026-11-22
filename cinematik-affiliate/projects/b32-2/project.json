@@ -1,1 +1,176 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "accent": [
+  40,
+  100,
+  220
+ ],
+ "accent2": [
+  130,
+  170,
+  245
+ ],
+ "whisper_prompt": "Mak ayah, sekolah luar bandar, English, 40 minit sehari, soalan SPM, calon dari kampung, 120 SPM English Model Essays, struktur ditanda, vocab enhancer.",
+ "cta": {
+  "at": 26.34,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.7,
+   "lines": [
+    "Mak ayah, anak sekolah",
+    "*luar bandar?*",
+    "English cuma dengar dalam kelas,",
+    "*40 minit* sehari."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/bercakap.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 5.7,
+   "end": 9.16,
+   "lines": [
+    "Tapi soalan SPM",
+    "*sama untuk semua* calon."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/keliru.png",
+     "at": 5.75,
+     "w": 900,
+     "y": 1340
+    }
+   ]
+  },
+  {
+   "start": 9.16,
+   "end": 12.68,
+   "lines": [
+    "Kenapa ada calon",
+    "*dari kampung*",
+    "yang English dia",
+    "*tetap skor?*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/dapat_a.png",
+     "at": 9.2,
+     "w": 900,
+     "y": 1440
+    }
+   ]
+  },
+  {
+   "start": 12.68,
+   "end": 15.34,
+   "lines": [
+    "Sebab dia rajin baca",
+    "*contoh yang betul.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/menulis.png",
+     "at": 12.72,
+     "w": 900,
+     "y": 1340
+    }
+   ]
+  },
+  {
+   "start": 15.34,
+   "end": 21.1,
+   "lines": [
+    "*120 SPM English*",
+    "*Model Essays,*",
+    "struktur ditanda, *vocab*",
+    "*enhancer.*"
+   ],
+   "items": [
+    {
+     "kind": "phone",
+     "img": "en_cover.jpg",
+     "at": 15.38,
+     "step": 1,
+     "y": 1760
+    }
+   ]
+  },
+  {
+   "start": 21.1,
+   "end": 23.62,
+   "lines": [
+    "Anak cuma baca",
+    "*satu contoh sehari.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_essay.jpg",
+     "at": 21.14,
+     "w": 640,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 23.62,
+   "end": 26.34,
+   "lines": [
+    "Tempat belajar lain,",
+    "*peluang tetap sama.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/thumbs_up.png",
+     "at": 23.66,
+     "w": 900,
+     "y": 1240
+    }
+   ]
+  },
+  {
+   "start": 26.34,
+   "end": 28.03,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 26.38,
+     "w": 420,
+     "max_h": 640,
+     "y": 1060
+    },
+    {
+     "kind": "char",
+     "char": "stickman/promosi",
+     "at": 26.41,
+     "size": 300,
+     "x": 860,
+     "y": 1420
+    }
+   ]
+  }
+ ]
+}

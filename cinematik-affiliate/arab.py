@@ -50,6 +50,12 @@ def background(kind, image=None):
         import motion
         motion.ACC[0], motion.ACC[1] = NEON_C
         return motion.neon_page(base=NEON_BASE[0])
+    if kind in ("grey", "hitam") and not image:   # plain grey page / black page with dots (latar.py), thin frame
+        import latar
+        im = latar.make(kind, W, H).convert("RGBA"); d = ImageDraw.Draw(im)
+        d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(70, 72, 82) if kind == "hitam" else (176, 178, 186), width=2)
+        for y in (26, H - 27): d.ellipse((W / 2 - 7, y - 7, W / 2 + 7, y + 7), fill=ORANGE)
+        return im
     if kind == "tingkap" and not image:   # white page lit through a window: soft frame-bar and leaf shadows (template kertas's light)
         import cv2
         rng = np.random.default_rng(3)
@@ -489,7 +495,7 @@ def main():
     NEON[0] = cfg.get("bg") == "neon"; NEON_BASE[0] = cfg.get("neon_base", "navy"); neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub")
     if cfg.get("accent"): NEON_C[0] = tuple(cfg["accent"])
     if cfg.get("accent2"): NEON_C[1] = tuple(cfg["accent2"])
-    DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") in ("addmath", "neon")
+    DARK[0] = bool(cfg.get("bg_image")) or cfg.get("bg") in ("addmath", "neon", "hitam")
     words = json.load(open(os.path.join(prj, "build", "words.json"))); words = words["words"] if isinstance(words, dict) else words
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)

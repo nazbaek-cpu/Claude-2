@@ -592,3 +592,10 @@ def test_latar_grey_dots_hitam():
     d = np.asarray(latar.make("dots", 200, 300).convert("L")).astype(int); assert d.max() > 245 and d.min() < 200
     h = np.asarray(latar.make("hitam", 200, 300).convert("L")).astype(int); assert h.mean() < 45 and h.max() > 50
     assert episod.stage("hitam").size == (1080, 1920) and episod.stage("grey").size == (1080, 1920)
+
+
+def test_arab_grey_hitam_backgrounds():
+    """arab "bg": "grey" is a light page, "hitam" a near-black page with dots"""
+    import arab
+    g = np.asarray(arab.background("grey").convert("L")).astype(int); assert 170 < g[400:1500, 100:980].mean() < 230
+    h = np.asarray(arab.background("hitam").convert("L")).astype(int); assert h[400:1500, 100:980].mean() < 50

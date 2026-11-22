@@ -1,1 +1,150 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "bg": "hitam",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  196,
+  60
+ ],
+ "accent2": [
+  255,
+  230,
+  150
+ ],
+ "whisper_prompt": "Mak ayah, Tingkatan 1, sekolah rendah, karangan, Bahagian B UASA, 180 patah perkataan, karangan fakta, Karangan Contoh Infografik, rangka, karangan lengkap.",
+ "cta": {
+  "at": 25.2,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.32,
+   "lines": [
+    "Mak ayah, anak baru",
+    "masuk *Tingkatan 1.*",
+    "Sekolah rendah, karangan",
+    "dia *pendek.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/gembira_beg.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1500
+    }
+   ]
+  },
+  {
+   "start": 5.32,
+   "end": 10.84,
+   "lines": [
+    "Sekarang, Bahagian B UASA",
+    "minta *180 patah*",
+    "*perkataan,*",
+    "karangan fakta."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/terkejut.png",
+     "at": 5.36,
+     "w": 900,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 10.84,
+   "end": 13.74,
+   "lines": [
+    "*Lompatan yang besar*",
+    "untuk budak 12 tahun."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/pening.png",
+     "at": 10.88,
+     "w": 900,
+     "y": 1340
+    }
+   ]
+  },
+  {
+   "start": 13.74,
+   "end": 19.92,
+   "lines": [
+    "Karangan Contoh Infografik:",
+    "*rangka* setiap tajuk,",
+    "*karangan lengkap.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 13.78,
+     "w": 960,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 19.92,
+   "end": 23.16,
+   "lines": [
+    "Anak cuma *ikut struktur,*",
+    "sedikit demi sedikit."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/menulis.png",
+     "at": 19.96,
+     "w": 900,
+     "y": 1340
+    }
+   ]
+  },
+  {
+   "start": 23.16,
+   "end": 25.2,
+   "lines": [
+    "Biar dia *tak terkejut*",
+    "di tahun pertama."
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "card",
+     "img": "pensel/thumbs_up.png",
+     "at": 23.2,
+     "w": 900,
+     "y": 1240
+    }
+   ]
+  },
+  {
+   "start": 25.2,
+   "end": 26.83,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 25.24,
+     "w": 620,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

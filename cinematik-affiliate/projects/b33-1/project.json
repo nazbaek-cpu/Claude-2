@@ -1,1 +1,148 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg_image": "input/renyuk.jpg",
+ "episode": "EPISOD 17 · KBAT LAST",
+ "whisper_prompt": "calon, KBAT, 5 minit, Terapi KBAT Sejarah SPM, Rangka Struktur Kotak, rumus mudah, panduan langkah demi langkah.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 28.1,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.66,
+   "title": "Buat KBAT last, tapi *TENANG*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/thumbs_up.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 5.66,
+   "end": 8.26,
+   "title": "Tak fikir lama *NAK MULA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/menulis.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 5.7
+    }
+   ]
+  },
+  {
+   "start": 8.26,
+   "end": 14.5,
+   "title": "5 minit, *2 BARIS*, hantar",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/panik.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 8.3
+    }
+   ]
+  },
+  {
+   "start": 14.5,
+   "end": 18.44,
+   "title": "Terapi KBAT *SEJARAH SPM*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kbat_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 600,
+     "at": 14.54
+    }
+   ]
+  },
+  {
+   "start": 18.44,
+   "end": 22.2,
+   "title": "Anak cuma *ISI KOTAK*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kbat_jenis.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 820,
+     "at": 18.48
+    }
+   ]
+  },
+  {
+   "start": 22.2,
+   "end": 25.08,
+   "title": "Rumus *MUDAH* & panduan",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kbat_satu_buku.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 820,
+     "at": 22.24
+    }
+   ]
+  },
+  {
+   "start": 25.08,
+   "end": 28.1,
+   "title": "Masa tak jadi *MASALAH*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel/dapat_a.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 25.12
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 26.4
+    }
+   ]
+  },
+  {
+   "start": 28.1,
+   "end": 29.81,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "kbat_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 560,
+     "at": 28.14
+    }
+   ]
+  }
+ ]
+}

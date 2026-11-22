@@ -1,1 +1,285 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "whisper_prompt": "ulang kaji, data, Analisis dan Ramalan SPM, soalan percubaan semua negeri, SPM sebenar 2021 hingga 2025, topik kerap diuji.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ULANG KAJI SEMUA?",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ulang kaji semua,",
+     "key": "KELUAR LAIN",
+     "at": 0.0,
+     "until": 2.2,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel/terkejut.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.2,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KENAPA...",
+     "at": 1.7,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ada calon yang soalan keluar macam",
+     "key": "DIA DAH JANGKA?",
+     "at": 2.2,
+     "until": 7.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel/thumbs_up.png",
+     "at": 2.25,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA...",
+     "at": 7.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dia ulang kaji",
+     "key": "IKUT DATA, BUKAN RASA",
+     "at": 7.64,
+     "until": 11.26,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel/berfikir.png",
+     "at": 7.7,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 11.26,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN?",
+     "at": 10.76,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca semua bab sama rata, yang kerap keluar",
+     "key": "TAK CUKUP LATIH",
+     "at": 11.26,
+     "until": 16.9,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel/penat.png",
+     "at": 11.3,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.9,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM",
+     "at": 16.4,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "percubaan semua negeri &",
+     "key": "SPM SEBENAR 2021-2025",
+     "at": 16.9,
+     "until": 25.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 16.96,
+     "until": 21.0,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_sejarah.jpg",
+     "at": 21.0,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 500,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 25.32,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak cuma fokus topik",
+     "key": "YANG KERAP DIUJI",
+     "at": 25.82,
+     "until": 28.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_tips.jpg",
+     "at": 25.86,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 760,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 28.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KAMI DAH ANALISIS:",
+     "at": 27.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anda",
+     "key": "FOKUS ULANG KAJI",
+     "at": 28.42,
+     "until": 33.49,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel/belajar_malam.png",
+     "at": 28.46,
+     "until": 99,
+     "x": 300,
+     "y": 1070,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 28.9,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 400,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 31.82,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "hitam"
+}

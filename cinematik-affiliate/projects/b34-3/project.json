@@ -1,1 +1,168 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "bg": "mustard",
+ "source": "input/vo.mp4",
+ "accent": [
+  28,
+  44,
+  120
+ ],
+ "accent2": [
+  70,
+  90,
+  170
+ ],
+ "whisper_prompt": "pelajar ingat bila dengar, buku biasa, Karangan Contoh Infografik Tingkatan 1, 2 dan 3, audio QR, imbas, dengar, ikut, rangka infografik, karangan lengkap.",
+ "cta": {
+  "at": 26.36,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.4,
+   "lines": [
+    "Ada pelajar yang",
+    "ingat lebih banyak",
+    "bila *dengar,*",
+    "bukan bila baca."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/dengar_muzik.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 4.4,
+   "end": 6.9,
+   "lines": [
+    "Buku biasa",
+    "*tak boleh tolong* dia."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/berfikir.png",
+     "at": 4.44,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 6.9,
+   "end": 14.22,
+   "lines": [
+    "*Karangan Contoh Infografik*",
+    "Tingkatan 1, 2 dan 3,",
+    "setiap tema ada",
+    "*audio QR.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 6.95,
+     "w": 640,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 14.22,
+   "end": 16.46,
+   "lines": [
+    "*Imbas,*",
+    "*dengar,* *ikut.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/main_phone.png",
+     "at": 14.26,
+     "w": 900,
+     "y": 1300
+    }
+   ]
+  },
+  {
+   "start": 16.46,
+   "end": 19.78,
+   "lines": [
+    "Dalam kereta,",
+    "sebelum tidur,",
+    "*masa rehat.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/rehat_headphone.png",
+     "at": 16.5,
+     "w": 900,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 19.78,
+   "end": 23.92,
+   "lines": [
+    "Siap *rangka infografik*",
+    "dan *karangan lengkap*",
+    "untuk setiap tajuk."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 19.82,
+     "w": 960,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 23.92,
+   "end": 26.36,
+   "lines": [
+    "Satu buku,",
+    "*dua cara belajar.*"
+   ],
+   "align": "center",
+   "text_y": 330,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/gembira.png",
+     "at": 23.96,
+     "w": 900,
+     "y": 1260
+    }
+   ]
+  },
+  {
+   "start": 26.36,
+   "end": 28.03,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 26.4,
+     "w": 640,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

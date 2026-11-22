@@ -606,3 +606,16 @@ def test_latar_mustard():
     import latar, arab, episod
     m = np.asarray(latar.make("mustard", 200, 300)).astype(int).mean(axis=(0, 1)); assert m[0] > m[1] > m[2] + 60 and m[0] > 190
     assert arab.background("mustard").size == (1080, 1920) and episod.stage("mustard").size == (1080, 1920)
+
+
+def test_kertas_neon_tiub_and_motion_hitam():
+    """kertas-neon draws say() lines as tube neon; motion's neon page has a near-black "hitam" base"""
+    import explainer as E, motion
+    E.set_theme("kertas-neon")
+    try:
+        fr = np.zeros((1920, 1080, 3), np.float32)
+        E.say(fr, 1.0, {"kind": "say", "at": 0.0, "until": 5.0, "text": "satu dua", "key": "TIGA", "color": "gold"}, {})
+        assert fr.max() > 200                                     # something bright was drawn
+        pg = np.asarray(motion.neon_page(base="hitam").convert("L")).astype(int); assert pg[300:1600, 100:980].mean() < 45
+    finally:
+        E.set_theme("kayu")

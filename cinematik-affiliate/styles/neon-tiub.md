@@ -18,5 +18,8 @@ Dipakai automatik dalam semua tema neon:
 - motion `"theme": "neon"`: perkataan besar, perkataan kecil, headline
 - arab `"bg": "neon"`: sari kata menyala ikut sebutan
 - episod `"neon": true`: tajuk babak
+- kertas theme `"kertas-neon"`: baris say() (teks biasa + kata kunci)
+
+Latar hitam untuk neon: motion `"neon_base": "hitam"`, kertas `bg="hitam"`.
 
 Gaya lama (huruf tebal bercahaya): tambah `"neon_style": "tebal"` dalam project.json.

@@ -11,6 +11,7 @@ project.json: {"source": "input/vo.mp4", "preset": "edukasi",
 Item kinds (times in seconds of the original voiceover): setup, kicker, head, card, tile, count, timer, race,
 blocks, stairs, ticks, calendar, cta, pile, floaters. Examples: projects/matematik-explainer, projects/timbunan-chip.
 """
+import neon_tiub
 import argparse, json, math, os, subprocess, wave
 import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -421,6 +422,15 @@ def say(frame, t, it, sc):
     for txt, kind, size, fill in ((it.get("text"), "bold", it.get("size1", 74), INK), (it.get("key"), "heavy", it.get("size2", 112), col)):
         if not txt: continue
         while size > 40 and font(kind, size).getlength(txt) > 1000: size -= 4
+        if NEON_TEXT and neon_tiub.STYLE[0] == "tiub":   # thin glass-tube neon (styles/neon-tiub.md)
+            sz = int(size * 0.92); f = neon_tiub.font(sz, 300 if kind == "bold" else 340)
+            while sz > 40 and f.getlength(txt) > 960: sz -= 4; f = neon_tiub.font(sz, 300 if kind == "bold" else 340)
+            key = ("tiub", txt, sz, fill)
+            if key not in cache:
+                m = neon_tiub.even(neon_tiub.mask(txt, f, 0.03), sz)
+                cache[key] = (neon_tiub.light(m, fill if fill != INK else GLOW_PLAIN, sz)[0], m.height)
+            img, h_ = cache[key]
+            blend(frame, anim(img, a, 1.0), W / 2, y + h_ / 2); y += h_ * 0.95; continue
         img = text_img(txt, font(kind, size), fill); h_ = img.height
         if NEON_TEXT: img = neon_glow(img, text_img(txt, font(kind, size), fill if fill != INK else GLOW_PLAIN))
         elif TEXT_SHADOW: img = soft_shadow(img, 170, 7, 4)   # light letters on a busy background
@@ -1447,7 +1457,7 @@ def main():
     if cfg.get("speed") and os.path.exists(tm):   # speed.py shortened the pauses: every scene time follows the voice
         cfg = remap(cfg, json.load(open(tm))); src = os.path.join(prj, "build", "fast.mp4")
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
-    set_theme(cfg.get("theme"))
+    set_theme(cfg.get("theme")); neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub")
     if cfg.get("bg_image"): globals()["BG_IMAGE"] = os.path.join(prj, cfg["bg_image"])
     elif cfg.get("bg") in ("grey", "dots", "hitam", "mustard"):   # a plain page from latar.py behind every scene
         import latar

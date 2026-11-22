@@ -66,9 +66,10 @@ def page(dots_gap=28, glow=True):
 CUR_BASE = ["navy"]
 def haze():
     """the soft glow colour behind small white words: blue on navy, mint on emerald"""
-    return (150, 255, 210) if CUR_BASE[0] == "emerald" else (150, 190, 255)
+    return {"emerald": (150, 255, 210), "hitam": (200, 214, 255)}.get(CUR_BASE[0], (150, 190, 255))
 NEON_BASE = {"navy": ((18, 30, 78), (5, 9, 30), (38, 56, 112)),          # centre, edge, dot colour
-             "emerald": ((14, 104, 76), (2, 38, 28), (36, 132, 100))}
+             "emerald": ((14, 104, 76), (2, 38, 28), (36, 132, 100)),
+             "hitam": ((30, 31, 36), (6, 6, 8), (54, 56, 64))}
 def neon_page(dots_gap=36, base="navy"):
     """deep navy (or emerald) page: radial gradient, faint dot grid, soft accent glows in two corners, thin glowing frame"""
     cc, ce, cd = NEON_BASE.get(base, NEON_BASE["navy"]); CUR_BASE[0] = base

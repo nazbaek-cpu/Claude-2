@@ -1,1 +1,250 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "tutor kelas bimbingan, kelas karangan, tema, Karangan Contoh Infografik, 18 tema ikut DSKP, rangka infografik, karangan lengkap, audio QR, rubrik UASA.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TUTOR KELAS BIMBINGAN...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa kelas karangan dia",
+     "key": "SENTIASA TERSUSUN?",
+     "at": 0.0,
+     "until": 4.68,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/senyum.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.68,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA...",
+     "at": 4.18,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "bahan dah siap untuk",
+     "key": "SETIAP TEMA",
+     "at": 4.68,
+     "until": 7.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/thumbs_up.png",
+     "at": 4.72,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.96,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TUTOR LAIN?",
+     "at": 7.46,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "cari tajuk, buat rangka sendiri,",
+     "key": "SETIAP MINGGU",
+     "at": 7.96,
+     "until": 12.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/bosan.png",
+     "at": 8.0,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 12.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KARANGAN CONTOH INFOGRAFIK",
+     "at": 11.68,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "18 tema ikut DSKP, rangka infografik &",
+     "key": "KARANGAN LENGKAP",
+     "at": 12.18,
+     "until": 19.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 12.24,
+     "until": 16.6,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "kci_robot.jpg",
+     "at": 16.6,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 900,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SIAP:",
+     "at": 18.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "informasi ikut tema,",
+     "key": "AUDIO QR & RUBRIK UASA",
+     "at": 19.1,
+     "until": 23.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "kci_penutup.jpg",
+     "at": 19.16,
+     "until": 99,
+     "x": 540,
+     "y": 1140,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 23.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 22.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tutor cuma pilih tema,",
+     "key": "TERUS MENGAJAR",
+     "at": 23.22,
+     "until": 27.56,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/yakin_beg.png",
+     "at": 23.26,
+     "until": 99,
+     "x": 300,
+     "y": 1070,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 23.7,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 380,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 25.96,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "mustard"
+}

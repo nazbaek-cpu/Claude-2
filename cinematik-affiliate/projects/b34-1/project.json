@@ -1,1 +1,133 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "mustard",
+ "whisper_prompt": "calon, essay English panjang, grammar, 120 SPM English Model Essays, contoh essay penuh, struktur ditanda, vocab enhancer.",
+ "cta": {
+  "at": 26.52,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.62,
+   "line": "Kenapa ada calon yang berani | tulis essay English panjang?",
+   "keys": [
+    "berani",
+    "essay",
+    "panjang?"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/yakin_beg.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 3.62,
+   "end": 8.58,
+   "line": "Sebab dia tak takut salah. | Dia dah biasa tengok | cara essay yang betul ditulis.",
+   "keys": [
+    "tak",
+    "takut",
+    "biasa",
+    "betul"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/senyum.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 8.58,
+   "end": 13.68,
+   "line": "Calon lain? Takut salah grammar, | tulis pendek je. | Ayat paling selamat.",
+   "keys": [
+    "Takut",
+    "grammar,",
+    "pendek",
+    "selamat."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/keliru.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 13.68,
+   "end": 18.0,
+   "line": "120 SPM English Model Essays. | Contoh essay penuh.",
+   "keys": [
+    "120",
+    "Model",
+    "Essays.",
+    "penuh."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 600,
+    "max_h": 820,
+    "y": 860
+   }
+  },
+  {
+   "start": 18.0,
+   "end": 23.52,
+   "line": "Struktur ditanda. Anak cuma tiru struktur, | ambil frasa dari vocab enhancer.",
+   "keys": [
+    "Struktur",
+    "ditanda.",
+    "tiru",
+    "vocab",
+    "enhancer."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_essay.jpg",
+    "w": 640,
+    "max_h": 820,
+    "y": 860
+   }
+  },
+  {
+   "start": 23.52,
+   "end": 26.52,
+   "line": "Bila dah ada contoh, | berani datang sendiri.",
+   "keys": [
+    "contoh,",
+    "berani"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 26.52,
+   "end": 28.11,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "en_cover.jpg",
+    "w": 560,
+    "max_h": 760,
+    "y": 860
+   }
+  }
+ ]
+}

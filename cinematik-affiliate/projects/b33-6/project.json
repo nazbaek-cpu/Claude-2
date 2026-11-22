@@ -1,0 +1,271 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "benci Sejarah, nama, tarikh, peristiwa, wajib lulus, sijil SPM, BTP Infografik Sejarah, carta, mind map, poket.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "JUJUR...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kau benci Sejarah. Nama, tarikh,",
+     "key": "PERISTIWA",
+     "at": 0.0,
+     "until": 4.92,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_p/stres.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.92,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 4.42,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Sejarah wajib lulus untuk",
+     "key": "SIJIL SPM",
+     "at": 4.92,
+     "until": 8.5,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_p/terkejut.png",
+     "at": 4.96,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 8.5,
+   "items": [
+    {
+     "kind": "label",
+     "text": "JADI...",
+     "at": 8.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kau tak boleh lari. Cuma perlu",
+     "key": "CARA LEBIH SENANG",
+     "at": 8.5,
+     "until": 12.88,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_p/termenung.png",
+     "at": 8.54,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 12.88,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BTP INFOGRAFIK SEJARAH",
+     "at": 12.38,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "infografik berwarna,",
+     "key": "CARTA & MIND MAP",
+     "at": 12.88,
+     "until": 19.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 12.94,
+     "until": 15.6,
+     "x": 540,
+     "y": 1110,
+     "w": 640,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "btp_kedaulatan.jpg",
+     "at": 15.6,
+     "until": 99,
+     "x": 540,
+     "y": 1100,
+     "w": 880,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 19.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 19.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ulang sikit setiap hari, tanpa",
+     "key": "AYAT PANJANG",
+     "at": 19.64,
+     "until": 23.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "kecil,",
+     "key": "MUAT DALAM POKET",
+     "at": 23.48,
+     "until": 25.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "pensel_p/baca_sejarah.png",
+     "at": 19.68,
+     "until": 23.48,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 23.48,
+     "until": 99,
+     "x": 540,
+     "y": 1120,
+     "w": 560,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "INGAT:",
+     "at": 24.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tak perlu suka Sejarah,",
+     "key": "CUKUP LULUS DENGAN YAKIN",
+     "at": 25.22,
+     "until": 29.96,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_p/thumbs_up.png",
+     "at": 25.26,
+     "until": 99,
+     "x": 300,
+     "y": 1070,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "btp_cover.jpg",
+     "at": 25.7,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 380,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.36,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/renyuk.jpg"
+}

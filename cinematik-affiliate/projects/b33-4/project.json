@@ -1,1 +1,260 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas",
+ "whisper_prompt": "tutor English, bahan essay, 120 SPM English Model Essays, email, essay, article, report, review, story, vocab enhancer, kiraan patah perkataan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TUTOR ENGLISH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada yang tak pernah",
+     "key": "HABIS BAHAN ESSAY?",
+     "at": 0.0,
+     "until": 3.38,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_duo/menerang.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.38,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA...",
+     "at": 2.88,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dia ada",
+     "key": "120 CONTOH SIAP",
+     "at": 3.38,
+     "until": 6.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_duo/thumbs_up.png",
+     "at": 3.42,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 6.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TUTOR LAIN?",
+     "at": 5.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tulis contoh sendiri setiap minggu,",
+     "key": "PENAT",
+     "at": 6.3,
+     "until": 10.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_duo/tertidur.png",
+     "at": 6.34,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 780,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 10.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "120 SPM ENGLISH MODEL ESSAYS",
+     "at": 10.32,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "email, essay, article,",
+     "key": "REPORT, REVIEW, STORY",
+     "at": 10.82,
+     "until": 18.18,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 10.88,
+     "until": 13.6,
+     "x": 540,
+     "y": 1110,
+     "w": 560,
+     "rot": -1,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "en_parts.jpg",
+     "at": 13.6,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 880,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 18.18,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 17.68,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "pilih jenis, bincang",
+     "key": "STRUKTUR DITANDA",
+     "at": 18.18,
+     "until": 21.7,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "say",
+     "text": "siap vocab enhancer &",
+     "key": "KIRAAN PATAH PERKATAAN",
+     "at": 21.7,
+     "until": 25.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96
+    },
+    {
+     "kind": "card",
+     "img": "en_report.jpg",
+     "at": 18.24,
+     "until": 99,
+     "x": 540,
+     "y": 1120,
+     "w": 620,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "HASILNYA:",
+     "at": 24.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "masa menulis contoh,",
+     "key": "JADI MASA MENGAJAR",
+     "at": 25.1,
+     "until": 29.81,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "pensel_duo/belajar_bersama.png",
+     "at": 25.14,
+     "until": 99,
+     "x": 300,
+     "y": 1070,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "en_cover.jpg",
+     "at": 25.6,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 360,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.14,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg_image": "input/renyuk.jpg"
+}

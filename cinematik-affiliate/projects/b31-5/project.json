@@ -1,1 +1,163 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "episode": "EPISOD 16 · VERY GOOD, VERY NICE",
+ "whisper_prompt": "The food was very nice, the trip was very good, I was very happy, grammar, vocab, pemeriksa, 120 SPM English Model Essays, vocab enhancer.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 28.04,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.24,
+   "title": "Very nice, very good, *VERY...*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "ENGLISH ESSAY",
+     "name": "Kertas 2",
+     "text": "The food was very nice.|The trip was very good.|I was very happy.",
+     "w": 600,
+     "h": 430,
+     "text_size": 42,
+     "rewrite_size": 42,
+     "x": 540,
+     "y": 960,
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "start": 5.24,
+   "end": 10.56,
+   "title": "Grammar betul, *VOCAB SAMA*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/keliru.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 5.28
+    }
+   ]
+  },
+  {
+   "start": 10.56,
+   "end": 13.22,
+   "title": "Pemeriksa *TERUS NAMPAK*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/terkejut_tutup_mulut.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 10.6
+    }
+   ]
+  },
+  {
+   "start": 13.22,
+   "end": 18.64,
+   "title": "Ada *VOCAB ENHANCER*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 290,
+     "y": 1020,
+     "w": 330,
+     "at": 13.26
+    },
+    {
+     "kind": "photo",
+     "img": "en_essay.jpg",
+     "x": 770,
+     "y": 1060,
+     "w": 440,
+     "at": 15.46
+    }
+   ]
+  },
+  {
+   "start": 18.64,
+   "end": 21.84,
+   "title": "Ambil frasa, *GUNA SENDIRI*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "pensel_p/menulis.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 18.68
+    }
+   ]
+  },
+  {
+   "start": 21.84,
+   "end": 24.84,
+   "title": "Struktur *DITANDA*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_report.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 520,
+     "at": 21.88
+    }
+   ]
+  },
+  {
+   "start": 24.84,
+   "end": 28.04,
+   "title": "Ayat yang *ORANG INGAT*",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "ENGLISH ESSAY",
+     "name": "Kertas 2",
+     "text": "The food was very nice.|The trip was very good.|I was very happy.",
+     "w": 600,
+     "h": 430,
+     "text_size": 42,
+     "rewrite_size": 42,
+     "x": 540,
+     "y": 960,
+     "at": 24.88,
+     "strike_at": 25.6,
+     "rewrite": "+ vocab enhancer",
+     "rewrite_at": 26.4
+    }
+   ]
+  },
+  {
+   "start": 28.04,
+   "end": 29.65,
+   "title": "Tekan *LINK* bawah",
+   "tone": "yellow",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "en_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 440,
+     "at": 28.08
+    }
+   ]
+  }
+ ]
+}

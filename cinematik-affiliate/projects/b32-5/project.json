@@ -1,1 +1,155 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "dots",
+ "whisper_prompt": "calon Form 5, KBAT Sejarah, Form 4, Terapi KBAT Sejarah SPM, Tingkatan 4 dan 5, rumus P.E.S., Rangka Struktur Kotak, skema lengkap.",
+ "cta": {
+  "at": 28.34,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 4.6,
+   "line": "Kenapa ada calon yang masuk Form 5, | KBAT Sejarah dia dah lancar?",
+   "keys": [
+    "Form",
+    "5,",
+    "KBAT",
+    "lancar?"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_duo/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 4.6,
+   "end": 7.16,
+   "line": "Sebab dia mula latih | masa Form 4.",
+   "keys": [
+    "mula",
+    "latih",
+    "Form",
+    "4."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_duo/belajar_bersama.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 7.16,
+   "end": 10.3,
+   "line": "Calon lain? | Tunggu Form 5 baru nak serius.",
+   "keys": [
+    "Tunggu",
+    "Form",
+    "5",
+    "serius."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_duo/dengar_muzik.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 10.3,
+   "end": 13.06,
+   "line": "Masa tu semua subjek | datang serentak.",
+   "keys": [
+    "semua",
+    "subjek",
+    "serentak."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_duo/pening.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 13.06,
+   "end": 17.18,
+   "line": "Terapi KBAT Sejarah SPM | untuk Tingkatan 4 dan 5.",
+   "keys": [
+    "Terapi",
+    "KBAT",
+    "4",
+    "5."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 800,
+    "max_h": 820,
+    "y": 860
+   }
+  },
+  {
+   "start": 17.18,
+   "end": 24.3,
+   "line": "Anak cuma latih satu jenis KBAT seminggu. | Rumus P.E.S., Rangka Struktur Kotak, | skema lengkap.",
+   "keys": [
+    "satu",
+    "jenis",
+    "seminggu.",
+    "P.E.S.,",
+    "Kotak,",
+    "skema"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_jenis.jpg",
+    "w": 960,
+    "max_h": 820,
+    "y": 860
+   }
+  },
+  {
+   "start": 24.3,
+   "end": 28.34,
+   "line": "Mula awal, SPM jadi ulang kaji, | bukan belajar baru.",
+   "keys": [
+    "awal,",
+    "ulang",
+    "kaji,",
+    "bukan",
+    "baru."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "pensel_duo/gembira.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 28.34,
+   "end": 29.96,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kbat_cover.jpg",
+    "w": 640,
+    "max_h": 760,
+    "y": 860
+   }
+  }
+ ]
+}

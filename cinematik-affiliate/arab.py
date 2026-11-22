@@ -50,7 +50,7 @@ def background(kind, image=None):
         import motion
         motion.ACC[0], motion.ACC[1] = NEON_C
         return motion.neon_page(base=NEON_BASE[0])
-    if kind in ("grey", "hitam") and not image:   # plain grey page / black page with dots (latar.py), thin frame
+    if kind in ("grey", "hitam", "mustard") and not image:   # plain grey page / black page with dots (latar.py), thin frame
         import latar
         im = latar.make(kind, W, H).convert("RGBA"); d = ImageDraw.Draw(im)
         d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(70, 72, 82) if kind == "hitam" else (176, 178, 186), width=2)

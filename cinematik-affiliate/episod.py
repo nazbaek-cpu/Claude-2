@@ -51,7 +51,7 @@ def stage(kind="navy"):
     if BG_IMAGE[0]:   # cover-fit the picture, light page: dark ink, thin frame and floor line
         im = arab.background("putih", BG_IMAGE[0]).convert("RGBA"); d = ImageDraw.Draw(im)
         d.line((40, FLOOR, W - 40, FLOOR), fill=(150, 140, 124), width=3); return im
-    if kind in ("grey", "hitam"):   # plain grey page / black page with a dot grid (latar.py)
+    if kind in ("grey", "hitam", "mustard"):   # plain grey page / black page with a dot grid (latar.py)
         import latar
         im = latar.make(kind, W, H).convert("RGBA"); d = ImageDraw.Draw(im); dark = kind == "hitam"
         d.rounded_rectangle((26, 26, W - 27, H - 27), 30, outline=(70, 72, 82) if dark else (178, 180, 188), width=2)
@@ -386,7 +386,7 @@ def main():
     prj = sys.argv[1]; arab.PRJ[0] = prj; arab.DARK[0] = True; cfg = json.load(open(os.path.join(prj, "project.json")))
     src = os.path.join(prj, cfg.get("source", "input/vo.mp4"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout)
-    BG_IMAGE[0] = os.path.join(prj, cfg["bg_image"]) if cfg.get("bg_image") else None; LIGHT[0] = cfg.get("bg") in ("dots", "putih", "grey") or bool(BG_IMAGE[0]); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); arab.neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
+    BG_IMAGE[0] = os.path.join(prj, cfg["bg_image"]) if cfg.get("bg_image") else None; LIGHT[0] = cfg.get("bg") in ("dots", "putih", "grey", "mustard") or bool(BG_IMAGE[0]); NEON[0] = bool(cfg.get("neon")); NEON_BASE[0] = cfg.get("neon_base", "navy"); arab.neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); page = stage(cfg.get("bg", "navy")); only = [float(x) for x in sys.argv[2:]]
     if only:
         ims = [frame(cfg, page, t).resize((360, 640)) for t in only]; cols = 4; rows = (len(ims) + cols - 1) // cols
         sheet = Image.new("RGB", (360 * cols, 640 * rows), "white")

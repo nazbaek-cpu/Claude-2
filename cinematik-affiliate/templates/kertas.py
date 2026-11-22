@@ -62,7 +62,7 @@ def scene(start, items, cut=False):
 def config(scenes, whisper_prompt="", theme="kayu", bg=None):
     cfg = {"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": True, "theme": theme,
            "whisper_prompt": whisper_prompt, "scenes": scenes}
-    if bg: cfg["bg"] = bg   # "grey" | "dots" | "hitam" (latar.py); "hitam" wants theme "kertas-neon"
+    if bg: cfg["bg"] = bg   # "grey" | "dots" | "hitam" | "mustard" (latar.py); "hitam" wants theme "kertas-neon"
     return cfg
 
 def write(prj, scenes, whisper_prompt="", theme="kayu", bg=None):

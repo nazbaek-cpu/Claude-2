@@ -448,7 +448,7 @@ def main():
         neon_tiub.STYLE[0] = cfg.get("neon_style", "tiub"); NEON[0] = True; DARKPAGE[0] = True; TXT[0] = (240, 244, 255); page_im = neon_page(cfg.get("dots_gap", 36), cfg.get("neon_base", "navy"))
     elif cfg.get("bg_image"):   # a picture page (e.g. the green chalkboard): white sentence text
         page_im = arab.background("putih", os.path.join(prj, cfg["bg_image"])); TXT[0] = (250, 250, 246); DARKPAGE[0] = True
-    elif cfg.get("bg") in ("grey", "hitam"):   # plain grey page / black page with dots (latar.py)
+    elif cfg.get("bg") in ("grey", "hitam", "mustard"):   # plain grey page / black page with dots (latar.py)
         import latar
         page_im = latar.make(cfg["bg"], W, H).convert("RGBA")
         if cfg["bg"] == "hitam": TXT[0] = (246, 246, 250); DARKPAGE[0] = True

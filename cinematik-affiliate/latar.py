@@ -4,15 +4,15 @@
     im = latar.make("hitam", 1080, 1920)      # RGB PIL image
     latar.LIGHT["grey"]                        # True: dark ink reads on it; False: use white type
 
-episod:  "bg": "grey" | "dots" | "hitam"        (stage() draws the frame and floor line on top)
-kertas:  "bg": "grey" | "dots" | "hitam" in project.json (write(..., bg=...)): the page is drawn behind every scene;
+episod:  "bg": "grey" | "dots" | "hitam" | "mustard"        (stage() draws the frame and floor line on top)
+kertas:  "bg": "grey" | "dots" | "hitam" | "mustard" in project.json (write(..., bg=...)): the page is drawn behind every scene;
          "hitam" pairs with theme "kertas-neon" so the writing is light.
 """
 import numpy as np
 from PIL import Image, ImageDraw
 
-KINDS = ("grey", "dots", "hitam")
-LIGHT = {"grey": True, "dots": True, "hitam": False}
+KINDS = ("grey", "dots", "hitam", "mustard")
+LIGHT = {"grey": True, "dots": True, "hitam": False, "mustard": True}
 
 
 def _grain(h, w, amp, seed):
@@ -22,6 +22,9 @@ def _grain(h, w, amp, seed):
 def make(kind, w, h):
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     r = np.sqrt(((xx - w * 0.5) / w) ** 2 + ((yy - h * 0.42) / h) ** 2)[..., None]   # soft centre light
+    if kind == "mustard":   # warm mustard yellow, lighter in the middle, fine paper grain (dark ink reads on it)
+        a = np.array([226, 178, 58], np.float32) * (1.05 - 0.14 * r) + _grain(h, w, 1.8, 6)
+        return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
     if kind == "grey":   # light cool grey, a touch lighter in the middle, fine paper grain
         a = np.array([206, 208, 212], np.float32) * (1.04 - 0.10 * r) + _grain(h, w, 1.6, 4)
         return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))

@@ -1449,7 +1449,7 @@ def main():
     dur = min(probe(src)[4], cfg.get("end", 1e9))   # "end" trims trailing silence
     set_theme(cfg.get("theme"))
     if cfg.get("bg_image"): globals()["BG_IMAGE"] = os.path.join(prj, cfg["bg_image"])
-    elif cfg.get("bg") in ("grey", "dots", "hitam"):   # a plain page from latar.py behind every scene
+    elif cfg.get("bg") in ("grey", "dots", "hitam", "mustard"):   # a plain page from latar.py behind every scene
         import latar
         fn = os.path.join(prj, "build", f"latar_{cfg['bg']}.png"); os.makedirs(os.path.dirname(fn), exist_ok=True)
         latar.make(cfg["bg"], W, H).save(fn); globals()["BG_IMAGE"] = fn

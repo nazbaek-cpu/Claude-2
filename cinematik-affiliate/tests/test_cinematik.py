@@ -599,3 +599,10 @@ def test_arab_grey_hitam_backgrounds():
     import arab
     g = np.asarray(arab.background("grey").convert("L")).astype(int); assert 170 < g[400:1500, 100:980].mean() < 230
     h = np.asarray(arab.background("hitam").convert("L")).astype(int); assert h[400:1500, 100:980].mean() < 50
+
+
+def test_latar_mustard():
+    """"mustard" is a warm yellow page (red > green > blue, light enough for dark ink) in latar, arab and episod"""
+    import latar, arab, episod
+    m = np.asarray(latar.make("mustard", 200, 300)).astype(int).mean(axis=(0, 1)); assert m[0] > m[1] > m[2] + 60 and m[0] > 190
+    assert arab.background("mustard").size == (1080, 1920) and episod.stage("mustard").size == (1080, 1920)

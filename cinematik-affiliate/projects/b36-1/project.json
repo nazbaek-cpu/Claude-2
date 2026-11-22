@@ -1,0 +1,344 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "whisper_prompt": "Mak ayah, Tingkatan 4, Add Maths, buku SPM, Fungsi, Kalkulus, Latihan Topikal Matematik Tambahan Tingkatan 4, 10 topik, susunan buku teks, soalan pendek, dwibahasa.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "MAK AYAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak baru T4, markah",
+     "key": "ADD MATHS JATUH?",
+     "at": 0.0,
+     "until": 4.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/termenung.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 4.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "RAMAI TERUS...",
+     "at": 3.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "beli buku SPM",
+     "key": "YANG TEBAL",
+     "at": 4.1,
+     "until": 6.64,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/terkejut.png",
+     "at": 4.14,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 6.64,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TAPI...",
+     "at": 6.14,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "anak belajar Fungsi,",
+     "key": "BUKU DAH KE KALKULUS",
+     "at": 6.64,
+     "until": 10.84,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/keliru.png",
+     "at": 6.68,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 10.84,
+   "items": [
+    {
+     "kind": "label",
+     "text": "AKHIRNYA...",
+     "at": 10.34,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "buku tu",
+     "key": "TAK DIBUKA",
+     "at": 10.84,
+     "until": 13.08,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/bosan.png",
+     "at": 10.88,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 13.08,
+   "items": [
+    {
+     "kind": "label",
+     "text": "YANG ANAK PERLUKAN:",
+     "at": 12.58,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "latihan topik yang",
+     "key": "DIA BELAJAR SEKARANG",
+     "at": 13.08,
+     "until": 17.48,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/menulis.png",
+     "at": 13.12,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 17.48,
+   "items": [
+    {
+     "kind": "label",
+     "text": "LATIHAN TOPIKAL MATEMATIK TAMBAHAN",
+     "at": 16.98,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ikut topik,",
+     "key": "TINGKATAN 4",
+     "at": 17.48,
+     "until": 20.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sp_cover.jpg",
+     "at": 17.54,
+     "until": 99,
+     "x": 540,
+     "y": 1130,
+     "w": 600,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "10 TOPIK:",
+     "at": 19.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ikut susunan",
+     "key": "BUKU TEKS",
+     "at": 20.42,
+     "until": 22.74,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sp_topik.jpg",
+     "at": 20.48,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.74,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SOALAN PENDEK,",
+     "at": 22.24,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "BM & English,",
+     "key": "DWIBAHASA",
+     "at": 22.74,
+     "until": 24.6,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "sp_soalan.jpg",
+     "at": 22.8,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 920,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 24.6,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SATU TOPIK,",
+     "at": 24.1,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "satu",
+     "key": "LANGKAH",
+     "at": 24.6,
+     "until": 28.05,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ekorkuda/semangat.png",
+     "at": 24.64,
+     "until": 99,
+     "x": 300,
+     "y": 1080,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "sp_cover.jpg",
+     "at": 25.1,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 380,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 26.44,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "hitam"
+}

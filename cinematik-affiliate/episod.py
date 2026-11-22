@@ -165,8 +165,9 @@ def grey_level(it, t):
 def paper_img(it, t):
     w, h = it.get("w", 520), it.get("h", 360)
     im = Image.new("RGBA", (w + 30, h + 30), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    d.rounded_rectangle((18, 18, w + 18, h + 18), 16, fill=(214, 168, 30))            # page edge
-    d.rounded_rectangle((6, 6, w + 6, h + 6), 16, fill=it.get("color", (247, 202, 64)))
+    face = tuple(it.get("color", (247, 202, 64))); edge = (214, 168, 30) if "color" not in it else tuple(int(c * 0.82) for c in face)
+    d.rounded_rectangle((18, 18, w + 18, h + 18), 16, fill=edge)            # page edge
+    d.rounded_rectangle((6, 6, w + 6, h + 6), 16, fill=face)
     d.rounded_rectangle((44, 30, w - 30, 92), 8, fill=(255, 255, 255)); d.text(((w + 14) / 2, 61), it.get("head", "KERTAS KARANGAN"), font=SANS(32, 800), fill=INK, anchor="mm")
     if it.get("name"): d.text((50, 122), it["name"], font=SANS(24, 600), fill=(70, 60, 30), anchor="lm")
     lines = it["text"].split("|"); f = HAND(it.get("text_size", 54)); y0 = 160; lh = 62

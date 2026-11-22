@@ -1,1 +1,166 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "episod",
+ "source": "input/vo.mp4",
+ "bg": "mustard",
+ "episode": "EPISOD 20 · AYAT BERJELA",
+ "whisper_prompt": "perenggan karangan, ayat panjang berbelit, isi tenggelam, pemeriksa, Karangan Contoh dan Teknik Penulisan, analisis, Guru Cemerlang, isi, huraian, contoh.",
+ "follow": "Ikut untuk episod seterusnya",
+ "cta": {
+  "at": 27.26,
+  "text": "Buku dekat link bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.72,
+   "title": "Satu perenggan, *BERAPA AYAT?*",
+   "tone": "white",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ekorkuda/berfikir_pen.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "start": 2.72,
+   "end": 7.4,
+   "title": "Satu ayat *PANJANG BERBELIT*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "paper",
+     "head": "KARANGAN BM",
+     "name": "Perenggan 2",
+     "text": "Pada pendapat saya, isu ini|sangat penting kerana yang|mana ia boleh menyebabkan...",
+     "w": 600,
+     "h": 430,
+     "text_size": 40,
+     "rewrite_size": 44,
+     "x": 540,
+     "y": 960,
+     "at": 2.76,
+     "color": [
+      252,
+      250,
+      244
+     ]
+    }
+   ]
+  },
+  {
+   "start": 7.4,
+   "end": 12.04,
+   "title": "Isi *TENGGELAM*",
+   "tone": "red",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "ekorkuda/keliru.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 7.44
+    }
+   ]
+  },
+  {
+   "start": 12.04,
+   "end": 16.9,
+   "title": "Karangan Contoh, *SIAP ANALISIS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 290,
+     "y": 1020,
+     "w": 330,
+     "at": 12.08
+    },
+    {
+     "kind": "photo",
+     "img": "bm_review.jpg",
+     "x": 770,
+     "y": 1080,
+     "w": 440,
+     "at": 14.52
+    }
+   ]
+  },
+  {
+   "start": 16.9,
+   "end": 22.2,
+   "title": "Isi, huraian, *CONTOH*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_tema1.jpg",
+     "x": 540,
+     "y": 1050,
+     "w": 520,
+     "at": 16.94
+    }
+   ]
+  },
+  {
+   "start": 22.2,
+   "end": 24.72,
+   "title": "Pendek, jelas, *KEMAS*",
+   "tone": "green",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/menulis_fokus.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 22.24
+    }
+   ]
+  },
+  {
+   "start": 24.72,
+   "end": 27.26,
+   "title": "Senang *DIBERI MARKAH*",
+   "tone": "white",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "macho/dapat_a.png",
+     "x": 540,
+     "y": 1040,
+     "w": 820,
+     "at": 24.76
+    },
+    {
+     "kind": "hearts",
+     "x": 540,
+     "y": 820,
+     "at": 25.8
+    }
+   ]
+  },
+  {
+   "start": 27.26,
+   "end": 28.92,
+   "title": "Tekan *LINK* bawah",
+   "tone": "white",
+   "items": [
+    {
+     "kind": "photo",
+     "img": "bm_cover.jpg",
+     "x": 540,
+     "y": 1030,
+     "w": 420,
+     "at": 27.3
+    }
+   ]
+  }
+ ]
+}

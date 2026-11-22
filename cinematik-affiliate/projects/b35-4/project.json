@@ -1,0 +1,169 @@
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "hitam",
+ "source": "input/vo.mp4",
+ "accent": [
+  0,
+  229,
+  255
+ ],
+ "accent2": [
+  255,
+  200,
+  40
+ ],
+ "whisper_prompt": "Cikgu BM, ayat topik, huraian, contoh, penegas, isi, Karangan Contoh Infografik, dilabel warna, 18 tema ikut DSKP, rubrik pemarkahan UASA.",
+ "cta": {
+  "at": 26.28,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.62,
+   "lines": [
+    "Cikgu BM,",
+    "berapa kali terangkan",
+    "*topik, huraian,*",
+    "*contoh, penegas?*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/laptop_cermin_mata.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 5.62,
+   "end": 8.78,
+   "lines": [
+    "Murid tetap tulis",
+    "*satu ayat panjang*",
+    "untuk satu isi."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/stres.png",
+     "at": 5.66,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 8.78,
+   "end": 10.58,
+   "lines": [
+    "Kenapa tak",
+    "*tunjuk terus?*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/idea.png",
+     "at": 8.82,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 10.58,
+   "end": 15.88,
+   "lines": [
+    "*Karangan Contoh*",
+    "*Infografik:* setiap isi",
+    "dipecah & *dilabel warna.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_page1.jpg",
+     "at": 10.62,
+     "w": 860,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 15.88,
+   "end": 19.44,
+   "lines": [
+    "Tunjuk *satu muka,*",
+    "murid nampak",
+    "*struktur.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_page2.jpg",
+     "at": 15.92,
+     "w": 860,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 19.44,
+   "end": 23.98,
+   "lines": [
+    "*18 tema* ikut DSKP,",
+    "siap *rubrik*",
+    "pemarkahan UASA."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_kandungan.jpg",
+     "at": 19.48,
+     "w": 940,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 23.98,
+   "end": 26.28,
+   "lines": [
+    "Tunjuk sekali,",
+    "*faham lama.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/thumbs_up.png",
+     "at": 24.02,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 26.28,
+   "end": 27.87,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 26.32,
+     "w": 640,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

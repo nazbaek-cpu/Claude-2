@@ -1,0 +1,274 @@
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "whisper_prompt": "AI, homework, analisis 5 tahun soalan SPM, Analisis dan Ramalan SPM, soalan percubaan, SPM sebenar 2021 hingga 2025, topik berulang, tren soalan, format jawapan.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "KAU GUNA AI...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "untuk siapkan",
+     "key": "HOMEWORK",
+     "at": 0.0,
+     "until": 2.3,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/laptop_cermin_mata.png",
+     "at": 0.2,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 2.3,
+   "items": [
+    {
+     "kind": "label",
+     "text": "BUKU NI GUNA AI...",
+     "at": 1.8,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "untuk analisis",
+     "key": "5 TAHUN SOALAN SPM",
+     "at": 2.3,
+     "until": 6.82,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 2.36,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 6.82,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM",
+     "at": 6.32,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "percubaan & SPM sebenar",
+     "key": "2021 HINGGA 2025",
+     "at": 6.82,
+     "until": 10.72,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_page2.jpg",
+     "at": 6.88,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 760,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 10.72,
+   "items": [
+    {
+     "kind": "label",
+     "text": "DISUSUN & DIANALISIS...",
+     "at": 10.22,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "data soalan,",
+     "key": "DENGAN BANTUAN AI",
+     "at": 10.72,
+     "until": 17.54,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_ai.jpg",
+     "at": 10.9,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 900,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 17.54,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TOPIK BERULANG, TREN SOALAN...",
+     "at": 17.04,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "format jawapan,",
+     "key": "SEMUA DIKENAL PASTI",
+     "at": 17.54,
+     "until": 22.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_trend.jpg",
+     "at": 17.6,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 940,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 22.66,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANAK CUMA...",
+     "at": 22.16,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "ikut topik yang perlu",
+     "key": "LEBIH FOKUS",
+     "at": 22.66,
+     "until": 25.98,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/menulis_fokus.png",
+     "at": 22.7,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.98,
+   "items": [
+    {
+     "kind": "label",
+     "text": "TEKNOLOGI SAMA,",
+     "at": 25.48,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kali ni untuk",
+     "key": "NAIKKAN MARKAH KAU",
+     "at": 25.98,
+     "until": 31.4,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/dapat_a.png",
+     "at": 26.02,
+     "until": 99,
+     "x": 300,
+     "y": 1080,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 26.5,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 400,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 30.0,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "hitam"
+}

@@ -1,1 +1,239 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "explainer",
+ "source": "input/vo.mp4",
+ "preset": "edukasi",
+ "bold_text": true,
+ "theme": "kertas-neon",
+ "whisper_prompt": "Calon Sejarah, topik kerap diuji, Analisis soalan SPM 2021 hingga 2025, Demokrasi Berparlimen, Kertas 1, Analisis dan Ramalan SPM Sejarah.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON SEJARAH...",
+     "at": 0.0,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "kenapa ada yang dah sedia",
+     "key": "AWAL SATU TOPIK?",
+     "at": 0.0,
+     "until": 3.66,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/berfikir.png",
+     "at": 0.3,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ],
+   "in": "cut"
+  },
+  {
+   "start": 3.66,
+   "items": [
+    {
+     "kind": "label",
+     "text": "SEBABNYA:",
+     "at": 3.16,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "dia tahu topik tu",
+     "key": "KERAP DIUJI",
+     "at": 3.66,
+     "until": 7.1,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/idea.png",
+     "at": 3.7,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 7.1,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS SOALAN SPM 2021-2025:",
+     "at": 6.6,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "Demokrasi Berparlimen,",
+     "key": "KERAP DALAM KERTAS 1",
+     "at": 7.1,
+     "until": 16.42,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_demokrasi.jpg",
+     "at": 7.9,
+     "until": 99,
+     "x": 540,
+     "y": 1180,
+     "w": 940,
+     "rot": 1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 16.42,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CALON LAIN?",
+     "at": 15.92,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "baca sekali lalu,",
+     "key": "INGAT TAK PENTING",
+     "at": 16.42,
+     "until": 20.22,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/main_phone.png",
+     "at": 16.46,
+     "until": 99,
+     "x": 540,
+     "y": 1150,
+     "w": 800,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 20.22,
+   "items": [
+    {
+     "kind": "label",
+     "text": "ANALISIS & RAMALAN SPM SEJARAH",
+     "at": 19.72,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "tunjuk topik mana",
+     "key": "YANG KERAP DIUJI",
+     "at": 20.22,
+     "until": 25.32,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 20.28,
+     "until": 99,
+     "x": 540,
+     "y": 1110,
+     "w": 680,
+     "rot": -1,
+     "sticker": true
+    }
+   ]
+  },
+  {
+   "start": 25.32,
+   "items": [
+    {
+     "kind": "label",
+     "text": "CARANYA:",
+     "at": 24.82,
+     "y": 215,
+     "size": 62,
+     "rot": -1.5
+    },
+    {
+     "kind": "say",
+     "text": "fokus & latih",
+     "key": "TOPIK TU DULU",
+     "at": 25.32,
+     "until": 30.0,
+     "y": 395,
+     "size1": 60,
+     "size2": 96,
+     "color": "gold"
+    },
+    {
+     "kind": "card",
+     "img": "macho/menulis_fokus.png",
+     "at": 25.36,
+     "until": 99,
+     "x": 300,
+     "y": 1080,
+     "w": 520,
+     "rot": -2,
+     "sticker": true
+    },
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 25.8,
+     "until": 99,
+     "x": 815,
+     "y": 1080,
+     "w": 400,
+     "rot": 3,
+     "sticker": true
+    },
+    {
+     "kind": "cta",
+     "text": "Tekan link dekat bawah",
+     "at": 28.44,
+     "y": 1690
+    }
+   ]
+  }
+ ],
+ "bg": "hitam"
+}

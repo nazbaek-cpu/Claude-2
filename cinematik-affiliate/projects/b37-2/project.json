@@ -1,1 +1,169 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "theme": "neon",
+ "neon_base": "navy",
+ "source": "input/vo.mp4",
+ "accent": [
+  255,
+  90,
+  200
+ ],
+ "accent2": [
+  0,
+  229,
+  255
+ ],
+ "whisper_prompt": "Mak ayah, minggu terakhir sebelum SPM, nak baca apa dulu, Analisis dan Ramalan SPM, data, topik berulang, trend soalan, format jawapan, dikenal pasti.",
+ "cta": {
+  "at": 24.0,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.62,
+   "lines": [
+    "Mak ayah,",
+    "*minggu terakhir*",
+    "sebelum SPM."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/termenung.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 2.62,
+   "end": 5.04,
+   "lines": [
+    "Anak tanya,",
+    "*nak baca apa dulu?*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/berfikir.png",
+     "at": 2.66,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 5.04,
+   "end": 7.34,
+   "lines": [
+    "Mak ayah pun",
+    "*tak tahu* nak jawab."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/keliru.png",
+     "at": 5.08,
+     "w": 900,
+     "y": 1330
+    }
+   ]
+  },
+  {
+   "start": 7.34,
+   "end": 11.08,
+   "lines": [
+    "*Analisis & Ramalan SPM*",
+    "jawab soalan tu",
+    "dengan *data.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 7.38,
+     "w": 640,
+     "y": 1450
+    }
+   ]
+  },
+  {
+   "start": 11.08,
+   "end": 17.68,
+   "lines": [
+    "*Topik berulang,*",
+    "*trend soalan,*",
+    "format jawapan,",
+    "semua *dikenal pasti.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_trend.jpg",
+     "at": 11.12,
+     "w": 960,
+     "y": 1560
+    }
+   ]
+  },
+  {
+   "start": 17.68,
+   "end": 20.94,
+   "lines": [
+    "Anak cuma ikut,",
+    "*satu topik*",
+    "demi satu topik."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/menulis_fokus.png",
+     "at": 17.72,
+     "w": 900,
+     "y": 1420
+    }
+   ]
+  },
+  {
+   "start": 20.94,
+   "end": 24.0,
+   "lines": [
+    "Bila tahu nak mula,",
+    "anak pun",
+    "*lebih tenang.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/senyum.png",
+     "at": 20.98,
+     "w": 900,
+     "y": 1380
+    }
+   ]
+  },
+  {
+   "start": 24.0,
+   "end": 25.5,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ram_cover.jpg",
+     "at": 24.04,
+     "w": 600,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

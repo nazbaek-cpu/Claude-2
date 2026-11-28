@@ -1,1 +1,150 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "motion",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  255,
+  240,
+  170
+ ],
+ "whisper_prompt": "Mak ayah, UASA Bahasa Melayu Kertas 2, bahagian B, karangan, 30 daripada 40 markah, tiga suku, Karangan Contoh Infografik, karangan fakta, 18 tema ikut DSKP, rangka infografik.",
+ "cta": {
+  "at": 25.3,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.52,
+   "lines": [
+    "Mak ayah, tahu tak?",
+    "UASA *BM Kertas 2,*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/melihat.png",
+     "at": 0.3,
+     "w": 900,
+     "y": 1360
+    }
+   ]
+  },
+  {
+   "start": 3.52,
+   "end": 8.08,
+   "lines": [
+    "Bahagian B karangan",
+    "bawa *30 daripada 40*",
+    "markah."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "macho/terkejut_kertas.png",
+     "at": 3.56,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 8.08,
+   "end": 11.84,
+   "lines": [
+    "Kalau karangan anak *lemah,*",
+    "*3 suku markah*",
+    "terancam."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/terkejut_tutup_mulut.png",
+     "at": 8.12,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 11.84,
+   "end": 16.46,
+   "lines": [
+    "Karangan Contoh Infografik",
+    "fokus *Bahagian B,*",
+    "karangan fakta."
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_kandungan.jpg",
+     "at": 11.88,
+     "w": 940,
+     "y": 1480
+    }
+   ]
+  },
+  {
+   "start": 16.46,
+   "end": 22.22,
+   "lines": [
+    "*18 tema* ikut DSKP,",
+    "rangka infografik &",
+    "*karangan lengkap.*"
+   ],
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_page1.jpg",
+     "at": 16.5,
+     "w": 900,
+     "y": 1460
+    }
+   ]
+  },
+  {
+   "start": 22.22,
+   "end": 25.3,
+   "lines": [
+    "Anak cuma latih",
+    "bahagian yang",
+    "*paling banyak markah.*"
+   ],
+   "align": "center",
+   "text_y": 320,
+   "items": [
+    {
+     "kind": "card",
+     "img": "ekorkuda/menulis.png",
+     "at": 22.26,
+     "w": 900,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "start": 25.3,
+   "end": 26.95,
+   "lines": [
+    "Tekan *link*",
+    "dekat bawah."
+   ],
+   "align": "center",
+   "text_y": 300,
+   "items": [
+    {
+     "kind": "card",
+     "img": "kci_cover.jpg",
+     "at": 25.34,
+     "w": 640,
+     "y": 1080
+    }
+   ]
+  }
+ ]
+}

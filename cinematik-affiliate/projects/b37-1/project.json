@@ -1,0 +1,197 @@
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg_image": "input/papan.jpg",
+ "whisper_prompt": "6 tahun di SJKC atau SJKT, sekolah menengah, karangan BM, 180 patah perkataan, perbendaharaan kata, kosa kata, Karangan Contoh Infografik, daftar kata, senarai peribahasa, audio QR.",
+ "cta": {
+  "at": 27.06,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 3.02,
+   "line": "6 tahun di SJKC | atau SJKT.",
+   "keys": [
+    "6",
+    "tahun",
+    "SJKC",
+    "SJKT."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/melihat.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 3.02,
+   "end": 8.44,
+   "line": "Masuk sekolah menengah, | karangan BM terus minta | 180 patah perkataan.",
+   "keys": [
+    "menengah,",
+    "180",
+    "patah",
+    "perkataan."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KARANGAN BM",
+    "word": "180 PATAH",
+    "size": 120,
+    "sub": "perkataan",
+    "y": 420
+   },
+   "icons": [
+    {
+     "img": "ekorkuda/terkejut.png",
+     "x": 540,
+     "y": 1000,
+     "at": 3.4,
+     "size": 594,
+     "tile": true
+    }
+   ]
+  },
+  {
+   "start": 8.44,
+   "end": 11.94,
+   "line": "Ayat jadi kaku, | perbendaharaan kata terhad.",
+   "keys": [
+    "kaku,",
+    "perbendaharaan",
+    "terhad."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/stres.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 11.94,
+   "end": 15.8,
+   "line": "Bukan salah anak, | dia cuma perlukan | contoh dan kosa kata.",
+   "keys": [
+    "Bukan",
+    "salah",
+    "contoh",
+    "kosa",
+    "kata."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/berfikir_pen.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 15.8,
+   "end": 18.8,
+   "line": "Karangan Contoh Infografik | ada daftar kata,",
+   "keys": [
+    "Karangan",
+    "Contoh",
+    "Infografik",
+    "daftar",
+    "kata,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 560,
+    "max_h": 800,
+    "y": 620
+   }
+  },
+  {
+   "start": 18.8,
+   "end": 22.18,
+   "line": "senarai peribahasa | dan audio QR setiap tema.",
+   "keys": [
+    "peribahasa",
+    "audio",
+    "QR"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_penutup.jpg",
+    "w": 760,
+    "max_h": 840,
+    "y": 640
+   },
+   "pills": [
+    [
+     "Peribahasa",
+     18.9
+    ],
+    [
+     "Audio QR",
+     20.7
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 22.18,
+   "end": 24.64,
+   "line": "Anak dengar, | baca, | tiru.",
+   "keys": [
+    "dengar,",
+    "baca,",
+    "tiru."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/dengar_muzik.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 24.64,
+   "end": 27.06,
+   "line": "Bahasa datang dari | contoh yang baik.",
+   "keys": [
+    "Bahasa",
+    "contoh",
+    "baik."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 27.06,
+   "end": 28.5,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "kci_cover.jpg",
+    "w": 400,
+    "max_h": 580,
+    "y": 560
+   },
+   "illus": {
+    "kind": "wave",
+    "y": 1020,
+    "char": "stickman/melambai",
+    "char_scale": 1.2
+   }
+  }
+ ]
+}

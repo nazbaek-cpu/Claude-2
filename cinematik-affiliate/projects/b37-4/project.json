@@ -1,1 +1,192 @@
-{"type": "explainer", "source": "input/vo.mp4", "preset": "edukasi", "bold_text": true, "theme": "kertas", "scenes": []}
+{
+ "type": "arab",
+ "source": "input/vo.mp4",
+ "bg": "neon",
+ "neon_base": "navy",
+ "accent": [
+  255,
+  214,
+  70
+ ],
+ "accent2": [
+  0,
+  229,
+  255
+ ],
+ "whisper_prompt": "Cikgu, latihan, soalan percubaan semua negeri, SPM sebenar, berminggu-minggu, Analisis dan Ramalan SPM, 2021 hingga 2025, sumber negeri dan tahun, format setara SPM.",
+ "cta": {
+  "at": 27.2,
+  "text": "Tekan link dekat bawah"
+ },
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 2.6,
+   "line": "Cikgu, | nak bagi murid | latihan yang tepat,",
+   "keys": [
+    "Cikgu,",
+    "latihan",
+    "tepat,"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/laptop_cermin_mata.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 2.6,
+   "end": 7.34,
+   "line": "kena kumpul soalan percubaan | semua negeri, | banding dengan SPM sebenar.",
+   "keys": [
+    "percubaan",
+    "semua",
+    "negeri,",
+    "SPM",
+    "sebenar."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/buku_subjek.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 7.34,
+   "end": 9.8,
+   "line": "Itu kerja | berminggu-minggu.",
+   "keys": [
+    "berminggu-minggu."
+   ],
+   "card": {
+    "kind": "key",
+    "label": "KERJA ANALISIS",
+    "word": "BERMINGGU",
+    "size": 110,
+    "sub": "makan masa",
+    "y": 420
+   },
+   "icons": [
+    {
+     "img": "macho/penat_gosok_mata.png",
+     "x": 540,
+     "y": 1000,
+     "at": 7.5,
+     "size": 594,
+     "tile": true
+    }
+   ]
+  },
+  {
+   "start": 9.8,
+   "end": 15.96,
+   "line": "Analisis & Ramalan SPM | dah buat untuk cikgu, | 2021 hingga 2025.",
+   "keys": [
+    "Analisis",
+    "Ramalan",
+    "SPM",
+    "2021",
+    "2025."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 620,
+    "max_h": 760,
+    "y": 600
+   }
+  },
+  {
+   "start": 15.96,
+   "end": 20.96,
+   "line": "Setiap soalan disertakan | sumber negeri dan tahun, | format setara SPM.",
+   "keys": [
+    "sumber",
+    "negeri",
+    "tahun,",
+    "setara",
+    "SPM."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_sumber.jpg",
+    "w": 900,
+    "max_h": 560,
+    "y": 620
+   },
+   "pills": [
+    [
+     "Sumber negeri & tahun",
+     16.0
+    ],
+    [
+     "Setara SPM",
+     19.1
+    ]
+   ],
+   "pills_y": 1120
+  },
+  {
+   "start": 20.96,
+   "end": 24.32,
+   "line": "Cikgu cuma guna sebagai | bahan latihan tambahan | dalam kelas.",
+   "keys": [
+    "latihan",
+    "tambahan",
+    "kelas."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ekorkuda/menulis.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 24.32,
+   "end": 27.2,
+   "line": "Masa analisis, | jadi masa mengajar.",
+   "keys": [
+    "analisis,",
+    "mengajar."
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "macho/thumbs_up.png",
+    "w": 900,
+    "max_h": 760,
+    "y": 860
+   }
+  },
+  {
+   "start": 27.2,
+   "end": 28.6,
+   "line": "Tekan link | dekat bawah.",
+   "keys": [
+    "link"
+   ],
+   "card": {
+    "kind": "photo",
+    "img": "ram_cover.jpg",
+    "w": 400,
+    "max_h": 560,
+    "y": 560
+   },
+   "icons": [
+    {
+     "img": "ekorkuda/lambai.png",
+     "x": 540,
+     "y": 1080,
+     "at": 27.3,
+     "size": 405,
+     "tile": true
+    }
+   ]
+  }
+ ]
+}
